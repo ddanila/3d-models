@@ -36,6 +36,7 @@ standard 5.08 mm pitch as scale:
 | DB9 face | 18.6/16.2 × 9.5 mm (estimated) |
 | DB9 screw spacing | 25 mm |
 | DB9 screw-post diameter | 4.8 mm (estimated) |
+| DB9 center above PCB top | 6.5 mm (estimated) |
 | DB9 lid clearance | 0.25 mm per side |
 
 Measure the physical board before printing the complete case. The dimensions,

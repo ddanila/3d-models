@@ -37,7 +37,7 @@ db9_face_corner_radius = 1;
 db9_screw_spacing = 25;
 db9_screw_boss_diameter = 4.8;
 db9_fit_clearance = 0.25;
-db9_opening_below_pcb_top = 0.5;
+db9_center_above_pcb_top = 6.5;
 
 epsilon = 0.01;
 
@@ -55,6 +55,4 @@ pcb_y = wall + underboard_clearance;
 pcb_top_y = pcb_y + pcb_thickness;
 
 db9_center_x = outer_width / 2;
-db9_center_y = pcb_top_y
-    - db9_opening_below_pcb_top
-    + db9_face_height / 2;
+db9_center_y = pcb_top_y + db9_center_above_pcb_top;
