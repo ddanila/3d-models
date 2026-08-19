@@ -20,6 +20,11 @@ find_models() {
         -name model.scad -print0 | sort -z
 }
 
+find_printables() {
+    find "$repo_root/models" -mindepth 2 -maxdepth 2 -type f \
+        \( -name model.scad -o -name 'part-*.scad' \) -print0 | sort -z
+}
+
 require_models() {
     if ! find "$repo_root/models" -mindepth 2 -maxdepth 2 -type f \
         -name model.scad -print -quit | grep -q .; then
@@ -30,4 +35,17 @@ require_models() {
 
 model_name_for() {
     basename "$(dirname "$1")"
+}
+
+printable_name_for() {
+    local scad_file="$1"
+    local model_name entry_name
+    model_name="$(model_name_for "$scad_file")"
+    entry_name="$(basename "$scad_file" .scad)"
+
+    if [ "$entry_name" = model ]; then
+        printf '%s\n' "$model_name"
+    else
+        printf '%s-%s\n' "$model_name" "${entry_name#part-}"
+    fi
 }

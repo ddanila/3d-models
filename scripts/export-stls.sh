@@ -11,8 +11,8 @@ openscad="$(find_openscad)"
 
 while IFS= read -r -d '' scad_file; do
     model_dir="$(dirname "$scad_file")"
-    model_name="$(model_name_for "$scad_file")"
-    output="$model_dir/$model_name.stl"
+    printable_name="$(printable_name_for "$scad_file")"
+    output="$model_dir/$printable_name.stl"
     echo "Exporting $output"
     "$openscad" -o "$output" --export-format binstl "$scad_file"
-done < <(find_models)
+done < <(find_printables)

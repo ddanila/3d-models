@@ -13,7 +13,7 @@ tmp_dir="$(mktemp -d "$repo_root/.render-check.XXXXXX")"
 trap 'rm -rf "$tmp_dir"' EXIT
 
 while IFS= read -r -d '' scad_file; do
-    model_name="$(model_name_for "$scad_file")"
-    echo "Checking $model_name"
-    "$openscad" -o "$tmp_dir/$model_name.stl" "$scad_file"
-done < <(find_models)
+    printable_name="$(printable_name_for "$scad_file")"
+    echo "Checking $printable_name"
+    "$openscad" -o "$tmp_dir/$printable_name.stl" "$scad_file"
+done < <(find_printables)

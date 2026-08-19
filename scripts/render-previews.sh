@@ -20,11 +20,9 @@ downscale() {
     fi
 }
 
-while IFS= read -r -d '' scad_file; do
-    model_dir="$(dirname "$scad_file")"
-    model_name="$(model_name_for "$scad_file")"
-    output="$model_dir/preview.png"
-    echo "Rendering $model_name preview"
+render_preview() {
+    local scad_file="$1" output="$2" label="$3"
+    echo "Rendering $label preview"
     # The single quotes pass OpenSCAD's special $fn variable literally.
     # shellcheck disable=SC2016
     "$openscad" -o "$output" --render --backend Manifold \
@@ -32,4 +30,19 @@ while IFS= read -r -d '' scad_file; do
         --camera=0,0,0,55,0,25,160 --colorscheme=Monotone \
         -D '$fn=256' "$scad_file"
     downscale "$output"
+}
+
+while IFS= read -r -d '' scad_file; do
+    model_dir="$(dirname "$scad_file")"
+    model_name="$(model_name_for "$scad_file")"
+    output="$model_dir/preview.png"
+    render_preview "$scad_file" "$output" "$model_name"
+
+    assembly_file="$model_dir/assembly.scad"
+    if [ -f "$assembly_file" ]; then
+        render_preview \
+            "$assembly_file" \
+            "$model_dir/preview-assembly.png" \
+            "$model_name assembly"
+    fi
 done < <(find_models)

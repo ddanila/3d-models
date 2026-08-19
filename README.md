@@ -12,7 +12,11 @@ models/
   model-name/
     model.scad
     model-name.stl
+    part-lid.scad   # optional additional printable part
+    model-name-lid.stl
+    assembly.scad   # optional assembled preview scene
     preview.png
+    preview-assembly.png
     README.md       # optional model-specific notes
 ```
 
@@ -41,5 +45,11 @@ the batch scripts do not treat them as standalone models.
 ./scripts/render-previews.sh
 ```
 
-The batch commands discover `models/*/model.scad` automatically, so adding a
-new model does not require changing the scripts.
+The batch commands discover `models/*/model.scad` and optional
+`models/*/part-*.scad` printable parts automatically. An `assembly.scad` scene
+is rendered to `preview-assembly.png` when present.
+
+## Models
+
+- [`usb-serial-adapter-case`](models/usb-serial-adapter-case/) — open-top case
+  for the DIYMORE FT232BM/BL USB to RS232/UART TTL/RS485 adapter
