@@ -27,11 +27,15 @@ usb_opening_below_pcb_top = 0.5;
 // Side ribs overlap only this much of each PCB edge.
 guide_contact_width = 0.8;
 
-// Flat DB9-end lid. The connector measurements are initial estimates and are
-// intentionally kept here for easy adjustment after a fit test.
+// Flat DB9-end lid. Measurements are derived from the straight-on product
+// photo and the connector's 25 mm screw spacing; verify after a fit test.
 lid_thickness = 1.6;
-db9_body_width = 31;
-db9_body_depth = 13;
+db9_face_pcb_width = 18.6;
+db9_face_outer_width = 16.2;
+db9_face_height = 9.5;
+db9_face_corner_radius = 1;
+db9_screw_spacing = 25;
+db9_screw_boss_diameter = 4.8;
 db9_fit_clearance = 0.25;
 db9_opening_below_pcb_top = 0.5;
 
@@ -50,9 +54,7 @@ pcb_x = wall + width_clearance;
 pcb_y = wall + underboard_clearance;
 pcb_top_y = pcb_y + pcb_thickness;
 
-db9_opening_width = db9_body_width + 2 * db9_fit_clearance;
-db9_opening_depth = db9_body_depth + 2 * db9_fit_clearance;
-db9_opening_x = (outer_width - db9_opening_width) / 2;
-db9_opening_y = pcb_top_y
+db9_center_x = outer_width / 2;
+db9_center_y = pcb_top_y
     - db9_opening_below_pcb_top
-    - db9_fit_clearance;
+    + db9_face_height / 2;

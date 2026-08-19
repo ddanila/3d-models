@@ -16,6 +16,7 @@ models/
     model-name-lid.stl
     assembly.scad   # optional assembled preview scene
     preview.png
+    preview-lid.png
     preview-assembly.png
     README.md       # optional model-specific notes
 ```
@@ -47,7 +48,8 @@ the batch scripts do not treat them as standalone models.
 
 The batch commands discover `models/*/model.scad` and optional
 `models/*/part-*.scad` printable parts automatically. An `assembly.scad` scene
-is rendered to `preview-assembly.png` when present.
+is rendered to `preview-assembly.png` when present, and printable parts receive
+their own `preview-<part>.png` image.
 
 ## Models
 

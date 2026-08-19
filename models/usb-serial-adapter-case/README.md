@@ -15,6 +15,8 @@ The model is already oriented for printing upright on the USB end.
 
 ![Case and DB9 lid assembly](preview-assembly.png)
 
+![DB9 lid](preview-lid.png)
+
 ## Important: verify the dimensions
 
 The seller does not publish a mechanical drawing. The defaults in `model.scad`
@@ -31,7 +33,9 @@ standard 5.08 mm pitch as scale:
 | Clearance under PCB | 2 mm |
 | Component height above PCB | 13 mm (estimated) |
 | PCB edge supported by each guide | 0.8 mm |
-| DB9 envelope | 31 × 13 mm (estimated) |
+| DB9 face | 18.6/16.2 × 9.5 mm (estimated) |
+| DB9 screw spacing | 25 mm |
+| DB9 screw-post diameter | 4.8 mm (estimated) |
 | DB9 lid clearance | 0.25 mm per side |
 
 Measure the physical board before printing the complete case. The dimensions,

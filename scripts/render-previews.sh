@@ -45,4 +45,16 @@ while IFS= read -r -d '' scad_file; do
             "$model_dir/preview-assembly.png" \
             "$model_name assembly"
     fi
+
+    while IFS= read -r -d '' part_file; do
+        part_name="$(basename "$part_file" .scad)"
+        part_name="${part_name#part-}"
+        render_preview \
+            "$part_file" \
+            "$model_dir/preview-$part_name.png" \
+            "$model_name $part_name"
+    done < <(
+        find "$model_dir" -maxdepth 1 -type f -name 'part-*.scad' \
+            -print0 | sort -z
+    )
 done < <(find_models)

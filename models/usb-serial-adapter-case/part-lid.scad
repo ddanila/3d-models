@@ -6,7 +6,13 @@ use <lid-lib.scad>
 lid(
     [outer_width, outer_depth],
     lid_thickness,
-    [db9_opening_x, db9_opening_y],
-    [db9_opening_width, db9_opening_depth],
+    [db9_center_x, db9_center_y],
+    db9_face_pcb_width,
+    db9_face_outer_width,
+    db9_face_height,
+    db9_face_corner_radius,
+    db9_screw_spacing,
+    db9_screw_boss_diameter,
+    db9_fit_clearance,
     epsilon
 );

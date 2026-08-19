@@ -11,8 +11,14 @@ translate([0, 0, case_height])
     lid(
         [outer_width, outer_depth],
         lid_thickness,
-        [db9_opening_x, db9_opening_y],
-        [db9_opening_width, db9_opening_depth],
+        [db9_center_x, db9_center_y],
+        db9_face_pcb_width,
+        db9_face_outer_width,
+        db9_face_height,
+        db9_face_corner_radius,
+        db9_screw_spacing,
+        db9_screw_boss_diameter,
+        db9_fit_clearance,
         epsilon
     );
 
@@ -21,9 +27,15 @@ color([0.08, 0.25, 0.08])
         cube([pcb_width, pcb_thickness, pcb_length]);
 
 color([0.65, 0.65, 0.68])
-    translate([
-        (outer_width - db9_body_width) / 2,
-        pcb_top_y - db9_opening_below_pcb_top,
-        usb_projection + pcb_length
-    ])
-        cube([db9_body_width, db9_body_depth, 6]);
+    translate([0, 0, usb_projection + pcb_length])
+        db9_pattern(
+            [db9_center_x, db9_center_y],
+            db9_face_pcb_width,
+            db9_face_outer_width,
+            db9_face_height,
+            db9_face_corner_radius,
+            db9_screw_spacing,
+            db9_screw_boss_diameter,
+            0,
+            6
+        );
