@@ -30,8 +30,8 @@ guide_contact_width = 0.8;
 // Flat DB9-end lid. Measurements are derived from the straight-on product
 // photo and the connector's 25 mm screw spacing; verify after a fit test.
 lid_thickness = 1.6;
-db9_face_pcb_width = 18.6;
-db9_face_outer_width = 16.2;
+db9_face_wide_width = 18.6;
+db9_face_narrow_width = 16.2;
 db9_face_height = 9.5;
 db9_face_corner_radius = 1;
 db9_screw_spacing = 25;

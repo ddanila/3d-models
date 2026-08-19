@@ -12,8 +12,8 @@ translate([0, 0, case_height])
         [outer_width, outer_depth],
         lid_thickness,
         [db9_center_x, db9_center_y],
-        db9_face_pcb_width,
-        db9_face_outer_width,
+        db9_face_wide_width,
+        db9_face_narrow_width,
         db9_face_height,
         db9_face_corner_radius,
         db9_screw_spacing,
@@ -30,8 +30,8 @@ color([0.65, 0.65, 0.68])
     translate([0, 0, usb_projection + pcb_length])
         db9_pattern(
             [db9_center_x, db9_center_y],
-            db9_face_pcb_width,
-            db9_face_outer_width,
+            db9_face_wide_width,
+            db9_face_narrow_width,
             db9_face_height,
             db9_face_corner_radius,
             db9_screw_spacing,

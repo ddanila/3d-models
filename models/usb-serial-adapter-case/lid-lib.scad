@@ -1,16 +1,16 @@
 module rounded_db9_face(
-    pcb_width,
-    outer_width,
+    wide_width,
+    narrow_width,
     height,
     radius,
     fn = 48
 ) {
     hull() {
         for (point = [
-            [-pcb_width / 2 + radius, -height / 2 + radius],
-            [ pcb_width / 2 - radius, -height / 2 + radius],
-            [-outer_width / 2 + radius, height / 2 - radius],
-            [ outer_width / 2 - radius, height / 2 - radius]
+            [-narrow_width / 2 + radius, -height / 2 + radius],
+            [ narrow_width / 2 - radius, -height / 2 + radius],
+            [-wide_width / 2 + radius, height / 2 - radius],
+            [ wide_width / 2 - radius, height / 2 - radius]
         ])
             translate(point)
                 circle(r = radius, $fn = fn);
@@ -19,8 +19,8 @@ module rounded_db9_face(
 
 module db9_pattern(
     center,
-    face_pcb_width,
-    face_outer_width,
+    face_wide_width,
+    face_narrow_width,
     face_height,
     face_radius,
     screw_spacing,
@@ -32,8 +32,8 @@ module db9_pattern(
     translate([center[0], center[1], 0]) {
         linear_extrude(height = extrusion_height)
             rounded_db9_face(
-                face_pcb_width + 2 * clearance,
-                face_outer_width + 2 * clearance,
+                face_wide_width + 2 * clearance,
+                face_narrow_width + 2 * clearance,
                 face_height + 2 * clearance,
                 face_radius + clearance,
                 fn
@@ -53,8 +53,8 @@ module lid(
     size,
     thickness,
     db9_center,
-    face_pcb_width,
-    face_outer_width,
+    face_wide_width,
+    face_narrow_width,
     face_height,
     face_radius,
     screw_spacing,
@@ -67,8 +67,8 @@ module lid(
         translate([0, 0, -epsilon])
             db9_pattern(
                 db9_center,
-                face_pcb_width,
-                face_outer_width,
+                face_wide_width,
+                face_narrow_width,
                 face_height,
                 face_radius,
                 screw_spacing,
