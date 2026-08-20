@@ -55,3 +55,5 @@ their own `preview-<part>.png` image.
 
 - [`usb-serial-adapter-case`](models/usb-serial-adapter-case/) — open-top case
   for the DIYMORE FT232BM/BL USB to RS232/UART TTL/RS485 adapter
+- [`dip28-chip-tray`](models/dip28-chip-tray/) — stackable four-chip tray for
+  DIP-28 EEPROM and EPROM packages
