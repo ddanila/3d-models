@@ -57,3 +57,5 @@ their own `preview-<part>.png` image.
   for the DIYMORE FT232BM/BL USB to RS232/UART TTL/RS485 adapter
 - [`dip28-chip-tray`](models/dip28-chip-tray/) — stackable four-chip tray for
   DIP-28 EEPROM and EPROM packages
+- [`rg1n-loopback-case`](models/rg1n-loopback-case/) — compact two-piece case
+  for a wired 12-contact РГ1Н-1-4 loopback connector
