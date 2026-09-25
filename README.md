@@ -59,3 +59,5 @@ their own `preview-<part>.png` image.
   DIP-28 EEPROM and EPROM packages
 - [`rg1n-loopback-case`](models/rg1n-loopback-case/) — compact two-piece case
   for a wired 12-contact РГ1Н-1-4 loopback connector
+- [`pk8010-korvet-button`](models/pk8010-korvet-button/) — cylindrical
+  right-side button for the ПК8010 Корвет
