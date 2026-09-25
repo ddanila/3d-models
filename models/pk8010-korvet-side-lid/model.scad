@@ -32,6 +32,15 @@ assert(finger_recess_width > button_hole_diameter
        && finger_recess_height > button_hole_diameter);
 assert(finger_recess_depth > 0 && finger_recess_depth < upper_height);
 
+// Rounded upper outline with straight sides continuing to the bottom edge.
+module recess_profile(width, height) {
+    union() {
+        scale([width / 2, height / 2]) circle(r = 1);
+        translate([-width / 2, -button_hole_from_bottom - epsilon])
+            square([width, button_hole_from_bottom + epsilon]);
+    }
+}
+
 difference() {
     union() {
         cube([base_length, base_width, base_thickness]);
@@ -48,19 +57,17 @@ difference() {
         cylinder(d = button_hole_diameter,
                  h = base_thickness + upper_height + 2 * epsilon);
 
-    // Gradual circular-to-oval recess, deepest at the through-hole rim.
+    // Open-bottom finger recess, sloping to a 1 mm-deep central channel.
     translate([base_length - button_hole_from_right,
                button_hole_from_bottom,
                base_thickness + upper_height - finger_recess_depth]) {
-        linear_extrude(height = finger_recess_depth,
-                       scale = [finger_recess_width / button_hole_diameter,
-                                finger_recess_height / button_hole_diameter])
-            circle(d = button_hole_diameter);
-        translate([0, 0, finger_recess_depth])
+        hull() {
             linear_extrude(height = epsilon)
-                scale([finger_recess_width / button_hole_diameter,
-                       finger_recess_height / button_hole_diameter])
-                    circle(d = button_hole_diameter);
+                recess_profile(button_hole_diameter, button_hole_diameter);
+            translate([0, 0, finger_recess_depth])
+                linear_extrude(height = epsilon)
+                    recess_profile(finger_recess_width, finger_recess_height);
+        }
     }
 
     // Short groove opens at the raised section's right edge.
