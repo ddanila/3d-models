@@ -16,17 +16,17 @@ find_openscad() {
 }
 
 find_models() {
-    find "$repo_root/models" -mindepth 2 -maxdepth 2 -type f \
+    find "$repo_root/models" -mindepth 2 -type f \
         -name model.scad -print0 | sort -z
 }
 
 find_printables() {
-    find "$repo_root/models" -mindepth 2 -maxdepth 2 -type f \
+    find "$repo_root/models" -mindepth 2 -type f \
         \( -name model.scad -o -name 'part-*.scad' \) -print0 | sort -z
 }
 
 require_models() {
-    if ! find "$repo_root/models" -mindepth 2 -maxdepth 2 -type f \
+    if ! find "$repo_root/models" -mindepth 2 -type f \
         -name model.scad -print -quit | grep -q .; then
         echo "No models found; add models/<name>/model.scad" >&2
         return 1

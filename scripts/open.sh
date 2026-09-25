@@ -7,7 +7,7 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$script_dir/lib.sh"
 
 if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <model-name|path/to/model.scad>" >&2
+    echo "Usage: $0 <model-name|group/model-name|path/to/model.scad>" >&2
     exit 2
 fi
 

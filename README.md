@@ -24,6 +24,9 @@ models/
 Shared OpenSCAD modules can live under `lib/`. Keep them outside `models/` so
 the batch scripts do not treat them as standalone models.
 
+Related models can share a group directory, such as `models/pk8010-korvet/`.
+Each model inside the group keeps its own directory, source, STL, and preview.
+
 ## Requirements
 
 - `openscad-nightly` or `openscad`
@@ -35,6 +38,7 @@ the batch scripts do not treat them as standalone models.
 # Open one model interactively, by directory name or path.
 ./scripts/open.sh model-name
 ./scripts/open.sh models/model-name/model.scad
+./scripts/open.sh pk8010-korvet/pk8010-korvet-side-lid
 
 # Validate every model without changing committed artifacts.
 ./scripts/check-render.sh
@@ -46,8 +50,9 @@ the batch scripts do not treat them as standalone models.
 ./scripts/render-previews.sh
 ```
 
-The batch commands discover `models/*/model.scad` and optional
-`models/*/part-*.scad` printable parts automatically. An `assembly.scad` scene
+The batch commands recursively discover `model.scad` and optional
+`part-*.scad` printable parts under `models/`, including group directories.
+An `assembly.scad` scene
 is rendered to `preview-assembly.png` when present, and printable parts receive
 their own `preview-<part>.png` image.
 
@@ -59,7 +64,4 @@ their own `preview-<part>.png` image.
   DIP-28 EEPROM and EPROM packages
 - [`rg1n-loopback-case`](models/rg1n-loopback-case/) — compact two-piece case
   for a wired 12-contact РГ1Н-1-4 loopback connector
-- [`pk8010-korvet-button`](models/pk8010-korvet-button/) — cylindrical
-  right-side button for the ПК8010 Корвет
-- [`pk8010-korvet-side-lid`](models/pk8010-korvet-side-lid/) — small stepped
-  rectangular lid for the right side of the ПК8010 Корвет
+- [ПК8010 Корвет](models/pk8010-korvet/) — right-side button and lid
