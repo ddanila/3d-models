@@ -61,3 +61,5 @@ their own `preview-<part>.png` image.
   for a wired 12-contact РГ1Н-1-4 loopback connector
 - [`pk8010-korvet-button`](models/pk8010-korvet-button/) — cylindrical
   right-side button for the ПК8010 Корвет
+- [`pk8010-korvet-side-lid`](models/pk8010-korvet-side-lid/) — small stepped
+  rectangular lid for the right side of the ПК8010 Корвет
