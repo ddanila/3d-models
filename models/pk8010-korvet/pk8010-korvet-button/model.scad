@@ -2,9 +2,9 @@
 // Print standing on the closed end, with the bore facing upward.
 
 outer_diameter = 7.6;
-wall_thickness = 1.6;
-length = 14;
-bore_depth = 10;
+wall_thickness = 2;
+length = 19;
+bore_depth = 14;
 
 bore_diameter = outer_diameter - 2 * wall_thickness;
 end_thickness = length - bore_depth;

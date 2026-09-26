@@ -6,11 +6,11 @@ from supplied measurements.
 | Dimension | Value |
 | --- | ---: |
 | Outer diameter | 7.6 mm |
-| Overall length | 14 mm |
-| Wall thickness | 1.6 mm |
-| Bore diameter | 4.4 mm |
-| Blind bore depth | 10 mm (approximate measurement) |
-| Closed end thickness | 4 mm |
+| Overall length | 19 mm |
+| Wall thickness | 2 mm |
+| Bore diameter | 3.6 mm |
+| Blind bore depth | 14 mm |
+| Closed end thickness | 5 mm |
 
 Print as modeled, with the closed end on the bed and the hole facing up.
 No supports are needed. Dimensions are editable in `model.scad`; no fit
