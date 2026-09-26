@@ -3,21 +3,21 @@
 
 base_length = 154;
 base_width = 26;
-base_thickness = 1;
+base_thickness = 1.6;
 upper_length = 150;
 upper_width = 22;
 upper_height = 3;
 button_hole_diameter = 10;
 button_hole_from_right = 23;
-button_hole_from_bottom = 10;
+button_hole_from_bottom = 9;
 groove_from_bottom = 10;
 groove_width = 2;
-groove_depth = 1;
+groove_depth = 1.2;
 right_groove_length = 7;
 left_groove_length = 115;
 finger_recess_width = 25;
 finger_recess_height = 17;
-finger_recess_depth = 1;
+finger_recess_depth = 1.6;
 
 upper_left = (base_length - upper_length) / 2;
 upper_right = (base_length + upper_length) / 2;
@@ -57,7 +57,7 @@ difference() {
         cylinder(d = button_hole_diameter,
                  h = base_thickness + upper_height + 2 * epsilon);
 
-    // Open-bottom finger recess, sloping to a 1 mm-deep central channel.
+    // Open-bottom finger recess, sloping to the specified central depth.
     translate([base_length - button_hole_from_right,
                button_hole_from_bottom,
                base_thickness + upper_height - finger_recess_depth]) {
