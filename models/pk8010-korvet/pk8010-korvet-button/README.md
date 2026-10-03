@@ -7,8 +7,8 @@ from supplied measurements.
 | --- | ---: |
 | Outer diameter | 7.6 mm |
 | Overall length | 19 mm |
-| Wall thickness | 1.8 mm |
-| Bore diameter | 4 mm |
+| Wall thickness | 1.9 mm |
+| Bore diameter | 3.8 mm |
 | Blind bore depth | 14 mm |
 | Closed end thickness | 5 mm |
 
