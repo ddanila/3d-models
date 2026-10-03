@@ -3,7 +3,7 @@
 
 outer_diameter = 7.6;
 wall_thickness = 1.9;
-length = 19;
+length = 17;
 bore_depth = 14;
 
 bore_diameter = outer_diameter - 2 * wall_thickness;

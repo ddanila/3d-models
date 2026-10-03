@@ -12,7 +12,7 @@ Stepped rectangular lid with a button through-hole, modeled from supplied dimens
 | Ledge on each side | 2 mm |
 | Button through-hole diameter | 10 mm |
 | Hole center from right / bottom base edges | 23 / 7 mm |
-| Decorative groove center from bottom base edge | 10 mm |
+| Decorative groove center from bottom base edge | 11 mm |
 | Groove width / depth from top surface | 2 / 1.2 mm |
 | Right / left groove length | 7 / 115 mm |
 | Finger recess width / upper arc circle diameter | 25 / 25 mm |
@@ -28,9 +28,9 @@ channel extending toward the bottom, both 1.6 mm below the top surface.
 The recess opens across its full 25 mm width at the raised section's bottom
 edge. Its uppermost point is Y = 19.5 mm. The lower base ledge remains intact.
 
-Both decorative groove segments run horizontally at Y = 10 mm and cut only
+Both decorative groove segments run horizontally at Y = 11 mm and cut only
 the raised section, from Z = 5.4 down to Z = 4.2 mm. Their centerline is
-3 mm above the hole center. The right segment runs
+4 mm above the hole center. The right segment runs
 inward from the raised section's right edge (X = 152) to X = 145 mm,
 leaving a 9 mm horizontal gap to the hole's rightmost point. The left segment
 runs 115 mm inward from the raised section's left edge (X = 2) to X = 117 mm,
