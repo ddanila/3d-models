@@ -1,0 +1,281 @@
+{
+  "retrieved": "2026-10-06",
+  "album": "https://ibb.co/album/5Kh88z",
+  "cad_archive": "https://pk8020.ru/Hard/3d",
+  "album_advertised_count": 19,
+  "album_accessible_count": 14,
+  "files": [
+    {
+      "file": "photos/IMG-20260130-124123.jpg",
+      "url": "https://i.ibb.co/k25Zy01x/IMG-20260130-124123.jpg",
+      "page": "https://ibb.co/fdqJStv2",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 3381608,
+      "bytes": 3381608,
+      "sha256": "c65ba2e33c896f2ef1e8af1c0a8bdc704b598a1ef8edbb2470ee279cfb44f484"
+    },
+    {
+      "file": "photos/IMG-20260130-124106.jpg",
+      "url": "https://i.ibb.co/Q5JJhg8/IMG-20260130-124106.jpg",
+      "page": "https://ibb.co/0wnn17B",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 3207378,
+      "bytes": 3207378,
+      "sha256": "e9ac7207bace4868146e7d911e32a61baf4852a36a0bdadea26b45ea12ef147d"
+    },
+    {
+      "file": "photos/IMG-20260130-124104.jpg",
+      "url": "https://i.ibb.co/BKyTV8k3/IMG-20260130-124104.jpg",
+      "page": "https://ibb.co/YTcf7vgQ",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 3244033,
+      "bytes": 3244033,
+      "sha256": "f05dbcec2db8fa3ecf031c39da4c55046f16609a4ef2be78b3905d84c3f6266d"
+    },
+    {
+      "file": "photos/IMG-20260130-124101.jpg",
+      "url": "https://i.ibb.co/Q3hKqSdd/IMG-20260130-124101.jpg",
+      "page": "https://ibb.co/mVdcYZ88",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 3247124,
+      "bytes": 3247124,
+      "sha256": "0b9df870f982f87a1ca84eb40b8f046063f21e6aebe5ac9c7d85876852b76628"
+    },
+    {
+      "file": "photos/IMG-20260130-124056.jpg",
+      "url": "https://i.ibb.co/kg49xxYk/IMG-20260130-124056.jpg",
+      "page": "https://ibb.co/Kj2LXXCR",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 3023040,
+      "bytes": 3023040,
+      "sha256": "3869e3e81b9d9592fddbd0dec4574c88f14010fa24cfce8a4112d2f81b026f53"
+    },
+    {
+      "file": "photos/IMG-20260130-124054.jpg",
+      "url": "https://i.ibb.co/mrvBhTBD/IMG-20260130-124054.jpg",
+      "page": "https://ibb.co/GfsJCpJx",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 3147510,
+      "bytes": 3147510,
+      "sha256": "e23d197098c5e99d27609b145ba1cc1c8b68a4d88a5b2918175e1fd77e6630ad"
+    },
+    {
+      "file": "photos/IMG-20260130-124050.jpg",
+      "url": "https://i.ibb.co/3y9W3cTX/IMG-20260130-124050.jpg",
+      "page": "https://ibb.co/8DL2C9m3",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 3440618,
+      "bytes": 3440618,
+      "sha256": "9ff7bc570eb72be5b9126946ab6a2f48c66946743842e6a19a655c23db6fb274"
+    },
+    {
+      "file": "photos/IMG-20260130-124047.jpg",
+      "url": "https://i.ibb.co/nsC8Ghpx/IMG-20260130-124047.jpg",
+      "page": "https://ibb.co/KjwzPCnT",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 3303111,
+      "bytes": 3303111,
+      "sha256": "a3337e26bacc24192423cae51455cb67defe90aae3b6a8a1497326c5e86d192f"
+    },
+    {
+      "file": "photos/IMG-20260130-124309.jpg",
+      "url": "https://i.ibb.co/BHPNz842/IMG-20260130-124309.jpg",
+      "page": "https://ibb.co/SDxrsqQw",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 2711368,
+      "bytes": 2711368,
+      "sha256": "c11ed09a82c777825dd1aca967ab715d1efc372fe7ed27e70b3efdaf82ea41c8"
+    },
+    {
+      "file": "photos/IMG-20260130-124300.jpg",
+      "url": "https://i.ibb.co/zqTHzZs/IMG-20260130-124300.jpg",
+      "page": "https://ibb.co/h3J1SVs",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 2257771,
+      "bytes": 2257771,
+      "sha256": "525227f53bb56d91755fef1d5fa04422f83b39701c2896edf11b20c9f9c6bb0c"
+    },
+    {
+      "file": "photos/IMG-20260130-124253.jpg",
+      "url": "https://i.ibb.co/Hf35PPHW/IMG-20260130-124253.jpg",
+      "page": "https://ibb.co/KpSTssrM",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 2644957,
+      "bytes": 2644957,
+      "sha256": "69f995db3b0cda0faa6666462b978c41957bae22b4330c2c9d874358ef0d2dd7"
+    },
+    {
+      "file": "photos/IMG-20260130-124251.jpg",
+      "url": "https://i.ibb.co/5hKBqZ3X/IMG-20260130-124251.jpg",
+      "page": "https://ibb.co/m5N6QpKr",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 2612971,
+      "bytes": 2612971,
+      "sha256": "ec50c70e8a25e758e44f13ae1530b9b39caf3b35f53b272e4a032d0e4cdc96bf"
+    },
+    {
+      "file": "photos/IMG-20260130-124151.jpg",
+      "url": "https://i.ibb.co/270WDNx9/IMG-20260130-124151.jpg",
+      "page": "https://ibb.co/rGKFCsYj",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 2869873,
+      "bytes": 2869873,
+      "sha256": "e9d6e3757b6da881c214f8752af90c50b63efeae66e0db1cfc9f9cf126d91df4"
+    },
+    {
+      "file": "photos/IMG-20260130-124126.jpg",
+      "url": "https://i.ibb.co/WW7gkP8M/IMG-20260130-124126.jpg",
+      "page": "https://ibb.co/Y7Jpcyn1",
+      "kind": "Original album photograph",
+      "author": "leman",
+      "expected_bytes": 4215366,
+      "bytes": 4215366,
+      "sha256": "abfc900c90202eb71ccbb1347b51c86145ef2b4a732f368853716875a9d1fbeb"
+    },
+    {
+      "file": "cad/SB80xx_reset1.png",
+      "url": "https://pk8020.ru/images/3d/SB80xx_reset1.png",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Right side panel with reset opening",
+      "bytes": 13241,
+      "sha256": "3ddfcd4c36b38fe3a986950a190baf192f0ef139c21bd3a5405e3587b82c90d7"
+    },
+    {
+      "file": "cad/SB80xx_reset1.m3d",
+      "url": "https://pk8020.ru/documents/3d/SB80xx_reset1.m3d",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Right side panel with reset opening",
+      "bytes": 163686,
+      "sha256": "32057d0a20cb66a64a227bf45f58b6836908f906226d4cbeb0508387b8f9274a"
+    },
+    {
+      "file": "cad/SB80xx_reset1.stl",
+      "url": "https://pk8020.ru/documents/3d/SB80xx_reset1.stl",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Right side panel with reset opening",
+      "bytes": 13484,
+      "sha256": "a6811417e4c36fe5dd45e7b4d404b46b0933f24852001976417b674e60d5251f"
+    },
+    {
+      "file": "cad/SB80xx_reset2.png",
+      "url": "https://pk8020.ru/images/3d/SB80xx_reset2.png",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Right side panel with reset opening",
+      "bytes": 11804,
+      "sha256": "73177ab862c9f59d57fe02f139f2e3326a06d755ce4a0231c87b4be2c2d07cb0"
+    },
+    {
+      "file": "cad/SB80xx_reset2.m3d",
+      "url": "https://pk8020.ru/documents/3d/SB80xx_reset2.m3d",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Right side panel with reset opening",
+      "bytes": 149522,
+      "sha256": "9d6da72e3457f444e9d67b304a11238e64f8148b9a6a658192f63dcc3a2704d1"
+    },
+    {
+      "file": "cad/SB80xx_reset2.stl",
+      "url": "https://pk8020.ru/documents/3d/SB80xx_reset2.stl",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Right side panel with reset opening",
+      "bytes": 9084,
+      "sha256": "2e7c2f6cf63f75c6de6c08e6ec05afe4cc44d0b446c582e37bc209c4034afbef"
+    },
+    {
+      "file": "cad/SB80xx_reset_button1.png",
+      "url": "https://pk8020.ru/images/3d/SB80хх_reset_button1.png",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Reset button",
+      "bytes": 1829,
+      "sha256": "8d4346eb50a6bd8097578e9304125f7197e3fe3c6574c90ee2d16ab044d4e0b5"
+    },
+    {
+      "file": "cad/SB80xx_reset_button1.m3d",
+      "url": "https://pk8020.ru/documents/3d/SB80хх_reset_button1.m3d",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Reset button",
+      "bytes": 59780,
+      "sha256": "e32abecba38729961e0915b4b91b966dd0a925678c01254e9f27edd4e2d501eb"
+    },
+    {
+      "file": "cad/SB80xx_reset_button1.stl",
+      "url": "https://pk8020.ru/documents/3d/SB80хх_reset_button1.stl",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Reset button",
+      "bytes": 4484,
+      "sha256": "42f385d7521d853597b0ab4149c63f4a2736aaf235281bfdb4135937c0004321"
+    },
+    {
+      "file": "cad/SB80xx_reset_button2.png",
+      "url": "https://pk8020.ru/images/3d/SB80хх_reset_button2.png",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Reset button",
+      "bytes": 1721,
+      "sha256": "168fce610b638caf5344213609f504374bd80fbb1a2fa1f1aa78cc826041526d"
+    },
+    {
+      "file": "cad/SB80xx_reset_button2.m3d",
+      "url": "https://pk8020.ru/documents/3d/SB80хх_reset_button2.m3d",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Reset button",
+      "bytes": 101961,
+      "sha256": "369ac451258f3df86ca5d0087b0b9dd7eadb54ff1359ee1ac2c3da49e2bf7dd7"
+    },
+    {
+      "file": "cad/SB80xx_reset_button2.stl",
+      "url": "https://pk8020.ru/documents/3d/SB80хх_reset_button2.stl",
+      "page": "https://pk8020.ru/Hard/3d",
+      "kind": "Reset button",
+      "bytes": 4684,
+      "sha256": "152ce9a67696baa0ea1cbe4b8be6d47fb9716ebaabce6d5501d452a562b2ea76"
+    },
+    {
+      "file": "user-photos/PXL_20261006_113345351.jpg",
+      "source": "User-provided Downloads/Photos-1-001.zip",
+      "imported": "2026-10-06",
+      "kind": "Original loose keycap photograph with ruler",
+      "bytes": 1698862,
+      "sha256": "6ac1715625851ea5870fd75b4e484c17a0a64f086e6b8a69cf8179d46bbe1a5b",
+      "processing": "EXIF removed for publication; JPEG image pixels unchanged. Original ZIP remains in Downloads."
+    },
+    {
+      "file": "user-photos/PXL_20261006_113353162.jpg",
+      "source": "User-provided Downloads/Photos-1-001.zip",
+      "imported": "2026-10-06",
+      "kind": "Original loose keycap photograph with ruler",
+      "bytes": 1638304,
+      "sha256": "369645c929edc3d3310f96197cf5b32c0ba2cc752660ad2d490a4c2cc1a94cc7",
+      "processing": "EXIF removed for publication; JPEG image pixels unchanged. Original ZIP remains in Downloads."
+    },
+    {
+      "file": "user-photos/PXL_20261006_113404107.jpg",
+      "source": "User-provided Downloads/Photos-1-001.zip",
+      "imported": "2026-10-06",
+      "kind": "Original loose keycap photograph with ruler",
+      "bytes": 1668561,
+      "sha256": "01e48e1602135115452c995602649f3be7848662dd5a00282e89dbd0e917deb3",
+      "processing": "EXIF removed for publication; JPEG image pixels unchanged. Original ZIP remains in Downloads."
+    },
+    {
+      "file": "user-photos/PXL_20261006_113412385.jpg",
+      "source": "User-provided Downloads/Photos-1-001.zip",
+      "imported": "2026-10-06",
+      "kind": "Original loose keycap photograph with ruler",
+      "bytes": 1670430,
+      "sha256": "36623bfb151b4fb86c30087cead6028f5eafe865f3ccf089b7885a904b0aea47",
+      "processing": "EXIF removed for publication; JPEG image pixels unchanged. Original ZIP remains in Downloads."
+    }
+  ]
+}
