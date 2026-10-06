@@ -4,17 +4,18 @@ Parametric reconstruction of the photographed ↑/8 keycap, with a hollow tapere
 shell, cylindrical top dish, rectangular blind mounting socket, reinforcing
 webs, and recessed legends suitable for paint filling.
 
-Review: [top preview](preview.png), [underside preview](preview-underside.png),
+Review: [top preview](preview.png), [side preview](preview-side.png),
+[underside preview](preview-underside.png),
 and [printable STL](pk8010-korvet-keycap.stl).
 
-| Parameter | First version | Basis |
+| Parameter | Current prototype | Basis |
 | --- | --- | --- |
 | Socket opening | 5.5 × 3.5 mm | User measurement |
 | Base | 17.8 × 17.8 mm | Ruler-photo estimate |
 | Top outline | 12.8 × 14 mm | Provisional |
-| Nominal top height | 12 mm | Provisional; tilted edges have different heights |
-| Top offset toward arrow | 1 mm | Provisional |
-| Top tilt | −5° about X | Provisional |
+| Nominal top height | 12 mm | Provisional; shallow dish across the width |
+| Top offset along Y | +1.9 mm (toward arrow tip) | Align +Y edges so this face is parallel to XZ |
+| Top tilt | 0° | User correction: parallel to base in side view |
 | Dish depth | 0.6 mm | Provisional |
 | Shell wall / roof | 1.1 / 1.4 mm | Provisional |
 | Socket wall | 1 mm | Provisional |
@@ -27,6 +28,12 @@ arrow tip, and the skirt bottom is Z=0. The socket's long side runs left/right
 by default; change `socket_rotation` to 90 if the original uses the other
 orientation. `socket_clearance` adds to each complete opening dimension;
 it defaults to zero. `engrave_legend = false` produces a blank keycap.
+
+The top stays level from front to rear. Its offset is derived from the base and
+top depths so the arrow-tip side (+Y) is vertical, parallel to XZ.
+The numeral 8 side (−Y) slopes inward. The shallow concavity across the width remains.
+This profile incorporates the user's review correction to the initial tilted-top
+version; the measured socket opening remains 5.5 × 3.5 mm.
 
 The internal webs are a simplified support structure, not an exact tracing
 of the original molding. The legends are approximations. This first version
@@ -69,12 +76,20 @@ and [support settings](https://help.prusa3d.com/article/support-material_1698).
 
 ## Validation
 
-Validated with OpenSCAD's Manifold backend and an STL edge/connectivity check:
-one closed connected mesh, 3,772 triangles. Exported bounds are
-17.8 × 17.8 × 12.567 mm. Physical fit has not yet been tested.
+Rendered with OpenSCAD's Manifold backend; STL exported with CGAL and validated
+with an edge/connectivity check:
+one closed connected mesh, 3,012 triangles. Exported bounds are
+17.8 × 17.8 × 12.012 mm. Physical fit has not yet been tested.
 
 Open from the repository root:
 
 ```sh
 ./scripts/open.sh pk8010-korvet/pk8010-korvet-keycap
+```
+
+To reproduce the validated STL from this model directory, select CGAL explicitly:
+
+```sh
+openscad --backend CGAL --export-format binstl \
+  -o pk8010-korvet-keycap.stl model.scad
 ```

@@ -6,8 +6,9 @@ base_depth = 17.8;
 top_width = 12.8;
 top_depth = 14.0;
 height = 12.0;
-top_offset_y = 1.0;
-top_tilt = -5;
+// Align the +Y (arrow-tip side) edges: this face is parallel to XZ.
+top_offset_y = (base_depth - top_depth) / 2;
+top_tilt = 0; // User observation: top is parallel to base in side view.
 corner_radius = 0.9;
 wall = 1.1;
 roof = 1.4;
