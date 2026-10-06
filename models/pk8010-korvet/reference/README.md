@@ -10,6 +10,10 @@ show the loose ↑/8 keycap, including its underside. The user measured the
 inner mounting opening as **5.5 × 3.5 mm**. These are the primary references
 for the keycap geometry; the internet material below provides context.
 
+[Five wide РГ / SHIFT key photos](wide-key-photos/README.md) provide the
+separate wider outline and row-profile reference. Their archive contains no
+underside view, so the SHIFT mount remains provisional.
+
 ## Keyboard and case photographs
 
 Source: [Корпус и клавиатура от КОРВЕТ ПК 8010 СБ8010](https://ibb.co/album/5Kh88z),

@@ -276,6 +276,51 @@
       "bytes": 1670430,
       "sha256": "36623bfb151b4fb86c30087cead6028f5eafe865f3ccf089b7885a904b0aea47",
       "processing": "EXIF removed for publication; JPEG image pixels unchanged. Original ZIP remains in Downloads."
+    },
+    {
+      "file": "wide-key-photos/PXL_20261006_143446883.jpg",
+      "source": "User-provided Downloads/Photos-1-001 (1).zip",
+      "imported": "2026-10-06",
+      "kind": "Wide РГ / SHIFT keycap photograph with ruler",
+      "processing": "EXIF removed; JPEG pixels unchanged. Original archive untouched.",
+      "bytes": 1700674,
+      "sha256": "5fa8c5db0d0238ba4eee02d7fa8ab56b882ce1c793ea4ac406a6ddc904758de0"
+    },
+    {
+      "file": "wide-key-photos/PXL_20261006_143449318.jpg",
+      "source": "User-provided Downloads/Photos-1-001 (1).zip",
+      "imported": "2026-10-06",
+      "kind": "Wide РГ / SHIFT keycap photograph with ruler",
+      "processing": "EXIF removed; JPEG pixels unchanged. Original archive untouched.",
+      "bytes": 1701987,
+      "sha256": "306f69c0e7523ce74b1599ee1defc28e865756b5a1706d59375df89dcc38e6f0"
+    },
+    {
+      "file": "wide-key-photos/PXL_20261006_143512329.jpg",
+      "source": "User-provided Downloads/Photos-1-001 (1).zip",
+      "imported": "2026-10-06",
+      "kind": "Wide РГ / SHIFT keycap photograph with ruler",
+      "processing": "EXIF removed; JPEG pixels unchanged. Original archive untouched.",
+      "bytes": 1677322,
+      "sha256": "c28aadf9ae5a6bec122b15e9269d8408456d999c57f167379a73853b92f09192"
+    },
+    {
+      "file": "wide-key-photos/PXL_20261006_143532139.jpg",
+      "source": "User-provided Downloads/Photos-1-001 (1).zip",
+      "imported": "2026-10-06",
+      "kind": "Wide РГ / SHIFT keycap photograph with ruler",
+      "processing": "EXIF removed; JPEG pixels unchanged. Original archive untouched.",
+      "bytes": 1542599,
+      "sha256": "bdb1a7fbaa0af49d33f597f6d58cc59855dd5158b191828e4e28e19c0d21f163"
+    },
+    {
+      "file": "wide-key-photos/PXL_20261006_143605436.jpg",
+      "source": "User-provided Downloads/Photos-1-001 (1).zip",
+      "imported": "2026-10-06",
+      "kind": "Wide РГ / SHIFT keycap photograph with ruler",
+      "processing": "EXIF removed; JPEG pixels unchanged. Original archive untouched.",
+      "bytes": 1960376,
+      "sha256": "5c83fd362b8ba4f96ad520a2f1463dfa112eb0764a72349e1f7d2d92a95f1dae"
     }
   ]
 }
