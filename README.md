@@ -65,3 +65,5 @@ their own `preview-<part>.png` image.
 - [`rg1n-loopback-case`](models/rg1n-loopback-case/) — compact two-piece case
   for a wired 12-contact РГ1Н-1-4 loopback connector
 - [ПК8010 Корвет](models/pk8010-korvet/) — right-side button, lid, and prototype ↑/8 and SHIFT keycaps
+- [Oral-B five-brush stand](models/oral-b-five-brush-stand/) — flat shelf
+  mounting base with five original-shaped supports and two screw holes
