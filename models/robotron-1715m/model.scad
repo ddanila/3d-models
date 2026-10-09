@@ -3,10 +3,11 @@
 include <dimensions.scad>
 include <keyboard-layout.scad>
 part = "assembly";
+key_index = 0;
 
 module rounded(size,r=3) {
     hull() for(x=[r,size[0]-r],y=[r,size[1]-r],z=[r,size[2]-r])
-        translate([x,y,z]) sphere(r=r,$fn=16);
+        translate([x,y,z]) sphere(r=r,$fn=32);
 }
 module slab(w,h,t,r=2) {
     linear_extrude(t) offset(r=r) square([w-2*r,h-2*r],center=true);
@@ -49,7 +50,11 @@ module drives() {
     }
 }
 module switch_part(x,w,h) {
-    translate([x,-case_d/2-4,17]) rotate([90,0,0]) slab(w,h,7,2);
+    translate([x,-case_d/2-4,17]) rotate([90,0,0]) {
+        difference(){slab(w,h,4,2);translate([0,0,1])slab(w-4,h-4,5,1);}
+        translate([0,0,4]) rotate([0,x>0?8:0,0]) slab(w-5,h-5,3,1);
+        if(x>0)for(i=[-7:7])translate([i*2,0,7.2])cube([.35,h-7,.4],center=true);
+    }
 }
 module pedestal() {
     translate([0,monitor_y,case_h+ring_h]) cylinder(d=171,h=31);
@@ -61,17 +66,19 @@ module ring() {
 module monitor_shell() {
     translate([0,monitor_y,monitor_z]) difference() {
         hull() {
-            translate([-monitor_w/2,-monitor_d/2,0]) rounded([monitor_w,22,monitor_h],10);
-            translate([-135,monitor_d/2-28,20]) rounded([270,28,240],10);
+            translate([-monitor_w/2,-monitor_d/2,0]) rounded([monitor_w,30,monitor_h],14);
+            translate([-135,monitor_d/2-28,20]) rounded([270,28,240],12);
         }
         hull(){translate([-monitor_w/2+wall,-monitor_d/2+wall,wall])rounded([monitor_w-2*wall,22,monitor_h-2*wall],7);translate([-132,monitor_d/2-31,23])rounded([264,28,234],7);}
         translate([-139,-monitor_d/2-3,21]) rounded([278,60,238],8);
+        // Side/rear shell joint visible in the owner photograph.
+        translate([-monitor_w/2-1,-monitor_d/2-1,86]) cube([monitor_w+2,monitor_d+2,.8]);
         for(i=[-12:12]) translate([i*10,70,monitor_h-24]) cube([4,60,40],center=true);
     }
 }
 module bezel() {
     translate([0,monitor_y-monitor_d/2-3,monitor_z+monitor_h/2]) rotate([90,0,0]) difference() {
-        slab(303,264,9,15);
+        hull(){slab(303,264,1,19);translate([0,0,8])slab(296,257,1,22);}
         translate([0,4,-1]) slab(268,221,12,22);
     }
 }
@@ -83,7 +90,7 @@ module crt_glass() {
 }
 module keyboard_shell() {
     translate([0,keyboard_y,0]) difference() {
-        hull(){translate([0,-keyboard_d/2+4,8])cube([keyboard_w-6,8,16],center=true);translate([0,keyboard_d/2-4,20])cube([keyboard_w-6,8,40],center=true);}
+        hull(){translate([-keyboard_w/2+3,-keyboard_d/2,0])rounded([keyboard_w-6,12,16],4);translate([-keyboard_w/2+3,keyboard_d/2-12,0])rounded([keyboard_w-6,12,40],4);}
         translate([0,0,25]) rotate([keyboard_slope,0,0]) slab(keyboard_w-12,keyboard_d-30,30,4);
         translate([80,55,-2]) cube([28,22,9],center=true);
     }
@@ -104,6 +111,11 @@ module cap(w,h,style) {
 module keycaps(style) {
     translate([0,keyboard_y,28]) rotate([keyboard_slope,0,0])
         for(k=keys) if(k[4]==style) translate([k[0],k[1],0])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,style);
+}
+module cable() {
+    // Approximate route; endpoints follow the photographed plug and cable exit.
+    pts=[[80,keyboard_y+55,2],[60,keyboard_y+95,3],[-70,-253,5],[-220,-257,6],[-285,-225,12],[-290,-170,19],[-260,-145,22]];
+    for(i=[0:len(pts)-2]) hull(){translate(pts[i])sphere(r=2.6);translate(pts[i+1])sphere(r=2.6);}
 }
 module hardware() {
     // Neutral dark backing behind the vent bank, not an internal board model.
@@ -135,8 +147,10 @@ module shape(p) {
     if(p=="keys-light")keycaps(1);
     if(p=="keys-red")keycaps(2);
     if(p=="hardware")hardware();
+    if(p=="cable")cable();
+    if(p=="keycap")let(k=keys[key_index])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[4]);
 }
-parts=["case-base","case-lid","fascia","drives","power","reset","pedestal","ring","monitor-shell","bezel","crt-rim","crt-glass","keyboard-shell","keyboard-deck","keys-black","keys-light","keys-red","hardware"];
-colors=["Wheat","Wheat","Gray","#242627","#333839","#333839","Wheat","#333333","Wheat","#8c857a","#141919","#0b1712","#abb9bc","#242929","#202526","#bac1b8","#c6343b","#474b46"];
+parts=["case-base","case-lid","fascia","drives","power","reset","pedestal","ring","monitor-shell","bezel","crt-rim","crt-glass","keyboard-shell","keyboard-deck","keys-black","keys-light","keys-red","hardware","cable"];
+colors=["Wheat","Wheat","Gray","#242627","#333839","#333839","Wheat","#333333","Wheat","#8c857a","#141919","#0b1712","#abb9bc","#242929","#202526","#bac1b8","#c6343b","#474b46","#b7b3a0"];
 if(part=="assembly") for(i=[0:len(parts)-1]) color(colors[i]) shape(parts[i]);
 else shape(part);
