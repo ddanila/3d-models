@@ -1,0 +1,92 @@
+{
+  "archive": "Photos-1-001 (2).zip",
+  "date": "2026-10-09",
+  "owner": "Danila",
+  "metadata": "EXIF/XMP/IPTC/comments and trailing motion video removed; decoded JPEG pixels verified identical.",
+  "photos": [
+    {
+      "file": "PXL_20261009_132916421.MP.jpg",
+      "width": 3072,
+      "height": 4080,
+      "original_sha256": "f2275347a399d60f48515366d2a2e3ea055090281ed428c52a77e0345136ed6a",
+      "sha256": "bd9b79b4841620ddc6b90262aa93f8536ba947547b556dc24311e7439e2b4733"
+    },
+    {
+      "file": "PXL_20261009_132919894.jpg",
+      "width": 3072,
+      "height": 4080,
+      "original_sha256": "7208f99f76b776d903b41b2ff6b59a137a6ea32177c005a31afba39c6ea22752",
+      "sha256": "d594f0e43928ee959f37fc250a395395f8c507057347c7ffc972c4be97078be6"
+    },
+    {
+      "file": "PXL_20261009_132921960.jpg",
+      "width": 3072,
+      "height": 4080,
+      "original_sha256": "2c08d2d5fecd8e3c090a90e2f525f8499e823c62912a5c2b407cdf1ccc3ae020",
+      "sha256": "a2e2dc4e920ac3437a3b25d8cd188592a42efcae361a254dc50e003e996b1de6"
+    },
+    {
+      "file": "PXL_20261009_132938614.jpg",
+      "width": 4080,
+      "height": 3072,
+      "original_sha256": "17edac3c0bc1381376a209dc82e486c0bc925e4ea93adcb4ba3fb2eedc15c3b2",
+      "sha256": "aa593eb73916873e1080909c7275385117429fad6a9c1ff9fba8b14f4192e129"
+    },
+    {
+      "file": "PXL_20261009_133001660.jpg",
+      "width": 4080,
+      "height": 3072,
+      "original_sha256": "783b60703e04b524d3d3263fdde03bca245aad8c2b9cbf33bd57cdd0666ee052",
+      "sha256": "6b8a48f0c48f597b83bab2a47f78a3603b2a106dede385a244334257f0b91f47"
+    },
+    {
+      "file": "PXL_20261009_133005363.jpg",
+      "width": 4080,
+      "height": 3072,
+      "original_sha256": "aceb3db8a4ff7db760a92589e32832937508969d3b7fb82061dbda78660edbae",
+      "sha256": "6598199f3b074e9b774a5ab993a1711075e066c7793de879446082c2603b41f8"
+    },
+    {
+      "file": "PXL_20261009_133017092.jpg",
+      "width": 4080,
+      "height": 3072,
+      "original_sha256": "16f404dde9ba40db6ea05cfecb4f107e249bb5ca372ecb9091fc5e4a5816381c",
+      "sha256": "726a736c3b4bc631ae2af332b5b1a63d6d6bde87092674e8f281bd8120e905fb"
+    },
+    {
+      "file": "PXL_20261009_133019620.jpg",
+      "width": 4080,
+      "height": 3072,
+      "original_sha256": "af3be795c567b6301d5b0feadc5c7ad61ad7a8532bb9fa6827cee83c7859db27",
+      "sha256": "3426c6718eaef3f779b0c0f8669a615eeaaea69e92f6b2ec23aee9405de3610c"
+    },
+    {
+      "file": "PXL_20261009_133022597.jpg",
+      "width": 4080,
+      "height": 3072,
+      "original_sha256": "7b301df776d29b85c154d8645614f542588d8c4b416bfe62a7528fce184de7b5",
+      "sha256": "945e541217e3f81415876063566eb44959a7fcab7dd7ba38316a45a204c7da9b"
+    },
+    {
+      "file": "PXL_20261009_133028313.jpg",
+      "width": 4080,
+      "height": 3072,
+      "original_sha256": "37482ba284d0a433cf750dd04d9b546b7fd837ee92a79970b113c179b2e8cb9e",
+      "sha256": "88cafd0cd7de853410c89f9777ef7df229be90ebdbd7df52a5685fc5dadafb3a"
+    },
+    {
+      "file": "PXL_20261009_133032874.jpg",
+      "width": 4080,
+      "height": 3072,
+      "original_sha256": "7cd5c606d17d573c09f7b3da6641404c07676cbf1d0acf947d3fd14d14cda169",
+      "sha256": "10240ba828f6931ad616a2e9d7d0d955c81b2a2fba5a0ca9dd8e59d85aa5e026"
+    },
+    {
+      "file": "PXL_20261009_133035426.jpg",
+      "width": 4080,
+      "height": 3072,
+      "original_sha256": "bb3bc9cef70d8ee8ca108745b6ab37112af39684442240d6fe7067486da723a5",
+      "sha256": "9d35340e86d799060f88528ef57eed11672b5ce86b3a756817e88746162f3626"
+    }
+  ]
+}
