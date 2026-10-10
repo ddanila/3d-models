@@ -29,5 +29,5 @@ any rough edges from the contact face before installing it.
 From the repository root:
 
 ```sh
-./scripts/open.sh robotron-1715m-display-base-ring
+./scripts/open.sh robotron-1715m/display-base-ring
 ```

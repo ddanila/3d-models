@@ -67,5 +67,6 @@ their own `preview-<part>.png` image.
 - [ПК8010 Корвет](models/pk8010-korvet/) — right-side button, lid, and prototype ↑/8 and SHIFT keycaps
 - [Oral-B five-brush stand](models/oral-b-five-brush-stand/) — flat shelf
   mounting base with five original-shaped supports and two screw holes
-- [Robotron 1715M display base ring](models/robotron-1715m-display-base-ring/) —
-  protective plastic insert, Ø175 mm outside, 3 mm radial wall, 5 mm high
+- [Robotron 1715M](models/robotron-1715m/) — museum reconstruction and its
+  [display base ring](models/robotron-1715m/display-base-ring/), a protective
+  insert with Ø175 mm outside, 3 mm radial wall and 5 mm height

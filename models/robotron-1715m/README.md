@@ -14,7 +14,7 @@ The original [Robotron 1715/1715W manual, printed p.35 (PDF page 36)](https://xe
 | Display | 320 mm | 350 mm | 330 mm |
 | Keyboard | 500 mm | 200 mm | 40 mm |
 
-These are family specifications, not new measurements of Danila’s specimen. The display height includes its stand; its shell and stand proportions are inferred from the photograph. Small projections and approximate feet can extend beyond nominal envelopes. The monitor insert uses Danila’s existing [measured ring](../robotron-1715m-display-base-ring/): 175 mm OD, 169 mm ID, 5 mm high; its physical fit is still unverified.
+These are family specifications, not new measurements of Danila’s specimen. The display height includes its stand; its shell and stand proportions are inferred from the photograph. Small projections and approximate feet can extend beyond nominal envelopes. The monitor insert uses Danila’s existing [measured ring](display-base-ring/): 175 mm OD, 169 mm ID, 5 mm high; its physical fit is still unverified.
 
 The ruler photograph `PXL_20261009_132938614.jpg` provides an independent local scale. In a 1824 × 1373 display of that photo, the 200 and 100 mm ruler ticks are approximately x=405 and x=1380. Six number-row key intervals span approximately 1172 pixels, giving 1172 / 6 / 9.75 ≈ 20.0 mm. The model uses 20 mm pitch. Allow about ±1 mm for hand-picked landmarks, perspective and the ruler lying at a different height from the key centres. This is not submillimetre metrology.
 
