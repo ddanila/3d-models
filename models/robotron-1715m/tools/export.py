@@ -61,8 +61,15 @@ for r in records:
     if n.startswith('power-wires') or n.startswith('ribbon-'):m='rubber'
     if n=='drive-coils':m='metal'
     if n in ['drive-frames', 'drive-mechanisms', 'drive-motors', 'drive-boards', 'drive-contacts', 'drive-coils', 'drive-bracket', 'logic-boards', 'logic-chips', 'logic-pins', 'logic-connectors', 'logic-capacitors', 'psu-chassis', 'psu-cover', 'fan-frame', 'fan-rotor', 'ribbon-cables', 'ribbon-stripes', 'power-wires-red', 'power-wires-black', 'power-wires-yellow', 'keyboard-pcb', 'keyboard-switches']:r['section']='interior'
+    if n in ['tube-funnel', 'tube-neck', 'monitor-yoke', 'monitor-coils', 'monitor-chassis', 'monitor-boards', 'monitor-components', 'monitor-capacitors', 'monitor-shield', 'monitor-wires']:r['section']='monitor-interior'
+    if n in ['monitor-chassis','monitor-shield']:m='metal'
+    if n=='tube-neck':m='glass'
+    if n in ['monitor-yoke','monitor-components','tube-funnel']:m='plastic'
+    if n in ['monitor-boards']:m='pcb'
+    if n=='monitor-wires':m='rubber'
+    if n=='monitor-coils':m='metal'
     r['material']=m
 references=['PXL_20261009_'+n+'.jpg' for n in ['133017092','133019620','132919894','133022597','133005363','133001660','133028313','133032874','132916421.MP']]
 references += ['PXL_'+n+'.jpg' for n in ['20250430_135132170','20251008_143433778','20250516_133813650','20250516_141624490','20250516_133810520']]
-manifest=dict(version=5,units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=dict(y=-355,z=28,slope=6,pitch=20.0),screen=json.loads((root/'monitor-profile.json').read_text())['glass'],patches=patches,references=references,pcbReferences=json.loads((root/'pcb-references.json').read_text()),interior=dict(status='provisional',drive='TEAC FD-55FV-13 reference; exact suffix unverified',driveEnvelope=[146,203,41.3],source='https://oldcrap.org/2017/12/26/robotron-1715/',specification='https://retrocmp.de/fdd/teac/TEAC_FD55-FV.pdf',note='Drive envelopes are documented. Mechanisms and layout follow another PC 1715; board population, mounting and wiring are estimates, not verified M/W internals.'),source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
+manifest=dict(version=6,units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=dict(y=-355,z=28,slope=6,pitch=20.0),screen=json.loads((root/'monitor-profile.json').read_text())['glass'],patches=patches,references=references,pcbReferences=json.loads((root/'pcb-references.json').read_text()),interior=dict(status='provisional',drive='TEAC FD-55FV-13 reference; exact suffix unverified',driveEnvelope=[146,203,41.3],source='https://oldcrap.org/2017/12/26/robotron-1715/',specification='https://retrocmp.de/fdd/teac/TEAC_FD55-FV.pdf',note='Drive envelopes are documented. Mechanisms and layout follow another PC 1715; board population, mounting and wiring are estimates, not verified M/W internals.'),source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
 (out/'model.json').write_text(json.dumps(manifest,indent=2)+'\n')

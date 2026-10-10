@@ -699,5 +699,64 @@
         800
       ]
     ]
+  },
+  {
+    "name": "monitor-reference-board",
+    "file": "reference/robotrontechnik/monitor-board.jpeg",
+    "sha256": "cdd00f4f69605d2511a00fa0bdc02ed954b42f8150712ac796c183ff2d01732a",
+    "imageSize": [
+      360,
+      271
+    ],
+    "crop": [
+      12,
+      29,
+      212,
+      261
+    ],
+    "size": [
+      215,
+      195
+    ],
+    "origin": [
+      -125.3,
+      -65,
+      220
+    ],
+    "rotated": false,
+    "packages": [],
+    "packageHeight": 0,
+    "worldCorners": [
+      [
+        -125.3,
+        -65,
+        415
+      ],
+      [
+        -125.3,
+        150,
+        415
+      ],
+      [
+        -125.3,
+        150,
+        220
+      ],
+      [
+        -125.3,
+        -65,
+        220
+      ]
+    ],
+    "normal": [
+      1,
+      0,
+      0
+    ],
+    "section": "monitor-interior",
+    "source": "https://www.robotrontechnik.de/bilder/Zubehoer/Bildschirme/K7222/012-6920_k.jpg",
+    "credit": "Robotrontechnik \u2014 reference K7222 board 012-6920, not verified in Danila\u2019s monitor",
+    "page": "https://www.robotrontechnik.de/html/zubehoer/bildschirme.htm#k7222-25",
+    "exclude": []
   }
 ]

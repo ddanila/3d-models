@@ -1,6 +1,6 @@
 # Danila’s Robotron 1715M
 
-Parametric OpenSCAD reconstruction of Danila’s exterior with a provisional reference interior. Original model, scripts and owner photographs are MIT licensed (see LICENSE); the two credited Oldcrap PCB photographs in `reference/oldcrap/` are excluded from MIT and retain their original rights (see that directory’s NOTICE.txt). This is an editable museum reconstruction, not a scan, manufacturing drawing or validated replacement enclosure.
+Parametric OpenSCAD reconstruction of Danila’s exterior with a provisional reference interior. Original model, scripts and owner photographs are MIT licensed (see LICENSE); the credited PCB photographs in `reference/oldcrap/` and `reference/robotrontechnik/` are excluded from MIT and retain their original rights (see their NOTICE.txt files). This is an editable museum reconstruction, not a scan, manufacturing drawing or validated replacement enclosure.
 
 Open `model.scad` for the assembled system unit, monitor and keyboard. Set `part` to any entry in `parts` to inspect/export it separately. Coordinates are millimetres: X right, Y towards the rear, Z up. The keyboard is placed in front of the computer. `robotron-1715m.stl` is a combined visual reference; the separate exports retain the switch and material boundaries used by the museum.
 
@@ -26,7 +26,7 @@ Sources: [documentation index](https://xepb.org/robotron/docs.html), [manual](ht
 
 `reference/photos.json` records the source archive and original/published SHA-256 hashes. `reference/photos/` contains losslessly sanitized JPEGs: EXIF, XMP, IPTC, comments and trailing motion video were removed, with decoded pixels checked against the originals. The original download was not modified. To reproduce sanitization after extracting the archive, run `python3 tools/import-photos.py /path/to/extracted/photos` from this model directory (requires Pillow).
 
-OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 5 adds material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
+OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 6 adds material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
 
 Full-panel photo skins are no longer used. The old underside crops contained a photographed cable and feet in addition to the modeled ones; removing them eliminates those duplicates and their baked shadows. There is now one continuous Bézier-routed lead, a modeled grommet, a hollow keyboard shell with a separate bottom plate, four rubber foot frames with metal inserts, six perimeter fasteners and a detailed exterior plug. The two drive fronts have recessed insertion slots/finger wells, rounded latch handles and separate red lenses. The monitor tape is a thin solid. Keycaps have square skirts, rounded shoulders and dished tops, including a stretched dish for long caps.
 
@@ -45,7 +45,7 @@ openscad --backend Manifold --export-format binstl -o models/robotron-1715m/robo
 openscad --backend Manifold -o models/robotron-1715m/preview.png --imgsize=1600,1200 --viewall --autocenter models/robotron-1715m/model.scad
 ```
 
-`tools/configure.py` generates the shared keyboard geometry/UV table. `tools/export.py` exports 51 body/detail meshes and seven reusable keycap profiles with their hashes. `part="keycap"` and `key_index` select a local, origin-centred cap for export; assembly geometry stays fully assembled. The DAC repository imports the export with `python3 scripts/sync-robotron-model.py ../3d-models`, recording the source commit and checking hashes. Firmware and emulator code stay in their own repositories.
+`tools/configure.py` generates the shared keyboard geometry/UV table. `tools/export.py` exports 62 body/detail meshes and seven reusable keycap profiles with their hashes. `part="keycap"` and `key_index` select a local, origin-centred cap for export; assembly geometry stays fully assembled. The DAC repository imports the export with `python3 scripts/sync-robotron-model.py ../3d-models`, recording the source commit and checking hashes. Firmware and emulator code stay in their own repositories.
 
 ## Interaction metadata and keyboard evidence
 
@@ -67,7 +67,7 @@ Danila’s photographs remain authoritative for specimen appearance, tape, wordm
 
 ## Provisional interior and PCB photography
 
-The user authorized a reference reconstruction while photos of this specimen’s internals are pending. `interior.scad` provides drive bodies and mechanisms, their bracket, motherboard and controller, package bodies and leads, a folded PSU shield and cover, cooling fan, ribbon cables, power wiring and approximate keyboard board/switch housings. The PSU’s enclosed components and monitor electronics are not modeled. This is a visual reconstruction, not a wiring or servicing guide.
+The user authorized a reference reconstruction while photos of this specimen’s internals are pending. `interior.scad` provides drive bodies and mechanisms, their bracket, motherboard and controller, package bodies and leads, a folded PSU shield and cover, cooling fan, ribbon cables, power wiring and approximate keyboard board/switch housings. The PSU’s enclosed components are not modeled. Monitor reference electronics are now included as described below. This is a visual reconstruction, not a wiring or servicing guide.
 
 The reusable `components/teac-fd55fv.scad` uses the [TEAC FD-55FV-13 specification Rev E, pp.101–103, Fig.101](https://retrocmp.de/fdd/teac/TEAC_FD55-FV.pdf#page=3): nominal body width 146 mm, depth 203 mm excluding connector projections, height 41.3 mm. The illustration distinguishes a wider projecting front bezel; the museum retains the owner-based front geometry. Head carriage, spindle clamp, stepper, solenoid, stamped deck and underside motor details follow Oldcrap’s top and underside pictures and remain approximate. The exact suffix of the owner’s drives is not verified.
 
@@ -76,3 +76,10 @@ The reusable `components/teac-fd55fv.scad` uses the [TEAC FD-55FV-13 specificati
 The physical placement is scaled from the open-chassis photos inside the manual’s 500 × 400 × 130 mm enclosure. The drives are 203 mm deep behind the owner’s fascia; the PSU occupies the right compartment, fan between it and the logic/drive section. Cable routing and mounting clearances are approximate. `part="interior"` shows only these reference parts in OpenSCAD. DAC’s **Inside** view opens the system unit while keeping its lid and monitor visible above and behind it; **Lift drives and keyboard** separately lifts the drive assembly to expose more of the motherboard. Camera presets preserve these controls, and **Drives** gives a close-up of the mechanisms while the case is open. Photo credits remain visible during both inspections.
 
 Five additional owner photographs downloaded on 2026-10-10 show the running CRT, bezel, stand and front panel in 2025. They are stored with the original owner photo set, with metadata removed losslessly and original/published hashes recorded. They confirm the English POWER marking and supply a new monitor reference. They contain no exposed system-unit PCB, so they do not supersede the comparative PCB textures. Append future owner photos from a dedicated directory using `python3 tools/import-photos.py /path/to/photos --append --source 'Owner photos, date'`.
+
+
+## Opening the monitor
+
+`monitor-interior.scad` adds the reference CRT funnel and neck, deflection yoke and windings, retaining band and metal support chassis, a vertical circuit board, neck board/socket, heat sinks, capacitors, slotted shielding and cable runs. Shape and arrangement follow [Robotrontechnik’s K7222.25 open-shell photographs](https://www.robotrontechnik.de/html/zubehoer/bildschirme.htm#k7222-25). These are visual estimates inside the known housing envelope, not measured tube specifications or a verified circuit assembly. K7222.25 housings could contain differing electronics; the exact board and tube in Danila’s monitor remain unverified.
+
+The 012-6920 board photo is a credited comparative surface with its own NOTICE and source hash. Its crop excludes the photographed shield, which is modeled separately. It is not represented as a photo of this specimen. The CRT front remains the existing live curved display; the newly modeled funnel extends behind it. The shell now exports as `monitor-shell-lower` and `monitor-shell-upper`; DAC’s independent **Open monitor shell** control moves only the upper half and its tape. The complete monitor follows the system-unit lid when that cover opens. Opening either enclosure preserves the other’s state; camera presets no longer close enclosures. **Inside monitor** looks into the tube and electronics from behind.
