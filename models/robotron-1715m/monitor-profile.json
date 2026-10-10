@@ -1,0 +1,13 @@
+{
+  "seamFraction": 0.5,
+  "glass": {
+    "size": [258, 211],
+    "position": [0, -140, 324],
+    "outlinePower": 4.5,
+    "depth": 18,
+    "radii": [700, 650, 600],
+    "rasterSize": [222, 166],
+    "backThickness": 2
+  },
+  "evidence": "Owner PXL_20261009_133017092.jpg; Robotrontechnik K7222.25 front and open-shell photos; MCbx PC1715 front photo. Mid-height seam follows owner correction. Curvature radii and raster margins are visual estimates, not measured tube specifications."
+}

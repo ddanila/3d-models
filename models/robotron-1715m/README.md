@@ -26,7 +26,7 @@ Sources: [documentation index](https://xepb.org/robotron/docs.html), [manual](ht
 
 `reference/photos.json` records the source archive and original/published SHA-256 hashes. `reference/photos/` contains losslessly sanitized JPEGs: EXIF, XMP, IPTC, comments and trailing motion video were removed, with decoded pixels checked against the originals. The original download was not modified. To reproduce sanitization after extracting the archive, run `python3 tools/import-photos.py /path/to/extracted/photos` from this model directory (requires Pillow).
 
-OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 3 adds material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
+OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 4 adds material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
 
 Full-panel photo skins are no longer used. The old underside crops contained a photographed cable and feet in addition to the modeled ones; removing them eliminates those duplicates and their baked shadows. There is now one continuous Bézier-routed lead, a modeled grommet, a hollow keyboard shell with a separate bottom plate, four rubber foot frames with metal inserts, six perimeter fasteners and a detailed exterior plug. The two drive fronts have recessed insertion slots/finger wells, rounded latch handles and separate red lenses. The monitor tape is a thin solid. Keycaps have square skirts, rounded shoulders and dished tops, including a stretched dish for long caps.
 
@@ -54,3 +54,13 @@ openscad --backend Manifold -o models/robotron-1715m/preview.png --imgsize=1600,
 89 positions have input behavior, including Shift/Ctrl/Caps Lock. ALT, ß, repeat R, SI/SO and four navigation symbols are explicitly unverified. Unverified shifted symbols also send no invented byte. Shift/Ctrl are visitor-side one-shot latches; Caps Lock is persistent until released or focus/reset/power changes. The browser’s Caps Lock lamp reflects that local input state, not feedback from the original keyboard controller. SI/SO’s alternate character-set protocol is not available through the current browser core API.
 
 The first drive lamp reflects the core’s aggregate disk-transfer counter (only one disk is mounted); it does not claim to reproduce drive-select or motor timing. The assembly view separates exterior components for inspection. It does not invent boards or wiring inside the empty enclosure. The external cable route and monitor-glass curvature remain estimates.
+
+## Comparative references (2026-10-10)
+
+Danila’s photographs remain authoritative for specimen appearance, tape, wordmark and keyboard legends. Other collections clarify family shapes, not this machine’s identity:
+
+- [Robotrontechnik K7222.25 photographs](https://www.robotrontechnik.de/html/zubehoer/bildschirme.htm): bowed CRT outline, recessed surround and opened shell. The shell joint now sits halfway up the housing, following the owner’s correction.
+- [MCbx PC 1715 collection](https://oldcomputer.info/8bit/robo1715/index.htm): comparative front view and curved glass; its keyboard variant does not replace our transcribed legends.
+- [Oldcrap’s PC 1715 restoration](https://oldcrap.org/2017/12/26/robotron-1715/): exterior proportions and temporary interior reference photographs. This is another specimen and an earlier PC 1715, not verified M/W internals. DAC labels the open chassis and motherboard photos accordingly and loads them from their original host on request. No third-party photo files are bundled or relicensed under MIT. Owner interior photos will supersede these references.
+
+`monitor-profile.json` is shared by OpenSCAD and the browser: a convex ellipsoid clipped to a bowed superellipse, with a rectangular active raster inset from the glass perimeter. Radii, bow and margins are visual estimates, not tube specifications. The browser uses a smooth version of that same surface for live pixels, with inactive glass around the raster so characters do not reach the curved corners. `tools/configure.py` also generates `monitor-profile.scad`.

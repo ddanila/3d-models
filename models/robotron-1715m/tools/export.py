@@ -56,5 +56,5 @@ for r in records:
     if n=='monitor-tape':m='tape'
     r['material']=m
 references=['PXL_20261009_'+n+'.jpg' for n in ['133017092','133019620','132919894','133022597','133005363','133001660','133028313','133032874','132916421.MP']]
-manifest=dict(version=3,units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=dict(y=-355,z=28,slope=6,pitch=20.0),screen=dict(position=[0,-158.2,324],size=[248,201],radius=20,bulge=3.5),patches=patches,references=references,source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
+manifest=dict(version=4,units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=dict(y=-355,z=28,slope=6,pitch=20.0),screen=json.loads((root/'monitor-profile.json').read_text())['glass'],patches=patches,references=references,source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
 (out/'model.json').write_text(json.dumps(manifest,indent=2)+'\n')

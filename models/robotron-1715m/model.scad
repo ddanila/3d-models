@@ -2,6 +2,7 @@
 // See README for measured vs inferred dimensions and unseen surfaces.
 include <dimensions.scad>
 include <keyboard-layout.scad>
+include <monitor-profile.scad>
 part = "assembly";
 key_index = 0;
 
@@ -92,21 +93,35 @@ module monitor_shell() {
         hull(){translate([-monitor_w/2+wall,-monitor_d/2+wall,wall])rounded([monitor_w-2*wall,22,monitor_h-2*wall],7);translate([-132,monitor_d/2-31,23])rounded([264,28,234],7);}
         translate([-139,-monitor_d/2-3,21]) rounded([278,60,238],8);
         // Side/rear shell joint visible in the owner photograph.
-        translate([-monitor_w/2-1,-monitor_d/2-1,86]) cube([monitor_w+2,monitor_d+2,.8]);
+        translate([-monitor_w/2-1,-monitor_d/2-1,monitor_h*monitor_seam_fraction-.6]) cube([monitor_w+2,monitor_d+2,1.2]);
         for(i=[-12:12]) translate([i*10,70,monitor_h-24]) cube([4,60,40],center=true);
     }
 }
 module bezel() {
     translate([0,monitor_y-monitor_d/2-3,monitor_z+monitor_h/2]) rotate([90,0,0]) difference() {
         hull(){slab(303,264,1,19);translate([0,0,8])slab(296,257,1,22);}
-        translate([0,4,-1]) slab(268,221,12,22);
+        translate([0,4,-1]) linear_extrude(12) crt_outline(268,221);
+    }
+}
+// A bowed, superelliptical tube face rather than a rounded flat rectangle.
+function signed_pow(v,p)=sign(v)*pow(abs(v),p);
+module crt_outline(w,h) {
+    polygon([for(t=[0:2:358]) [w/2*signed_pow(cos(t),2/crt_power),h/2*signed_pow(sin(t),2/crt_power)]]);
+}
+module crt_dome(w,h) {
+    intersection() {
+        translate([0,0,-crt_back])linear_extrude(crt_depth+crt_back)crt_outline(w,h);
+        translate([0,0,crt_depth-crt_radii[2]])scale(crt_radii)sphere(r=1,$fn=384);
     }
 }
 module crt_rim() {
-    translate([0,monitor_y-monitor_d/2-11,monitor_z+monitor_h/2+4]) rotate([90,0,0]) difference(){slab(269,222,5,23);translate([0,0,-1])slab(258,211,8,21);}
+    translate(crt_position)rotate([90,0,0])difference(){
+        crt_dome(269,222);
+        translate([0,0,-crt_back-1])linear_extrude(crt_depth+crt_back+2)crt_outline(crt_size[0]-.4,crt_size[1]-.4);
+    }
 }
 module crt_glass() {
-    translate([0,monitor_y-monitor_d/2-12,monitor_z+monitor_h/2+4]) rotate([90,0,0]) slab(258,211,2,21);
+    translate(crt_position)rotate([90,0,0])crt_dome(crt_size[0],crt_size[1]);
 }
 module keyboard_shell() {
     translate([0,keyboard_y,0]) difference() {
