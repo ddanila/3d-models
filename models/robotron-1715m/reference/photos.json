@@ -215,6 +215,22 @@
       "source": "Photos-1-001 (4).zip, owner drive photos received 2026-10-10",
       "original_sha256": "0712f1305fcd50ff6153f84358dafeaefee44d6fbb9588a4cc4dc9d146608ca0",
       "sha256": "0444dfb6950320351f08ac3298b5d1d6dcaa440119a201416134576b178761f0"
+    },
+    {
+      "file": "PXL_20261010_131354451.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Owner keyboard variant and keycap spring photos, downloaded 2026-10-10",
+      "original_sha256": "d55d9726f90aec6acc6c9e77ef0a72aca8a518bd87f6c7dd9d2baa41e05eef06",
+      "sha256": "b1489f088a454bbe4b42ffdc050bff9da3d2608952482c110431a397f967f4e7"
+    },
+    {
+      "file": "PXL_20261010_131835506.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Owner keyboard variant and keycap spring photos, downloaded 2026-10-10",
+      "original_sha256": "c3b7c5f1724491389e98c8366371721a91c3d65b11425550090f878e0e202459",
+      "sha256": "78ea5acbf5cb35d1b59ca31bb25bdbe8b5505167d20920b9f3dea778e5d40e61"
     }
   ]
 }

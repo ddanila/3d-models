@@ -49,6 +49,34 @@ openscad --backend Manifold -o models/robotron-1715m/preview.png --imgsize=1600,
 
 ## Interaction metadata and keyboard evidence
 
+### Keycap spring measurements (2026-10-10)
+
+Danila reported the following measurements for the keycap springs of at least
+one Robotron 1715 keyboard variant. The [keyboard photograph](reference/photos/PXL_20261010_131354451.jpg)
+identifies the specimen; the [removed spring close-up](reference/photos/PXL_20261010_131835506.jpg)
+preserves its winding and end details for further inspection.
+
+| Measurement | Owner-reported value | Qualification |
+| --- | --- | --- |
+| Spring diameter | 13 mm | Outside/mean/inside diameter was not explicitly specified |
+| Spring length | Approximately 23 mm | Removed spring shown; compression state during measurement not explicitly specified |
+| Wire diameter | Approximately 0.35 mm | Rough measurement |
+
+The close-up shows a cylindrical helical spring with tightly wound turns at
+both ends and roughly five open turns between them (visual estimate only).
+The exact total turn count, including end turns, remains unconfirmed; the
+full-resolution photo is retained so it can be checked later. Neither photo
+contains a ruler or caliper: the dimensions above come from Danila's report,
+not a scale inferred from the images.
+
+These measurements apply to the photographed variant and are not established
+for every 1715/1715M keyboard or every key position. They are reference evidence;
+the current model's switch geometry has not been revised from these dimensions.
+Both owner photos were imported losslessly with metadata removed and their
+original/published hashes recorded in `reference/photos.json`.
+
+### Input behavior
+
 `keyboard-layout.json` supplies stable IDs, physical positions, photo-reference landmarks, transcribed legends and the museum input adapter. The [original manual, printed pp.9–11](https://xepb.org/robotron/docs/pc_manu.pdf#page=10) supplies Tab, Insert/Delete, function-key and numeric-keypad codes; cursor directions agree with the existing core adapter. Numeric-pad digits have distinct codes, not ordinary ASCII digits. ET uses API input 13, translated by `robotron_key()` to the documented keyboard byte 9E. No historical document or firmware is bundled under this model’s MIT license.
 
 89 positions have input behavior, including Shift/Ctrl/Caps Lock. ALT, ß, repeat R, SI/SO and four navigation symbols are explicitly unverified. Unverified shifted symbols also send no invented byte. Shift/Ctrl are visitor-side one-shot latches; Caps Lock is persistent until released or focus/reset/power changes. The browser’s Caps Lock lamp reflects that local input state, not feedback from the original keyboard controller. SI/SO’s alternate character-set protocol is not available through the current browser core API.
