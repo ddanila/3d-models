@@ -127,6 +127,46 @@
       "source": "Owner downloads supplied 2026-10-10",
       "original_sha256": "e592b6aeadddc3f1a3e58ee84fa4cd381c43348d5c396f91d01b910433b3c06d",
       "sha256": "3ea3fabd81afd988fdd9e12cd67b33aa81a39413de4a0eeb25be6d9b63328c27"
+    },
+    {
+      "file": "PXL_20261010_090413483.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (3).zip, owner connector photos 2026-10-10",
+      "original_sha256": "beb4d1bf82c4cd201ffc47c716134da4039a9aba90df814d101b386fdbfe19a3",
+      "sha256": "0d659e5209d80d6ffe8a78eb1c337eb1a9ea7aa6bb74de47bfeb31d054aa8018"
+    },
+    {
+      "file": "PXL_20261010_090416759.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (3).zip, owner connector photos 2026-10-10",
+      "original_sha256": "e0fc3aee54354dc05d32998a8e7e4008ab7469c83502445a18cb4c9e1d50a954",
+      "sha256": "edfe69c9066a48a1a7099a53c11b9b31eb2fd6b76e095b7a33f25cdd22a51128"
+    },
+    {
+      "file": "PXL_20261010_090421901.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (3).zip, owner connector photos 2026-10-10",
+      "original_sha256": "3bd68d86c4972098aa2ac37c3fa53f6fc26f3a9e700a0065082667f5fa74d65c",
+      "sha256": "3a5d2f9a887e9fb63872889f4a227dcdbf4459613d04793cab81d2c9b3f66fa4"
+    },
+    {
+      "file": "PXL_20261010_090425989.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (3).zip, owner connector photos 2026-10-10",
+      "original_sha256": "a4c05f38cdb799fe5210acfb0d44c076d08f6aba053abd0ec3c0687cdffe5d40",
+      "sha256": "bccaf6b6a95e53651fe57cc21f66ae8389af7bdcbcd7a19e0bfce37221033273"
+    },
+    {
+      "file": "PXL_20261010_090431122.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (3).zip, owner connector photos 2026-10-10",
+      "original_sha256": "de92c01dcabae8a36c9e51468bc77af87d35948b2afcf93a61d7cfec67725ac1",
+      "sha256": "0b17c5cb6f62454d03552631574d9fd2403e56d4452b6f72d554694b6947adff"
     }
   ]
 }

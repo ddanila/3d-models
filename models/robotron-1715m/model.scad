@@ -27,7 +27,7 @@ module case_base() {
         translate([-case_w/2+wall,-case_d/2+wall,wall]) cube([case_w-2*wall,case_d-2*wall,seam_z]);
         for(y=[-95:10:15]) side_slot(y,22,20);
         for(y=[90:10:190]) side_slot(y,22,20);
-        translate([-case_w/2-2,-160,5]) cube([10,32,18]);
+        translate([-case_w/2-2,-164,15]) cube([10,38,14]);
     }
 }
 module case_lid() {
@@ -203,15 +203,42 @@ module cable() {
         [[-258,-230,1],[-300,-223,4],[-309,-156,20],[-275,-145,22]]];
     for(p=curves,i=[0:19])hull(){translate(bezier(p,i/20))sphere(r=2.6,$fn=16);translate(bezier(p,(i+1)/20))sphere(r=2.6,$fn=16);}
 }
-module cable_plug() {
-    translate([-case_w/2-27,-160,13])difference(){rounded([31,30,18],2);
-        translate([-1,1,8.5])cube([33,28,.6]);}
-    translate([-278,-145,22])rotate([0,90,0])cylinder(d=9,h=7,$fn=32);
-    for(y=[-157,-133])translate([-254,y,14])rounded([8,4,13],1);
-}
-module plug_screws() {
-    for(x=[-270,-253],y=[-155,-135])translate([x,y,31.05])rotate([180,0,0])screw(3.4,1.1);
-}
+// Owner connector close-ups, 2026-10-10. Envelope estimated; no scale in photos.
+// Local X points into the socket, Y spans the two release levers.
+module plug_pose() { translate([-278,-145,22]) children(); }
+module cable_plug() { plug_pose() {
+    difference() {
+        translate([0,0,-6])linear_extrude(12)
+            polygon([[0,-8],[9,-18],[27,-18],[27,18],[9,18],[0,8]]);
+        translate([-1,-20,-.3])cube([29,40,.6]);
+        for(p=[[10,-14],[10,14],[3,0]]) {
+            translate([p[0],p[1],4.5])cylinder(d=5.2,h=2,$fn=32);
+            translate([p[0],p[1],-6.1])cylinder(d=5.2,h=1.6,$fn=6);
+        }
+        translate([4,-10,5])rotate([0,0,-42])cube([2,18,2]);
+    }
+    // Two hooked, recessed release levers, with the spring clearance below.
+    for(side=[-1,1])scale([1,side,1]) {
+        translate([0,0,-3])linear_extrude(6)
+            polygon([[4,19],[8,20],[13,19],[32,19],[32,16],[35,16],[35,22],[12,22],[7,23],[3,22]]);
+        translate([12,17,-2])cube([3,3,4]);
+    }
+    translate([-3,0,0])rotate([0,90,0])cylinder(d=8,h=6,$fn=32);
+} }
+module plug_insert() { plug_pose() difference() {
+    union() {
+        translate([26,-11,-4.5])cube([7,22,9]);
+        for(y=[-17,13])translate([26,y,-4])cube([6,4,8]);
+    }
+    // Recessed two-row face; contacts remain concealed when plugged in.
+    for(y=[-8:4:8],z=[-2,2])translate([30,y-1.3,z-.9])cube([4,2.6,1.8]);
+} }
+module plug_screws() { plug_pose() {
+    for(p=[[10,-14],[10,14],[3,0]]) {
+        translate([p[0],p[1],5.6])rotate([180,0,0])screw(4.5,1);
+        translate([p[0],p[1],-5.7])difference(){cylinder(d=4.6,h=1,$fn=6);translate([0,0,-.1])cylinder(d=2,h=1.2,$fn=16);}
+    }
+} }
 module monitor_tape() {
     translate([0,monitor_y-120,monitor_z+monitor_h-2.1])rotate([-3.9,0,-3])slab(52,9,.3,.5);
 }
@@ -234,6 +261,7 @@ module shape(p) {
     if(p=="keyboard-fillers")keyboard_fillers();
     if(p=="cable-plug")cable_plug();
     if(p=="plug-screws")plug_screws();
+    if(p=="plug-insert")plug_insert();
     if(p=="monitor-tape")monitor_tape();
     if(p=="case-base")case_base();
     if(p=="case-lid")case_lid();
@@ -256,8 +284,8 @@ module shape(p) {
     if(p=="cable")cable();
     if(p=="keycap")let(k=keys[key_index])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[4]);
 }
-parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell-lower", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latches", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape", "drive-frames", "drive-mechanisms", "drive-motors", "drive-boards", "drive-contacts", "drive-coils", "drive-bracket", "logic-boards", "logic-chips", "logic-pins", "logic-connectors", "logic-capacitors", "psu-chassis", "psu-cover", "fan-frame", "fan-rotor", "ribbon-cables", "ribbon-stripes", "power-wires-red", "power-wires-black", "power-wires-yellow", "keyboard-pcb", "keyboard-switches", "monitor-shell-upper", "tube-funnel", "tube-neck", "monitor-yoke", "monitor-coils", "monitor-chassis", "monitor-boards", "monitor-components", "monitor-capacitors", "monitor-shield", "monitor-wires"];
-colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#333839", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#909583", "#96988f", "#487eac", "#a2a4a0", "#bec2bd", "#282c2b", "#28675a", "#b3a775", "#9e793b", "#afb4ae", "#386349", "#25292b", "#b3b8b4", "#b1b5a1", "#b2a15c", "#a2a6a3", "#b5b9b2", "#818984", "#282d2a", "#a0a59b", "#975b50", "#9e3930", "#252a28", "#b6a05b", "#346750", "#30352f", "Wheat", "#363d3a", "#78765f", "#38372e", "#ae7545", "#a3a79c", "#486551", "#343835", "#438c9b", "#979e92", "#b2a374"];
+parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell-lower", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latches", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape", "drive-frames", "drive-mechanisms", "drive-motors", "drive-boards", "drive-contacts", "drive-coils", "drive-bracket", "logic-boards", "logic-chips", "logic-pins", "logic-connectors", "logic-capacitors", "psu-chassis", "psu-cover", "fan-frame", "fan-rotor", "ribbon-cables", "ribbon-stripes", "power-wires-red", "power-wires-black", "power-wires-yellow", "keyboard-pcb", "keyboard-switches", "monitor-shell-upper", "tube-funnel", "tube-neck", "monitor-yoke", "monitor-coils", "monitor-chassis", "monitor-boards", "monitor-components", "monitor-capacitors", "monitor-shield", "monitor-wires", "plug-insert"];
+colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#333839", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#c3b995", "#96988f", "#487eac", "#a2a4a0", "#bec2bd", "#282c2b", "#28675a", "#b3a775", "#9e793b", "#afb4ae", "#386349", "#25292b", "#b3b8b4", "#b1b5a1", "#b2a15c", "#a2a6a3", "#b5b9b2", "#818984", "#282d2a", "#a0a59b", "#975b50", "#9e3930", "#252a28", "#b6a05b", "#346750", "#30352f", "Wheat", "#363d3a", "#78765f", "#38372e", "#ae7545", "#a3a79c", "#486551", "#343835", "#438c9b", "#979e92", "#b2a374", "#969782"];
 if(part=="assembly") for(i=[0:len(parts)-1]) color(colors[i]) shape(parts[i]);
 else if(part=="interior") { for(i=[31:len(parts)-1]) if(parts[i]!="monitor-shell-upper") color(colors[i]) shape(parts[i]); }
 else shape(part);

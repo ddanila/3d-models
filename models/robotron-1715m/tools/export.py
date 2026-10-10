@@ -49,7 +49,7 @@ materials={
 }
 for r in records:
     n=r['name'];m='paint'
-    if n in ['drives','drive-insets','drive-latches','power','reset','keyboard-deck','keyboard-fillers','cable-plug']:m='plastic'
+    if n in ['drives','drive-insets','drive-latches','power','reset','keyboard-deck','keyboard-fillers','cable-plug','plug-insert']:m='plastic'
     if n in ['hardware','keyboard-feet','keyboard-grommet','cable','ring']:m='rubber'
     if n in ['keyboard-metal','plug-screws']:m='metal'
     if n.startswith('drive-led'):m='lens'
@@ -71,5 +71,6 @@ for r in records:
     r['material']=m
 references=['PXL_20261009_'+n+'.jpg' for n in ['133017092','133019620','132919894','133022597','133005363','133001660','133028313','133032874','132916421.MP']]
 references += ['PXL_'+n+'.jpg' for n in ['20250430_135132170','20251008_143433778','20250516_133813650','20250516_141624490','20250516_133810520']]
+references += ['PXL_20261010_'+n+'.jpg' for n in ['090413483','090416759','090421901','090425989','090431122']]
 manifest=dict(version=6,units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=dict(y=-355,z=28,slope=6,pitch=20.0),screen=json.loads((root/'monitor-profile.json').read_text())['glass'],patches=patches,references=references,pcbReferences=json.loads((root/'pcb-references.json').read_text()),interior=dict(status='provisional',drive='TEAC FD-55FV-13 reference; exact suffix unverified',driveEnvelope=[146,203,41.3],source='https://oldcrap.org/2017/12/26/robotron-1715/',specification='https://retrocmp.de/fdd/teac/TEAC_FD55-FV.pdf',note='Drive envelopes are documented. Mechanisms and layout follow another PC 1715; board population, mounting and wiring are estimates, not verified M/W internals.'),source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
 (out/'model.json').write_text(json.dumps(manifest,indent=2)+'\n')

@@ -45,7 +45,7 @@ openscad --backend Manifold --export-format binstl -o models/robotron-1715m/robo
 openscad --backend Manifold -o models/robotron-1715m/preview.png --imgsize=1600,1200 --viewall --autocenter models/robotron-1715m/model.scad
 ```
 
-`tools/configure.py` generates the shared keyboard geometry/UV table. `tools/export.py` exports 62 body/detail meshes and seven reusable keycap profiles with their hashes. `part="keycap"` and `key_index` select a local, origin-centred cap for export; assembly geometry stays fully assembled. The DAC repository imports the export with `python3 scripts/sync-robotron-model.py ../3d-models`, recording the source commit and checking hashes. Firmware and emulator code stay in their own repositories.
+`tools/configure.py` generates the shared keyboard geometry/UV table. `tools/export.py` exports 63 body/detail meshes and seven reusable keycap profiles with their hashes. `part="keycap"` and `key_index` select a local, origin-centred cap for export; assembly geometry stays fully assembled. The DAC repository imports the export with `python3 scripts/sync-robotron-model.py ../3d-models`, recording the source commit and checking hashes. Firmware and emulator code stay in their own repositories.
 
 ## Interaction metadata and keyboard evidence
 
@@ -83,3 +83,7 @@ Five additional owner photographs downloaded on 2026-10-10 show the running CRT,
 `monitor-interior.scad` adds the reference CRT funnel and neck, deflection yoke and windings, retaining band and metal support chassis, a vertical circuit board, neck board/socket, heat sinks, capacitors, slotted shielding and cable runs. Shape and arrangement follow [Robotrontechnik’s K7222.25 open-shell photographs](https://www.robotrontechnik.de/html/zubehoer/bildschirme.htm#k7222-25). These are visual estimates inside the known housing envelope, not measured tube specifications or a verified circuit assembly. K7222.25 housings could contain differing electronics; the exact board and tube in Danila’s monitor remain unverified.
 
 The 012-6920 board photo is a credited comparative surface with its own NOTICE and source hash. Its crop excludes the photographed shield, which is modeled separately. It is not represented as a photo of this specimen. The CRT front remains the existing live curved display; the newly modeled funnel extends behind it. The shell now exports as `monitor-shell-lower` and `monitor-shell-upper`; DAC’s independent **Open monitor shell** control moves only the upper half and its tape. The complete monitor follows the system-unit lid when that cover opens. Opening either enclosure preserves the other’s state; camera presets no longer close enclosures. **Inside monitor** looks into the tube and electronics from behind.
+
+## Owner keyboard connector (2026-10-10)
+
+Five close-ups from `Photos-1-001 (3).zip` establish the tapered split housing, paired hooked release levers, three slotted screws with hexagonal nuts on the opposite face, cable entry and recessed two-row insert. These are modeled as geometry, with separate housing and insert colors. The plugged-in face is concealed by the system unit. The approximate 35 × 46 × 12 mm envelope, contact spacing and socket position are estimates: these photos contain no ruler and do not establish an electrical pinout. All five sanitized owner originals are retained as reference evidence.
