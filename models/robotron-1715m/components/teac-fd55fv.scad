@@ -24,16 +24,16 @@ module teac_frame() {
         translate([-1,81,-1])cube([31,62,4]);}
 }
 module teac_mechanism() {
+    translate([70,64,2])cylinder(d=76,h=6,$fn=48);
     // Central slotted stamped bridge and spindle clamp.
     translate([52,48,31])difference(){cube([36,145,2]);
         translate([5,50,-1])cube([26,74,4]);
         translate([18,45,-1])cylinder(d=26,h=4,$fn=40);
         translate([18,137,-1])cylinder(d=11,h=4,$fn=24);}
-    translate([70,59,28])cylinder(d=26,h=9,$fn=40);
-    translate([70,59,37])cylinder(d=12,h=3,$fn=24);
+
     for(x=[46,92])translate([x,104,18])rotate([-90,0,0])cylinder(d=3,h=78,$fn=16);
     translate([46,144,18])cube([48,13,3]);
-    translate([70,64,2])cylinder(d=76,h=6,$fn=48);
+
     translate([109,158,14])rotate([0,90,0])cylinder(d=18,h=8,$fn=32);
     // The latch rod runs from the bezel to the clamp linkage.
     translate([100,0,33])rotate([-90,0,0])cylinder(d=3,h=53,$fn=16);
@@ -43,7 +43,7 @@ module teac_mechanism() {
 }
 module teac_black() {
     translate([113,133,12])cube([25,46,23]); // laminated stepper body
-    translate([59,119,22])cube([24,34,9]);   // head carriage
+
     translate([11,166,11])cube([18,14,13]);
     for(p=[[43,70],[12,28]])translate([p[0],p[1],32.6])cube([5,4,4]);
 }
@@ -72,3 +72,11 @@ module teac_traces(long_board=false) {
     for(i=[0:4])translate([7+i*2.2,52+i*2,32.65])cube([31-i*2,.5,.12]);
     if(long_board)for(i=[0:4])translate([10+i*2.4,82,32.65])cube([.5,42-i*3,.12]);
 }
+
+// Separate moving parts; pivots/travel are shared with the browser manifest.
+module teac_spindle() {
+    translate([70,59,28])cylinder(d=26,h=9,$fn=40);
+    translate([70,59,37])difference(){cylinder(d=12,h=3,$fn=24);translate([-1,-7,2])cube([2,14,2]);}
+
+}
+module teac_head() { translate([59,119,22])cube([24,34,9]); }

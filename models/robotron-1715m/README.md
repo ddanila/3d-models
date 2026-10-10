@@ -128,3 +128,13 @@ Six photographs from `Photos-1-001 (4).zip` (filenames dated 2025-02-12) now rep
 The shared 146 × 203 × 41.3 mm reference envelope is retained. The mechanism now follows the owner photographs: central slotted clamp bridge, lengthwise latch rod, head carriage and guide rails, stepper position, rear crossbar, card-edge connector, power socket, and different sensor-PCB outlines. Small dimensions, hidden parts and resting poses remain estimates. Main logic boards and monitor electronics still use credited comparative references.
 
 `drive-labels.json` records the exact source quadrilaterals, positions, transcriptions and drive identities. DAC perspective-corrects only these small markings on the original unmodified photographs; it does not apply an entire mechanism photograph as a skin. The Robotron country line is typeset because a cable crosses the photograph there, preventing a photographed cable from appearing as an extra modeled wire. The serial, manufacturer text, Ratan sticker and TEAC markings retain photographed print and wear. Physical plates are in the OpenSCAD `drive-label-plates` part; photo materials are carried by the browser manifest because STL cannot store textures. All six owner originals are losslessly sanitized and retained in `reference/photos/`.
+
+The drive spindle clamps and head carriages are separate OpenSCAD/browser parts.
+`driveMotion` in the manifest records each spindle pivot and an estimated 35 mm
+head travel toward the hub. DAC drives their motion from each emulated unit's
+motor/cylinder state; 300 RPM presentation and travel are reference approximations,
+not measured motion of the owner's drives. Reduced-motion mode stops rotation
+while retaining the current head position. The stationary deck and motors no
+longer include duplicate carriage/clamp geometry. `tools/export.py --parts ...`
+can regenerate named parts while retaining verified existing meshes; omit it for
+a complete rebuild after general model changes.

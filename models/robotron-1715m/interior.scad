@@ -75,6 +75,10 @@ module keyboard_switches() {
     translate([0,keyboard_y,15])rotate([keyboard_slope,0,0])for(k=keys)translate([k[0]-5,k[1]-5,0])cube([10,10,10]);
 }
 module interior_shape(p) {
+    for(i=[0:1]) {
+      if(p==str("drive-spindle-",i))translate([[-231,-77][i],-203,60])teac_spindle();
+      if(p==str("drive-head-",i))translate([[-231,-77][i],-203,60])teac_head();
+    }
     if(p=="drive-frames")drive_pair()teac_frame();
     if(p=="drive-mechanisms")drive_pair()teac_mechanism();
     if(p=="drive-motors")drive_pair()teac_black();
