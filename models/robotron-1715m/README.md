@@ -75,6 +75,11 @@ the current model's switch geometry has not been revised from these dimensions.
 Both owner photos were imported losslessly with metadata removed and their
 original/published hashes recorded in `reference/photos.json`.
 
+A [printable hand-winding trial mandrel](keycap-spring-mandrel/README.md)
+records the springback sizing calculation and a sample-based calibration
+procedure. Its initial 6.4 mm shaft is an unvalidated estimate for 0.35 mm
+music wire and a 13 mm finished outside diameter.
+
 ### Input behavior
 
 `keyboard-layout.json` supplies stable IDs, physical positions, photo-reference landmarks, transcribed legends and the museum input adapter. The [original manual, printed pp.9–11](https://xepb.org/robotron/docs/pc_manu.pdf#page=10) supplies Tab, Insert/Delete, function-key and numeric-keypad codes; cursor directions agree with the existing core adapter. Numeric-pad digits have distinct codes, not ordinary ASCII digits. ET uses API input 13, translated by `robotron_key()` to the documented keyboard byte 9E. No historical document or firmware is bundled under this model’s MIT license.
