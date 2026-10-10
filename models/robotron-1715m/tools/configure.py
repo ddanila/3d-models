@@ -100,3 +100,16 @@ profile=json.loads((root/'monitor-profile.json').read_text())
 g=profile['glass']
 values={'monitor_seam_fraction':profile['seamFraction'],'crt_size':g['size'],'crt_position':g['position'],'crt_power':g['outlinePower'],'crt_depth':g['depth'],'crt_radii':g['radii'],'crt_back':g['backThickness']}
 (root/'monitor-profile.scad').write_text('// Generated from monitor-profile.json; shared with the browser.\n'+'\n'.join(k+' = '+json.dumps(v)+';' for k,v in values.items())+'\n')
+
+# Raised package outlines share source-photo landmarks with the browser decals.
+boards=json.loads((root/'pcb-references.json').read_text())
+packages=[]
+for b in boards:
+    x0,y0,x1,y1=b['crop'];w,h=b['size'];ox,oy,oz=b['origin']
+    for x,y,pw,ph in b['packages']:
+        u=(x-x0)/(x1-x0);v=(y-y0)/(y1-y0)
+        du=pw/(x1-x0);dv=ph/(y1-y0)
+        if b['rotated']:box=[ox+(1-v-dv)*w,oy+(1-u-du)*h,oz,dv*w,du*h,b['packageHeight']]
+        else:box=[ox+u*w,oy+(1-v-dv)*h,oz,du*w,dv*h,b['packageHeight']]
+        packages.append(box)
+(root/'pcb-packages.scad').write_text('// Generated from pcb-references.json; approximate photographed package outlines.\npcb_packages='+json.dumps(packages)+';\n')

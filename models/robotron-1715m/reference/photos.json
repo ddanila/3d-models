@@ -87,6 +87,46 @@
       "height": 3072,
       "original_sha256": "bb3bc9cef70d8ee8ca108745b6ab37112af39684442240d6fe7067486da723a5",
       "sha256": "9d35340e86d799060f88528ef57eed11672b5ce86b3a756817e88746162f3626"
+    },
+    {
+      "file": "PXL_20250430_135132170.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Owner downloads supplied 2026-10-10",
+      "original_sha256": "bde102954ed4f2dfda09a6db01e93fd8e456ba0af192dc34f281dd11f819b02b",
+      "sha256": "b0a2766de724aceb0d0adbcf55e2590bedabecc7391e397abb91af4e24d82bf5"
+    },
+    {
+      "file": "PXL_20250516_133810520.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Owner downloads supplied 2026-10-10",
+      "original_sha256": "03d0486b2214abae8012dd2a5fab0c4fcd7801a544c4e5252dcb8de03ab02db3",
+      "sha256": "211d87964a1594d4cedeb7894e2eb5a5af58686508863e526439dd4205f3fb49"
+    },
+    {
+      "file": "PXL_20250516_133813650.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Owner downloads supplied 2026-10-10",
+      "original_sha256": "5512f4b889e84082a0cde5aab05d8f5964c0fc04a8cdcc6e096dfa4230e5a2c6",
+      "sha256": "0d735e0c75988042f628a087db19a13716a63833c812a3ca29a9b1398e88e8f8"
+    },
+    {
+      "file": "PXL_20250516_141624490.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Owner downloads supplied 2026-10-10",
+      "original_sha256": "83177e24ee2a355d6581808358457784e02c7759e3f4c914969646ff7c5095d0",
+      "sha256": "820dbf85979d4f70c929c6b1549f7dfd6c42bee288401a9cf3335e4ed274e72c"
+    },
+    {
+      "file": "PXL_20251008_143433778.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Owner downloads supplied 2026-10-10",
+      "original_sha256": "e592b6aeadddc3f1a3e58ee84fa4cd381c43348d5c396f91d01b910433b3c06d",
+      "sha256": "3ea3fabd81afd988fdd9e12cd67b33aa81a39413de4a0eeb25be6d9b63328c27"
     }
   ]
 }

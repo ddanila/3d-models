@@ -1,8 +1,9 @@
-// Danila's Robotron 1715 M exterior, reconstructed from 2026-10-09 photos.
+// Danila's Robotron 1715 M with a provisional reference interior.
 // See README for measured vs inferred dimensions and unseen surfaces.
 include <dimensions.scad>
 include <keyboard-layout.scad>
 include <monitor-profile.scad>
+include <interior.scad>
 part = "assembly";
 key_index = 0;
 
@@ -214,12 +215,12 @@ module monitor_tape() {
     translate([0,monitor_y-120,monitor_z+monitor_h-2.1])rotate([-3.9,0,-3])slab(52,9,.3,.5);
 }
 module hardware() {
-    // Dark recesses, not speculative interior electronics.
-    translate([80,-case_d/2+12,40]) cube([150,2,80]);
+    // PSU shield behind the front vents is modeled in interior.scad.
     // Base-unit feet remain provisional without an underside photograph.
     for(x=[-225,225],y=[-170,170])translate([x,y,-9])cylinder(d=25,h=10,$fn=40);
 }
 module shape(p) {
+    interior_shape(p);
     if(p=="drive-insets")drive_insets();
     if(p=="drive-latches")drive_latches();
     if(p=="drive-led-0")drive_led(0);
@@ -253,7 +254,8 @@ module shape(p) {
     if(p=="cable")cable();
     if(p=="keycap")let(k=keys[key_index])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[4]);
 }
-parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latches", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape"];
-colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#333839", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#909583", "#96988f", "#487eac"];
+parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latches", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape", "drive-frames", "drive-mechanisms", "drive-motors", "drive-boards", "drive-contacts", "drive-coils", "drive-bracket", "logic-boards", "logic-chips", "logic-pins", "logic-connectors", "logic-capacitors", "psu-chassis", "psu-cover", "fan-frame", "fan-rotor", "ribbon-cables", "ribbon-stripes", "power-wires-red", "power-wires-black", "power-wires-yellow", "keyboard-pcb", "keyboard-switches"];
+colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#333839", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#909583", "#96988f", "#487eac", "#a2a4a0", "#bec2bd", "#282c2b", "#28675a", "#b3a775", "#9e793b", "#afb4ae", "#386349", "#25292b", "#b3b8b4", "#b1b5a1", "#b2a15c", "#a2a6a3", "#b5b9b2", "#818984", "#282d2a", "#a0a59b", "#975b50", "#9e3930", "#252a28", "#b6a05b", "#346750", "#30352f"];
 if(part=="assembly") for(i=[0:len(parts)-1]) color(colors[i]) shape(parts[i]);
+else if(part=="interior") for(i=[31:len(parts)-1]) color(colors[i]) shape(parts[i]);
 else shape(part);
