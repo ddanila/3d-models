@@ -31,20 +31,30 @@ for i,k in enumerate(keys):
 # UV corners are TL, TR, BR, BL, normalized from the unmodified photographs.
 def patch(name,photo,position,size,crop,rotation=[90,0,0]):
     return dict(name=name,photo='PXL_20261009_'+photo+'.jpg',position=position,size=size,rotation=rotation,uv=[[x/1824,y/1373] for x,y in crop])
-patches=[]
-for i,x in enumerate([-158,-4]):
-    patches.append(patch('drive-'+str(i),'133022597',[x,-206.2,81],[144,40],[(366,601),(1530,592),(1490,855),(395,857)]))
-patches.append(patch('brand','133022597',[-160,-209.2,48],[110,11],[(420,925),(1050,917),(1048,985),(425,990)]))
-patches.append(patch('power-label','133019620',[207,-209.2,32],[45,7],[(1240,1034),(1450,1034),(1450,1070),(1240,1070)]))
-patches.append(patch('keyboard-bottom-left','133001660',[-125,-355,-.2],[244,194],[(112,91),(1440,99),(1432,1163),(126,1154)],[180,0,0]))
-patches.append(patch('keyboard-bottom-right','133005363',[119,-355,-.2],[244,194],[(151,78),(1530,91),(1504,1147),(158,1134)],[180,0,0]))
-patches.append(patch('monitor-tape','133017092',[0,-95,460.2],[52,9],[(818,228),(1013,255),(999,264),(798,238)],[0,0,0]))
-patches.append(patch('case-right-paint','133028313',[250.2,0,83.5],[380,85],[(665,485),(1288,48),(1288,335),(666,1000)],[90,90,0]))
-# Neutral paint samples (sRGB averages of 30x30 original-pixel windows).
-# Display-space sample centres: (750,530), (1200,210), (1200,380), (750,830).
-patches[-1]['paint']=[[.805,.8092,.7942],[.6814,.6852,.6614],[.6632,.6643,.6378],[.7782,.7845,.7735]]
-for p in patches:
-    p['ink']=p['name'] in ['brand','power-label']
-    p['feather']=not p['ink'] and not p['name'].startswith('drive')
-manifest=dict(version=2,units='mm',scale=.0025,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=dict(y=-355,z=28,slope=6,pitch=20.0),screen=dict(position=[0,-158.2,324],size=[248,201],radius=20,bulge=3.5),patches=patches,source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
+# Only the small original wordmark remains photographic. All physical features
+# are geometry; photos are separate reference evidence, never enclosure skins.
+patches=[patch('brand','133022597',[-160,-209.2,48],[110,11],[(420,925),(1050,917),(1048,985),(425,990)])]
+patches[0]['ink']=True
+materials={
+    'paint':dict(roughness=.78,metalness=.08,grain=.028,grainScale=2.7),
+    'plastic':dict(roughness=.68,metalness=0,grain=.022,grainScale=3.5),
+    'key':dict(roughness=.4,metalness=0,grain=.01,grainScale=4.0,clearcoat=.18),
+    'clear-key':dict(roughness=.29,metalness=0,grain=.006,grainScale=4.0,clearcoat=.65),
+    'rubber':dict(roughness=.92,metalness=0,grain=.015,grainScale=4.0),
+    'metal':dict(roughness=.38,metalness=.72,grain=.008,grainScale=5.0),
+    'lens':dict(roughness=.24,metalness=0,clearcoat=.8),
+    'glass':dict(roughness=.16,metalness=.05,clearcoat=1),
+    'tape':dict(roughness=.93,metalness=0,grain=.016,grainScale=3.0),
+}
+for r in records:
+    n=r['name'];m='paint'
+    if n in ['drives','drive-insets','drive-latches','power','reset','keyboard-deck','keyboard-fillers','cable-plug']:m='plastic'
+    if n in ['hardware','keyboard-feet','keyboard-grommet','cable','ring']:m='rubber'
+    if n in ['keyboard-metal','plug-screws']:m='metal'
+    if n.startswith('drive-led'):m='lens'
+    if n in ['crt-rim','crt-glass']:m='glass'
+    if n=='monitor-tape':m='tape'
+    r['material']=m
+references=['PXL_20261009_'+n+'.jpg' for n in ['133017092','133019620','132919894','133022597','133005363','133001660','133028313','133032874','132916421.MP']]
+manifest=dict(version=3,units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=dict(y=-355,z=28,slope=6,pitch=20.0),screen=dict(position=[0,-158.2,324],size=[248,201],radius=20,bulge=3.5),patches=patches,references=references,source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
 (out/'model.json').write_text(json.dumps(manifest,indent=2)+'\n')

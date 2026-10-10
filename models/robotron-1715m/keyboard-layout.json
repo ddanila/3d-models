@@ -30,7 +30,10 @@
     ],
     "input": {
       "unsupported": "This key\u2019s specimen-specific encoding is not verified yet."
-    }
+    },
+    "legend": [
+      "ALT"
+    ]
   },
   {
     "id": "key-001",
@@ -65,7 +68,11 @@
       "code": 49,
       "shiftCode": 33,
       "letter": false
-    }
+    },
+    "legend": [
+      "!",
+      "1"
+    ]
   },
   {
     "id": "key-002",
@@ -100,7 +107,11 @@
       "code": 50,
       "shiftCode": 34,
       "letter": false
-    }
+    },
+    "legend": [
+      "\"",
+      "2"
+    ]
   },
   {
     "id": "key-003",
@@ -135,7 +146,11 @@
       "code": 51,
       "shiftCode": 35,
       "letter": false
-    }
+    },
+    "legend": [
+      "#",
+      "3"
+    ]
   },
   {
     "id": "key-004",
@@ -170,7 +185,11 @@
       "code": 52,
       "shiftUnsupported": true,
       "letter": false
-    }
+    },
+    "legend": [
+      "\u00a4",
+      "4"
+    ]
   },
   {
     "id": "key-005",
@@ -205,7 +224,11 @@
       "code": 53,
       "shiftCode": 37,
       "letter": false
-    }
+    },
+    "legend": [
+      "%",
+      "5"
+    ]
   },
   {
     "id": "key-006",
@@ -240,7 +263,11 @@
       "code": 54,
       "shiftCode": 38,
       "letter": false
-    }
+    },
+    "legend": [
+      "&",
+      "6"
+    ]
   },
   {
     "id": "key-007",
@@ -275,7 +302,11 @@
       "code": 55,
       "shiftCode": 39,
       "letter": false
-    }
+    },
+    "legend": [
+      "'",
+      "7"
+    ]
   },
   {
     "id": "key-008",
@@ -310,7 +341,11 @@
       "code": 56,
       "shiftCode": 40,
       "letter": false
-    }
+    },
+    "legend": [
+      "(",
+      "8"
+    ]
   },
   {
     "id": "key-009",
@@ -345,7 +380,11 @@
       "code": 57,
       "shiftCode": 41,
       "letter": false
-    }
+    },
+    "legend": [
+      ")",
+      "9"
+    ]
   },
   {
     "id": "key-010",
@@ -380,7 +419,11 @@
       "code": 48,
       "shiftCode": 95,
       "letter": false
-    }
+    },
+    "legend": [
+      "_",
+      "0"
+    ]
   },
   {
     "id": "key-011",
@@ -413,7 +456,11 @@
     ],
     "input": {
       "unsupported": "This key\u2019s specimen-specific encoding is not verified yet."
-    }
+    },
+    "legend": [
+      "?",
+      "\u00df"
+    ]
   },
   {
     "id": "key-012",
@@ -448,7 +495,11 @@
       "code": 94,
       "shiftUnsupported": true,
       "letter": false
-    }
+    },
+    "legend": [
+      "_",
+      "^"
+    ]
   },
   {
     "id": "key-013",
@@ -481,7 +532,10 @@
     ],
     "input": {
       "unsupported": "This key\u2019s specimen-specific encoding is not verified yet."
-    }
+    },
+    "legend": [
+      "\u24c7"
+    ]
   },
   {
     "id": "key-014",
@@ -514,7 +568,11 @@
     ],
     "input": {
       "unsupported": "This key\u2019s specimen-specific encoding is not verified yet."
-    }
+    },
+    "legend": [
+      "SI",
+      "SO"
+    ]
   },
   {
     "id": "key-015",
@@ -547,7 +605,10 @@
     ],
     "input": {
       "modifier": "ctrl"
-    }
+    },
+    "legend": [
+      "CTRL"
+    ]
   },
   {
     "id": "key-016",
@@ -582,7 +643,10 @@
       "code": 113,
       "shiftCode": 81,
       "letter": true
-    }
+    },
+    "legend": [
+      "Q"
+    ]
   },
   {
     "id": "key-017",
@@ -617,7 +681,10 @@
       "code": 119,
       "shiftCode": 87,
       "letter": true
-    }
+    },
+    "legend": [
+      "W"
+    ]
   },
   {
     "id": "key-018",
@@ -652,7 +719,10 @@
       "code": 101,
       "shiftCode": 69,
       "letter": true
-    }
+    },
+    "legend": [
+      "E"
+    ]
   },
   {
     "id": "key-019",
@@ -687,7 +757,10 @@
       "code": 114,
       "shiftCode": 82,
       "letter": true
-    }
+    },
+    "legend": [
+      "R"
+    ]
   },
   {
     "id": "key-020",
@@ -722,7 +795,10 @@
       "code": 116,
       "shiftCode": 84,
       "letter": true
-    }
+    },
+    "legend": [
+      "T"
+    ]
   },
   {
     "id": "key-021",
@@ -757,7 +833,10 @@
       "code": 121,
       "shiftCode": 89,
       "letter": true
-    }
+    },
+    "legend": [
+      "Y"
+    ]
   },
   {
     "id": "key-022",
@@ -792,7 +871,10 @@
       "code": 117,
       "shiftCode": 85,
       "letter": true
-    }
+    },
+    "legend": [
+      "U"
+    ]
   },
   {
     "id": "key-023",
@@ -827,7 +909,10 @@
       "code": 105,
       "shiftCode": 73,
       "letter": true
-    }
+    },
+    "legend": [
+      "I"
+    ]
   },
   {
     "id": "key-024",
@@ -862,7 +947,10 @@
       "code": 111,
       "shiftCode": 79,
       "letter": true
-    }
+    },
+    "legend": [
+      "O"
+    ]
   },
   {
     "id": "key-025",
@@ -897,7 +985,10 @@
       "code": 112,
       "shiftCode": 80,
       "letter": true
-    }
+    },
+    "legend": [
+      "P"
+    ]
   },
   {
     "id": "key-026",
@@ -932,7 +1023,10 @@
       "code": 64,
       "shiftUnsupported": true,
       "letter": false
-    }
+    },
+    "legend": [
+      "@"
+    ]
   },
   {
     "id": "key-027",
@@ -967,7 +1061,11 @@
       "code": 91,
       "shiftCode": 123,
       "letter": false
-    }
+    },
+    "legend": [
+      "{",
+      "["
+    ]
   },
   {
     "id": "key-028",
@@ -1000,7 +1098,10 @@
     ],
     "input": {
       "code": 128
-    }
+    },
+    "legend": [
+      "\u2192"
+    ]
   },
   {
     "id": "key-029",
@@ -1033,7 +1134,10 @@
     ],
     "input": {
       "code": 130
-    }
+    },
+    "legend": [
+      "INS"
+    ]
   },
   {
     "id": "key-030",
@@ -1066,7 +1170,10 @@
     ],
     "input": {
       "code": 127
-    }
+    },
+    "legend": [
+      "DEL"
+    ]
   },
   {
     "id": "key-031",
@@ -1099,7 +1206,8 @@
     ],
     "input": {
       "modifier": "caps"
-    }
+    },
+    "legend": []
   },
   {
     "id": "key-032",
@@ -1134,7 +1242,10 @@
       "code": 97,
       "shiftCode": 65,
       "letter": true
-    }
+    },
+    "legend": [
+      "A"
+    ]
   },
   {
     "id": "key-033",
@@ -1169,7 +1280,10 @@
       "code": 115,
       "shiftCode": 83,
       "letter": true
-    }
+    },
+    "legend": [
+      "S"
+    ]
   },
   {
     "id": "key-034",
@@ -1204,7 +1318,10 @@
       "code": 100,
       "shiftCode": 68,
       "letter": true
-    }
+    },
+    "legend": [
+      "D"
+    ]
   },
   {
     "id": "key-035",
@@ -1239,7 +1356,10 @@
       "code": 102,
       "shiftCode": 70,
       "letter": true
-    }
+    },
+    "legend": [
+      "F"
+    ]
   },
   {
     "id": "key-036",
@@ -1274,7 +1394,10 @@
       "code": 103,
       "shiftCode": 71,
       "letter": true
-    }
+    },
+    "legend": [
+      "G"
+    ]
   },
   {
     "id": "key-037",
@@ -1309,7 +1432,10 @@
       "code": 104,
       "shiftCode": 72,
       "letter": true
-    }
+    },
+    "legend": [
+      "H"
+    ]
   },
   {
     "id": "key-038",
@@ -1344,7 +1470,10 @@
       "code": 106,
       "shiftCode": 74,
       "letter": true
-    }
+    },
+    "legend": [
+      "J"
+    ]
   },
   {
     "id": "key-039",
@@ -1379,7 +1508,10 @@
       "code": 107,
       "shiftCode": 75,
       "letter": true
-    }
+    },
+    "legend": [
+      "K"
+    ]
   },
   {
     "id": "key-040",
@@ -1414,7 +1546,10 @@
       "code": 108,
       "shiftCode": 76,
       "letter": true
-    }
+    },
+    "legend": [
+      "L"
+    ]
   },
   {
     "id": "key-041",
@@ -1449,7 +1584,11 @@
       "code": 59,
       "shiftCode": 43,
       "letter": false
-    }
+    },
+    "legend": [
+      "+",
+      ";"
+    ]
   },
   {
     "id": "key-042",
@@ -1484,7 +1623,11 @@
       "code": 58,
       "shiftCode": 42,
       "letter": false
-    }
+    },
+    "legend": [
+      "*",
+      ":"
+    ]
   },
   {
     "id": "key-043",
@@ -1519,7 +1662,11 @@
       "code": 93,
       "shiftCode": 125,
       "letter": false
-    }
+    },
+    "legend": [
+      "}",
+      "]"
+    ]
   },
   {
     "id": "key-044",
@@ -1552,7 +1699,8 @@
     ],
     "input": {
       "modifier": "shift"
-    }
+    },
+    "legend": []
   },
   {
     "id": "key-045",
@@ -1587,7 +1735,11 @@
       "code": 92,
       "shiftCode": 124,
       "letter": false
-    }
+    },
+    "legend": [
+      "|",
+      "\\"
+    ]
   },
   {
     "id": "key-046",
@@ -1622,7 +1774,10 @@
       "code": 122,
       "shiftCode": 90,
       "letter": true
-    }
+    },
+    "legend": [
+      "Z"
+    ]
   },
   {
     "id": "key-047",
@@ -1657,7 +1812,10 @@
       "code": 120,
       "shiftCode": 88,
       "letter": true
-    }
+    },
+    "legend": [
+      "X"
+    ]
   },
   {
     "id": "key-048",
@@ -1692,7 +1850,10 @@
       "code": 99,
       "shiftCode": 67,
       "letter": true
-    }
+    },
+    "legend": [
+      "C"
+    ]
   },
   {
     "id": "key-049",
@@ -1727,7 +1888,10 @@
       "code": 118,
       "shiftCode": 86,
       "letter": true
-    }
+    },
+    "legend": [
+      "V"
+    ]
   },
   {
     "id": "key-050",
@@ -1762,7 +1926,10 @@
       "code": 98,
       "shiftCode": 66,
       "letter": true
-    }
+    },
+    "legend": [
+      "B"
+    ]
   },
   {
     "id": "key-051",
@@ -1797,7 +1964,10 @@
       "code": 110,
       "shiftCode": 78,
       "letter": true
-    }
+    },
+    "legend": [
+      "N"
+    ]
   },
   {
     "id": "key-052",
@@ -1832,7 +2002,10 @@
       "code": 109,
       "shiftCode": 77,
       "letter": true
-    }
+    },
+    "legend": [
+      "M"
+    ]
   },
   {
     "id": "key-053",
@@ -1867,7 +2040,11 @@
       "code": 44,
       "shiftCode": 60,
       "letter": false
-    }
+    },
+    "legend": [
+      "<",
+      ","
+    ]
   },
   {
     "id": "key-054",
@@ -1902,7 +2079,11 @@
       "code": 46,
       "shiftCode": 62,
       "letter": false
-    }
+    },
+    "legend": [
+      ">",
+      "."
+    ]
   },
   {
     "id": "key-055",
@@ -1937,7 +2118,11 @@
       "code": 47,
       "shiftCode": 63,
       "letter": false
-    }
+    },
+    "legend": [
+      "?",
+      "/"
+    ]
   },
   {
     "id": "key-056",
@@ -1970,7 +2155,8 @@
     ],
     "input": {
       "modifier": "shift"
-    }
+    },
+    "legend": []
   },
   {
     "id": "key-057",
@@ -2003,7 +2189,8 @@
     ],
     "input": {
       "code": 32
-    }
+    },
+    "legend": []
   },
   {
     "id": "key-058",
@@ -2036,7 +2223,10 @@
     ],
     "input": {
       "code": 13
-    }
+    },
+    "legend": [
+      "ET"
+    ]
   },
   {
     "id": "key-059",
@@ -2069,7 +2259,10 @@
     ],
     "input": {
       "unsupported": "This key\u2019s specimen-specific encoding is not verified yet."
-    }
+    },
+    "legend": [
+      "\u21e4"
+    ]
   },
   {
     "id": "key-060",
@@ -2102,7 +2295,10 @@
     ],
     "input": {
       "code": 139
-    }
+    },
+    "legend": [
+      "\u2191"
+    ]
   },
   {
     "id": "key-061",
@@ -2135,7 +2331,10 @@
     ],
     "input": {
       "unsupported": "This key\u2019s specimen-specific encoding is not verified yet."
-    }
+    },
+    "legend": [
+      "\u21e5"
+    ]
   },
   {
     "id": "key-062",
@@ -2168,7 +2367,10 @@
     ],
     "input": {
       "code": 136
-    }
+    },
+    "legend": [
+      "\u2190"
+    ]
   },
   {
     "id": "key-063",
@@ -2201,7 +2403,10 @@
     ],
     "input": {
       "unsupported": "This key\u2019s specimen-specific encoding is not verified yet."
-    }
+    },
+    "legend": [
+      "\u21b1"
+    ]
   },
   {
     "id": "key-064",
@@ -2234,7 +2439,10 @@
     ],
     "input": {
       "code": 134
-    }
+    },
+    "legend": [
+      "\u2192"
+    ]
   },
   {
     "id": "key-065",
@@ -2267,7 +2475,10 @@
     ],
     "input": {
       "unsupported": "This key\u2019s specimen-specific encoding is not verified yet."
-    }
+    },
+    "legend": [
+      "\u21b5"
+    ]
   },
   {
     "id": "key-066",
@@ -2300,7 +2511,10 @@
     ],
     "input": {
       "code": 138
-    }
+    },
+    "legend": [
+      "\u2193"
+    ]
   },
   {
     "id": "key-067",
@@ -2333,7 +2547,10 @@
     ],
     "input": {
       "code": 142
-    }
+    },
+    "legend": [
+      "F15"
+    ]
   },
   {
     "id": "key-068",
@@ -2366,7 +2583,10 @@
     ],
     "input": {
       "code": 209
-    }
+    },
+    "legend": [
+      "PF1"
+    ]
   },
   {
     "id": "key-069",
@@ -2399,7 +2619,10 @@
     ],
     "input": {
       "code": 210
-    }
+    },
+    "legend": [
+      "PF2"
+    ]
   },
   {
     "id": "key-070",
@@ -2432,7 +2655,10 @@
     ],
     "input": {
       "code": 211
-    }
+    },
+    "legend": [
+      "PF3"
+    ]
   },
   {
     "id": "key-071",
@@ -2465,7 +2691,10 @@
     ],
     "input": {
       "code": 183
-    }
+    },
+    "legend": [
+      "7"
+    ]
   },
   {
     "id": "key-072",
@@ -2498,7 +2727,10 @@
     ],
     "input": {
       "code": 184
-    }
+    },
+    "legend": [
+      "8"
+    ]
   },
   {
     "id": "key-073",
@@ -2531,7 +2763,10 @@
     ],
     "input": {
       "code": 185
-    }
+    },
+    "legend": [
+      "9"
+    ]
   },
   {
     "id": "key-074",
@@ -2564,7 +2799,10 @@
     ],
     "input": {
       "code": 180
-    }
+    },
+    "legend": [
+      "4"
+    ]
   },
   {
     "id": "key-075",
@@ -2597,7 +2835,10 @@
     ],
     "input": {
       "code": 181
-    }
+    },
+    "legend": [
+      "5"
+    ]
   },
   {
     "id": "key-076",
@@ -2630,7 +2871,10 @@
     ],
     "input": {
       "code": 182
-    }
+    },
+    "legend": [
+      "6"
+    ]
   },
   {
     "id": "key-077",
@@ -2663,7 +2907,10 @@
     ],
     "input": {
       "code": 177
-    }
+    },
+    "legend": [
+      "1"
+    ]
   },
   {
     "id": "key-078",
@@ -2696,7 +2943,10 @@
     ],
     "input": {
       "code": 178
-    }
+    },
+    "legend": [
+      "2"
+    ]
   },
   {
     "id": "key-079",
@@ -2729,7 +2979,10 @@
     ],
     "input": {
       "code": 179
-    }
+    },
+    "legend": [
+      "3"
+    ]
   },
   {
     "id": "key-080",
@@ -2762,7 +3015,10 @@
     ],
     "input": {
       "code": 176
-    }
+    },
+    "legend": [
+      "0"
+    ]
   },
   {
     "id": "key-081",
@@ -2795,7 +3051,10 @@
     ],
     "input": {
       "code": 187
-    }
+    },
+    "legend": [
+      "00"
+    ]
   },
   {
     "id": "key-082",
@@ -2828,7 +3087,10 @@
     ],
     "input": {
       "code": 172
-    }
+    },
+    "legend": [
+      ","
+    ]
   },
   {
     "id": "key-083",
@@ -2861,7 +3123,10 @@
     ],
     "input": {
       "code": 212
-    }
+    },
+    "legend": [
+      "PF4"
+    ]
   },
   {
     "id": "key-084",
@@ -2894,7 +3159,10 @@
     ],
     "input": {
       "code": 206
-    }
+    },
+    "legend": [
+      "CE"
+    ]
   },
   {
     "id": "key-085",
@@ -2927,7 +3195,10 @@
     ],
     "input": {
       "code": 189
-    }
+    },
+    "legend": [
+      "-"
+    ]
   },
   {
     "id": "key-086",
@@ -2960,7 +3231,10 @@
     ],
     "input": {
       "code": 208
-    }
+    },
+    "legend": [
+      "\u2194"
+    ]
   },
   {
     "id": "key-087",
@@ -2993,7 +3267,10 @@
     ],
     "input": {
       "code": 207
-    }
+    },
+    "legend": [
+      "PF5"
+    ]
   },
   {
     "id": "key-088",
@@ -3026,7 +3303,10 @@
     ],
     "input": {
       "code": 131
-    }
+    },
+    "legend": [
+      "PF10"
+    ]
   },
   {
     "id": "key-089",
@@ -3059,7 +3339,10 @@
     ],
     "input": {
       "code": 160
-    }
+    },
+    "legend": [
+      "PF6"
+    ]
   },
   {
     "id": "key-090",
@@ -3092,7 +3375,10 @@
     ],
     "input": {
       "code": 193
-    }
+    },
+    "legend": [
+      "PF11"
+    ]
   },
   {
     "id": "key-091",
@@ -3125,7 +3411,10 @@
     ],
     "input": {
       "code": 161
-    }
+    },
+    "legend": [
+      "PF7"
+    ]
   },
   {
     "id": "key-092",
@@ -3158,7 +3447,10 @@
     ],
     "input": {
       "code": 192
-    }
+    },
+    "legend": [
+      "PF12"
+    ]
   },
   {
     "id": "key-093",
@@ -3191,7 +3483,10 @@
     ],
     "input": {
       "code": 162
-    }
+    },
+    "legend": [
+      "PF8"
+    ]
   },
   {
     "id": "key-094",
@@ -3224,7 +3519,10 @@
     ],
     "input": {
       "code": 194
-    }
+    },
+    "legend": [
+      "PF13"
+    ]
   },
   {
     "id": "key-095",
@@ -3257,7 +3555,10 @@
     ],
     "input": {
       "code": 163
-    }
+    },
+    "legend": [
+      "PF9"
+    ]
   },
   {
     "id": "key-096",
@@ -3290,6 +3591,9 @@
     ],
     "input": {
       "code": 205
-    }
+    },
+    "legend": [
+      "PF14"
+    ]
   }
 ]

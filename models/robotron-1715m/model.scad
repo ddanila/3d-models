@@ -43,11 +43,31 @@ module fascia() {
         for(i=[0:13]) translate([93+i*10.2,-case_d/2+8,82]) rotate([90,0,0]) slab(5.8,65,30,2.8);
     }
 }
+// Recessed moulded drive fronts. No full-face photograph or baked shadow.
 module drives() {
-    for(x=[-158,-4]) {
-        translate([x,-case_d/2-2,81]) rotate([90,0,0]) slab(146,42,4,2);
-        translate([x+45,-case_d/2-10,94]) rotate([0,-12,0]) cube([35,9,7],center=true);
+    for(x=[-158,-4]) translate([x,-case_d/2-6,81]) rotate([90,0,0]) difference() {
+        slab(146,42,2.5,2);
+        translate([0,8,-1]) slab(140,3.5,5,1);
+        translate([4,-2,-1]) slab(41,25,5,1.5);
+        translate([-60,15,-1]) slab(11,4,5,.7);
     }
+}
+module drive_insets() {
+    for(x=[-158,-4]) translate([x,-case_d/2-3,81]) rotate([90,0,0]) {
+        slab(144,40,1,1);
+        // Recessed central finger well, with the insertion slot above it.
+        translate([4,-3,1]) slab(39,20,1,1);
+    }
+}
+module drive_latches() {
+    for(x=[-158,-4]) translate([x+45,-case_d/2-9,92]) rotate([90,0,0]) {
+        cylinder(d=12,h=3,$fn=40);
+        hull(){cylinder(d=8,h=5,$fn=32);translate([23,1,0])cylinder(d=7,h=5,$fn=32);}
+        translate([11,1,5])slab(20,3,.5,1);
+    }
+}
+module drive_led(i) {
+    translate([-218+i*154,-case_d/2-8.6,96]) rotate([90,0,0]) slab(10,3.5,.7,.5);
 }
 module switch_part(x,w,h) {
     translate([x,-case_d/2-4,17]) rotate([90,0,0]) {
@@ -91,8 +111,42 @@ module crt_glass() {
 module keyboard_shell() {
     translate([0,keyboard_y,0]) difference() {
         hull(){translate([-keyboard_w/2+3,-keyboard_d/2,0])rounded([keyboard_w-6,12,16],4);translate([-keyboard_w/2+3,keyboard_d/2-12,0])rounded([keyboard_w-6,12,40],4);}
+        // Hollow sheet-metal shell, closed by a separate removable bottom plate.
+        hull(){translate([-keyboard_w/2+6,-keyboard_d/2+3,-3])rounded([keyboard_w-12,10,16],3);translate([-keyboard_w/2+6,keyboard_d/2-13,-3])rounded([keyboard_w-12,10,40],3);}
         translate([0,0,25]) rotate([keyboard_slope,0,0]) slab(keyboard_w-12,keyboard_d-30,30,4);
-        translate([80,55,-2]) cube([28,22,9],center=true);
+    }
+}
+module keyboard_bottom() {
+    translate([0,keyboard_y,0]) difference() {
+        union(){slab(keyboard_w-12,keyboard_d-7,1.6,5);
+            for(x=[-200,200],y=[-65,65])translate([x,y,-1.2])slab(33,15,2,5);}
+        translate([80,55,-3])slab(36,25,8,2);
+        for(x=[-218,0,218],y=[-87,87])translate([x,y,-2])cylinder(d=3.5,h=6);
+    }
+}
+module keyboard_feet() {
+    for(x=[-200,200],y=[-65,65]) translate([x,keyboard_y+y,-5]) difference() {
+        slab(28,11,4,1.3);
+        translate([0,0,-1])slab(23,6,3.5,.7);
+    }
+}
+module screw(d=5,h=1.7) {
+    difference(){cylinder(d=d,h=h,$fn=32);translate([-d/2,-.45,-.1])cube([d,.9,.7]);}
+}
+module keyboard_metal() {
+    for(x=[-200,200],y=[-65,65])translate([x,keyboard_y+y,0]){
+        translate([0,0,-3.2])slab(22,5,1,.4);
+        translate([0,0,-4])screw(3,1.2);
+    }
+    for(x=[-218,0,218],y=[-87,87])translate([x,keyboard_y+y,0]){
+        translate([0,0,-.7])cylinder(d=7,h=.8,$fn=32);
+        translate([0,0,-2.1])difference(){cylinder(d=5.5,h=1.5,$fn=6);translate([-3,-.45,-.1])cube([6,.9,.8]);}
+    }
+}
+module keyboard_grommet() {
+    translate([80,keyboard_y+55,-2]) {
+        difference(){slab(37,26,3,2);translate([0,0,-1])slab(29,18,5,2);}
+        for(y=[-15,15])translate([0,y,-.5])rotate([y<0?-18:18,0,0])slab(41,7,2,1);
     }
 }
 module keyboard_deck() {
@@ -100,35 +154,69 @@ module keyboard_deck() {
         slab(keyboard_w-8,keyboard_d-34,4,5);
         for(k=keys) translate([k[0],k[1],-1]) slab(k[2]*keyboard_pitch-1,k[3]*keyboard_pitch-1,7,2);
     }
-    translate([0,keyboard_y+87,37]) rotate([0,90,0]) cylinder(r=3,h=keyboard_w-24,center=true);
+    translate([0,keyboard_y+87,37]) rotate([0,90,0]) cylinder(r=3,h=keyboard_w-24,center=true,$fn=40);
+}
+module keyboard_fillers() {
+    translate([0,keyboard_y,28]) rotate([keyboard_slope,0,0]) {
+        // Blank spacers and indicator carriers visible between the key groups.
+        for(p=[[-242,-5,8,19],[83,35,18,19],[28,-45,8,18]])
+            translate([p[0],p[1],0])slab(p[2],p[3],3,2);
+    }
 }
 module cap(w,h,style) {
-    difference(){hull(){slab(w,h,1,2);translate([0,0,7])
-        if(style==1) slab(w-2,h-3,1,3);
-        else scale([w-2,h-3,1]) cylinder(d=1,h=1,$fn=32);
-    }translate([0,0,36])sphere(r=29,$fn=32);}
+    // Square skirt, tapered shoulder and dished top: all highlights are 3D.
+    union(){slab(w,h,1.4,2);
+        difference(){hull(){translate([0,0,1.4])slab(w-.4,h-.4,1,2);
+            translate([0,0,7])
+                if(style==1)slab(w-2,h-3,1,3);
+                else slab(w-2,h-3,1,min(w-2,h-3)/2-.1);
+        }translate([0,0,36])scale([max(1,(w-4)/16),max(1,(h-4)/16),1])sphere(r=29,$fn=96);}
+    }
 }
 module keycaps(style) {
     translate([0,keyboard_y,28]) rotate([keyboard_slope,0,0])
         for(k=keys) if(k[4]==style) translate([k[0],k[1],0])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,style);
 }
+function bezier(p,t)=pow(1-t,3)*p[0]+3*pow(1-t,2)*t*p[1]+3*(1-t)*t*t*p[2]+t*t*t*p[3];
 module cable() {
-    // Approximate route; endpoints follow the photographed plug and cable exit.
-    pts=[[80,keyboard_y+55,2],[60,keyboard_y+95,3],[-70,-253,5],[-220,-257,6],[-285,-225,12],[-290,-170,19],[-260,-145,22]];
-    for(i=[0:len(pts)-2]) hull(){translate(pts[i])sphere(r=2.6);translate(pts[i+1])sphere(r=2.6);}
+    // One continuous lead: underside grommet -> around the left -> plug.
+    // Control points describe an estimated resting route, not a second lead.
+    curves=[[[80,keyboard_y+55,4],[80,keyboard_y+57,-7],[80,keyboard_y+70,-7],[75,-250,-5]],
+        [[75,-250,-5],[55,-215,-5],[-175,-244,-5],[-258,-230,1]],
+        [[-258,-230,1],[-300,-223,4],[-309,-156,20],[-275,-145,22]]];
+    for(p=curves,i=[0:19])hull(){translate(bezier(p,i/20))sphere(r=2.6,$fn=16);translate(bezier(p,(i+1)/20))sphere(r=2.6,$fn=16);}
+}
+module cable_plug() {
+    translate([-case_w/2-27,-160,13])difference(){rounded([31,30,18],2);
+        translate([-1,1,8.5])cube([33,28,.6]);}
+    translate([-278,-145,22])rotate([0,90,0])cylinder(d=9,h=7,$fn=32);
+    for(y=[-157,-133])translate([-254,y,14])rounded([8,4,13],1);
+}
+module plug_screws() {
+    for(x=[-270,-253],y=[-155,-135])translate([x,y,31.05])rotate([180,0,0])screw(3.4,1.1);
+}
+module monitor_tape() {
+    translate([0,monitor_y-120,monitor_z+monitor_h-2.1])rotate([-3.9,0,-3])slab(52,9,.3,.5);
 }
 module hardware() {
-    // Neutral dark backing behind the vent bank, not an internal board model.
+    // Dark recesses, not speculative interior electronics.
     translate([80,-case_d/2+12,40]) cube([150,2,80]);
-    // Keyboard underside feet/fasteners observed in photographs.
-    for(x=[-210,210],y=[-60,60]) translate([x,keyboard_y+y,-2])cube([27,10,4],center=true);
-    for(x=[-244,-5,244],y=[-76,76])translate([x,keyboard_y+y,-1])cylinder(d=6,h=2);
-    // Base-unit feet are provisional: no underside photo of that unit yet.
-    for(x=[-225,225],y=[-170,170])translate([x,y,-9])cylinder(d=25,h=10);
-    // Visible left-side keyboard cable plug, approximate exterior dimensions.
-    translate([-case_w/2-17,-145,13]) rounded([27,30,18],2);
+    // Base-unit feet remain provisional without an underside photograph.
+    for(x=[-225,225],y=[-170,170])translate([x,y,-9])cylinder(d=25,h=10,$fn=40);
 }
 module shape(p) {
+    if(p=="drive-insets")drive_insets();
+    if(p=="drive-latches")drive_latches();
+    if(p=="drive-led-0")drive_led(0);
+    if(p=="drive-led-1")drive_led(1);
+    if(p=="keyboard-bottom")keyboard_bottom();
+    if(p=="keyboard-feet")keyboard_feet();
+    if(p=="keyboard-metal")keyboard_metal();
+    if(p=="keyboard-grommet")keyboard_grommet();
+    if(p=="keyboard-fillers")keyboard_fillers();
+    if(p=="cable-plug")cable_plug();
+    if(p=="plug-screws")plug_screws();
+    if(p=="monitor-tape")monitor_tape();
     if(p=="case-base")case_base();
     if(p=="case-lid")case_lid();
     if(p=="fascia")fascia();
@@ -150,7 +238,7 @@ module shape(p) {
     if(p=="cable")cable();
     if(p=="keycap")let(k=keys[key_index])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[4]);
 }
-parts=["case-base","case-lid","fascia","drives","power","reset","pedestal","ring","monitor-shell","bezel","crt-rim","crt-glass","keyboard-shell","keyboard-deck","keys-black","keys-light","keys-red","hardware","cable"];
-colors=["Wheat","Wheat","Gray","#242627","#333839","#333839","Wheat","#333333","Wheat","#8c857a","#141919","#0b1712","#abb9bc","#242929","#202526","#bac1b8","#c6343b","#474b46","#b7b3a0"];
+parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latches", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape"];
+colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#333839", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#909583", "#96988f", "#487eac"];
 if(part=="assembly") for(i=[0:len(parts)-1]) color(colors[i]) shape(parts[i]);
 else shape(part);
