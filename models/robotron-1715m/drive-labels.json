@@ -1,0 +1,232 @@
+{
+  "patches": [
+    {
+      "name": "drive-label-ratan",
+      "photo": "PXL_20250212_094043026.jpg",
+      "uv": [
+        [
+          0.020833333333333332,
+          0.36125273124544793
+        ],
+        [
+          0.7883771929824561,
+          0.3605243991260015
+        ],
+        [
+          0.774671052631579,
+          0.6591405680990532
+        ],
+        [
+          0.023574561403508772,
+          0.6817188638018936
+        ]
+      ],
+      "position": [
+        12,
+        0.23,
+        84
+      ],
+      "size": [
+        92,
+        28
+      ],
+      "rotation": [
+        -90,
+        0,
+        180
+      ],
+      "section": "interior",
+      "assembly": "drives"
+    },
+    {
+      "name": "drive-label-robotron-id",
+      "photo": "PXL_20250212_094057627.jpg",
+      "uv": [
+        [
+          0.17653508771929824,
+          0.39475600873998545
+        ],
+        [
+          0.46655701754385964,
+          0.4107793153678077
+        ],
+        [
+          0.46655701754385964,
+          0.5098324836125273
+        ],
+        [
+          0.17653508771929824,
+          0.49308084486525855
+        ]
+      ],
+      "position": [
+        -140.75,
+        0.23,
+        91.4
+      ],
+      "size": [
+        47.5,
+        14.4
+      ],
+      "rotation": [
+        -90,
+        0,
+        180
+      ],
+      "section": "interior",
+      "assembly": "drives"
+    },
+    {
+      "name": "drive-label-robotron-maker",
+      "photo": "PXL_20250212_094057627.jpg",
+      "uv": [
+        [
+          0.4682017543859649,
+          0.41005098324836126
+        ],
+        [
+          0.8640350877192983,
+          0.4362709395484341
+        ],
+        [
+          0.8574561403508771,
+          0.6001456664238893
+        ],
+        [
+          0.4682017543859649,
+          0.5673707210487983
+        ]
+      ],
+      "position": [
+        -194.75,
+        0.23,
+        87.8
+      ],
+      "size": [
+        60.5,
+        21.6
+      ],
+      "rotation": [
+        -90,
+        0,
+        180
+      ],
+      "section": "interior",
+      "assembly": "drives"
+    },
+    {
+      "name": "drive-label-teac-2064",
+      "photo": "PXL_20250212_094109733.jpg",
+      "uv": [
+        [
+          0.2889254385964912,
+          0.46394756008739985
+        ],
+        [
+          0.537828947368421,
+          0.4406409322651129
+        ],
+        [
+          0.5427631578947368,
+          0.5061908230152949
+        ],
+        [
+          0.2878289473684211,
+          0.5287691187181355
+        ]
+      ],
+      "position": [
+        -197.5,
+        -144,
+        92.78
+      ],
+      "size": [
+        36,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "section": "interior",
+      "assembly": "drives"
+    },
+    {
+      "name": "drive-label-teac-2092",
+      "photo": "PXL_20250212_094103763.jpg",
+      "uv": [
+        [
+          0.2680921052631579,
+          0.4879825200291333
+        ],
+        [
+          0.5910087719298246,
+          0.45302257829570286
+        ],
+        [
+          0.5981359649122807,
+          0.5214857975236707
+        ],
+        [
+          0.26206140350877194,
+          0.5615440640932265
+        ]
+      ],
+      "position": [
+        -43.5,
+        -144,
+        92.78
+      ],
+      "size": [
+        36,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ],
+      "section": "interior",
+      "assembly": "drives"
+    }
+  ],
+  "reconstructedText": {
+    "name": "drive-label-country",
+    "text": "HERGESTELLT IN DER DDR",
+    "position": [
+      -140.75,
+      0.24,
+      80.6
+    ],
+    "size": [
+      47.5,
+      7.2
+    ],
+    "rotation": [
+      -90,
+      0,
+      180
+    ],
+    "section": "interior",
+    "assembly": "drives",
+    "note": "Typeset from visible text because the owner photograph has a cable crossing the left end; no photographed cable is applied to the model."
+  },
+  "drives": [
+    {
+      "x": -158,
+      "plate": "K 5601",
+      "serial": "044713",
+      "manufacturer": "VEB ROBOTRON \u2013 BUCHUNGSMASCHINENWERK KARL-MARX-STADT",
+      "board": "TEAC 15532064-00A"
+    },
+    {
+      "x": -4,
+      "plate": "Assembled in India by RATAN EXPORTS & INDUSTRIES LTD.",
+      "board": "TEAC 15532092-00A",
+      "model": "Unfilled or illegible on photographed sticker"
+    }
+  ],
+  "orientation": "Positions inferred from rear overview 094038758 and top view 094033966; left in these rear-facing photographs is right when facing the computer.",
+  "scale": "Plate sizes and small mechanism dimensions estimated from nominal drive envelope."
+}

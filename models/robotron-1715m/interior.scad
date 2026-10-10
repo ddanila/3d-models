@@ -1,4 +1,4 @@
-// Reference interior: component shapes from TEAC drawings and Oldcrap photos.
+// Drives follow owner photographs; other internals still use comparative references.
 // Board populations, mounting and wiring are provisional, not verified 1715M/W.
 include <components/teac-fd55fv.scad>
 include <pcb-packages.scad>
@@ -78,7 +78,13 @@ module interior_shape(p) {
     if(p=="drive-frames")drive_pair()teac_frame();
     if(p=="drive-mechanisms")drive_pair()teac_mechanism();
     if(p=="drive-motors")drive_pair()teac_black();
-    if(p=="drive-boards")drive_pair()teac_boards();
+    if(p=="drive-boards")for(i=[0:1])translate([[-231,-77][i],-203,60])teac_boards(i==1);
+    if(p=="drive-traces")for(i=[0:1])translate([[-231,-77][i],-203,60])teac_traces(i==1);
+    if(p=="drive-power-sockets")drive_pair()teac_power_socket();
+    if(p=="drive-label-plates"){
+        translate([-225,-.05,77])cube([108,.25,21.6]);
+        translate([-34,-.05,70])cube([92,.25,28]);
+    }
     if(p=="drive-contacts")drive_pair()teac_contacts();
     if(p=="drive-coils")drive_pair()teac_coils();
     if(p=="drive-bracket")drive_bracket();

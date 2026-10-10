@@ -31,10 +31,11 @@ for i,k in enumerate(keys):
 # UV corners are TL, TR, BR, BL, normalized from the unmodified photographs.
 def patch(name,photo,position,size,crop,rotation=[90,0,0]):
     return dict(name=name,photo='PXL_20261009_'+photo+'.jpg',position=position,size=size,rotation=rotation,uv=[[x/1824,y/1373] for x,y in crop])
-# Only the small original wordmark remains photographic. All physical features
-# are geometry; photos are separate reference evidence, never enclosure skins.
+# Small original markings are photographic. Enclosures and mechanisms stay geometry.
 patches=[patch('brand','133022597',[-160,-209.2,48],[110,11],[(420,925),(1050,917),(1048,985),(425,990)])]
 patches[0]['ink']=True
+drive_labels=json.loads((root/'drive-labels.json').read_text())
+patches += drive_labels['patches']
 materials={
     'paint':dict(roughness=.78,metalness=.08,grain=.028,grainScale=2.7),
     'plastic':dict(roughness=.68,metalness=0,grain=.022,grainScale=3.5),
@@ -68,9 +69,13 @@ for r in records:
     if n in ['monitor-boards']:m='pcb'
     if n=='monitor-wires':m='rubber'
     if n=='monitor-coils':m='metal'
+    if n in ['drive-power-sockets','drive-traces','drive-label-plates']:
+        r['section']='interior'
+        m='plastic' if n=='drive-power-sockets' else 'pcb' if n=='drive-traces' else 'metal'
     r['material']=m
 references=['PXL_20261009_'+n+'.jpg' for n in ['133017092','133019620','132919894','133022597','133005363','133001660','133028313','133032874','132916421.MP']]
 references += ['PXL_'+n+'.jpg' for n in ['20250430_135132170','20251008_143433778','20250516_133813650','20250516_141624490','20250516_133810520']]
 references += ['PXL_20261010_'+n+'.jpg' for n in ['090413483','090416759','090421901','090425989','090431122']]
-manifest=dict(version=6,units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=dict(y=-355,z=28,slope=6,pitch=20.0),screen=json.loads((root/'monitor-profile.json').read_text())['glass'],patches=patches,references=references,pcbReferences=json.loads((root/'pcb-references.json').read_text()),interior=dict(status='provisional',drive='TEAC FD-55FV-13 reference; exact suffix unverified',driveEnvelope=[146,203,41.3],source='https://oldcrap.org/2017/12/26/robotron-1715/',specification='https://retrocmp.de/fdd/teac/TEAC_FD55-FV.pdf',note='Drive envelopes are documented. Mechanisms and layout follow another PC 1715; board population, mounting and wiring are estimates, not verified M/W internals.'),source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
+references += ['PXL_20250212_'+n+'.jpg' for n in ['094057627','094043026','094033966','094109733','094038758','094103763']]
+manifest=dict(version=7,units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=dict(y=-355,z=28,slope=6,pitch=20.0),screen=json.loads((root/'monitor-profile.json').read_text())['glass'],patches=patches,driveLabels=drive_labels,references=references,pcbReferences=json.loads((root/'pcb-references.json').read_text()),interior=dict(status='provisional',drive='Owner specimens: Robotron K5601 / TEAC 15532064-00A and Ratan assembly / TEAC 15532092-00A; FD-55 suffix unverified',driveEnvelope=[146,203,41.3],source='https://oldcrap.org/2017/12/26/robotron-1715/',specification='https://retrocmp.de/fdd/teac/TEAC_FD55-FV.pdf',note='Drive envelopes are documented. Drive mechanisms and rear plates now follow owner photos; the nominal envelope remains a reference. Logic-board population, mounting and wiring still use comparative evidence.'),source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
 (out/'model.json').write_text(json.dumps(manifest,indent=2)+'\n')
