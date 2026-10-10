@@ -10,7 +10,7 @@ and [printable STL](pk8010-korvet-keycap.stl).
 
 | Parameter | Current prototype | Basis |
 | --- | --- | --- |
-| Socket opening | 5.5 × 3.5 mm | User measurement |
+| Socket opening | 5.3 × 3.3 mm | 0.2 mm smaller per dimension than the measured 5.5 × 3.5 mm |
 | Base | 17.8 × 17.8 mm | Ruler-photo estimate |
 | Top outline | 12.8 × 14 mm | Provisional |
 | Nominal top height | 12 mm | Provisional; shallow dish across the width |
@@ -27,7 +27,7 @@ Edit parameters at the top of [model.scad](model.scad). +Y points toward the
 arrow tip, and the skirt bottom is Z=0. The socket's long side runs left/right
 by default; change `socket_rotation` to 90 if the original uses the other
 orientation. `socket_clearance` adds to each complete opening dimension;
-it defaults to zero. `engrave_legend = false` produces a blank keycap.
+it is set to −0.2 mm for the selected fit. `engrave_legend = false` produces a blank keycap.
 
 The top stays level from front to rear. Its offset is derived from the base and
 top depths so the arrow-tip side (+Y) is vertical, parallel to XZ.
@@ -62,12 +62,12 @@ physically tested print profile.
 
 The socket's lower rim begins 1 mm above the bed: it needs support. Inspect the
 sliced layers to ensure the rim is supported from below. Block support inside
-the 5.5 × 3.5 mm blind socket bore; its ceiling should bridge the short span,
+the 5.3 × 3.3 mm blind socket bore; its ceiling should bridge the short span,
 but this needs checking in the slicer and on the first print. Trapped support
 would be difficult to remove and could interfere with the switch fit.
 
 Print one sample, remove the brim and supports, and check the fit gently before
-forcing the cap onto the switch. The opening has zero added clearance. If it is
+forcing the cap onto the switch. The opening uses −0.2 mm clearance per complete dimension. If it is
 too tight, adjust `socket_clearance` in small increments (for example 0.1 mm),
 then export again; do not scale the whole keycap to correct the socket fit.
 
@@ -79,7 +79,7 @@ and [support settings](https://help.prusa3d.com/article/support-material_1698).
 Rendered with OpenSCAD's Manifold backend; STL exported with CGAL and validated
 with an edge/connectivity check:
 one closed connected mesh, 3,012 triangles. Exported bounds are
-17.8 × 17.8 × 12.012 mm. Physical fit has not yet been tested.
+17.8 × 17.8 × 12.012 mm. The user selected the −0.2 mm socket adjustment after fit trials on 2026-10-07.
 
 Open from the repository root:
 
@@ -93,3 +93,12 @@ To reproduce the validated STL from this model directory, select CGAL explicitly
 openscad --backend CGAL --export-format binstl \
   -o pk8010-korvet-keycap.stl model.scad
 ```
+
+## Selected socket fit
+
+After comparing −0.1, −0.3, and −0.2 mm adjustments, the user reported
+−0.2 mm as the best fit on 2026-10-07. Both keycap models now use this
+adjustment by default, giving a 5.3 × 3.3 mm opening.
+
+The separately named `part-fit-minus-0-2.scad` and its exported STL are
+retained for the existing print-file links; they now match the default fit.

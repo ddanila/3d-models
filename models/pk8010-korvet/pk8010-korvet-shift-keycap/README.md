@@ -18,7 +18,7 @@ and [editable model](model.scad).
 | Rear wall inset | 1 mm at upper blank | Provisional amount; user confirmed this wall also leans |
 | Top offset | About +1.20 mm along Y | Derived from rear wall inset |
 | Dish depth | 0.6 mm | Provisional |
-| Socket opening | 5.5 × 3.5 mm, centered | Borrowed from ↑/8; unconfirmed for this key |
+| Socket opening | 5.3 × 3.3 mm, centered | Same −0.2 mm fit adjustment as ↑/8; unconfirmed for this key |
 | Socket bottom / insertion depth | 1 / 8 mm | Borrowed from ↑/8; unconfirmed |
 | Shell wall / roof | 1.1 / 1.4 mm | Provisional |
 | Engraving depth | 0.35 mm | Modeling choice |
@@ -40,7 +40,7 @@ socket arrangement or the photo-derived angle as confirmed measurements.
 Use the [PLA / 0.4 mm nozzle starting settings](../pk8010-korvet-keycap/README.md#first-print-pla-04-mm-nozzle)
 from the smaller key: upright, 0.12 mm layers, 3 walls, and targeted supports
 under the raised socket rim and roof. Block supports inside the socket bore.
-This wider roof needs its own support-preview check. Physical fit is untested.
+This wider roof needs its own support-preview check. The −0.2 mm socket adjustment was selected after user fit trials; the SHIFT exterior and mounting arrangement remain provisional.
 
 Rendered with OpenSCAD's Manifold backend and exported with CGAL. The STL passes
 edge and connectivity checks: one closed connected mesh, 3,816 triangles,
@@ -58,3 +58,12 @@ To export from this directory:
 openscad --backend CGAL --export-format binstl \
   -o pk8010-korvet-shift-keycap.stl model.scad
 ```
+
+## Selected socket fit
+
+After comparing −0.1, −0.3, and −0.2 mm adjustments, the user reported
+−0.2 mm as the best fit on 2026-10-07. Both keycap models now use this
+adjustment by default, giving a 5.3 × 3.3 mm opening.
+
+The separately named `part-fit-minus-0-2.scad` and its exported STL are
+retained for the existing print-file links; they now match the default fit.
