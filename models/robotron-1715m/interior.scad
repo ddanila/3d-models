@@ -1,7 +1,8 @@
 // Drives follow owner photographs; other internals still use comparative references.
 // Board populations, mounting and wiring are provisional, not verified 1715M/W.
 include <components/teac-fd55fv.scad>
-include <pcb-packages.scad>
+include <pcb-components.scad>
+include <components/pcb-discretes.scad>
 module drive_pair() { for(x=[-158,-4])translate([x-73,-203,60])children(); }
 module drive_bracket() {
     translate([-235,-199,55])difference(){cube([310,197,2]);
@@ -14,22 +15,17 @@ module logic_boards() {
     // Controller board above the rear section; mounting is estimated.
     translate([-222,10,41])cube([220,165,1.6]);
 }
-module dip(w=8,l=20,h=4) { cube([w,l,h]); }
 module logic_chips() {
-    for(p=pcb_packages)translate([p[0],p[1],p[2]])cube([p[3],p[4],p[5]]);
+    for(p=pcb_component_instances)translate(p[1])rotate([0,0,p[2]])import(pcb_component_models[p[0]][0]);
 }
 module logic_pins() {
-    // Leads along the two long edges of each photo-aligned package.
-    for(p=pcb_packages)translate([p[0],p[1],p[2]])
-        if(p[3]>p[4])for(x=[1:2.54:p[3]-1],y=[-.5,p[4]])translate([x,y,0])cube([.6,.5,1.8]);
-        else for(y=[1:2.54:p[4]-1],x=[-.5,p[3]])translate([x,y,0])cube([.5,.6,1.8]);
+    for(p=pcb_component_instances)translate(p[1])rotate([0,0,p[2]])import(pcb_component_models[p[0]][1]);
 }
 module logic_connectors() {
-    translate([-68,14,43])difference(){cube([44,10,8]);translate([2,2,2])cube([40,7,8]);}
-}
-module logic_caps() {
-    // Tall cans match the controller photo rather than an invented grid.
-    for(p=[[-86,55],[-84,45],[-86,34],[-82,20]])translate([p[0],p[1],43])cylinder(d=7,h=8,$fn=16);
+    translate([-68,14,43]){
+        difference(){cube([44,10,8]);translate([2,2,2])cube([40,6,8]);}
+        for(x=[3:2.54:41])translate([x,2,2])cube([.6,6,5]);
+    }
 }
 module psu_chassis() {
     // Folded shield, right hand compartment, photo-scaled within 500x400 case.
@@ -92,11 +88,11 @@ module interior_shape(p) {
     if(p=="drive-contacts")drive_pair()teac_contacts();
     if(p=="drive-coils")drive_pair()teac_coils();
     if(p=="drive-bracket")drive_bracket();
+    logic_discretes(p);
     if(p=="logic-boards")logic_boards();
     if(p=="logic-chips")logic_chips();
     if(p=="logic-pins")logic_pins();
     if(p=="logic-connectors")logic_connectors();
-    if(p=="logic-capacitors")logic_caps();
     if(p=="psu-chassis")psu_chassis();
     if(p=="psu-cover")psu_cover();
     if(p=="fan-frame")fan_frame();

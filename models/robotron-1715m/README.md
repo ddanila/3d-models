@@ -173,3 +173,42 @@ Exterior refinements include case seam ledges, recessed cover screw holes, hollo
 caps and a tiny feathered owner-photo corner-wear patch. Feature placement remains
 photo-estimated, not metrology. Springs/stems are shared browser instances to avoid
 one draw call per mechanism; all corresponding shapes remain in OpenSCAD.
+
+
+## Reusable component packages (2026-10-11)
+
+The motherboard and controller use 132 photo-aligned KiCad DIP packages from seven
+families (14, 16, 18, 20, 24, 28 and 40 pins), replacing the old box bodies and pin
+strips. The old motherboard landmarks incorrectly spanned neighbouring chip rows;
+they have been retraced, including four rows of eight memory packages. Package
+choices and pin-one orientation remain provisional where the photo is ambiguous.
+The nominal upstream shape is never stretched to fit a photographic rectangle.
+This models another PC 1715, not a verified 1715M/W board revision.
+
+The KiCad sources, pinned revision, original licence headers and credits are in
+[components/kicad](components/kicad/NOTICE.txt). They and their derived library
+meshes retain their upstream terms, not this project's MIT licence. Six original STEP files use GPL-3.0-or-later with a design exception; the
+24-pin wide package uses CC BY-SA 4.0 with the KiCad exception. The upstream
+collection licence is preserved as well. Original project code remains MIT.
+
+`tools/convert-kicad.py` reproduces the material-separated STL meshes with CadQuery
+2.5.2 / OCP 7.7.2. It checks shape validity, volume conservation and that the metal
+mesh contains the expected number of leads. `tools/configure-pcb.py` produces the
+shared OpenSCAD/browser placement records from `pcb-references.json`. Browser
+rendering instances each body/lead family instead of issuing one draw per chip.
+
+The 86 discrete components use original OpenSCAD geometry: axial resistor bodies
+and leads, ceramic discs, electrolytic cans with top vents, and metal-can packages.
+Positions follow visible landmarks; dimensions and electrical values are not
+established. Resistor colour codes and unreadable chip identities are not invented.
+The board photo surface omits the new component silhouettes; only photographed
+markings are projected onto the DIP tops. Remaining unmodeled details can still
+appear in the credited board photograph.
+
+Rebuild placements and the complete assembly with:
+
+```sh
+python3 models/robotron-1715m/tools/configure-pcb.py
+python3 models/robotron-1715m/tools/export.py
+openscad --backend Manifold --export-format binstl -o models/robotron-1715m/robotron-1715m.stl models/robotron-1715m/model.scad
+```
