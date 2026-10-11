@@ -10,22 +10,69 @@ module drive_bracket() {
     for(x=[-235,71])translate([x,-199,22])cube([3,197,35]);
     for(y=[-196,-12])translate([-235,y,52])cube([310,3,7]);
 }
+// Selection is shared by standalone OpenSCAD and the per-board browser exports.
+pcb_board = "";
+function pcb_selected(board) = pcb_board=="" || pcb_board==board;
+module board_blank(origin,size,board) {
+    if(pcb_selected(board))translate(origin)linear_extrude(1.6)difference(){
+        square(size);
+        for(p=pcb_footprints)if(p[3]==board)translate([p[0]-origin[0],p[1]-origin[1]])circle(d=.95,$fn=12);
+    }
+}
 module logic_boards() {
-    translate([-231,-178,12])cube([250,355,1.6]);
-    // Controller board above the rear section; mounting is estimated.
-    translate([-222,10,41])cube([220,165,1.6]);
+    board_blank([-231,-178,12],[250,355],"motherboard");
+    board_blank([-222,10,41],[220,165],"floppy-controller");
+}
+module pcb_pad() {
+    translate([0,0,-1.64])difference(){
+        cylinder(d=1.8,h=1.72,$fn=12);
+        translate([0,0,-.1])cylinder(d=.95,h=2,$fn=12);
+    }
+}
+module pcb_solder() {
+    translate([0,0,-2])difference(){
+        cylinder(d1=.85,d2=1.7,h=.36,$fn=12);
+        translate([0,0,-.1])cylinder(d=.72,h=.6,$fn=12);
+    }
+}
+module logic_pads() {
+    for(p=pcb_footprints)if(pcb_selected(p[3]))translate([p[0],p[1],p[2]])pcb_pad();
+}
+module logic_solder() {
+    for(p=pcb_footprints)if(pcb_selected(p[3]))translate([p[0],p[1],p[2]])pcb_solder();
 }
 module logic_chips() {
-    for(p=pcb_component_instances)translate(p[1])rotate([0,0,p[2]])import(pcb_component_models[p[0]][0]);
+    for(p=pcb_component_instances)if(pcb_selected(p[3]))translate(p[1])rotate([0,0,p[2]])import(pcb_component_models[p[0]][0]);
 }
 module logic_pins() {
-    for(p=pcb_component_instances)translate(p[1])rotate([0,0,p[2]])import(pcb_component_models[p[0]][1]);
+    for(p=pcb_component_instances)if(pcb_selected(p[3]))translate(p[1])rotate([0,0,p[2]])import(pcb_component_models[p[0]][1]);
 }
-module logic_connectors() {
-    translate([-68,14,43]){
-        difference(){cube([44,10,8]);translate([2,2,2])cube([40,6,8]);}
-        for(x=[3:2.54:41])translate([x,2,2])cube([.6,6,5]);
+// Photo-estimated two-row connector, with individual metal contacts.
+// No electrical pinout is asserted. Long axis follows local Y.
+module board_socket(n=32) {
+    difference(){cube([9,(n-1)*2.54+6,7],center=true);
+        translate([0,0,1.5])cube([5,(n-1)*2.54+2,6],center=true);
+        translate([4,0,2])cube([4,5,5],center=true);}
+    for(y=[-(n-1)*1.27:2.54:(n-1)*1.27])translate([0,y,0])cube([5,.5,3],center=true);
+}
+module board_socket_contacts(n=32) {
+    for(x=[-1.27,1.27],i=[0:n-1])translate([x,(i-(n-1)/2)*2.54,-2])cube([.55,.55,8],center=true);
+}
+module connector_pose() {
+    if(pcb_selected("motherboard"))translate([-13.02,99.60,17.3])children();
+    if(pcb_selected("floppy-controller"))translate([-10.68,91.71,46.3])children();
+}
+module logic_connectors(){
+    connector_pose()board_socket();
+    if(pcb_selected("floppy-controller"))translate([-46,19,46.3])rotate([0,0,90]){
+        board_socket(17);
+        // Illustrative ribbon plug and strain-relief bar at the existing cable end.
+        translate([0,0,4.2])cube([8,44,1.8],center=true);
     }
+}
+module logic_connector_contacts(){
+    connector_pose()board_socket_contacts();
+    if(pcb_selected("floppy-controller"))translate([-46,19,46.3])rotate([0,0,90])board_socket_contacts(17);
 }
 module psu_chassis() {
     // Folded shield, right hand compartment, photo-scaled within 500x400 case.
@@ -89,6 +136,11 @@ module interior_shape(p) {
     if(p=="drive-coils")drive_pair()teac_coils();
     if(p=="drive-bracket")drive_bracket();
     logic_discretes(p);
+    if(p=="prototype-pcb-pad")pcb_pad();
+    if(p=="prototype-pcb-solder")pcb_solder();
+    if(p=="logic-pads")logic_pads();
+    if(p=="logic-solder")logic_solder();
+    if(p=="logic-connector-contacts")logic_connector_contacts();
     if(p=="logic-boards")logic_boards();
     if(p=="logic-chips")logic_chips();
     if(p=="logic-pins")logic_pins();

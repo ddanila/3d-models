@@ -28,7 +28,14 @@
     "source": "https://oldcrap.org/wp-content/uploads/2017/12/fullsizeoutput_141c-1024x662.jpeg",
     "credit": "Old Crap Vintage Computing \u2014 another PC 1715, not Danila\u2019s 1715M",
     "page": "https://oldcrap.org/2017/12/26/robotron-1715/",
-    "exclude": [],
+    "exclude": [
+      [
+        185,
+        92,
+        410,
+        130
+      ]
+    ],
     "components": [
       {
         "kind": "dip",
@@ -676,7 +683,8 @@
           31
         ],
         "axis": "horizontal",
-        "status": "Photo-aligned; package and pin-one orientation provisional"
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
       },
       {
         "kind": "dip",
@@ -688,7 +696,8 @@
           26
         ],
         "axis": "horizontal",
-        "status": "Photo-aligned; package and pin-one orientation provisional"
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
       },
       {
         "kind": "dip",
@@ -808,7 +817,8 @@
           32
         ],
         "axis": "horizontal",
-        "status": "Photo-aligned; package and pin-one orientation provisional"
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
       },
       {
         "kind": "dip",
@@ -820,7 +830,8 @@
           15
         ],
         "axis": "horizontal",
-        "status": "Photo-aligned; package and pin-one orientation provisional"
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
       },
       {
         "kind": "dip",
@@ -832,7 +843,8 @@
           16
         ],
         "axis": "horizontal",
-        "status": "Photo-aligned; package and pin-one orientation provisional"
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
       },
       {
         "kind": "dip",
@@ -844,7 +856,8 @@
           16
         ],
         "axis": "horizontal",
-        "status": "Photo-aligned; package and pin-one orientation provisional"
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
       },
       {
         "kind": "dip",
@@ -856,7 +869,8 @@
           16
         ],
         "axis": "horizontal",
-        "status": "Photo-aligned; package and pin-one orientation provisional"
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
       },
       {
         "kind": "dip",
@@ -952,7 +966,8 @@
           17
         ],
         "axis": "horizontal",
-        "status": "Photo-aligned; package and pin-one orientation provisional"
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
       },
       {
         "kind": "dip",
@@ -964,7 +979,8 @@
           17
         ],
         "axis": "horizontal",
-        "status": "Photo-aligned; package and pin-one orientation provisional"
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
       },
       {
         "kind": "dip",
@@ -1299,7 +1315,9 @@
           10
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
       },
       {
         "kind": "electrolytic",
@@ -1310,7 +1328,9 @@
           10
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
       },
       {
         "kind": "electrolytic",
@@ -1321,7 +1341,9 @@
           10
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
       },
       {
         "kind": "electrolytic",
@@ -1332,7 +1354,9 @@
           10
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
       },
       {
         "kind": "electrolytic",
@@ -1343,7 +1367,9 @@
           10
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
       },
       {
         "kind": "electrolytic",
@@ -1354,7 +1380,9 @@
           10
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
       },
       {
         "kind": "electrolytic",
@@ -1365,7 +1393,9 @@
           10
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
       },
       {
         "kind": "ceramic",
@@ -1503,6 +1533,12 @@
         530,
         910,
         800
+      ],
+      [
+        944,
+        194,
+        997,
+        624
       ]
     ],
     "components": [
@@ -2525,7 +2561,9 @@
           18
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4,
+        "height": 6.4
       },
       {
         "kind": "electrolytic",
@@ -2536,7 +2574,9 @@
           25
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 5.5,
+        "height": 8.8
       },
       {
         "kind": "electrolytic",
@@ -2547,7 +2587,9 @@
           23
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 5.1,
+        "height": 8.2
       },
       {
         "kind": "electrolytic",
@@ -2558,7 +2600,9 @@
           32
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 7.0,
+        "height": 11.2
       },
       {
         "kind": "electrolytic",
@@ -2569,7 +2613,9 @@
           32
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 7.0,
+        "height": 11.2
       },
       {
         "kind": "electrolytic",
@@ -2580,7 +2626,9 @@
           30
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 6.6,
+        "height": 10.6
       },
       {
         "kind": "electrolytic",
@@ -2591,7 +2639,9 @@
           30
         ],
         "axis": "horizontal",
-        "status": "Visible photo location; dimensions and electrical value unverified"
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 6.6,
+        "height": 10.6
       },
       {
         "kind": "crystal",
@@ -2603,6 +2653,39 @@
         ],
         "axis": "horizontal",
         "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "film",
+        "rect": [
+          49,
+          588,
+          84,
+          23
+        ],
+        "axis": "horizontal",
+        "status": "Yellow axial body visible in comparative photo; size estimated, value not transcribed"
+      },
+      {
+        "kind": "film",
+        "rect": [
+          49,
+          630,
+          87,
+          23
+        ],
+        "axis": "horizontal",
+        "status": "Yellow axial body visible in comparative photo; size estimated, value not transcribed"
+      },
+      {
+        "kind": "film",
+        "rect": [
+          291,
+          609,
+          50,
+          23
+        ],
+        "axis": "horizontal",
+        "status": "Yellow axial body visible in comparative photo; size estimated, value not transcribed"
       }
     ]
   },

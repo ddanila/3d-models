@@ -26,7 +26,7 @@ Sources: [documentation index](https://xepb.org/robotron/docs.html), [manual](ht
 
 `reference/photos.json` records the source archive and original/published SHA-256 hashes. `reference/photos/` contains losslessly sanitized JPEGs: EXIF, XMP, IPTC, comments and trailing motion video were removed, with decoded pixels checked against the originals. The original download was not modified. To reproduce sanitization after extracting the archive, run `python3 tools/import-photos.py /path/to/extracted/photos` from this model directory (requires Pillow).
 
-OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 9 includes material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
+OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 11 includes material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
 
 Full-panel photo skins are no longer used. The old underside crops contained a photographed cable and feet in addition to the modeled ones; removing them eliminates those duplicates and their baked shadows. There is now one continuous Bézier-routed lead, a modeled grommet, a hollow keyboard shell with a separate bottom plate, four rubber foot frames with metal inserts, six perimeter fasteners and a detailed exterior plug. The two drive fronts have recessed insertion slots/finger wells, rounded latch handles and separate red lenses. The monitor tape is a thin solid. Keycaps have square skirts, rounded shoulders and dished tops, including a stretched dish for long caps.
 
@@ -212,3 +212,54 @@ python3 models/robotron-1715m/tools/configure-pcb.py
 python3 models/robotron-1715m/tools/export.py
 openscad --backend Manifold --export-format binstl -o models/robotron-1715m/robotron-1715m.stl models/robotron-1715m/model.scad
 ```
+
+## Board construction and independent inspection (2026-10-11)
+
+The motherboard and floppy controller now export independently. Set
+`pcb_board="motherboard"` or `pcb_board="floppy-controller"` alongside a
+`logic-*` part in OpenSCAD, or choose that board under **Inspect assembly** in
+DAC. The assembly retains its reference positions; isolation hides obstructing
+parts without inventing a physical removal path or moving attached wiring.
+
+The 132 DIP bodies retain their pinned KiCad geometry. The converter now slices
+individual STEP leads at the seating plane to derive hole centres, rather than
+assuming nominal row spacing. `pcb-components.json` records 2,504 mounting
+positions: 1,656 on the motherboard and 848 on the controller, including passive
+and estimated connector tails. Each has a real 0.95 mm aperture, a 1.8 mm metal
+pad/barrel and an underside solder fillet through a 1.6 mm board. These dimensions
+are visual estimates, not recovered PCB fabrication data. Browser pads and
+solder use two reusable meshes instanced per board; the combined STL includes
+the solids. It is now about 92 MiB and is intended for offline inspection.
+
+The comparative [Old Crap board photographs](https://oldcrap.org/2017/12/26/robotron-1715/)
+were reviewed again. They support three additional yellow axial film capacitor
+bodies and different electrolytic diameters, bringing the discrete population
+to 89. Electrolytic height is estimated from diameter. Values, polarities and
+resistor bands are not invented. The visible ICs do not justify adding ceramic
+packages indiscriminately. Tape-obscured IC lettering is omitted; package
+placements beneath that tape are still provisional. Socketed IC variants,
+exact connector pin counts/keying and internal contacts require better evidence.
+
+Two long connector housings now have divided cavities and separate contacts.
+A smaller ribbon plug has a strain-relief bar at the existing cable endpoint.
+Positions follow photographic landmarks or the existing illustrative cable
+route; pitches and hidden contact shapes are provisional. Connector apertures
+use the same mounting data as their tails. They do not assert an electrical
+pinout or a verified mating part.
+
+DAC extracts pale traces and markings from the unchanged source photo at runtime
+onto a uniformly lit board substrate. The original photo shadows and board tint
+are no longer painted across the whole board. Modeled component silhouettes and
+connectors are masked; aperture cut-outs also apply to the artwork. This is
+thresholded photographic artwork, not a traced netlist: some bright residual
+features remain, hidden tracks cannot be recovered, and the underside has only
+modeled pads/solder, with no invented routing. Full original credited images
+remain available as evidence. The same third-party photograph exclusions apply
+to this derived display; KiCad source and derived footprint data retain their
+file-specific licences.
+
+Validation: generated board apertures checked by ray tests at lead centres and
+adjacent substrate, package bounds/intersections checked, individual-board
+visibility and restoration tested in the browser, and combined OpenSCAD export
+validated with the Manifold backend. Exact board revision, connector details,
+IC sockets, original pad sizes and hidden routing await specimen photographs.

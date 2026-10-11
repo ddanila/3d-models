@@ -21,6 +21,14 @@ for path in sorted((root/'source').glob('*.step')):
     assert body.isValid() and leads.isValid()
     assert len(leads.Solids())==pins, (name,len(leads.Solids()))
     assert abs(body.Volume()+leads.Volume()-source.Volume())<.01
+    # Intersect each lead at the seating plane: footprint follows actual STEP,
+    # including the 24-pin model's slightly non-nominal row spacing.
+    plane=cq.Workplane('XY').box(b.xlen+4,b.ylen+4,.02).translate((cx,cy,0)).val()
+    footprint=[]
+    for lead in leads.Solids():
+        q=lead.intersect(plane).BoundingBox()
+        footprint.append([round((q.xmin+q.xmax)/2-cx,6),round((q.ymin+q.ymax)/2-cy,6)])
+    footprint.sort()
     meshes={}
     for kind,shape in [('body',body),('leads',leads)]:
         centered=shape.translate((-cx,-cy,0));out=root/'meshes'/f'{name}-{kind}.stl'
@@ -31,6 +39,6 @@ for path in sorted((root/'source').glob('*.step')):
         meshes[kind]=dict(file='components/kicad/meshes/'+out.name,sha256=hashlib.sha256(blob).hexdigest(),bounds=bounds)
     bb=meshes['body']['bounds']
     licence='GPL-3.0-or-later with design exception' if 'GNU General Public License' in path.read_text() else 'CC-BY-SA-4.0 with KiCad libraries exception'
-    records.append(dict(id=name,pins=pins,rowSpacing=width,pitch=2.54,licence=licence,bodyHeight=bb[1][2],bodySize=[bb[1][0]-bb[0][0],bb[1][1]-bb[0][1]],meshes=meshes))
+    records.append(dict(id=name,pins=pins,rowSpacing=width,pitch=2.54,footprint=footprint,licence=licence,bodyHeight=bb[1][2],bodySize=[bb[1][0]-bb[0][0],bb[1][1]-bb[0][1]],meshes=meshes))
     print(name,len(body.Solids()),len(leads.Solids()),flush=True)
 (root/'models.json').write_text(json.dumps(records,indent=2)+'\n')
