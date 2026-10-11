@@ -5,6 +5,7 @@ include <keyboard-layout.scad>
 include <monitor-profile.scad>
 include <interior.scad>
 include <monitor-interior.scad>
+include <assembly-details.scad>
 part = "assembly";
 key_index = 0;
 
@@ -22,9 +23,11 @@ module side_slot(y,z,h=30) {
     translate([-case_w/2-10,y,z]) rotate([90,0,90]) slab(5,h,22,2.4);
 }
 module case_base() {
+    for(x=[-245,243])translate([x,-188,34])cube([2,376,7]);
     difference() {
         translate([-case_w/2,-case_d/2,0]) rounded([case_w,case_d,seam_z],4);
         translate([-case_w/2+wall,-case_d/2+wall,wall]) cube([case_w-2*wall,case_d-2*wall,seam_z]);
+        for(x=[-224,224],y=[-170,170])translate([x,y,-1])cylinder(d=8,h=3,$fn=24);
         for(y=[-95:10:15]) side_slot(y,22,20);
         for(y=[90:10:190]) side_slot(y,22,20);
         translate([-case_w/2-2,-164,15]) cube([10,38,14]);
@@ -37,6 +40,7 @@ module case_lid() {
         translate([-case_w/2-1,-case_d/2-1,seam_z]) cube([case_w+2,wall+3,case_h]);
         for(y=[-165:10:-35]) side_slot(y,72,42);
         for(y=[50:10:180]) side_slot(y,72,42);
+        for(x=[-232,232])translate([x,case_d/2+1,64])rotate([90,0,0])cylinder(d=6,h=5,$fn=24);
     }
 }
 module fascia() {
@@ -62,8 +66,8 @@ module drive_insets() {
         translate([4,-3,1]) slab(39,20,1,1);
     }
 }
-module drive_latches() {
-    for(x=[-158,-4]) translate([x+45,-case_d/2-9,92]) rotate([90,0,0]) {
+module drive_latches(unit=-1) {
+    for(x=unit<0?[-158,-4]:[[-158,-4][unit]]) translate([x+45,-case_d/2-9,92]) rotate([90,0,0]) {
         cylinder(d=12,h=3,$fn=40);
         hull(){cylinder(d=8,h=5,$fn=32);translate([23,1,0])cylinder(d=7,h=5,$fn=32);}
         translate([11,1,5])slab(20,3,.5,1);
@@ -182,13 +186,16 @@ module keyboard_fillers() {
 }
 module cap(w,h,style) {
     // Square skirt, tapered shoulder and dished top: all highlights are 3D.
-    union(){slab(w,h,1.4,2);
+    difference(){union(){slab(w,h,1.4,2);
         difference(){hull(){translate([0,0,1.4])slab(w-.4,h-.4,1,2);
             translate([0,0,7])
                 if(style==1)slab(w-2,h-3,1,3);
                 else slab(w-2,h-3,1,min(w-2,h-3)/2-.1);
         }translate([0,0,36])scale([max(1,(w-4)/16),max(1,(h-4)/16),1])sphere(r=29,$fn=96);}
     }
+    translate([0,0,-.1])slab(w-3.4,h-3.4,4.5,1.2);
+    }
+    difference(){translate([0,0,-2])cylinder(d=7,h=6,$fn=24);translate([0,0,-2.1])cube([3.3,3.3,9],center=true);}
 }
 module keycaps(style) {
     translate([0,keyboard_y,28]) rotate([keyboard_slope,0,0])
@@ -248,7 +255,9 @@ module hardware() {
     for(x=[-225,225],y=[-170,170])translate([x,y,-9])cylinder(d=25,h=10,$fn=40);
 }
 module shape(p) {
+    assembly_details(p);
     interior_shape(p);
+    for(i=[0:1])if(p==str("drive-latch-",i))drive_latches(i);
     monitor_interior_shape(p);
     if(p=="drive-insets")drive_insets();
     if(p=="drive-latches")drive_latches();
@@ -284,8 +293,8 @@ module shape(p) {
     if(p=="cable")cable();
     if(p=="keycap")let(k=keys[key_index])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[4]);
 }
-parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell-lower", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latches", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape", "drive-frames", "drive-mechanisms", "drive-motors", "drive-boards", "drive-contacts", "drive-coils", "drive-bracket", "logic-boards", "logic-chips", "logic-pins", "logic-connectors", "logic-capacitors", "psu-chassis", "psu-cover", "fan-frame", "fan-rotor", "ribbon-cables", "ribbon-stripes", "power-wires-red", "power-wires-black", "power-wires-yellow", "keyboard-pcb", "keyboard-switches", "monitor-shell-upper", "tube-funnel", "tube-neck", "monitor-yoke", "monitor-coils", "monitor-chassis", "monitor-boards", "monitor-components", "monitor-capacitors", "monitor-shield", "monitor-wires", "plug-insert", "drive-power-sockets", "drive-traces", "drive-label-plates", "drive-spindle-0", "drive-spindle-1", "drive-head-0", "drive-head-1"];
-colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#333839", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#c3b995", "#96988f", "#487eac", "#a2a4a0", "#bec2bd", "#282c2b", "#28675a", "#b3a775", "#9e793b", "#afb4ae", "#386349", "#25292b", "#b3b8b4", "#b1b5a1", "#b2a15c", "#a2a6a3", "#b5b9b2", "#818984", "#282d2a", "#a0a59b", "#975b50", "#9e3930", "#252a28", "#b6a05b", "#346750", "#30352f", "Wheat", "#363d3a", "#78765f", "#38372e", "#ae7545", "#a3a79c", "#486551", "#343835", "#438c9b", "#979e92", "#b2a374", "#969782", "#d0c6a4", "#78a58d", "#c2bba4", "#a8aaa4", "#a8aaa4", "#30322f", "#30322f"];
-if(part=="assembly") for(i=[0:len(parts)-1]) color(colors[i]) shape(parts[i]);
-else if(part=="interior") { for(i=[31:len(parts)-1]) if(parts[i]!="monitor-shell-upper") color(colors[i]) shape(parts[i]); }
+parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell-lower", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latch-0", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape", "drive-frames", "drive-mechanisms", "drive-motors", "drive-boards", "drive-contacts", "drive-coils", "drive-bracket", "logic-boards", "logic-chips", "logic-pins", "logic-connectors", "logic-capacitors", "psu-chassis", "psu-cover", "fan-frame", "fan-rotor", "ribbon-cables", "ribbon-stripes", "power-wires-red", "power-wires-black", "power-wires-yellow", "keyboard-pcb", "keyboard-switches", "monitor-shell-upper", "tube-funnel", "tube-neck", "monitor-yoke", "monitor-coils", "monitor-chassis", "monitor-boards", "monitor-components", "monitor-capacitors", "monitor-shield", "monitor-wires", "plug-insert", "drive-power-sockets", "drive-traces", "drive-label-plates", "drive-spindle-0", "drive-spindle-1", "drive-head-0", "drive-head-1", "drive-latch-1", "drive-clamp-0", "drive-clamp-1", "drive-head-metal-0", "drive-head-metal-1", "drive-board-components", "logic-mounts", "chassis-fasteners", "keyboard-plate", "monitor-fasteners", "monitor-passives", "monitor-socket", "prototype-spring", "prototype-stem"];
+colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#333839", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#c3b995", "#96988f", "#487eac", "#a2a4a0", "#bec2bd", "#282c2b", "#28675a", "#b3a775", "#9e793b", "#afb4ae", "#386349", "#25292b", "#b3b8b4", "#b1b5a1", "#b2a15c", "#a2a6a3", "#b5b9b2", "#818984", "#282d2a", "#a0a59b", "#975b50", "#9e3930", "#252a28", "#b6a05b", "#346750", "#30352f", "Wheat", "#363d3a", "#78765f", "#38372e", "#ae7545", "#a3a79c", "#486551", "#343835", "#438c9b", "#979e92", "#b2a374", "#969782", "#d0c6a4", "#78a58d", "#c2bba4", "#a8aaa4", "#a8aaa4", "#30322f", "#30322f", "#242827", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#282c2b", "#b5b9b2", "#94978e", "#929b97", "#b5b9b2", "#bd9867", "#c3bbaa", "#8c8c81", "#ded6be"];
+if(part=="assembly") { for(i=[0:len(parts)-1]) if(parts[i]!="prototype-spring" && parts[i]!="prototype-stem") color(colors[i]) shape(parts[i]); keyboard_mechanisms(); }
+else if(part=="interior") { keyboard_mechanisms(); for(i=[31:len(parts)-1]) if(parts[i]!="monitor-shell-upper" && parts[i]!="prototype-spring" && parts[i]!="prototype-stem") color(colors[i]) shape(parts[i]); }
 else shape(part);

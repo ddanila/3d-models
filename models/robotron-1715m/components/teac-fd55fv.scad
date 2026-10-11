@@ -31,13 +31,13 @@ module teac_mechanism() {
         translate([18,45,-1])cylinder(d=26,h=4,$fn=40);
         translate([18,137,-1])cylinder(d=11,h=4,$fn=24);}
 
-    for(x=[46,92])translate([x,104,18])rotate([-90,0,0])cylinder(d=3,h=78,$fn=16);
+    for(x=[46,92])translate([x,78,18])rotate([-90,0,0])cylinder(d=3,h=108,$fn=16);
     translate([46,144,18])cube([48,13,3]);
 
     translate([109,158,14])rotate([0,90,0])cylinder(d=18,h=8,$fn=32);
     // The latch rod runs from the bezel to the clamp linkage.
     translate([100,0,33])rotate([-90,0,0])cylinder(d=3,h=53,$fn=16);
-    translate([66,46,33])cube([38,4,3]);
+
     for(x=[8,137],y=[12,95,190])translate([x,y,32])cylinder(d=5,h=1.5,$fn=20);
     for(y=[141:1.3:151])translate([73,y,28])rotate([-90,0,0])difference(){cylinder(d=5,h=.6,$fn=16);translate([0,0,-.1])cylinder(d=3,h=1,$fn=12);}
 }
@@ -79,4 +79,30 @@ module teac_spindle() {
     translate([70,59,37])difference(){cylinder(d=12,h=3,$fn=24);translate([-1,-7,2])cube([2,14,2]);}
 
 }
-module teac_head() { translate([59,119,22])cube([24,34,9]); }
+module teac_head() {
+    translate([59,119,19])difference(){
+        union(){cube([24,34,5]);translate([4,2,4])cube([16,24,4]);for(x=[-9,24])translate([x,4,0])cube([9,9,7]);}
+        for(y=[5,28])translate([12,y,-1])cylinder(d=4,h=12,$fn=16);
+    }
+    translate([64,121,27])cube([14,10,3]);
+}
+module teac_head_metal() {
+    translate([62,122,30])difference(){cube([18,15,1]);translate([2,2,-1])cube([14,11,3]);}
+    translate([64,122,29])cube([14,10,1]);
+    translate([62,145,23])difference(){cube([18,6,1]);for(x=[3,15])translate([x,3,-1])cylinder(d=2,h=4,$fn=12);}
+    for(x=[64,77])translate([x,148,24])screw(3,1);
+    translate([69,133,25])cube([2,13,.5]);
+}
+module teac_clamp() {
+    translate([66,46,34])cube([38,4,2]);
+    translate([66,46,34])cube([8,18,1.4]);
+    translate([70,59,32])difference(){cylinder(d=20,h=2,$fn=32);translate([0,0,-1])cylinder(d=10,h=4,$fn=24);}
+}
+module teac_components() {
+    for(p=[[12,26],[43,70]])translate([p[0],p[1],33]){
+        cylinder(d=3.8,h=3,$fn=16);for(a=[0,120,240])rotate([0,0,a])translate([1.8,0,-.4])cube([1,1,1]);
+    }
+    for(y=[36,43,54,63])translate([15,y,33])rotate([0,90,0])cylinder(d=1.8,h=5,$fn=12);
+    for(p=[[14,134],[65,159],[95,175]])translate([p[0],p[1],6.6])cube([9,19,4]);
+    for(y=[139:2:170])translate([113,y,12])cube([25,.55,23]);
+}

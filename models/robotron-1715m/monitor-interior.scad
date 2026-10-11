@@ -4,11 +4,15 @@ module monitor_upper() {
     intersection(){monitor_shell();translate([-500,-500,monitor_z+monitor_h*.5])cube([1000,1000,500]);}
 }
 module monitor_lower() {
+    // Thin inner seam ledges; join is at the owner-observed mid-height.
+    for(x=[-141,139])translate([x,-109,317])cube([2,217,6]);
     intersection(){monitor_shell();translate([-500,-500,0])cube([1000,1000,monitor_z+monitor_h*.5]);}
 }
 module tube_funnel() {
-    hull(){translate([0,-138,324])rotate([-90,0,0])linear_extrude(2)crt_outline(258,211);
-        translate([0,54,324])rotate([-90,0,0])cylinder(d=51,h=3,$fn=64);}
+    // Multi-section funnel: broad shoulder, rounded transition, narrow neck.
+    sections=[[-138,258,211],[-115,251,202],[-65,199,161],[-10,122,103],[36,64,60],[55,29,29]];
+    for(i=[0:len(sections)-2])hull()for(j=[i,i+1])
+        translate([0,sections[j][0],324])rotate([-90,0,0])linear_extrude(1)crt_outline(sections[j][1],sections[j][2]);
 }
 module tube_neck() {
     translate([0,55,324])rotate([-90,0,0])cylinder(d=27,h=88,$fn=48);
@@ -18,7 +22,7 @@ module monitor_yoke() {
     translate([0,141,324])rotate([-90,0,0])cylinder(d=39,h=12,$fn=24);
 }
 module monitor_coils() {
-    for(a=[0:15:345]) hull(){translate([42*cos(a),32,324+42*sin(a)])sphere(r=1.4,$fn=8);translate([25*cos(a),66,324+25*sin(a)])sphere(r=1.4,$fn=8);}
+    for(a=[0:7.5:352.5]) hull(){translate([42*cos(a),32,324+42*sin(a)])sphere(r=1.4,$fn=8);translate([25*cos(a),66,324+25*sin(a)])sphere(r=1.4,$fn=8);}
     // High-voltage winding in the screened right-hand compartment.
     translate([100,92,302])rotate([0,90,0])difference(){cylinder(d=49,h=21,$fn=32);translate([0,0,-1])cylinder(d=21,h=23,$fn=24);}
 }
@@ -41,7 +45,7 @@ module monitor_components() {
     // Heat sinks and a small neck-board socket, matching the visible assemblies.
     for(y=[-42,7])translate([-121,y,259])difference(){cube([18,42,49]);
         for(z=[5:6:43])translate([8,-1,z])cube([12,44,2]);}
-    translate([-18,147,307])cube([36,12,34]);
+    for(p=[[-15,309],[8,338]])translate([p[0],147,p[1]])cube([7,5,8]);
     translate([105,70,275])cube([17,49,51]);
 }
 module monitor_capacitors() {

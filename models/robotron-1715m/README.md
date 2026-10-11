@@ -26,7 +26,7 @@ Sources: [documentation index](https://xepb.org/robotron/docs.html), [manual](ht
 
 `reference/photos.json` records the source archive and original/published SHA-256 hashes. `reference/photos/` contains losslessly sanitized JPEGs: EXIF, XMP, IPTC, comments and trailing motion video were removed, with decoded pixels checked against the originals. The original download was not modified. To reproduce sanitization after extracting the archive, run `python3 tools/import-photos.py /path/to/extracted/photos` from this model directory (requires Pillow).
 
-OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 7 adds material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
+OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 9 includes material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
 
 Full-panel photo skins are no longer used. The old underside crops contained a photographed cable and feet in addition to the modeled ones; removing them eliminates those duplicates and their baked shadows. There is now one continuous Bézier-routed lead, a modeled grommet, a hollow keyboard shell with a separate bottom plate, four rubber foot frames with metal inserts, six perimeter fasteners and a detailed exterior plug. The two drive fronts have recessed insertion slots/finger wells, rounded latch handles and separate red lenses. The monitor tape is a thin solid. Keycaps have square skirts, rounded shoulders and dished tops, including a stretched dish for long caps.
 
@@ -45,7 +45,7 @@ openscad --backend Manifold --export-format binstl -o models/robotron-1715m/robo
 openscad --backend Manifold -o models/robotron-1715m/preview.png --imgsize=1600,1200 --viewall --autocenter models/robotron-1715m/model.scad
 ```
 
-`tools/configure.py` generates the shared keyboard geometry/UV table. `tools/export.py` exports 66 body/detail meshes and seven reusable keycap profiles with their hashes. `part="keycap"` and `key_index` select a local, origin-centred cap for export; assembly geometry stays fully assembled. The DAC repository imports the export with `python3 scripts/sync-robotron-model.py ../3d-models`, recording the source commit and checking hashes. Firmware and emulator code stay in their own repositories.
+`tools/configure.py` generates the shared keyboard geometry/UV table. `tools/export.py` exports body/detail meshes and two reusable mechanism prototypes and seven reusable keycap profiles with their hashes. `part="keycap"` and `key_index` select a local, origin-centred cap for export; assembly geometry stays fully assembled. The DAC repository imports the export with `python3 scripts/sync-robotron-model.py ../3d-models`, recording the source commit and checking hashes. Firmware and emulator code stay in their own repositories.
 
 ## Interaction metadata and keyboard evidence
 
@@ -71,7 +71,7 @@ not a scale inferred from the images.
 
 These measurements apply to the photographed variant and are not established
 for every 1715/1715M keyboard or every key position. They are reference evidence;
-the current model's switch geometry has not been revised from these dimensions.
+the spring geometry now uses these dimensions provisionally: 13 mm is interpreted as outside diameter, five open turns plus two close end turns per end. The 12 mm installed height, 2.2 mm travel, stems, sockets and switch housings are estimates. The photographed spring keyboard has different keycaps from the museum specimen; this is family evidence, not proof of identical switches.
 Both owner photos were imported losslessly with metadata removed and their
 original/published hashes recorded in `reference/photos.json`.
 
@@ -86,7 +86,7 @@ music wire and a 13 mm finished outside diameter.
 
 89 positions have input behavior, including Shift/Ctrl/Caps Lock. ALT, ß, repeat R, SI/SO and four navigation symbols are explicitly unverified. Unverified shifted symbols also send no invented byte. Shift/Ctrl are visitor-side one-shot latches; Caps Lock is persistent until released or focus/reset/power changes. The browser’s Caps Lock lamp reflects that local input state, not feedback from the original keyboard controller. SI/SO’s alternate character-set protocol is not available through the current browser core API.
 
-The first drive lamp reflects the core’s aggregate disk-transfer counter (only one disk is mounted); it does not claim to reproduce drive-select or motor timing. Opening the case moves its lid and monitor visibly up and back together. A separate control lifts the drive assembly forward and up and separates the fascia and keyboard deck. The system-unit interior is reconstructed from comparative references; cables are hidden in the separated view rather than stretched between parts. The external cable route and monitor-glass curvature remain estimates.
+Each drive lamp and moving head follows that drive’s emulator state; rotor speed and head travel remain reference estimates. Opening the case moves its lid and monitor visibly up and back together. A separate control lifts the drive assembly forward and up and separates the fascia and keyboard deck. The system-unit interior is reconstructed from comparative references; cables stretch illustratively in the separated view while retaining their endpoint relationships. The external cable route and monitor-glass curvature remain estimates.
 
 ## Comparative references (2026-10-10)
 
@@ -138,3 +138,38 @@ while retaining the current head position. The stationary deck and motors no
 longer include duplicate carriage/clamp geometry. `tools/export.py --parts ...`
 can regenerate named parts while retaining verified existing meshes; omit it for
 a complete rebuild after general model changes.
+
+
+## Detailed assembly revision (2026-10-11)
+
+The browser manifest is now version 9. The canonical OpenSCAD source includes hollow
+keycaps with stem sockets, a perforated keyboard plate, switch housings and reusable
+spring/stem geometry. Browser springs compress with key presses and extend toward
+an estimated free length when the caps are lifted. Hidden switch construction is
+provisional; the spring dimensions come from the owner measurements above.
+
+The owner drive overview (`PXL_20250212_094033966.jpg`) guided the stepped head
+carriage, metal head shield, screws, sensor-board components, laminated stepper,
+and separately movable clamp linkage. Browser latch release is an inspection aid,
+not an emulator media-eject operation. Track travel and clamp lift remain estimates.
+
+Board standoffs, chassis brackets, fan fasteners and cable retainers provide visible
+mounting relationships. Cable ends stay attached during separation using explanatory
+stretching; the stretched lengths are not physical measurements or available slack.
+The PSU internals remain unmodeled behind the shield rather than asserting a board
+revision we have not seen.
+
+The CRT funnel now has multiple taper sections; the monitor includes denser yoke
+windings, a perforated neck socket, retaining collar, board mounts, resistors and
+small capacitors. Additional online photographic references checked on 2026-10-11:
+
+- [Robotrontechnik K7222.25 interior](https://www.robotrontechnik.de/bilder/Zubehoer/Bildschirme/K7222/K7222-25_innen_2_k.jpg)
+- [Robotrontechnik open shell](https://www.robotrontechnik.de/bilder/Zubehoer/Bildschirme/K7222/K7222-25_innen_k.jpg)
+- [Oldcrap PC1715 restoration](https://oldcrap.org/2017/12/26/robotron-1715/)
+
+These reference machines are not Danila's specimen. No newly found third-party image
+is bundled by this revision. Existing photographic PCB credits remain attached.
+Exterior refinements include case seam ledges, recessed cover screw holes, hollow
+caps and a tiny feathered owner-photo corner-wear patch. Feature placement remains
+photo-estimated, not metrology. Springs/stems are shared browser instances to avoid
+one draw call per mechanism; all corresponding shapes remain in OpenSCAD.

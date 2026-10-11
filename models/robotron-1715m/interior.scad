@@ -56,10 +56,10 @@ module ribbon_run(points,w=42,t=.8) {
     for(i=[0:len(points)-2])hull(){translate(points[i])cube([w,1,t],center=true);translate(points[i+1])cube([w,1,t],center=true);}
 }
 module ribbons() {
-    for(x=[-158,-4])ribbon_run([[x,3,67],[x,18,83],[x,39,74],[x,60,53]],42);
+    for(x=[-158,-4])ribbon_run([[x-4,2,66.5],[x-4,20,79],[x-4,45,69],[-46,45,58],[-46,19,51]],42);
 }
 module ribbon_stripes() {
-    for(x=[-158,-4])ribbon_run([[x-20,3,67.5],[x-20,18,83.5],[x-20,39,74.5],[x-20,60,53.5]],1.2,.2);
+    for(x=[-158,-4])ribbon_run([[x-24,2,67],[x-24,20,79.5],[x-24,45,69.5],[-66,45,58.5],[-66,19,51.5]],1.2,.2);
 }
 module wire_run(points,r=1) {
     for(i=[0:len(points)-2])hull(){translate(points[i])sphere(r=r,$fn=10);translate(points[i+1])sphere(r=r,$fn=10);}
@@ -72,7 +72,7 @@ module keyboard_pcb() {
     translate([0,keyboard_y,13])rotate([keyboard_slope,0,0])translate([-235,-74,0])cube([470,146,1.6]);
 }
 module keyboard_switches() {
-    translate([0,keyboard_y,15])rotate([keyboard_slope,0,0])for(k=keys)translate([k[0]-5,k[1]-5,0])cube([10,10,10]);
+    translate([0,keyboard_y,15])rotate([keyboard_slope,0,0])for(k=keys)translate([k[0],k[1],0])switch_housing();
 }
 module interior_shape(p) {
     for(i=[0:1]) {

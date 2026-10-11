@@ -37,6 +37,10 @@ def patch(name,photo,position,size,crop,rotation=[90,0,0]):
 # Small original markings are photographic. Enclosures and mechanisms stay geometry.
 patches=[patch('brand','133022597',[-160,-209.2,48],[110,11],[(420,925),(1050,917),(1048,985),(425,990)])]
 patches[0]['ink']=True
+# Local owner paint loss at the keyboard's rear-right corner, not a panel skin.
+patches.append(dict(name='keyboard-corner-wear',photo='PXL_20261009_132919894.jpg',
+    position=[242,-263,38.3],size=[6,5],rotation=[6,0,0],feather=True,
+    uv=[[1258/1373,1705/1824],[1258/1373,1742/1824],[1228/1373,1742/1824],[1228/1373,1705/1824]]))
 drive_labels=json.loads((root/'drive-labels.json').read_text())
 patches += drive_labels['patches']
 materials={
@@ -53,7 +57,7 @@ materials={
 }
 for r in records:
     n=r['name'];m='paint'
-    if n in ['drives','drive-insets','drive-latches','power','reset','keyboard-deck','keyboard-fillers','cable-plug','plug-insert']:m='plastic'
+    if n in ['drive-latch-0','drive-latch-1','drives','drive-insets','drive-latches','power','reset','keyboard-deck','keyboard-fillers','cable-plug','plug-insert']:m='plastic'
     if n in ['hardware','keyboard-feet','keyboard-grommet','cable','ring']:m='rubber'
     if n in ['keyboard-metal','plug-screws']:m='metal'
     if n.startswith('drive-led'):m='lens'
@@ -77,10 +81,17 @@ for r in records:
         m='plastic' if n=='drive-power-sockets' else 'pcb' if n=='drive-traces' else 'metal'
     if n.startswith('drive-spindle-') or n.startswith('drive-head-'):
         r['section']='interior';m='metal' if 'spindle' in n else 'plastic'
+    if n in ['logic-mounts','chassis-fasteners','keyboard-plate'] or n.startswith(('drive-clamp-','drive-head-metal-','drive-board-components')):
+        r['section']='interior';m='plastic' if n=='drive-board-components' else 'metal'
+    if n in ['monitor-fasteners','monitor-passives','monitor-socket']:
+        r['section']='monitor-interior';m='metal' if n=='monitor-fasteners' else 'plastic'
+    if n.startswith('prototype-'):
+        r['section']='prototype';m='metal' if n=='prototype-spring' else 'plastic'
     r['material']=m
 references=['PXL_20261009_'+n+'.jpg' for n in ['133017092','133019620','132919894','133022597','133005363','133001660','133028313','133032874','132916421.MP']]
 references += ['PXL_'+n+'.jpg' for n in ['20250430_135132170','20251008_143433778','20250516_133813650','20250516_141624490','20250516_133810520']]
 references += ['PXL_20261010_'+n+'.jpg' for n in ['090413483','090416759','090421901','090425989','090431122']]
+references += ['PXL_20261010_131354451.jpg','PXL_20261010_131835506.jpg']
 references += ['PXL_20250212_'+n+'.jpg' for n in ['094057627','094043026','094033966','094109733','094038758','094103763']]
-manifest=dict(version=8,driveMotion=[dict(unit=i,spindle=f"drive-spindle-{i}",head=f"drive-head-{i}",pivot=[x+70,-144,88],travel=[0,-35,0]) for i,x in enumerate([-231,-77])],units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=dict(y=-355,z=28,slope=6,pitch=20.0),screen=json.loads((root/'monitor-profile.json').read_text())['glass'],patches=patches,driveLabels=drive_labels,references=references,pcbReferences=json.loads((root/'pcb-references.json').read_text()),interior=dict(status='provisional',drive='Owner specimens: Robotron K5601 / TEAC 15532064-00A and Ratan assembly / TEAC 15532092-00A; FD-55 suffix unverified',driveEnvelope=[146,203,41.3],source='https://oldcrap.org/2017/12/26/robotron-1715/',specification='https://retrocmp.de/fdd/teac/TEAC_FD55-FV.pdf',note='Drive envelopes are documented. Drive mechanisms and rear plates now follow owner photos; the nominal envelope remains a reference. Logic-board population, mounting and wiring still use comparative evidence.'),source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
+manifest=dict(version=9,keyboardMechanism=dict(spring="prototype-spring",stem="prototype-stem",installedHeight=12,freeHeight=23,travel=2.2,diameter=13,wire=.35,status="Owner spring dimensions; installed height, travel and hidden switch geometry estimated"),driveMotion=[dict(unit=i,spindle=f"drive-spindle-{i}",head=f"drive-head-{i}",headMetal=f"drive-head-metal-{i}",latch=f"drive-latch-{i}",clamp=f"drive-clamp-{i}",latchPivot=[x+118,-209,92],pivot=[x+70,-144,88],travel=[0,-35,0]) for i,x in enumerate([-231,-77])],units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=dict(y=-355,z=28,slope=6,pitch=20.0),screen=json.loads((root/'monitor-profile.json').read_text())['glass'],patches=patches,driveLabels=drive_labels,references=references,pcbReferences=json.loads((root/'pcb-references.json').read_text()),interior=dict(status='provisional',drive='Owner specimens: Robotron K5601 / TEAC 15532064-00A and Ratan assembly / TEAC 15532092-00A; FD-55 suffix unverified',driveEnvelope=[146,203,41.3],source='https://oldcrap.org/2017/12/26/robotron-1715/',specification='https://retrocmp.de/fdd/teac/TEAC_FD55-FV.pdf',note='Drive envelopes are documented. Drive mechanisms and rear plates now follow owner photos; the nominal envelope remains a reference. Logic-board population, mounting and wiring still use comparative evidence.'),source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
 (out/'model.json').write_text(json.dumps(manifest,indent=2)+'\n')
