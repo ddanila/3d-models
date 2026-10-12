@@ -4,7 +4,7 @@ if(part=="spring")contact_spring();
 if(part=="guide")switch_guide();
 if(part=="mount")switch_mount();
 if(part=="carrier")translate([0,0,10.4])contact_carrier();
-if(part=="rubber")translate([0,0,11.2])contact_rubber();
+if(part=="rubber")translate([0,0,11.04])contact_rubber();
 if(part=="contacts")contact_electrodes();
 if(part=="assembly") {
     color("#30312d")switch_mount();

@@ -11,7 +11,7 @@ in [../keycap](../keycap/README.md).
 | Pale slotted guide | [guide.stl](guide.stl) | Photo `PXL_20261012_190054608.jpg`; dimensions estimated |
 | Black mounting flange | [mount.stl](mount.stl) | Same photo; corner fixing holes, circular opening |
 | Insulating moving carrier | [carrier.stl](carrier.stl) | Visible retaining features; hidden shape estimated |
-| Rubber contact pad | [rubber.stl](rubber.stl) | Owner confirms rubber contact principle; 7.8 × 0.8 mm estimated |
+| Rubber contact pad | [rubber.stl](rubber.stl) | Owner confirms rubber contact principle; 7.8 × 0.64 mm estimated |
 | Paired PCB electrodes | [contacts.stl](contacts.stl) | Owner confirms paired pads; comb geometry illustrative |
 
 [Editable OpenSCAD](model.scad) · [Shared geometry](geometry.scad) · [Mesh audit](mesh-check.json)
@@ -39,3 +39,7 @@ assembly for reference. All small fit dimensions are editable estimates.
 openscad --backend Manifold --export-format binstl -D 'part="spring"' -o spring.stl model.scad
 python3 ../tools/check-key-parts.py
 ```
+
+The contact faces are aligned along the 6° key axis, above the PCB substrate.
+The provisional rubber thickness seats its lower face on the electrodes at
+2.2 mm full travel; the electrode bottom clears the PCB by about 0.018 mm.

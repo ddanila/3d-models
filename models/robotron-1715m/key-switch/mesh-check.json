@@ -127,15 +127,15 @@
       [
         3.9,
         3.9,
-        0.8
+        0.64
       ]
     ],
     "extentsMm": [
       7.8,
       7.8,
-      0.8
+      0.64
     ],
-    "volumeMm3": 38.118
+    "volumeMm3": 30.494
   },
   "key-switch/contacts.stl": {
     "triangles": 184,

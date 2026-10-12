@@ -36,7 +36,7 @@ module contact_carrier() {
     for(y=[-2.7,2.7])translate([0,y,-2.5])linear_extrude(3.5)offset(r=.45,$fn=20)square([2.3,1.4],center=true);
 }
 module contact_rubber() {
-    translate([0,0,-11.2])cylinder(d=7.8,h=.8,$fn=48);
+    translate([0,0,-11.04])cylinder(d=7.8,h=.64,$fn=48);
 }
 // Two isolated comb electrodes. Owner confirms remote-control-style pads;
 // finger shape/count and surface finish are illustrative, not a traced netlist.

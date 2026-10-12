@@ -10,7 +10,7 @@ module keyboard_guides() {
 module keyboard_contacts() {
     // Use the key axis so rubber meets electrode tops after 2.2 mm travel.
     translate([0,keyboard_y,28])rotate([keyboard_slope,0,0])
-        for(k=keys)translate([k[0],k[1],-13.46])contact_electrodes();
+        for(k=keys)translate([k[0],k[1],-13.3])contact_electrodes();
 }
 module keyboard_mechanisms() {
     translate([0,keyboard_y,28])rotate([keyboard_slope,0,0])for(k=keys)translate([k[0],k[1],0]){
