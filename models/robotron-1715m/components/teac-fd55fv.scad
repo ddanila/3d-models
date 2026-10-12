@@ -43,7 +43,6 @@ module teac_mechanism() {
     translate([100,0,33])rotate([-90,0,0])cylinder(d=3,h=53,$fn=16);
 
     for(x=[8,137],y=[12,95,190])translate([x,y,32])cylinder(d=5,h=1.5,$fn=20);
-    for(y=[141:1.3:151])translate([73,y,28])rotate([-90,0,0])difference(){cylinder(d=5,h=.6,$fn=16);translate([0,0,-.1])cylinder(d=3,h=1,$fn=12);}
 }
 module teac_black() {
     translate([113,133,12])cube([25,46,23]); // laminated stepper body
@@ -84,7 +83,7 @@ module teac_spindle() {
     translate([70,59,37])difference(){cylinder(d=12,h=3,$fn=24);translate([-1,-7,2])cube([2,14,2]);}
 
 }
-module teac_head() {
+module teac_head_shape() {
     translate([59,119,19])difference(){
         union(){cube([24,34,5]);translate([4,2,4])cube([16,24,4]);for(x=[-9,24])translate([x,4,0])cube([9,9,7]);}
         for(y=[5,28])translate([12,y,-1])cylinder(d=4,h=12,$fn=16);
@@ -94,6 +93,12 @@ module teac_head() {
     // Bearing sleeves follow the head with clearance around the fixed guide rails.
     for(x=[46,92])translate([x,128,18])rotate([-90,0,0])difference(){
         cylinder(d=6,h=8,$fn=20);translate([0,0,-.1])cylinder(d=3.2,h=8.2,$fn=20);
+    }
+}
+// Clearance extends through every carriage tab, not only the bearing sleeves.
+module teac_head() {
+    difference(){teac_head_shape();
+        for(x=[46,92])translate([x,70,18])rotate([-90,0,0])cylinder(d=3.2,h=125,$fn=24);
     }
 }
 module teac_head_metal() {

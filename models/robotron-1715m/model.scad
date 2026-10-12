@@ -51,16 +51,16 @@ module fascia() {
     }
 }
 // Recessed moulded drive fronts. No full-face photograph or baked shadow.
-module drives() {
-    for(x=[-158,-4]) translate([x,-case_d/2-6,81]) rotate([90,0,0]) difference() {
+module drives(unit=-1) {
+    for(x=unit<0?[-158,-4]:[[-158,-4][unit]]) translate([x,-case_d/2-6,81]) rotate([90,0,0]) difference() {
         slab(146,42,2.5,2);
         translate([0,8,-1]) slab(140,3.5,5,1);
         translate([4,-2,-1]) slab(41,25,5,1.5);
         translate([-60,15,-1]) slab(11,4,5,.7);
     }
 }
-module drive_insets() {
-    for(x=[-158,-4]) translate([x,-case_d/2-3,81]) rotate([90,0,0]) {
+module drive_insets(unit=-1) {
+    for(x=unit<0?[-158,-4]:[[-158,-4][unit]]) translate([x,-case_d/2-3,81]) rotate([90,0,0]) {
         slab(144,40,1,1);
         // Recessed central finger well, with the insertion slot above it.
         translate([4,-3,1]) slab(39,20,1,1);

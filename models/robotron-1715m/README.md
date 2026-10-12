@@ -26,7 +26,7 @@ Sources: [documentation index](https://xepb.org/robotron/docs.html), [manual](ht
 
 `reference/photos.json` records the source archive and original/published SHA-256 hashes. `reference/photos/` contains losslessly sanitized JPEGs: EXIF, XMP, IPTC, comments and trailing motion video were removed, with decoded pixels checked against the originals. The original download was not modified. To reproduce sanitization after extracting the archive, run `python3 tools/import-photos.py /path/to/extracted/photos` from this model directory (requires Pillow).
 
-OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 12 includes material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
+OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 13 includes material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
 
 Full-panel photo skins are no longer used. The old underside crops contained a photographed cable and feet in addition to the modeled ones; removing them eliminates those duplicates and their baked shadows. There is now one continuous Bézier-routed lead, a modeled grommet, a hollow keyboard shell with a separate bottom plate, four rubber foot frames with metal inserts, six perimeter fasteners and a detailed exterior plug. The two drive fronts have recessed insertion slots/finger wells, rounded latch handles and separate red lenses. The monitor tape is a thin solid. Keycaps have square skirts, rounded shoulders and dished tops, including a stretched dish for long caps.
 
@@ -86,7 +86,7 @@ music wire and a 13 mm finished outside diameter.
 
 89 positions have input behavior, including Shift/Ctrl/Caps Lock. ALT, ß, repeat R, SI/SO and four navigation symbols are explicitly unverified. Unverified shifted symbols also send no invented byte. Shift/Ctrl are visitor-side one-shot latches; Caps Lock is persistent until released or focus/reset/power changes. The browser’s Caps Lock lamp reflects that local input state, not feedback from the original keyboard controller. SI/SO’s alternate character-set protocol is not available through the current browser core API.
 
-Each drive lamp and moving head follows that drive’s emulator state; rotor speed and head travel remain reference estimates. Opening the case moves its lid and monitor visibly up and back together. A separate control lifts the drive assembly forward and up and separates the fascia and keyboard deck. The system-unit interior is reconstructed from comparative references; cables stretch illustratively in the separated view while retaining their endpoint relationships. The external cable route and monitor-glass curvature remain estimates.
+Each drive lamp and moving head follows that drive’s emulator state; rotor speed and head travel remain reference estimates. Opening the case moves its lid and monitor visibly up and back together. A separate control lifts the drive assembly forward and up and separates the fascia and keyboard deck. The system-unit interior is reconstructed from comparative references; drive cables disconnect by default in the separated view, with an optional stretched-cable illustration. The external cable route and monitor-glass curvature remain estimates.
 
 ## Comparative references (2026-10-10)
 
@@ -290,7 +290,7 @@ verified cable pin count. The four power entry wells receive two black wires
 and the red/yellow wires; colors and routing remain illustrative. New ridges
 share the existing deformation rule, preserving drive and controller endpoints
 when the drive assembly is lifted. Plug internal keying and contact geometry
-are provisional, and the exploded cables still stretch illustratively.
+are provisional; exploded views now park the disconnected plugs by default.
 
 DAC adds a solder-side camera for either board, and a toggle that replaces
 components/artwork with the unchanged credited source photograph for comparison.
@@ -305,3 +305,52 @@ photo/artwork restoration without duplicate components, zoom-detail hysteresis,
 idle rendering, assembly restoration and existing moving cable/head endpoints.
 The combined Manifold export is valid (about 93 MiB). Browser meshes remain
 separate; the combined STL is not downloaded by the exhibit.
+
+## Guided exploration, motion and downloads (2026-10-12)
+
+DAC highlights the head carriages, spindles, clamps/latches or either logic board
+and links each selection to evidence notes. Top and rear drive views expose the
+mechanisms and connectors. Highlighting is a reversible material overlay; it
+does not replace the stored specimen colors or photographic evidence.
+
+The mechanical demonstration has a manual phase control and an optional slow
+12-second cycle. It changes only rendered head/spindle/clamp/latch poses, never
+controller state, disk contents or emulator inputs. Turning it off restores
+current live drive poses. Reduced-motion preference disables automatic cycling.
+The cycle is explanatory, not a reconstruction of the original linkage timing.
+
+Disconnected drive cables are now the default when separating the assembly.
+The cable ends and their plug housings park 18 mm rearward while the drives lift;
+the controller/PSU ends remain fixed. This short illustrative withdrawal replaces
+the long stretched cables. It is not a solved flexible-cable simulation. The
+checkbox can restore the previous stretched-cable illustration. New browser
+checks verify parked-end alignment, fixed endpoints and restoration.
+
+`tools/check-mechanics.py` tests the moving carriage and head shield against the
+fixed frame, bridge, rails, motor, both board variants and fixed components at
+all 80 emulated track positions. It found two positive-volume intersections:
+the carriage's right tab intruded into a guide rod, and an obsolete fixed spring
+occupied the moving assembly. The carriage now has clearance bores through all
+tabs, and the duplicate spring was removed. `checks/mechanics.json` records zero
+intersection volume at all 80 positions after correction. This bounded check
+does not certify all contacts, continuous linkage motion, printability, or the
+fit of unmeasured parts elsewhere in the computer. Existing browser checks cover
+shared moving-head transforms and separation/restoration.
+
+The browser distinguishes plated-steel-like, cast-alloy-like, solder and aged
+plastic finishes. Roughness, metalness and subtle grain are visually estimated
+from the owner photographs, not metallurgical identification or calibrated
+measurements. No new specimen scratches or corrosion patterns were invented.
+
+Run `python3 tools/export-downloads.py` after the normal geometry export to
+rebuild four ZIPs under `browser/downloads/`: motherboard, floppy controller,
+short-sensor-board drive 0 and long-sensor-board drive 1. Each includes a complete
+geometry STL, an editable OpenSCAD wrapper, included source geometry, evidence
+notes and licence texts. Drive downloads include the front face and latch;
+photographic label print and textures are not represented in STL. The board
+STLs retain assembly coordinates; drives use their local front-left-bottom
+origin. ZIP timestamps are fixed for deterministic output. Their byte counts and
+SHA-256 hashes are recorded in `browser/downloads.json`. Required KiCad meshes,
+STEP originals and file-specific licence notices are included; original code
+remains MIT. Photos and firmware are not bundled. Downloads are fetched only
+when requested, not during museum rendering.

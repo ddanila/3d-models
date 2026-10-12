@@ -1,0 +1,326 @@
+{
+  "scope": "All 80 emulated head positions against the fixed drive frame, bridge, rails, motor, both board variants and components. Both drives share this mechanism. Intended touching surfaces are permitted; positive solid volume fails. Does not certify full linkage motion or electrical clearances.",
+  "results": [
+    {
+      "track": 0,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 1,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 2,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 3,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 4,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 5,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 6,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 7,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 8,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 9,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 10,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 11,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 12,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 13,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 14,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 15,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 16,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 17,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 18,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 19,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 20,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 21,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 22,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 23,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 24,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 25,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 26,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 27,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 28,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 29,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 30,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 31,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 32,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 33,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 34,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 35,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 36,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 37,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 38,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 39,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 40,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 41,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 42,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 43,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 44,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 45,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 46,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 47,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 48,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 49,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 50,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 51,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 52,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 53,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 54,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 55,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 56,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 57,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 58,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 59,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 60,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 61,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 62,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 63,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 64,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 65,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 66,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 67,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 68,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 69,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 70,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 71,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 72,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 73,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 74,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 75,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 76,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 77,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 78,
+      "intersectionVolumeMm3": 0
+    },
+    {
+      "track": 79,
+      "intersectionVolumeMm3": 0
+    }
+  ],
+  "passed": true
+}
