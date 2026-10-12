@@ -1,30 +1,25 @@
-// Owner spring: 13 mm nominal diameter, ~0.35 wire, ~23 free length.
-// Interpreted as OD; 12 mm installed height and switch/stem seating estimated.
-module key_spring(height=12) {
-    // Five open turns, two close turns at each end. Continuous closed mesh.
-    steps=216; sides=6; radius=(13-.35)/2; wire=.35;
-    function z(t)=t<2 ? t*wire : t>7 ? height-wire-(9-t)*wire : 2*wire+(t-2)*(height-5*wire)/5;
-    polyhedron(points=[for(i=[0:steps],j=[0:sides-1])let(t=9*i/steps,a=t*360,b=j*360/sides)
-        [(radius+wire/2*cos(b))*cos(a),(radius+wire/2*cos(b))*sin(a),z(t)+wire/2*sin(b)]],
-        faces=concat([for(i=[0:steps-1],j=[0:sides-1])[i*sides+j,i*sides+(j+1)%sides,(i+1)*sides+(j+1)%sides,(i+1)*sides+j]],
-        [[for(j=[sides-1:-1:0])j]],[[for(j=[0:sides-1])steps*sides+j]]),convexity=12);
+// Confirmed owner spring and photo-referenced rubber-contact switch.
+include <key-switch/geometry.scad>
+module key_spring(height=spring_installed) { contact_spring(height,16,6); }
+module key_stem() { contact_carrier(); }
+module switch_housing() { switch_mount(); }
+module keyboard_guides() {
+    translate([0,keyboard_y,16.7])rotate([keyboard_slope,0,0])
+        for(k=keys)translate([k[0],k[1],0])switch_guide();
 }
-module key_stem() {
-    translate([-1.5,-1.5,-11])cube([3,3,13]);
-    translate([0,0,-1.5])difference(){cylinder(d=12.6,h=.9,$fn=32);translate([0,0,-.1])cylinder(d=7.5,h=2,$fn=24);}
-}
-module switch_housing() {
-    difference(){union(){translate([-7.3,-7.3,0])cube([14.6,14.6,2]);cylinder(d=9,h=8,$fn=24);}
-        translate([-1.8,-1.8,-1])cube([3.6,3.6,11]);}
+module keyboard_contacts() {
+    // Use the key axis so rubber meets electrode tops after 2.2 mm travel.
+    translate([0,keyboard_y,28])rotate([keyboard_slope,0,0])
+        for(k=keys)translate([k[0],k[1],-13.46])contact_electrodes();
 }
 module keyboard_mechanisms() {
     translate([0,keyboard_y,28])rotate([keyboard_slope,0,0])for(k=keys)translate([k[0],k[1],0]){
-        color("Silver")translate([0,0,-12])key_spring();color("Ivory")key_stem();
+        color("Silver")translate([0,0,-10.4])key_spring();color("Ivory")key_stem();color("#30322d")contact_rubber();
     }
 }
 module keyboard_plate() {
     translate([0,keyboard_y,17])rotate([keyboard_slope,0,0])difference(){
-        translate([0,-16,0])slab(484,114,1.2,3);for(k=keys)translate([k[0],k[1],-1])cylinder(d=10,h=4,$fn=20);
+        translate([0,-16,0])slab(484,114,1.2,3);for(k=keys)translate([k[0],k[1],-1])cylinder(d=12.5,h=4,$fn=32);
         for(x=[-225,225],y=[-55,45])translate([x,y,-1])cylinder(d=3.4,h=4,$fn=16);
     }
 }
@@ -73,7 +68,10 @@ module monitor_socket() {
     translate([0,93,324])rotate([-90,0,0])difference(){cylinder(d=32,h=7,$fn=40);translate([0,0,-1])cylinder(d=27.5,h=9,$fn=32);}
 }
 module assembly_details(p) {
-    if(p=="prototype-spring")key_spring();
+    if(p=="prototype-spring")contact_spring(spring_installed,24,8);
+    if(p=="prototype-rubber")contact_rubber();
+    if(p=="keyboard-guides")keyboard_guides();
+    if(p=="keyboard-contact-pads")keyboard_contacts();
     if(p=="prototype-stem")key_stem();
     if(p=="keyboard-plate")keyboard_plate();
     if(p=="logic-mounts")logic_mounts();

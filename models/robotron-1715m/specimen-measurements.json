@@ -188,5 +188,31 @@
       }
     ],
     "routing": "Clean curved slack behind system unit. Exploded-view extension is illustrative, not measured available slack."
+  },
+  "looseKeyParts": {
+    "archive": "Photos-1-001 (9).zip",
+    "spring": {
+      "outerDiameter": 13,
+      "freeLength": 23,
+      "wire": 0.4,
+      "status": "Owner measured; supersedes 0.35 mm wire estimate",
+      "activeTurns": 5,
+      "closedTurnsPerEnd": 3,
+      "turnStatus": "Photo-estimated"
+    },
+    "keycap": {
+      "width": 17.8,
+      "depth": 17.8,
+      "height": 11.4,
+      "skirtHeight": 4,
+      "raisedDiameter": 13.8,
+      "status": "Photo estimates, fit unverified; circular cup and annular seat directly visible"
+    },
+    "contact": "Owner confirms rubber pad against paired PCB pads, like remote controls; hidden geometry and chemistry not established",
+    "travel": {
+      "installedSpringHeight": 19.6,
+      "stroke": 2.2,
+      "status": "Geometrically inferred, not measured"
+    }
   }
 }

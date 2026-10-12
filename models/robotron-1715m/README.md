@@ -2,7 +2,7 @@
 
 Parametric OpenSCAD reconstruction of Danila’s exterior with a provisional reference interior. Original model, scripts and owner photographs are MIT licensed (see LICENSE); the credited PCB photographs in `reference/oldcrap/` and `reference/robotrontechnik/` are excluded from MIT and retain their original rights (see their NOTICE.txt files). This is an editable museum reconstruction, not a scan, manufacturing drawing or validated replacement enclosure.
 
-Open `model.scad` for the assembled system unit, monitor and keyboard. Set `part` to any entry in `parts` to inspect/export it separately. Coordinates are millimetres: X right, Y towards the rear, Z up. The keyboard is placed in front of the computer. `robotron-1715m.stl` is a combined visual reference; the separate exports retain the switch and material boundaries used by the museum.
+Open `model.scad` for the assembled system unit, monitor and keyboard. Set `part` to any entry in `parts` to inspect/export it separately. Coordinates are millimetres: X right, Y towards the rear, Z up. The keyboard is placed in front of the computer. [`robotron-1715m.stl.zip`](robotron-1715m.stl.zip) contains the full-resolution combined STL visual reference; the separate exports retain the switch and material boundaries used by the museum.
 
 ## Evidence and dimensions
 
@@ -65,6 +65,7 @@ Requires Python 3 and OpenSCAD with the Manifold backend (tested with 2026.10.05
 python3 models/robotron-1715m/tools/configure.py
 python3 models/robotron-1715m/tools/export.py
 openscad --backend Manifold --export-format binstl -o models/robotron-1715m/robotron-1715m.stl models/robotron-1715m/model.scad
+python3 models/robotron-1715m/tools/package-assembly.py
 openscad --backend Manifold -o models/robotron-1715m/preview.png --imgsize=1600,1200 --viewall --autocenter models/robotron-1715m/model.scad
 ```
 
@@ -234,6 +235,7 @@ Rebuild placements and the complete assembly with:
 python3 models/robotron-1715m/tools/configure-pcb.py
 python3 models/robotron-1715m/tools/export.py
 openscad --backend Manifold --export-format binstl -o models/robotron-1715m/robotron-1715m.stl models/robotron-1715m/model.scad
+python3 models/robotron-1715m/tools/package-assembly.py
 ```
 
 ## Board construction and independent inspection (2026-10-11)
@@ -489,3 +491,23 @@ The thick skirt and pale inner core follow the owner photographs; local fit
 dimensions remain estimates. Spring dimensions are now confirmed by the owner
 as 13 mm outer diameter, 23 mm free length and **0.4 mm wire**, superseding the
 earlier approximately 0.35 mm estimate.
+
+### Rubber-contact mechanism and spring correction
+
+[Separate switch parts and measured spring](key-switch/README.md) now accompany
+the loose cap. Pale slotted guides and mounting flanges follow `190054608`;
+Danila confirms rubber pads against paired PCB electrodes. The reconstruction
+includes a moving insulating carrier and rubber disc, and two disconnected comb
+electrodes per key. Their hidden geometry is approximate, not an electrical
+netlist. Open keyboard shows the contact face; orbit below for the underside.
+
+Black keycaps share the standalone geometry, with a thick skirt, pale core and
+annular recess. The 18/23 mm raised wide-key widths are retained. Clear and red
+key undersides remain the earlier provisional geometry, since the new photos
+show only a loose black cap. Spring OD/free length/wire are now 13/23/0.4 mm;
+installed height and travel remain inferred. The old 0.35 mm mandrel experiment
+is retained as historical work, not validated tooling for the corrected spring.
+
+The combined STL now exceeds GitHub's 100 MiB file limit, so it ships in a
+lossless ZIP instead of reducing geometry detail. Extract it for the same STL
+workflow. Standalone keycap and switch STLs remain directly downloadable.

@@ -1,0 +1,163 @@
+{
+  "keycap/keycap.stl": {
+    "triangles": 5510,
+    "closedTwoManifold": true,
+    "components": 1,
+    "boundsMm": [
+      [
+        -8.9,
+        -8.9,
+        0.0
+      ],
+      [
+        8.9,
+        8.9,
+        11.4
+      ]
+    ],
+    "extentsMm": [
+      17.8,
+      17.8,
+      11.4
+    ],
+    "volumeMm3": 1373.601
+  },
+  "key-switch/spring.stl": {
+    "triangles": 12692,
+    "closedTwoManifold": true,
+    "components": 1,
+    "boundsMm": [
+      [
+        -6.5,
+        -6.5,
+        0.0
+      ],
+      [
+        6.5,
+        6.5,
+        23.0
+      ]
+    ],
+    "extentsMm": [
+      13.0,
+      13.0,
+      23.0
+    ],
+    "volumeMm3": 52.102
+  },
+  "key-switch/guide.stl": {
+    "triangles": 800,
+    "closedTwoManifold": true,
+    "components": 1,
+    "boundsMm": [
+      [
+        -6.0,
+        -6.0,
+        0.0
+      ],
+      [
+        6.0,
+        6.0,
+        8.4
+      ]
+    ],
+    "extentsMm": [
+      12.0,
+      12.0,
+      8.4
+    ],
+    "volumeMm3": 223.245
+  },
+  "key-switch/mount.stl": {
+    "triangles": 576,
+    "closedTwoManifold": true,
+    "components": 1,
+    "boundsMm": [
+      [
+        -8.5,
+        -8.5,
+        0.0
+      ],
+      [
+        8.5,
+        8.5,
+        1.7
+      ]
+    ],
+    "extentsMm": [
+      17.0,
+      17.0,
+      1.7
+    ],
+    "volumeMm3": 377.015
+  },
+  "key-switch/carrier.stl": {
+    "triangles": 348,
+    "closedTwoManifold": true,
+    "components": 1,
+    "boundsMm": [
+      [
+        -4.05,
+        -4.05,
+        0.0
+      ],
+      [
+        4.05,
+        4.05,
+        11.4
+      ]
+    ],
+    "extentsMm": [
+      8.1,
+      8.1,
+      11.4
+    ],
+    "volumeMm3": 459.342
+  },
+  "key-switch/rubber.stl": {
+    "triangles": 188,
+    "closedTwoManifold": true,
+    "components": 1,
+    "boundsMm": [
+      [
+        -3.9,
+        -3.9,
+        0.0
+      ],
+      [
+        3.9,
+        3.9,
+        0.8
+      ]
+    ],
+    "extentsMm": [
+      7.8,
+      7.8,
+      0.8
+    ],
+    "volumeMm3": 38.118
+  },
+  "key-switch/contacts.stl": {
+    "triangles": 184,
+    "closedTwoManifold": true,
+    "components": 2,
+    "boundsMm": [
+      [
+        -2.575,
+        -3.20737,
+        0.0
+      ],
+      [
+        2.575,
+        3.20737,
+        0.06
+      ]
+    ],
+    "extentsMm": [
+      5.15,
+      6.41474,
+      0.06
+    ],
+    "volumeMm3": 1.417
+  }
+}

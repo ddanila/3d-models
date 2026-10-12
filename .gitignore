@@ -1,2 +1,5 @@
 .render-check.*
 .DS_Store
+
+# Full assembly is distributed as a lossless ZIP; raw build output exceeds GitHub limit.
+/models/robotron-1715m/robotron-1715m.stl

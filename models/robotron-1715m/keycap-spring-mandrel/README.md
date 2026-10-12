@@ -4,7 +4,12 @@ Printable hand-winding **trial mandrel** (Russian: оправка) for the sprin
 documented in the [keyboard measurements](../README.md#keycap-spring-measurements-2026-10-10).
 [Editable model](model.scad) · [Printable STL](keycap-spring-mandrel.stl) · [Preview](preview.png)
 
-## Diameter estimate
+> Superseded measurement: on October 12 the owner confirmed **0.4 mm wire**,
+> 13 mm outer diameter and 23 mm free length. The 0.35 mm calculation and 6.4 mm
+> trial below are historical, unvalidated tooling; do not treat them as a
+> recommendation for the corrected spring. See [current spring geometry](../key-switch/README.md).
+
+## Historical diameter estimate
 
 Assume the reported 13 mm is the **outside diameter**, with 0.35 mm round
 hardened music/piano wire. The desired inside diameter is then 12.30 mm and
