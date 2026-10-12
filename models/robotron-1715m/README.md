@@ -86,7 +86,7 @@ music wire and a 13 mm finished outside diameter.
 
 89 positions have input behavior, including Shift/Ctrl/Caps Lock. ALT, ß, repeat R, SI/SO and four navigation symbols are explicitly unverified. Unverified shifted symbols also send no invented byte. Shift/Ctrl are visitor-side one-shot latches; Caps Lock is persistent until released or focus/reset/power changes. The browser’s Caps Lock lamp reflects that local input state, not feedback from the original keyboard controller. SI/SO’s alternate character-set protocol is not available through the current browser core API.
 
-Each drive lamp and moving head follows that drive’s emulator state; rotor speed and head travel remain reference estimates. Opening the case moves its lid and monitor visibly up and back together. A separate control lifts the drive assembly forward and up and separates the fascia and keyboard deck. The system-unit interior is reconstructed from comparative references; drive cables disconnect by default in the separated view, with an optional stretched-cable illustration. The external cable route and monitor-glass curvature remain estimates.
+Each drive lamp and moving head follows that drive’s emulator state; rotor speed and track pitch use nominal TEAC references, not specimen measurements. Opening the case moves its lid and monitor visibly up and back together. A separate control lifts the drive assembly forward and up and separates the fascia and keyboard deck. The system-unit interior is reconstructed from comparative references; drive cables disconnect by default in the separated view, with an optional stretched-cable illustration. The external cable route and monitor-glass curvature remain estimates.
 
 ## Comparative references (2026-10-10)
 
@@ -130,9 +130,9 @@ The shared 146 × 203 × 41.3 mm reference envelope is retained. The mechanism n
 `drive-labels.json` records the exact source quadrilaterals, positions, transcriptions and drive identities. DAC perspective-corrects only these small markings on the original unmodified photographs; it does not apply an entire mechanism photograph as a skin. The Robotron country line is typeset because a cable crosses the photograph there, preventing a photographed cable from appearing as an extra modeled wire. The serial, manufacturer text, Ratan sticker and TEAC markings retain photographed print and wear. Physical plates are in the OpenSCAD `drive-label-plates` part; photo materials are carried by the browser manifest because STL cannot store textures. All six owner originals are losslessly sanitized and retained in `reference/photos/`.
 
 The drive spindle clamps and head carriages are separate OpenSCAD/browser parts.
-`driveMotion` in the manifest records each spindle pivot and an estimated 35 mm
+`driveMotion` in the manifest records each spindle pivot and a nominal 79 × 25.4/96 = 20.902083 mm
 head travel toward the hub. DAC drives their motion from each emulated unit's
-motor/cylinder state; 300 RPM presentation and travel are reference approximations,
+motor/cylinder state and per-drive phase; 300 RPM and 96-tpi travel are reference values,
 not measured motion of the owner's drives. Reduced-motion mode stops rotation
 while retaining the current head position. The stationary deck and motors no
 longer include duplicate carriage/clamp geometry. `tools/export.py --parts ...`
@@ -151,7 +151,7 @@ provisional; the spring dimensions come from the owner measurements above.
 The owner drive overview (`PXL_20250212_094033966.jpg`) guided the stepped head
 carriage, metal head shield, screws, sensor-board components, laminated stepper,
 and separately movable clamp linkage. Browser latch release is an inspection aid,
-not an emulator media-eject operation. Track travel and clamp lift remain estimates.
+not an emulator media-eject operation. Track pitch uses the TEAC nominal specification; carriage origin and clamp lift remain estimates.
 
 Board standoffs, chassis brackets, fan fasteners and cable retainers provide visible
 mounting relationships. Cable ends stay attached during separation using explanatory
@@ -277,8 +277,8 @@ cut-outs await specimen evidence. No extra edge profile has been invented.
 The owner drive overview `PXL_20250212_094033966.jpg` and rear view
 `PXL_20250212_094038758.jpg` guide the added rail saddles, moving bearing sleeves,
 spindle retaining ring and small carriage spring detail. The old fixed crossbar
-crossed the moving carriage path; saddles now sit beyond the illustrated 35 mm
-travel. Carriage sleeves move with the same head mesh, with 3.2 mm bores around
+crossed the moving carriage path; saddles now sit beyond the original 35 mm
+clearance envelope (the corrected 96-tpi head travel is 20.90 mm). Carriage sleeves move with the same head mesh, with 3.2 mm bores around
 3 mm rails. Spring turns, clearances and retaining-ring size are estimates;
 the drive geometry remains an illustrative reconstruction, not validated
 mechanical kinematics. Existing clamp/latch motion is unchanged.
@@ -354,3 +354,9 @@ SHA-256 hashes are recorded in `browser/downloads.json`. Required KiCad meshes,
 STEP originals and file-specific licence notices are included; original code
 remains MIT. Photos and firmware are not bundled. Downloads are fetched only
 when requested, not during museum rendering.
+
+The 96-tpi correction changes animation metadata only, not the rest-pose STL.
+`tools/check-mechanics.py` audits each of the 80 corrected positions. The emulator
+exposes its motor-gated phase and stepwise cylinder position to DAC, replacing
+independent browser rotation for the current core. This is synchronization with
+the emulated model, not measured motor acceleration or index alignment.

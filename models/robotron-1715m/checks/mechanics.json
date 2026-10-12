@@ -1,4 +1,6 @@
 {
+  "trackPitchMm": 0.26458333333333334,
+  "travelMm": 20.902083333333334,
   "scope": "All 80 emulated head positions against the fixed drive frame, bridge, rails, motor, both board variants and components. Both drives share this mechanism. Intended touching surfaces are permitted; positive solid volume fails. Does not certify full linkage motion or electrical clearances.",
   "results": [
     {

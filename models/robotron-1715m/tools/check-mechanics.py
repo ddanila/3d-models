@@ -14,13 +14,13 @@ with tempfile.TemporaryDirectory() as folder:
     folder=Path(folder)
     for track in range(80):
         src=folder/'audit.scad';out=folder/'intersection.stl';out.unlink(missing_ok=True)
-        src.write_text(f'include <{root}/model.scad>\nintersection(){{translate([0,{-35*track/79},0])union(){{teac_head();teac_head_metal();}}union(){{teac_frame();teac_mechanism();teac_black();teac_boards();teac_boards(true);teac_components();}}}}\n')
+        src.write_text(f'include <{root}/model.scad>\nintersection(){{translate([0,{-25.4*track/96},0])union(){{teac_head();teac_head_metal();}}union(){{teac_frame();teac_mechanism();teac_black();teac_boards();teac_boards(true);teac_components();}}}}\n')
         run=subprocess.run(['openscad','--backend','Manifold','--export-format','binstl','-D','part="audit"','-o',str(out),str(src)],text=True,capture_output=True)
         if run.returncode and 'Current top level object is empty' not in run.stderr:raise RuntimeError(run.stderr)
         v=volume(out) if out.exists() else 0
         results.append(dict(track=track,intersectionVolumeMm3=round(v,6)))
         if v>=.001:print(track,v,flush=True)
-report=dict(scope='All 80 emulated head positions against the fixed drive frame, bridge, rails, motor, both board variants and components. Both drives share this mechanism. Intended touching surfaces are permitted; positive solid volume fails. Does not certify full linkage motion or electrical clearances.',results=results,passed=all(r['intersectionVolumeMm3']<.001 for r in results))
+report=dict(trackPitchMm=25.4/96,travelMm=79*25.4/96,scope='All 80 emulated head positions against the fixed drive frame, bridge, rails, motor, both board variants and components. Both drives share this mechanism. Intended touching surfaces are permitted; positive solid volume fails. Does not certify full linkage motion or electrical clearances.',results=results,passed=all(r['intersectionVolumeMm3']<.001 for r in results))
 (root/'checks/mechanics.json').write_text(json.dumps(report,indent=2)+'\n')
 print('Checked',len(results),'track positions; passed:',report['passed'])
 if not report['passed']:raise SystemExit('Positive mechanical intersections found')
