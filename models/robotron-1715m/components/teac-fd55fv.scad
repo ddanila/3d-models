@@ -32,7 +32,11 @@ module teac_mechanism() {
         translate([18,137,-1])cylinder(d=11,h=4,$fn=24);}
 
     for(x=[46,92])translate([x,78,18])rotate([-90,0,0])cylinder(d=3,h=108,$fn=16);
-    translate([46,144,18])cube([48,13,3]);
+    // Fixed rail saddles stay outside the full 35 mm carriage travel.
+    for(x=[46,92],y=[80,181])translate([x,y,18])difference(){
+        translate([-4,-3,-5])cube([8,6,9]);
+        rotate([90,0,0])cylinder(d=3.1,h=8,center=true,$fn=20);
+    }
 
     translate([109,158,14])rotate([0,90,0])cylinder(d=18,h=8,$fn=32);
     // The latch rod runs from the bezel to the clamp linkage.
@@ -76,6 +80,7 @@ module teac_traces(long_board=false) {
 // Separate moving parts; pivots/travel are shared with the browser manifest.
 module teac_spindle() {
     translate([70,59,28])cylinder(d=26,h=9,$fn=40);
+    translate([70,59,36.7])difference(){cylinder(d=16,h=.7,$fn=32);translate([0,0,-.1])cylinder(d=10,h=1,$fn=24);translate([0,-9,-.1])cube([9,18,1]);}
     translate([70,59,37])difference(){cylinder(d=12,h=3,$fn=24);translate([-1,-7,2])cube([2,14,2]);}
 
 }
@@ -85,6 +90,11 @@ module teac_head() {
         for(y=[5,28])translate([12,y,-1])cylinder(d=4,h=12,$fn=16);
     }
     translate([64,121,27])cube([14,10,3]);
+    translate([48.5,125,19])cube([11,8,3]);
+    // Bearing sleeves follow the head with clearance around the fixed guide rails.
+    for(x=[46,92])translate([x,128,18])rotate([-90,0,0])difference(){
+        cylinder(d=6,h=8,$fn=20);translate([0,0,-.1])cylinder(d=3.2,h=8.2,$fn=20);
+    }
 }
 module teac_head_metal() {
     translate([62,122,30])difference(){cube([18,15,1]);translate([2,2,-1])cube([14,11,3]);}
@@ -92,6 +102,11 @@ module teac_head_metal() {
     translate([62,145,23])difference(){cube([18,6,1]);for(x=[3,15])translate([x,3,-1])cylinder(d=2,h=4,$fn=12);}
     for(x=[64,77])translate([x,148,24])screw(3,1);
     translate([69,133,25])cube([2,13,.5]);
+    // Photo-visible carriage return spring; dimensions and winding estimated.
+    for(i=[0:8])translate([66+i*.65,148,27])rotate([0,90,0])difference(){
+        cylinder(d=3.2,h=.35,$fn=16);translate([0,0,-.1])cylinder(d=2.5,h=.6,$fn=16);
+    }
+    translate([64,148,26.8])cube([10,.4,.4]);
 }
 module teac_clamp() {
     translate([66,46,34])cube([38,4,2]);
@@ -105,4 +120,17 @@ module teac_components() {
     for(y=[36,43,54,63])translate([15,y,33])rotate([0,90,0])cylinder(d=1.8,h=5,$fn=12);
     for(p=[[14,134],[65,159],[95,175]])translate([p[0],p[1],6.6])cube([9,19,4]);
     for(y=[139:2:170])translate([113,y,12])cube([25,.55,23]);
+}
+
+// Cable housings surround the existing board fingers; hidden keying is provisional.
+module teac_cable_plug() {
+    translate([47,199,3.2])difference(){
+        cube([44,12,7]);translate([1,-1,1.3])cube([42,10,2.8]);
+        translate([1,5,2.3])cube([42,9,1.5]);
+    }
+    translate([47,208,8.7])cube([44,3,1.5]);
+    for(x=[47,88])translate([x,206,3.2])cube([3,5,7]);
+    // Four individual power entry wells, with the harness ending in the socket.
+    translate([11,201,4])difference(){cube([19,8,7]);
+        for(x=[2.5:4.5:16])translate([x,9,3.5])rotate([90,0,0])cylinder(d=2.7,h=7,$fn=16);}
 }

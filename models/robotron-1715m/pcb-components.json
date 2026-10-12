@@ -1,5 +1,63 @@
 {
-  "version": 2,
+  "mounts": [
+    [
+      -225,
+      -170,
+      3,
+      13.6,
+      "motherboard"
+    ],
+    [
+      -225,
+      165,
+      3,
+      13.6,
+      "motherboard"
+    ],
+    [
+      12,
+      -170,
+      3,
+      13.6,
+      "motherboard"
+    ],
+    [
+      12,
+      165,
+      3,
+      13.6,
+      "motherboard"
+    ],
+    [
+      -216,
+      16,
+      13.6,
+      42.6,
+      "floppy-controller"
+    ],
+    [
+      -216,
+      168,
+      13.6,
+      42.6,
+      "floppy-controller"
+    ],
+    [
+      -9,
+      16,
+      13.6,
+      42.6,
+      "floppy-controller"
+    ],
+    [
+      -9,
+      168,
+      13.6,
+      42.6,
+      "floppy-controller"
+    ]
+  ],
+  "version": 3,
   "models": [
     {
       "id": "DIP-14_W7.62mm",

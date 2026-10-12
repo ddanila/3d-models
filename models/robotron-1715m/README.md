@@ -26,7 +26,7 @@ Sources: [documentation index](https://xepb.org/robotron/docs.html), [manual](ht
 
 `reference/photos.json` records the source archive and original/published SHA-256 hashes. `reference/photos/` contains losslessly sanitized JPEGs: EXIF, XMP, IPTC, comments and trailing motion video were removed, with decoded pixels checked against the originals. The original download was not modified. To reproduce sanitization after extracting the archive, run `python3 tools/import-photos.py /path/to/extracted/photos` from this model directory (requires Pillow).
 
-OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 11 includes material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
+OpenSCAD/STL stores geometry, not photographic materials. `browser/model.json` version 12 includes material profiles, transcribed legends, a small wordmark decal, reference-photo links, a live screen anchor and individually named power/reset meshes.
 
 Full-panel photo skins are no longer used. The old underside crops contained a photographed cable and feet in addition to the modeled ones; removing them eliminates those duplicates and their baked shadows. There is now one continuous Bézier-routed lead, a modeled grommet, a hollow keyboard shell with a separate bottom plate, four rubber foot frames with metal inserts, six perimeter fasteners and a detailed exterior plug. The two drive fronts have recessed insertion slots/finger wells, rounded latch handles and separate red lenses. The monitor tape is a thin solid. Keycaps have square skirts, rounded shoulders and dished tops, including a stretched dish for long caps.
 
@@ -263,3 +263,45 @@ adjacent substrate, package bounds/intersections checked, individual-board
 visibility and restoration tested in the browser, and combined OpenSCAD export
 validated with the Manifold backend. Exact board revision, connector details,
 IC sockets, original pad sizes and hidden routing await specimen photographs.
+
+## Mechanical fit and inspection (2026-10-12)
+
+`pcb-components.json` now records eight provisional mounting positions shared
+with `pcb-components.scad`. Each board has four 3.4 mm clearance holes, washers,
+screw shafts/heads and hollow hex standoffs ending at its underside. The
+controller supports start at the lower board surface. Hardware exports per
+board so it remains visible during isolation. Positions retain the existing
+reference reconstruction; actual mounts, brackets and additional board-edge
+cut-outs await specimen evidence. No extra edge profile has been invented.
+
+The owner drive overview `PXL_20250212_094033966.jpg` and rear view
+`PXL_20250212_094038758.jpg` guide the added rail saddles, moving bearing sleeves,
+spindle retaining ring and small carriage spring detail. The old fixed crossbar
+crossed the moving carriage path; saddles now sit beyond the illustrated 35 mm
+travel. Carriage sleeves move with the same head mesh, with 3.2 mm bores around
+3 mm rails. Spring turns, clearances and retaining-ring size are estimates;
+the drive geometry remains an illustrative reconstruction, not validated
+mechanical kinematics. Existing clamp/latch motion is unchanged.
+
+Rear ribbon plug housings now surround the reference board fingers. The cable
+ends enter these housings, which include a strain-relief bar. Thirty-three fine
+ridges across each 42 mm ribbon suggest the conductors without claiming a
+verified cable pin count. The four power entry wells receive two black wires
+and the red/yellow wires; colors and routing remain illustrative. New ridges
+share the existing deformation rule, preserving drive and controller endpoints
+when the drive assembly is lifted. Plug internal keying and contact geometry
+are provisional, and the exploded cables still stretch illustratively.
+
+DAC adds a solder-side camera for either board, and a toggle that replaces
+components/artwork with the unchanged credited source photograph for comparison.
+The toggle returns to the component side; underside inspection turns it off.
+Modeled underside tracks remain absent. Small pads, solder, contacts, IC leads
+and ribbon ridges hide at distant zoom and reappear nearby; separate distance
+thresholds prevent flickering. Canonical OpenSCAD/STL geometry is unchanged by
+this display optimization.
+
+Checks cover open mounting apertures and solid neighbouring substrate, reference
+photo/artwork restoration without duplicate components, zoom-detail hysteresis,
+idle rendering, assembly restoration and existing moving cable/head endpoints.
+The combined Manifold export is valid (about 93 MiB). Browser meshes remain
+separate; the combined STL is not downloaded by the exhibit.

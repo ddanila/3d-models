@@ -16,6 +16,7 @@ function pcb_selected(board) = pcb_board=="" || pcb_board==board;
 module board_blank(origin,size,board) {
     if(pcb_selected(board))translate(origin)linear_extrude(1.6)difference(){
         square(size);
+        for(p=pcb_mounts)if(p[4]==board)translate([p[0]-origin[0],p[1]-origin[1]])circle(d=3.4,$fn=20);
         for(p=pcb_footprints)if(p[3]==board)translate([p[0]-origin[0],p[1]-origin[1]])circle(d=.95,$fn=12);
     }
 }
@@ -101,6 +102,10 @@ module ribbon_run(points,w=42,t=.8) {
 module ribbons() {
     for(x=[-158,-4])ribbon_run([[x-4,2,66.5],[x-4,20,79],[x-4,45,69],[-46,45,58],[-46,19,51]],42);
 }
+module ribbon_ridges() {
+    for(x=[-158,-4],i=[0:32])let(dx=(i-16)*1.27)
+        ribbon_run([[x-4+dx,2,66.95],[x-4+dx,20,79.45],[x-4+dx,45,69.45],[-46+dx,45,58.45],[-46+dx,19,51.45]],.4,.15);
+}
 module ribbon_stripes() {
     for(x=[-158,-4])ribbon_run([[x-24,2,67],[x-24,20,79.5],[x-24,45,69.5],[-66,45,58.5],[-66,19,51.5]],1.2,.2);
 }
@@ -108,7 +113,8 @@ module wire_run(points,r=1) {
     for(i=[0:len(points)-2])hull(){translate(points[i])sphere(r=r,$fn=10);translate(points[i+1])sphere(r=r,$fn=10);}
 }
 module power_wires(offset=0) {
-    for(x=[-207,-53])wire_run([[x,-1,71+offset],[x,17,75+offset],[64,28,82+offset],[87,42,71+offset],[96,46,59+offset]],.9);
+    for(x=[-207,-53])wire_run([[x-6+offset*2.04545,5,67.5],[x,17,75+offset],[64,28,82+offset],[87,42,71+offset],[96,46,59+offset]],.9);
+    if(offset==2.2)for(x=[-207,-53])wire_run([[x-10.5,5,67.5],[x-4.5,17,77.2],[59.5,28,84.2],[82.5,42,73.2],[96,46,61.2]],.9);
     wire_run([[96,55,22+offset],[70,50,20+offset],[48,28,20+offset],[38,25,24+offset]],1);
 }
 module keyboard_pcb() {
@@ -150,6 +156,8 @@ module interior_shape(p) {
     if(p=="fan-frame")fan_frame();
     if(p=="fan-rotor")fan_rotor();
     if(p=="ribbon-cables")ribbons();
+    if(p=="ribbon-ridges")ribbon_ridges();
+    if(p=="drive-cable-plugs")drive_pair()teac_cable_plug();
     if(p=="ribbon-stripes")ribbon_stripes();
     if(p=="power-wires-red")power_wires(0);
     if(p=="power-wires-black")power_wires(2.2);

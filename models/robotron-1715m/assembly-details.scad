@@ -29,13 +29,12 @@ module keyboard_plate() {
     }
 }
 module logic_mounts() {
-    for(x=[-225,12],y=[-170,165])translate([x,y,3]){
-        difference(){cylinder(d=6,h=9,$fn=6);translate([0,0,-1])cylinder(d=2.8,h=12,$fn=12);}
-        translate([0,0,10.6])screw(4,1.3);
-    }
-    for(x=[-216,-9],y=[16,168])translate([x,y,14]){
-        difference(){cylinder(d=6,h=27,$fn=6);translate([0,0,-1])cylinder(d=2.8,h=30,$fn=12);}
-        translate([0,0,28.6])screw(4,1.3);
+    for(p=pcb_mounts)if(pcb_selected(p[4]))translate([p[0],p[1],p[2]]){
+        // Hex support ends at the board underside; screw crosses the clearance hole.
+        difference(){cylinder(d=6,h=p[3]-p[2]-1.6,$fn=6);translate([0,0,-.1])cylinder(d=2.6,h=p[3]-p[2],$fn=16);}
+        translate([0,0,p[3]-p[2]])difference(){cylinder(d=6,h=.45,$fn=24);translate([0,0,-.1])cylinder(d=3.4,h=.7,$fn=16);}
+        translate([0,0,p[3]-p[2]-3])cylinder(d=2.8,h=3.5,$fn=16);
+        translate([0,0,p[3]-p[2]+.45])screw(4.8,1.5);
     }
 }
 module chassis_fasteners() {
