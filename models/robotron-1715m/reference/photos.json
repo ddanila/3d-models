@@ -541,6 +541,46 @@
       "sha256": "e01ee049d7a1212d72e8f45e3ea912afd2fd82b3792cfd48a6df6cd632379959",
       "license": "MIT",
       "owner": "Danila"
+    },
+    {
+      "file": "PXL_20261012_125300878.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (5).zip",
+      "original_sha256": "20ffae6d38615014ae6dd22911617cada4a1fdf8b6c8fd31ea610ec4b0b6c98e",
+      "sha256": "dbbe99659711d4b04a714a6f24ea7a766bede5a16fdb5572c2bdf7e029056421",
+      "owner": "Danila",
+      "license": "MIT"
+    },
+    {
+      "file": "PXL_20261012_125449006.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (5).zip",
+      "original_sha256": "ddb10a7f408eb6c46e9468f7db0f677e810efacb7370d60e1c66796bf0f5517d",
+      "sha256": "6aae0732dc54f651cc4a6f352dc4848f2236456234d779c83dac421c8fbafa51",
+      "owner": "Danila",
+      "license": "MIT"
+    },
+    {
+      "file": "PXL_20261012_125457861.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (5).zip",
+      "original_sha256": "8a61bfa7d9ee4580d54d1527600de976e0d90901b8b78f7e34720b4ad40c0899",
+      "sha256": "7cc1b4e481564dccf857edcff5aaaa6b78437d9380658ec37a58fd15b3ba7786",
+      "owner": "Danila",
+      "license": "MIT"
+    },
+    {
+      "file": "PXL_20261012_125502437.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (5).zip",
+      "original_sha256": "707f831f79c37adba4f77b57a27856ffe1ab2c92e4453be26a446b3c0e8a6ede",
+      "sha256": "8f4042704da556932bdf21eef71f6545673647a9af784a19e21f54b0c27cff53",
+      "owner": "Danila",
+      "license": "MIT"
     }
   ]
 }

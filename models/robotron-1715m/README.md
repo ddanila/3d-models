@@ -419,3 +419,9 @@ Owner photograph `PXL_20261012_123006039.jpg` supplies the row stagger and key-g
 The deck now has grouped openings instead of webs between every cap. The rear reinforcing recess is part of the painted metal shell. Both amber indicator lenses are represented; only Caps has a verified browser state connection, so the SI/SO lens is not animated. Black-key legends use larger photo-based proportions.
 
 Danila subsequently measured the raised bodies: blank Shift caps are 18 mm wide, CTRL/ET and the other broad caps 23 mm, explicitly excluding the flange. `topWidth` records these independently of pitch/flange width and participates in exported mesh deduplication. The matching Caps/circled-R shapes use the same two families based on the photographs.
+
+## Rear panel and flush reset (October 12 close-ups)
+
+The rear uses the owner’s 125413618/125300878/125449006/125457861/125502437 photographs for recessed openings, pale keyed inserts, separate retaining blocks, plated contacts, blanking plates and engraved-style legends. The monitor outlet has three metal contact sleeves and two unplated alignment holes. The mains inlet is vertical, with a recessed shroud and two slotted mounting screws; both fuse caps have cross slots. V24’s alternating populated positions are visible in the close-up; other contact populations and hidden details remain approximations, not wiring documentation. The clean nameplate preserves **Typ W 1715/330, Masch.-Nr. 67581** without copying corrosion or wear.
+
+Photo 124827690 shows a grey reset pad nearly flush with the lower front panel. It now has its own geometry and a real panel opening rather than reusing the protruding power rocker. The 16 × 16 mm pad and 0.4 mm face recess are photo estimates. Power and reset remain distinct pickable browser controls.

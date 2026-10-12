@@ -116,5 +116,27 @@
       "source": "Danila measured raised parts only, confirmed October 12, 2026",
       "note": "Applied 18 mm to both Shift keys and the matching unlettered Caps shape; 23 mm to CTRL, ET and circled R. Caps/R classification follows owner photographs."
     }
+  },
+  "rearPanel": {
+    "photos": [
+      "PXL_20261012_125413618.jpg",
+      "PXL_20261012_125300878.jpg",
+      "PXL_20261012_125449006.jpg",
+      "PXL_20261012_125457861.jpg",
+      "PXL_20261012_125502437.jpg"
+    ],
+    "evidence": "Separate pale keyed connector inserts and retaining blocks; three monitor power sleeves plus two unplated alignment holes; vertical mains inlet with slotted mounting screws; cross-slotted fuse caps; V24 alternating populated positions. Nameplate reads Typ W 1715/330, Masch.-Nr. 67581.",
+    "status": "Local widths, recess depths, contact pitch and hidden contact geometry estimated; clean reconstruction excludes corrosion and wear."
+  },
+  "reset": {
+    "photo": "PXL_20261012_124827690.jpg",
+    "padEnvelope": [
+      16,
+      16,
+      0.8
+    ],
+    "faceRecess": 0.4,
+    "color": "#74776f",
+    "status": "Nearly flush grey pad confirmed visually; dimensions and uncalibrated color are estimates."
   }
 }

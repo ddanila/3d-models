@@ -85,39 +85,114 @@ module monitor_stand_metal(){
  }
 }
 // Rear sockets in a local plane: X horizontal, Z vertical, Y toward viewer.
+// Owner October 12 close-ups; local connector sizes are photo estimates.
+// Local +Z faces out of the back, local +Y points down in the rear view.
 module rear_pose(x,z){translate([x,case_d/2-3,z])rotate([-90,0,0])children();}
-rear_sockets=[[20,62,50,5,2],[20,20,72,12,2],[-78,20,72,12,2],[-179,20,65,13,3]];
+// [X, height, cutout width, columns, rows, body width, body height]
+rear_sockets=[[10,43,64,5,2,24,14],[20,14,88,13,2,41,14],[-78,14,88,13,2,41,14],[-179,20,78,13,3,41,20]];
 module rear_enclosure_openings(){
  for(p=[[-85,43,300,80],[172,43,138,80]])rear_pose(p[0],p[1])translate([0,0,-5])slab(p[2],p[3],14,4);
+}
+module rear_cutouts(){
+ for(p=rear_sockets)rear_pose(p[0],p[1])translate([0,0,-5])slab(p[2],p[6]+6,12,.5);
+ rear_pose(130,40)translate([0,0,-5])slab(26,37,12,4);
+ rear_pose(205,41)translate([0,0,-5])slab(22,44,12,.6);
+ rear_pose(-198,51)translate([0,0,-5])cylinder(d=4,h=12,$fn=24);
+ for(x=[43,-25])rear_pose(x,43)translate([0,0,-5])slab(1,5,12,.1);
 }
 module rear_panel(){difference(){
  for(p=[[-85,43,300,80],[172,43,138,80]])rear_pose(p[0],p[1])slab(p[2],p[3],1,4);
  rear_cutouts();
 }}
-module rear_cutouts(){
- for(p=rear_sockets)rear_pose(p[0],p[1])translate([0,0,-5])slab(p[2]+8,20,12,1);
- rear_pose(130,37)translate([0,0,-5])slab(29,23,12,2);
- rear_pose(205,51)translate([0,0,-5])slab(22,39,12,1);
+module rear_recesses(){
+ // Dark recessed trays leave space around the connectors, rather than filling
+ // each large panel opening with an oversized connector face.
+ for(p=rear_sockets)rear_pose(p[0],p[1])translate([0,0,-8])difference(){
+  slab(p[2]+1,p[6]+7,7,.7);translate([0,0,1])slab(p[2]-1,p[6]+5,8,.4);
+ }
+ rear_pose(205,41)translate([0,0,-6])slab(22,44,1,.5);
+ rear_pose(-198,51)translate([0,0,-3])cylinder(d=4,h=.5,$fn=24);
 }
 module rear_socket_bodies(){
- for(p=rear_sockets)rear_pose(p[0],p[1])difference(){slab(p[2],15,5,.8);translate([0,0,1])slab(p[2]-12,10,7,.4);}
- rear_pose(205,51)difference(){slab(20,37,5,1);translate([0,0,1])for(v=[[-3,-9],[3,0],[-3,9]])translate([v[0],v[1],0])cylinder(d=5,h=6,$fn=24);}
+ // Separate stepped retaining blocks at both ends of each insert.
+ for(p=rear_sockets)rear_pose(p[0],p[1])for(side=[-1,1]){
+  translate([side*(p[5]/2+4),0,-4])slab(8,p[6]-1,5,.5);
+  translate([side*(p[5]/2+4),0,1])slab(7,p[6]-4,1.5,.3);
+  translate([side*(p[5]/2+4),0,2.5])slab(7,.45,.3,.1);
+ }
+ // Retaining bridge around the monitor power connector.
+ rear_pose(205,41)for(y=[-18,18])translate([0,y,-1])difference(){
+  slab(20,7,4,.5);translate([-4,0,-1])cylinder(d=4,h=6,$fn=20);
+ }
+}
+module rear_socket_inserts(){
+ for(p=rear_sockets)rear_pose(p[0],p[1])difference(){
+  translate([0,0,-4])slab(p[5],p[6],7,.5);
+  translate([0,0,-2])slab(p[5]-2.8,p[6]-2.8,7,.25);
+  // The keyed reliefs in the lower/side lips are visible in the owner photos.
+  translate([p[5]*.18,p[6]/2,1])cube([2,4,5],center=true);
+  translate([-p[5]/2,2,1])cube([3,3,5],center=true);
+  for(i=[0:p[3]-1],j=[0:p[4]-1])
+   translate([(i-(p[3]-1)/2)*(p[3]==5?3.5:2.54),(j-(p[4]-1)/2)*3.5,-5])cube([.9,.9,4],center=true);
+ }
+ // Three contact sleeves and two unplated alignment holes, not five contacts.
+ rear_pose(205,41)translate([0,0,-3])difference(){
+  slab(18,30,4,.5);
+  for(v=[[3,-9],[-3,0],[3,9],[-3,-9],[-3,9]])translate([v[0],v[1],-1])cylinder(d=4.5,h=6,$fn=24);
+ }
 }
 module rear_socket_contacts(){
- for(p=rear_sockets)rear_pose(p[0],p[1])for(i=[0:p[3]-1],y=p[4]==3?[-3.5,0,3.5]:[-2.5,2.5])translate([(i-(p[3]-1)/2)*2.54,y,1])cube([.65,.65,3]);
- rear_pose(205,51)for(v=[[-3,-9],[3,0],[-3,9]])translate([v[0],v[1],1])difference(){cylinder(d=5,h=3,$fn=24);cylinder(d=3.8,h=4,$fn=24);}
- rear_pose(130,37)for(p=[[-7,-3],[7,-3],[0,5]])translate([p[0],p[1],1])cube([3,.7,3],center=true);
+ for(p=rear_sockets)rear_pose(p[0],p[1])for(i=[0:p[3]-1],j=[0:p[4]-1])
+  // V24 has alternating populated positions in the specimen close-up.
+  if(p[0]!=20 || (i+j)%2==0)
+   translate([(i-(p[3]-1)/2)*(p[3]==5?3.5:2.54),(j-(p[4]-1)/2)*3.5,-2])cube([.65,.65,4]);
+ rear_pose(205,41)for(v=[[3,-9],[-3,0],[3,9]])translate([v[0],v[1],-2])difference(){
+  cylinder(d=4.5,h=3,$fn=28);translate([0,0,-.1])cylinder(d=3.3,h=3.2,$fn=24);
+ }
+ // Vertically mounted mains inlet: blades are inside the recessed shroud.
+ rear_pose(130,40)for(v=[[-4,0],[4,-6],[4,6]])translate([v[0],v[1],-1])cube([.8,3,5],center=true);
 }
+module mains_outline(w,h){offset(r=1)polygon([[-w/2,-h/2+4],[-w/2+5,-h/2],[w/2-5,-h/2],[w/2,-h/2+4],[w/2,h/2-4],[w/2-5,h/2],[-w/2+5,h/2],[-w/2,h/2-4]]);}
 module rear_power_black(){
- rear_pose(130,37)difference(){slab(32,26,3,2);translate([0,0,1])slab(24,18,5,2);}
- for(z=[34,70])rear_pose(170,z){cylinder(d=16,h=3,$fn=48);translate([0,0,3])difference(){cylinder(d=12,h=3,$fn=32);translate([-5,-.7,2])cube([10,1.4,2]);}}
+ rear_pose(130,40)difference(){
+  union(){linear_extrude(1.8)mains_outline(28,49);translate([0,0,-4])linear_extrude(8)mains_outline(23,31);}
+  translate([0,0,-3])linear_extrude(10)mains_outline(17,25);
+  for(y=[-22,22])translate([0,y,-1])cylinder(d=3.4,h=5,$fn=24);
+ }
+ for(z=[29,52])rear_pose(170,z){
+  cylinder(d=15,h=1.4,$fn=48);
+  translate([0,0,1.4])difference(){
+   cylinder(d=12.5,h=2,$fn=48);
+   for(a=[0,90])rotate([0,0,a])translate([0,0,1.3])cube([9,1.5,2],center=true);
+  }
+ }
 }
-module rear_blanking_plates(){for(p=[[-78,73],[-179,73],[-78,52]])rear_pose(p[0],p[1])translate([0,0,1.2])slab(84,19,1.2,2);}
+module rear_blanking_plates(){
+ for(p=[[-78,73],[-179,73],[-78,48]])rear_pose(p[0],p[1])translate([0,0,.8]){
+  slab(85,18,1.2,1.5);translate([0,0,1.2])slab(83,16,.4,1.5);
+ }
+}
+module rear_fasteners(){
+ rear_pose(130,40)for(y=[-22,22])translate([0,y,1.8])screw(5,1);
+ for(p=rear_sockets)rear_pose(p[0],p[1])for(side=[-1,1])translate([side*(p[5]/2+11),0,-1])screw(3,1);
+ for(x=[-230,230])rear_pose(x,103)translate([0,0,2])screw(5,1);
+}
+module rear_nameplate(){rear_pose(24,72)translate([0,0,1.05])slab(75,16,.2,.15);}
+module rear_text(x,z,t,size=3){translate([x,case_d/2-1.8,z])rotate([90,0,180])linear_extrude(.12)text(t,size=size,halign="center",font="Liberation Sans");}
 module rear_legends(){
- for(p=[[20,77,"DISPLAY"],[20,35,"V24"],[-78,35,"PRINTER"],[-179,35,"FLOPPY-DISK"],[170,82,"F1"],[170,47,"F2"],[-78,64,"GRAF.-DISPLAY"]])
- translate([p[0],case_d/2-1.8,p[1]])rotate([90,0,180])linear_extrude(.12)text(p[2],size=3,halign="center",font="Liberation Sans");
+ for(p=[[10,56,"DISPLAY"],[20,29,"V24"],[-78,29,"PRINTER"],[-179,38,"FLOPPY-DISK"],[-78,60,"GRAF.-DISPLAY"],[205,70,"DISPLAY"],[130,72,"220V~"],[-179,52,"A"],[-23,71,"B"]])rear_text(p[0],p[1],p[2]);
+ for(p=[[180,62,"F1"],[180,57,"T1,6"],[180,19,"F2"],[180,14,"T1,6"]])rear_text(p[0],p[1],p[2],2.3);
+}
+module rear_nameplate_ink(){
+ for(p=[[45,74,"Typ W",2.5],[5,74,"1715/330",2.7],[42,68,"Masch.-Nr.",2.1],[5,68,"67581",2.7]])
+ translate([p[0],case_d/2-1.65,p[1]])rotate([90,0,180])linear_extrude(.06)text(p[2],size=p[3],halign="center",font="Liberation Sans");
 }
 module specimen_shape(p){
+ if(p=="rear-recesses")rear_recesses();
+ if(p=="rear-socket-inserts")rear_socket_inserts();
+ if(p=="rear-fasteners")rear_fasteners();
+ if(p=="rear-nameplate")rear_nameplate();
+ if(p=="rear-nameplate-ink")rear_nameplate_ink();
  if(p=="keyboard-controller-board")keyboard_controller_board();
  if(p=="keyboard-controller-chips")keyboard_controller_chips();
  if(p=="keyboard-controller-ceramic")keyboard_controller_ceramic();
