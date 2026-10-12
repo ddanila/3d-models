@@ -138,5 +138,29 @@
     "faceRecess": 0.4,
     "color": "#74776f",
     "status": "Nearly flush grey pad confirmed visually; dimensions and uncalibrated color are estimates."
+  },
+  "monitorJoint": {
+    "photos": [
+      "PXL_20261012_125018215.jpg",
+      "PXL_20261012_125021771.jpg",
+      "PXL_20261012_125025415.jpg"
+    ],
+    "heightFraction": 0.5,
+    "modeledGap": 2,
+    "innerLipInset": 2.5,
+    "status": "Photo-estimated clean joint; the inset dark retainer follows the tapered envelope. Exact gap and hidden fastening arrangement are unmeasured."
+  },
+  "keyboardMarginReview": {
+    "photo": "PXL_20261012_123006039.jpg",
+    "pitch": 19,
+    "columnOrigin": -230,
+    "deckWidth": 492,
+    "leftFlangeMargin": 16.6,
+    "rightFlangeMargin": 11.1,
+    "raisedWideKeys": [
+      18,
+      23
+    ],
+    "status": "Photo-fit pitch and margins; raised wide-key sizes are owner measurements."
   }
 }

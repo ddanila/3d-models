@@ -57,13 +57,41 @@ module keyboard_controller_ink(){keyboard_controller_pose(){
 module keyboard_insulators(){
  translate([0,keyboard_y,11.2])rotate([keyboard_slope,0,0])for(y=[-75,43])translate([0,y,0])slab(482,10,1.5,.5);
 }
+// Visible underside buses from 123907435. This is artwork, not a netlist.
+function matrix_bus(i) = let(y=-62+i*13)
+ [[-231+i%3*9,y],[25+i*4,y],[32+i*4,y+7],[85+i*2,y+7],
+  [92+i*2,y],[223-i%3*13,y]];
+module board_trace(path,width=.75,height=.12){
+ for(i=[0:len(path)-2])hull()for(j=[i,i+1])translate([path[j][0],path[j][1],0])cylinder(d=width,h=height,$fn=12);
+}
 module keyboard_matrix_artwork(){
  translate([0,keyboard_y,12.8])rotate([keyboard_slope,0,0]){
- // Simplified visible row buses only; deliberately no invented netlist.
- for(i=[0:7])translate([0,-66+i*14,0])cube([435,1,.15],center=true);
- for(k=keys)translate([k[0],k[1],-.1])difference(){cylinder(d=2.6,h=.25,$fn=12);cylinder(d=1,h=.4,$fn=8);}
+  for(i=[0:7])board_trace(matrix_bus(i),1.5);
+  for(i=[0:7],j=[0,5])translate(matrix_bus(i)[j])cylinder(d=3,h=.12,$fn=20);
+  // Narrow parallel bundle joining the controller side of the broad board.
+  for(i=[0:5])board_trace([[-65+i*1.6,12],[-35+i*1.6,12],[-24+i*1.6,24],[56,24+i*1.3],[69,38+i*1.3],[180,38+i*1.3]],.6);
  }
 }
+module keyboard_pcb_metal(){
+ translate([0,keyboard_y,12.55])rotate([keyboard_slope,0,0]){
+  for(i=[0:7],j=[0,5])translate(matrix_bus(i)[j])difference(){cylinder(d=1.6,h=.23,$fn=20);translate([0,0,-.1])cylinder(d=.65,h=.5,$fn=12);}
+  // Clean screw heads and through-board solder points visible in the photos.
+  for(x=[-214,-152,-82,-12,58,128,198],y=[-51,1,32])translate([x,y,0])rotate([180,0,0])screw(3.5,.6);
+ }
+}
+module keyboard_controller_traces(){keyboard_controller_pose(){
+ // Parallel edge routing and local lead fan-outs, photo-estimated. Component
+ // identities/lead pitch are retained; these visual routes are not electrical.
+ for(i=[0:4])translate([0,0,1.65])board_trace([[-125,-21+i],[-62-i*2,-21+i],[-55-i*2,-14+i],[-8,-14+i],[-2,-20+i],[127,-20+i]],.45);
+ for(p=controller_dips,i=[0:p[2]/2-1],side=[-1,1])
+  let(x=p[0]+(i-(p[2]/2-1)/2)*2.54,y=p[1]+side*p[3]/2)
+  translate([0,0,1.65]){
+   translate([x,y,0])difference(){cylinder(d=1.5,h=.12,$fn=12);cylinder(d=.7,h=.2,$fn=12);}
+   board_trace([[x,y],[x,y+side*2],[x+1,y+side*3]],.45);
+  }
+ // Solder side remains inspectable when orbiting below the controller.
+ for(i=[0:11])translate([0,0,-.12])board_trace([[-115,-18+i*2.4],[-32-i,-18+i*2.4],[-24-i,-10+i*2.4],[100-i,-10+i*2.4]],.4);
+}}
 module system_foot_metal(){
  for(x=[-225,225],y=[-170,170])translate([x,y,-3])specimen_foot_insert();
 }
@@ -178,12 +206,19 @@ module rear_fasteners(){
  for(x=[-230,230])rear_pose(x,103)translate([0,0,2])screw(5,1);
 }
 module rear_nameplate(){rear_pose(24,72)translate([0,0,1.05])slab(75,16,.2,.15);}
-module rear_text(x,z,t,size=3){translate([x,case_d/2-1.8,z])rotate([90,0,180])linear_extrude(.12)text(t,size=size,halign="center",font="Liberation Sans");}
+module rear_text(x,z,t,size=3){translate([x,case_d/2-1.8,z])rotate([90,0,180])linear_extrude(.06)difference(){
+ text(t,size=size,halign="center",font="Liberation Sans");
+ offset(delta=-.11)text(t,size=size,halign="center",font="Liberation Sans");
+ }}
 module rear_legends(){
  for(p=[[10,56,"DISPLAY"],[20,29,"V24"],[-78,29,"PRINTER"],[-179,38,"FLOPPY-DISK"],[-78,60,"GRAF.-DISPLAY"],[205,70,"DISPLAY"],[130,72,"220V~"],[-179,52,"A"],[-23,71,"B"]])rear_text(p[0],p[1],p[2]);
  for(p=[[180,62,"F1"],[180,57,"T1,6"],[180,19,"F2"],[180,14,"T1,6"]])rear_text(p[0],p[1],p[2],2.3);
 }
 module rear_nameplate_ink(){
+ // Clean printed field borders from 125413618; stamped values remain typeset.
+ for(z=[74.8,68.8])translate([5,case_d/2-1.65,z])rotate([90,0,180])linear_extrude(.06)
+  difference(){square([28,4.8],center=true);square([27.65,4.45],center=true);}
+
  for(p=[[45,74,"Typ W",2.5],[5,74,"1715/330",2.7],[42,68,"Masch.-Nr.",2.1],[5,68,"67581",2.7]])
  translate([p[0],case_d/2-1.65,p[1]])rotate([90,0,180])linear_extrude(.06)text(p[2],size=p[3],halign="center",font="Liberation Sans");
 }
@@ -202,6 +237,8 @@ module specimen_shape(p){
  if(p=="keyboard-controller-metal")keyboard_controller_metal();
  if(p=="keyboard-controller-ink")keyboard_controller_ink();
  if(p=="keyboard-insulators")keyboard_insulators();
+ if(p=="keyboard-pcb-metal")keyboard_pcb_metal();
+ if(p=="keyboard-controller-traces")keyboard_controller_traces();
  if(p=="keyboard-matrix-artwork")keyboard_matrix_artwork();
  if(p=="system-foot-metal")system_foot_metal();
  if(p=="monitor-under-controls")monitor_under_controls();

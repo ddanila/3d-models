@@ -425,3 +425,41 @@ Danila subsequently measured the raised bodies: blank Shift caps are 18 mm wide,
 The rear uses the owner’s 125413618/125300878/125449006/125457861/125502437 photographs for recessed openings, pale keyed inserts, separate retaining blocks, plated contacts, blanking plates and engraved-style legends. The monitor outlet has three metal contact sleeves and two unplated alignment holes. The mains inlet is vertical, with a recessed shroud and two slotted mounting screws; both fuse caps have cross slots. V24’s alternating populated positions are visible in the close-up; other contact populations and hidden details remain approximations, not wiring documentation. The clean nameplate preserves **Typ W 1715/330, Masch.-Nr. 67581** without copying corrosion or wear.
 
 Photo 124827690 shows a grey reset pad nearly flush with the lower front panel. It now has its own geometry and a real panel opening rather than reusing the protruding power rocker. The 16 × 16 mm pad and 0.4 mm face recess are photo estimates. Power and reset remain distinct pickable browser controls.
+
+
+## Surface and joint review (October 12)
+
+The mid-height monitor joint now has a continuous 2 mm gap and a separate dark
+inner lip following the tapered shell. Straight support strips previously broke
+through the sidewalls near the rear. The gap and hidden lip remain estimates;
+owner close-ups 125018215, 125021771 and 125025415 establish the visible dark joint,
+not a measured fastening design. Opening the monitor keeps the lip with its
+lower shell.
+
+Owner photos 125413618 and 125300878 show outlined rear-panel lettering. The CAD
+now uses narrow outline strokes and clean nameplate field borders. `rearMarkings`
+is extracted from the same OpenSCAD text and coordinates for antialiased browser
+lettering. The nameplate retains the specimen identifiers; no rust is modeled.
+
+Paint, molded plastic, rubber and plated metal have separate finishes. The paint
+uses fine procedural relief in model millimetres, while bare metal has stronger
+reflections and the rubber remains matte. Roughness and relief are visual fits
+to the owner photographs (including keyboard underside 133005363 and monitor
+close-up 125021771), not calibrated measurements. Photographed lighting, dirt
+and wear are not copied onto the panels.
+
+
+### Keyboard margin and PCB follow-up
+
+A second overhead comparison with owner photo 123006039 corrects the previous
+19.5 mm fit to 19 mm pitch and a -230 mm column origin. This leaves about 16 mm
+and 11 mm of black deck beside the left and right key flanges. The 18/23 mm
+raised wide-key measurements are retained independently of their flange sizes.
+Switches, deck cutouts and plate holes share the revised coordinates.
+
+The broad board now includes clean, shaped underside buses, solder pads and
+screw heads based on 123907435. The narrow controller includes metallic routing
+and lead fan-outs based on 123622947. These are visually estimated details,
+not validated electrical connectivity. In the museum's open keyboard view,
+keys/deck move back and switches/springs move forward, leaving the PCB exposed;
+the controller lifts out separately. Both amber lamps follow the firmware state.

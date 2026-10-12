@@ -1,12 +1,25 @@
 // Provisional K7222.25 interior, based on Robotrontechnik open-shell photos.
 // Tube and component dimensions are photo estimates; not a verified board revision.
+monitor_joint_z = monitor_z + monitor_h * monitor_seam_fraction;
 module monitor_upper() {
-    intersection(){monitor_shell();translate([-500,-500,monitor_z+monitor_h*.5])cube([1000,1000,500]);}
+    intersection(){monitor_shell();translate([-500,-500,monitor_joint_z])cube([1000,1000,500]);}
+}
+module monitor_joint_profile() {
+    projection(cut=true)translate([0,monitor_y,-monitor_h*monitor_seam_fraction])monitor_envelope();
+}
+module monitor_joint_lip() {
+    // A continuous inset lip follows the taper. The old straight strips crossed
+    // the outer sidewalls near the rear, breaking the mid-height seam.
+    difference() {
+        translate([0,0,monitor_joint_z-2.6])linear_extrude(5.2)difference(){
+            offset(delta=-2.5)monitor_joint_profile();
+            offset(delta=-4.5)monitor_joint_profile();
+        }
+        translate([-500,-500,monitor_joint_z-4])cube([1000,386,10]);
+    }
 }
 module monitor_lower() {
-    // Thin inner seam ledges; join is at the owner-observed mid-height.
-    for(x=[-141,139])translate([x,-109,317])cube([2,217,6]);
-    intersection(){monitor_shell();translate([-500,-500,0])cube([1000,1000,monitor_z+monitor_h*.5]);}
+    intersection(){monitor_shell();translate([-500,-500,0])cube([1000,1000,monitor_joint_z]);}
 }
 module tube_funnel() {
     // Multi-section funnel: broad shoulder, rounded transition, narrow neck.
@@ -64,6 +77,7 @@ module monitor_wires() {
     translate([36,-42,404])scale([1,1,.35])sphere(d=24,$fn=32);
 }
 module monitor_interior_shape(p) {
+    if(p=="monitor-joint-lip")monitor_joint_lip();
     if(p=="monitor-shell-upper")monitor_upper();
     if(p=="monitor-shell-lower")monitor_lower();
     if(p=="tube-funnel")tube_funnel();

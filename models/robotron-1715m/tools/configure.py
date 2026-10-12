@@ -7,7 +7,7 @@ left='PXL_20261009_132916421.MP.jpg'
 right='PXL_20261009_132919894.jpg'
 keys=[]
 def key(label,u,row,width=1,style=0,photo=left,cx=None,cy=None,height=1):
-    x=-235+u*19.5;y=22-row*19.5
+    x=-230+u*19.0;y=22-row*19.0
     item=dict(id=f'key-{len(keys):03}',row=row,u=u,label=label,x=x,y=y,width=width,height=height,style=style)
     if cx is not None:
         # Photos are portrait, with the keyboard turned clockwise. Keep the
