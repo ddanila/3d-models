@@ -8,7 +8,7 @@ module monitor_joint_profile() {
     projection(cut=true)translate([0,monitor_y,-monitor_h*monitor_seam_fraction])monitor_envelope();
 }
 module monitor_joint_lip() {
-    // A continuous inset lip follows the taper. The old straight strips crossed
+    // A continuous inset lip follows the cabinet outline. The old straight strips crossed
     // the outer sidewalls near the rear, breaking the mid-height seam.
     difference() {
         translate([0,0,monitor_joint_z-2.6])linear_extrude(5.2)difference(){

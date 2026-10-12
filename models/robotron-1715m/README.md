@@ -430,7 +430,7 @@ Photo 124827690 shows a grey reset pad nearly flush with the lower front panel. 
 ## Surface and joint review (October 12)
 
 The mid-height monitor joint now has a continuous 2 mm gap and a separate dark
-inner lip following the tapered shell. Straight support strips previously broke
+inner lip following the shell outline. Straight support strips previously broke
 through the sidewalls near the rear. The gap and hidden lip remain estimates;
 owner close-ups 125018215, 125021771 and 125025415 establish the visible dark joint,
 not a measured fastening design. Opening the monitor keeps the lip with its
@@ -463,3 +463,19 @@ and lead fan-outs based on 123622947. These are visually estimated details,
 not validated electrical connectivity. In the museum's open keyboard view,
 keys/deck move back and switches/springs move forward, leaving the PCB exposed;
 the controller lifts out separately. Both amber lamps follow the firmware state.
+
+### Monitor cabinet and external leads correction
+
+Owner view `125018215` and the underside view `125132359.MP` show a rectangular
+cabinet with parallel walls. Removed the old estimated 320-to-270 mm rear taper
+and the rear height reduction; rounded edges, the hollow shell and mid-height
+joint remain. The standalone OpenSCAD/STL and browser parts share this envelope.
+
+Photos `125123660`, `125234638` and `125402713.MP` establish two captive leads,
+the thicker pale power cable, thinner gray signal cable, upright RFT power plug
+and locking signal backshell. Both now route from the boot beside the stand
+to their corresponding DISPLAY connectors. Reconstructed clean plugs include
+seams, screws, latch/bail details and a brown power-cable collar. Cable diameters
+(8.4/5.6 mm), plug dimensions and slack remain photo estimates. Browser inspection
+extends the leads to keep their monitor ends attached; that extension does not
+assert a measured cable length. No wear or full-photo skins are added.

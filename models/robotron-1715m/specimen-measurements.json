@@ -148,7 +148,7 @@
     "heightFraction": 0.5,
     "modeledGap": 2,
     "innerLipInset": 2.5,
-    "status": "Photo-estimated clean joint; the inset dark retainer follows the tapered envelope. Exact gap and hidden fastening arrangement are unmeasured."
+    "status": "Photo-estimated clean joint; the inset dark retainer follows the cabinet outline. Exact gap and hidden fastening arrangement are unmeasured."
   },
   "keyboardMarginReview": {
     "photo": "PXL_20261012_123006039.jpg",
@@ -162,5 +162,31 @@
       23
     ],
     "status": "Photo-fit pitch and margins; raised wide-key sizes are owner measurements."
+  },
+  "monitorCabinetAndLeads": {
+    "status": "Owner-photo reconstruction; overall envelope retained, local dimensions and cable slack estimated",
+    "photos": [
+      "PXL_20261012_125018215.jpg",
+      "PXL_20261012_125123660.jpg",
+      "PXL_20261012_125234638.jpg",
+      "PXL_20261012_125402713.MP.jpg"
+    ],
+    "shell": "Parallel sides/top/bottom with 10 mm edge rounding; removed unsupported 320-to-270 mm rear taper and 20 mm rear height inset. Mid-height seam retained.",
+    "outlet": "Two captive leads through a black rectangular underside boot beside the stand",
+    "leads": [
+      {
+        "function": "power",
+        "diameterMm": 8.4,
+        "color": "light gray",
+        "destination": "rear upright DISPLAY power connector"
+      },
+      {
+        "function": "signal",
+        "diameterMm": 5.6,
+        "color": "gray",
+        "destination": "rear DISPLAY data connector"
+      }
+    ],
+    "routing": "Clean curved slack behind system unit. Exploded-view extension is illustrative, not measured available slack."
   }
 }

@@ -102,7 +102,7 @@ module monitor_under_controls(){
   translate([0,0,3])cylinder(d=15,h=.8,$fn=48);
  }
  // Cable outlet boot, leaving a real recess in the lower shell.
- translate([72,monitor_y+30,monitor_z-2])difference(){slab(30,22,5,2);translate([0,0,-1])slab(21,12,7,1);}
+ translate([108,monitor_y+25,monitor_z-2])difference(){slab(34,63,4,1);translate([0,0,-1])slab(23,49,6,.5);}
 }
 module monitor_stand_metal(){
  translate([0,monitor_y,monitor_z-4])for(y=[-58,58])translate([0,y,0]){
