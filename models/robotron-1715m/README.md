@@ -360,3 +360,19 @@ The 96-tpi correction changes animation metadata only, not the rest-pose STL.
 exposes its motor-gated phase and stepwise cylinder position to DAC, replacing
 independent browser rotation for the current core. This is synchronization with
 the emulated model, not measured motor acceleration or index alignment.
+
+### Upper head arm and inserted medium
+
+The upper load arm is now a separate `drive-head-arm-*` mesh, removed from the
+stationary carriage-metal mesh. `driveMotion` supplies its pivot; DAC tilts it
+through an illustrative 0.08 radians according to the emulated head-load progress.
+The pivot, lift and linkage remain estimates, pending specimen measurements.
+The lower carriage continues to follow the 96-tpi radial travel independently.
+
+`drive-medium-*` represents a thin exposed 130 mm flexible magnetic disk with hub
+and index openings. Its geometry and markings are generic references, not a scan
+of the owner's media. DAC shows it only with media inserted, rotating in phase
+with the hub, and makes it translucent so the mechanisms remain inspectable.
+The stationary paper jacket is deliberately omitted from this inspection view.
+Drive downloads include the new editable parts. No new third-party assets were
+imported; these additions are original MIT OpenSCAD geometry.

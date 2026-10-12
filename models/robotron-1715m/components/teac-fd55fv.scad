@@ -102,11 +102,9 @@ module teac_head() {
     }
 }
 module teac_head_metal() {
-    translate([62,122,30])difference(){cube([18,15,1]);translate([2,2,-1])cube([14,11,3]);}
-    translate([64,122,29])cube([14,10,1]);
     translate([62,145,23])difference(){cube([18,6,1]);for(x=[3,15])translate([x,3,-1])cylinder(d=2,h=4,$fn=12);}
     for(x=[64,77])translate([x,148,24])screw(3,1);
-    translate([69,133,25])cube([2,13,.5]);
+
     // Photo-visible carriage return spring; dimensions and winding estimated.
     for(i=[0:8])translate([66+i*.65,148,27])rotate([0,90,0])difference(){
         cylinder(d=3.2,h=.35,$fn=16);translate([0,0,-.1])cylinder(d=2.5,h=.6,$fn=16);
@@ -138,4 +136,20 @@ module teac_cable_plug() {
     // Four individual power entry wells, with the harness ending in the socket.
     translate([11,201,4])difference(){cube([19,8,7]);
         for(x=[2.5:4.5:16])translate([x,9,3.5])rotate([90,0,0])cylinder(d=2.7,h=7,$fn=16);}
+}
+
+// Separate upper load arm. Pivot and lift are illustrative until measured.
+module teac_head_arm() {
+    translate([62,122,30])difference(){cube([18,15,1]);translate([2,2,-1])cube([14,11,3]);}
+    translate([64,122,29])cube([14,10,1]);
+    translate([69,133,30])cube([2,15,.5]);
+}
+// Exposed flexible magnetic medium, without its stationary paper jacket.
+// The browser makes it translucent for mechanism inspection.
+module teac_medium() {
+    translate([70,59,29.5])difference(){
+        cylinder(r=65,h=.08,$fn=128);
+        translate([0,0,-.1])cylinder(r=14.3,h=.3,$fn=48);
+        translate([0,25,-.1])cylinder(r=1.3,h=.3,$fn=16);
+    }
 }
