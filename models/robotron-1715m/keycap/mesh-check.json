@@ -1,0 +1,18 @@
+{
+  "triangles": 2548,
+  "closedTwoManifold": true,
+  "connectedComponents": 1,
+  "boundsMm": [
+    [
+      -8.9,
+      -8.9,
+      0.0
+    ],
+    [
+      8.9,
+      8.9,
+      11.2
+    ]
+  ],
+  "validation": "Each undirected edge has two incident faces; all mesh vertices connected. No physical fit certification."
+}

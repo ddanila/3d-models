@@ -479,3 +479,13 @@ seams, screws, latch/bail details and a brown power-cable collar. Cable diameter
 (8.4/5.6 mm), plug dimensions and slack remain photo estimates. Browser inspection
 extends the leads to keep their monitor ends attached; that extension does not
 assert a measured cable length. No wear or full-photo skins are added.
+
+### Loose keycap reconstruction (October 12 evening)
+
+The [standalone keycap](keycap/README.md) includes an editable OpenSCAD model,
+closed one-piece STL and top/underside previews. The new loose-cap photos replace
+the earlier guessed square stem with a circular cup and annular spring recess.
+The thick skirt and pale inner core follow the owner photographs; local fit
+dimensions remain estimates. Spring dimensions are now confirmed by the owner
+as 13 mm outer diameter, 23 mm free length and **0.4 mm wire**, superseding the
+earlier approximately 0.35 mm estimate.
