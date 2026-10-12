@@ -399,3 +399,11 @@ with the hub, and makes it translucent so the mechanisms remain inspectable.
 The stationary paper jacket is deliberately omitted from this inspection view.
 Drive downloads include the new editable parts. No new third-party assets were
 imported; these additions are original MIT OpenSCAD geometry.
+
+## Keycap side views and shared feet (October 12, second update)
+
+The three MIT owner photographs in `Photos-1-001 (7).zip` show a distinct square key flange, a taller nearly vertical rounded black body and shallow dished top. Long black keys retain an elongated rounded body. Clear function keys use rounded rectangular shells around separate silver liners, with black legends beneath the clear top. The browser uses transparent glossy plastic (a lightweight alpha approximation, without refraction) and a separate metallic inlay; no photographed dirt or reflections are copied. Heights, wall thickness and dish curvature remain photo estimates, recorded in `specimen-measurements.json`. `cap_insert()` and the keycap-insert export keep the construction editable in OpenSCAD.
+
+Danila confirms the case and keyboard feet are identical parts. Both now instantiate `specimen_foot()` and `specimen_foot_insert()` (32 × 11 × 4 mm estimated rubber envelope), replacing the earlier different case-foot estimate.
+
+In the browser, opening the keyboard separates the mounting plate and switches from the broad PCB, turns that PCB over to expose the owner-photographed solder face, and lifts the narrow controller separately. This is an inspection arrangement; closing it restores the fitted positions. The simplified bus artwork is visual reference, not an electrical netlist.

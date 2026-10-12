@@ -64,10 +64,9 @@ module keyboard_matrix_artwork(){
  for(k=keys)translate([k[0],k[1],-.1])difference(){cylinder(d=2.6,h=.25,$fn=12);cylinder(d=1,h=.4,$fn=8);}
  }
 }
-module system_foot_metal(){for(x=[-225,225],y=[-170,170])translate([x,y,-6]){
- slab(25,8,1,.4);for(s=[-1,1])translate([0,s*3.5,0])cube([25,1,2],center=true);
- translate([0,0,-1.5])rotate([180,0,0])screw(4.5,1.5);
-}}
+module system_foot_metal(){
+ for(x=[-225,225],y=[-170,170])translate([x,y,-3])specimen_foot_insert();
+}
 module monitor_under_controls(){
  for(x=[-112,112])translate([x,monitor_y-115,monitor_z-1])rotate([180,0,0]){
   cylinder(d1=38,d2=35,h=3,$fn=72);

@@ -154,21 +154,22 @@ module keyboard_bottom() {
         for(x=[-218,0,218],y=[-87,87])translate([x,y,-2])cylinder(d=3.5,h=6);
     }
 }
+module specimen_foot() {
+    difference(){slab(32,11,4,1.3);translate([0,0,-1])slab(25,7,3.5,.7);}
+}
+module specimen_foot_insert() {
+    translate([0,0,1.8])slab(24,5,1,.4);
+    for(side=[-1,1])translate([0,side*2.4,2.2])cube([24,.8,1.4],center=true);
+    translate([0,0,1])screw(3,1.2);
+}
 module keyboard_feet() {
-    for(x=[-200,200],y=[-65,65]) translate([x,keyboard_y+y,-5]) difference() {
-        slab(32,11,4,1.3);
-        translate([0,0,-1])slab(25,7,3.5,.7);
-    }
+    for(x=[-200,200],y=[-65,65])translate([x,keyboard_y+y,-5])specimen_foot();
 }
 module screw(d=5,h=1.7) {
     difference(){cylinder(d=d,h=h,$fn=32);translate([-d/2,-.45,-.1])cube([d,.9,.7]);}
 }
 module keyboard_metal() {
-    for(x=[-200,200],y=[-65,65])translate([x,keyboard_y+y,0]){
-        translate([0,0,-3.2])slab(24,5,1,.4);
-        for(side=[-1,1])translate([0,side*2.4,-2.8])cube([24,.8,1.4],center=true);
-        translate([0,0,-4])screw(3,1.2);
-    }
+    for(x=[-200,200],y=[-65,65])translate([x,keyboard_y+y,-5])specimen_foot_insert();
     for(x=[-218,0,218],y=[-87,87])translate([x,keyboard_y+y,0]){
         translate([0,0,-.7])cylinder(d=7,h=.8,$fn=32);
         translate([0,0,-2.1])difference(){cylinder(d=5.5,h=1.5,$fn=6);translate([-3,-.45,-.1])cube([6,.9,.8]);}
@@ -196,22 +197,42 @@ module keyboard_fillers() {
             translate([p[0],p[1],0])slab(p[2],p[3],3,2);
     }
 }
-module cap(w,h,style) {
-    // Square skirt, tapered shoulder and dished top: all highlights are 3D.
-    difference(){union(){slab(w,h,1.4,2);
-        difference(){hull(){translate([0,0,1.4])slab(w-.4,h-.4,1,2);
-            translate([0,0,7])
-                if(style==1)slab(w-2,h-3,1,3);
-                else slab(w-2,h-3,1,min(w-2,h-3)/2-.1);
-        }translate([0,0,36])scale([max(1,(w-4)/16),max(1,(h-4)/16),1])sphere(r=29,$fn=96);}
+// Owner side views 135524773/135528166/135532764: square flange,
+// nearly vertical rounded body and shallow dish. Dimensions remain estimates.
+module cap_dish(w,h,drop=0) {
+    translate([0,0,69-drop])scale([max(1,(w-4)/16),max(1,(h-4)/16),1])sphere(r=60,$fn=96);
+}
+module cap_insert(w,h) {
+    // Silver liner inside the clear function-key shell; separate export/material.
+    difference(){
+        translate([0,0,1.8])slab(w-2.6,h-2.6,7.1,1.5);
+        cap_dish(w,h,.8);
+        translate([0,0,1.7])slab(w-4.4,h-4.4,4.8,1);
     }
-    translate([0,0,-.1])slab(w-3.4,h-3.4,4.5,1.2);
+}
+module cap(w,h,style) {
+    difference(){
+        union(){
+            slab(w,h,1.5,1.7);
+            if(style==1)hull(){
+                translate([0,0,1.5])slab(w-.4,h-.4,.2,2);
+                translate([0,0,9.4])slab(w-1,h-1,.1,2.2);
+            }
+            else hull(){
+                translate([0,0,1.5])slab(w-3.2,h-3.2,.2,min(w-3.2,h-3.2)/2-.1);
+                translate([0,0,9.4])slab(w-4,h-4,.1,min(w-4,h-4)/2-.1);
+            }
+        }
+        cap_dish(w,h);
+        // Thin clear shell; opaque caps retain their moulded hollow underside.
+        if(style==1)translate([0,0,-.1])slab(w-2,h-2,8.2,1.3);
+        else translate([0,0,-.1])slab(w-6,h-6,6,1);
     }
     difference(){translate([0,0,-2])cylinder(d=7,h=6,$fn=24);translate([0,0,-2.1])cube([3.3,3.3,9],center=true);}
 }
 module keycaps(style) {
     translate([0,keyboard_y,28]) rotate([keyboard_slope,0,0])
-        for(k=keys) if(k[4]==style) translate([k[0],k[1],0])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,style);
+        for(k=keys) if(k[4]==style) translate([k[0],k[1],0]){cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,style);if(style==1)color("Silver")cap_insert(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2);}
 }
 function bezier(p,t)=pow(1-t,3)*p[0]+3*pow(1-t,2)*t*p[1]+3*(1-t)*t*t*p[2]+t*t*t*p[3];
 module cable() {
@@ -262,10 +283,8 @@ module monitor_tape() {
     translate([0,monitor_y-120,monitor_z+monitor_h-2.1])rotate([-3.9,0,-3])slab(52,9,.3,.5);
 }
 module hardware() {
-    // Both new underside views show rectangular rubber frames and metal inserts.
-    for(x=[-225,225],y=[-170,170])translate([x,y,-8])difference(){
-        slab(34,16,9,2);translate([0,0,-1])slab(27,9,7,1);
-    }
+    // Owner confirms these are the same inserts as the keyboard feet.
+    for(x=[-225,225],y=[-170,170])translate([x,y,-3])specimen_foot();
 }
 module shape(p) {
     specimen_shape(p);
@@ -305,10 +324,11 @@ module shape(p) {
     if(p=="keys-red")keycaps(2);
     if(p=="hardware")hardware();
     if(p=="cable")cable();
+    if(p=="keycap-insert")let(k=keys[key_index])cap_insert(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2);
     if(p=="keycap")let(k=keys[key_index])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[4]);
 }
 parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell-lower", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latch-0", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape", "drive-frames", "drive-mechanisms", "drive-motors", "drive-boards", "drive-contacts", "drive-coils", "drive-bracket", "logic-boards", "logic-chips", "logic-pins", "logic-connectors", "psu-chassis", "psu-cover", "fan-frame", "fan-rotor", "ribbon-cables", "ribbon-stripes", "power-wires-red", "power-wires-black", "power-wires-yellow", "keyboard-pcb", "keyboard-switches", "monitor-shell-upper", "tube-funnel", "tube-neck", "monitor-yoke", "monitor-coils", "monitor-chassis", "monitor-boards", "monitor-components", "monitor-capacitors", "monitor-shield", "monitor-wires", "plug-insert", "drive-power-sockets", "drive-traces", "drive-label-plates", "drive-spindle-0", "drive-spindle-1", "drive-head-0", "drive-head-1", "drive-latch-1", "drive-clamp-0", "drive-clamp-1", "drive-head-metal-0", "drive-head-metal-1", "drive-board-components", "logic-mounts", "chassis-fasteners", "keyboard-plate", "monitor-fasteners", "monitor-passives", "monitor-socket", "prototype-spring", "prototype-stem", "logic-resistors", "logic-ceramics", "logic-electrolytics", "logic-crystals", "logic-passive-leads", "logic-film", "logic-pads", "logic-solder", "logic-connector-contacts", "prototype-pcb-pad", "prototype-pcb-solder", "ribbon-ridges", "drive-cable-plugs", "drive-head-arm-0", "drive-head-arm-1", "drive-medium-0", "drive-medium-1", "keyboard-controller-board", "keyboard-controller-chips", "keyboard-controller-ceramic", "keyboard-controller-rom-cover", "keyboard-controller-connectors", "keyboard-controller-caps", "keyboard-controller-metal", "keyboard-controller-ink", "keyboard-insulators", "keyboard-matrix-artwork", "system-foot-metal", "monitor-under-controls", "monitor-stand-metal", "rear-socket-bodies", "rear-socket-contacts", "rear-power-black", "rear-blanking-plates", "rear-legends", "rear-panel"];
-colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#333839", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#c3b995", "#96988f", "#487eac", "#a2a4a0", "#bec2bd", "#282c2b", "#28675a", "#b3a775", "#9e793b", "#afb4ae", "#386349", "#25292b", "#b3b8b4", "#b1b5a1", "#a2a6a3", "#b5b9b2", "#818984", "#282d2a", "#a0a59b", "#975b50", "#9e3930", "#252a28", "#b6a05b", "#346750", "#30352f", "Wheat", "#363d3a", "#78765f", "#38372e", "#ae7545", "#a3a79c", "#486551", "#343835", "#438c9b", "#979e92", "#b2a374", "#969782", "#d0c6a4", "#78a58d", "#c2bba4", "#a8aaa4", "#a8aaa4", "#30322f", "#30322f", "#242827", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#282c2b", "#b5b9b2", "#94978e", "#929b97", "#b5b9b2", "#bd9867", "#c3bbaa", "#8c8c81", "#ded6be", "#71917c", "#aa622e", "#282a28", "#9c9d91", "#b8b7ac", "#c9b95a", "#b4a576", "#aaa99c", "#b9b7ac", "#b4a576", "#aaa99c", "#b0b3a9", "#353936", "#b5b9b2", "#b5b9b2", "#46322a", "#46322a", "#aaa982", "#272a2b", "#ad8875", "#168dcc", "#c4ceca", "#23383b", "#b8bbb4", "#c8c8bd", "#59424a", "#487856", "#b5b9b2", "#252928", "#b5b9b2", "#c4ceca", "#b5ad7f", "#252928", "#babdb7", "#67685f", "#a19e8b"];
+colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#333839", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#c3b995", "#96988f", "#487eac", "#a2a4a0", "#bec2bd", "#282c2b", "#28675a", "#b3a775", "#9e793b", "#afb4ae", "#386349", "#25292b", "#b3b8b4", "#b1b5a1", "#a2a6a3", "#b5b9b2", "#818984", "#282d2a", "#a0a59b", "#975b50", "#9e3930", "#252a28", "#b6a05b", "#91ae94", "#30352f", "Wheat", "#363d3a", "#78765f", "#38372e", "#ae7545", "#a3a79c", "#486551", "#343835", "#438c9b", "#979e92", "#b2a374", "#969782", "#d0c6a4", "#78a58d", "#c2bba4", "#a8aaa4", "#a8aaa4", "#30322f", "#30322f", "#242827", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#282c2b", "#b5b9b2", "#94978e", "#929b97", "#b5b9b2", "#bd9867", "#c3bbaa", "#8c8c81", "#ded6be", "#71917c", "#aa622e", "#282a28", "#9c9d91", "#b8b7ac", "#c9b95a", "#b4a576", "#aaa99c", "#b9b7ac", "#b4a576", "#aaa99c", "#b0b3a9", "#353936", "#b5b9b2", "#b5b9b2", "#46322a", "#46322a", "#aaa982", "#272a2b", "#ad8875", "#168dcc", "#c4ceca", "#23383b", "#b8bbb4", "#c8c8bd", "#59424a", "#487856", "#b5b9b2", "#252928", "#b5b9b2", "#c4ceca", "#b5ad7f", "#252928", "#babdb7", "#67685f", "#a19e8b"];
 if(part=="assembly") { for(i=[0:len(parts)-1]) if(parts[i]!="prototype-spring" && parts[i]!="prototype-stem" && parts[i]!="prototype-pcb-pad" && parts[i]!="prototype-pcb-solder") color(colors[i]) shape(parts[i]); keyboard_mechanisms(); }
 else if(part=="interior") { keyboard_mechanisms(); for(i=[31:len(parts)-1]) if(parts[i]!="monitor-shell-upper" && parts[i]!="prototype-spring" && parts[i]!="prototype-stem" && parts[i]!="prototype-pcb-pad" && parts[i]!="prototype-pcb-solder") color(colors[i]) shape(parts[i]); }
 else shape(part);
