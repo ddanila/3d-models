@@ -14,6 +14,15 @@ and is absent. The STL is one connected, closed body; no printed legend is baked
 into it, so it can also serve as a blank replacement. `part="preview"` shows the
 black shell and pale core separately; STL itself cannot retain colors.
 
+The cup now includes an inward latch ring with a beveled entry and a steeper
+retaining shoulder, plus an axial orientation rib toward one skirt corner.
+These details follow the underside photos and owner review; their dimensions
+remain provisional. The ring projects 0.45 mm radially into the 8.6 mm bore
+(7.7 mm throat). The orientation rib projects 0.6 mm inward and is 1.2 mm wide,
+with a beveled entry. Its default angle is 135 degrees toward the -X/+Y corner.
+Adjust the `latch_*` and `key_*` parameters in `model.scad` for fit;
+`part="section"` exposes both features in a cutaway. The STL includes both.
+
 Initial dimensions are **photo estimates**, not caliper measurements:
 
 | Feature | mm |

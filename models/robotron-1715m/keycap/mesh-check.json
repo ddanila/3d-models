@@ -1,6 +1,7 @@
 {
-  "triangles": 2548,
+  "triangles": 3314,
   "closedTwoManifold": true,
+  "consistentWinding": true,
   "connectedComponents": 1,
   "boundsMm": [
     [
@@ -14,5 +15,5 @@
       11.2
     ]
   ],
-  "validation": "Each undirected edge has two incident faces; all mesh vertices connected. No physical fit certification."
+  "validation": "Regenerated from model.scad; watertight with consistent winding and one connected body. No physical fit certification."
 }
