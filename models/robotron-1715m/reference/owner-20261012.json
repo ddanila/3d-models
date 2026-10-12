@@ -1,0 +1,1059 @@
+{
+  "owner": "Danila",
+  "license": "MIT",
+  "date": "2026-10-12",
+  "reviewed": 175,
+  "note": "All photographs visually reviewed. Selected complementary views published losslessly; original archives retained by owner. Geometry reconstructs clean condition. Keyboard EPROM transplanted from another board, per owner; contents unidentified.",
+  "photos": [
+    {
+      "file": "PXL_20261012_123006039.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "388f8c47ebb9cff672e93fccef8a112242de2272ac164c5108acdda507fd22ea",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123012957.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "5e82b5fd0cadf13ea33b89a9d02ff1abf2d4a8459bccc99ee705eb7a4f8f6bc3",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123025870.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "c0dc13ed4c4de10dcff75ed623f342dfb86e2d455897e7da545821cf3264c7b1",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123030491.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "69e131329e10b6de75bc1b6c6ab9a872aec3bbed285fbb3ce0f0fe0852257c11",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123034348.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "3430a337f0dad90348509c1826ff09b4c3d9f0ba98fe837b147e91c8735d468f",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123048886.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "96ba5abedebdc9ca0f73be8041285864349539f2f199b906143a2529f3dcf1a3",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123054655.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "9c537483f4d4aa4b1bbcc558d94130c286326c02e50adf9fc45cad6e797ac8e7",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123058547.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "558be166c39d79a66eb9d19fe9a221f81a658f3b61aeccb4e857896de96b7550",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123103225.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "77333780f66115d680d7e8f35f967a8ac5b079e882ef2f8eaffb8e0f2aa11d9f",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123106382.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "5fec5afd4e3ce9151e2271d84f781371556a14782caa37fa275092b11c65bb1f",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123109703.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "fefcede54d868b9f2626cf7cfd7a78bb9c6866054e853acee5d52ba808233713",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123111689.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "bcd9a916fab13814484cf7b4b54cd7eab1ecabd72d336aa48ac48ca6b149b8ea",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123114519.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "ac7c89f0ab5cd9b3c674811baa357aa8cea6c10ef4b8be92b9ae1e216170f483",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123120290.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "a29ae8338f27190f473e82011e36fcc5827b9b0e69c5ff2175720386d5a7f95a",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123122852.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "7740a736c7f6c59b301641ec00ea6816c1aafe3eb3f8f3be6e87561e72eea8cf",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123126017.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "160d471325d397b55eb25024ca7e15c1164176ee8768c3cdf634e386321a7fd2",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123132916.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "30d560dd95ac3513597b7be12bd5f6cd74b7c5658c8ed25ed177a8b0bd93db66",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123135041.MP.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "957bb48c60c626331288816ac0d1aeb689b480f24f1ed364b51e266f06bd606b",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123137714.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "7d5215b627ad93f857cea979018aacb05e6038d0034647659f8dd841a3a4d5e6",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123146479.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "e684be05f4f757100475965c49b92e0da7af4c52acd2b9022d8b9103f5e23470",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123150261.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "c564bfd96f6a27931135ae593c3e708ebbe2350d806836b7a2653262e9648565",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123153027.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "4de9cb17a52290f5a857b6fbf03888407819b69f3c6fc3377bad0153ba5739d7",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123157440.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "82f5e8d3361ff81d85ee3e1b49f7adb0159c65dc2afbe4136648a4ec120afed2",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123206154.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "d56525fd790d85f4ddb0024c70a03f94269dcfce84bafa86cc5e7a6b3e3333ca",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123209961.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "4a1f3f40e201ab9648939dbff3a97a90ff652ed9ba326b14c8afbb065ba79a16",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123215138.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "c3c79e6e9f277d4e7d5ccc120d3e4758095668947b37648b73b3e751b18acb5f",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123219593.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "9dfbe6a98f88f8085b57044693de33c2725136c8539b5a86464fbca95d656e1e",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123224234.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "4009990c8928fe70a954f516a800923e1bd766bcd75e52c3494cea694aed3ac6",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123247922.MP.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "8fb45f46c31f8f75f881127fab29f521ccd1830edf2ecdad88ec7d2c5e051ddb",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123252945.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "ab1b159543c064aaf8be83abcee33d2da70b178ce714aca554d0ee0942a5e9a5",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123257360.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "843024c0a7e2c30418ad32a582c2c2cc1ba305d91442baea27b8ddc36084804b",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123308789.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "23a98ae569a7210373570fc994bcd94703289e76deac758f7a98b7ca57218619",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123313058.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "3e393397629adcc41976ec4db894d523871251f5c174d578421102dcd4b5f36b",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123319025.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "641e5b41364a928c2c984d10bd1eb0d713656f8d57c986b4d56fc3362f351d23",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123322947.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "3bce9246a7806f5965d7197446e77d5bdba0e9371b1dbb69d8000ab1f19c5336",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123326921.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "fbbd973b1fef4d389e0d4d69304fce82eb020153ac2ab10412e546d6ce60ba8d",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123333815.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "00e6fdb39e30a2e7d07f81167e24e3b6dea65ba6022b463868af948c5b133667",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123336743.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "1c42867427d156b0b00f7654dc992b74f078c93f9853523ef403a64f8d993765",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123407648.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "a2cc8567af35a5187921b8abd67cadc4ac05c63992049faf7c6ae30de45715a6",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123413176.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "3300ae6482996cf3751c460ce23ad55da3a89ab5abe39e1bdeccc11f3b176f14",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123420476.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "349dda2a500907f477c7da6d3a7fa337c2a2c9a97f37db6eb716936dd3786026",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123426119.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "c80e7e472f084b883f34c2404874c6649e1aa19676c74bf817a80579f3d0cba1",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123431216.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "010d3401598551927ded807371653a8c779ba8104603dbf3e21265b771d1e83c",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123440420.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "ec669651a08912e71684b80423cf0589d3b28c014e1c3964b735b1b410c4166b",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123452336.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "ebc613ca5f004483985cd69852a2b134a21c83d79d21ccde3fae6819d6c793d1",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123539882.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "73ab5d0d4bbb99b249232db75600af4da5e2aa9e58bed726b522dccba364c64d",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123542138.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "6a62483d88351a9337e1aee09b6fb6b31d7c36a384c803de2dfd45e222e4a3bc",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123547516.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "bbbd6ee3d4f95054009c3802012a1ed4ea7122431a2b128be15080264dde1bb2",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123552357.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "56aa507a1240afc82e11a41f92f99e39e75498201f22fc40b9ed7f1f626c2cbe",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123558235.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "ac86ad7c2883be8a046a64ea45590c020bec80611e42eca8a00776b2aa3b14b5",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123601386.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "f87839e82f23b6097fea4992bb3d52774e8a21f04af7f863f6b3d322e470e381",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123605727.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "4a572c1a7d133e000612c1512b99a59973bed5166cf119fea73b4f9cc1e908db",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123608487.MP.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "4c3be31f3be11a3a02403ca47728500f93d88d78fb6eb32e2f02467a410c88cb",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123610449.MP.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "eb1be918f13515982e4dc6ce78f0049db0292cda2a7dda1b3c97ff1a4198c30e",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123612436.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "eead401dabad34c5839a479c912078b5ac1a9de920e7b7a50a9be84ba98f0202",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123614887.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "cdfe6710442a4c92a17c108af3bcb1c5f7c426624eb63bc3d2746e1455aa026f",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123622947.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "f29dfcc68098003dd037ca0477afcbad46948ebc0b162e44d5f2f77d27438872",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123626719.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "0f7c3973b805890eff2255e4edca62ed5bff4b5d01c3160c0f1f11bd9dc6a984",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123628687.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "7f0448f0ab6759344ac8d416a7bafc0a1c38d35f50a72bd72f59a746f5903805",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123631131.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "a39a045c411e5fae8df2dc8e349d8497765a9794eca5f337320837917f936521",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123634318.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "1cab86ac05d7ed85673cb7929927194d939146c2b5ddc901e812690cb2b32da7",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123639000.MP.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "392c3b94bef8039b7fbfbffc414d39b289ad7bfc260c2f774e992937db07c2c1",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123641276.MP.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "8132d41529463be5f0bb035b34b46ebbf0a12655b4ce98e2410d3c221c796a9c",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123648677.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "239c9a9abe15947781adcf5e6a57e862436fa792f915836a62a3f6849399b2b1",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123651074.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "598aa72750d2e2395bb037f683fac0c02ff9f429507952c0c553061fbfbb45d4",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123653399.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "2439edac52838e6a9dd34f3a12f31f968cef063ae5cc9c90b82e4594033989b2",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123655626.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "2e6f54024c5276b4c24ed6166b64c497e2e2b550719f7f190c47d252a003d826",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123657854.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "0b3416614f6b334e8292a755dcf6b5a80965b297c756e6b0c242cba92f68d72f",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123700641.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "e66d157cf73cf94aef593d618896022e6a97339511b08dd5cd5b334147847c20",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123703985.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "28355b100796724153626b50a243e2ec32c22222aeda57d84a91f953cff2b158",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123706281.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "7421df2f2ddebcec7513cfc56bbbf032f63452a514bbbcf445dbfc11a7cc3111",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123708508.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "c4d9b7a1c3434af17960960a8f0a6bd2d305bc367f49a2434dfafa1eaf6db1ad",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123710743.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "042f0640e91f96fd4ef1e78cc1ae18bc1d082fb23061b69796d189c2ea4d5c18",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123717701.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "aca52706c1dfb1affcccdeb77cbfa877d6ec51aed18dc54c733afb7dcafb33f0",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123720729.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "189dc1415aa1e9e014293ffc017f4cb04bab7a772abd0c2c790bd36456675af1",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123723840.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "ce321eaac17215dcd6b859d525f78229efe5c28ee3d2927f1c6d5095c2b4b856",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123726587.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "dd8649472f87ff48e324fa74b8205fe7d3e77b867b3f512f8aa9dd1352a45602",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123729356.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "e6f95202c791ccc7c040c378083566c052093d363b792c000f4a4cdc88d95040",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123732014.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "03f6f4a1d61c949d249a423df8533eba28363809cfa2debe0035569bcc283e2b",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123734893.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "deeb78d46588e057c2acf731d157396c2e517d419e9cbf4549de9d8597019136",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123907435.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "3374f2ec4a5ffa6de3040702aa9a362e8d693afae39f693ab33d5b09f85b1514",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_123910255.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "a73f3bbc196f954f3bf76cc5e3dcc8c2c2a11b3a453b02e42d3fcbc7ab407f60",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123912507.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "f6be8cb836c293af279936ea8bbfe014ad676d247dc5aa4b5db460ad1cf408ce",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123915178.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "88940e644b7e6041c50f0208e5ed17e900860e61e54a5577c62710000a442af1",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_123917834.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "b533ab6ad43dd3e4f348820838289f17862c5e4172f1488b8070cffa6894fc3f",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124434387.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "dd86f6f9309b084915576f1ba4a80ba1d374fe0d37efbe00dd3d484fb85ede43",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124442241.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "9f9a4a86624e8d10265024a1219639d860fd5683bcdf7f3e961a0b27c8fa9ed1",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124447862.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "f00c43c203889d8f5a071a4398f39289298e19eaaba67b35abb40d6f0dceff50",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124452894.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "4b7b9c0b557f3b10ab526344eb9c9116c5138abc8c501afe937a00bb9edb4142",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124456196.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "b357a935171c05578ec945d4a1280045d30d11ae26d898c0f504db0a84382066",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124501118.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "619194c1466cb6cb18878b0762ae6af990d3b568d91724e9842e86112955f379",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124503128.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "8749f5340bbe9261c9e50d13edad197679532bf00a437ae8e88f1965b490e8b2",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124506222.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "9076e172af37219dd99ce4426878342d1a3dac21153604fd38038a49b25da363",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124513345.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "35544f2c22d56745f040bcb61b065c46ab01c3d793f46e1ea68703b81296f694",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124827690.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "b2847fdf6743419310fc5c34834dde416a0f18a6141b14fc8b68e2305c923bf9",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_124830443.MP.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "32b5a80f90e36d3f363da8c239f6ea44f0958e8eccf6521d88854e77cd9e70c5",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124833580.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "ed0e76e6f60fcd292753221676607e14836917087bddb3b1902510dd8f7197ff",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124839539.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "95f4451da28e08b59d63cb14f72805cd82eca24229d56c8c881f170bd3ffd55f",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124843372.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "87dd1eee1c8462256288a5c46460651bd4d4716d6a5ff7cba2d3afe8105ea54c",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124845700.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "fd58261cc23a3aa7903be2765d9d6248239ead25370580a0d5fb667382800fc5",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124848052.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "b63f10b90b659ad247913f040a3f82be4f44f371f129b9c9e676d2fa134dbb56",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124852850.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "ca1ebd860d596c437ff0d7ce09805c1ac7bee0c6b2feef06bcfa620c383eb1fb",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124859140.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "8c17ec196b15fd639c90c7796da685a6eaac14aec581f6949cfb781a636c5969",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124906090.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "15788f705de1bdcf4b4a5e04997a941222cd4b93d7bb9b02df946b5d2e71e0c8",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124909951.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "995763fbb0a402c52339ede54d81304c7e12b118c38f26e7d85096085503cd3c",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124921833.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "c28ced91b366470f34b8fd09fea347ceed71aea77801f17a7ee31fe8250b34c1",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124925250.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "07fe61061d07ce78597b1c76884e75120fb1e8588ee9a77984adac19fdaac79c",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124927286.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "61bc41d0a41427afa69dfe925506da07a6d835a46ecf439fccdf0243b2fd4b72",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124937923.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "8c9d66040edd933267c721dad88b57112aa11a20b05964388a56a9daa218fe73",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_124947134.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "ecf76b3d24aa6abda09f7550305a0fd449c50234c7cdc89d16bec4b5900e5f82",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124950303.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "27208b9ebe030275798d6da4d45f7bc7287c231cc89ac796cd4e83d19ab0431d",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124954499.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "a535952448fa27c7a6e62ada0c74d120aacdfc2ac82084a2405db1999b1c2077",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124955131.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "ee0fcda14daf1dd9d32af16cb5b2d5ff04ec2830b283dbe005132b169486604c",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_124957369.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "28f13fbf8ea40b0d83959092bbbdca1c72bc8f1a90581850da22ae00d0ca9653",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125005593.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "272eea178ad4667a12f70bdeb9285c96f7ac10bf071ac51306502054b72cdbf7",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125012845.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "95f5eedbb58f5e1b71c39e38816535a3e8de2d82b7cd4a41dd7c4dc52a52856f",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125018215.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "40c6d0bd2d3f3812087d2fb8d7a86f216d6da9299b83b5258aa94fdd4f2dcb5f",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125021771.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "bb6af5f991c311c6a72f834e45c9e5b52e9e0ad81fb6d6a975bf67b86c9a3cc2",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125025415.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "09c9e512de5663fbafe5b375838b2ac4669206edfdf5d693cd3aa2e90c5afb95",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125033633.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "8c2041c21d6b373abb129d9f3658db7472d183482f3539dc177d48179bac4497",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125038677.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "5c3b116e65c19397aa6499000b541df091fcc493c8346478376d091b319de094",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_125042498.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "7353829234c2f04aa2ac40d98b2e523499d3ff20706e5b4d3e222c3ff3b2a466",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125108737.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "1c54320f4a7c7e705f79729d8029fc600a722007f0ebf649eb9896cfd7469c5d",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_125111840.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "c4bef3b5b6bf38bdc4d45fe09fd06141e522769c76c8b0893a17bafa0ff510c3",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125114425.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "91e83e03d3bd780b2fe43b6147e37ae665b16639252c97a883d5acab82cfe2dc",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125117421.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "1fc24f50cf5b9fe605c38610325932b8f27d2c6973159c44599e0f26c6e680cb",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125123660.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "015af2faf9b9187e65d8546276f8f54f7d8ed29160cefd0726ab821f2b91272c",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125128206.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "762d013f12a986212cbb88dc23713b7dd263500ab71373a54b86d2d483840b89",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125132359.MP.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "0a4578cc5fb62cca82d53c90d3fae9bb759f4562e4f6b28fbe09b5cf6b52ba48",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_125144269.MP.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "b53511818755d3d3f0986912d4624f144370d0e21928b7ffc6c32993211ae943",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125147589.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "84748ff0c181a0d47428a0d8fa3bb10ba34ce93c99c0cf4d35ce3667cc5373c1",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125150301.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "1e072e779872fef644cf3084c2f6c41379358d40e801fe435c0af8569b68a6e9",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125226422.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "2e19bf2d0e5a4e1512c13c6bbc95cb89c1c1e5e2bd86b047036e800889698380",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_125230108.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "c38817fcc13cc80085da57bb6f7e047119920f315c8862db697a4e78fc6adf37",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125234638.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "c6dc52e24f18b5da237c0ff9c473ec1e9d3c4f2ad9ae2d2bbf932ec7f70e9120",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125239458.MP.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "14772844bc12b79ee1983684ac9e58254fe32b62e2bad87a763fef10536c250f",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125244759.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "f1d59683595c19cd85a5ea16ac040b0a5f91eb2a35c6b77f2e9e125a13a54dcb",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125256937.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "cf8d601d50dadb788222460ebee1a73206e77d58c550619ed3889092732be8db",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_125300878.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "20ffae6d38615014ae6dd22911617cada4a1fdf8b6c8fd31ea610ec4b0b6c98e",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125302912.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "d9bb38001be4ef56e1af9fe0069d843e8d9d2c0fc2e750a2e1126c3386a6602b",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125307591.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "d99e10a9931884239aa948ac9ae350f700d157ccce52b5e1495ac17978f7c5c0",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125310547.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "bf4639a6804ddbb1d46ded8a6f5e0ba6953620f0f90e54e4866b392fc1567d50",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125319976.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "010924d35c728e10a41c05bb644bdf2a428c08fcec50db6bfba1a5b310111efd",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125355114.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "25b357f89943553534ad9a1b414968ffac14d35d60fd9fcd5efc4fa462333891",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125402713.MP.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "cb7bc0da1eb2ab05f0da85395d7ce77ea1e3c74a2e74e2530aae2398fa5d8d2e",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125405804.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "2e9bcb093743f95ca879c6c8444b3cf34db47f73c67165efc581348d98b998ee",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125408025.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "6355abf518085b2e65b572c07c48258b5c4cd3a7f70081ade35286b65a7ced01",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125413618.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "4c1fecd366f5eef609c56108a16464b6d3053df1109e6059cc83f87beca74b46",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_125417620.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "84015a67ba1f8eb4736f3e6e8e34e63b083888816bcc89b721f3971acffeeea1",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_125421423.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "7a3a9ab4fcfd6151fd7f5e8a6f7e8e67b281138225f7ca716b9a9b92684ae5eb",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125425621.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "e38e64fe5c7fdf2dfb42b1cc395c4a1e4bce9c1b29a1ef6adc3f89f8ebc54d9a",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125427677.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "faad978e25a195aefc212fac72804260fd27682b4aa95044bedd1296a5900750",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125429944.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "0240a0aed7b037a0765ec889814ede04fbfd9c8df8c5d641c97a1189eaa4d5d2",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125435906.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "e387912f1da29f0384414eb338e3412367bba4b66870b5ee1f222a3b358dd476",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125440085.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "c9a46e523fb195b317f810f13b3709739a48f8efb223089abcae7da6c8cd0485",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125441900.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "17a074e08cf459ff7b7be66d62845ac881f35807c0305f3c1c6d4aa100e2510e",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125444027.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "61c0592b13df9a39df5f047bb1fbe581ba419b803ebbce4eb99e321e2d2525ad",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125446270.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "88104339931a7b93bcf22084d83f843e7b798e39cd58d274e5267fef30610678",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125449006.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "ddb10a7f408eb6c46e9468f7db0f677e810efacb7370d60e1c66796bf0f5517d",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125453007.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "d201d99cf3dd7d718a5582d86a2b1d185a67e06825afce3fd4732e51fc1c4295",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125455333.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "d7cb3343b7735340d5a8e1e34ae9b5dd3fdf8b1b88f739558ba130f22432764c",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125457861.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "8a61bfa7d9ee4580d54d1527600de976e0d90901b8b78f7e34720b4ad40c0899",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125459994.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "e0f2221cf8bcf6db16c1cb375a2897f604e09a3e49712bedfbc3700df70f2d4a",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_125502437.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "707f831f79c37adba4f77b57a27856ffe1ab2c92e4453be26a446b3c0e8a6ede",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_125506115.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "efbb1277a64990f0ec30e26ee716bbfd45ed2cde005487516b39a1c60a911883",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_130028749.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "9a70feb3596c715e6c3e0cd0760b7cc547c6690b20fa4559ffb1a1a63f653eeb",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_130034146.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "dd462caebdea282b026f0fd6e375b991920306cc8175efc27ffd2b9bd66726a8",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_130039342.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "3a9b53ddb861a9fc3459f0c8965b51ed964dfdb7fc94a83a1a1be240936fc0be",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_130045013.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "449e13fa5f12c66626c58266d07dd9112fcd5044222cfc4def0d578f304c4cbc",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_130050318.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "f6ae68610c8b8fe9792986edc79c5d19948d27308b10c6e13f232954dbc552c2",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_130058066.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "92c83950f563b063cd01ba8ea98d1a167dd9eba8936ed5a223a47bf4deeb80f1",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_130101927.jpg",
+      "archive": "Photos-1-001 (5).zip",
+      "sha256": "f324bb0146cb32dddaebaadd43bfa8a0fc8e1184150b9a88cdb8997720fc92bd",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_131106217.jpg",
+      "archive": "Photos-1-001 (6).zip",
+      "sha256": "325909d5c2d14b5325b9c91be6daf1484a9266076f85d820fac9f2df3c4c0a83",
+      "published": true
+    },
+    {
+      "file": "PXL_20261012_131113016.jpg",
+      "archive": "Photos-1-001 (6).zip",
+      "sha256": "f68ae6d663419851bd8594473e44cc65af9b1d362c618aba73329e116d5b99a1",
+      "published": false
+    },
+    {
+      "file": "PXL_20261012_131117938.jpg",
+      "archive": "Photos-1-001 (6).zip",
+      "sha256": "cd12114ae5263652c58bb8952b141d19897ba690329ac87ca8e7f976a3a8ad45",
+      "published": true
+    }
+  ]
+}

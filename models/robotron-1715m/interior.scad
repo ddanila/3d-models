@@ -118,7 +118,10 @@ module power_wires(offset=0) {
     wire_run([[96,55,22+offset],[70,50,20+offset],[48,28,20+offset],[38,25,24+offset]],1);
 }
 module keyboard_pcb() {
-    translate([0,keyboard_y,13])rotate([keyboard_slope,0,0])translate([-235,-74,0])cube([470,146,1.6]);
+    translate([0,keyboard_y,13])rotate([keyboard_slope,0,0])difference(){
+        translate([-235,-60,0])cube([470,110,1.6]);
+        for(x=[-220,0,220],y=[-54,44])translate([x,y,-1])cylinder(d=3.2,h=4,$fn=16);
+    }
 }
 module keyboard_switches() {
     translate([0,keyboard_y,15])rotate([keyboard_slope,0,0])for(k=keys)translate([k[0],k[1],0])switch_housing();

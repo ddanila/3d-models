@@ -6,6 +6,7 @@ include <monitor-profile.scad>
 include <interior.scad>
 include <monitor-interior.scad>
 include <assembly-details.scad>
+include <specimen-details.scad>
 part = "assembly";
 key_index = 0;
 
@@ -28,6 +29,7 @@ module case_base() {
         translate([-case_w/2,-case_d/2,0]) rounded([case_w,case_d,seam_z],4);
         translate([-case_w/2+wall,-case_d/2+wall,wall]) cube([case_w-2*wall,case_d-2*wall,seam_z]);
         for(x=[-224,224],y=[-170,170])translate([x,y,-1])cylinder(d=8,h=3,$fn=24);
+        rear_enclosure_openings();
         for(y=[-95:10:15]) side_slot(y,22,20);
         for(y=[90:10:190]) side_slot(y,22,20);
         translate([-case_w/2-2,-164,15]) cube([10,38,14]);
@@ -38,6 +40,7 @@ module case_lid() {
         translate([-case_w/2,-case_d/2,seam_z+1]) rounded([case_w,case_d,case_h-seam_z-1],5);
         translate([-case_w/2+wall,-case_d/2+wall,seam_z-2]) cube([case_w-2*wall,case_d-2*wall,case_h-seam_z-wall+2]);
         translate([-case_w/2-1,-case_d/2-1,seam_z]) cube([case_w+2,wall+3,case_h]);
+        rear_enclosure_openings();
         for(y=[-165:10:-35]) side_slot(y,72,42);
         for(y=[50:10:180]) side_slot(y,72,42);
         for(x=[-232,232])translate([x,case_d/2+1,64])rotate([90,0,0])cylinder(d=6,h=5,$fn=24);
@@ -84,8 +87,11 @@ module switch_part(x,w,h) {
     }
 }
 module pedestal() {
-    translate([0,monitor_y,case_h+ring_h]) cylinder(d=171,h=31);
-    translate([0,monitor_y,case_h+ring_h+31]) cylinder(d1=145,d2=105,h=14);
+    // Owner underside shows an open annular stand, not a solid puck.
+    translate([0,monitor_y,case_h+ring_h])difference(){
+        cylinder(d1=171,d2=160,h=45,$fn=96);
+        translate([0,0,-1])cylinder(d1=165,d2=154,h=47,$fn=96);
+    }
 }
 module ring() {
     translate([0,monitor_y,case_h]) difference(){cylinder(d=ring_od,h=ring_h);translate([0,0,-1])cylinder(d=ring_id,h=ring_h+2);}
@@ -101,6 +107,9 @@ module monitor_shell() {
         // Side/rear shell joint visible in the owner photograph.
         translate([-monitor_w/2-1,-monitor_d/2-1,monitor_h*monitor_seam_fraction-.6]) cube([monitor_w+2,monitor_d+2,1.2]);
         for(i=[-12:12]) translate([i*10,70,monitor_h-24]) cube([4,60,40],center=true);
+        // Two underside banks and the cable outlet, from 125132359.MP.
+        for(x=[-117,117],i=[-8:8])translate([x,i*8,-2])slab(42,4,35,1.9);
+        translate([72,30,-2])slab(25,17,35,1);
     }
 }
 module bezel() {
@@ -140,15 +149,15 @@ module keyboard_shell() {
 module keyboard_bottom() {
     translate([0,keyboard_y,0]) difference() {
         union(){slab(keyboard_w-12,keyboard_d-7,1.6,5);
-            for(x=[-200,200],y=[-65,65])translate([x,y,-1.2])slab(33,15,2,5);}
-        translate([80,55,-3])slab(36,25,8,2);
+            for(x=[-200,200],y=[-65,65])translate([x,y,-1.2])slab(39,15,2,5);}
+        translate([80,55,-3])slab(42,20,8,2);
         for(x=[-218,0,218],y=[-87,87])translate([x,y,-2])cylinder(d=3.5,h=6);
     }
 }
 module keyboard_feet() {
     for(x=[-200,200],y=[-65,65]) translate([x,keyboard_y+y,-5]) difference() {
-        slab(28,11,4,1.3);
-        translate([0,0,-1])slab(23,6,3.5,.7);
+        slab(32,11,4,1.3);
+        translate([0,0,-1])slab(25,7,3.5,.7);
     }
 }
 module screw(d=5,h=1.7) {
@@ -156,7 +165,8 @@ module screw(d=5,h=1.7) {
 }
 module keyboard_metal() {
     for(x=[-200,200],y=[-65,65])translate([x,keyboard_y+y,0]){
-        translate([0,0,-3.2])slab(22,5,1,.4);
+        translate([0,0,-3.2])slab(24,5,1,.4);
+        for(side=[-1,1])translate([0,side*2.4,-2.8])cube([24,.8,1.4],center=true);
         translate([0,0,-4])screw(3,1.2);
     }
     for(x=[-218,0,218],y=[-87,87])translate([x,keyboard_y+y,0]){
@@ -165,9 +175,11 @@ module keyboard_metal() {
     }
 }
 module keyboard_grommet() {
+    // Folded bow-tie cable guide. Photo ratios: ~57 x 37, opening ~42 x 17.
     translate([80,keyboard_y+55,-2]) {
-        difference(){slab(37,26,3,2);translate([0,0,-1])slab(29,18,5,2);}
-        for(y=[-15,15])translate([0,y,-.5])rotate([y<0?-18:18,0,0])slab(41,7,2,1);
+        difference(){slab(45,21,2,1);translate([0,0,-1])slab(42,17,4,.7);}
+        for(side=[-1,1])scale([1,side,1])translate([0,10,0])rotate([-18,0,0])
+            linear_extrude(1.6)polygon([[-21,0],[21,0],[28.5,8.5],[-28.5,8.5]]);
     }
 }
 module keyboard_deck() {
@@ -250,11 +262,13 @@ module monitor_tape() {
     translate([0,monitor_y-120,monitor_z+monitor_h-2.1])rotate([-3.9,0,-3])slab(52,9,.3,.5);
 }
 module hardware() {
-    // PSU shield behind the front vents is modeled in interior.scad.
-    // Base-unit feet remain provisional without an underside photograph.
-    for(x=[-225,225],y=[-170,170])translate([x,y,-9])cylinder(d=25,h=10,$fn=40);
+    // Both new underside views show rectangular rubber frames and metal inserts.
+    for(x=[-225,225],y=[-170,170])translate([x,y,-8])difference(){
+        slab(34,16,9,2);translate([0,0,-1])slab(27,9,7,1);
+    }
 }
 module shape(p) {
+    specimen_shape(p);
     assembly_details(p);
     interior_shape(p);
     for(i=[0:1])if(p==str("drive-latch-",i))drive_latches(i);
@@ -293,8 +307,8 @@ module shape(p) {
     if(p=="cable")cable();
     if(p=="keycap")let(k=keys[key_index])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[4]);
 }
-parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell-lower", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latch-0", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape", "drive-frames", "drive-mechanisms", "drive-motors", "drive-boards", "drive-contacts", "drive-coils", "drive-bracket", "logic-boards", "logic-chips", "logic-pins", "logic-connectors", "psu-chassis", "psu-cover", "fan-frame", "fan-rotor", "ribbon-cables", "ribbon-stripes", "power-wires-red", "power-wires-black", "power-wires-yellow", "keyboard-pcb", "keyboard-switches", "monitor-shell-upper", "tube-funnel", "tube-neck", "monitor-yoke", "monitor-coils", "monitor-chassis", "monitor-boards", "monitor-components", "monitor-capacitors", "monitor-shield", "monitor-wires", "plug-insert", "drive-power-sockets", "drive-traces", "drive-label-plates", "drive-spindle-0", "drive-spindle-1", "drive-head-0", "drive-head-1", "drive-latch-1", "drive-clamp-0", "drive-clamp-1", "drive-head-metal-0", "drive-head-metal-1", "drive-board-components", "logic-mounts", "chassis-fasteners", "keyboard-plate", "monitor-fasteners", "monitor-passives", "monitor-socket", "prototype-spring", "prototype-stem", "logic-resistors", "logic-ceramics", "logic-electrolytics", "logic-crystals", "logic-passive-leads", "logic-film", "logic-pads", "logic-solder", "logic-connector-contacts", "prototype-pcb-pad", "prototype-pcb-solder", "ribbon-ridges", "drive-cable-plugs", "drive-head-arm-0", "drive-head-arm-1", "drive-medium-0", "drive-medium-1"];
-colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#333839", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#c3b995", "#96988f", "#487eac", "#a2a4a0", "#bec2bd", "#282c2b", "#28675a", "#b3a775", "#9e793b", "#afb4ae", "#386349", "#25292b", "#b3b8b4", "#b1b5a1", "#a2a6a3", "#b5b9b2", "#818984", "#282d2a", "#a0a59b", "#975b50", "#9e3930", "#252a28", "#b6a05b", "#346750", "#30352f", "Wheat", "#363d3a", "#78765f", "#38372e", "#ae7545", "#a3a79c", "#486551", "#343835", "#438c9b", "#979e92", "#b2a374", "#969782", "#d0c6a4", "#78a58d", "#c2bba4", "#a8aaa4", "#a8aaa4", "#30322f", "#30322f", "#242827", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#282c2b", "#b5b9b2", "#94978e", "#929b97", "#b5b9b2", "#bd9867", "#c3bbaa", "#8c8c81", "#ded6be", "#71917c", "#aa622e", "#282a28", "#9c9d91", "#b8b7ac", "#c9b95a", "#b4a576", "#aaa99c", "#b9b7ac", "#b4a576", "#aaa99c", "#b0b3a9", "#353936", "#b5b9b2", "#b5b9b2", "#46322a", "#46322a"];
+parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell-lower", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latch-0", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape", "drive-frames", "drive-mechanisms", "drive-motors", "drive-boards", "drive-contacts", "drive-coils", "drive-bracket", "logic-boards", "logic-chips", "logic-pins", "logic-connectors", "psu-chassis", "psu-cover", "fan-frame", "fan-rotor", "ribbon-cables", "ribbon-stripes", "power-wires-red", "power-wires-black", "power-wires-yellow", "keyboard-pcb", "keyboard-switches", "monitor-shell-upper", "tube-funnel", "tube-neck", "monitor-yoke", "monitor-coils", "monitor-chassis", "monitor-boards", "monitor-components", "monitor-capacitors", "monitor-shield", "monitor-wires", "plug-insert", "drive-power-sockets", "drive-traces", "drive-label-plates", "drive-spindle-0", "drive-spindle-1", "drive-head-0", "drive-head-1", "drive-latch-1", "drive-clamp-0", "drive-clamp-1", "drive-head-metal-0", "drive-head-metal-1", "drive-board-components", "logic-mounts", "chassis-fasteners", "keyboard-plate", "monitor-fasteners", "monitor-passives", "monitor-socket", "prototype-spring", "prototype-stem", "logic-resistors", "logic-ceramics", "logic-electrolytics", "logic-crystals", "logic-passive-leads", "logic-film", "logic-pads", "logic-solder", "logic-connector-contacts", "prototype-pcb-pad", "prototype-pcb-solder", "ribbon-ridges", "drive-cable-plugs", "drive-head-arm-0", "drive-head-arm-1", "drive-medium-0", "drive-medium-1", "keyboard-controller-board", "keyboard-controller-chips", "keyboard-controller-ceramic", "keyboard-controller-rom-cover", "keyboard-controller-connectors", "keyboard-controller-caps", "keyboard-controller-metal", "keyboard-controller-ink", "keyboard-insulators", "keyboard-matrix-artwork", "system-foot-metal", "monitor-under-controls", "monitor-stand-metal", "rear-socket-bodies", "rear-socket-contacts", "rear-power-black", "rear-blanking-plates", "rear-legends", "rear-panel"];
+colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#333839", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#c3b995", "#96988f", "#487eac", "#a2a4a0", "#bec2bd", "#282c2b", "#28675a", "#b3a775", "#9e793b", "#afb4ae", "#386349", "#25292b", "#b3b8b4", "#b1b5a1", "#a2a6a3", "#b5b9b2", "#818984", "#282d2a", "#a0a59b", "#975b50", "#9e3930", "#252a28", "#b6a05b", "#346750", "#30352f", "Wheat", "#363d3a", "#78765f", "#38372e", "#ae7545", "#a3a79c", "#486551", "#343835", "#438c9b", "#979e92", "#b2a374", "#969782", "#d0c6a4", "#78a58d", "#c2bba4", "#a8aaa4", "#a8aaa4", "#30322f", "#30322f", "#242827", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#282c2b", "#b5b9b2", "#94978e", "#929b97", "#b5b9b2", "#bd9867", "#c3bbaa", "#8c8c81", "#ded6be", "#71917c", "#aa622e", "#282a28", "#9c9d91", "#b8b7ac", "#c9b95a", "#b4a576", "#aaa99c", "#b9b7ac", "#b4a576", "#aaa99c", "#b0b3a9", "#353936", "#b5b9b2", "#b5b9b2", "#46322a", "#46322a", "#aaa982", "#272a2b", "#ad8875", "#168dcc", "#c4ceca", "#23383b", "#b8bbb4", "#c8c8bd", "#59424a", "#487856", "#b5b9b2", "#252928", "#b5b9b2", "#c4ceca", "#b5ad7f", "#252928", "#babdb7", "#67685f", "#a19e8b"];
 if(part=="assembly") { for(i=[0:len(parts)-1]) if(parts[i]!="prototype-spring" && parts[i]!="prototype-stem" && parts[i]!="prototype-pcb-pad" && parts[i]!="prototype-pcb-solder") color(colors[i]) shape(parts[i]); keyboard_mechanisms(); }
 else if(part=="interior") { keyboard_mechanisms(); for(i=[31:len(parts)-1]) if(parts[i]!="monitor-shell-upper" && parts[i]!="prototype-spring" && parts[i]!="prototype-stem" && parts[i]!="prototype-pcb-pad" && parts[i]!="prototype-pcb-solder") color(colors[i]) shape(parts[i]); }
 else shape(part);

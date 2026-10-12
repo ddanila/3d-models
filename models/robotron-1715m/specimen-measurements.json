@@ -1,0 +1,29 @@
+{
+  "units": "mm",
+  "status": "Photo estimates, not manufacturing dimensions",
+  "keyboardUnderside": {
+    "photo": "PXL_20261012_123247922.MP.jpg",
+    "inspectionImage": [1500, 1129],
+    "platePixelBounds": [104, 250, 1400, 767],
+    "assumedPlateSize": [488, 193],
+    "scaleBasis": "Existing 500 x 200 mm family keyboard envelope minus shell clearance; almost frontal image, residual perspective remains",
+    "footPixelEnvelope": [86, 30],
+    "footCalculatedEnvelope": [32.38, 11.2],
+    "footModeledEnvelope": [32, 11, 4],
+    "guidePixelEnvelope": [152, 98],
+    "guideModeledEnvelope": [57, 37],
+    "openingPixelEnvelope": [110, 44],
+    "openingModeledEnvelope": [42, 17],
+    "uncertainty": "Allow several mm for envelope assumption and picked edges; height/depth inferred separately from oblique photos."
+  },
+  "systemFeet": {
+    "photos": ["PXL_20261012_131106217.jpg", "PXL_20261012_131117938.jpg"],
+    "modeledEnvelope": [34, 16, 9],
+    "status": "Rectangular frame/channel construction observed; metric size provisional because these close-ups have no scale."
+  },
+  "materials": {
+    "rubber": {"color": "#252928", "roughness": 0.92, "metalness": 0, "grain": 0.015},
+    "metalInserts": {"color": "#b5b9b2", "roughness": 0.43, "metalness": 0.72},
+    "method": "Visually estimated clean material colors and fine grain; no photo shadow, grime, wear or rust baked onto geometry. Not colorimetrically calibrated."
+  }
+}
