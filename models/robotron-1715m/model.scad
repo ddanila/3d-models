@@ -139,18 +139,22 @@ module crt_glass() {
     translate(crt_position)rotate([90,0,0])crt_dome(crt_size[0],crt_size[1]);
 }
 module keyboard_shell() {
-    translate([0,keyboard_y,0]) difference() {
-        hull(){translate([-keyboard_w/2+3,-keyboard_d/2,0])rounded([keyboard_w-6,12,16],4);translate([-keyboard_w/2+3,keyboard_d/2-12,0])rounded([keyboard_w-6,12,40],4);}
-        // Hollow sheet-metal shell, closed by a separate removable bottom plate.
-        hull(){translate([-keyboard_w/2+6,-keyboard_d/2+3,-3])rounded([keyboard_w-12,10,16],3);translate([-keyboard_w/2+6,keyboard_d/2-13,-3])rounded([keyboard_w-12,10,40],3);}
-        translate([0,-20,-5]) rotate([keyboard_slope,0,0]) slab(keyboard_w-12,158,70,4);
-    }
-    translate([0,keyboard_y,32])rotate([keyboard_slope,0,0])
-        translate([0,78,0])difference(){
-            slab(keyboard_w-8,40,3,4);
-            translate([0,3,1.5])slab(keyboard_w-40,12,3,5.9);
+    difference(){
+        union(){
+            translate([0,keyboard_y,0]) difference() {
+                hull(){translate([-keyboard_w/2+3,-keyboard_d/2,0])rounded([keyboard_w-6,12,16],4);translate([-keyboard_w/2+3,keyboard_d/2-12,0])rounded([keyboard_w-6,12,40],4);}
+                // Hollow sheet-metal shell with a separate removable bottom.
+                hull(){translate([-keyboard_w/2+6,-keyboard_d/2+3,-3])rounded([keyboard_w-12,10,16],3);translate([-keyboard_w/2+6,keyboard_d/2-13,-3])rounded([keyboard_w-12,10,40],3);}
+                translate([0,-20,-5]) rotate([keyboard_slope,0,0]) slab(keyboard_w-12,158,70,4);
+            }
+            // Stay inside the 40 mm rear envelope so the case switches remain visible.
+            translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
+                translate([0,78,0])slab(keyboard_w-8,40,3,4);
         }
-
+        // Cut through both the pressed ledge and any overlapping shell lip.
+        translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
+            translate([0,81,1.5])slab(keyboard_w-40,12,5,5.9);
+    }
 }
 module keyboard_bottom() {
     translate([0,keyboard_y,0]) difference() {
