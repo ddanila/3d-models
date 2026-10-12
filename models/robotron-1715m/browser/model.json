@@ -23990,7 +23990,7 @@
     {
       "name": "keycap-1-core",
       "file": "meshes/keycap-1-core.stl",
-      "sha256": "4a450a2a69d7bff34e43f8b3ffea390ff4c98de325f269a164f88ce9ffbe185f"
+      "sha256": "1c6214dc68afeb78184be43041f2f53bef91421dcebf12a2b2a6020ee796be7a"
     },
     {
       "name": "keycap-2",
@@ -24000,7 +24000,7 @@
     {
       "name": "keycap-2-core",
       "file": "meshes/keycap-2-core.stl",
-      "sha256": "19f1f28c3ab9a86b6436b7eeaf41b8879fa6981c4d42bb130e3563448084d3a3"
+      "sha256": "5b1669f2cfb5b28f1c36063dd219e44c4c5afd7b29941e1adf969f41f8223460"
     },
     {
       "name": "keycap-3",
@@ -24010,7 +24010,7 @@
     {
       "name": "keycap-3-core",
       "file": "meshes/keycap-3-core.stl",
-      "sha256": "b2850f533dfc3336654615b9dcaec9efdc642f400298535ace34d1a846deff37"
+      "sha256": "41925947ee7457742d65f1ba053c3b9b5ffcaf3f320495573832784c7f6eee01"
     },
     {
       "name": "keycap-4",
@@ -24020,7 +24020,7 @@
     {
       "name": "keycap-4-core",
       "file": "meshes/keycap-4-core.stl",
-      "sha256": "19f1f28c3ab9a86b6436b7eeaf41b8879fa6981c4d42bb130e3563448084d3a3"
+      "sha256": "5b1669f2cfb5b28f1c36063dd219e44c4c5afd7b29941e1adf969f41f8223460"
     },
     {
       "name": "keycap-5",
@@ -24030,7 +24030,7 @@
     {
       "name": "keycap-5-core",
       "file": "meshes/keycap-5-core.stl",
-      "sha256": "5887a74aae7fed94b88cdcfdff5a7b1279778aa34844878388ad2ca2703abbe7"
+      "sha256": "f41607f7c1684ac32706b09ec4123023a913475b5e089ba4e66ed63f8c6d716f"
     },
     {
       "name": "keycap-6",
@@ -24045,7 +24045,7 @@
     {
       "name": "keycap-7-core",
       "file": "meshes/keycap-7-core.stl",
-      "sha256": "e8597af46226af8af3bc117f5ac42690b1a6063349e147b745d41c1ae97d914d"
+      "sha256": "38bbd54e449b9d0814d30de839342c9adca7389b534779a5f05429418c61249c"
     }
   ],
   "keyboard": {

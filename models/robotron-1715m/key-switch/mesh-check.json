@@ -1,6 +1,6 @@
 {
   "keycap/keycap.stl": {
-    "triangles": 5510,
+    "triangles": 6276,
     "closedTwoManifold": true,
     "components": 1,
     "boundsMm": [
@@ -20,7 +20,7 @@
       17.8,
       11.4
     ],
-    "volumeMm3": 1373.601
+    "volumeMm3": 1389.237
   },
   "key-switch/spring.stl": {
     "triangles": 12692,
