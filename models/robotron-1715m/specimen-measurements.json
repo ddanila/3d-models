@@ -85,6 +85,36 @@
     "totalHeight": 9.5,
     "dishRadius": 60,
     "clearShellThickness": 0.8,
-    "status": "Side profiles inferred from photos and existing 20 mm pitch. Clear shell with silver liner and black legends confirmed by owner; local dimensions estimated."
+    "status": "Side profiles inferred from photos and 19.5 mm photo-fit pitch. Clear shell with silver liner and black legends confirmed by owner; local dimensions estimated."
+  },
+  "keyboardLayout": {
+    "photo": "PXL_20261012_123006039.jpg",
+    "pitch": 19.5,
+    "pitchStatus": "Photo fit within earlier ruler estimate 20 +/- 1 mm; not a caliper measurement",
+    "leftEdge": -235,
+    "topRowY": 22,
+    "rowOffsetsInPitches": {
+      "number": 0,
+      "Q": 1.5,
+      "A": 1.75,
+      "Z": 2.25
+    },
+    "widthsInPitches": {
+      "ALT": 1,
+      "CTRL": 1.5,
+      "Caps": 1.25,
+      "leftShift": 1.25,
+      "rightShift": 1.5,
+      "circledR": 1.5,
+      "Space": 8,
+      "ET": 1.5
+    },
+    "note": "Full owner overhead photo gives key grouping, row stagger and paired half-pitch spacers. Residual perspective limits exact dimensions.",
+    "raisedWidths": {
+      "blankShiftKeys": 18,
+      "CTRL_ET_and_other_wide_keys": 23,
+      "source": "Danila measured raised parts only, confirmed October 12, 2026",
+      "note": "Applied 18 mm to both Shift keys and the matching unlettered Caps shape; 23 mm to CTRL, ET and circled R. Caps/R classification follows owner photographs."
+    }
   }
 }

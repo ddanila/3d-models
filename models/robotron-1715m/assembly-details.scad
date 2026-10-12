@@ -24,7 +24,7 @@ module keyboard_mechanisms() {
 }
 module keyboard_plate() {
     translate([0,keyboard_y,17])rotate([keyboard_slope,0,0])difference(){
-        translate([0,-5,0])slab(474,114,1.2,3);for(k=keys)translate([k[0],k[1],-1])cylinder(d=10,h=4,$fn=20);
+        translate([0,-16,0])slab(484,114,1.2,3);for(k=keys)translate([k[0],k[1],-1])cylinder(d=10,h=4,$fn=20);
         for(x=[-225,225],y=[-55,45])translate([x,y,-1])cylinder(d=3.4,h=4,$fn=16);
     }
 }

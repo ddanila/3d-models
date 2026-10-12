@@ -407,3 +407,15 @@ The three MIT owner photographs in `Photos-1-001 (7).zip` show a distinct square
 Danila confirms the case and keyboard feet are identical parts. Both now instantiate `specimen_foot()` and `specimen_foot_insert()` (32 × 11 × 4 mm estimated rubber envelope), replacing the earlier different case-foot estimate.
 
 In the browser, opening the keyboard separates the mounting plate and switches from the broad PCB, turns that PCB over to expose the owner-photographed solder face, and lifts the narrow controller separately. This is an inspection arrangement; closing it restores the fitted positions. The simplified bus artwork is visual reference, not an electrical netlist.
+
+### Opaque key sidewalls
+
+The owner side views show continuous black plastic around the cylindrical and elongated key bodies. Their hollow undersides now follow the same capsule outline; the previous square cavity accidentally pierced the curved walls near its corners. This corrects geometry rather than hiding the holes with a material change. Clear function-key shells and silver inserts remain separate.
+
+### Keyboard row placement (October 12, overhead comparison)
+
+Owner photograph `PXL_20261012_123006039.jpg` supplies the row stagger and key-group spacing. ALT is one pitch, left Shift and the unlettered Caps key are 1.25 pitches, CTRL/right Shift/circled R/ET are 1.5 pitches, and the spacebar is eight. Separate half-pitch spacers sit beside SI/SO and ET. The 19.5 mm modeled pitch is a photo fit within the earlier ruler estimate of 20 ± 1 mm, not a measured manufacturing specification. The rows move forward to leave the photographed blue rear ledge and black front margin. Switches, plate holes, springs and solder pads share these coordinates. The broad board envelope remains an estimate.
+
+The deck now has grouped openings instead of webs between every cap. The rear reinforcing recess is part of the painted metal shell. Both amber indicator lenses are represented; only Caps has a verified browser state connection, so the SI/SO lens is not animated. Black-key legends use larger photo-based proportions.
+
+Danila subsequently measured the raised bodies: blank Shift caps are 18 mm wide, CTRL/ET and the other broad caps 23 mm, explicitly excluding the flange. `topWidth` records these independently of pitch/flange width and participates in exported mesh deduplication. The matching Caps/circled-R shapes use the same two families based on the photographs.

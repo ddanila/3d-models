@@ -55,12 +55,12 @@ module keyboard_controller_ink(){keyboard_controller_pose(){
  translate([128,8,6.35])slab(4,12,.12,.1);
 }}
 module keyboard_insulators(){
- translate([0,keyboard_y,11.2])rotate([keyboard_slope,0,0])for(y=[-64,54])translate([0,y,0])slab(472,10,1.5,.5);
+ translate([0,keyboard_y,11.2])rotate([keyboard_slope,0,0])for(y=[-75,43])translate([0,y,0])slab(482,10,1.5,.5);
 }
 module keyboard_matrix_artwork(){
  translate([0,keyboard_y,12.8])rotate([keyboard_slope,0,0]){
  // Simplified visible row buses only; deliberately no invented netlist.
- for(i=[0:7])translate([0,-55+i*14,0])cube([435,1,.15],center=true);
+ for(i=[0:7])translate([0,-66+i*14,0])cube([435,1,.15],center=true);
  for(k=keys)translate([k[0],k[1],-.1])difference(){cylinder(d=2.6,h=.25,$fn=12);cylinder(d=1,h=.4,$fn=8);}
  }
 }
