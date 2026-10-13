@@ -247,16 +247,17 @@ module keyboard_grommet() {
 module keyboard_deck_envelope(w,h,r,bottom,top,roll) {
     slab_height=top-roll-bottom;
     translate([0,0,bottom])slab(w,h,slab_height,r);
-    for(a=[0:15:75])hull()for(b=[a,a+15])let(inset=roll*(1-cos(b)))
+    for(a=[0:5:85])hull()for(b=[a,a+5])let(inset=roll*(1-cos(b)))
         translate([0,0,top-roll+roll*sin(b)-.01])
             slab(w-2*inset,h-2*inset,.01,r-inset);
 }
 module keyboard_deck_blank() {
     w=keyboard_w-8; h=158;
     difference(){
-        keyboard_deck_envelope(w,h,6,-4,4,2);
+        // Owner visual trial: 5 mm outside radius in plan and across the top.
+        keyboard_deck_envelope(w,h,5,-4,4,5);
         // Inner bend is offset 1 mm from the outer bend and top skin.
-        keyboard_deck_envelope(w-2,h-2,5,-5,3,1);
+        keyboard_deck_envelope(w-2,h-2,4,-5,3,4);
     }
 }
 module keyboard_deck() {
