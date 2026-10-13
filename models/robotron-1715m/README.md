@@ -18,7 +18,7 @@ The original [Robotron 1715/1715W manual, printed p.35 (PDF page 36)](https://xe
 | Display | 320 mm | 350 mm | 330 mm |
 | Keyboard | 500 mm | 200 mm | 40 mm |
 
-These are family specifications, not new measurements of Danila’s specimen. The display height includes its stand; its shell and stand proportions are inferred from the photograph. Small projections and approximate feet can extend beyond nominal envelopes. The monitor insert uses Danila’s existing [measured ring](display-base-ring/): 175 mm OD, 169 mm ID, 5 mm high; its physical fit is still unverified.
+These are family specifications, not new measurements of Danila’s specimen. The display height includes its stand; its shell and stand proportions are inferred from the photograph. Small projections and approximate feet can extend beyond nominal envelopes. The monitor insert uses Danila’s existing [measured ring](display-base-ring/): 174 mm OD, 167 mm ID, 5 mm high; its physical fit is still unverified.
 
 The ruler photograph `PXL_20261009_132938614.jpg` provides an independent local scale. In a 1824 × 1373 display of that photo, the 200 and 100 mm ruler ticks are approximately x=405 and x=1380. Six number-row key intervals span approximately 1172 pixels, giving 1172 / 6 / 9.75 ≈ 20.0 mm. The model uses 20 mm pitch. Allow about ±1 mm for hand-picked landmarks, perspective and the ruler lying at a different height from the key centres. This is not submillimetre metrology.
 
@@ -50,7 +50,7 @@ All 175 images from `Photos-1-001 (5).zip` (172) and `(6).zip` (3) were reviewed
 | Keyboard controller | 123622947, 123631131, 123729356, 123648677 | Socketed UB880D, small DIP logic, ceramic EPROM package with blue window cover, connector, discrete components, electrolytics and shield clamp. Nominal 2.54 mm lead pitch; approximately 270 × 46 mm envelope inferred from package proportions. Placement, passive values and hidden routing are estimates. |
 | Keyboard feet | 123257360, 123407648, 123440420 | Hollow rubber frames with metal channel inserts and slotted screws; no worn finish. Photo-scaled envelope approximately 32 × 11 mm; see `specimen-measurements.json`. |
 | System feet | 131106217, 131117938 | Rectangular rubber frames replace provisional cylinders; metal channels and slotted screws. Dimensions remain estimated. |
-| Monitor underside | 125038677, 125108737, 125132359.MP | Hollow annular pedestal, folded mounting brackets, two ribbed adjustment knobs, lower vent banks and cable outlet. Original 175/169 × 5 mm insert dimensions retained. |
+| Monitor underside | 125038677, 125108737, 125132359.MP | Hollow annular pedestal, folded mounting brackets, two ribbed adjustment knobs, lower vent banks and cable outlet. Insert updated to owner-revised 174/167 × 5 mm dimensions on 2026-10-13. |
 | Rear panel | 125226422, 125256937, 125413618, 125417620 | DISPLAY, V24, PRINTER and three-row FLOPPY-DISK sockets, blanking plates, two fuse holders, three-pole monitor power outlet and mains inlet. Shown unplugged; contact sizes and panel placement are estimated. |
 
 Filenames in the table abbreviate `PXL_20261012_<time>.jpg`. The underside photograph also corrects the cable guide to a folded bow-tie shape, approximately 57 × 37 mm around a 42 × 17 mm opening.
@@ -524,3 +524,14 @@ rotates. Nominal square size is 133.35 mm; sleeve/window details are provisional
 not a reproduction of a particular disk from the collection. No physical print
 verification is claimed. Browser presence and lever closure follow inserted
 media, independently for drives A/B and independently of power.
+
+### Drive-front and texture update, 2026-10-13
+
+Owner close-ups `113529099` and `113537277` guide the broader asymmetric lever,
+separate metallic perimeter, quarter-turn direction marking and open insertion
+slot behind the faceplate. Lever dimensions remain photo estimates. The browser
+exports include the independent trim mesh so it rotates with its lever.
+
+The exporter derives bounded label crops (at most 1024 px per edge) and retains
+full source-photo coordinates, crop UVs and SHA-256 hashes in the manifest.
+DAC loads these small textures; full photographs are for on-demand inspection.

@@ -14,5 +14,5 @@ keyboard_slope = atan((keyboard_rear_height-keyboard_front_height)/(keyboard_slo
 // Black skirt bottom is local -4, base top -5: preserve their 1 mm gap.
 keyboard_deck_z = keyboard_front_height + keyboard_d/2*tan(keyboard_slope) + 5/cos(keyboard_slope);
 keyboard_z_shift = keyboard_deck_z-26;
-ring_od = 175; ring_id = 169; ring_h = 5; // Danila's measured insert.
+ring_od = 174; ring_id = 167; ring_h = 5; // Danila's measured insert.
 $fn = 24;

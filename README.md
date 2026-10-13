@@ -82,4 +82,4 @@ materials and verification metadata from here; geometry corrections belong here.
   mounting base with five original-shaped supports and two screw holes
 - [Robotron 1715M](models/robotron-1715m/) — museum reconstruction and its
   [display base ring](models/robotron-1715m/display-base-ring/), a protective
-  insert with Ø175 mm outside, 3 mm radial wall and 5 mm height
+  insert with Ø174 mm outside, 3.5 mm radial wall and 5 mm height
