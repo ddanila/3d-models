@@ -653,6 +653,14 @@
       "source": "Photos-1-001 (9).zip",
       "original_sha256": "2af42fa63253818ee659d9ab50ba1eb1c1b8f7d8ffe02d9c2461713f030c74c7",
       "sha256": "6a94c0acec8e6a1fd475385e96f57d30dc336a6c1366de7db0fb1623394132a7"
+    },
+    {
+      "file": "PXL_20261013_084425145.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "PXL_20261013_084425145.jpg",
+      "original_sha256": "511db490f2b23b6f2a41cfcb958a4de3da8ec47ea9fcb6d4a1edf178644819f1",
+      "sha256": "ca1cbfd93757821cbb5e596d7537a01f64c26bc2a994c5a8e17c96f8bab52365"
     }
   ]
 }

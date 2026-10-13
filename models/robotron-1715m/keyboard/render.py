@@ -8,20 +8,22 @@ import time
 
 root = Path(__file__).resolve().parent
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--view', choices=['assembled', 'front', 'underside', 'exploded', 'boards', 'all'], default='all')
+parser.add_argument('--view', choices=['assembled', 'front', 'side', 'underside', 'exploded', 'boards', 'all'], default='all')
 args = parser.parse_args()
 keys = json.loads((root.parent / 'keyboard-layout.json').read_text())
 (root / 'legends.scad').write_text(
     '// Generated from ../keyboard-layout.json; same order as ../keyboard-layout.scad.\n'
     + 'key_legends=' + json.dumps([k.get('legend', [k['label']]) for k in keys], ensure_ascii=False) + ';\n')
-for view in (['assembled', 'front', 'underside', 'exploded', 'boards'] if args.view == 'all' else [args.view]):
+for view in (['assembled', 'front', 'side', 'underside', 'exploded', 'boards'] if args.view == 'all' else [args.view]):
     filename = 'preview.png' if view == 'assembled' else view + '.png'
     camera = '0,0,0,65,0,25,850' if view == 'exploded' else '0,0,0,35,0,0,850'
     if view == 'front':
         camera = '0,0,0,82,0,15,850'
+    if view == 'side':
+        camera = '0,0,0,90,0,90,850'
     if view == 'underside':
         camera = '0,0,0,180,0,0,850'
-    scene_view = 'assembled' if view in ('front', 'underside') else view
+    scene_view = 'assembled' if view in ('front', 'side', 'underside') else view
     started = time.monotonic()
     result = subprocess.run([
         'openscad', '--backend', 'Manifold', '--preview', '--imgsize=1400,900',

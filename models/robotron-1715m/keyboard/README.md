@@ -11,6 +11,7 @@ Clear keys have a separate silver inlay and configurable shell alpha.
 
 - [Assembled preview](preview.png)
 - [Low front preview](front.png)
+- [Side profile](side.png)
 - [Underside preview](underside.png)
 - [Exploded preview with springs](exploded.png)
 - [PCB/contact preview](boards.png)
@@ -31,11 +32,11 @@ From this directory:
 ```sh
 python3 render.py --view assembled  # one quick color PNG
 python3 render.py --view front      # check front fascia and deck joint
-python3 render.py                   # all five review views
+python3 render.py                   # all six review views
 ```
 
 This uses the installed OpenSCAD build with the Manifold backend. On the current
-Mac, all five previews take only a few seconds. It does not regenerate STLs,
+Mac, all six previews take only a few seconds. It does not regenerate STLs,
 rebuild the complete computer, sync DAC, or run browser/emulator CI. Review shape,
 spacing, colors and internals here first; then export only the affected canonical
 parts and sync the museum once the change is ready.
@@ -92,3 +93,12 @@ and bottom planes are parallel (both follow the keyboard tilt); it is not a
 wedge. The deck top and key mechanism datum stay in place while the skirt
 extends downward. The light base is trimmed to the parallel seating plane.
 The outer 2 mm / inner 1 mm top bends preserve 1 mm material thickness.
+
+The October 13 side photo `PXL_20261013_084425145.jpg` corrects the rear shelf:
+the light base has one continuous sloping top plane, including behind the black
+panel. The earlier raised rear ledge incorrectly intersected the black skirt.
+The 1 mm separation now continues along the full panel; `--view side` checks it.
+
+The same side photo shows a small round top-to-wall bend in the light base.
+A 1 mm rounded offset of the inner wedge models this separately from the
+5 mm corners in plan; the lower rim remains flat and open for the separate lid.

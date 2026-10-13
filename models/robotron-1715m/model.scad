@@ -158,20 +158,23 @@ module keyboard_shell() {
                 // Clipping below the rim prevents a rolled-under bottom edge.
                 intersection() {
                     translate([0,0,1.2])slab(keyboard_w-6,keyboard_d,40,5);
-                    hull(){
-                        translate([-keyboard_w/2+3,-keyboard_d/2,0])rounded([keyboard_w-6,12,16],1);
-                        translate([-keyboard_w/2+3,keyboard_d/2-12,0])rounded([keyboard_w-6,12,40],1);
+                    // Offset a smaller wedge by 1 mm: a genuine round bend
+                    // along the sloping top, independent of the 5 mm plan corners.
+                    minkowski(){
+                        intersection(){
+                            translate([0,0,0])slab(keyboard_w-8,keyboard_d-2,40,4);
+                            translate([0,0,26])rotate([keyboard_slope,0,0])
+                                translate([-keyboard_w,-keyboard_d,-100])cube([2*keyboard_w,2*keyboard_d,94]);
+                        }
+                        sphere(r=1,$fn=24);
                     }
                 }
-                // Offset the sloped top by one sheet thickness and leave
-                // 1 mm vertical walls around the open underside.
+                // One continuous sloping 1 mm skin, including the exposed rear
+                // shelf: owner side photo PXL_20261013_084425145.
                 intersection() {
-                    translate([0,0,-3])
-                        slab(keyboard_w-6-2*sheet,keyboard_d-2*sheet,60,5-sheet);
-                    hull(){
-                        translate([-keyboard_w/2,-keyboard_d/2,-sheet*sqrt(1+pow(24/(keyboard_d-12),2))])cube([keyboard_w,12,16]);
-                        translate([-keyboard_w/2,keyboard_d/2-12,-sheet*sqrt(1+pow(24/(keyboard_d-12),2))])cube([keyboard_w,12,40]);
-                    }
+                    translate([0,0,-3])slab(keyboard_w-6-2*sheet,keyboard_d-2*sheet,60,5-sheet);
+                    translate([0,0,26])rotate([keyboard_slope,0,0])
+                        translate([-keyboard_w,-keyboard_d,-100])cube([2*keyboard_w,2*keyboard_d,94]);
                 }
                 // The tilted deck aperture must not cut through the vertical
                 // front fascia: its tall cutter leans forward as Z increases.
@@ -189,19 +192,10 @@ module keyboard_shell() {
                     slab(10,15,sheet,1);
                     translate([0,-side*5,-1])cylinder(d=3.5,h=4,$fn=24);
                 }
-            // Stay inside the 40 mm rear envelope so the case switches remain visible.
-            translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
-                translate([0,78,2])slab(keyboard_w-8,40,sheet,1);
         }
-        // Uniform 1 mm gap beneath the black skirt (local bottom Z=-4).
-        // Trim the light base to the parallel Z=-5 plane under the deck;
-        // retain the raised rear ledge beyond the deck's back edge at Y=59.
-        translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
-            translate([-keyboard_w,-keyboard_d,-5])
-                cube([keyboard_w*2,keyboard_d+59,100]);
         // Cut through both the pressed ledge and any overlapping shell lip.
         translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
-            translate([0,81,1.5])slab(keyboard_w-40,12,5,5.9);
+            translate([0,81,-7])slab(keyboard_w-40,12,5,5.9);
     }
 }
 module keyboard_bottom() {
