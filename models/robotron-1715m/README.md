@@ -556,3 +556,18 @@ sleeve is exported from the same SCAD source rather than rebuilt in DAC. Its
 1.6 mm internal clearance admits the modeled 1.2 mm jacket; paper is estimated
 at 0.2 mm. It remains separate from the assembled computer. No print-verification
 status changes accompany this visual refinement.
+
+### Controller underside and independent key inspection (browser v27)
+
+Owner controller photo `PXL_20261012_123622947.jpg` supplies the readable
+К555ЛА9, К155ТМ2 and К555ЛА7 markings. DIP/EPROM lead holes and underside
+solder fillets share component pin centers; washers align with mount holes.
+Fillet shape, plated barrels and local clearances remain nominal estimates, not
+an electrically reconstructed board or a print-verified replacement.
+
+Inspection-only meshes now include the switch guide, mount, contact electrodes
+and a local PCB section in the same coordinate frame as the key prototype.
+DAC reuses these and the canonical cap/carrier/rubber/spring, rather than creating
+a separate mechanism. Material profiles specify directional metal grain, matte
+rubber/paper and clear-key optical properties. No wear or exterior dimensional
+changes are introduced, and physical verification remains unchanged.

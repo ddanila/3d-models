@@ -22,6 +22,8 @@ module owner_dip_pins(p) {
 module keyboard_controller_board(){keyboard_controller_pose()difference(){
  translate([-135,-23,0])cube([270,46,1.6]);
  for(x=[-130,130],y=[-18,18])translate([x,y,-1])cylinder(d=3.2,h=4);
+ for(p=concat(controller_dips,[[114,8,24,15.24]]),i=[0:p[2]/2-1],side=[-1,1])
+   translate([p[0]+(i-(p[2]/2-1)/2)*2.54,p[1]+side*p[3]/2,-1])cylinder(d=.9,h=4,$fn=12);
 }}
 module keyboard_controller_chips(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_body(p);
@@ -52,6 +54,9 @@ module keyboard_controller_metal(){keyboard_controller_pose(){
 }}
 module keyboard_controller_ink(){keyboard_controller_pose(){
  translate([62,8,6.15])linear_extrude(.08)text("UB880D",size=3,halign="center",valign="center",font="Liberation Sans");
+ // Only legible markings from owner photo 123622947; uncertain identities omitted.
+ for(p=[[20,12,"К555ЛА9"],[20,-12,"К555ЛА9"],[-48,12,"К555ЛА9"],[89,-12,"К155ТМ2"],[114,-12,"К555ЛА7"]])
+   translate([p[0],p[1],6.15])linear_extrude(.06)text(p[2],size=1.65,halign="center",valign="center",font="Liberation Sans");
  translate([128,8,6.35])slab(4,12,.12,.1);
 }}
 module keyboard_insulators(){
@@ -237,6 +242,7 @@ module specimen_shape(p){
  if(p=="keyboard-controller-metal")keyboard_controller_metal();
  if(p=="keyboard-controller-ink")keyboard_controller_ink();
  if(p=="keyboard-insulators")keyboard_insulators();
+ if(p=="keyboard-controller-solder")keyboard_controller_solder();
  if(p=="keyboard-pcb-supports")keyboard_pcb_supports();
  if(p=="keyboard-pcb-fasteners")keyboard_pcb_fasteners();
  if(p=="keyboard-entry-wires")keyboard_entry_wires();
@@ -281,3 +287,14 @@ module keyboard_contact_routes(){
  for(k=keys)translate([k[0],k[1],-13.31])for(side=[-1,1])
    board_trace([[side*2,0],[side*5,0],[side*6,3]],.5,.02);
 }
+
+// Clean lead-aligned underside joints and plated barrels. The original photo
+// establishes soldered through-hole construction; joint profiles are estimates.
+module keyboard_controller_solder(){keyboard_controller_pose(){
+ for(p=concat(controller_dips,[[114,8,24,15.24]]),i=[0:p[2]/2-1],side=[-1,1])
+   translate([p[0]+(i-(p[2]/2-1)/2)*2.54,p[1]+side*p[3]/2,-.55])difference(){
+     union(){cylinder(d1=.9,d2=1.8,h=.55,$fn=16);translate([0,0,.5])cylinder(d=1.35,h=1.7,$fn=16);}
+     translate([0,0,-.1])cylinder(d=.72,h=2.4,$fn=12);
+   }
+ for(x=[-130,130],y=[-18,18])translate([x,y,-.4])difference(){cylinder(d=6,h=.4,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=16);}
+}}

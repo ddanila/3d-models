@@ -79,17 +79,18 @@ patches += drive_labels['patches']
 for i,x in enumerate([-231,-77]):
     patches.append(dict(name=f'drive-diskette-ink-{i}',photo='PXL_20261013_113451775.jpg',uv=[[.540,.654],[.776,.654],[.776,.878],[.540,.878]],position=[x+106,-188,90.32],size=[51,36],rotation=[0,0,0],section='interior',assembly='drives',disketteUnit=i))
 materials={
+    'paper':dict(roughness=.94,metalness=0,grain=.025,grainScale=3,grainRelief=.001),
     'ink':dict(roughness=.86,metalness=0),
     'paint':dict(roughness=.69,metalness=0,grain=.065,grainScale=2.2,grainRelief=.022),
     'plastic':dict(roughness=.48,metalness=0,grain=.014,grainScale=3.5,grainRelief=.006),
     'key':dict(roughness=.4,metalness=0,grain=.01,grainScale=4.0,clearcoat=.18),
-    'clear-key':dict(roughness=.15,metalness=0,grain=.002,grainScale=4.0,clearcoat=1,transparent=True,opacity=.24,depthWrite=False),
-    'rubber':dict(roughness=.96,metalness=0,grain=.025,grainScale=4.0,grainRelief=.008),
+    'clear-key':dict(roughness=.12,metalness=0,grain=.002,grainScale=4.0,clearcoat=1,ior=1.49,transparent=True,opacity=.32,depthWrite=False),
+    'rubber':dict(roughness=.92,metalness=0,grain=.04,grainScale=5.0,grainRelief=.012),
     'plated-steel':dict(roughness=.3,metalness=.88,grain=.012,grainScale=4.5,grainRelief=.003),
     'cast-alloy':dict(roughness=.57,metalness=.62,grain=.03,grainScale=2.2),
     'solder':dict(roughness=.48,metalness=.66,grain=.009,grainScale=5),
     'aged-plastic':dict(roughness=.74,metalness=0,grain=.026,grainScale=3.5),
-    'metal':dict(roughness=.26,metalness=.9,grain=.008,grainScale=5.0,grainRelief=.002),
+    'metal':dict(roughness=.32,metalness=.86,grain=.018,grainScale=5.0,grainRelief=.002,grainStretch=[.08,1,1]),
     'lens':dict(roughness=.24,metalness=0,clearcoat=.8),
     'glass':dict(roughness=.16,metalness=.05,clearcoat=1),
     'pcb':dict(roughness=.61,metalness=.05),
@@ -98,6 +99,7 @@ materials={
 for r in records:
     n=r.get('part',r['name']);m='paint'
     if n.startswith(('drive-shaft-', 'drive-release-')):r['section']='interior';m='plated-steel'
+    if n=='keyboard-controller-solder':r['section']='interior';m='solder'
     if n in ['keyboard-pcb-supports','keyboard-pcb-fasteners','keyboard-entry-wires','keyboard-contact-routes']:r['section']='interior';m='metal' if n.endswith('fasteners') else 'plastic'
     if n in ['keyboard-guides','keyboard-contact-pads']:r['section']='interior';m='plastic'
     if n=='prototype-rubber':r['section']='prototype';m='rubber'
@@ -183,11 +185,13 @@ references += ['PXL_20261013_084425145.jpg']
 references += ['PXL_20261013_'+n+'.jpg' for n in ['113428737','113436448','113451775','113457457','113529099','113537277']]
 verification=json.loads((root.parents[1]/'model-status.json').read_text())
 # Standalone inspection-only envelope is exported from the same CAD source.
-sleeve_path=out/'meshes/specimen-sleeve.stl'
-if args.parts is None or 'specimen-sleeve' in args.parts or not sleeve_path.exists():
-    subprocess.run(['openscad','--backend','Manifold','--export-format','binstl','-D','part="specimen-sleeve"','-o',str(sleeve_path),str(root/'model.scad')],check=True)
-specimen_meshes=[dict(name='specimen-sleeve',file='meshes/specimen-sleeve.stl',sha256=hashlib.sha256(sleeve_path.read_bytes()).hexdigest())]
-manifest=dict(version=26,specimenMeshes=specimen_meshes,modelVerification={k:v for k,v in verification['models'].items() if k.startswith('models/robotron-1715m/')},rearMarkings=rear_markings,cableParking=[0,18,0],pcbComponents=json.loads((root/"pcb-components.json").read_text()),keyboardMechanism=dict(spring="prototype-spring",stem="prototype-stem",rubber="prototype-rubber",installedHeight=19.6,freeHeight=23,springBase=-10.4,travel=2.2,diameter=13,wire=.4,activeTurns=5,closedTurnsPerEnd=3,status="Owner-confirmed outer diameter, free length, wire and rubber/PCB contact principle. Turns photo-estimated; installed compression, travel and hidden geometry provisional"),driveMotion=[dict(unit=i,spindle=f"drive-spindle-{i}",head=f"drive-head-{i}",headMetal=f"drive-head-metal-{i}",headArm=f"drive-head-arm-{i}",armPivot=[x+71,-55,90],medium=f"drive-medium-{i}",jacket=f"drive-diskette-{i}",disketteLabel=f"drive-diskette-label-{i}",latch=f"drive-latch-{i}",latchTrim=f"drive-latch-trim-{i}",clamp=f"drive-clamp-{i}",shaft=f"drive-shaft-{i}",release=f"drive-release-{i}",latchPivot=[x+118,-209,92],pivot=[x+70,-144,88],travel=[0,-79*25.4/96,0],trackPitch=25.4/96,travelSource="TEAC FD-55FV-13 specification p.108: 96 tpi; specimen suffix unverified") for i,x in enumerate([-231,-77])],units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=keyboard_dimensions,screen=json.loads((root/'monitor-profile.json').read_text())['glass'],patches=patches,driveLabels=drive_labels,references=references,pcbReferences=json.loads((root/'pcb-references.json').read_text()),interior=dict(status='provisional',drive='Owner specimens: Robotron K5601 / TEAC 15532064-00A and Ratan assembly / TEAC 15532092-00A; FD-55 suffix unverified',driveEnvelope=[146,203,41.3],source='https://oldcrap.org/2017/12/26/robotron-1715/',specification='https://retrocmp.de/fdd/teac/TEAC_FD55-FV.pdf',note='Drive envelopes are documented. Drive mechanisms and rear plates now follow owner photos; the nominal envelope remains a reference. Logic-board population, mounting and wiring still use comparative evidence.'),source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
+specimen_meshes=[]
+for name in ['specimen-sleeve','specimen-switch-guide','specimen-switch-mount','specimen-switch-contacts','specimen-switch-pcb']:
+    path=out/'meshes'/f'{name}.stl'
+    if args.parts is None or name in args.parts or not path.exists():
+        subprocess.run(['openscad','--backend','Manifold','--export-format','binstl','-D',f'part="{name}"','-o',str(path),str(root/'model.scad')],check=True)
+    specimen_meshes.append(dict(name=name,file=f'meshes/{name}.stl',sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
+manifest=dict(version=27,specimenMeshes=specimen_meshes,modelVerification={k:v for k,v in verification['models'].items() if k.startswith('models/robotron-1715m/')},rearMarkings=rear_markings,cableParking=[0,18,0],pcbComponents=json.loads((root/"pcb-components.json").read_text()),keyboardMechanism=dict(spring="prototype-spring",stem="prototype-stem",rubber="prototype-rubber",installedHeight=19.6,freeHeight=23,springBase=-10.4,travel=2.2,diameter=13,wire=.4,activeTurns=5,closedTurnsPerEnd=3,status="Owner-confirmed outer diameter, free length, wire and rubber/PCB contact principle. Turns photo-estimated; installed compression, travel and hidden geometry provisional"),driveMotion=[dict(unit=i,spindle=f"drive-spindle-{i}",head=f"drive-head-{i}",headMetal=f"drive-head-metal-{i}",headArm=f"drive-head-arm-{i}",armPivot=[x+71,-55,90],medium=f"drive-medium-{i}",jacket=f"drive-diskette-{i}",disketteLabel=f"drive-diskette-label-{i}",latch=f"drive-latch-{i}",latchTrim=f"drive-latch-trim-{i}",clamp=f"drive-clamp-{i}",shaft=f"drive-shaft-{i}",release=f"drive-release-{i}",latchPivot=[x+118,-209,92],pivot=[x+70,-144,88],travel=[0,-79*25.4/96,0],trackPitch=25.4/96,travelSource="TEAC FD-55FV-13 specification p.108: 96 tpi; specimen suffix unverified") for i,x in enumerate([-231,-77])],units='mm',scale=.0025,materials=materials,parts=records,keys=keys,keyMeshes=key_meshes,keyboard=keyboard_dimensions,screen=json.loads((root/'monitor-profile.json').read_text())['glass'],patches=patches,driveLabels=drive_labels,references=references,pcbReferences=json.loads((root/'pcb-references.json').read_text()),interior=dict(status='provisional',drive='Owner specimens: Robotron K5601 / TEAC 15532064-00A and Ratan assembly / TEAC 15532092-00A; FD-55 suffix unverified',driveEnvelope=[146,203,41.3],source='https://oldcrap.org/2017/12/26/robotron-1715/',specification='https://retrocmp.de/fdd/teac/TEAC_FD55-FV.pdf',note='Drive envelopes are documented. Drive mechanisms and rear plates now follow owner photos; the nominal envelope remains a reference. Logic-board population, mounting and wiring still use comparative evidence.'),source='https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m')
 # Small, reproducible label crops: full photographs are inspection-only assets.
 from PIL import Image
 (out/'textures').mkdir(exist_ok=True)
