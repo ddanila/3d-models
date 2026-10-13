@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "models": {
+    "models/dip28-chip-tray/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/oral-b-five-brush-stand/model.scad": {
+      "physicalVerification": "printed-and-verified",
+      "evidence": [
+        {
+          "date": "2026-10-13",
+          "verifiedBy": "Danila",
+          "result": "Owner explicitly confirms printed and verified (including both case and lid where applicable). Confirmation date; original print date not recorded.",
+          "files": {
+            "models/oral-b-five-brush-stand/oral-b-five-brush-stand.stl": "0d754ba0edec8dd2bb1eb6a33d246706630cfc18ec4d67ed047421eb507fd202",
+            "models/oral-b-five-brush-stand/model.scad": "067e9906782027a2e4ee97be222a9e155a337c39a63eda2b98ad6fd4c3313e56"
+          }
+        }
+      ]
+    },
+    "models/pk8010-korvet/pk8010-korvet-button/model.scad": {
+      "physicalVerification": "printed-and-verified",
+      "evidence": [
+        {
+          "date": "2026-10-13",
+          "verifiedBy": "Danila",
+          "result": "Owner confirms printed and physically checked; confirmation date, not print date. Recorded current canonical model; alternate variants are not implicitly approved.",
+          "files": {
+            "models/pk8010-korvet/pk8010-korvet-button/model.scad": "5abefe3b8cf29b26b927df8ee36aa2386c278f24a66f01f1f2604575f8676013",
+            "models/pk8010-korvet/pk8010-korvet-button/pk8010-korvet-button.stl": "5b30d295fbb2bf0a420849e94c1a387791975d2c5aca338d2011b4c3f837114f"
+          }
+        }
+      ]
+    },
+    "models/pk8010-korvet/pk8010-korvet-keycap/model.scad": {
+      "physicalVerification": "printed-and-verified",
+      "evidence": [
+        {
+          "date": "2026-10-13",
+          "verifiedBy": "Danila",
+          "result": "Owner confirms printed and physically checked; confirmation date, not print date. Recorded current canonical model; alternate variants are not implicitly approved.",
+          "files": {
+            "models/pk8010-korvet/pk8010-korvet-keycap/model.scad": "b4fd26e1c45c155a1258405bfaa4a497d98bef827eb4befa544a197200fe5b77",
+            "models/pk8010-korvet/pk8010-korvet-keycap/pk8010-korvet-keycap.stl": "3d07ea2d2cb6d5d02057450a50d01cb6951a33349bcbdf4f98804a8de315542e"
+          }
+        }
+      ]
+    },
+    "models/pk8010-korvet/pk8010-korvet-keycap/part-fit-minus-0-2.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/pk8010-korvet/pk8010-korvet-shift-keycap/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/pk8010-korvet/pk8010-korvet-shift-keycap/part-fit-minus-0-2.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/pk8010-korvet/pk8010-korvet-side-lid/model.scad": {
+      "physicalVerification": "printed-and-verified",
+      "evidence": [
+        {
+          "date": "2026-10-13",
+          "verifiedBy": "Danila",
+          "result": "Owner confirms printed and physically checked; confirmation date, not print date. Recorded current canonical model; alternate variants are not implicitly approved.",
+          "files": {
+            "models/pk8010-korvet/pk8010-korvet-side-lid/model.scad": "de2eabce6a88ba0f2a17febb91a8fb5fadf612048a8dedf3235ccade876d6a35",
+            "models/pk8010-korvet/pk8010-korvet-side-lid/pk8010-korvet-side-lid.stl": "22a690f1541065d31ebe5e7b110089c1532e1cde283a89b0636232c86bc3250f"
+          }
+        }
+      ]
+    },
+    "models/rg1n-loopback-case/model.scad": {
+      "physicalVerification": "printed-and-verified",
+      "evidence": [
+        {
+          "date": "2026-10-13",
+          "verifiedBy": "Danila",
+          "result": "Owner explicitly confirms printed and verified (including both case and lid where applicable). Confirmation date; original print date not recorded.",
+          "files": {
+            "models/rg1n-loopback-case/model.scad": "ae36ea864bbb44fb6d36b940609ff4d9dc528ac026c8fe173c0c1eb963eb3f9b",
+            "models/rg1n-loopback-case/assembly.scad": "6d74686cefcdc516d68309f5ba93e707aaeede56da8f59b322cc5794e03b51a9",
+            "models/rg1n-loopback-case/case-lib.scad": "ba25431bcb2b5ae82576b903411ccd7a28dfdee422b713d1f2b2d30f8793097d",
+            "models/rg1n-loopback-case/rg1n-loopback-case.stl": "7d27b2f3aeb76d9e65e83aafcafdfc423d9bc9298cc5c3632bc126243becf9c6",
+            "models/rg1n-loopback-case/rg1n-loopback-case-lid.stl": "0f6757bc3448980f9b6963966f02d807a3c84174112ea490420b9d490ebad26d",
+            "models/rg1n-loopback-case/part-lid.scad": "e9702e74a84ea087e960e2900a2fd4515378b4197aa4fadfb2b7cd500cb479f1",
+            "models/rg1n-loopback-case/dimensions.scad": "4633a5ce669d4a2917ab78fc65707e41d77e221519d06368e8a970a944871b46"
+          }
+        }
+      ]
+    },
+    "models/rg1n-loopback-case/part-lid.scad": {
+      "physicalVerification": "printed-and-verified",
+      "evidence": [
+        {
+          "date": "2026-10-13",
+          "verifiedBy": "Danila",
+          "result": "Owner explicitly confirms printed and verified (including both case and lid where applicable). Confirmation date; original print date not recorded.",
+          "files": {
+            "models/rg1n-loopback-case/model.scad": "ae36ea864bbb44fb6d36b940609ff4d9dc528ac026c8fe173c0c1eb963eb3f9b",
+            "models/rg1n-loopback-case/assembly.scad": "6d74686cefcdc516d68309f5ba93e707aaeede56da8f59b322cc5794e03b51a9",
+            "models/rg1n-loopback-case/case-lib.scad": "ba25431bcb2b5ae82576b903411ccd7a28dfdee422b713d1f2b2d30f8793097d",
+            "models/rg1n-loopback-case/rg1n-loopback-case.stl": "7d27b2f3aeb76d9e65e83aafcafdfc423d9bc9298cc5c3632bc126243becf9c6",
+            "models/rg1n-loopback-case/rg1n-loopback-case-lid.stl": "0f6757bc3448980f9b6963966f02d807a3c84174112ea490420b9d490ebad26d",
+            "models/rg1n-loopback-case/part-lid.scad": "e9702e74a84ea087e960e2900a2fd4515378b4197aa4fadfb2b7cd500cb479f1",
+            "models/rg1n-loopback-case/dimensions.scad": "4633a5ce669d4a2917ab78fc65707e41d77e221519d06368e8a970a944871b46"
+          }
+        }
+      ]
+    },
+    "models/robotron-1715m/display-base-ring/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/robotron-1715m/key-switch/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/robotron-1715m/keyboard/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/robotron-1715m/keycap/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/robotron-1715m/keycap-spring-mandrel/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/robotron-1715m/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/usb-serial-adapter-case/model.scad": {
+      "physicalVerification": "printed-and-verified",
+      "evidence": [
+        {
+          "date": "2026-10-13",
+          "verifiedBy": "Danila",
+          "result": "Owner explicitly confirms printed and verified (including both case and lid where applicable). Confirmation date; original print date not recorded.",
+          "files": {
+            "models/usb-serial-adapter-case/model.scad": "1fe324d46ec95f158cf5dc6ed34d5ce914e3090d8dc0c59fd7fe8053658a2dac",
+            "models/usb-serial-adapter-case/assembly.scad": "192f08ea2b5d84a33dddba4067ec07e6e3fe135fc6690350bba90062437ab2b4",
+            "models/usb-serial-adapter-case/lid-lib.scad": "e80b093e3713b444de7ab490da5952d234a55c119e774ab0737947cd2f09425a",
+            "models/usb-serial-adapter-case/usb-serial-adapter-case-lid.stl": "ab323b0db76f61cb825d0e4cda493322c355f223ad8574ea8a03c7b634ea4e01",
+            "models/usb-serial-adapter-case/part-lid.scad": "e156a7ca156cca0854f3a0e0b62fe1718d96d7a010a53e2a7c4ed8827cc8ca4a",
+            "models/usb-serial-adapter-case/usb-serial-adapter-case.stl": "035dafa2ec1b6fcaf877ef574e70220aef1cdfc2dce09ea80c6849a7f0bbb5e8",
+            "models/usb-serial-adapter-case/dimensions.scad": "e82bd27f042d07cf4413622fd0f64700054a83621c45491ca1037d88fac18786"
+          }
+        }
+      ]
+    },
+    "models/usb-serial-adapter-case/part-lid.scad": {
+      "physicalVerification": "printed-and-verified",
+      "evidence": [
+        {
+          "date": "2026-10-13",
+          "verifiedBy": "Danila",
+          "result": "Owner explicitly confirms printed and verified (including both case and lid where applicable). Confirmation date; original print date not recorded.",
+          "files": {
+            "models/usb-serial-adapter-case/model.scad": "1fe324d46ec95f158cf5dc6ed34d5ce914e3090d8dc0c59fd7fe8053658a2dac",
+            "models/usb-serial-adapter-case/assembly.scad": "192f08ea2b5d84a33dddba4067ec07e6e3fe135fc6690350bba90062437ab2b4",
+            "models/usb-serial-adapter-case/lid-lib.scad": "e80b093e3713b444de7ab490da5952d234a55c119e774ab0737947cd2f09425a",
+            "models/usb-serial-adapter-case/usb-serial-adapter-case-lid.stl": "ab323b0db76f61cb825d0e4cda493322c355f223ad8574ea8a03c7b634ea4e01",
+            "models/usb-serial-adapter-case/part-lid.scad": "e156a7ca156cca0854f3a0e0b62fe1718d96d7a010a53e2a7c4ed8827cc8ca4a",
+            "models/usb-serial-adapter-case/usb-serial-adapter-case.stl": "035dafa2ec1b6fcaf877ef574e70220aef1cdfc2dce09ea80c6849a7f0bbb5e8",
+            "models/usb-serial-adapter-case/dimensions.scad": "e82bd27f042d07cf4413622fd0f64700054a83621c45491ca1037d88fac18786"
+          }
+        }
+      ]
+    },
+    "models/juku/keycap/model.scad": {
+      "physicalVerification": "printed-and-verified",
+      "evidence": [
+        {
+          "date": "2026-10-13",
+          "verifiedBy": "Danila",
+          "result": "Owner confirms printed and physically checked; confirmation date, not print date. Recorded current canonical model; alternate variants are not implicitly approved.",
+          "files": {
+            "models/juku/keycap/juku-keycap.scad": "39384861a99205aa813f5a41b47e21bdce5d6d7b523fe8c816f5d48dc1f83b8c",
+            "models/juku/keycap/model.scad": "211c91dafb049fd70207d3ff13ea086fd78fee720ba1d5006f4b9991275f856c",
+            "models/juku/keycap/juku-keycap.stl": "f1f2317d1e361e336323b5736fca0bf502168c900e3d42048eb9ea86ae773476"
+          }
+        }
+      ]
+    },
+    "models/juku/bottom-case/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/juku/bottom-case/part-bl.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/juku/bottom-case/part-br.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/juku/bottom-case/part-fl.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/juku/bottom-case/part-fr.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/juku/legs/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/juku/top-case/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    }
+  }
+}

@@ -1,5 +1,31 @@
 {
   "version": 22,
+  "modelVerification": {
+    "models/robotron-1715m/display-base-ring/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/robotron-1715m/key-switch/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/robotron-1715m/keyboard/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/robotron-1715m/keycap/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/robotron-1715m/keycap-spring-mandrel/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    },
+    "models/robotron-1715m/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
+    }
+  },
   "rearMarkings": [
     {
       "x": 10,
@@ -19342,7 +19368,7 @@
       "name": "keyboard-pcb",
       "file": "meshes/keyboard-pcb.stl",
       "color": "#91ae94",
-      "sha256": "77192fa5c72a51a71708accb981a7f77a762755738376453bd3c6ef510deaa4b",
+      "sha256": "89b83e2485c548a7aebf2f20da4e219ba19b214ba95bae387ed4bf139179f886",
       "section": "interior",
       "material": "pcb"
     },
@@ -19889,7 +19915,7 @@
       "name": "keyboard-insulators",
       "file": "meshes/keyboard-insulators.stl",
       "color": "#59424a",
-      "sha256": "081bef541d772df4c797e0742ddb78216c865c3c9bf3a2763d4105b707de6144",
+      "sha256": "2be377278b465fb010095439a29db00c05686ba20c71a38531f10067654d7636",
       "section": "interior",
       "material": "plastic"
     },
@@ -19897,7 +19923,7 @@
       "name": "keyboard-matrix-artwork",
       "file": "meshes/keyboard-matrix-artwork.stl",
       "color": "#487856",
-      "sha256": "a4c9ad9396df0081eea12647f4ee197b1ca3617a559bdac687bc7ddf10eaf788",
+      "sha256": "25521ef345a2eecd8bbfd9e93c5b8ad5e020b9e1cc152b8fcab53ed075cc5c68",
       "section": "interior",
       "material": "pcb"
     },
@@ -20010,7 +20036,7 @@
       "name": "keyboard-pcb-metal",
       "file": "meshes/keyboard-pcb-metal.stl",
       "color": "#bec4bd",
-      "sha256": "a3034862e6893809ceabcbd40f0bc237d9e9dcf0dc952fa7f3f738001d2d01f1",
+      "sha256": "6c574c3852fddd09f148c42fec3024be8435c7537fd8447b7ad995cb1fe0b16e",
       "section": "interior",
       "material": "solder"
     },

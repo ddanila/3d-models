@@ -1,6 +1,6 @@
 # 3D models
 
-A collection of unrelated 3D-printable models, primarily authored in
+Canonical CAD sources for printable parts and visual reconstructions, primarily authored in
 [OpenSCAD](https://openscad.org/).
 
 Each model lives in its own directory under `models/`. A model directory has
@@ -56,7 +56,20 @@ An `assembly.scad` scene
 is rendered to `preview-assembly.png` when present, and printable parts receive
 their own `preview-<part>.png` image.
 
+## Physical verification
+
+The primary distinction is **printed and verified** versus **not physically
+verified**. See the [model/part status catalogue](MODEL-STATUS.md) and its
+machine-readable [evidence registry](model-status.json). Visual acceptance and
+successful exports do not establish physical fit. No part is promoted without
+recorded print/fit evidence for its exact files.
+
+This repository is the source of truth. DAC consumes versioned meshes, dimensions,
+materials and verification metadata from here; geometry corrections belong here.
+
 ## Models
+
+- [Juku](models/juku/) — printed and verified keycap; top/bottom cases, split bottom panels and legs
 
 - [`usb-serial-adapter-case`](models/usb-serial-adapter-case/) — open-top case
   for the DIYMORE FT232BM/BL USB to RS232/UART TTL/RS485 adapter

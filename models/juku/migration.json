@@ -1,0 +1,186 @@
+{
+  "source": "https://github.com/ddanila/juku",
+  "revision": "23502597f89dba518dbcda8bf18fbe9c450741c6",
+  "files": [
+    {
+      "file": ".gitattributes",
+      "sha256": "438da8729b8b41386134145859b5ce616c468165196238c6223f5b343c5a1276"
+    },
+    {
+      "file": "NOTES.md",
+      "sha256": "b9f8d38085a8491e8971b4090cb978debee19669a7f48a2f37fc1adb9cc11008"
+    },
+    {
+      "file": "README.md",
+      "sha256": "87f5d18843f0061934ebd02fabda9eac752544c7f731d782422fae49e7c237a2"
+    },
+    {
+      "file": "assembly/juku-bottom-with-legs.scad",
+      "sha256": "49fb2f856c7d13f3ba8b6372ecb61a41d1c17363c46d0769b877592eae190fda"
+    },
+    {
+      "file": "bottom-case/SPLITTING.md",
+      "sha256": "de47e860591a10e1379a43fa4e52d885a602cf5fbe8f0dc8636d9f21544b0a1b"
+    },
+    {
+      "file": "bottom-case/estron-logo.dxf",
+      "sha256": "b987ea2e9e67d32bf8894b6ca68e57e98f51d3ced519672077117071451ebc92"
+    },
+    {
+      "file": "bottom-case/juku-bottom-case-bl.stl",
+      "sha256": "90b68182506a6680a2f45ceccebf478c5b44c00fc602987bc1fe2ff28629de64"
+    },
+    {
+      "file": "bottom-case/juku-bottom-case-br.stl",
+      "sha256": "f1e2c30a16dd119fce6df92cf06a9bb393db515a520b51a1b202592d3636cae0"
+    },
+    {
+      "file": "bottom-case/juku-bottom-case-fl.stl",
+      "sha256": "f72e0f7e6cb3fefb36d445708cd5f89ee1ed335d5979a56209dc0c6fa088eed7"
+    },
+    {
+      "file": "bottom-case/juku-bottom-case-fr.stl",
+      "sha256": "9279947d06145465df43122d173dd631cfb248bd94ee6b3625192bbfe4ad7df6"
+    },
+    {
+      "file": "bottom-case/juku-bottom-case-split.scad",
+      "sha256": "ed09ec3b8d51522626cce537d74a2139799fef9d721f08b8f05afc8d10eff7c1"
+    },
+    {
+      "file": "bottom-case/juku-bottom-case.scad",
+      "sha256": "ddb3d9d8a862c5f64ac743a6b7c9508e3f0e0fb370e6ab0df1c20407bc5c6e77"
+    },
+    {
+      "file": "bottom-case/juku-bottom-case.stl",
+      "sha256": "4561a02585a9db4e69bb98c4f41fae27ecf422cebfb5cf365de1c89c64612451"
+    },
+    {
+      "file": "bottom-case/leg-interface.scad",
+      "sha256": "d8042a63078ce021ff75d6c0d746c3439d74810478d6f4ad86ff476975094839"
+    },
+    {
+      "file": "bottom-case/preview-logo.png",
+      "sha256": "8c07011e90b22f3c29825cd03657c0fb80e1bf1ab6961ba2d6b7c08b07d91b94"
+    },
+    {
+      "file": "bottom-case/preview-split-bl.png",
+      "sha256": "14ef2ba61755e67771b4125bcb9e210c0c6bb1a9a710ff297441d37e41b954e1"
+    },
+    {
+      "file": "bottom-case/preview-split-br.png",
+      "sha256": "e676e8336d740403295722126c0c067a694de81b78b0e31a968bc33c9e19301c"
+    },
+    {
+      "file": "bottom-case/preview-split-fl.png",
+      "sha256": "7d8801b3a6e82343e32760f30d92fcdb660fce220baf33704d21a3dfa742128a"
+    },
+    {
+      "file": "bottom-case/preview-split-fr.png",
+      "sha256": "6f96cc824ac34485887b4846488ddc5be51203c7ccc7f3a671afcd1e3698e3b9"
+    },
+    {
+      "file": "bottom-case/preview-split.png",
+      "sha256": "1d13ba9f5805cd4dc7d9b1fbf14e49a0ac7adeac162a32d991834389c4aeb714"
+    },
+    {
+      "file": "bottom-case/preview-supports.png",
+      "sha256": "1c9bab76ce3646875c47ffb574806a06c129324225ea9a76c6e632de5d20d5b1"
+    },
+    {
+      "file": "bottom-case/preview.png",
+      "sha256": "5a419146d72f44b907585b615528d2d4053496859b57a35ea3e95234eb61517d"
+    },
+    {
+      "file": "bottom-case/projection-xy.scad",
+      "sha256": "af48a411fb50445ad03aa91a6f3ef8e9c36eef6b2faca5082bcf1d35efcf34c9"
+    },
+    {
+      "file": "keycap/juku-keycap.scad",
+      "sha256": "39384861a99205aa813f5a41b47e21bdce5d6d7b523fe8c816f5d48dc1f83b8c"
+    },
+    {
+      "file": "keycap/juku-keycap.stl",
+      "sha256": "f1f2317d1e361e336323b5736fca0bf502168c900e3d42048eb9ea86ae773476"
+    },
+    {
+      "file": "keycap/original-bottom.jpg",
+      "sha256": "b0a32d1ae31b96cf466cacc5580035e31ecde4415f0dd73579e01a19f793b4e5"
+    },
+    {
+      "file": "keycap/original-top.jpg",
+      "sha256": "c1eabd82c16067257ef0ba5f0bc6eb714e5348956bc7d14c0e358190070ef7d2"
+    },
+    {
+      "file": "keycap/preview-bottom.png",
+      "sha256": "3789bd9793e934aafac0429208d96bfc27d83fed25378da37a023609ad24931f"
+    },
+    {
+      "file": "keycap/preview-top.png",
+      "sha256": "6b37f1c30e1cbdeed224d457b5b62edfba3c198f0e0675323f26f3d0ff87285a"
+    },
+    {
+      "file": "keycap/printed-bottom.jpeg",
+      "sha256": "2858863dbe6a67181bb36af72e5d67977c1282bfbc8ebd7f870122ebc593bc72"
+    },
+    {
+      "file": "keycap/printed-top.jpeg",
+      "sha256": "5724b11492d992054509ba9ba889c673f2a0c037fe40b2a7651fefa7423476ec"
+    },
+    {
+      "file": "legs/juku-leg.scad",
+      "sha256": "bb9716411fbbb74de472dd30e6b29425e15b3994587a979e1e476ef376180d5c"
+    },
+    {
+      "file": "legs/juku-leg.stl",
+      "sha256": "fcf879f82fa2b418db190d83faa9e4a0e8b68261adf16553b24a739ef06bba9c"
+    },
+    {
+      "file": "legs/preview.png",
+      "sha256": "93721660fd518b9c6e66e1ffb2d4815cb1d8efa7c4ca113fe1087a361ead08e9"
+    },
+    {
+      "file": "scripts/check-render.sh",
+      "sha256": "7b8d7c2b16eab7a71530312fce5415204e0e2949eda0e62e5d9920570a696e80"
+    },
+    {
+      "file": "scripts/export-stls.sh",
+      "sha256": "d869015612a46a69b271c2b92d793a506d57a00a6038eaa85170dc513e35f2df"
+    },
+    {
+      "file": "scripts/open-bottom-case.sh",
+      "sha256": "e924ebb8652f4476a6f4ab00da39705c3b9d0efaa6b5891a42c1010d9dc546db"
+    },
+    {
+      "file": "scripts/open-keycap.sh",
+      "sha256": "95e98265f440a0ac98689c714a10f0c3cb9214904d0b5abd0e82e31838598b33"
+    },
+    {
+      "file": "scripts/render-previews.sh",
+      "sha256": "ee8120b68f61db06a26a0a4865ea71069f095364a5f76ea414d696b8bb28ef9f"
+    },
+    {
+      "file": "top-case/NOTES.md",
+      "sha256": "d22a9703924ebc7584e3242ebf2eec24fd3947c2b1882de8114b653022f479cb"
+    },
+    {
+      "file": "top-case/README.md",
+      "sha256": "b24c6673e6358588cb3f509459dafb6461db23fe85b974a0be08406d97f07640"
+    },
+    {
+      "file": "top-case/juku-top-case.scad",
+      "sha256": "fc1d1717772153057c9b5db178105474063d91e61336fb9332892385dd5f8914"
+    },
+    {
+      "file": "top-case/juku-top-case.stl",
+      "sha256": "fb34a13ba6797d4042620bf0baf1ccf2e8bd9b6c1128d0e978995cc92a531c97"
+    },
+    {
+      "file": "top-case/preview-bottom.png",
+      "sha256": "7c0749799648120a6f16e355c2eca187b638ce9810c02c9c366caa8be6fb5cac"
+    },
+    {
+      "file": "top-case/preview.png",
+      "sha256": "35545bf956ce0cc77aa370f358831eaf9f1c64720e57e244c8285530a4cd7219"
+    }
+  ]
+}
