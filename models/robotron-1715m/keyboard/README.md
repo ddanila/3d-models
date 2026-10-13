@@ -69,3 +69,10 @@ The underside cable opening has two opposing folded rubber strips, with the
 short metal edges exposed, following owner photo `PXL_20261009_133005363.jpg`.
 It is not a four-sided boot like the monitor outlet. Use
 `python3 render.py --view underside` to inspect this detail.
+
+The light shell now ends at a straight, open lower rim above the separate bottom
+lid, with six individual screw tabs. Inside photos `PXL_20261012_123048886.jpg`
+and `PXL_20261012_123907435.jpg` establish this construction. The previous
+spherical rounding rolled the shell underneath and is removed. Plan corner
+radius is approximately 1 mm per owner feedback; sheet thickness, tab dimensions
+and the 0.2 mm lid seam remain modeling estimates.

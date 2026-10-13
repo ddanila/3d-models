@@ -152,9 +152,17 @@ module keyboard_shell() {
     difference(){
         union(){
             translate([0,keyboard_y,0]) difference() {
-                hull(){translate([-keyboard_w/2+3,-keyboard_d/2,0])rounded([keyboard_w-6,12,16],4);translate([-keyboard_w/2+3,keyboard_d/2-12,0])rounded([keyboard_w-6,12,40],4);}
+                // Straight lower rim above the separate 1.6 mm lid. Only the
+                // plan corners are rounded; no spherical roll-under at the base.
+                intersection() {
+                    translate([0,0,1.8])slab(keyboard_w-6,keyboard_d,40,1);
+                    hull(){
+                        translate([-keyboard_w/2,-keyboard_d/2,0])cube([keyboard_w,12,16]);
+                        translate([-keyboard_w/2,keyboard_d/2-12,0])cube([keyboard_w,12,40]);
+                    }
+                }
                 // Hollow sheet-metal shell with a separate removable bottom.
-                hull(){translate([-keyboard_w/2+6,-keyboard_d/2+3,-3])rounded([keyboard_w-12,10,16],3);translate([-keyboard_w/2+6,keyboard_d/2-13,-3])rounded([keyboard_w-12,10,40],3);}
+                hull(){translate([-keyboard_w/2+6,-keyboard_d/2+3,-3])cube([keyboard_w-12,10,16]);translate([-keyboard_w/2+6,keyboard_d/2-13,-3])cube([keyboard_w-12,10,40]);}
                 // The tilted deck aperture must not cut through the vertical
                 // front fascia: its tall cutter leans forward as Z increases.
                 // Preserve the same 3 mm front wall as the hollow interior.
@@ -164,6 +172,13 @@ module keyboard_shell() {
                         cube([keyboard_w*2,keyboard_d*2,100]);
                 }
             }
+            // Owner inside views 123048886 / 123907435: individual lid tabs,
+            // not a continuous bottom flange. Align holes with the separate lid.
+            for(x=[-218,0,218],side=[-1,1])
+                translate([x,keyboard_y+side*92,1.8])difference(){
+                    slab(10,15,1.6,1);
+                    translate([0,-side*5,-1])cylinder(d=3.5,h=4,$fn=24);
+                }
             // Stay inside the 40 mm rear envelope so the case switches remain visible.
             translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
                 translate([0,78,0])slab(keyboard_w-8,40,3,4);
