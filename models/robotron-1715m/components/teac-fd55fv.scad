@@ -39,8 +39,10 @@ module teac_mechanism() {
     }
 
     translate([109,158,14])rotate([0,90,0])cylinder(d=18,h=8,$fn=32);
-    // The latch rod runs from the bezel to the clamp linkage.
-    translate([100,0,33])rotate([-90,0,0])cylinder(d=3,h=53,$fn=16);
+    // Fixed journals for the separate operating shaft.
+    for(y=[3,42])translate([118,y,32])rotate([90,0,0])difference(){
+        cylinder(d=7,h=3,center=true,$fn=24);cylinder(d=3.3,h=4,center=true,$fn=24);
+    }
 
     for(x=[8,137],y=[12,95,190])translate([x,y,32])cylinder(d=5,h=1.5,$fn=20);
 }
@@ -183,8 +185,25 @@ module teac_diskette_label() {
 // No ruler: overall dimensions and .2 mm paper thickness remain estimates.
 module teac_storage_sleeve() {
     difference(){
-        linear_extrude(.6)offset(r=3)offset(delta=-3)square([139,145]);
-        translate([.2,.2,.2])cube([138.6,145,.2]);
-        translate([-.1,125,.4])cube([140,21,.3]);
+        linear_extrude(2)offset(r=3)offset(delta=-3)square([139,145]);
+        translate([.2,.2,.2])cube([138.6,145,1.6]);
+        translate([-.1,125,1.8])cube([140,21,.3]);
     }
+}
+
+// Photo-referenced operating rod and eccentric fork. Hidden cam dimensions
+// remain illustrative. Browser rotates this with the front lever, not the head.
+module teac_latch_shaft() {
+    translate([118,-6,32])rotate([-90,0,0])cylinder(d=3,h=58,$fn=24);
+    translate([118,48,32])rotate([90,0,0])linear_extrude(2,center=true)
+        hull(){circle(d=7,$fn=24);translate([5,0])circle(d=5,$fn=20);}
+    translate([123,45,32])rotate([-90,0,0])cylinder(d=3,h=7,$fn=20);
+}
+// Clamp follower and longitudinal release rail lift the upper head clear of media.
+module teac_release_rail() {
+    translate([116,46,26])difference(){cube([12,8,5]);translate([1,-1,1])cube([10,10,3]);}
+    translate([116,50,30])cube([2,4,5.2]);
+    translate([98,50,34])cube([20,4,1.2]);
+    translate([98,50,34])cube([3,105,1.2]);
+    translate([78,145,34])cube([23,6,1.2]);
 }

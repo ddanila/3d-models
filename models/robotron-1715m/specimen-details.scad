@@ -237,6 +237,10 @@ module specimen_shape(p){
  if(p=="keyboard-controller-metal")keyboard_controller_metal();
  if(p=="keyboard-controller-ink")keyboard_controller_ink();
  if(p=="keyboard-insulators")keyboard_insulators();
+ if(p=="keyboard-pcb-supports")keyboard_pcb_supports();
+ if(p=="keyboard-pcb-fasteners")keyboard_pcb_fasteners();
+ if(p=="keyboard-entry-wires")keyboard_entry_wires();
+ if(p=="keyboard-contact-routes")keyboard_contact_routes();
  if(p=="keyboard-pcb-metal")keyboard_pcb_metal();
  if(p=="keyboard-controller-traces")keyboard_controller_traces();
  if(p=="keyboard-matrix-artwork")keyboard_matrix_artwork();
@@ -249,4 +253,31 @@ module specimen_shape(p){
  if(p=="rear-power-black")rear_power_black();
  if(p=="rear-blanking-plates")rear_blanking_plates();
  if(p=="rear-legends")rear_legends();
+}
+
+// Insulating shoulder washers/supports aligned with the PCB's six real holes.
+// Photo 123907435 establishes retained fasteners and dark insulating strips;
+// diameters and stand-off height are estimates, not measured replacement parts.
+module keyboard_pcb_supports(){
+ translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])
+ for(x=[-220,0,220],y=[-65,33])translate([x,y,-18.418])difference(){
+   cylinder(d=7,h=3.5,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=4,$fn=20);
+ }
+}
+module keyboard_pcb_fasteners(){
+ translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])
+ for(x=[-220,0,220],y=[-65,33])translate([x,y,-13.318]){
+   difference(){cylinder(d=6,h=.4,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=20);}
+   translate([0,0,.4])screw(5,1);
+ }
+}
+// Short lead bundle and strain relief at the owner-photographed controller entry.
+// Routes are visual estimates; no undocumented electrical pinout is asserted.
+module keyboard_entry_wires(){keyboard_controller_pose()
+ for(i=[0:3])wire_run([[-145,-2+i*1.5,4],[-135,-2+i*1.5,4],[-123,-7+i*3,6],[-116,-7+i*3,3]],.55);
+}
+module keyboard_contact_routes(){
+ translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])
+ for(k=keys)translate([k[0],k[1],-13.31])for(side=[-1,1])
+   board_trace([[side*2,0],[side*5,0],[side*6,3]],.5,.02);
 }

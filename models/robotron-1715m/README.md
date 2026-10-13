@@ -535,3 +535,24 @@ exports include the independent trim mesh so it rotates with its lever.
 The exporter derives bounded label crops (at most 1024 px per edge) and retains
 full source-photo coordinates, crop UVs and SHA-256 hashes in the manifest.
 DAC loads these small textures; full photographs are for on-demand inspection.
+
+### October 13: removable media and internal supports
+
+The operating shaft is separate from the fixed journals. A 5 mm eccentric cam
+engages a slotted follower; a bent rail links this to the spindle clamp and upper
+head release. Owner photo `PXL_20250212_094038758.jpg` guides the arrangement.
+Hidden cam dimensions and linkage motion remain illustrative, not measured.
+The browser manifest identifies each shaft and release rail independently.
+
+Keyboard photos `PXL_20261012_123907435.jpg` and `PXL_20261012_123622947.jpg`
+guide insulating PCB supports, hole-aligned washers/fasteners, short contact
+fan-outs and the incoming controller wire bundle. Board placement and the
+accepted exterior are retained. Six existing clearance holes share support and
+washer centers. Local dimensions and wire/trace routes are estimates, not an
+electrical netlist or fit-verified replacement design.
+
+`browser/model.json` also lists inspection-only `specimenMeshes`: the storage
+sleeve is exported from the same SCAD source rather than rebuilt in DAC. Its
+1.6 mm internal clearance admits the modeled 1.2 mm jacket; paper is estimated
+at 0.2 mm. It remains separate from the assembled computer. No print-verification
+status changes accompany this visual refinement.
