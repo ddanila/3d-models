@@ -85,3 +85,10 @@ approximately 6 mm plan corners and a 2 mm top-edge radius, visually fitted to
 owner photos `PXL_20261012_123006039.jpg` and `PXL_20261009_132919894.jpg`.
 These black-deck radii are estimates, separate from the light sheet-metal shell’s
 5 mm corner bends and approximately 1 mm top bend / sheet thickness.
+
+Owner correction: the black deck is an open folded **1 mm sheet**, with a
+uniform **8 mm** skirt height and a **1 mm** gap above the light base. Its top
+and bottom planes are parallel (both follow the keyboard tilt); it is not a
+wedge. The deck top and key mechanism datum stay in place while the skirt
+extends downward. The light base is trimmed to the parallel seating plane.
+The outer 2 mm / inner 1 mm top bends preserve 1 mm material thickness.

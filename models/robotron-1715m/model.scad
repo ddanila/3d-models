@@ -193,6 +193,12 @@ module keyboard_shell() {
             translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
                 translate([0,78,2])slab(keyboard_w-8,40,sheet,1);
         }
+        // Uniform 1 mm gap beneath the black skirt (local bottom Z=-4).
+        // Trim the light base to the parallel Z=-5 plane under the deck;
+        // retain the raised rear ledge beyond the deck's back edge at Y=59.
+        translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
+            translate([-keyboard_w,-keyboard_d,-5])
+                cube([keyboard_w*2,keyboard_d+59,100]);
         // Cut through both the pressed ledge and any overlapping shell lip.
         translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
             translate([0,81,1.5])slab(keyboard_w-40,12,5,5.9);
@@ -237,15 +243,23 @@ module keyboard_grommet() {
             linear_extrude(1.6)polygon([[-21,0],[21,0],[28.5,8.5],[-28.5,8.5]]);
     }
 }
-// Owner top/oblique views 123006039 and 132919894 show a rounded
-// black perimeter, not the sharp top edge of a plain extruded plate.
-// 6 mm plan corners and 2 mm top roll are photo estimates.
-module keyboard_deck_blank() {
-    w=keyboard_w-8; h=158; r=6; roll=2;
-    slab(w,h,2,r);
+// Owner: folded 1 mm sheet, uniform 8 mm skirt height. The existing
+// key/deck top datum stays at local Z=4; the open skirt ends at Z=-4.
+// Both edges follow the same plane, so this is not a wedge.
+module keyboard_deck_envelope(w,h,r,bottom,top,roll) {
+    slab_height=top-roll-bottom;
+    translate([0,0,bottom])slab(w,h,slab_height,r);
     for(a=[0:15:75])hull()for(b=[a,a+15])let(inset=roll*(1-cos(b)))
-        translate([0,0,2+roll*sin(b)-.01])
+        translate([0,0,top-roll+roll*sin(b)-.01])
             slab(w-2*inset,h-2*inset,.01,r-inset);
+}
+module keyboard_deck_blank() {
+    w=keyboard_w-8; h=158;
+    difference(){
+        keyboard_deck_envelope(w,h,6,-4,4,2);
+        // Inner bend is offset 1 mm from the outer bend and top skin.
+        keyboard_deck_envelope(w-2,h-2,5,-5,3,1);
+    }
 }
 module keyboard_deck() {
     translate([0,keyboard_y,26]) rotate([keyboard_slope,0,0]) difference() {
