@@ -67,7 +67,7 @@ module monitor_capacitors() {
 }
 module monitor_shield() {
     translate([83,18,247])difference(){cube([43,140,157]);translate([2,2,-1])cube([39,136,156]);
-        for(y=[28:11:146])translate([-1,y-18,143])cube([45,6,8]);
+        for(y=[28:11:146])hull()for(z=[145.5,148.5])translate([-1,y-15,z])rotate([0,90,0])cylinder(d=5,h=45,$fn=16);
         for(y=[28:11:146])translate([-1,y-18,10])cube([3,6,130]);}
 }
 module monitor_wires() {
@@ -77,6 +77,8 @@ module monitor_wires() {
     translate([36,-42,404])scale([1,1,.35])sphere(d=24,$fn=32);
 }
 module monitor_interior_shape(p) {
+    if(p=="monitor-mount-pads")monitor_mount_pads();
+    if(p=="monitor-cable-clips")monitor_cable_clips();
     if(p=="monitor-joint-lip")monitor_joint_lip();
     if(p=="monitor-shell-upper")monitor_upper();
     if(p=="monitor-shell-lower")monitor_lower();
@@ -90,4 +92,21 @@ module monitor_interior_shape(p) {
     if(p=="monitor-capacitors")monitor_capacitors();
     if(p=="monitor-shield")monitor_shield();
     if(p=="monitor-wires")monitor_wires();
+}
+
+// Comparative K7222.25 construction; pad thickness and clip routes estimated.
+module monitor_mount_pads(){
+ for(x=[-126,126],z=[218,429])translate([x,-132,z])rotate([90,0,0])difference(){
+  cube([16,16,2],center=true);cylinder(d=4,h=4,center=true,$fn=24);
+ }
+ // Insulation between the retaining band and glass shoulder.
+ translate([0,-133,324])rotate([-90,0,0])linear_extrude(1.5)difference(){crt_outline(261,214);crt_outline(258,211);}
+}
+module monitor_cable_clips(){
+ // Yoke clamp ears and screw, leaving the neck aperture unobstructed.
+ translate([0,67,324])rotate([-90,0,0])difference(){cylinder(d=51,h=3,$fn=48);translate([0,0,-1])cylinder(d=47,h=5,$fn=48);}
+ for(x=[-5,3])translate([x,66,348])cube([2,7,8]);
+ translate([-6,69,352])rotate([0,90,0])cylinder(d=2.5,h=13,$fn=16);
+ // Bent clips retain the existing low-voltage harness near the chassis.
+ for(p=[[-60,130,254],[-84,15,291]])translate(p)difference(){cube([7,5,5],center=true);translate([0,0,-1])rotate([90,0,0])cylinder(d=3,h=7,center=true,$fn=20);}
 }

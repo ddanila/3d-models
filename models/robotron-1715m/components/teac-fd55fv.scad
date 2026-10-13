@@ -207,3 +207,13 @@ module teac_release_rail() {
     translate([98,50,34])cube([3,105,1.2]);
     translate([78,145,34])cube([23,6,1.2]);
 }
+
+// Removable opaque write-protect sticker over the owner's jacket notch.
+// TEAC FD-55 maintenance manual: covered notch inhibits writes.
+module teac_protect_tab(){
+ translate([70-66.8,59-38,29.5])union(){
+  translate([0,0,.72])cube([8,9,.18]);
+  translate([0,0,-.7])cube([8,9,.18]);
+  translate([0,0,-.7])cube([.18,9,1.6]);
+ }
+}

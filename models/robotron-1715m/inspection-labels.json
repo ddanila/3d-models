@@ -1,0 +1,63 @@
+[
+  {
+    "id": "keyboard-controller",
+    "part": "keyboard-controller-chips",
+    "position": [
+      -3,
+      -273,
+      14.15
+    ],
+    "title": "UB880D keyboard controller",
+    "photo": "20261012_123622947",
+    "evidence": "Owner photo",
+    "dimensions": "Package pitch nominal; placement photo-estimated."
+  },
+  {
+    "id": "keyboard-matrix",
+    "part": "keyboard-pcb",
+    "title": "Keyboard contact PCB",
+    "photo": "20261012_123907435",
+    "evidence": "Owner photo",
+    "dimensions": "Underside routing follows visible paths; no verified electrical netlist."
+  },
+  {
+    "id": "monitor-yoke",
+    "part": "monitor-yoke",
+    "title": "CRT deflection yoke",
+    "evidence": "Comparative reference",
+    "dimensions": "Position, clamp and winding dimensions estimated; not confirmed on this specimen.",
+    "source": "https://www.robotrontechnik.de/index.htm?/html/komponenten/monitore.htm"
+  },
+  {
+    "id": "monitor-shield",
+    "part": "monitor-shield",
+    "title": "Screened high-voltage section",
+    "evidence": "Comparative reference",
+    "dimensions": "Shield and mounting dimensions estimated.",
+    "source": "https://www.robotrontechnik.de/index.htm?/html/komponenten/monitore.htm"
+  },
+  {
+    "id": "monitor-ring",
+    "part": "ring",
+    "title": "Monitor stand ring",
+    "photo": "20261012_125132359.MP",
+    "evidence": "Owner measurement",
+    "dimensions": "174 mm OD \u00d7 167 mm ID \u00d7 5 mm. Physical print/fit unverified."
+  },
+  {
+    "id": "rear-signal",
+    "part": "rear-socket-inserts",
+    "title": "Rear connectors",
+    "photo": "20261012_125413618",
+    "evidence": "Owner photo",
+    "dimensions": "Socket outlines follow photos; contact spacing and hidden depths estimated."
+  },
+  {
+    "id": "drive-head",
+    "part": "drive-head-0",
+    "title": "Read/write head carriage",
+    "photo": "20250212_094038758",
+    "evidence": "Owner photo + specification",
+    "dimensions": "96-tpi reference travel; specimen drive suffix and hidden mechanism dimensions unverified."
+  }
+]

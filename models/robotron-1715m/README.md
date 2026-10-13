@@ -571,3 +571,26 @@ DAC reuses these and the canonical cap/carrier/rubber/spring, rather than creati
 a separate mechanism. Material profiles specify directional metal grain, matte
 rubber/paper and clear-key optical properties. No wear or exterior dimensional
 changes are introduced, and physical verification remains unchanged.
+
+### Inspection evidence and interior refinement (browser v28)
+
+`inspection-labels.json` supplies CAD-anchored museum labels, owner/comparative
+references and dimension confidence. Owner measurements are distinguished from
+photo estimates and nominal package dimensions; physical verification is separate.
+
+Owner keyboard photos `123907435` and `123622947` guide staggered underside
+buses, replacement-EPROM pad fan-outs, bent connector/resistor leads and the
+incoming cable choke. Trace artwork is a visual approximation, not a netlist.
+The hidden electrode pattern remains provisional: existing photos do not reveal
+it well enough to claim exact contact geometry.
+
+Monitor additions include tube-band insulation, mounting pads, yoke clamp ears,
+harness clips and rounded shield slots. These use the existing credited
+Robotrontechnik comparative references, not photographs of this specimen's
+CRT electronics. Local dimensions and fastening details remain estimates.
+
+Separate `drive-protect-tab-0/1` meshes cover the jacket notch with a folded
+opaque sticker. Tab size/thickness are illustrative. The covered-notch behavior
+follows the [TEAC FD-55 maintenance manual](https://retrocmp.de/fdd/teac/TEAC_FD55_3_Maintenance-Manual.pdf).
+DAC controls whether each tab is present from the disk's actual protection state.
+No print-verification status or accepted keyboard exterior dimension changes.

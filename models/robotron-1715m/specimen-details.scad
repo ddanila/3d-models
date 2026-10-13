@@ -63,23 +63,33 @@ module keyboard_insulators(){
  translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])translate([0,0,-16.718])for(y=[-75,43])translate([0,y,0])slab(482,10,1.5,.5);
 }
 // Visible underside buses from 123907435. This is artwork, not a netlist.
-function matrix_bus(i) = let(y=-62+i*13)
- [[-231+i%3*9,y],[25+i*4,y],[32+i*4,y+7],[85+i*2,y+7],
-  [92+i*2,y],[223-i%3*13,y]];
+// Long paths and staggered diagonal jogs follow owner underside photo 123907435.
+// Photo-derived geometry only: not a traced or continuity-tested circuit.
+matrix_paths=[
+ [[-231,-61],[-185,-61],[-170,-58],[150,-58],[223,-58]],
+ [[-222,-42],[-145,-42],[-133,-47],[84,-47],[95,-42],[216,-42]],
+ [[-235,-29],[-90,-29],[-78,-24],[170,-24]],
+ [[-203,-12],[-60,-12],[-53,-15],[213,-15]],
+ [[-235,3],[-180,3],[-172,0],[-118,0],[-107,5],[132,5],[148,12]],
+ [[-215,13],[-155,13],[-146,8],[-24,8],[-14,15],[195,15]],
+ [[-234,24],[-200,24],[-187,19],[-14,19],[-6,25],[220,25]],
+ [[-181,35],[-116,35],[-102,28],[140,28]]
+];
+function matrix_bus(i)=matrix_paths[i];
 module board_trace(path,width=.75,height=.12){
  for(i=[0:len(path)-2])hull()for(j=[i,i+1])translate([path[j][0],path[j][1],0])cylinder(d=width,h=height,$fn=12);
 }
 module keyboard_matrix_artwork(){
  translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])translate([0,0,-15.118]){
   for(i=[0:7])board_trace(matrix_bus(i),1.5);
-  for(i=[0:7],j=[0,5])translate(matrix_bus(i)[j])cylinder(d=3,h=.12,$fn=20);
+  for(i=[0:7],j=[0,len(matrix_bus(i))-1])translate(matrix_bus(i)[j])cylinder(d=3,h=.12,$fn=20);
   // Narrow parallel bundle joining the controller side of the broad board.
   for(i=[0:5])board_trace([[-65+i*1.6,12],[-35+i*1.6,12],[-24+i*1.6,24],[56,24+i*1.3],[69,38+i*1.3],[180,38+i*1.3]],.6);
  }
 }
 module keyboard_pcb_metal(){
  translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])translate([0,0,-15.368]){
-  for(i=[0:7],j=[0,5])translate(matrix_bus(i)[j])difference(){cylinder(d=1.6,h=.23,$fn=20);translate([0,0,-.1])cylinder(d=.65,h=.5,$fn=12);}
+  for(i=[0:7],j=[0,len(matrix_bus(i))-1])translate(matrix_bus(i)[j])difference(){cylinder(d=1.6,h=.23,$fn=20);translate([0,0,-.1])cylinder(d=.65,h=.5,$fn=12);}
   // Clean screw heads and through-board solder points visible in the photos.
   for(x=[-214,-152,-82,-12,58,128,198],y=[-51,1,32])translate([x,y,0])rotate([180,0,0])screw(3.5,.6);
  }
@@ -88,7 +98,7 @@ module keyboard_controller_traces(){keyboard_controller_pose(){
  // Parallel edge routing and local lead fan-outs, photo-estimated. Component
  // identities/lead pitch are retained; these visual routes are not electrical.
  for(i=[0:4])translate([0,0,1.65])board_trace([[-125,-21+i],[-62-i*2,-21+i],[-55-i*2,-14+i],[-8,-14+i],[-2,-20+i],[127,-20+i]],.45);
- for(p=controller_dips,i=[0:p[2]/2-1],side=[-1,1])
+ for(p=concat(controller_dips,[[114,8,24,15.24]]),i=[0:p[2]/2-1],side=[-1,1])
   let(x=p[0]+(i-(p[2]/2-1)/2)*2.54,y=p[1]+side*p[3]/2)
   translate([0,0,1.65]){
    translate([x,y,0])difference(){cylinder(d=1.5,h=.12,$fn=12);cylinder(d=.7,h=.2,$fn=12);}
@@ -233,6 +243,8 @@ module specimen_shape(p){
  if(p=="rear-fasteners")rear_fasteners();
  if(p=="rear-nameplate")rear_nameplate();
  if(p=="rear-nameplate-ink")rear_nameplate_ink();
+ if(p=="keyboard-controller-leads")keyboard_controller_leads();
+ if(p=="keyboard-entry-choke")keyboard_entry_choke();
  if(p=="keyboard-controller-board")keyboard_controller_board();
  if(p=="keyboard-controller-chips")keyboard_controller_chips();
  if(p=="keyboard-controller-ceramic")keyboard_controller_ceramic();
@@ -297,4 +309,15 @@ module keyboard_controller_solder(){keyboard_controller_pose(){
      translate([0,0,-.1])cylinder(d=.72,h=2.4,$fn=12);
    }
  for(x=[-130,130],y=[-18,18])translate([x,y,-.4])difference(){cylinder(d=6,h=.4,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=16);}
+}}
+
+// Bent connector tails and axial leads visible in 123622947. Nominal diameters.
+module keyboard_controller_leads(){keyboard_controller_pose(){
+ for(i=[0:12],side=[-1,1])wire_run([[-25+i*2.54,3+side*2.54,4],[-25+i*2.54,3+side*7,2.2],[-25+i*2.54,3+side*7,-.5]],.28);
+ for(x=[-80,-74,-68,-62,-56,-50,-44,-38])for(y=[-9,1])
+  wire_run([[x,y,3],[x,y+(y<0?-2:2),3],[x,y+(y<0?-2:2),-.5]],.25);
+}}
+module keyboard_entry_choke(){keyboard_controller_pose(){
+ translate([-115,3,4])rotate([90,0,0])difference(){cylinder(d=7,h=4,$fn=32);translate([0,0,-1])cylinder(d=3.2,h=6,$fn=24);}
+ for(i=[0:3])wire_run([[-118+i,4,4],[-118+i,3,8],[-118+i,-2,8],[-118+i,-3,3]],.3);
 }}
