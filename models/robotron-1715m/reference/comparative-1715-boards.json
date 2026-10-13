@@ -1,0 +1,2692 @@
+[
+  {
+    "name": "motherboard",
+    "file": "reference/oldcrap/motherboard.jpeg",
+    "sha256": "6e3810bd1c8d84bca3318933d596f37812b5f0e8ac8cb83e8fb24547e9a04eb5",
+    "imageSize": [
+      1024,
+      662
+    ],
+    "crop": [
+      110,
+      38,
+      970,
+      608
+    ],
+    "size": [
+      250,
+      355
+    ],
+    "origin": [
+      -231,
+      -178,
+      13.6
+    ],
+    "rotated": true,
+    "packages": [],
+    "packageHeight": 3.8,
+    "source": "https://oldcrap.org/wp-content/uploads/2017/12/fullsizeoutput_141c-1024x662.jpeg",
+    "credit": "Old Crap Vintage Computing \u2014 another PC 1715, not Danila\u2019s 1715M",
+    "page": "https://oldcrap.org/2017/12/26/robotron-1715/",
+    "exclude": [
+      [
+        185,
+        92,
+        410,
+        130
+      ]
+    ],
+    "components": [
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          694,
+          269,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          724,
+          269,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          754,
+          269,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          784,
+          269,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          814,
+          269,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          844,
+          269,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          874,
+          269,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          904,
+          269,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          694,
+          333,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          724,
+          333,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          754,
+          333,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          784,
+          333,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          814,
+          333,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          844,
+          333,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          874,
+          333,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          904,
+          333,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          694,
+          398,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          724,
+          398,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          754,
+          398,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          784,
+          398,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          814,
+          398,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          844,
+          398,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          874,
+          398,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          904,
+          398,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          694,
+          463,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          724,
+          463,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          754,
+          463,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          784,
+          463,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          814,
+          463,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          844,
+          463,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          874,
+          463,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          904,
+          463,
+          20,
+          48
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          716,
+          549,
+          19,
+          45
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          746,
+          549,
+          19,
+          45
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          776,
+          549,
+          19,
+          45
+        ],
+        "axis": "vertical",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          151,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          176,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          202,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          251,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          274,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          299,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          325,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          417,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          447,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          476,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          516,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          172,
+          545,
+          47,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-20_W7.62mm",
+        "rect": [
+          245,
+          161,
+          59,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-20_W7.62mm",
+        "rect": [
+          311,
+          161,
+          60,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-20_W7.62mm",
+        "rect": [
+          245,
+          204,
+          58,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-20_W7.62mm",
+        "rect": [
+          310,
+          204,
+          58,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-20_W7.62mm",
+        "rect": [
+          245,
+          244,
+          58,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-20_W7.62mm",
+        "rect": [
+          310,
+          244,
+          58,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-40_W15.24mm",
+        "rect": [
+          246,
+          307,
+          126,
+          31
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-24_W15.24mm",
+        "rect": [
+          264,
+          376,
+          69,
+          26
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-40_W15.24mm",
+        "rect": [
+          246,
+          486,
+          148,
+          33
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-28_W15.24mm",
+        "rect": [
+          303,
+          550,
+          88,
+          31
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          245,
+          558,
+          50,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          487,
+          126,
+          47,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          484,
+          172,
+          54,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          482,
+          218,
+          56,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-18_W7.62mm",
+        "rect": [
+          480,
+          252,
+          61,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          482,
+          291,
+          54,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          483,
+          328,
+          51,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-24_W15.24mm",
+        "rect": [
+          483,
+          365,
+          62,
+          32
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          483,
+          414,
+          52,
+          15
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          482,
+          448,
+          52,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          482,
+          480,
+          56,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          481,
+          510,
+          57,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          479,
+          541,
+          53,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-18_W7.62mm",
+        "rect": [
+          544,
+          80,
+          59,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          567,
+          125,
+          47,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          565,
+          173,
+          48,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          552,
+          253,
+          50,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          552,
+          287,
+          50,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          552,
+          325,
+          50,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          552,
+          365,
+          47,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          552,
+          403,
+          47,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional; reference marking obscured by tape, omitted",
+        "markings": false
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          552,
+          442,
+          49,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          552,
+          476,
+          49,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-20_W7.62mm",
+        "rect": [
+          554,
+          510,
+          69,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          636,
+          81,
+          55,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          641,
+          126,
+          50,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          642,
+          172,
+          52,
+          16
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          716,
+          81,
+          52,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          716,
+          125,
+          52,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-16_W7.62mm",
+        "rect": [
+          716,
+          172,
+          50,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          791,
+          81,
+          49,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          791,
+          125,
+          49,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          791,
+          172,
+          49,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          858,
+          125,
+          49,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          858,
+          172,
+          49,
+          17
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      }
+    ],
+    "passives": [
+      {
+        "kind": "resistor",
+        "rect": [
+          346,
+          358,
+          22,
+          5
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          346,
+          371,
+          22,
+          5
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          346,
+          385,
+          22,
+          5
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          346,
+          398,
+          22,
+          5
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          346,
+          410,
+          22,
+          5
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          505,
+          190,
+          5,
+          23
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          519,
+          190,
+          5,
+          23
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          533,
+          190,
+          5,
+          23
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          512,
+          66,
+          5,
+          30
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          534,
+          66,
+          5,
+          30
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          545,
+          66,
+          5,
+          30
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          795,
+          193,
+          26,
+          5
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          795,
+          202,
+          26,
+          5
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          795,
+          211,
+          26,
+          5
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          471,
+          97,
+          10,
+          10
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          458,
+          541,
+          10,
+          10
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          616,
+          326,
+          10,
+          10
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          690,
+          549,
+          10,
+          10
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          929,
+          197,
+          10,
+          10
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          933,
+          221,
+          10,
+          10
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          933,
+          245,
+          10,
+          10
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4.4,
+        "height": 7.0
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          228,
+          161,
+          6,
+          14
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          228,
+          246,
+          6,
+          14
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          382,
+          203,
+          6,
+          14
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          544,
+          223,
+          6,
+          14
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          625,
+          175,
+          6,
+          14
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          703,
+          125,
+          6,
+          14
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          776,
+          139,
+          6,
+          14
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          851,
+          196,
+          6,
+          14
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "crystal",
+        "rect": [
+          179,
+          368,
+          31,
+          28
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      }
+    ]
+  },
+  {
+    "name": "floppy-controller",
+    "file": "reference/oldcrap/floppy-controller.jpeg",
+    "sha256": "8e8c0f41c9ffa76a551f3fb1d6cc4ae436ef4e7d948cb7550be817fcd1a4d875",
+    "imageSize": [
+      1024,
+      811
+    ],
+    "crop": [
+      10,
+      10,
+      1010,
+      800
+    ],
+    "size": [
+      220,
+      165
+    ],
+    "origin": [
+      -222,
+      10,
+      42.6
+    ],
+    "rotated": false,
+    "packages": [],
+    "packageHeight": 3.8,
+    "source": "https://oldcrap.org/wp-content/uploads/2017/12/fullsizeoutput_141a-1024x811.jpeg",
+    "credit": "Old Crap Vintage Computing \u2014 another PC 1715, not Danila\u2019s 1715M",
+    "page": "https://oldcrap.org/2017/12/26/robotron-1715/",
+    "exclude": [
+      [
+        715,
+        530,
+        910,
+        800
+      ],
+      [
+        944,
+        194,
+        997,
+        624
+      ]
+    ],
+    "components": [
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          36,
+          137,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          145,
+          137,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          255,
+          137,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          365,
+          137,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          36,
+          220,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          145,
+          220,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          255,
+          220,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          365,
+          220,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          36,
+          305,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          145,
+          305,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          255,
+          305,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          365,
+          305,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          36,
+          386,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          145,
+          386,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          255,
+          386,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          365,
+          386,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          36,
+          469,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          145,
+          469,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          255,
+          469,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          365,
+          469,
+          90,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          468,
+          305,
+          92,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          566,
+          305,
+          92,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          468,
+          386,
+          92,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          566,
+          386,
+          92,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          468,
+          469,
+          92,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          566,
+          469,
+          92,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-24_W15.24mm",
+        "rect": [
+          516,
+          187,
+          145,
+          60
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-40_W15.24mm",
+        "rect": [
+          700,
+          166,
+          230,
+          58
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-24_W15.24mm",
+        "rect": [
+          700,
+          288,
+          139,
+          54
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-40_W15.24mm",
+        "rect": [
+          699,
+          387,
+          232,
+          62
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          246,
+          57,
+          88,
+          28
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          357,
+          57,
+          91,
+          28
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          473,
+          57,
+          86,
+          28
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          661,
+          58,
+          89,
+          27
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          155,
+          548,
+          82,
+          34
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          257,
+          548,
+          91,
+          34
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          365,
+          548,
+          88,
+          34
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          470,
+          548,
+          87,
+          34
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          354,
+          635,
+          94,
+          32
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      },
+      {
+        "kind": "dip",
+        "package": "DIP-14_W7.62mm",
+        "rect": [
+          470,
+          635,
+          85,
+          32
+        ],
+        "axis": "horizontal",
+        "status": "Photo-aligned; package and pin-one orientation provisional"
+      }
+    ],
+    "passives": [
+      {
+        "kind": "resistor",
+        "rect": [
+          780,
+          51,
+          5,
+          42
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          803,
+          51,
+          5,
+          42
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          825,
+          51,
+          5,
+          42
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          849,
+          51,
+          5,
+          42
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          873,
+          51,
+          5,
+          42
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          897,
+          51,
+          5,
+          42
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          919,
+          51,
+          5,
+          42
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          278,
+          113,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          376,
+          113,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          471,
+          113,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          55,
+          271,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          266,
+          271,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          374,
+          271,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          152,
+          354,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          266,
+          354,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          374,
+          354,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          488,
+          354,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          158,
+          437,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          268,
+          437,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          388,
+          437,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          490,
+          437,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          260,
+          529,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          365,
+          529,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          473,
+          529,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          472,
+          605,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          548,
+          605,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          374,
+          702,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "resistor",
+        "rect": [
+          478,
+          702,
+          37,
+          6
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          130,
+          138,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          242,
+          138,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          350,
+          138,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          132,
+          220,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          245,
+          220,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          350,
+          220,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          132,
+          303,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          244,
+          303,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          350,
+          303,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          132,
+          386,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          244,
+          386,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          350,
+          386,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          451,
+          386,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          553,
+          386,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          132,
+          468,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          242,
+          468,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          351,
+          468,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          451,
+          468,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          553,
+          468,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "ceramic",
+        "rect": [
+          800,
+          499,
+          10,
+          24
+        ],
+        "axis": "vertical",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          929.0,
+          56.0,
+          18,
+          18
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 4,
+        "height": 6.4
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          944.5,
+          82.5,
+          25,
+          25
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 5.5,
+        "height": 8.8
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          288.5,
+          382.5,
+          23,
+          23
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 5.1,
+        "height": 8.2
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          602.0,
+          569.0,
+          32,
+          32
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 7.0,
+        "height": 11.2
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          616.0,
+          615.0,
+          32,
+          32
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 7.0,
+        "height": 11.2
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          603.0,
+          668.0,
+          30,
+          30
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 6.6,
+        "height": 10.6
+      },
+      {
+        "kind": "electrolytic",
+        "rect": [
+          625.0,
+          737.0,
+          30,
+          30
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified",
+        "diameter": 6.6,
+        "height": 10.6
+      },
+      {
+        "kind": "crystal",
+        "rect": [
+          148,
+          48,
+          58,
+          41
+        ],
+        "axis": "horizontal",
+        "status": "Visible photo location; dimensions and electrical value unverified"
+      },
+      {
+        "kind": "film",
+        "rect": [
+          49,
+          588,
+          84,
+          23
+        ],
+        "axis": "horizontal",
+        "status": "Yellow axial body visible in comparative photo; size estimated, value not transcribed"
+      },
+      {
+        "kind": "film",
+        "rect": [
+          49,
+          630,
+          87,
+          23
+        ],
+        "axis": "horizontal",
+        "status": "Yellow axial body visible in comparative photo; size estimated, value not transcribed"
+      },
+      {
+        "kind": "film",
+        "rect": [
+          291,
+          609,
+          50,
+          23
+        ],
+        "axis": "horizontal",
+        "status": "Yellow axial body visible in comparative photo; size estimated, value not transcribed"
+      }
+    ]
+  }
+]

@@ -5,7 +5,7 @@
     "position": [
       -3,
       -273,
-      14.15
+      18
     ],
     "title": "UB880D keyboard controller",
     "photo": "20261012_123622947",
@@ -18,7 +18,12 @@
     "title": "Keyboard contact PCB",
     "photo": "20261012_123907435",
     "evidence": "Owner photo",
-    "dimensions": "Underside routing follows visible paths; no verified electrical netlist."
+    "dimensions": "Underside routing follows visible paths; no verified electrical netlist.",
+    "position": [
+      -140,
+      -360,
+      18
+    ]
   },
   {
     "id": "monitor-yoke",
@@ -66,23 +71,20 @@
     "title": "Crossed fan retainers",
     "photo": "20261013_150303351",
     "evidence": "This museum specimen \u2014 owner photo",
-    "dimensions": "Crossed straps and cushioning observed; dimensions photo-estimated."
+    "dimensions": "Crossed straps and cushioning observed; dimensions photo-estimated.",
+    "position": [
+      65,
+      109,
+      67
+    ]
   },
   {
     "id": "drive-adapter",
     "part": "drive-adapter-boards",
     "title": "05-330-0024 drive adapter",
-    "photo": "20261013_150520316",
+    "photo": "20261013_150516969",
     "evidence": "This museum specimen \u2014 owner photo",
-    "dimensions": "Brown board and routing follow this specimen. 2.54 mm pitch nominal; outline and placement estimated."
-  },
-  {
-    "id": "cover-ribs",
-    "part": "case-lid",
-    "title": "Folded cover stiffeners",
-    "photo": "20261013_150009163",
-    "evidence": "This museum specimen \u2014 owner photo",
-    "dimensions": "Two underside channels observed; local dimensions estimated."
+    "dimensions": "Black 34-way drive socket, pale 26-way ribbon connector and retaining latch. Board outline and routing estimated."
   },
   {
     "id": "psu-cover",
@@ -91,5 +93,44 @@
     "photo": "20261013_150247694",
     "evidence": "This museum specimen \u2014 owner photo",
     "dimensions": "Two dark access grommets observed. Shield interior remains unverified."
+  },
+  {
+    "id": "display-board",
+    "part": "logic-boards-display-controller",
+    "position": [
+      -170,
+      110,
+      42.8
+    ],
+    "title": "Display board: solder side",
+    "photo": "20261013_150312308",
+    "evidence": "Your specimen + documented W/M design",
+    "dimensions": "Solder side faces up; components underneath. Exact revision and local dimensions unconfirmed."
+  },
+  {
+    "id": "motherboard-fdc",
+    "part": "logic-boards-motherboard",
+    "position": [
+      -25,
+      82,
+      21
+    ],
+    "title": "U8272 on W/M main board",
+    "source": "https://xepb.org/robotron/docs/1715w.zip",
+    "evidence": "Documented W/M design",
+    "dimensions": "A44 in original W placement drawing; specimen population and placement unverified."
+  },
+  {
+    "id": "cover-ribs",
+    "part": "case-lid",
+    "position": [
+      0,
+      -60,
+      125
+    ],
+    "title": "Folded cover stiffeners",
+    "photo": "20261013_150009163",
+    "evidence": "Your specimen",
+    "dimensions": "Two channels run across the width; local dimensions estimated."
   }
 ]

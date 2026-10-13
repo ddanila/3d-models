@@ -16,9 +16,9 @@ for path in root.rglob('*'):
 records=[]
 with tempfile.TemporaryDirectory() as temp:
     temp=Path(temp)
-    for name in ['motherboard','floppy-controller','drive-0','drive-1']:
-        if name in ['motherboard','floppy-controller']:
-            body='pcb_board='+json.dumps(name)+';\n'+''.join('shape('+json.dumps(p)+');\n' for p in logic)
+    for name in ['motherboard','display-controller','drive-0','drive-1']:
+        if name in ['motherboard','display-controller']:
+            body='pcb_board='+json.dumps(name)+';\n'+''.join('shape('+json.dumps(p)+');\n' for p in logic)+('shape("logic-artwork");\n' if name=='display-controller' else '')
         else:
             body=''.join(p+';\n' for p in drive)+f'teac_boards({"true" if name.endswith("1") else "false"});\nteac_traces({"true" if name.endswith("1") else "false"});\n'
         if name.startswith('drive-'):
@@ -39,8 +39,9 @@ Source: https://github.com/ddanila/3d-models/tree/main/models/robotron-1715m
 Evidence and limitations: source/README.md
 Drive references: owner photos PXL_20250212_094033966.jpg and
 PXL_20250212_094038758.jpg, referenced in that documentation.
-Board reconstruction: another PC 1715 photographed by Old Crap Vintage
-Computing, https://oldcrap.org/2017/12/26/robotron-1715/ . Photos are not bundled.
+Board reconstruction: original Robotron W placement drawing and CRT schematic,
+https://xepb.org/robotron/docs/1715w.zip , plus Danila’s owner solder-side photos.
+See source/board-layout.json for evidence and estimated positions. Photos are not bundled.
 Dimensions, hidden parts and linkage motion remain estimated. Not a validated
 manufacturing model; parts may touch or remain separate within the STL.
 

@@ -203,7 +203,7 @@ photo-estimated, not metrology. Springs/stems are shared browser instances to av
 one draw call per mechanism; all corresponding shapes remain in OpenSCAD.
 
 
-## Reusable component packages (2026-10-11)
+## Reusable component packages (2026-10-11; layout superseded below)
 
 The motherboard and controller use 132 photo-aligned KiCad DIP packages from seven
 families (14, 16, 18, 20, 24, 28 and 40 pins), replacing the old box bodies and pin
@@ -242,10 +242,10 @@ openscad --backend Manifold --export-format binstl -o models/robotron-1715m/robo
 python3 models/robotron-1715m/tools/package-assembly.py
 ```
 
-## Board construction and independent inspection (2026-10-11)
+## Board construction and independent inspection (2026-10-11; layout superseded below)
 
 The motherboard and floppy controller now export independently. Set
-`pcb_board="motherboard"` or `pcb_board="floppy-controller"` alongside a
+`pcb_board="motherboard"` or `pcb_board="display-controller"` alongside a
 `logic-*` part in OpenSCAD, or choose that board under **Inspect assembly** in
 DAC. The assembly retains its reference positions; isolation hides obstructing
 parts without inventing a physical removal path or moving attached wiring.
@@ -372,7 +372,7 @@ from the owner photographs, not metallurgical identification or calibrated
 measurements. No new specimen scratches or corrosion patterns were invented.
 
 Run `python3 tools/export-downloads.py` after the normal geometry export to
-rebuild four ZIPs under `browser/downloads/`: motherboard, floppy controller,
+rebuild four ZIPs under `browser/downloads/`: motherboard, display controller,
 short-sensor-board drive 0 and long-sensor-board drive 1. Each includes a complete
 geometry STL, an editable OpenSCAD wrapper, included source geometry, evidence
 notes and licence texts. Drive downloads include the front face and latch;
@@ -609,4 +609,44 @@ Checked against the original [1715/1715W manual](https://xepb.org/robotron/docs/
 
 Owner photo `PXL_20261013_150334561.jpg` appears to read **1.93.310402.6 1L2** on the rear solder-side-up card. Its role as display control is strongly indicated by the W/M architecture, but that marking is not an exact match to the available 310412 drawing; do not claim a verified revision match. The small brown 05-330-0024 boards on the drive cables are connector adapters, distinct from the U8272 controller on the main board. Their reverse routing is visible in the owner photographs; unseen components are not claimed absent.
 
-The legacy `floppy-controller` CAD/download remains a clearly identified **comparative original-1715 card**, not the W/M display card. Renaming its existing geometry would misidentify it; replacing both logic-board layouts with W/M-specific geometry remains outstanding.
+The legacy comparative original-1715 board geometry and download have now been replaced by the W/M layouts described below.
+
+
+## W/M boards and specimen hardware (2026-10-13, version 30)
+
+This revision supersedes the original-1715 population and layout described in the
+October 11 history above. [board-layout.json](board-layout.json) is now the shared
+source for OpenSCAD and browser placement, through `tools/configure-pcb.py`.
+The W/M motherboard has the integrated A44 U8272, CPU, DMA, serial/timer devices
+and 32 RAM packages. Placement follows the W A/B drawings, within estimated board
+envelopes. The separate display board follows this specimen's solder footprints:
+components face down and solder faces up. There are 106 nominal KiCad DIP packages
+and 2,074 lead apertures across the two boards. Package bodies are checked for
+intersections. The underside is independently inspectable.
+
+The display board's 1.93.310402.6 marking does not establish an exact revision
+match to the 1.93.310412.6 CRT schematic. Visible footprints, nominal packages and
+documented functional roles are distinguished; hidden population and pin-one
+orientation remain provisional. Clean markings identify documented devices;
+unidentified footprints are not given invented chip types. Selected visible trace
+bends and pad fan-outs are decorative reconstruction, not an electrical netlist.
+The owner's solder photo is optional reference evidence, not the default surface.
+Old comparative board references remain archived with their credits in
+[reference/comparative-1715-boards.json](reference/comparative-1715-boards.json).
+
+Owner adapter photos now supply separate black drive-edge and pale ribbon socket
+bodies, recessed contact rows, retention clips and estimated 34/26-contact routing.
+The 26-conductor ribbons route toward the motherboard. Connector positions,
+hidden pinout and cable slack are approximate. The cover has transverse folded
+stiffeners, separate black vent inserts, fixing screws, return lips and retaining
+tabs. In DAC its front fascia moves with the cover. Close-ups isolate adapters,
+fan mounts, cover underside and display board; labels are hidden behind opaque
+cover/board geometry.
+
+[evidence.json](evidence.json) records assembly evidence separately from physical
+verification: **Your specimen**, **Documented W/M design**, or **Comparative
+estimate**. These new assemblies are all **unverified** physically. No part gains
+printed-and-verified status from photographs, schematic evidence or visual review.
+The monitor's concealed electronics remain comparative; enclosed PSU electronics
+are not reconstructed. Owner photos remain MIT; upstream component and historical
+reference licences and credits remain intact.

@@ -1,0 +1,113 @@
+{
+  "categories": {
+    "specimen": "Your specimen",
+    "documented": "Documented W/M design",
+    "comparative": "Comparative estimate"
+  },
+  "assemblies": [
+    {
+      "id": "case-cover",
+      "title": "Case cover and hardware",
+      "classes": [
+        "specimen"
+      ],
+      "photo": "20261013_150009163",
+      "note": "Folded channels, vents and retaining details from this machine; local dimensions estimated.",
+      "physicalVerification": "unverified"
+    },
+    {
+      "id": "motherboard",
+      "title": "W/M motherboard",
+      "classes": [
+        "documented"
+      ],
+      "source": "https://xepb.org/robotron/docs/1715w.zip",
+      "note": "W placement drawing and nominal packages; exact specimen population and local dimensions unverified.",
+      "physicalVerification": "unverified"
+    },
+    {
+      "id": "display-controller",
+      "title": "Display-controller board",
+      "classes": [
+        "specimen",
+        "documented"
+      ],
+      "photo": "20261013_150312308",
+      "source": "https://xepb.org/robotron/docs/1715w.zip",
+      "note": "Owner solder face and mounting, W CRT circuit roles; 310402/310412 revision match unconfirmed.",
+      "physicalVerification": "unverified"
+    },
+    {
+      "id": "adapters",
+      "title": "Drive adapters and ribbon",
+      "classes": [
+        "specimen",
+        "documented"
+      ],
+      "photo": "20261013_150516969",
+      "note": "Owner board, sockets and latch; 26/34-contact interface, estimated route and outline.",
+      "physicalVerification": "unverified"
+    },
+    {
+      "id": "drives",
+      "title": "Disk drives",
+      "classes": [
+        "specimen",
+        "documented"
+      ],
+      "photo": "20261013_150549721",
+      "note": "Owner mechanisms and plates; documented nominal envelope/travel, suffix and small dimensions unverified.",
+      "physicalVerification": "unverified"
+    },
+    {
+      "id": "keyboard",
+      "title": "Keyboard",
+      "classes": [
+        "specimen"
+      ],
+      "photo": "20261012_123622947",
+      "note": "Owner photos and supplied measurements; hidden geometry and unidentified EPROM contents remain provisional.",
+      "physicalVerification": "unverified"
+    },
+    {
+      "id": "psu",
+      "title": "PSU cover and fan",
+      "classes": [
+        "specimen"
+      ],
+      "photo": "20261013_150303351",
+      "note": "Visible exterior follows owner photos. PSU electronics are not reconstructed; fan speed illustrative.",
+      "physicalVerification": "unverified"
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor exterior",
+      "classes": [
+        "specimen"
+      ],
+      "photo": "20261012_125132359.MP",
+      "note": "Owner photographs and measured stand ring; other local dimensions estimated.",
+      "physicalVerification": "unverified"
+    },
+    {
+      "id": "monitor-interior",
+      "title": "Monitor internals",
+      "classes": [
+        "comparative"
+      ],
+      "source": "https://www.robotrontechnik.de/html/zubehoer/bildschirme.htm#k7222-25",
+      "note": "Another K7222.25; exact electronics and hidden dimensions in this specimen unconfirmed.",
+      "physicalVerification": "unverified"
+    },
+    {
+      "id": "exterior",
+      "title": "System exterior",
+      "classes": [
+        "specimen"
+      ],
+      "photo": "20261012_125413618",
+      "note": "Owner rear-panel and enclosure photographs; local dimensions estimated.",
+      "physicalVerification": "unverified"
+    }
+  ]
+}

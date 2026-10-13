@@ -21,8 +21,7 @@ module board_blank(origin,size,board) {
     }
 }
 module logic_boards() {
-    board_blank([-231,-178,12],[250,355],"motherboard");
-    board_blank([-222,10,41],[220,165],"floppy-controller");
+    for(b=pcb_boards)board_blank(b[1],b[2],b[0]);
 }
 module pcb_pad() {
     translate([0,0,-1.64])difference(){
@@ -37,16 +36,16 @@ module pcb_solder() {
     }
 }
 module logic_pads() {
-    for(p=pcb_footprints)if(pcb_selected(p[3]))translate([p[0],p[1],p[2]])pcb_pad();
+    for(p=pcb_footprints)if(pcb_selected(p[3]))translate([p[0],p[1],p[2]])scale([1,1,p[4]])pcb_pad();
 }
 module logic_solder() {
-    for(p=pcb_footprints)if(pcb_selected(p[3]))translate([p[0],p[1],p[2]])pcb_solder();
+    for(p=pcb_footprints)if(pcb_selected(p[3]))translate([p[0],p[1],p[2]])scale([1,1,p[4]])pcb_solder();
 }
 module logic_chips() {
-    for(p=pcb_component_instances)if(pcb_selected(p[3]))translate(p[1])rotate([0,0,p[2]])import(pcb_component_models[p[0]][0]);
+    for(p=pcb_component_instances)if(pcb_selected(p[3]))translate(p[1])rotate([0,0,p[2]])rotate([p[4]==-1?180:0,0,0])import(pcb_component_models[p[0]][0]);
 }
 module logic_pins() {
-    for(p=pcb_component_instances)if(pcb_selected(p[3]))translate(p[1])rotate([0,0,p[2]])import(pcb_component_models[p[0]][1]);
+    for(p=pcb_component_instances)if(pcb_selected(p[3]))translate(p[1])rotate([0,0,p[2]])rotate([p[4]==-1?180:0,0,0])import(pcb_component_models[p[0]][1]);
 }
 // Photo-estimated two-row connector, with individual metal contacts.
 // No electrical pinout is asserted. Long axis follows local Y.
@@ -59,21 +58,17 @@ module board_socket(n=32) {
 module board_socket_contacts(n=32) {
     for(x=[-1.27,1.27],i=[0:n-1])translate([x,(i-(n-1)/2)*2.54,-2])cube([.55,.55,8],center=true);
 }
-module connector_pose() {
-    if(pcb_selected("motherboard"))translate([-13.02,99.60,17.3])children();
-    if(pcb_selected("floppy-controller"))translate([-10.68,91.71,46.3])children();
-}
-module logic_connectors(){
-    connector_pose()board_socket();
-    if(pcb_selected("floppy-controller"))translate([-46,19,46.3])rotate([0,0,90]){
-        board_socket(17);
-        // Illustrative ribbon plug and strain-relief bar at the existing cable end.
-        translate([0,0,4.2])cube([8,44,1.8],center=true);
-    }
-}
-module logic_connector_contacts(){
-    connector_pose()board_socket_contacts();
-    if(pcb_selected("floppy-controller"))translate([-46,19,46.3])rotate([0,0,90])board_socket_contacts(17);
+module connector_pose(){for(c=pcb_connectors)if(pcb_selected(c[3]))translate(c[0])rotate([0,0,c[2]])rotate([c[4]==-1?180:0,0,0])let($pins=c[1])children();}
+module logic_connectors(){connector_pose()translate([0,0,3.7])board_socket($pins);}
+module logic_connector_contacts(){connector_pose()translate([0,0,3.7])board_socket_contacts($pins);}
+function display_xy(p)=[-222+(p[0]-40)/1630*220,10+(1-(p[1]-180)/1170)*165];
+module logic_artwork(){
+ if(pcb_selected("display-controller")){
+  // Clean raised route geometry from the owner's solder-side photograph.
+  for(path=pcb_display_routes,i=[0:len(path)-2])hull()for(j=[i,i+1])translate(concat(display_xy(path[j]),[42.62]))cylinder(d=.42,h=.08,$fn=8);
+  // Local endpoint fan-outs are deliberately not connected into a claimed netlist.
+  for(p=pcb_footprints)if(p[3]=="display-controller")translate([p[0]-.9,p[1],42.62])cube([1.8,.3,.08]);
+ }
 }
 module psu_chassis() {
     // Folded shield, right hand compartment, photo-scaled within 500x400 case.
@@ -98,17 +93,36 @@ module fan_cushions(){for(y=[65,147])translate([68,y,27])cube([25,4,80]);}
 module psu_grommets(){for(y=[-125,-5])translate([224,y,114.4])difference(){cylinder(d=14,h=1.5,$fn=32);translate([0,0,-1])cylinder(d=7,h=4,$fn=24);}}
 // Brown 05-330-0024 adapter, photo 150520316. Nominal 2.54mm connector pitch;
 // routing is visual, not an electrical netlist. Both drive interfaces are seen in 150535694.
-module drive_adapter_pose(){for(x=[-158,-4])translate([x-30,2,53])rotate([90,0,0])children();}
-module drive_adapter_boards(){drive_adapter_pose()difference(){cube([60,40,1.6]);for(x=[3,57],y=[3,37])translate([x,y,-1])cylinder(d=3,h=4,$fn=20);}}
-module drive_adapter_traces(){drive_adapter_pose()for(i=[0:16],row=[0:1]){
-    x=7+i*2.54;y=5+row*2.54;
-    translate([x,y,1.6])cylinder(d=1.7,h=.3,$fn=12);
-    translate([x,32+row*2.54,1.6])cylinder(d=1.7,h=.3,$fn=12);
-    // staggered bends keep the two parallel rows visibly distinct.
-    for(k=[0:2])let(points=[[x,y],[x+(row==0?-.6:.6),13+row*4],[x+(row==0?-.6:.6),25+row*4],[x,32+row*2.54]])
-      hull()for(j=[k,k+1])translate([points[j][0],points[j][1],1.6])cylinder(d=.35,h=.12,$fn=8);
+// Installed adapter: vertical board, white ribbon connector on its rear face;
+// black drive-edge socket below. Clean geometry excludes stains/solder oxidation.
+adapter_w=58;adapter_h=38;adapter_pitch=2.54;
+module drive_adapter_pose(){for(x=[-158,-4])translate([x-29,2,57])rotate([90,0,0])children();}
+module drive_adapter_boards(){drive_adapter_pose()difference(){cube([adapter_w,adapter_h,1.6]);for(x=[3,55],y=[3,35])translate([x,y,-1])cylinder(d=3,h=4,$fn=20);}}
+module drive_adapter_traces(){drive_adapter_pose(){
+ // 34 drive contacts to the narrower 26-way ribbon interface. Paths reproduce
+ // visible staggered bends; they are not offered as an electrical pinout.
+ for(i=[0:16],row=[0:1]){
+  x=8+i*adapter_pitch;y=5+row*adapter_pitch;
+  translate([x,y,1.6])cylinder(d=1.6,h=.25,$fn=12);
+  if(i<13){
+   xx=13+i*adapter_pitch;yy=29+row*adapter_pitch;
+   translate([xx,yy,1.6])cylinder(d=1.6,h=.25,$fn=12);
+   points=[[x,y],[x,11+row],[xx,21+row],[xx,yy]];
+   for(k=[0:2])hull()for(j=[k,k+1])translate([points[j][0],points[j][1],1.6])cylinder(d=.3,h=.12,$fn=8);
+  }
+ }
 }}
-module drive_adapter_sockets(){drive_adapter_pose(){translate([4,1,-8])cube([47,8,8]);translate([4,29,-8])cube([47,8,8]);}}
+module drive_adapter_sockets(){drive_adapter_pose(){
+ translate([8,25,-10])difference(){cube([43,11,10]);translate([4,3,-1])cube([35,5,9]);}
+ for(x=[8,49])translate([x,24,-18])difference(){cube([2,14,20]);translate([-.1,3,3])cube([3,8,12]);}
+}}
+module drive_adapter_edge(){drive_adapter_pose()translate([5,1,-9])difference(){cube([48,10,9]);translate([3,3,-1])cube([42,4,8]);}}
+module drive_adapter_contacts(){drive_adapter_pose(){
+ for(i=[0:12],row=[0:1])translate([13+i*2.54,29+row*2.54,-8])cube([.55,.55,9.8]);
+ for(i=[0:16],row=[0:1])translate([8+i*2.54,5+row*2.54,-7])cube([.5,.5,8.8]);
+ // Metal latch bar runs across the white connector, visible in side photo.
+ translate([8,24,-16])cube([43,1,2]);
+}}
 module fan_rotor() {
     translate([80,109,67])rotate([0,90,0]){
         cylinder(d=27,h=11,center=true,$fn=32);
@@ -119,16 +133,12 @@ module fan_rotor() {
 module ribbon_run(points,w=42,t=.8) {
     for(i=[0:len(points)-2])hull(){translate(points[i])cube([w,1,t],center=true);translate(points[i+1])cube([w,1,t],center=true);}
 }
-module ribbons() {
-    for(x=[-158,-4])ribbon_run([[x-4,2,66.5],[x-4,20,79],[x-4,45,69],[-46,45,58],[-46,19,51]],42);
-}
-module ribbon_ridges() {
-    for(x=[-158,-4],i=[0:32])let(dx=(i-16)*1.27)
-        ribbon_run([[x-4+dx,2,66.95],[x-4+dx,20,79.45],[x-4+dx,45,69.45],[-46+dx,45,58.45],[-46+dx,19,51.45]],.4,.15);
-}
-module ribbon_stripes() {
-    for(x=[-158,-4])ribbon_run([[x-24,2,67],[x-24,20,79.5],[x-24,45,69.5],[-66,45,58.5],[-66,19,51.5]],1.2,.2);
-}
+function drive_ribbon_path(unit,dx=0,lift=0)=unit==0?
+ [[-158+dx,13,86+lift],[-158+dx,24,109+lift],[-181+dx,39,120+lift],[-207+dx,37,88+lift],[-219+dx,35,24+lift]]:
+ [[-4+dx,13,86+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-91+dx,39,95+lift],[-130+dx,28,73+lift],[-196+dx,22,50+lift],[-219+dx,35,24+lift]];
+module ribbons(){for(u=[0:1])ribbon_run(drive_ribbon_path(u),33);}
+module ribbon_ridges(){for(u=[0:1],i=[0:25])ribbon_run(drive_ribbon_path(u,(i-12.5)*1.27,.45),.35,.12);}
+module ribbon_stripes(){for(u=[0:1])ribbon_run(drive_ribbon_path(u,-15.9,.55),.7,.12);}
 module wire_run(points,r=1) {
     for(i=[0:len(points)-2])hull(){translate(points[i])sphere(r=r,$fn=10);translate(points[i+1])sphere(r=r,$fn=10);}
 }
@@ -153,6 +163,8 @@ module interior_shape(p) {
     if(p=="drive-adapter-boards")drive_adapter_boards();
     if(p=="drive-adapter-traces")drive_adapter_traces();
     if(p=="drive-adapter-sockets")drive_adapter_sockets();
+    if(p=="drive-adapter-edge")drive_adapter_edge();
+    if(p=="drive-adapter-contacts")drive_adapter_contacts();
     for(i=[0:1]) {
       if(p==str("drive-spindle-",i))translate([[-231,-77][i],-203,60])teac_spindle();
       if(p==str("drive-head-",i))translate([[-231,-77][i],-203,60])teac_head();
@@ -177,6 +189,7 @@ module interior_shape(p) {
     if(p=="logic-solder")logic_solder();
     if(p=="logic-connector-contacts")logic_connector_contacts();
     if(p=="logic-boards")logic_boards();
+    if(p=="logic-artwork")logic_artwork();
     if(p=="logic-chips")logic_chips();
     if(p=="logic-pins")logic_pins();
     if(p=="logic-connectors")logic_connectors();

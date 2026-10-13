@@ -1,0 +1,2169 @@
+{
+  "version": 1,
+  "sources": {
+    "manual": "https://xepb.org/robotron/docs/pc_manu.pdf",
+    "drawings": "https://xepb.org/robotron/docs/1715w.zip",
+    "motherboard": "1715W/teil_a/Belegungsplan 1715 W A.jpg + B.jpg (1.93.310411.8/09)",
+    "display": "1715W/teil_b/Stromlauf CRT-Steuerung A.jpg + B.jpg (1.93.310412.6/04)",
+    "photo": "PXL_20261013_150312308.jpg"
+  },
+  "limitations": "W/M topology and named large devices follow drawings. Mainboard package placement is scaled from the placement drawing; display placement follows owner solder footprints, while functions follow the CRT schematic. Board envelopes and unseen component choices remain estimates; no verified netlist or exact 310402/310412 revision match.",
+  "boards": [
+    {
+      "name": "motherboard",
+      "title": "W/M motherboard",
+      "origin": [
+        -231,
+        -178,
+        12
+      ],
+      "size": [
+        250,
+        355
+      ],
+      "side": 1,
+      "face": 13.6,
+      "evidence": "documented",
+      "components": [
+        {
+          "ref": "A89",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -216,
+            -154,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A90",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -204,
+            -154,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A91",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -192,
+            -154,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A92",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -180,
+            -154,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A93",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -168,
+            -154,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A94",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -156,
+            -154,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A95",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -144,
+            -154,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A96",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -132,
+            -154,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A81",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -216,
+            -126,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A82",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -204,
+            -126,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A83",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -192,
+            -126,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A84",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -180,
+            -126,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A85",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -168,
+            -126,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A86",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -156,
+            -126,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A87",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -144,
+            -126,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A88",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -132,
+            -126,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A73",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -216,
+            -98,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A74",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -204,
+            -98,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A75",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -192,
+            -98,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A76",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -180,
+            -98,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A77",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -168,
+            -98,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A78",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -156,
+            -98,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A79",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -144,
+            -98,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A80",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -132,
+            -98,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A65",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -216,
+            -70,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A66",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -204,
+            -70,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A67",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -192,
+            -70,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A68",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -180,
+            -70,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A69",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -168,
+            -70,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A70",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -156,
+            -70,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A71",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -144,
+            -70,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A72",
+          "label": "U2164",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -132,
+            -70,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A1",
+          "label": "UA880 CPU",
+          "model": "DIP-40_W15.24mm",
+          "position": [
+            -112,
+            82,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A2",
+          "label": "UA858 DMA",
+          "model": "DIP-40_W15.24mm",
+          "position": [
+            -155,
+            82,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A3",
+          "label": "UA8560 SIO",
+          "model": "DIP-40_W15.24mm",
+          "position": [
+            -68,
+            82,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A44",
+          "label": "U8272 FDC",
+          "model": "DIP-40_W15.24mm",
+          "position": [
+            -25,
+            82,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A4",
+          "label": "UA8570 CTC",
+          "model": "DIP-28_W15.24mm",
+          "position": [
+            -68,
+            17,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A5",
+          "label": "UA8570 CTC",
+          "model": "DIP-28_W15.24mm",
+          "position": [
+            -111,
+            17,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A6",
+          "label": "U2716 boot ROM",
+          "model": "DIP-24_W15.24mm",
+          "position": [
+            -203,
+            66,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A45",
+          "label": "DS8282",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -203,
+            -26,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A10",
+          "label": "DS8286",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -203,
+            -8,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A9",
+          "label": "DS8282",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -203,
+            10,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A8",
+          "label": "DS8286",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -203,
+            28,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A12",
+          "label": "DS8205",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -203,
+            46,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A99",
+          "label": "DL000",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -166,
+            -18,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A60",
+          "label": "DL002",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -166,
+            0,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A11",
+          "label": "DS8205",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -166,
+            18,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A41",
+          "label": "74S287",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -166,
+            36,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A114",
+          "label": "DS8286",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -166,
+            49,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A29",
+          "label": "DL074",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -43,
+            -156,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A15",
+          "label": "D121",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -43,
+            -136,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A16",
+          "label": "75450",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -43,
+            -116,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A31",
+          "label": "D240",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -43,
+            -96,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A17",
+          "label": "DL074",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -43,
+            -76,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A30",
+          "label": "74S00",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -43,
+            -56,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A34",
+          "label": "DL003",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -70,
+            -156,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A40",
+          "label": "DL000",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -70,
+            -136,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A32",
+          "label": "DL002",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -70,
+            -116,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A39",
+          "label": "DL008",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -70,
+            -96,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A38",
+          "label": "DL008",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -70,
+            -76,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A36",
+          "label": "DL004",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -70,
+            -56,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A37",
+          "label": "DL074",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -96,
+            -156,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A58",
+          "label": "74S74",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -96,
+            -136,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A100",
+          "label": "74S00",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -96,
+            -116,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A26",
+          "label": "DL002",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -96,
+            -96,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A59",
+          "label": "D200",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -96,
+            -76,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A33",
+          "label": "DL000",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -96,
+            -56,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A102",
+          "label": "DL074",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -16,
+            -136,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A101",
+          "label": "74S74",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -16,
+            -116,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A105",
+          "label": "DL112",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -16,
+            -96,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A112",
+          "label": "DL000",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -16,
+            -76,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A54",
+          "label": "DL295",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -16,
+            -56,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A18",
+          "label": "DL004",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -215,
+            144,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A19",
+          "label": "K170UP2",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -186,
+            144,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A24",
+          "label": "K155LP2",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -157,
+            144,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A21",
+          "label": "K170AP2",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -128,
+            144,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A23",
+          "label": "K170UP2",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -99,
+            144,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A20",
+          "label": "K170UP2",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -70,
+            144,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        },
+        {
+          "ref": "A22",
+          "label": "K170AP2",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -41,
+            144,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "status": "Documented W/M design; package and local placement estimated"
+        }
+      ],
+      "passives": [
+        {
+          "kind": "ceramic",
+          "position": [
+            -225,
+            -125,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -225,
+            -44,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -180,
+            -20,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -141,
+            -5,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -122,
+            46,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -68,
+            46,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -25,
+            46,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -207,
+            105,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -140,
+            113,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -10,
+            130,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -225,
+            118,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 6.3,
+          "height": 10
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -179,
+            120,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 6.3,
+          "height": 10
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -121,
+            120,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 6.3,
+          "height": 10
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -11,
+            110,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 6.3,
+          "height": 10
+        },
+        {
+          "kind": "crystal",
+          "position": [
+            -32,
+            -165,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 6
+        },
+        {
+          "kind": "crystal",
+          "position": [
+            -84,
+            -165,
+            13.6
+          ],
+          "rotation": 0,
+          "side": 1,
+          "diameter": 5,
+          "height": 6
+        }
+      ],
+      "connectors": [
+        {
+          "position": [
+            -5,
+            -4,
+            13.6
+          ],
+          "n": 13,
+          "rotation": 0,
+          "side": 1
+        },
+        {
+          "position": [
+            -219,
+            35,
+            13.6
+          ],
+          "n": 13,
+          "rotation": 0,
+          "side": 1
+        },
+        {
+          "position": [
+            -7,
+            20,
+            13.6
+          ],
+          "n": 32,
+          "rotation": 0,
+          "side": 1
+        }
+      ],
+      "mounts": [
+        [
+          -225,
+          -170
+        ],
+        [
+          12,
+          -170
+        ],
+        [
+          -225,
+          165
+        ],
+        [
+          12,
+          165
+        ]
+      ]
+    },
+    {
+      "name": "display-controller",
+      "title": "W/M display controller",
+      "origin": [
+        -222,
+        10,
+        41
+      ],
+      "size": [
+        220,
+        165
+      ],
+      "side": -1,
+      "face": 41,
+      "evidence": "specimen",
+      "components": [
+        {
+          "ref": "P01",
+          "label": "Logic footprint",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -207.8957055214724,
+            144.32692307692307,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            115,
+            355,
+            174,
+            440
+          ]
+        },
+        {
+          "ref": "P02",
+          "label": "Logic footprint",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -198.85276073619633,
+            144.0448717948718,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            193,
+            356,
+            230,
+            443
+          ]
+        },
+        {
+          "ref": "P03",
+          "label": "Logic footprint",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -186.23312883435582,
+            143.3397435897436,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            280,
+            363,
+            330,
+            446
+          ]
+        },
+        {
+          "ref": "P04",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -168.75460122699388,
+            143.3397435897436,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            402,
+            363,
+            467,
+            446
+          ]
+        },
+        {
+          "ref": "P05",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -152.35582822085888,
+            143.76282051282053,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            523,
+            348,
+            589,
+            455
+          ]
+        },
+        {
+          "ref": "P06",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -136.6319018404908,
+            143.97435897435898,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            639,
+            345,
+            706,
+            455
+          ]
+        },
+        {
+          "ref": "P07",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -120.9079754601227,
+            143.90384615384616,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            755,
+            346,
+            823,
+            455
+          ]
+        },
+        {
+          "ref": "P08",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -103.6319018404908,
+            144.75,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            884,
+            342,
+            950,
+            447
+          ]
+        },
+        {
+          "ref": "P09",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -90.20245398773005,
+            144.60897435897436,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            986,
+            342,
+            1047,
+            449
+          ]
+        },
+        {
+          "ref": "P10",
+          "label": "Logic footprint",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -74.27607361963189,
+            143.48076923076923,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            1103,
+            354,
+            1166,
+            453
+          ]
+        },
+        {
+          "ref": "P11",
+          "label": "Logic footprint",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -56.19018404907976,
+            143.48076923076923,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            1237,
+            355,
+            1300,
+            452
+          ]
+        },
+        {
+          "ref": "P12",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -200.0674846625767,
+            117.17948717948718,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            113,
+            556,
+            292,
+            624
+          ]
+        },
+        {
+          "ref": "P13",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -200.0674846625767,
+            98.56410256410255,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            113,
+            689,
+            292,
+            755
+          ]
+        },
+        {
+          "ref": "P14",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -199.9325153374233,
+            80.93589743589745,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            113,
+            814,
+            294,
+            880
+          ]
+        },
+        {
+          "ref": "P15",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -164.09815950920245,
+            101.66666666666667,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            366,
+            667,
+            572,
+            733
+          ]
+        },
+        {
+          "ref": "P16",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -164.09815950920245,
+            83.47435897435896,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            366,
+            796,
+            572,
+            862
+          ]
+        },
+        {
+          "ref": "P17",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -164.09815950920245,
+            66.12820512820514,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            366,
+            918,
+            572,
+            986
+          ]
+        },
+        {
+          "ref": "P18",
+          "label": "Logic footprint",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -123.67484662576688,
+            105.33333333333333,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            692,
+            640,
+            845,
+            708
+          ]
+        },
+        {
+          "ref": "P19",
+          "label": "Logic footprint",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -123.5398773006135,
+            80.72435897435898,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            694,
+            815,
+            845,
+            882
+          ]
+        },
+        {
+          "ref": "P20",
+          "label": "Logic footprint",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -90.33742331288343,
+            105.33333333333333,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            939,
+            640,
+            1092,
+            708
+          ]
+        },
+        {
+          "ref": "P21",
+          "label": "CRT controller (schematic)",
+          "model": "DIP-40_W15.24mm",
+          "position": [
+            -60.44171779141104,
+            89.67948717948717,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            1120,
+            691,
+            1354,
+            879
+          ]
+        },
+        {
+          "ref": "P22",
+          "label": "Logic footprint",
+          "model": "DIP-24_W15.24mm",
+          "position": [
+            -27.104294478527606,
+            98.9871794871795,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            1445,
+            569,
+            1523,
+            869
+          ]
+        },
+        {
+          "ref": "P23",
+          "label": "U6516 SRAM (schematic)",
+          "model": "DIP-24_W15.24mm",
+          "position": [
+            -127.7239263803681,
+            52.801282051282044,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            635,
+            993,
+            842,
+            1100
+          ]
+        },
+        {
+          "ref": "P24",
+          "label": "U6516 SRAM (schematic)",
+          "model": "DIP-24_W15.24mm",
+          "position": [
+            -85.27607361963192,
+            52.87179487179487,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            951,
+            992,
+            1155,
+            1100
+          ]
+        },
+        {
+          "ref": "P25",
+          "label": "U6516 SRAM (schematic)",
+          "model": "DIP-24_W15.24mm",
+          "position": [
+            -48.901840490797554,
+            52.87179487179487,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            1220,
+            992,
+            1425,
+            1100
+          ]
+        },
+        {
+          "ref": "P26",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -199.73006134969324,
+            29.743589743589748,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            116,
+            1175,
+            294,
+            1245
+          ]
+        },
+        {
+          "ref": "P27",
+          "label": "Logic footprint",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -167.87730061349694,
+            28.68589743589744,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
+          "photoRect": [
+            352,
+            1185,
+            530,
+            1250
+          ]
+        }
+      ],
+      "passives": [
+        {
+          "kind": "ceramic",
+          "position": [
+            -210,
+            153,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -190,
+            153,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -169,
+            152,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -125,
+            157,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -73,
+            155,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "diameter": 5,
+          "height": 4
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -21,
+            148,
+            41
+          ],
+          "rotation": 90,
+          "side": -1,
+          "diameter": 5,
+          "height": 4
+        }
+      ],
+      "connectors": [
+        {
+          "position": [
+            -7,
+            95,
+            41
+          ],
+          "n": 32,
+          "rotation": 0,
+          "side": -1
+        }
+      ],
+      "mounts": [
+        [
+          -216,
+          16
+        ],
+        [
+          -9,
+          16
+        ],
+        [
+          -216,
+          168
+        ],
+        [
+          -9,
+          168
+        ]
+      ]
+    }
+  ],
+  "displayRoutes": [
+    [
+      [
+        55,
+        530
+      ],
+      [
+        350,
+        530
+      ],
+      [
+        370,
+        550
+      ],
+      [
+        1590,
+        550
+      ]
+    ],
+    [
+      [
+        58,
+        767
+      ],
+      [
+        315,
+        767
+      ],
+      [
+        348,
+        748
+      ],
+      [
+        557,
+        748
+      ],
+      [
+        596,
+        771
+      ],
+      [
+        920,
+        771
+      ]
+    ],
+    [
+      [
+        73,
+        957
+      ],
+      [
+        211,
+        957
+      ],
+      [
+        255,
+        983
+      ],
+      [
+        396,
+        983
+      ]
+    ],
+    [
+      [
+        163,
+        1120
+      ],
+      [
+        443,
+        1120
+      ],
+      [
+        470,
+        1098
+      ],
+      [
+        900,
+        1098
+      ],
+      [
+        940,
+        1120
+      ],
+      [
+        1600,
+        1120
+      ]
+    ],
+    [
+      [
+        89,
+        221
+      ],
+      [
+        358,
+        221
+      ]
+    ],
+    [
+      [
+        1418,
+        272
+      ],
+      [
+        1490,
+        272
+      ],
+      [
+        1556,
+        341
+      ]
+    ],
+    [
+      [
+        874,
+        430
+      ],
+      [
+        850,
+        492
+      ],
+      [
+        709,
+        492
+      ],
+      [
+        690,
+        475
+      ],
+      [
+        612,
+        475
+      ]
+    ],
+    [
+      [
+        349,
+        804
+      ],
+      [
+        612,
+        804
+      ],
+      [
+        658,
+        830
+      ],
+      [
+        868,
+        830
+      ],
+      [
+        906,
+        853
+      ],
+      [
+        1190,
+        853
+      ]
+    ],
+    [
+      [
+        409,
+        574
+      ],
+      [
+        754,
+        574
+      ],
+      [
+        794,
+        614
+      ],
+      [
+        1380,
+        614
+      ],
+      [
+        1424,
+        592
+      ],
+      [
+        1590,
+        592
+      ]
+    ],
+    [
+      [
+        128,
+        1280
+      ],
+      [
+        312,
+        1280
+      ],
+      [
+        340,
+        1308
+      ],
+      [
+        718,
+        1308
+      ]
+    ],
+    [
+      [
+        460,
+        1180
+      ],
+      [
+        813,
+        1180
+      ],
+      [
+        851,
+        1158
+      ],
+      [
+        1240,
+        1158
+      ],
+      [
+        1270,
+        1180
+      ],
+      [
+        1590,
+        1180
+      ]
+    ]
+  ]
+}

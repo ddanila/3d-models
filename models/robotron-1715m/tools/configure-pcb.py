@@ -1,47 +1,32 @@
 #!/usr/bin/env python3
-"""Place reusable packages at photographed landmarks; never stretch a package."""
-import json,hashlib,math
+"""Generate shared OpenSCAD/browser W/M packages and holes from board-layout.json."""
+import json,math
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
-boards=json.loads((root/'pcb-references.json').read_text())
-models=json.loads((root/'components/kicad/models.json').read_text())
-lookup={m['id']:i for i,m in enumerate(models)}
-instances=[];passives=[];footprints=[]
-def position(b,rect):
-    x,y,w,h=rect;x0,y0,x1,y1=b['crop'];bw,bh=b['size'];ox,oy,oz=b['origin']
-    u=(x+w/2-x0)/(x1-x0);v=(y+h/2-y0)/(y1-y0)
-    return [ox+(1-v)*bw,oy+(1-u)*bh,oz] if b['rotated'] else [ox+u*bw,oy+(1-v)*bh,oz]
-def angle(b,c):return (-90 if b['rotated'] else 0) if c['axis']=='vertical' else (180 if b['rotated'] else 90)
-for b in boards:
-    for i,c in enumerate(b.get('components',[])):
-        m=models[lookup[c['package']]]
-        instances.append(dict(id=f'{b["name"]}-package-{i:03}',board=b['name'],model=c['package'],position=position(b,c['rect']),rotation=angle(b,c),rect=c['rect'],status=c['status'],markings=c.get('markings',True),top=m['bodyHeight']))
-        pose=instances[-1];a=math.radians(pose['rotation'])
-        for x,y in m['footprint']:
-            footprints.append([pose['position'][0]+x*math.cos(a)-y*math.sin(a),pose['position'][1]+x*math.sin(a)+y*math.cos(a),pose['position'][2],b['name']])
-    for c in b.get('passives',[]):
-        passives.append([c['kind'],position(b,c['rect']),angle(b,c),c['rect'][2:],b['name'],c.get('diameter',6.3),c.get('height',10)])
-        a=math.radians(angle(b,c));pos=position(b,c['rect'])
-        pitch=9 if c['kind']=='resistor' else 15 if c['kind']=='film' else 2.5
-        for y in [-pitch/2,pitch/2]:footprints.append([pos[0]-y*math.sin(a),pos[1]+y*math.cos(a),pos[2],b['name']])
-# Provisional connector tails use the same aperture/pad/solder geometry.
-for board,x,y,z,n,rot in [('motherboard',-13.02,99.60,13.6,32,0),('floppy-controller',-10.68,91.71,42.6,32,0),('floppy-controller',-46,19,42.6,17,90)]:
-    a=math.radians(rot)
-    for dx in [-1.27,1.27]:
-        for i in range(n):
-            dy=(i-(n-1)/2)*2.54
-            footprints.append([x+dx*math.cos(a)-dy*math.sin(a),y+dx*math.sin(a)+dy*math.cos(a),z,board])
-mounts=[]
-for board,xs,ys,bottom,top in [('motherboard',[-225,12],[-170,165],3,13.6),('floppy-controller',[-216,-9],[16,168],13.6,42.6)]:
-    for x in xs:
-        for y in ys:mounts.append([x,y,bottom,top,board])
-data=dict(mounts=mounts,version=3,models=models,instances=instances,footprints=footprints,credit='KiCad DIP models: Maurice (easyw), see components/kicad/NOTICE.txt. Board photographs: Old Crap Vintage Computing; not Danila’s specimen.',licence='See each model licence: GPL-3.0-or-later with design exception, or CC-BY-SA-4.0 with KiCad exception.',sourceRevision=json.loads((root/'components/kicad/sources.json').read_text())['revision'])
+layout=json.loads((root/'board-layout.json').read_text())
+models=json.loads((root/'components/kicad/models.json').read_text());lookup={m['id']:i for i,m in enumerate(models)}
+instances=[];passives=[];footprints=[];mounts=[];connectors=[]
+def pins(position,angle,side,points,board):
+ a=math.radians(angle)
+ for x,y in points:
+  y*=side
+  footprints.append([position[0]+x*math.cos(a)-y*math.sin(a),position[1]+x*math.sin(a)+y*math.cos(a),position[2],board,side])
+for b in layout['boards']:
+ name=b['name']
+ for c in b['components']:
+  m=models[lookup[c['model']]]
+  instances.append(dict(c,id=name+'-'+c['ref'],board=name,top=m['bodyHeight'],markings=False))
+  pins(c['position'],c['rotation'],c['side'],m['footprint'],name)
+ for c in b['passives']:
+  passives.append([c['kind'],c['position'],c['rotation'],[0,0],name,c['diameter'],c['height'],c['side']])
+  pitch=9 if c['kind']=='resistor' else 15 if c['kind']=='film' else 2.5
+  pins(c['position'],c['rotation'],c['side'],[[0,-pitch/2],[0,pitch/2]],name)
+ for c in b['connectors']:
+  connectors.append([c['position'],c['n'],c['rotation'],name,c['side']])
+  pins(c['position'],c['rotation'],c['side'],[[x,(i-(c['n']-1)/2)*2.54] for x in [-1.27,1.27] for i in range(c['n'])],name)
+ for x,y in b['mounts']:mounts.append([x,y,3 if name=='motherboard' else 13.6,b['origin'][2]+1.6,name])
+data=dict(version=4,boards=layout['boards'],sources=layout['sources'],limitations=layout['limitations'],mounts=mounts,models=models,instances=instances,footprints=footprints,credit='KiCad DIP models: Maurice (easyw), see components/kicad/NOTICE.txt. Layout: original Robotron W drawings and Danila’s MIT owner photographs; dimensions and exact revision remain provisional.',licence='See each model licence: GPL-3.0-or-later with design exception, or CC-BY-SA-4.0 with KiCad exception.',sourceRevision=json.loads((root/'components/kicad/sources.json').read_text())['revision'])
 (root/'pcb-components.json').write_text(json.dumps(data,indent=2)+'\n')
-source='// Generated by tools/configure-pcb.py. Nominal package dimensions; photo-estimated placement.\n'
-source+='pcb_component_models='+json.dumps([[m['meshes']['body']['file'],m['meshes']['leads']['file']] for m in models])+';\n'
-source+='pcb_component_instances='+json.dumps([[lookup[p['model']],p['position'],p['rotation'],p['board']] for p in instances])+';\n'
-source+='pcb_mounts='+json.dumps(mounts)+';\n'
-source+='pcb_footprints='+json.dumps(footprints)+';\n'
-source+='pcb_passives='+json.dumps(passives)+';\n'
-(root/'pcb-components.scad').write_text(source)
-print(len(instances),'DIP packages;',len(passives),'discrete components')
+arrays=dict(pcb_component_models=[[m['meshes']['body']['file'],m['meshes']['leads']['file']] for m in models],pcb_component_instances=[[lookup[p['model']],p['position'],p['rotation'],p['board'],p['side']] for p in instances],pcb_mounts=mounts,pcb_footprints=footprints,pcb_passives=passives,pcb_connectors=connectors,pcb_boards=[[b['name'],b['origin'],b['size']] for b in layout['boards']],pcb_display_routes=layout['displayRoutes'])
+(root/'pcb-components.scad').write_text('// Generated from board-layout.json; nominal packages, estimated layout.\n'+''.join(k+'='+json.dumps(v)+';\n' for k,v in arrays.items()))
+print(len(instances),'W/M packages;',len(footprints),'lead holes')

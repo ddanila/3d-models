@@ -1,7 +1,7 @@
 // Reference-photo discrete components. Dimensions are estimates, values unknown.
 // Local Y is the long axis; leads pass through the board plane.
 module pcb_passive_pose(kind) {
-    for(c=pcb_passives)if(c[0]==kind && pcb_selected(c[4]))translate(c[1])rotate([0,0,c[2]])let($can_d=c[5],$can_h=c[6])children();
+    for(c=pcb_passives)if(c[0]==kind && pcb_selected(c[4]))translate(c[1])rotate([0,0,c[2]])rotate([c[7]==-1?180:0,0,0])let($can_d=c[5],$can_h=c[6])children();
 }
 module axial_body() {
     translate([0,-3.15,2])rotate([-90,0,0])union(){
