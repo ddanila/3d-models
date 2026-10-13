@@ -55,3 +55,11 @@ photo-derived dimensions and hidden construction remain provisional.
 The deck aperture is clipped behind the 3 mm front wall. Without this limit,
 its tilted cutter removed the front fascia and exposed the PCB edge. The low
 front preview checks that the shell closes beneath the deck.
+
+Caps and SI/SO indicator lenses are included in the assembled and exploded views,
+attached to their fixed deck carriers. `caps_led_on` and `siso_led_on` select static
+lit colors; OpenSCAD does not simulate emitted light or emulator state. Both lenses
+remain visible when off. Their positions and provisional 4 mm spherical shape
+match the existing browser model; they were previously browser-only additions.
+The shared full-machine SCAD assembly includes them too. Browser export still
+leaves these separate lenses to the runtime, avoiding duplicate geometry.

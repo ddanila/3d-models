@@ -12,6 +12,13 @@ show_springs = false;
 // Coarse spring tessellation for interactive review; canonical exports are unchanged.
 draft = true;
 
+/* [Indicators] */
+// Static preview states; emulator-driven illumination remains in the museum.
+caps_led_on = false;
+siso_led_on = false;
+led_off_color = "#89621d";
+led_on_color = "#ff9c16";
+
 /* [Colors] */
 shell_color = "#9daeb1";
 deck_color = "#242929";
@@ -62,6 +69,10 @@ translate([0,-keyboard_y,0]) {
             translate([0,controller(p) ? lift*1.3 : 0,lift*layer(p)])
                 color(tint(p,i))render(convexity=10)shape(p);
     if(view!="boards") {
+        // Lenses stay with their fixed carriers when the deck is exploded.
+        translate([0,0,lift*3])for(i=[0:1])
+            color((i==0 ? caps_led_on : siso_led_on) ? led_on_color : led_off_color)
+                render(convexity=4)keyboard_indicator(i);
         translate([0,keyboard_y,28+lift*4])rotate([keyboard_slope,0,0])
             for(i=[0:len(keys)-1])translate([keys[i][0],keys[i][1],0])review_key(i);
         if(view=="exploded" || show_springs)
