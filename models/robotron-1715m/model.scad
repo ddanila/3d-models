@@ -203,9 +203,11 @@ module keyboard_metal() {
     }
 }
 module keyboard_grommet() {
-    // Folded bow-tie cable guide. Photo ratios: ~57 x 37, opening ~42 x 17.
+    // Owner photo PXL_20261009_133005363: two opposing rubber strips,
+    // with bare metal on the short edges, not a continuous rectangular boot.
+    // Photo ratios: ~57 x 37, opening ~42 x 17.
     translate([80,keyboard_y+55,-2]) {
-        difference(){slab(45,21,2,1);translate([0,0,-1])slab(42,17,4,.7);}
+        for(side=[-1,1])translate([0,side*9.5,0])slab(42,2,2,.3);
         for(side=[-1,1])scale([1,side,1])translate([0,10,0])rotate([-18,0,0])
             linear_extrude(1.6)polygon([[-21,0],[21,0],[28.5,8.5],[-28.5,8.5]]);
     }

@@ -11,6 +11,7 @@ Clear keys have a separate silver inlay and configurable shell alpha.
 
 - [Assembled preview](preview.png)
 - [Low front preview](front.png)
+- [Underside preview](underside.png)
 - [Exploded preview with springs](exploded.png)
 - [PCB/contact preview](boards.png)
 
@@ -30,11 +31,11 @@ From this directory:
 ```sh
 python3 render.py --view assembled  # one quick color PNG
 python3 render.py --view front      # check front fascia and deck joint
-python3 render.py                   # all four review views
+python3 render.py                   # all five review views
 ```
 
 This uses the installed OpenSCAD build with the Manifold backend. On the current
-Mac, all four previews take only a few seconds. It does not regenerate STLs,
+Mac, all five previews take only a few seconds. It does not regenerate STLs,
 rebuild the complete computer, sync DAC, or run browser/emulator CI. Review shape,
 spacing, colors and internals here first; then export only the affected canonical
 parts and sync the museum once the change is ready.
@@ -63,3 +64,8 @@ remain visible when off. Their positions and provisional 4 mm spherical shape
 match the existing browser model; they were previously browser-only additions.
 The shared full-machine SCAD assembly includes them too. Browser export still
 leaves these separate lenses to the runtime, avoiding duplicate geometry.
+
+The underside cable opening has two opposing folded rubber strips, with the
+short metal edges exposed, following owner photo `PXL_20261009_133005363.jpg`.
+It is not a four-sided boot like the monitor outlet. Use
+`python3 render.py --view underside` to inspect this detail.
