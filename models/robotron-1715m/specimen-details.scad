@@ -55,7 +55,7 @@ module keyboard_controller_ink(){keyboard_controller_pose(){
  translate([128,8,6.35])slab(4,12,.12,.1);
 }}
 module keyboard_insulators(){
- translate([0,keyboard_y,11.2])rotate([keyboard_slope,0,0])for(y=[-75,43])translate([0,y,0])slab(482,10,1.5,.5);
+ translate([0,keyboard_y,11.2+keyboard_z_shift])rotate([keyboard_slope,0,0])for(y=[-75,43])translate([0,y,0])slab(482,10,1.5,.5);
 }
 // Visible underside buses from 123907435. This is artwork, not a netlist.
 function matrix_bus(i) = let(y=-62+i*13)
@@ -65,7 +65,7 @@ module board_trace(path,width=.75,height=.12){
  for(i=[0:len(path)-2])hull()for(j=[i,i+1])translate([path[j][0],path[j][1],0])cylinder(d=width,h=height,$fn=12);
 }
 module keyboard_matrix_artwork(){
- translate([0,keyboard_y,12.8])rotate([keyboard_slope,0,0]){
+ translate([0,keyboard_y,12.8+keyboard_z_shift])rotate([keyboard_slope,0,0]){
   for(i=[0:7])board_trace(matrix_bus(i),1.5);
   for(i=[0:7],j=[0,5])translate(matrix_bus(i)[j])cylinder(d=3,h=.12,$fn=20);
   // Narrow parallel bundle joining the controller side of the broad board.
@@ -73,7 +73,7 @@ module keyboard_matrix_artwork(){
  }
 }
 module keyboard_pcb_metal(){
- translate([0,keyboard_y,12.55])rotate([keyboard_slope,0,0]){
+ translate([0,keyboard_y,12.55+keyboard_z_shift])rotate([keyboard_slope,0,0]){
   for(i=[0:7],j=[0,5])translate(matrix_bus(i)[j])difference(){cylinder(d=1.6,h=.23,$fn=20);translate([0,0,-.1])cylinder(d=.65,h=.5,$fn=12);}
   // Clean screw heads and through-board solder points visible in the photos.
   for(x=[-214,-152,-82,-12,58,128,198],y=[-51,1,32])translate([x,y,0])rotate([180,0,0])screw(3.5,.6);

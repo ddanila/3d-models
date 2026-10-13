@@ -73,10 +73,10 @@ translate([0,-keyboard_y,0]) {
         translate([0,0,lift*3])for(i=[0:1])
             color((i==0 ? caps_led_on : siso_led_on) ? led_on_color : led_off_color)
                 render(convexity=4)keyboard_indicator(i);
-        translate([0,keyboard_y,28+lift*4])rotate([keyboard_slope,0,0])
+        translate([0,keyboard_y,28+keyboard_z_shift+lift*4])rotate([keyboard_slope,0,0])
             for(i=[0:len(keys)-1])translate([keys[i][0],keys[i][1],0])review_key(i);
         if(view=="exploded" || show_springs)
-            translate([0,keyboard_y,28+lift*2])rotate([keyboard_slope,0,0])for(k=keys)translate([k[0],k[1],0]){
+            translate([0,keyboard_y,28+keyboard_z_shift+lift*2])rotate([keyboard_slope,0,0])for(k=keys)translate([k[0],k[1],0]){
                 if(show_springs)color("Silver")translate([0,0,-10.4])render(convexity=12)contact_spring(spring_installed,draft ? 16 : 48,draft ? 6 : 12);
                 translate([0,0,lift*.55]){
                     color(core_color)render(convexity=8)contact_carrier();

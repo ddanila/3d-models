@@ -102,3 +102,12 @@ The 1 mm separation now continues along the full panel; `--view side` checks it.
 The same side photo shows a small round top-to-wall bend in the light base.
 A 1 mm rounded offset of the inner wedge models this separately from the
 5 mm corners in plan; the lower rim remains flat and open for the separate lid.
+
+Owner profile correction: the light base rises from **15 mm at the front** to
+**29 mm at the black panel’s rear edge**, then stays level at **29 mm** to the
+back. `dimensions.scad` derives the panel tilt from those heights and the current
+photo-fitted panel footprint. Keys and internal switch parts share the updated
+height datum and tilt. The rear shelf and its pencil trough are horizontal.
+
+The pencil groove is a closed pressed trough, not a through-hole. Its floor and
+walls are 1 mm thick; the 2 mm recess depth remains a photo estimate.

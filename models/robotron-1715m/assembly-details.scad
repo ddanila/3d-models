@@ -4,21 +4,21 @@ module key_spring(height=spring_installed) { contact_spring(height,16,6); }
 module key_stem() { contact_carrier(); }
 module switch_housing() { switch_mount(); }
 module keyboard_guides() {
-    translate([0,keyboard_y,16.7])rotate([keyboard_slope,0,0])
+    translate([0,keyboard_y,16.7+keyboard_z_shift])rotate([keyboard_slope,0,0])
         for(k=keys)translate([k[0],k[1],0])switch_guide();
 }
 module keyboard_contacts() {
     // Use the key axis so rubber meets electrode tops after 2.2 mm travel.
-    translate([0,keyboard_y,28])rotate([keyboard_slope,0,0])
+    translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])
         for(k=keys)translate([k[0],k[1],-13.3])contact_electrodes();
 }
 module keyboard_mechanisms() {
-    translate([0,keyboard_y,28])rotate([keyboard_slope,0,0])for(k=keys)translate([k[0],k[1],0]){
+    translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])for(k=keys)translate([k[0],k[1],0]){
         color("Silver")translate([0,0,-10.4])key_spring();color("Ivory")key_stem();color("#30322d")contact_rubber();
     }
 }
 module keyboard_plate() {
-    translate([0,keyboard_y,17])rotate([keyboard_slope,0,0])difference(){
+    translate([0,keyboard_y,17+keyboard_z_shift])rotate([keyboard_slope,0,0])difference(){
         translate([0,-16,0])slab(484,114,1.2,3);for(k=keys)translate([k[0],k[1],-1])cylinder(d=12.5,h=4,$fn=32);
         for(x=[-225,225],y=[-55,45])translate([x,y,-1])cylinder(d=3.4,h=4,$fn=16);
     }

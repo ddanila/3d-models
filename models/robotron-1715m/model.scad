@@ -162,8 +162,8 @@ module keyboard_shell() {
                     // along the sloping top, independent of the 5 mm plan corners.
                     minkowski(){
                         intersection(){
-                            translate([0,0,0])slab(keyboard_w-8,keyboard_d-2,40,4);
-                            translate([0,0,26])rotate([keyboard_slope,0,0])
+                            translate([0,0,0])slab(keyboard_w-8,keyboard_d-2,keyboard_rear_height-1,4);
+                            translate([0,0,keyboard_deck_z])rotate([keyboard_slope,0,0])
                                 translate([-keyboard_w,-keyboard_d,-100])cube([2*keyboard_w,2*keyboard_d,94]);
                         }
                         sphere(r=1,$fn=24);
@@ -172,8 +172,8 @@ module keyboard_shell() {
                 // One continuous sloping 1 mm skin, including the exposed rear
                 // shelf: owner side photo PXL_20261013_084425145.
                 intersection() {
-                    translate([0,0,-3])slab(keyboard_w-6-2*sheet,keyboard_d-2*sheet,60,5-sheet);
-                    translate([0,0,26])rotate([keyboard_slope,0,0])
+                    translate([0,0,-3])slab(keyboard_w-6-2*sheet,keyboard_d-2*sheet,keyboard_rear_height+3-sheet,5-sheet);
+                    translate([0,0,keyboard_deck_z])rotate([keyboard_slope,0,0])
                         translate([-keyboard_w,-keyboard_d,-100])cube([2*keyboard_w,2*keyboard_d,94]);
                 }
                 // The tilted deck aperture must not cut through the vertical
@@ -192,10 +192,14 @@ module keyboard_shell() {
                     slab(10,15,sheet,1);
                     translate([0,-side*5,-1])cylinder(d=3.5,h=4,$fn=24);
                 }
+            // Pressed pencil trough: a closed 1 mm floor below the shelf.
+            // Depth is photo-estimated; this is not a through opening.
+            translate([0,keyboard_y+81,keyboard_rear_height-3])
+                slab(keyboard_w-40,12,3,5.9);
         }
-        // Cut through both the pressed ledge and any overlapping shell lip.
-        translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
-            translate([0,81,-7])slab(keyboard_w-40,12,5,5.9);
+        // Leave the trough floor and 1 mm side walls intact.
+        translate([0,keyboard_y+81,keyboard_rear_height-2])
+            slab(keyboard_w-42,10,4,4.9);
     }
 }
 module keyboard_bottom() {
@@ -256,7 +260,7 @@ module keyboard_deck_blank() {
     }
 }
 module keyboard_deck() {
-    translate([0,keyboard_y,26]) rotate([keyboard_slope,0,0]) difference() {
+    translate([0,keyboard_y,26+keyboard_z_shift]) rotate([keyboard_slope,0,0]) difference() {
         translate([0,-20,0])keyboard_deck_blank();
         // Contiguous row openings, matching the photographed stepped main block.
         for(row=[0:4])let(ks=[for(k=keys)if(abs(k[1]-(22-row*keyboard_pitch))<.1 && k[0]<100)k],
@@ -271,14 +275,14 @@ module keyboard_deck() {
 // Keep these separate from the dark fixed carriers and moving keycaps.
 module keyboard_indicator(i) {
     p = i==0 ? [-225.25,-16] : [69.25,22];
-    translate([0,keyboard_y,28]) rotate([keyboard_slope,0,0])
+    translate([0,keyboard_y,28+keyboard_z_shift]) rotate([keyboard_slope,0,0])
         translate([p[0],p[1],3.5]) sphere(r=2,$fn=32);
 }
 module keyboard_indicators() {
     color("#89621d")for(i=[0:1])keyboard_indicator(i);
 }
 module keyboard_fillers() {
-    translate([0,keyboard_y,28]) rotate([keyboard_slope,0,0]) {
+    translate([0,keyboard_y,28+keyboard_z_shift]) rotate([keyboard_slope,0,0]) {
         // Half-pitch indicator carriers and paired spacers beside SI/SO and ET.
         for(p=[[-225.25,-16],[69.25,22],[78.75,22],[17,-54],[26.5,-54]])
             translate([p[0],p[1],0])slab(8.3,17.8,3,1.5);
@@ -325,7 +329,7 @@ module cap(w,h,style,top_width=0) {
     if(style!=0)difference(){translate([0,0,-2])cylinder(d=7,h=6,$fn=24);translate([0,0,-2.1])cube([3.3,3.3,9],center=true);}
 }
 module keycaps(style) {
-    translate([0,keyboard_y,28]) rotate([keyboard_slope,0,0])
+    translate([0,keyboard_y,28+keyboard_z_shift]) rotate([keyboard_slope,0,0])
         for(k=keys) if(k[4]==style) translate([k[0],k[1],0]){cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,style,k[5]);if(style==0)color("Ivory")keycap_white_core(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[5]>0?k[5]:k[2]*keyboard_pitch-5.2,k[3]*keyboard_pitch-5.2);if(style==1)color("Silver")cap_insert(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2);}
 }
 function bezier(p,t)=pow(1-t,3)*p[0]+3*pow(1-t,2)*t*p[1]+3*(1-t)*t*t*p[2]+t*t*t*p[3];
