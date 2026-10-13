@@ -1,5 +1,5 @@
 {
-  "triangles": 6276,
+  "triangles": 6556,
   "closedTwoManifold": true,
   "components": 1,
   "boundsMm": [
@@ -11,13 +11,13 @@
     [
       8.9,
       8.9,
-      11.4
+      11.38237
     ]
   ],
   "extentsMm": [
     17.8,
     17.8,
-    11.4
+    11.38237
   ],
-  "volumeMm3": 1389.237
+  "volumeMm3": 1768.732
 }
