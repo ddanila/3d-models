@@ -69,13 +69,13 @@ materials and verification metadata from here; geometry corrections belong here.
 
 ## Models
 
-- [Juku](models/juku/) — printed and verified keycap; top/bottom cases, split bottom panels and legs
-
-- [`usb-serial-adapter-case`](models/usb-serial-adapter-case/) — open-top case
+- [Juku](models/juku/) — printed and verified keycap; top/bottom cases,
+  split bottom panels and legs
+- [USB serial-adapter case](models/usb-serial-adapter-case/) — open-top case
   for the DIYMORE FT232BM/BL USB to RS232/UART TTL/RS485 adapter
-- [`dip28-chip-tray`](models/dip28-chip-tray/) — stackable four-chip tray for
+- [DIP-28 chip tray](models/dip28-chip-tray/) — stackable four-chip tray for
   DIP-28 EEPROM and EPROM packages
-- [`rg1n-loopback-case`](models/rg1n-loopback-case/) — compact two-piece case
+- [РГ1Н loopback-connector case](models/rg1n-loopback-case/) — compact two-piece case
   for a wired 12-contact РГ1Н-1-4 loopback connector
 - [ПК8010 Корвет](models/pk8010-korvet/) — right-side button, lid, and prototype ↑/8 and SHIFT keycaps
 - [Oral-B five-brush stand](models/oral-b-five-brush-stand/) — flat shelf
