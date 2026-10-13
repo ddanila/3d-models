@@ -149,26 +149,36 @@ module crt_glass() {
     translate(crt_position)rotate([90,0,0])crt_dome(crt_size[0],crt_size[1]);
 }
 module keyboard_shell() {
+    sheet = 1; // Owner estimate: painted sheet metal, not a thick molded shell.
     difference(){
         union(){
             translate([0,keyboard_y,0]) difference() {
                 // Straight lower rim above the separate 1.6 mm lid. Only the
-                // plan corners are rounded; no spherical roll-under at the base.
+                // 5 mm plan bends and 1 mm top bends are independent.
+                // Clipping below the rim prevents a rolled-under bottom edge.
                 intersection() {
-                    translate([0,0,1.8])slab(keyboard_w-6,keyboard_d,40,1);
+                    translate([0,0,1.8])slab(keyboard_w-6,keyboard_d,40,5);
                     hull(){
-                        translate([-keyboard_w/2,-keyboard_d/2,0])cube([keyboard_w,12,16]);
-                        translate([-keyboard_w/2,keyboard_d/2-12,0])cube([keyboard_w,12,40]);
+                        translate([-keyboard_w/2+3,-keyboard_d/2,0])rounded([keyboard_w-6,12,16],1);
+                        translate([-keyboard_w/2+3,keyboard_d/2-12,0])rounded([keyboard_w-6,12,40],1);
                     }
                 }
-                // Hollow sheet-metal shell with a separate removable bottom.
-                hull(){translate([-keyboard_w/2+6,-keyboard_d/2+3,-3])cube([keyboard_w-12,10,16]);translate([-keyboard_w/2+6,keyboard_d/2-13,-3])cube([keyboard_w-12,10,40]);}
+                // Offset the sloped top by one sheet thickness and leave
+                // 1 mm vertical walls around the open underside.
+                intersection() {
+                    translate([0,0,-3])
+                        slab(keyboard_w-6-2*sheet,keyboard_d-2*sheet,60,5-sheet);
+                    hull(){
+                        translate([-keyboard_w/2,-keyboard_d/2,-sheet*sqrt(1+pow(24/(keyboard_d-12),2))])cube([keyboard_w,12,16]);
+                        translate([-keyboard_w/2,keyboard_d/2-12,-sheet*sqrt(1+pow(24/(keyboard_d-12),2))])cube([keyboard_w,12,40]);
+                    }
+                }
                 // The tilted deck aperture must not cut through the vertical
                 // front fascia: its tall cutter leans forward as Z increases.
-                // Preserve the same 3 mm front wall as the hollow interior.
+                // Preserve the same 1 mm front wall as the hollow interior.
                 intersection() {
                     translate([0,-20,-5]) rotate([keyboard_slope,0,0]) slab(keyboard_w-12,158,70,4);
-                    translate([-keyboard_w,-keyboard_d/2+3,-10])
+                    translate([-keyboard_w,-keyboard_d/2+sheet,-10])
                         cube([keyboard_w*2,keyboard_d*2,100]);
                 }
             }
@@ -176,12 +186,12 @@ module keyboard_shell() {
             // not a continuous bottom flange. Align holes with the separate lid.
             for(x=[-218,0,218],side=[-1,1])
                 translate([x,keyboard_y+side*92,1.8])difference(){
-                    slab(10,15,1.6,1);
+                    slab(10,15,sheet,1);
                     translate([0,-side*5,-1])cylinder(d=3.5,h=4,$fn=24);
                 }
             // Stay inside the 40 mm rear envelope so the case switches remain visible.
             translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
-                translate([0,78,0])slab(keyboard_w-8,40,3,4);
+                translate([0,78,2])slab(keyboard_w-8,40,sheet,1);
         }
         // Cut through both the pressed ledge and any overlapping shell lip.
         translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
@@ -227,9 +237,19 @@ module keyboard_grommet() {
             linear_extrude(1.6)polygon([[-21,0],[21,0],[28.5,8.5],[-28.5,8.5]]);
     }
 }
+// Owner top/oblique views 123006039 and 132919894 show a rounded
+// black perimeter, not the sharp top edge of a plain extruded plate.
+// 6 mm plan corners and 2 mm top roll are photo estimates.
+module keyboard_deck_blank() {
+    w=keyboard_w-8; h=158; r=6; roll=2;
+    slab(w,h,2,r);
+    for(a=[0:15:75])hull()for(b=[a,a+15])let(inset=roll*(1-cos(b)))
+        translate([0,0,2+roll*sin(b)-.01])
+            slab(w-2*inset,h-2*inset,.01,r-inset);
+}
 module keyboard_deck() {
     translate([0,keyboard_y,26]) rotate([keyboard_slope,0,0]) difference() {
-        translate([0,-20,0])slab(keyboard_w-8,158,4,5);
+        translate([0,-20,0])keyboard_deck_blank();
         // Contiguous row openings, matching the photographed stepped main block.
         for(row=[0:4])let(ks=[for(k=keys)if(abs(k[1]-(22-row*keyboard_pitch))<.1 && k[0]<100)k],
             lo=row==2 ? -230 : min([for(k=ks)k[0]-k[2]*keyboard_pitch/2]),

@@ -53,7 +53,7 @@ Preview transparency is not a simulation of glass, metal reflection or rubber.
 The assembled keyboard is a visual reference, not one printable part. Existing
 photo-derived dimensions and hidden construction remain provisional.
 
-The deck aperture is clipped behind the 3 mm front wall. Without this limit,
+The deck aperture is clipped behind the 1 mm front wall. Without this limit,
 its tilted cutter removed the front fascia and exposed the PCB edge. The low
 front preview checks that the shell closes beneath the deck.
 
@@ -74,5 +74,14 @@ The light shell now ends at a straight, open lower rim above the separate bottom
 lid, with six individual screw tabs. Inside photos `PXL_20261012_123048886.jpg`
 and `PXL_20261012_123907435.jpg` establish this construction. The previous
 spherical rounding rolled the shell underneath and is removed. Plan corner
-radius is approximately 1 mm per owner feedback; sheet thickness, tab dimensions
-and the 0.2 mm lid seam remain modeling estimates.
+bend radius is approximately 5 mm, while the top-to-wall bend is approximately
+1 mm per owner feedback; tab dimensions and the 0.2 mm lid seam remain modeling estimates.
+The light shell walls, sloped skin, rear ledge and lid tabs use the owner’s
+approximately 1 mm sheet thickness. The separate bottom lid retains its own
+thickness parameter.
+
+The black deck has a rolled top perimeter rather than a sharp extruded edge:
+approximately 6 mm plan corners and a 2 mm top-edge radius, visually fitted to
+owner photos `PXL_20261012_123006039.jpg` and `PXL_20261009_132919894.jpg`.
+These black-deck radii are estimates, separate from the light sheet-metal shell’s
+5 mm corner bends and approximately 1 mm top bend / sheet thickness.
