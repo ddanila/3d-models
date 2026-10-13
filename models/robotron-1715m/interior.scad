@@ -134,8 +134,8 @@ module ribbon_run(points,w=42,t=.8) {
     for(i=[0:len(points)-2])hull(){translate(points[i])cube([w,1,t],center=true);translate(points[i+1])cube([w,1,t],center=true);}
 }
 function drive_ribbon_path(unit,dx=0,lift=0)=unit==0?
- [[-158+dx,13,86+lift],[-158+dx,24,109+lift],[-181+dx,39,120+lift],[-207+dx,37,88+lift],[-219+dx,35,24+lift]]:
- [[-4+dx,13,86+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-91+dx,39,95+lift],[-130+dx,28,73+lift],[-196+dx,22,50+lift],[-219+dx,35,24+lift]];
+ [[-158+dx,-13,89+lift],[-158+dx,24,109+lift],[-181+dx,39,120+lift],[-207+dx,37,88+lift],[-219+dx,35,24+lift]]:
+ [[-4+dx,-13,89+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-91+dx,39,95+lift],[-130+dx,28,73+lift],[-196+dx,22,50+lift],[-219+dx,35,24+lift]];
 module ribbons(){for(u=[0:1])ribbon_run(drive_ribbon_path(u),33);}
 module ribbon_ridges(){for(u=[0:1],i=[0:25])ribbon_run(drive_ribbon_path(u,(i-12.5)*1.27,.45),.35,.12);}
 module ribbon_stripes(){for(u=[0:1])ribbon_run(drive_ribbon_path(u,-15.9,.55),.7,.12);}
@@ -199,7 +199,12 @@ module interior_shape(p) {
     if(p=="fan-rotor")fan_rotor();
     if(p=="ribbon-cables")ribbons();
     if(p=="ribbon-ridges")ribbon_ridges();
-    if(p=="drive-cable-plugs")drive_pair()teac_cable_plug();
+    if(p=="drive-cable-plugs"){
+      drive_pair()teac_cable_plug(adapter=true);
+      // Removable ribbon plug seats in the pale adapter socket, not at the
+      // drive edge connector already occupied by the adapter itself.
+      for(x=[-158,-4])translate([x-16.5,-13,84])cube([33,5,7]);
+    }
     if(p=="ribbon-stripes")ribbon_stripes();
     if(p=="power-wires-red")power_wires(0);
     if(p=="power-wires-black")power_wires(2.2);

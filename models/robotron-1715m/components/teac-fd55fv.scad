@@ -128,13 +128,15 @@ module teac_components() {
 }
 
 // Cable housings surround the existing board fingers; hidden keying is provisional.
-module teac_cable_plug() {
+module teac_cable_plug(adapter=false) {
+    if(!adapter){
     translate([47,199,3.2])difference(){
         cube([44,12,7]);translate([1,-1,1.3])cube([42,10,2.8]);
         translate([1,5,2.3])cube([42,9,1.5]);
     }
     translate([47,208,8.7])cube([44,3,1.5]);
     for(x=[47,88])translate([x,206,3.2])cube([3,5,7]);
+    }
     // Four individual power entry wells, with the harness ending in the socket.
     translate([11,201,4])difference(){cube([19,8,7]);
         for(x=[2.5:4.5:16])translate([x,9,3.5])rotate([90,0,0])cylinder(d=2.7,h=7,$fn=16);}

@@ -20383,7 +20383,7 @@
       "name": "ribbon-cables",
       "file": "meshes/ribbon-cables.stl",
       "color": "#a0a59b",
-      "sha256": "eb7a9ff13a60c58f50e50d45bb00c8882defb26d1d41724d9f848c2ae55d405e",
+      "sha256": "9c31ae94b31fd09e4a0e16588d798d6adea9cc30e05f26e2c27ee84de72dbbea",
       "section": "interior",
       "material": "rubber"
     },
@@ -20391,7 +20391,7 @@
       "name": "ribbon-stripes",
       "file": "meshes/ribbon-stripes.stl",
       "color": "#975b50",
-      "sha256": "860eb641bf4f73a1947a0fdfd3bd23ee21cc0489d671aae48b3ff1c00df7b441",
+      "sha256": "b6a374693332d5b5f1a67873bb53da8411574b160f1626541a08fe69bb7ef635",
       "section": "interior",
       "material": "rubber"
     },
@@ -20808,7 +20808,7 @@
       "name": "ribbon-ridges",
       "file": "meshes/ribbon-ridges.stl",
       "color": "#b0b3a9",
-      "sha256": "54db0114ded344c0b40ca67713c877f7c6618d22d28d0bd585603ee6c722499c",
+      "sha256": "8e1c1d5a9b661942082d0e195b243013f823e4aa7d7e2ef4216863cd9d2244db",
       "section": "interior",
       "material": "rubber"
     },
@@ -20816,7 +20816,7 @@
       "name": "drive-cable-plugs",
       "file": "meshes/drive-cable-plugs.stl",
       "color": "#353936",
-      "sha256": "d321ad7d2279b2f7d1e84ca29b3eeec9a6b152ef749c68811086da4c76bff07c",
+      "sha256": "b38100359ce93b6966c48f09014af4e5793a789ff04468fbec2f315e76523fd8",
       "section": "interior",
       "material": "aged-plastic"
     },
