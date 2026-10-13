@@ -1,5 +1,9 @@
 # Danila’s Robotron 1715M
 
+For fast keyboard iteration, open [keyboard/model.scad](keyboard/model.scad):
+colored assembled/exploded/PCB views, shared geometry, and local previews in seconds.
+See the [keyboard review workflow](keyboard/README.md).
+
 Parametric OpenSCAD reconstruction of Danila’s exterior with a provisional reference interior. Original model, scripts and owner photographs are MIT licensed (see LICENSE); the credited PCB photographs in `reference/oldcrap/` and `reference/robotrontechnik/` are excluded from MIT and retain their original rights (see their NOTICE.txt files). This is an editable museum reconstruction, not a scan, manufacturing drawing or validated replacement enclosure.
 
 Open `model.scad` for the assembled system unit, monitor and keyboard. Set `part` to any entry in `parts` to inspect/export it separately. Coordinates are millimetres: X right, Y towards the rear, Z up. The keyboard is placed in front of the computer. [`robotron-1715m.stl.zip`](robotron-1715m.stl.zip) contains the full-resolution combined STL visual reference; the separate exports retain the switch and material boundaries used by the museum.
