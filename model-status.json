@@ -215,6 +215,10 @@
     "models/juku/top-case/model.scad": {
       "physicalVerification": "unverified",
       "evidence": []
+    },
+    "models/robotron-1715m/diskette/model.scad": {
+      "physicalVerification": "unverified",
+      "evidence": []
     }
   }
 }

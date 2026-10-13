@@ -515,3 +515,12 @@ is retained as historical work, not validated tooling for the corrected spring.
 The combined STL now exceeds GitHub's 100 MiB file limit, so it ships in a
 lossless ZIP instead of reducing geometry detail. Extract it for the same STL
 workflow. Standalone keycap and switch STLs remain directly downloadable.
+
+### Inserted diskette geometry
+
+Browser v23 adds a generic 5.25-inch sleeve and blank paper label around the
+rotating magnetic medium. Sleeve and label stay stationary; only the medium
+rotates. Nominal square size is 133.35 mm; sleeve/window details are provisional,
+not a reproduction of a particular disk from the collection. No physical print
+verification is claimed. Browser presence and lever closure follow inserted
+media, independently for drives A/B and independently of power.

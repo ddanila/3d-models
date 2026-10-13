@@ -153,3 +153,19 @@ module teac_medium() {
         translate([0,25,-.1])cylinder(r=1.3,h=.3,$fn=16);
     }
 }
+
+// Generic 5.25-inch diskette sleeve: nominal 133.35 mm square.
+// Jacket windows/thickness and blank label are illustrative, not specimen scans.
+module teac_diskette_jacket() {
+    translate([70,59,29.5])difference(){
+        translate([-66.675,-66.675,-.5])cube([133.35,133.35,1.2]);
+        translate([-65.675,-65.675,-.1])cube([131.35,131.35,.4]);
+        translate([0,0,-1])cylinder(d=38,h=3,$fn=64);
+        translate([-7,22,-1])cube([14,45,3]);
+        translate([0,25,-1])cylinder(d=5,h=3,$fn=24);
+        translate([63,-30,-1])cube([5,7,3]);
+    }
+}
+module teac_diskette_label() {
+    translate([70-48,59-59,30.22])cube([96,24,.08]);
+}

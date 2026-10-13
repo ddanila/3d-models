@@ -5,7 +5,7 @@ import json,subprocess,tempfile,zipfile,hashlib
 root=Path(__file__).resolve().parents[1];dest=root/'browser/downloads';dest.mkdir(exist_ok=True)
 manifest=json.loads((root/'browser/model.json').read_text())
 logic=['logic-boards','logic-chips','logic-pins','logic-connectors','logic-resistors','logic-ceramics','logic-electrolytics','logic-crystals','logic-passive-leads','logic-film','logic-pads','logic-solder','logic-connector-contacts','logic-mounts']
-drive=['teac_frame()','teac_mechanism()','teac_black()','teac_contacts()','teac_coils()','teac_power_socket()','teac_spindle()','teac_head()','teac_head_metal()','teac_head_arm()','teac_medium()','teac_clamp()','teac_components()','teac_cable_plug()']
+drive=['teac_frame()','teac_mechanism()','teac_black()','teac_contacts()','teac_coils()','teac_power_socket()','teac_spindle()','teac_head()','teac_head_metal()','teac_head_arm()','teac_medium()','teac_diskette_jacket()','teac_diskette_label()','teac_clamp()','teac_components()','teac_cable_plug()']
 # Original editable sources plus every imported KiCad geometry source and notice.
 sources={}
 for path in root.rglob('*'):

@@ -30,6 +30,7 @@ This distinction is independent of visual review, render checks and valid STL ge
 | [juku/bottom-case/part-fr.scad](models/juku/bottom-case/part-fr.scad) | Not physically verified |
 | [juku/legs/model.scad](models/juku/legs/model.scad) | Not physically verified |
 | [juku/top-case/model.scad](models/juku/top-case/model.scad) | Not physically verified |
+| [robotron-1715m/diskette/model.scad](models/robotron-1715m/diskette/model.scad) | Not physically verified |
 
 “Not physically verified” means no recorded confirmation for this version; it does not claim nobody has printed it.
 

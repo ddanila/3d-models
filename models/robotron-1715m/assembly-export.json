@@ -1,7 +1,7 @@
 {
   "file": "robotron-1715m.stl.zip",
   "member": "robotron-1715m.stl",
-  "uncompressedBytes": 113895284,
-  "stlSha256": "59a71e3b5f3c01569e8609e7c24fac17f755a53a76950ba71d5d0ade603a7abf",
+  "uncompressedBytes": 113978684,
+  "stlSha256": "ce12d67df37d1146dea3e8c21c650db681e3114dcf42e5987f9d21d63f1bee2a",
   "note": "Lossless ZIP of complete visual-reference assembly; standalone component STLs retain direct downloads."
 }

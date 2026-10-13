@@ -82,6 +82,8 @@ module assembly_details(p) {
     if(p=="drive-board-components")drive_pair()teac_components();
     for(i=[0:1]){
         if(p==str("drive-head-arm-",i))translate([[-231,-77][i],-203,60])teac_head_arm();
+        if(p==str("drive-diskette-",i))translate([[-231,-77][i],-203,60])teac_diskette_jacket();
+        if(p==str("drive-diskette-label-",i))translate([[-231,-77][i],-203,60])teac_diskette_label();
         if(p==str("drive-medium-",i))translate([[-231,-77][i],-203,60])teac_medium();
         if(p==str("drive-clamp-",i))translate([[-231,-77][i],-203,60])teac_clamp();
         if(p==str("drive-head-metal-",i))translate([[-231,-77][i],-203,60])teac_head_metal();
