@@ -661,6 +661,54 @@
       "source": "PXL_20261013_084425145.jpg",
       "original_sha256": "511db490f2b23b6f2a41cfcb958a4de3da8ec47ea9fcb6d4a1edf178644819f1",
       "sha256": "ca1cbfd93757821cbb5e596d7537a01f64c26bc2a994c5a8e17c96f8bab52365"
+    },
+    {
+      "file": "PXL_20261013_113428737.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (10).zip",
+      "original_sha256": "7d011afa61d553f5f35f909bd14963787fb9dc8da19bbb22348361a213305735",
+      "sha256": "a834029497d5005c914ea995dc4799908687609f4486a7dbb1e620a616c60fab"
+    },
+    {
+      "file": "PXL_20261013_113436448.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (10).zip",
+      "original_sha256": "a8f056149a2fa478e2302888a8d6ddf9b013e1ff88ef4c255cbe6ab8642d3042",
+      "sha256": "63aea1af80c0af9e567fc2763b3852234786e8b0d35fdea622ff1a9d7ca374ab"
+    },
+    {
+      "file": "PXL_20261013_113451775.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (10).zip",
+      "original_sha256": "625fb3710d14d667be51e6b45413bdf0de83909be2715835e16dbba05683db2a",
+      "sha256": "bf180bb00a30ca8e583dae44d023ae69cd78004ae03e4253de29698e8654f3ef"
+    },
+    {
+      "file": "PXL_20261013_113457457.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (10).zip",
+      "original_sha256": "0978aa4fdd667f3646240d8b853489086c2dc20a8fdb1e45958c3f3995769893",
+      "sha256": "0a36b30f75f846f6202e5a03435f7a218079ba7c96a86da34fed92bd2361e79b"
+    },
+    {
+      "file": "PXL_20261013_113529099.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (10).zip",
+      "original_sha256": "66014c1e7c3075f79753944b06360bac9a2c0fd1bc6c91926369a61f6b2c2ca1",
+      "sha256": "6229a9e179bab726bf561cefd25b856d3e89aafa98f033dd29ddd7577a267596"
+    },
+    {
+      "file": "PXL_20261013_113537277.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (10).zip",
+      "original_sha256": "68978c7970f149adaf8ef0669ce1426b28e75d7cf03be09fc84bc920595e1e06",
+      "sha256": "f06a60ebc71f64b019bd4a9d717dd3d48c1768fe1b147fb4547178dcd3f1be16"
     }
   ]
 }

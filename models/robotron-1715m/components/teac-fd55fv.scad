@@ -145,27 +145,46 @@ module teac_head_arm() {
     translate([69,133,30])cube([2,15,.5]);
 }
 // Exposed flexible magnetic medium, without its stationary paper jacket.
-// The browser makes it translucent for mechanism inspection.
+// Opaque magnetic disc rotates independently of its stationary jacket.
 module teac_medium() {
     translate([70,59,29.5])difference(){
         cylinder(r=65,h=.08,$fn=128);
         translate([0,0,-.1])cylinder(r=14.3,h=.3,$fn=48);
-        translate([0,25,-.1])cylinder(r=1.3,h=.3,$fn=16);
+        translate([-24,6,-.1])cylinder(r=1.3,h=.3,$fn=16);
     }
 }
 
-// Generic 5.25-inch diskette sleeve: nominal 133.35 mm square.
-// Jacket windows/thickness and blank label are illustrative, not specimen scans.
+// Owner photos 2026-10-13, scaled against nominal 133.35 mm jacket.
+// Clean reference geometry: wear omitted; thickness and seams estimated.
 module teac_diskette_jacket() {
     translate([70,59,29.5])difference(){
         translate([-66.675,-66.675,-.5])cube([133.35,133.35,1.2]);
         translate([-65.675,-65.675,-.1])cube([131.35,131.35,.4]);
-        translate([0,0,-1])cylinder(d=38,h=3,$fn=64);
-        translate([-7,22,-1])cube([14,45,3]);
-        translate([0,25,-1])cylinder(d=5,h=3,$fn=24);
-        translate([63,-30,-1])cube([5,7,3]);
+        translate([0,0,-1])cylinder(d=39,h=3,$fn=64);
+        // Closed capsule opening, not a slot running to the edge.
+        hull()for(y=[34,57])translate([0,y,-1])cylinder(d=12.5,h=3,$fn=32);
+        translate([-24,6,-1])cylinder(d=6,h=3,$fn=24);
+        translate([-68,-37,-1])cube([5,6.5,3]);
+        for(x=[-14,14])translate([x,66.675,-1])cylinder(d=3,h=3,$fn=20);
+        // Shallow folded-edge seams on the reverse, not through cuts.
+        for(x=[-56,56])translate([x,-66,-.51])cube([.25,131,.08]);
+        translate([-56,-56,-.51])cube([112,.25,.08]);
     }
 }
 module teac_diskette_label() {
-    translate([70-48,59-59,30.22])cube([96,24,.08]);
+    translate([70,59,29.6])difference(){
+        cylinder(d=34,h=.08,$fn=64);
+        translate([0,0,-.1])cylinder(d=28.6,h=.3,$fn=64);
+    }
+    translate([70+10.5,59-62,30.22])linear_extrude(.08)
+        offset(r=2)offset(delta=-2)square([51,36]);
+}
+// Separate white storage envelope actually used by the owner (not original).
+// No ruler: overall dimensions and .2 mm paper thickness remain estimates.
+module teac_storage_sleeve() {
+    difference(){
+        linear_extrude(.6)offset(r=3)offset(delta=-3)square([139,145]);
+        translate([.2,.2,.2])cube([138.6,145,.2]);
+        translate([-.1,125,.4])cube([140,21,.3]);
+    }
 }
