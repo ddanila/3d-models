@@ -10,6 +10,7 @@ assembled positions. Shell/deck/key/core/inlay/PCB/rubber colors are editable.
 Clear keys have a separate silver inlay and configurable shell alpha.
 
 - [Assembled preview](preview.png)
+- [Low front preview](front.png)
 - [Exploded preview with springs](exploded.png)
 - [PCB/contact preview](boards.png)
 
@@ -28,11 +29,12 @@ From this directory:
 
 ```sh
 python3 render.py --view assembled  # one quick color PNG
-python3 render.py                   # all three review views
+python3 render.py --view front      # check front fascia and deck joint
+python3 render.py                   # all four review views
 ```
 
 This uses the installed OpenSCAD build with the Manifold backend. On the current
-Mac, all three previews take only a few seconds. It does not regenerate STLs,
+Mac, all four previews take only a few seconds. It does not regenerate STLs,
 rebuild the complete computer, sync DAC, or run browser/emulator CI. Review shape,
 spacing, colors and internals here first; then export only the affected canonical
 parts and sync the museum once the change is ready.
@@ -49,3 +51,7 @@ STL does not carry color; keep the SCAD source and color PNGs for visual review.
 Preview transparency is not a simulation of glass, metal reflection or rubber.
 The assembled keyboard is a visual reference, not one printable part. Existing
 photo-derived dimensions and hidden construction remain provisional.
+
+The deck aperture is clipped behind the 3 mm front wall. Without this limit,
+its tilted cutter removed the front fascia and exposed the PCB edge. The low
+front preview checks that the shell closes beneath the deck.

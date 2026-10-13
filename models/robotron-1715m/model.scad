@@ -155,7 +155,14 @@ module keyboard_shell() {
                 hull(){translate([-keyboard_w/2+3,-keyboard_d/2,0])rounded([keyboard_w-6,12,16],4);translate([-keyboard_w/2+3,keyboard_d/2-12,0])rounded([keyboard_w-6,12,40],4);}
                 // Hollow sheet-metal shell with a separate removable bottom.
                 hull(){translate([-keyboard_w/2+6,-keyboard_d/2+3,-3])rounded([keyboard_w-12,10,16],3);translate([-keyboard_w/2+6,keyboard_d/2-13,-3])rounded([keyboard_w-12,10,40],3);}
-                translate([0,-20,-5]) rotate([keyboard_slope,0,0]) slab(keyboard_w-12,158,70,4);
+                // The tilted deck aperture must not cut through the vertical
+                // front fascia: its tall cutter leans forward as Z increases.
+                // Preserve the same 3 mm front wall as the hollow interior.
+                intersection() {
+                    translate([0,-20,-5]) rotate([keyboard_slope,0,0]) slab(keyboard_w-12,158,70,4);
+                    translate([-keyboard_w,-keyboard_d/2+3,-10])
+                        cube([keyboard_w*2,keyboard_d*2,100]);
+                }
             }
             // Stay inside the 40 mm rear envelope so the case switches remain visible.
             translate([0,keyboard_y,26])rotate([keyboard_slope,0,0])
