@@ -594,3 +594,11 @@ opaque sticker. Tab size/thickness are illustrative. The covered-notch behavior
 follows the [TEAC FD-55 maintenance manual](https://retrocmp.de/fdd/teac/TEAC_FD55_3_Maintenance-Manual.pdf).
 DAC controls whether each tab is present from the disk's actual protection state.
 No print-verification status or accepted keyboard exterior dimension changes.
+
+### October 13: this museum specimen, system unit opened
+
+Danila supplied 66 additional MIT-licensed photographs in `Photos-1-001 (11).zip`. These depict **the actual museum machine**, not a generic Robotron. Provenance and publication selection are in `reference/owner-20261013-system.json`; 18 complementary views are published with metadata removed and decoded pixels checked unchanged.
+
+The clean model now includes the two folded channels underneath the case roof, crossed fan-retaining strips with pale cushioning, the PSU cover’s two dark access grommets, and brown drive adapter boards with two connector rows and modeled routing. The detached adapter is marked **05-330-0024**. Dimensions remain photo estimates; 2.54 mm connector pitch is nominal. Photo routing is visual evidence, not a verified netlist. Nothing in this update changes printed/verified status.
+
+The wide view `PXL_20261013_150242933.jpg` and close view `PXL_20261013_150312308.jpg` establish that the visible rear logic board presents its **solder side upward**. The current comparative component-population reconstruction must not be treated as a confirmed model of that board. Its replacement needs a dedicated board-layout revision; these photographs do not show the component face. The new archive also does not show the inside of the PSU or monitor. Their concealed electronics remain comparative/provisional, with original credits retained. These qualifications supersede older statements that no owner system-interior photographs were available.

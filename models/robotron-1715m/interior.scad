@@ -82,13 +82,33 @@ module psu_chassis() {
 }
 module psu_cover() {
     translate([94,-183,113])difference(){cube([144,369,1.4]);
-        for(y=[-85,25])translate([70,y+183,-1])cylinder(d=11,h=4,$fn=24);}
+        for(y=[-125,-5])translate([130,y+183,-1])cylinder(d=11,h=4,$fn=24);}
     for(x=[101,230],y=[-175,0,177])translate([x,y,114.4])screw(5,1.2);
 }
 module fan_frame() {
     translate([68,67,25])difference(){cube([25,84,84]);translate([-1,42,42])rotate([0,90,0])cylinder(d=77,h=27,$fn=48);
         for(y=[5,79],z=[5,79])translate([-1,y,z])rotate([0,90,0])cylinder(d=3.5,h=27,$fn=12);}
 }
+// October 13 owner photos; dimensions estimated within existing fan envelope.
+module fan_retainers(){
+    for(a=[-45,45])translate([66,109,67])rotate([a,0,0])cube([1.2,107,5.5],center=true);
+    for(y=[72,146],z=[30,104])translate([65.2,y,z])rotate([0,90,0])screw(5,1.2);
+}
+module fan_cushions(){for(y=[65,147])translate([68,y,27])cube([25,4,80]);}
+module psu_grommets(){for(y=[-125,-5])translate([224,y,114.4])difference(){cylinder(d=14,h=1.5,$fn=32);translate([0,0,-1])cylinder(d=7,h=4,$fn=24);}}
+// Brown 05-330-0024 adapter, photo 150520316. Nominal 2.54mm connector pitch;
+// routing is visual, not an electrical netlist. Both drive interfaces are seen in 150535694.
+module drive_adapter_pose(){for(x=[-158,-4])translate([x-30,2,53])rotate([90,0,0])children();}
+module drive_adapter_boards(){drive_adapter_pose()difference(){cube([60,40,1.6]);for(x=[3,57],y=[3,37])translate([x,y,-1])cylinder(d=3,h=4,$fn=20);}}
+module drive_adapter_traces(){drive_adapter_pose()for(i=[0:16],row=[0:1]){
+    x=7+i*2.54;y=5+row*2.54;
+    translate([x,y,1.6])cylinder(d=1.7,h=.3,$fn=12);
+    translate([x,32+row*2.54,1.6])cylinder(d=1.7,h=.3,$fn=12);
+    // staggered bends keep the two parallel rows visibly distinct.
+    for(k=[0:2])let(points=[[x,y],[x+(row==0?-.6:.6),13+row*4],[x+(row==0?-.6:.6),25+row*4],[x,32+row*2.54]])
+      hull()for(j=[k,k+1])translate([points[j][0],points[j][1],1.6])cylinder(d=.35,h=.12,$fn=8);
+}}
+module drive_adapter_sockets(){drive_adapter_pose(){translate([4,1,-8])cube([47,8,8]);translate([4,29,-8])cube([47,8,8]);}}
 module fan_rotor() {
     translate([80,109,67])rotate([0,90,0]){
         cylinder(d=27,h=11,center=true,$fn=32);
@@ -127,6 +147,12 @@ module keyboard_switches() {
     translate([0,keyboard_y,15+keyboard_z_shift])rotate([keyboard_slope,0,0])for(k=keys)translate([k[0],k[1],0])switch_housing();
 }
 module interior_shape(p) {
+    if(p=="fan-retainers")fan_retainers();
+    if(p=="fan-cushions")fan_cushions();
+    if(p=="psu-grommets")psu_grommets();
+    if(p=="drive-adapter-boards")drive_adapter_boards();
+    if(p=="drive-adapter-traces")drive_adapter_traces();
+    if(p=="drive-adapter-sockets")drive_adapter_sockets();
     for(i=[0:1]) {
       if(p==str("drive-spindle-",i))translate([[-231,-77][i],-203,60])teac_spindle();
       if(p==str("drive-head-",i))translate([[-231,-77][i],-203,60])teac_head();

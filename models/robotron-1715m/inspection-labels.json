@@ -59,5 +59,37 @@
     "photo": "20250212_094038758",
     "evidence": "Owner photo + specification",
     "dimensions": "96-tpi reference travel; specimen drive suffix and hidden mechanism dimensions unverified."
+  },
+  {
+    "id": "fan-mount",
+    "part": "fan-retainers",
+    "title": "Crossed fan retainers",
+    "photo": "20261013_150303351",
+    "evidence": "This museum specimen \u2014 owner photo",
+    "dimensions": "Crossed straps and cushioning observed; dimensions photo-estimated."
+  },
+  {
+    "id": "drive-adapter",
+    "part": "drive-adapter-boards",
+    "title": "05-330-0024 drive adapter",
+    "photo": "20261013_150520316",
+    "evidence": "This museum specimen \u2014 owner photo",
+    "dimensions": "Brown board and routing follow this specimen. 2.54 mm pitch nominal; outline and placement estimated."
+  },
+  {
+    "id": "cover-ribs",
+    "part": "case-lid",
+    "title": "Folded cover stiffeners",
+    "photo": "20261013_150009163",
+    "evidence": "This museum specimen \u2014 owner photo",
+    "dimensions": "Two underside channels observed; local dimensions estimated."
+  },
+  {
+    "id": "psu-cover",
+    "part": "psu-grommets",
+    "title": "PSU cover access grommets",
+    "photo": "20261013_150247694",
+    "evidence": "This museum specimen \u2014 owner photo",
+    "dimensions": "Two dark access grommets observed. Shield interior remains unverified."
   }
 ]
