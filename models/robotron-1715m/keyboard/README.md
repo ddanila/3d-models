@@ -111,3 +111,11 @@ height datum and tilt. The rear shelf and its pencil trough are horizontal.
 
 The pencil groove is a closed pressed trough, not a through-hole. Its floor and
 walls are 1 mm thick; the 2 mm recess depth remains a photo estimate.
+
+## Accepted exterior baseline — 2026-10-13
+
+Danila accepted the keyboard exterior at commit `cf7e113` as looking broadly
+correct, including the black overlay’s 5 mm outer radii. Preserve this exterior
+as the review baseline while refining internals. Internal board/mechanism detail
+and provisional hidden dimensions still need further work; this is not approval
+of the internals or a manufacturing-ready assembly.
