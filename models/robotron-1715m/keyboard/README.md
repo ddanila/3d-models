@@ -77,8 +77,8 @@ spherical rounding rolled the shell underneath and is removed. Plan corner
 bend radius is approximately 5 mm, while the top-to-wall bend is approximately
 1 mm per owner feedback; tab dimensions and the 0.2 mm lid seam remain modeling estimates.
 The light shell walls, sloped skin, rear ledge and lid tabs use the owner’s
-approximately 1 mm sheet thickness. The separate bottom lid retains its own
-thickness parameter.
+approximately 1 mm sheet thickness. The separate bottom lid is also 1 mm thick, per owner confirmation.
+The shell rim and mounting tabs sit at 1.2 mm, preserving the estimated 0.2 mm seam.
 
 The black deck has a rolled top perimeter rather than a sharp extruded edge:
 approximately 6 mm plan corners and a 2 mm top-edge radius, visually fitted to

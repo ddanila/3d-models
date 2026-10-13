@@ -153,11 +153,11 @@ module keyboard_shell() {
     difference(){
         union(){
             translate([0,keyboard_y,0]) difference() {
-                // Straight lower rim above the separate 1.6 mm lid. Only the
+                // Straight lower rim above the separate 1 mm lid. Only the
                 // 5 mm plan bends and 1 mm top bends are independent.
                 // Clipping below the rim prevents a rolled-under bottom edge.
                 intersection() {
-                    translate([0,0,1.8])slab(keyboard_w-6,keyboard_d,40,5);
+                    translate([0,0,1.2])slab(keyboard_w-6,keyboard_d,40,5);
                     hull(){
                         translate([-keyboard_w/2+3,-keyboard_d/2,0])rounded([keyboard_w-6,12,16],1);
                         translate([-keyboard_w/2+3,keyboard_d/2-12,0])rounded([keyboard_w-6,12,40],1);
@@ -185,7 +185,7 @@ module keyboard_shell() {
             // Owner inside views 123048886 / 123907435: individual lid tabs,
             // not a continuous bottom flange. Align holes with the separate lid.
             for(x=[-218,0,218],side=[-1,1])
-                translate([x,keyboard_y+side*92,1.8])difference(){
+                translate([x,keyboard_y+side*92,1.2])difference(){
                     slab(10,15,sheet,1);
                     translate([0,-side*5,-1])cylinder(d=3.5,h=4,$fn=24);
                 }
@@ -200,7 +200,7 @@ module keyboard_shell() {
 }
 module keyboard_bottom() {
     translate([0,keyboard_y,0]) difference() {
-        union(){slab(keyboard_w-12,keyboard_d-7,1.6,5);
+        union(){slab(keyboard_w-12,keyboard_d-7,1,5);
             for(x=[-200,200],y=[-65,65])translate([x,y,-1.2])slab(39,15,2,5);}
         translate([80,55,-3])slab(42,20,8,2);
         for(x=[-218,0,218],y=[-87,87])translate([x,y,-2])cylinder(d=3.5,h=6);
