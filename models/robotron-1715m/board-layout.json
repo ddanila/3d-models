@@ -12,7 +12,7 @@
       "PXL_20261014_073200542.jpg"
     ]
   },
-  "limitations": "Display population and placement now follow the owner component-side photo; photo-derived envelope and pin-one orientation remain provisional. Mainboard placement still follows the W drawing, with owner component photos retained for further calibration. No verified netlist or exact schematic-revision equivalence is claimed.",
+  "limitations": "32 RAM and two CTC placements registered against the owner motherboard photo; hidden motherboard regions retain W drawing estimates. Display population follows the owner photo. No verified netlist, exact board dimensions or schematic-revision equivalence is claimed.",
   "boards": [
     {
       "name": "motherboard",
@@ -35,672 +35,800 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -216,
-            -154,
+            -215.454,
+            -154.471,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A89 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            409,
+            337
+          ]
         },
         {
           "ref": "A90",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -204,
-            -154,
+            -201.588,
+            -154.471,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A90 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            475,
+            337
+          ]
         },
         {
           "ref": "A91",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -192,
-            -154,
+            -187.723,
+            -154.471,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A91 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            541,
+            337
+          ]
         },
         {
           "ref": "A92",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -180,
-            -154,
+            -173.857,
+            -154.471,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A92 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            607,
+            337
+          ]
         },
         {
           "ref": "A93",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -168,
-            -154,
+            -159.992,
+            -154.471,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A93 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            673,
+            337
+          ]
         },
         {
           "ref": "A94",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -156,
-            -154,
+            -146.126,
+            -154.471,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A94 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            739,
+            337
+          ]
         },
         {
           "ref": "A95",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -144,
-            -154,
+            -132.261,
+            -154.471,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A95 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            805,
+            337
+          ]
         },
         {
           "ref": "A96",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -132,
-            -154,
+            -118.395,
+            -154.471,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A96 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            871,
+            337
+          ]
         },
         {
           "ref": "A81",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -216,
-            -126,
+            -215.454,
+            -125.059,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A81 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            409,
+            477
+          ]
         },
         {
           "ref": "A82",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -204,
-            -126,
+            -201.588,
+            -125.059,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A82 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            475,
+            477
+          ]
         },
         {
           "ref": "A83",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -192,
-            -126,
+            -187.723,
+            -125.059,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A83 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            541,
+            477
+          ]
         },
         {
           "ref": "A84",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -180,
-            -126,
+            -173.857,
+            -125.059,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A84 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            607,
+            477
+          ]
         },
         {
           "ref": "A85",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -168,
-            -126,
+            -159.992,
+            -125.059,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A85 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            673,
+            477
+          ]
         },
         {
           "ref": "A86",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -156,
-            -126,
+            -146.126,
+            -125.059,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A86 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            739,
+            477
+          ]
         },
         {
           "ref": "A87",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -144,
-            -126,
+            -132.261,
+            -125.059,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A87 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            805,
+            477
+          ]
         },
         {
           "ref": "A88",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -132,
-            -126,
+            -118.395,
+            -125.059,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A88 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            871,
+            477
+          ]
         },
         {
           "ref": "A73",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -216,
-            -98,
+            -215.454,
+            -95.647,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A73 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            409,
+            617
+          ]
         },
         {
           "ref": "A74",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -204,
-            -98,
+            -201.588,
+            -95.647,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A74 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            475,
+            617
+          ]
         },
         {
           "ref": "A75",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -192,
-            -98,
+            -187.723,
+            -95.647,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A75 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            541,
+            617
+          ]
         },
         {
           "ref": "A76",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -180,
-            -98,
+            -173.857,
+            -95.647,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A76 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            607,
+            617
+          ]
         },
         {
           "ref": "A77",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -168,
-            -98,
+            -159.992,
+            -95.647,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A77 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            673,
+            617
+          ]
         },
         {
           "ref": "A78",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -156,
-            -98,
+            -146.126,
+            -95.647,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A78 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            739,
+            617
+          ]
         },
         {
           "ref": "A79",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -144,
-            -98,
+            -132.261,
+            -95.647,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A79 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            805,
+            617
+          ]
         },
         {
           "ref": "A80",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -132,
-            -98,
+            -118.395,
+            -95.647,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A80 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            871,
+            617
+          ]
         },
         {
           "ref": "A65",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -216,
-            -70,
+            -215.454,
+            -66.445,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A65 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            409,
+            756
+          ]
         },
         {
           "ref": "A66",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -204,
-            -70,
+            -201.588,
+            -66.445,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A66 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            475,
+            756
+          ]
         },
         {
           "ref": "A67",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -192,
-            -70,
+            -187.723,
+            -66.445,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A67 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            541,
+            756
+          ]
         },
         {
           "ref": "A68",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -180,
-            -70,
+            -173.857,
+            -66.445,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A68 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            607,
+            756
+          ]
         },
         {
           "ref": "A69",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -168,
-            -70,
+            -159.992,
+            -66.445,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A69 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            673,
+            756
+          ]
         },
         {
           "ref": "A70",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -156,
-            -70,
+            -146.126,
+            -66.445,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A70 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            739,
+            756
+          ]
         },
         {
           "ref": "A71",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -144,
-            -70,
+            -132.261,
+            -66.445,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A71 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            805,
+            756
+          ]
         },
         {
           "ref": "A72",
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -132,
-            -70,
+            -118.395,
+            -66.445,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A72 · M4164B-12",
-            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            871,
+            756
+          ]
         },
         {
           "ref": "A1",
@@ -787,42 +915,50 @@
           "label": "UA857D CTC",
           "model": "DIP-28_W15.24mm",
           "position": [
-            -68,
-            17,
+            -112.303,
+            -16.235,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Owner photo confirms two UA857D packages; schematic references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "UA8570 CTC",
           "inspection": {
             "title": "A4 · UA857D CTC",
-            "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Package: DIP-28_W15.24mm. The drawing uses UA8570 CTC. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-28_W15.24mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            900,
+            995
+          ]
         },
         {
           "ref": "A5",
           "label": "UA857D CTC",
           "model": "DIP-28_W15.24mm",
           "position": [
-            -111,
-            17,
+            -112.303,
+            7.924,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Owner photo confirms two UA857D packages; schematic references and local placement provisional",
+          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "UA8570 CTC",
           "inspection": {
             "title": "A5 · UA857D CTC",
-            "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Package: DIP-28_W15.24mm. The drawing uses UA8570 CTC. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-28_W15.24mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            900,
+            1110
+          ]
         },
         {
           "ref": "A6",
@@ -3411,5 +3547,48 @@
         1180
       ]
     ]
-  ]
+  ],
+  "motherboardPhotoRegistration": {
+    "photo": "PXL_20261014_072654600.jpg",
+    "reviewResolution": [
+      1800,
+      1355
+    ],
+    "reference": [
+      335,
+      225
+    ],
+    "pixelsPerMillimetre": 4.76,
+    "boardOrigin": [
+      -231,
+      -178
+    ],
+    "scope": "Owner-photo registration of 32 RAM packages and two CTCs; assumed 250 mm board width. Perspective, board size and drawing-reference correspondence remain provisional. Hidden CPU/FDC region unchanged.",
+    "ramColumns": [
+      409,
+      475,
+      541,
+      607,
+      673,
+      739,
+      805,
+      871
+    ],
+    "ramRows": [
+      337,
+      477,
+      617,
+      756
+    ],
+    "ctcCentres": [
+      [
+        900,
+        995
+      ],
+      [
+        900,
+        1110
+      ]
+    ]
+  }
 }

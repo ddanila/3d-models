@@ -2,11 +2,139 @@
   "status": "Repeatable owner-photo comparison directions, manually fitted; not calibrated cameras or dimensional validation. Compare clean geometry, not wear or photographed lighting.",
   "units": "Canonical model millimetres, Z up",
   "views": [
-    {"name":"drive-front", "photo":"PXL_20261013_113537277.jpg", "position":[-90,-900,220], "target":[-70,-205,80], "fov":30, "include":"^(case-|fascia|drives$|drive-|power|reset|front-labels)", "note":"Check inserted media depth, closed lever clearance, flush lamps and fascia seams."},
-    {"name":"keyboard-board", "photo":"PXL_20261012_123048886.jpg", "position":[0,-395,-700], "target":[0,-355,15], "up":[0,1,0], "fov":43, "include":"^keyboard-(shell|pcb$|pcb-metal|matrix-|insulators|pcb-supports|pcb-fasteners)", "note":"Bottom lid and controller removed as in the photo; check board tongue, socket, traces and rounded sheet tabs."},
-    {"name":"keyboard-controller", "photo":"PXL_20261012_123622947.jpg", "position":[-65,-281,620], "target":[-65,-281,8], "up":[1,0,0], "fov":31, "include":"^keyboard-(controller-|entry-choke|entry-wires)", "note":"Separate narrow controller; clean component construction and approximate placement, not an electrical reconstruction."},
-    {"name":"keyboard-cable", "photo":"PXL_20261012_123539882.jpg", "position":[110,-200,145], "target":[65,-281,11], "fov":38, "include":"^keyboard-(controller-|entry|grommet|cable-support|internal-cable)", "note":"Incoming lead, round bush, bent support and shield clamp; the owner's photo shows these removed from the shell."},
-    {"name":"keyboard-plug", "photo":"PXL_20261010_090425989.jpg", "position":[-480,-330,220], "target":[-275,-145,25], "fov":24, "include":"^(cable-plug|plug-)", "note":"Asymmetric housing, fasteners and offset cable outlet; cable route outside the crop is omitted."},
-    {"name":"monitor-profile", "photo":"PXL_20261012_125018215.jpg", "position":[900,-270,370], "target":[0,25,320], "fov":30, "include":"^(monitor-|bezel|crt-|tube-|pedestal|ring)", "note":"Compare bezel return, curved glass and shell joint. Hidden monitor electronics remain reference-based."}
+    {
+      "name": "drive-front",
+      "photo": "PXL_20261013_113537277.jpg",
+      "position": [
+        -90,
+        -900,
+        220
+      ],
+      "target": [
+        -70,
+        -205,
+        80
+      ],
+      "fov": 30,
+      "include": "^(case-|fascia|drives$|drive-|power|reset|front-labels)",
+      "note": "Check inserted media depth, closed lever clearance, flush lamps and fascia seams."
+    },
+    {
+      "name": "keyboard-board",
+      "photo": "PXL_20261012_123048886.jpg",
+      "position": [
+        0,
+        -395,
+        -700
+      ],
+      "target": [
+        0,
+        -355,
+        15
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "fov": 43,
+      "include": "^keyboard-(shell|pcb$|pcb-metal|matrix-|insulators|pcb-supports|pcb-fasteners)",
+      "note": "Bottom lid and controller removed as in the photo; check board tongue, socket, traces and rounded sheet tabs."
+    },
+    {
+      "name": "keyboard-controller",
+      "photo": "PXL_20261012_123622947.jpg",
+      "position": [
+        -65,
+        -281,
+        620
+      ],
+      "target": [
+        -65,
+        -281,
+        8
+      ],
+      "up": [
+        1,
+        0,
+        0
+      ],
+      "fov": 31,
+      "include": "^keyboard-(controller-|entry-choke|entry-wires)",
+      "note": "Separate narrow controller; clean component construction and approximate placement, not an electrical reconstruction."
+    },
+    {
+      "name": "keyboard-cable",
+      "photo": "PXL_20261012_123539882.jpg",
+      "position": [
+        110,
+        -200,
+        145
+      ],
+      "target": [
+        65,
+        -281,
+        11
+      ],
+      "fov": 38,
+      "include": "^keyboard-(controller-|entry|grommet|cable-support|internal-cable)",
+      "note": "Incoming lead, round bush, bent support and shield clamp; the owner's photo shows these removed from the shell."
+    },
+    {
+      "name": "keyboard-plug",
+      "photo": "PXL_20261010_090425989.jpg",
+      "position": [
+        -480,
+        -330,
+        220
+      ],
+      "target": [
+        -275,
+        -145,
+        25
+      ],
+      "fov": 24,
+      "include": "^(cable-plug|plug-)",
+      "note": "Asymmetric housing, fasteners and offset cable outlet; cable route outside the crop is omitted."
+    },
+    {
+      "name": "monitor-profile",
+      "photo": "PXL_20261012_125018215.jpg",
+      "position": [
+        900,
+        -270,
+        370
+      ],
+      "target": [
+        0,
+        25,
+        320
+      ],
+      "fov": 30,
+      "include": "^(monitor-|bezel|crt-|tube-|pedestal|ring)",
+      "note": "Compare bezel return, curved glass and shell joint. Hidden monitor electronics remain reference-based."
+    },
+    {
+      "name": "keyboard-controller-underside",
+      "photo": "PXL_20261012_123648677.jpg",
+      "position": [
+        -65,
+        -281,
+        -620
+      ],
+      "target": [
+        -65,
+        -281,
+        8
+      ],
+      "up": [
+        1,
+        0,
+        0
+      ],
+      "fov": 31,
+      "include": "^keyboard-controller-",
+      "note": "Compare long underside buses, diagonal breaks and through-hole solder eyes; visual artwork, not a verified netlist."
+    }
   ]
 }

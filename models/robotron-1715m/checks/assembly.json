@@ -3,6 +3,11 @@
   "toleranceMm3": 0.001,
   "results": [
     {
+      "interface": "keyboard-imported-leads-vs-board",
+      "intersectionMm3": 0.0,
+      "passed": true
+    },
+    {
       "interface": "keyboard-cable-vs-chip-bodies",
       "intersectionMm3": 0,
       "passed": true

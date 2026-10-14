@@ -26,7 +26,8 @@
       "A6": "Boot EPROM",
       "A41": "CAS/bank decode PROM",
       "A44": "Floppy-disk controller"
-    }
+    },
+    "placement": "32 RAM and two CTC positions registered to owner photo 072654600 using the existing provisional board envelope; hidden regions unchanged."
   },
   "keyboard": {
     "cpu": "A5 U880 in schematic; UB880D in owner photo",
@@ -66,7 +67,7 @@
   "display": {
     "controller": "SAB8275P in owner photo; D05 8275-compatible device in drawing",
     "fetch": "Local counters, RAM and multiplexers. Do not conflate with system UA858 floppy DMA.",
-    "implemented": "Seven-bit invisible-attribute data; CA inherits reverse/GPA; status read-clear and parameter-length errors.",
-    "remaining": "Cycle-level row DMA/underrun, 16-byte FIFO overflow timing, light pen, spaced rows and exact raster/IRQ timing are not implemented. Nominal frame/blink timing remains approximate."
+    "implemented": "Seven-bit invisible-attribute data; CA inherits reverse/GPA; status read-clear and parameter-length errors. Per-row 16 x 7-bit FIFO, wrapped overwrite and FO status sampled on the existing nominal frame cadence, independently of rendering.",
+    "remaining": "Exact row DMA/underrun, burst/stop-DMA fetch timing, light pen, spaced rows and raster/IRQ timing remain unimplemented. FO latency uses the nominal 80000-tick frame cadence, not precise row fetch."
   }
 }

@@ -115,3 +115,32 @@ Validation: STEP split invariants, selected solid-clearance checks, repeatable
 owner-photo review views and browser instance-picking tests. These checks are
 **not physical print/fit verification**; model verification classifications
 remain unchanged.
+
+
+### Photo registration and keyboard packages — export v37
+
+The 32 RAM bodies and two CTCs now follow the visible owner motherboard photo
+PXL_20261014_072654600.jpg. The CTCs are stacked along the board rather than
+side by side. `motherboardPhotoRegistration` in `board-layout.json` retains the
+review-image coordinates, scale assumption and scope. This registration uses
+the existing provisional 250 mm board width; it is not a measured/calibrated
+camera reconstruction. The obscured CPU/FDC region still uses drawing estimates.
+RAM reference-to-position correspondence follows the W drawing and remains
+provisional even though the photographed package population is known.
+
+Keyboard controller DIP bodies and leads now reuse the pinned KiCad packages.
+`tools/configure-keyboard-components.py` generates the rotated footprints from
+upstream lead coordinates, so drilled holes, solder eyes and packages agree.
+Socketed CPU/EPROM seating is separate from soldered logic. The transplanted
+ceramic EPROM retains its photographed body/cover rather than becoming a black
+plastic DIP. Ink heights follow the new package tops. Package geometry and
+footprints retain the upstream licences in `components/kicad/NOTICE.txt`.
+
+Top and underside controller artwork now has stepped edge buses and diagonal
+breaks based on PXL_20261012_123622947.jpg and PXL_20261012_123648677.jpg, with
+solder eyes for all transistor leads. Solder eyes stay separate at 1.27 mm
+transistor pitch. These clean polylines are visual approximations, not a traced
+netlist; hidden lead bends and exact copper widths remain unverified.
+The accepted keyboard exterior and physical verification classifications are
+unchanged. Check package/board clearance with `tools/check-assembly.py` and
+compare the canonical review views against the owner photographs.

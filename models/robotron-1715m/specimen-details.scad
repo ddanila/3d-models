@@ -7,17 +7,15 @@ module keyboard_controller_pose() {
 // x,y,pins,row spacing; positions follow 123622947, not a generic chip grid.
 controller_dips=[[62,8,40,15.24],[20,-12,14,7.62],[20,12,14,7.62],
  [57,-12,20,7.62],[89,-12,16,7.62],[114,-12,14,7.62],[-48,-12,16,7.62],[-48,12,14,7.62]];
+include <controller-package-data.scad>
+function controller_package(p)=[for(m=controller_packages)if(m[0]==p[2])m][0];
+function controller_seat(p)=p[2]==40 || p[2]==24 ? 2.8 : 1.6;
+function controller_pin(p,q)=[p[0]+q[0],p[1]+q[1]];
 module owner_dip_body(p) {
- translate([p[0],p[1],2.6]) difference(){
-  slab((p[2]/2-1)*2.54+3,p[3]-1.7,3.5,.6);
-  translate([-(p[2]/2-1)*1.27-1.5,0,2.3])cylinder(d=3,h=2,$fn=20);
- }
+ translate([p[0],p[1],controller_seat(p)])rotate([0,0,-90])import(controller_package(p)[1]);
 }
 module owner_dip_pins(p) {
- for(i=[0:p[2]/2-1],s=[-1,1])translate([p[0]+(i-(p[2]/2-1)/2)*2.54,p[1]+s*p[3]/2,0]){
-  translate([-.25,-.25,-.7])cube([.5,.5,3.8]);
-  translate([-.4,min(0,-s*1.4),2.7])cube([.8,1.4,.35]);
- }
+ translate([p[0],p[1],controller_seat(p)])rotate([0,0,-90])import(controller_package(p)[2]);
 }
 // Owner 123622947: staggered transistor population, not a rectangular grid.
 // KiCad generic TO-92; no unverified electrical type or DDR mould identity.
@@ -29,8 +27,8 @@ module keyboard_controller_board(){keyboard_controller_pose()difference(){
  translate([-135,-23,0])cube([270,46,1.6]);
  for(x=[-130,130],y=[-18,18])translate([x,y,-1])cylinder(d=3.2,h=4);
  for(p=controller_transistors)controller_transistor_pose(p)for(x=[-1.27,0,1.27])translate([x,0,-2])cylinder(d=.85,h=4,$fn=12);
- for(p=concat(controller_dips,[[114,8,24,15.24]]),i=[0:p[2]/2-1],side=[-1,1])
-   translate([p[0]+(i-(p[2]/2-1)/2)*2.54,p[1]+side*p[3]/2,-1])cylinder(d=.9,h=4,$fn=12);
+ for(p=concat(controller_dips,[[114,8,24,15.24]]),q=controller_package(p)[3])
+   translate(concat(controller_pin(p,q),[-1]))cylinder(d=1.05,h=4,$fn=16);
 }}
 module keyboard_controller_chips(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_body(p);
@@ -72,10 +70,10 @@ module keyboard_controller_metal(){keyboard_controller_pose(){
  for(x=[-130,130],y=[-18,18])translate([x,y,1.6])screw(5,1);
 }}
 module keyboard_controller_ink(){keyboard_controller_pose(){
- translate([62,8,6.15])linear_extrude(.08)text("UB880D",size=3,halign="center",valign="center",font="Liberation Sans");
+ translate([62,8,6.49])linear_extrude(.08)text("UB880D",size=3,halign="center",valign="center",font="Liberation Sans");
  // Only legible markings from owner photo 123622947; uncertain identities omitted.
  for(p=[[20,12,"К555ЛА9"],[20,-12,"К555ЛА9"],[-48,12,"К555ЛА9"],[89,-12,"К155ТМ2"],[114,-12,"К555ЛА7"]])
-   translate([p[0],p[1],6.15])linear_extrude(.06)text(p[2],size=1.65,halign="center",valign="center",font="Liberation Sans");
+   translate([p[0],p[1],5.29])linear_extrude(.06)text(p[2],size=1.65,halign="center",valign="center",font="Liberation Sans");
  translate([128,8,6.35])slab(4,12,.12,.1);
 }}
 module keyboard_insulators(){
@@ -113,18 +111,36 @@ module keyboard_pcb_metal(){
   for(x=[-214,-152,-82,-12,58,128,198],y=[-51,1,32])translate([x,y,0])rotate([180,0,0])screw(3.5,.6);
  }
 }
+// Routes digitized as clean polylines from owner 123622947 (top) and
+// 123648677 (underside). Broad buses and diagonal breaks are photo estimates;
+// hidden paths and electrical continuity have not been reconstructed.
 module keyboard_controller_traces(){keyboard_controller_pose(){
- // Parallel edge routing and local lead fan-outs, photo-estimated. Component
- // identities/lead pitch are retained; these visual routes are not electrical.
- for(i=[0:4])translate([0,0,1.65])board_trace([[-125,-21+i],[-62-i*2,-21+i],[-55-i*2,-14+i],[-8,-14+i],[-2,-20+i],[127,-20+i]],.45);
- for(p=concat(controller_dips,[[114,8,24,15.24]]),i=[0:p[2]/2-1],side=[-1,1])
-  let(x=p[0]+(i-(p[2]/2-1)/2)*2.54,y=p[1]+side*p[3]/2)
-  translate([0,0,1.65]){
-   translate([x,y,0])difference(){cylinder(d=1.5,h=.12,$fn=12);cylinder(d=.7,h=.2,$fn=12);}
-   board_trace([[x,y],[x,y+side*2],[x+1,y+side*3]],.45);
+ for(i=[0:4])translate([0,0,1.62])board_trace([
+  [-128,-21+i*1.2],[-59-i*2,-21+i*1.2],[-51-i*2,-13+i*1.2],
+  [-32,-13+i*1.2],[-26,-19+i*1.2],[25,-19+i*1.2],
+  [31,-13+i*1.2],[88,-13+i*1.2],[96,-21+i*1.2],[129,-21+i*1.2]],.48,.08);
+ // The broad top rail steps around the matrix connector and EPROM socket.
+ translate([0,0,1.62])board_trace([[-84,1],[-57,1],[-53,6],[-34,6],[-30,13],
+  [12,13],[16,4],[33,4],[38,-1],[93,-1],[97,-2],[129,-2]],1.4,.08);
+ for(p=concat(controller_dips,[[114,8,24,15.24]]),q=controller_package(p)[3])
+  let(v=controller_pin(p,q),side=q[1]<0?-1:1)
+  translate([0,0,1.62]){
+   translate(v)difference(){cylinder(d=1.7,h=.1,$fn=20);cylinder(d=1.05,h=.2,$fn=16);}
+   board_trace([v,[v[0],v[1]+side*1.7],[v[0]+1.2,v[1]+side*2.9]],.45,.08);
   }
- // Solder side remains inspectable when orbiting below the controller.
- for(i=[0:11])translate([0,0,-.12])board_trace([[-115,-18+i*2.4],[-32-i,-18+i*2.4],[-24-i,-10+i*2.4],[100-i,-10+i*2.4]],.4);
+ // Parallel underside bus follows the right edge in 123648677; side
+ // reversal is intentional because the photograph looks through the back.
+ for(i=[0:6])translate([0,0,-.1])board_trace([
+  [-105+i*2,3+i*1.35],[-94+i*2,3+i*1.35],[-88+i*2,15+i*.85],
+  [46+i*2,15+i*.85],[53+i*2,8+i*.85],[91+i*2,8+i*.85],
+  [99+i*2,17+i*.65],[126,17+i*.65]],.42,.1);
+ for(i=[0:4])translate([0,0,-.1])board_trace([
+  [-64,-17+i*2.2],[-31-i*2,-17+i*2.2],[-25-i*2,-11+i*2.2],
+  [9+i*2,-11+i*2.2],[16+i*2,-17+i*2.2],[72,-17+i*2.2],
+  [78,-11+i*2.2],[124,-11+i*2.2]],.45,.1);
+ // Staggered transistor-stage routes and plated eyes (no invented values).
+ for(p=controller_transistors)controller_transistor_pose(p)
+  for(x=[-1.27,0,1.27])translate([x,0,-.1])difference(){cylinder(d=1.2,h=.1,$fn=20);cylinder(d=.85,h=.2,$fn=16);}
 }}
 module system_foot_metal(){
  for(x=[-225,225],y=[-170,170])translate([x,y,-3])specimen_foot_insert();
@@ -328,12 +344,15 @@ module keyboard_contact_routes(){
 
 // Clean lead-aligned underside joints and plated barrels. The original photo
 // establishes soldered through-hole construction; joint profiles are estimates.
+module controller_solder_eye(x,y,hole=1.05,outer=2.1){translate([x,y,-.55])difference(){
+ union(){cylinder(d1=hole+.2,d2=outer,h=.55,$fn=24);translate([0,0,.5])cylinder(d=min(1.6,outer),h=1.7,$fn=20);}
+ translate([0,0,-.1])cylinder(d=hole,h=2.4,$fn=16);
+}}
 module keyboard_controller_solder(){keyboard_controller_pose(){
- for(p=concat(controller_dips,[[114,8,24,15.24]]),i=[0:p[2]/2-1],side=[-1,1])
-   translate([p[0]+(i-(p[2]/2-1)/2)*2.54,p[1]+side*p[3]/2,-.55])difference(){
-     union(){cylinder(d1=.9,d2=1.8,h=.55,$fn=16);translate([0,0,.5])cylinder(d=1.35,h=1.7,$fn=16);}
-     translate([0,0,-.1])cylinder(d=.72,h=2.4,$fn=12);
-   }
+ for(p=concat(controller_dips,[[114,8,24,15.24]]),q=controller_package(p)[3])
+  let(v=controller_pin(p,q))controller_solder_eye(v[0],v[1]);
+ for(p=controller_transistors)translate([p[0],p[1],0])rotate([0,0,p[2]])
+  for(x=[-1.27,0,1.27])controller_solder_eye(x,0,.85,1.2);
  for(x=[-130,130],y=[-18,18])translate([x,y,-.4])difference(){cylinder(d=6,h=.4,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=16);}
 }}
 
