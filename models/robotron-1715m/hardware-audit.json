@@ -27,7 +27,7 @@
       "A41": "CAS/bank decode PROM",
       "A44": "Floppy-disk controller"
     },
-    "placement": "32 RAM and two CTC positions registered to owner photo 072654600 using the existing provisional board envelope; hidden regions unchanged."
+    "placement": "32 RAM and two CTC positions registered to owner photo 072654600 using the existing provisional board envelope; four processor-area packages additionally registered to photo 073200542; smaller parts retain drawing estimates."
   },
   "keyboard": {
     "cpu": "A5 U880 in schematic; UB880D in owner photo",

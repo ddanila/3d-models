@@ -124,7 +124,7 @@ PXL_20261014_072654600.jpg. The CTCs are stacked along the board rather than
 side by side. `motherboardPhotoRegistration` in `board-layout.json` retains the
 review-image coordinates, scale assumption and scope. This registration uses
 the existing provisional 250 mm board width; it is not a measured/calibrated
-camera reconstruction. The obscured CPU/FDC region still uses drawing estimates.
+camera reconstruction. Four large processor-area packages also use owner-photo registration; smaller unregistered components retain drawing estimates.
 RAM reference-to-position correspondence follows the W drawing and remains
 provisional even though the photographed package population is known.
 

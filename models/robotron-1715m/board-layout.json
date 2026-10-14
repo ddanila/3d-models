@@ -12,7 +12,7 @@
       "PXL_20261014_073200542.jpg"
     ]
   },
-  "limitations": "32 RAM and two CTC placements registered against the owner motherboard photo; hidden motherboard regions retain W drawing estimates. Display population follows the owner photo. No verified netlist, exact board dimensions or schematic-revision equivalence is claimed.",
+  "limitations": "32 RAM, two CTC and four large processor-area placements registered against owner photographs. Other motherboard locations retain W drawing estimates. Covered markings, reference correspondence, exact dimensions and schematic-revision equivalence remain provisional.",
   "boards": [
     {
       "name": "motherboard",
@@ -835,80 +835,96 @@
           "label": "UA880 CPU",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -112,
-            82,
+            -90.829,
+            65.101,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Owner processor-photo registered placement; W drawing reference correspondence and covered chip identity provisional",
           "inspection": {
             "title": "A1 · UA880 CPU",
-            "text": "Z80-compatible main CPU. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Z80-compatible main CPU. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Package position registered to owner processor-area photo; covered identity and drawing correspondence remain provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            762,
+            468
+          ]
         },
         {
           "ref": "A2",
           "label": "UA858 DMA",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -155,
-            82,
+            -120.724,
+            65.101,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Owner processor-photo registered placement; W drawing reference correspondence and covered chip identity provisional",
           "inspection": {
             "title": "A2 · UA858 DMA",
-            "text": "System DMA controller; floppy transfers. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "System DMA controller; floppy transfers. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Package position registered to owner processor-area photo; covered identity and drawing correspondence remain provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            620,
+            468
+          ]
         },
         {
           "ref": "A3",
           "label": "UA8560 SIO",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -68,
-            82,
+            -63.04,
+            65.101,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Owner processor-photo registered placement; W drawing reference correspondence and covered chip identity provisional",
           "inspection": {
             "title": "A3 · UA8560 SIO",
-            "text": "Serial I/O, including keyboard receiver. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Serial I/O, including keyboard receiver. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Package position registered to owner processor-area photo; covered identity and drawing correspondence remain provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            894,
+            468
+          ]
         },
         {
           "ref": "A44",
           "label": "U8272 FDC",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -25,
-            82,
+            -37.777,
+            65.101,
             13.6
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Owner processor-photo registered placement; W drawing reference correspondence and covered chip identity provisional",
           "inspection": {
             "title": "A44 · U8272 FDC",
-            "text": "Floppy-disk controller. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Floppy-disk controller. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Package position registered to owner processor-area photo; covered identity and drawing correspondence remain provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            1014,
+            468
+          ]
         },
         {
           "ref": "A4",
@@ -1833,8 +1849,8 @@
         {
           "kind": "ceramic",
           "position": [
-            -122,
-            46,
+            -106,
+            40,
             13.6
           ],
           "rotation": 0,
@@ -1845,8 +1861,8 @@
         {
           "kind": "ceramic",
           "position": [
-            -68,
-            46,
+            -77,
+            40,
             13.6
           ],
           "rotation": 0,
@@ -1857,8 +1873,8 @@
         {
           "kind": "ceramic",
           "position": [
-            -25,
-            46,
+            -50,
+            40,
             13.6
           ],
           "rotation": 0,
@@ -3590,5 +3606,43 @@
         1110
       ]
     ]
+  },
+  "processorPhotoRegistration": {
+    "photo": "PXL_20261014_073200542.jpg",
+    "reviewResolution": [
+      1500,
+      1129
+    ],
+    "anchorPhoto": [
+      660,
+      54
+    ],
+    "anchorModel": [
+      -112.303,
+      -16.235
+    ],
+    "pixelsPerMillimetre": [
+      4.75,
+      5.09
+    ],
+    "centres": {
+      "A2": [
+        620,
+        468
+      ],
+      "A1": [
+        762,
+        468
+      ],
+      "A3": [
+        894,
+        468
+      ],
+      "A44": [
+        1014,
+        468
+      ]
+    },
+    "scope": "Local registration using the shared first CTC and nominal package scale; perspective and reference correspondence provisional. Covered labels not inferred from photos."
   }
 }
