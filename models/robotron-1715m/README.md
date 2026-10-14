@@ -4,7 +4,7 @@ The canonical OpenSCAD source for Danila’s museum machine and the DAC browser 
 
 ## Current reconstruction
 
-The exterior follows Danila’s photographs, with clean paint, plastic, rubber and metal rather than full-panel photo skins or copied wear. Small manufacturer labels use credited local photo crops. The keyboard’s approved exterior dimensions and separate sheet-metal layers are documented in the [keyboard workflow](keyboard/README.md). Interior dimensions remain provisional unless explicitly measured.
+The exterior follows Danila’s photographs, with clean paint, plastic, rubber and metal rather than full-panel photo skins or copied wear. Small manufacturer labels use credited local photo crops. The keyboard’s approved exterior dimensions and separate sheet-metal layers are documented in the [keyboard workflow](keyboard/README.md). Interior dimensions remain provisional unless explicitly measured. The latest owner keycap correction is shared by the assembled keyboard: 15 mm round body, 15/11/9 mm underside diameters, 5 mm spring recess and tapered crown. The 18/23 mm wide-key dimensions describe the lower raised body.
 
 The system unit has a W/M motherboard with integrated A44 U8272 and 32 RAM packages, plus a separate display controller mounted component-side down. [board-layout.json](board-layout.json) records the shared placement, sources and uncertainty. There are 106 nominal KiCad DIP packages and 2,082 lead apertures. R19/R102 and C90/C91 follow the documented CPU/DMA adjacency, with estimated positions and no invented electrical values. Unidentified footprints retain generic labels. Clean chip legends identify documented devices; illustrative copper routes are not a netlist.
 

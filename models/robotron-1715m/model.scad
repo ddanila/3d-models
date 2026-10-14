@@ -338,8 +338,8 @@ module cap_insert(w,h) {
     }
 }
 module cap(w,h,style,top_width=0) {
-    tw=top_width>0 ? top_width : w-4;
-    th=h-4;
+    tw=top_width>0 ? top_width : w-(style==0?2.8:4);
+    th=h-(style==0?2.8:4);
     if(style==0)keycap_black_shell(w,h,tw,th);
     else difference(){
         union(){
@@ -366,7 +366,7 @@ module cap(w,h,style,top_width=0) {
 }
 module keycaps(style) {
     translate([0,keyboard_y,28+keyboard_z_shift]) rotate([keyboard_slope,0,0])
-        for(k=keys) if(k[4]==style) translate([k[0],k[1],0]){cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,style,k[5]);if(style==0)color("Ivory")keycap_white_core(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[5]>0?k[5]:k[2]*keyboard_pitch-5.2,k[3]*keyboard_pitch-5.2);if(style==1)color("Silver")cap_insert(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2);}
+        for(k=keys) if(k[4]==style) translate([k[0],k[1],0]){cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,style,k[5]);if(style==0)color("Ivory")keycap_white_core(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[5]>0?k[5]:k[2]*keyboard_pitch-4,k[3]*keyboard_pitch-4);if(style==1)color("Silver")cap_insert(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2);}
 }
 function bezier(p,t)=pow(1-t,3)*p[0]+3*pow(1-t,2)*t*p[1]+3*(1-t)*t*t*p[2]+t*t*t*p[3];
 module cable() {
@@ -472,7 +472,7 @@ module shape(p) {
     if(p=="keys-red")keycaps(2);
     if(p=="hardware")hardware();
     if(p=="cable")cable();
-    if(p=="keycap-core")let(k=keys[key_index])keycap_white_core(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[5]>0?k[5]:k[2]*keyboard_pitch-5.2,k[3]*keyboard_pitch-5.2);
+    if(p=="keycap-core")let(k=keys[key_index])keycap_white_core(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[5]>0?k[5]:k[2]*keyboard_pitch-4,k[3]*keyboard_pitch-4);
     if(p=="keycap-insert")let(k=keys[key_index])cap_insert(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2);
     if(p=="keycap")let(k=keys[key_index])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[4],k[5]);
 }
