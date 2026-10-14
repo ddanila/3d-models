@@ -181,3 +181,24 @@ socket dividers; intermediate cable bends remain provisional. Physical
 printed-and-verified classifications are unchanged. Rebuild with
 `tools/configure-pcb.py`, the normal export/package tools, and run
 `tools/check-assembly.py` before importing into DAC.
+
+### v40: component population, sockets and continuous harness
+
+Owner `PXL_20261014_073200542.jpg` now registers nine formerly estimated package
+placements and twenty additional visible packages. New `PHOTO-*` identifiers
+are visual anchors, not schematic references. Nominal package sizes, pin-one
+orientation and unresolved reference correspondence remain explicit estimates.
+Three pale open-frame IC sockets lift the CPU, FDC and EPROM packages; their
+contact tails, board holes and solder eyes remain aligned. The pale blocks near
+the lower center are modeled as jumper links, not a guessed ribbon connector.
+An old unsupported connector placeholder is omitted where the photo shows chips.
+Selected film capacitors, cans and resistors fill the visible lower/right areas;
+an ambiguous leaning can was left out rather than given a conflicting mount.
+
+Ribbon geometry now forms a continuous board → drive 1 → drive 0 chain, with
+rounded folds and constant-width sections. Ridges and the edge stripe follow the
+same section directions. Exact intermediate folds and available slack are not
+measured. Drive power wells contain nominal recessed crimp contacts. Browser
+separation moves the complete drive-to-drive span together and anchors board/PSU
+ends. Existing washers/supports remain estimated; no additional hidden mounting
+hardware or electrical values are invented. Physical print verification is unchanged.

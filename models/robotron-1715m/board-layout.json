@@ -852,7 +852,9 @@
           "photoCentre": [
             808,
             503
-          ]
+          ],
+          "socketHeight": 2.5,
+          "socketEvidence": "Pale socket rails visible in owner 073200542; nominal pitch, estimated 2.5 mm lift and hidden contact geometry."
         },
         {
           "ref": "A2",
@@ -924,7 +926,9 @@
           "photoCentre": [
             1080,
             503
-          ]
+          ],
+          "socketHeight": 2.5,
+          "socketEvidence": "Pale socket rails visible in owner 073200542; nominal pitch, estimated 2.5 mm lift and hidden contact geometry."
         },
         {
           "ref": "A4",
@@ -998,7 +1002,9 @@
           "photoCentre": [
             498,
             278
-          ]
+          ],
+          "socketHeight": 2.5,
+          "socketEvidence": "Pale socket rails visible in owner 073200542; nominal pitch, estimated 2.5 mm lift and hidden contact geometry."
         },
         {
           "ref": "A45",
@@ -1101,20 +1107,24 @@
           "label": "DS8205",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -9,
-            46,
+            -142.541,
+            -25.412,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Photo-registered body; schematic reference correspondence remains provisional",
           "inspection": {
             "title": "A12 · DS8205",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            890,
+            72
+          ]
         },
         {
           "ref": "A99",
@@ -1161,8 +1171,8 @@
           "label": "DS8205",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -189.056,
-            124.547,
+            -184.144,
+            126.061,
             13.6
           ],
           "rotation": 90,
@@ -1176,8 +1186,8 @@
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
           },
           "photoCentre": [
-            1180,
-            824
+            1152,
+            832
           ]
         },
         {
@@ -1185,20 +1195,24 @@
           "label": "74S287",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -46,
-            36,
+            -141.894,
+            -7.459,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Photo-registered body; schematic reference correspondence remains provisional",
           "inspection": {
             "title": "A41 · 74S287",
-            "text": "CAS/bank decode PROM. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "CAS/bank decode PROM. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            890,
+            151
+          ]
         },
         {
           "ref": "A114",
@@ -1689,120 +1703,144 @@
           "label": "DL004",
           "model": "DIP-14_W7.62mm",
           "position": [
-            3,
-            144,
+            -10.411,
+            149.16,
             13.6
           ],
-          "rotation": 180,
+          "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Photo-registered body; schematic reference correspondence remains provisional",
           "inspection": {
             "title": "A18 · DL004",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            280,
+            920
+          ]
         },
         {
           "ref": "A19",
           "label": "K170UP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -26,
-            144,
+            -39.688,
+            128.834,
             13.6
           ],
-          "rotation": 180,
+          "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Photo-registered body; schematic reference correspondence remains provisional",
           "inspection": {
             "title": "A19 · K170UP2",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            415,
+            820
+          ]
         },
         {
           "ref": "A24",
           "label": "K155LP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -55,
-            144,
+            -69.39,
+            123.332,
             13.6
           ],
-          "rotation": 180,
+          "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Photo-registered body; schematic reference correspondence remains provisional",
           "inspection": {
             "title": "A24 · K155LP2",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            552,
+            796
+          ]
         },
         {
           "ref": "A21",
           "label": "K170AP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -84,
-            144,
+            -69.927,
+            135.086,
             13.6
           ],
-          "rotation": 180,
+          "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Photo-registered body; schematic reference correspondence remains provisional",
           "inspection": {
             "title": "A21 · K170AP2",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            553,
+            859
+          ]
         },
         {
           "ref": "A23",
           "label": "K170UP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -113,
-            144,
+            -70.652,
+            146.206,
             13.6
           ],
-          "rotation": 180,
+          "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Photo-registered body; schematic reference correspondence remains provisional",
           "inspection": {
             "title": "A23 · K170UP2",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            555,
+            920
+          ]
         },
         {
           "ref": "A20",
           "label": "K170UP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -142,
-            144,
+            -99.701,
+            128.663,
             13.6
           ],
-          "rotation": 180,
+          "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Photo-registered body; schematic reference correspondence remains provisional",
           "inspection": {
             "title": "A20 · K170UP2",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            698,
+            830
+          ]
         },
         {
           "ref": "A22",
@@ -1827,6 +1865,466 @@
             1204,
             691
           ]
+        },
+        {
+          "ref": "PHOTO-01",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -141.328,
+            8.228,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            890,
+            222
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 1",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-02",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -172.672,
+            -4.949,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1040,
+            150
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 2",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-03",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -171.728,
+            10.272,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1040,
+            221
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 3",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-04",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -170.68,
+            27.167,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1040,
+            302
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 4",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-05",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -197.361,
+            0.01,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1168,
+            163
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 5",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-06",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -196.082,
+            13.122,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1167,
+            226
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 6",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-07",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -195.002,
+            28.387,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1168,
+            301
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 7",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-08",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -205.478,
+            48.401,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1235,
+            400
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 8",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-09",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -203.211,
+            63.133,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1230,
+            478
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 9",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-10",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -202.025,
+            75.879,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1230,
+            547
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 10",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-11",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -200.833,
+            88.696,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1230,
+            618
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 11",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-12",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -169.486,
+            102.108,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1059,
+            692
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 12",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-13",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -185.064,
+            114.637,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1152,
+            765
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 13",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-14",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -140.332,
+            114.645,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            905,
+            759
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 14",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-15",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -139.85,
+            127.09,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            905,
+            829
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 15",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-16",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -99.711,
+            115.59,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            698,
+            759
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 16",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-17",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -99.691,
+            141.953,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            698,
+            904
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 17",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-18",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -139.517,
+            140.441,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            906,
+            906
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 18",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-19",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -139.056,
+            152.295,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            906,
+            976
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 19",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
+        },
+        {
+          "ref": "PHOTO-21",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -164.397,
+            128.465,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "photoCentre": [
+            1040,
+            842
+          ],
+          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "inspection": {
+            "title": "Photographed logic package 21",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "photo": "20261014_073200542",
+            "evidence": "Your specimen; photo-estimated placement"
+          },
+          "label": ""
         }
       ],
       "passives": [
@@ -2088,6 +2586,261 @@
           "side": 1,
           "diameter": 5,
           "height": 4
+        },
+        {
+          "kind": "film",
+          "position": [
+            -194.779,
+            39.946,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 6,
+          "side": 1,
+          "photoCentre": [
+            1172,
+            359
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -205.047,
+            58.672,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 6,
+          "side": 1,
+          "photoCentre": [
+            1238,
+            454
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -200.656,
+            79.328,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 6,
+          "side": 1,
+          "photoCentre": [
+            1224,
+            566
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -201.858,
+            96.128,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 6,
+          "side": 1,
+          "photoCentre": [
+            1240,
+            660
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -202.357,
+            110.482,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 6,
+          "side": 1,
+          "photoCentre": [
+            1251,
+            743
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -135.317,
+            122.467,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 6,
+          "side": 1,
+          "photoCentre": [
+            880,
+            802
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -135.263,
+            134.945,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 6,
+          "side": 1,
+          "photoCentre": [
+            882,
+            873
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -135.222,
+            146.784,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 6,
+          "side": 1,
+          "photoCentre": [
+            884,
+            942
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -154.791,
+            116.255,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 3.3,
+          "height": 6,
+          "side": 1,
+          "photoCentre": [
+            983,
+            770
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -152.844,
+            125.599,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 3.3,
+          "height": 6,
+          "side": 1,
+          "photoCentre": [
+            975,
+            823
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "resistor",
+          "position": [
+            -160.654,
+            112.759,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 2.5,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            1014,
+            751
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "resistor",
+          "position": [
+            -162.84,
+            112.711,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 2.5,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            1026,
+            751
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "resistor",
+          "position": [
+            -167.364,
+            112.612,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 2.5,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            1051,
+            751
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "resistor",
+          "position": [
+            -169.522,
+            112.564,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 2.5,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            1063,
+            751
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
+        },
+        {
+          "kind": "resistor",
+          "position": [
+            -173.812,
+            112.47,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 2.5,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            1087,
+            751
+          ],
+          "status": "Owner 073200542, photo-estimated body dimensions; electrical value unknown"
         }
       ],
       "connectors": [
@@ -2099,7 +2852,9 @@
           ],
           "n": 13,
           "rotation": 180,
-          "side": 1
+          "side": 1,
+          "hidden": true,
+          "status": "Old drawing-based placeholder omitted: owner 073200542 shows logic packages at this location, not this connector."
         },
         {
           "position": [
@@ -4752,5 +5507,22 @@
         "status": "Visible board marking, photo-estimated size; no inferred component references."
       }
     ]
+  },
+  "lowerBoardPhotoRegistration": {
+    "photo": "PXL_20261014_073200542.jpg",
+    "reviewResolution": [
+      1600,
+      1205
+    ],
+    "scope": "Nine former schematic estimates relocated and 20 visible packages added using local pin-pitch fit. PHOTO identifiers are visual anchors, not schematic designators; package counts and correspondence provisional."
+  },
+  "motherboardJumpers": {
+    "position": [
+      -119.095,
+      116.237,
+      13.6
+    ],
+    "photo": "PXL_20261014_073200542.jpg",
+    "status": "Visible pale link blocks, estimated construction; no electrical configuration inferred."
   }
 }

@@ -57,6 +57,19 @@ module logic_chips() {
 module logic_pins() {
     for(p=pcb_component_instances)if(pcb_selected(p[3]))translate(p[1])rotate([0,0,p[2]])rotate([p[4]==-1?180:0,0,0])import(pcb_component_models[p[0]][1]);
 }
+// Pale open-frame IC sockets seen beneath CPU, FDC and boot EPROM.
+module ic_socket_pose(){for(s=pcb_sockets)if(pcb_selected(s[2]))translate(s[0])rotate([0,0,s[1]])rotate([s[3]==-1?180:0,0,0])let($socket=s)children();}
+module logic_ic_sockets(){ic_socket_pose()let(s=$socket,w=s[4]+2.8,l=(s[5]/2-1)*2.54+5)difference(){
+ translate([-w/2,-l/2,.15])cube([w,l,s[6]-.15]);
+ translate([-(w-5)/2,-(l-5)/2,-.1])cube([w-5,l-5,s[6]+.2]);
+ for(p=s[7])translate([p[0]-.75,p[1]-.85,-.1])cube([1.5,1.7,s[6]+.2]);
+ translate([0,-l/2,s[6]-1])cylinder(d=3,h=2,$fn=20);
+}}
+module logic_jumpers(){if(pcb_selected("motherboard"))translate(pcb_jumpers)for(x=[-3.81,-1.27,1.27,3.81],y=[-3,3])translate([x,y,2.2])difference(){cube([2.15,4.5,3.6],center=true);translate([0,0,1.7])cube([.65,1.5,.6],center=true);}}
+module logic_ic_contacts(){ic_socket_pose()for(p=$socket[7])translate(p){
+ translate([0,0,-2])cylinder(d=.5,h=2.6,$fn=10);
+ translate([0,0,.5])difference(){cylinder(d=1.2,h=$socket[6]-.65,$fn=12);translate([0,0,-.1])cylinder(d=.85,h=$socket[6],$fn=12);}
+}}
 // Photo-estimated two-row connector, with individual metal contacts.
 // No electrical pinout is asserted. Long axis follows local Y.
 module board_socket(n=32) {
@@ -149,25 +162,32 @@ module fan_rotor() {
                            [for(t=[52:-5:7])[37*cos(t),37*sin(t)]]));
     }
 }
-// Smooth ribbon runs with a real rectangular cross-section, not a photo plane.
-module ribbon_run(points,w=42,t=.8) {
-    for(i=[0:len(points)-2])hull(){translate(points[i])cube([w,1,t],center=true);translate(points[i+1])cube([w,1,t],center=true);}
+// Continuous rounded folds. Centreline subdivision does not simplify geometry.
+function blend(a,b,t)=a*(1-t)+b*t;
+function ribbon_folds(points)=concat([points[0]],[for(i=[1:len(points)-2],step=[0:5])let(a=blend(points[i-1],points[i],.8),b=points[i],c=blend(points[i],points[i+1],.2),t=step/5)blend(blend(a,b,t),blend(b,c,t),t)],[points[len(points)-1]]);
+function ribbon_side(path,i)=let(a=path[max(0,i-1)],b=path[min(len(path)-1,i+1)],v=[b[1]-a[1],a[0]-b[0],0])norm(v)>.001?v/norm(v):[1,0,0];
+module ribbon_run(points,w=42,t=.8,offset=0,lift=0) {
+    path=ribbon_folds(points);
+    for(i=[0:len(path)-2])hull()for(j=[i,i+1])let(side=ribbon_side(path,j))translate(path[j]+side*offset+[0,0,lift])rotate([0,0,atan2(side[1],side[0])])cube([w,.2,t],center=true);
 }
-// Both visible drive runs terminate in the photographed motherboard socket.
-// Routing between the photographed ends is a provisional service loop.
 function ribbon_end(dx=0,lift=0)=[pcb_ribbon_socket[0]+dx,pcb_ribbon_socket[1],pcb_ribbon_socket[2]+11.6+lift];
-function drive_ribbon_path(unit,dx=0,lift=0)=concat(unit==0?
- [[-158+dx,16,87.5+lift],[-158+dx,24,109+lift],[-181+dx,39,120+lift],[-175+dx,83,65+lift]]:
- [[-4+dx,16,87.5+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-125+dx,65,95+lift],[-175+dx,83,66+lift]],
- [[pcb_ribbon_socket[0]+dx,pcb_ribbon_socket[1]-16,35+lift],ribbon_end(dx,lift)]);
+// A continuous daisy-chain: board -> drive 1 -> drive 0. The drive-to-drive
+// span moves with both drives; folds between photographed terminals are estimated.
+function drive_ribbon_path(unit,dx=0,lift=0)=unit==0?
+ [[-158+dx,16,87.5+lift],[-158+dx,24,109+lift],[-100+dx,39,120+lift],[-30+dx,31,110+lift],[-4+dx,23,103+lift],[-4+dx,16,87.5+lift]]:
+ [[-4+dx,16,87.5+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-125+dx,65,95+lift],[-175+dx,83,66+lift],
+ [pcb_ribbon_socket[0]+dx,pcb_ribbon_socket[1]-16,35+lift],ribbon_end(dx,lift)];
 // 0.3 mm clearance on both vertical faces; 8 mm insertion into socket.
 module drive_ribbon_plugs(){for(x=[-158,-4])translate([x-16.5,4,85.3])cube([33,12,4.4]);}
 module ribbons(){for(u=[0:1])ribbon_run(drive_ribbon_path(u),33);}
-module ribbon_ridges(){for(u=[0:1],i=[0:25])ribbon_run(drive_ribbon_path(u,(i-12.5)*1.27,.45),.35,.12);}
-module ribbon_stripes(){for(u=[0:1])ribbon_run(drive_ribbon_path(u,-15.9,.55),.7,.12);}
+module ribbon_ridges(){for(u=[0:1],i=[0:25])ribbon_run(drive_ribbon_path(u),.35,.12,(i-12.5)*1.27,.45);}
+module ribbon_stripes(){for(u=[0:1])ribbon_run(drive_ribbon_path(u),.7,.12,-15.9,.55);}
 module wire_run(points,r=1) {
-    for(i=[0:len(points)-2])hull(){translate(points[i])sphere(r=r,$fn=10);translate(points[i+1])sphere(r=r,$fn=10);}
+    path=ribbon_folds(points);
+    for(i=[0:len(path)-2])hull(){translate(path[i])sphere(r=r,$fn=10);translate(path[i+1])sphere(r=r,$fn=10);}
 }
+// Nominal recessed female crimp contacts; exposed tips stop inside the wells.
+module drive_cable_contacts(){for(x=[-207,-53],dx=[-10.5,-6,-1.5,3])translate([x+dx,5,67.5])rotate([90,0,0])difference(){cylinder(d=1.3,h=3.5,$fn=16);translate([0,0,-.1])cylinder(d=.8,h=3.7,$fn=16);}}
 module power_wires(offset=0) {
     for(x=[-207,-53])wire_run([[x-6+offset*2.04545,5,67.5],[x,17,75+offset],[64,28,82+offset],[87,42,71+offset],[96,46,59+offset]],.9);
     if(offset==2.2)for(x=[-207,-53])wire_run([[x-10.5,5,67.5],[x-4.5,17,77.2],[59.5,28,84.2],[82.5,42,73.2],[96,46,61.2]],.9);
@@ -223,6 +243,9 @@ module interior_shape(p) {
     if(p=="logic-artwork")logic_artwork();
     if(p=="logic-silkscreen")logic_silkscreen();
     if(p=="logic-ribbon-plug")logic_ribbon_plug();
+    if(p=="logic-ic-sockets")logic_ic_sockets();
+    if(p=="logic-jumpers")logic_jumpers();
+    if(p=="logic-ic-contacts")logic_ic_contacts();
     if(p=="logic-chips")logic_chips();
     if(p=="logic-pins")logic_pins();
     if(p=="logic-connectors")logic_connectors();
@@ -239,6 +262,7 @@ module interior_shape(p) {
       drive_ribbon_plugs();
     }
     if(p=="ribbon-stripes")ribbon_stripes();
+    if(p=="drive-cable-contacts")drive_cable_contacts();
     if(p=="power-wires-red")power_wires(0);
     if(p=="power-wires-black")power_wires(2.2);
     if(p=="power-wires-yellow")power_wires(4.4);

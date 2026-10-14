@@ -30,7 +30,8 @@
     "placement": "32 RAM and two CTC positions registered against owner photos; eleven processor-area packages and one long socket use a local projective fit to nominal DIP-40 lead pitch. Global board dimensions and reference correspondence remain provisional.",
     "artwork": "Partial visible masked copper paths and board marking traced from owner 073200542 using the existing local pitch fit. No hidden routes or electrical netlist inferred.",
     "passives": "Eleven lower-board resistors/capacitors registered from owner 073200542; nominal body dimensions and unknown electrical values.",
-    "ribbon": "Motherboard ribbon socket and plug registered to owner 073200542; drive-to-board service loops remain approximate."
+    "ribbon": "Single continuous board-to-drive-1-to-drive-0 daisy-chain reconstruction with rounded folds and consistent width; intermediate path/slack remain illustrative. Nominal recessed power contacts follow the four visible entry wells.",
+    "detailPass": "v40: nine formerly estimated package positions registered and twenty additional visible packages added from owner 073200542. PHOTO identifiers are not schematic references. Pale sockets under CPU/FDC/EPROM and visible jumper blocks are photo-estimated."
   },
   "keyboard": {
     "cpu": "A5 U880 in schematic; UB880D in owner photo",
@@ -70,7 +71,7 @@
   "display": {
     "controller": "SAB8275P in owner photo; D05 8275-compatible device in drawing",
     "fetch": "Local counters, RAM and multiplexers. Do not conflate with system UA858 floppy DMA.",
-    "implemented": "Bounded attribute FIFO; row-based nominal character-clock scheduling; programmed burst gaps and stop-DMA dummy consumption; read-clear FO, DU and raster IR status; underrun blanking/retrace recovery. Runtime timing is separate from host rendering. Completed fetched rows now latch at scanout boundaries with retained field attributes; host rendering reads historical rows, not current VRAM.",
-    "remaining": "Display-board DACK response is idealized at one byte per character clock. Row bytes are sampled together; row-level scanout only, without per-byte bus contention or scanline-accurate tearing. Nominal 13.824 MHz / 8 clock is a family reference, not measured on this W/M specimen. CPU interrupt wiring, light pen, spaced-row pixel output and exact board delays remain unverified/unimplemented."
+    "implemented": "Individual byte fetches with programmed burst gaps, FIFO overflow at the overflowing write, stop/dummy consumption and row deadlines. Completed rows retain decoded glyph/cursor/blink/attribute output; host rendering does not re-read VRAM or character ROM. Snapshot layout 6 retains partial fetch state.",
+    "remaining": "Local DACK response remains idealized at one byte per character clock. Scanout sampling is per row, not per scanline; CPU contention, exact W/M clock/delays, light pen and CPU IRQ wiring remain unverified/unimplemented."
   }
 }

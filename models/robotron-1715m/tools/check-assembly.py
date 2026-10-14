@@ -10,6 +10,9 @@ def volume(path):
         total+=a[0]*(bv[1]*c[2]-bv[2]*c[1])+a[1]*(bv[2]*c[0]-bv[0]*c[2])+a[2]*(bv[0]*c[1]-bv[1]*c[0])
     return abs(total/6)
 checks={
+ 'ic-sockets-vs-chip-plastic': ('logic_ic_sockets();','logic_chips();'),
+ 'ic-sockets-vs-chip-leads': ('logic_ic_sockets();','logic_pins();'),
+ 'ic-socket-contacts-vs-board': ('logic_ic_contacts();','logic_boards();'),
  'board-connectors-vs-chip-bodies': ('logic_connectors();','logic_chips();'),
  'motherboard-ribbon-plug-vs-chip-bodies': ('logic_ribbon_plug();','logic_chips();'),
  'motherboard-ribbon-plug-vs-socket': ('logic_ribbon_plug();','logic_connectors();'),

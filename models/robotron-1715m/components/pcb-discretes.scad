@@ -1,7 +1,7 @@
 // Reference-photo discrete components. Dimensions are estimates, values unknown.
 // Local Y is the long axis; leads pass through the board plane.
 module pcb_passive_pose(kind) {
-    for(c=pcb_passives)if(c[0]==kind && pcb_selected(c[4]))translate(c[1])rotate([0,0,c[2]])rotate([c[7]==-1?180:0,0,0])let($can_d=c[5],$can_h=c[6])children();
+    for(c=pcb_passives)if(c[0]==kind && pcb_selected(c[4]))translate(c[1])rotate([0,0,c[2]])rotate([c[7]==-1?180:0,0,0])let($can_d=c[5],$can_h=c[6],$board_name=c[4])children();
 }
 module axial_body() {
     translate([0,-3.15,2])rotate([-90,0,0])union(){
@@ -21,7 +21,7 @@ module crystal_body() {
 }
 module film_body() {
     // Red upright rectangular capacitors in the owner's component-side photos.
-    translate([0,0,4.2])rotate([0,12,0])cube([1.4,5.5,5.5],center=true);
+    translate([0,0,$board_name=="motherboard"?6.7:4.2])rotate([0,12,0])cube([1.4,5.5,5.5],center=true);
 }
 module wound_core(d=20) {
     rotate_extrude($fn=48)translate([d*.36,0,0])circle(r=d*.14,$fn=12);

@@ -3,6 +3,21 @@
   "toleranceMm3": 0.001,
   "results": [
     {
+      "interface": "ic-sockets-vs-chip-plastic",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "ic-sockets-vs-chip-leads",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "ic-socket-contacts-vs-board",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
       "interface": "board-connectors-vs-chip-bodies",
       "intersectionMm3": 0,
       "passed": true
