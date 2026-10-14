@@ -47,6 +47,7 @@ module case_base() {
         for(x=[-224,224],y=[-170,170])translate([x,y,-1])cylinder(d=8,h=3,$fn=24);
         rear_enclosure_openings();
         translate([-208,-case_d/2+5,17])rotate([90,0,0])slab(17.5,17.5,10,2);
+        translate([207,-case_d/2+5,17])rotate([90,0,0])slab(43,18,10,2);
         for(y=[-95:10:15]) side_slot(y,22,20);
         for(y=[90:10:190]) side_slot(y,22,20);
         translate([-case_w/2-2,-164,15]) cube([10,38,14]);
@@ -97,13 +98,16 @@ module drives(unit=-1) {
         translate([0,8,-1]) slab(140,3.5,5,1);
         translate([4,-2,-1]) slab(41,25,5,1.5);
         translate([-60,15,-1]) slab(11,4,5,.7);
+        translate([45,-8,-1])slab(43,20,5,.8);
     }
 }
 module drive_insets(unit=-1) {
     for(x=unit<0?[-158,-4]:[[-158,-4][unit]]) translate([x,-case_d/2-3,81]) rotate([90,0,0]) {
         difference(){slab(144,40,1,1);translate([0,8,-1])slab(140,3.5,3,1);}
-        // Recessed central finger well, with the insertion slot above it.
-        translate([4,-3,1]) slab(39,20,1,1);
+        // Sloping finger scoops, not a flat inset: owner 124827690 / 133019620.
+        // Front-frame local datum is 3 mm ahead of this backplate.
+        translate([4,0,3])drive_ramp(39,-14,-3,2.5,-2);
+        translate([45,0,3])drive_ramp(43,-18,2,2.5,-2.5);
     }
 }
 module drive_lever_outline() {
@@ -118,27 +122,39 @@ module drive_latches(unit=-1) {
         linear_extrude(5)drive_lever_outline();
     }
 }
-module drive_latch_trim(unit) {
-    translate([[-158,-4][unit]+45,-case_d/2-9,92]) rotate([90,0,0])
-        translate([0,0,5.05])linear_extrude(.25)difference(){
-            drive_lever_outline();offset(delta=-.45)drive_lever_outline();
-        }
+module drive_ramp(w,y0,y1,z0,z1) {
+    hull(){translate([0,y0,z0-.5])cube([w,.1,1],center=true);
+           translate([0,y1,z1-.5])cube([w,.1,1],center=true);}
 }
 module drive_direction(unit) {
-    translate([[-158,-4][unit]+45,-case_d/2-8.7,77])rotate([90,0,0])linear_extrude(.12){
+    translate([[-158,-4][unit]+45,-case_d/2-5.08,77])rotate([90,0,0])rotate([-atan(.25),0,0])linear_extrude(.08){
         difference(){circle(r=12,$fn=64);circle(r=10.8,$fn=64);translate([-15,0])square([30,16]);translate([-15,-15])square([15,30]);}
-        polygon([[0,-9],[0,-14],[-5,-11.5]]);
+        polygon([[0,-10.3],[0,-12.7],[-4,-11.5]]);
+        polygon([[10.3,0],[12.7,0],[11.5,4]]);
     }
 }
 module drive_led(i) {
     translate([-218+i*154,-case_d/2-8.6,96]) rotate([90,0,0]) slab(10,3.5,.7,.5);
 }
-module switch_part(x,w,h) {
-    translate([x,-case_d/2-4,17]) rotate([90,0,0]) {
-        difference(){slab(w,h,4,2);translate([0,0,1])slab(w-4,h-4,5,1);}
-        translate([0,0,4]) rotate([0,x>0?8:0,0]) slab(w-5,h-5,3,1);
-        if(x>0)for(i=[-7:7])translate([i*2,0,7.2])cube([.35,h-7,.4],center=true);
+// Owner 133019620: clear textured rocker inside the sheet-metal opening.
+// Outer case face is Y=-200; even the highest lens edge stays behind it.
+module power_lens() {
+    translate([207,-196.4,17])rotate([90,0,0])rotate([0,3,0]) {
+        difference(){slab(34,12,2,1);translate([0,0,-.1])slab(32,10,1.3,.6);}
+        for(x=[-15:.9:15])translate([x,0,2.05])cube([.24,10,.2],center=true);
+        for(y=[-4.5:.9:4.5])translate([0,y,2.05])cube([31,.24,.2],center=true);
     }
+}
+module power_housing() {
+    translate([207,-194,17])rotate([90,0,0])difference(){
+        slab(42,17,5,1.8);translate([0,0,1])slab(35,13,5,1);
+    }
+}
+module front_labels() {
+    // Actual owner legends, including the OFF / ON legends beside the rocker.
+    for(p=[[-208,4.8,"RESET",3.2],[207,4.8,"POWER",3.2],[175,17,"OFF",3],[238,17,"ON",3]])
+        translate([p[0],-200.08,p[1]])rotate([90,0,0])linear_extrude(.08)
+            text(p[2],size=p[3],font="Liberation Sans:style=Bold",halign="center",valign="center");
 }
 // Nearly flush grey reset pad from owner close-up 124827690.
 module reset_pad(){
@@ -457,7 +473,7 @@ module shape(p) {
     for(i=[0:1])if(p==str("drive-latch-",i))drive_latches(i);
     monitor_interior_shape(p);
     monitor_external_shape(p);
-    for(i=[0:1]){if(p==str("drive-latch-trim-",i))drive_latch_trim(i);if(p==str("drive-direction-",i))drive_direction(i);}
+    for(i=[0:1]){if(p==str("drive-direction-",i))drive_direction(i);}
     if(p=="drive-insets")drive_insets();
     if(p=="drive-latches")drive_latches();
     if(p=="drive-led-0")drive_led(0);
@@ -475,7 +491,9 @@ module shape(p) {
     if(p=="case-lid")case_lid();
     if(p=="fascia")fascia();
     if(p=="drives")drives();
-    if(p=="power")switch_part(207,43,18);
+    if(p=="power")power_lens();
+    if(p=="power-housing")power_housing();
+    if(p=="front-labels")front_labels();
     if(p=="reset")reset_pad();
     if(p=="pedestal")pedestal();
     if(p=="ring")ring();
@@ -495,8 +513,8 @@ module shape(p) {
     if(p=="keycap-insert")let(k=keys[key_index])cap_insert(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2);
     if(p=="keycap")let(k=keys[key_index])cap(k[2]*keyboard_pitch-1.2,k[3]*keyboard_pitch-1.2,k[4],k[5]);
 }
-parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell-lower", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latch-0", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape", "drive-frames", "drive-mechanisms", "drive-motors", "drive-boards", "drive-contacts", "drive-coils", "drive-bracket", "logic-boards", "logic-chips", "logic-pins", "logic-connectors", "psu-chassis", "psu-cover", "fan-frame", "fan-rotor", "ribbon-cables", "ribbon-stripes", "power-wires-red", "power-wires-black", "power-wires-yellow", "keyboard-pcb", "keyboard-switches", "monitor-shell-upper", "tube-funnel", "tube-neck", "monitor-yoke", "monitor-coils", "monitor-chassis", "monitor-boards", "monitor-components", "monitor-capacitors", "monitor-shield", "monitor-wires", "plug-insert", "drive-power-sockets", "drive-traces", "drive-label-plates", "drive-spindle-0", "drive-spindle-1", "drive-head-0", "drive-head-1", "drive-latch-1", "drive-clamp-0", "drive-clamp-1", "drive-head-metal-0", "drive-head-metal-1", "drive-board-components", "logic-mounts", "chassis-fasteners", "keyboard-plate", "monitor-fasteners", "monitor-passives", "monitor-socket", "prototype-spring", "prototype-stem", "logic-resistors", "logic-ceramics", "logic-electrolytics", "logic-crystals", "logic-passive-leads", "logic-film", "logic-pads", "logic-solder", "logic-connector-contacts", "prototype-pcb-pad", "prototype-pcb-solder", "ribbon-ridges", "drive-cable-plugs", "drive-head-arm-0", "drive-head-arm-1", "drive-medium-0", "drive-medium-1", "keyboard-controller-board", "keyboard-controller-chips", "keyboard-controller-ceramic", "keyboard-controller-rom-cover", "keyboard-controller-connectors", "keyboard-controller-caps", "keyboard-controller-metal", "keyboard-controller-ink", "keyboard-insulators", "keyboard-matrix-artwork", "system-foot-metal", "monitor-under-controls", "monitor-stand-metal", "rear-socket-bodies", "rear-socket-contacts", "rear-power-black", "rear-blanking-plates", "rear-legends", "rear-panel", "rear-recesses", "rear-socket-inserts", "rear-fasteners", "rear-nameplate", "rear-nameplate-ink", "monitor-joint-lip", "keyboard-pcb-metal", "keyboard-controller-traces", "monitor-power-lead", "monitor-signal-lead", "monitor-plug-bodies", "monitor-plug-metal", "monitor-plug-collars", "keyboard-guides", "keyboard-contact-pads", "prototype-rubber", "drive-diskette-0", "drive-diskette-1", "drive-diskette-label-0", "drive-diskette-label-1", "drive-latch-trim-0", "drive-latch-trim-1", "drive-direction-0", "drive-direction-1", "drive-shaft-0", "drive-shaft-1", "drive-release-0", "drive-release-1", "keyboard-pcb-supports", "keyboard-pcb-fasteners", "keyboard-entry-wires", "keyboard-contact-routes", "keyboard-controller-solder", "drive-protect-tab-0", "drive-protect-tab-1", "keyboard-controller-leads", "keyboard-entry-choke", "monitor-mount-pads", "monitor-cable-clips", "fan-retainers", "fan-cushions", "psu-grommets", "drive-adapter-boards", "drive-adapter-traces", "drive-adapter-sockets", "logic-artwork", "drive-adapter-edge", "drive-adapter-contacts", "case-lid-inserts", "case-lid-fixings", "logic-inductors"];
-colors=["Wheat", "Wheat", "#8d887a", "#242627", "#333839", "#74776f", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#c3b995", "#96988f", "#487eac", "#a2a4a0", "#bec2bd", "#282c2b", "#28675a", "#b3a775", "#9e793b", "#afb4ae", "#386349", "#25292b", "#b3b8b4", "#b1b5a1", "#a2a6a3", "#b5b9b2", "#303634", "#282d2a", "#a0a59b", "#975b50", "#9e3930", "#252a28", "#b6a05b", "#91ae94", "#30352f", "Wheat", "#363d3a", "#78765f", "#38372e", "#ae7545", "#a3a79c", "#486551", "#343835", "#438c9b", "#979e92", "#b2a374", "#969782", "#d0c6a4", "#78a58d", "#c2bba4", "#a8aaa4", "#a8aaa4", "#30322f", "#30322f", "#242827", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#282c2b", "#b5b9b2", "#94978e", "#242929", "#b5b9b2", "#bd9867", "#c3bbaa", "#8c8c81", "#ded6be", "#71917c", "#aa622e", "#282a28", "#9c9d91", "#b8b7ac", "#bd403d", "#b4a576", "#aaa99c", "#b9b7ac", "#b4a576", "#aaa99c", "#b0b3a9", "#353936", "#b5b9b2", "#b5b9b2", "#46322a", "#46322a", "#aaa982", "#272a2b", "#ad8875", "#168dcc", "#c4ceca", "#23383b", "#b8bbb4", "#c8c8bd", "#59424a", "#487856", "#b5b9b2", "#252928", "#b5b9b2", "#a5aaa2", "#b5ad7f", "#252928", "#babdb7", "#777362", "#a9a18c", "#181c1c", "#c4c1a8", "#b7b8ae", "#bfc1b8", "#343b39", "#34362f", "#bec4bd", "#b8beb7", "#b7b8ad", "#747f85", "#bfc3ab", "#92968c", "#80654e", "#d9d9c8", "#363833", "#30322d", "#242321", "#242321", "#d8d4bf", "#d8d4bf", "#a6a7a0", "#a6a7a0", "#d0d2c7", "#d0d2c7", "#a6a7a0", "#a6a7a0", "#a6a7a0", "#a6a7a0", "#59424a", "#b8bbb4", "#c6c5bb", "#487856", "#b8bbb4", "#b4b5ad", "#b4b5ad", "Silver", "#35352f", "#292d29", "#b7b9b1", "#afb7aa", "#c8bd8e", "#292d2c", "#70444b", "#b9c1b7", "#c9c7ae", "#5b9f8f", "#262b29", "#b8bcb5", "#2c3030", "#a9afaa", "#d7d7c8"];
+parts=["case-base", "case-lid", "fascia", "drives", "power", "reset", "pedestal", "ring", "monitor-shell-lower", "bezel", "crt-rim", "crt-glass", "keyboard-shell", "keyboard-deck", "keys-black", "keys-light", "keys-red", "hardware", "cable", "drive-insets", "drive-latch-0", "drive-led-0", "drive-led-1", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-fillers", "cable-plug", "plug-screws", "monitor-tape", "drive-frames", "drive-mechanisms", "drive-motors", "drive-boards", "drive-contacts", "drive-coils", "drive-bracket", "logic-boards", "logic-chips", "logic-pins", "logic-connectors", "psu-chassis", "psu-cover", "fan-frame", "fan-rotor", "ribbon-cables", "ribbon-stripes", "power-wires-red", "power-wires-black", "power-wires-yellow", "keyboard-pcb", "keyboard-switches", "monitor-shell-upper", "tube-funnel", "tube-neck", "monitor-yoke", "monitor-coils", "monitor-chassis", "monitor-boards", "monitor-components", "monitor-capacitors", "monitor-shield", "monitor-wires", "plug-insert", "drive-power-sockets", "drive-traces", "drive-label-plates", "drive-spindle-0", "drive-spindle-1", "drive-head-0", "drive-head-1", "drive-latch-1", "drive-clamp-0", "drive-clamp-1", "drive-head-metal-0", "drive-head-metal-1", "drive-board-components", "logic-mounts", "chassis-fasteners", "keyboard-plate", "monitor-fasteners", "monitor-passives", "monitor-socket", "prototype-spring", "prototype-stem", "logic-resistors", "logic-ceramics", "logic-electrolytics", "logic-crystals", "logic-passive-leads", "logic-film", "logic-pads", "logic-solder", "logic-connector-contacts", "prototype-pcb-pad", "prototype-pcb-solder", "ribbon-ridges", "drive-cable-plugs", "drive-head-arm-0", "drive-head-arm-1", "drive-medium-0", "drive-medium-1", "keyboard-controller-board", "keyboard-controller-chips", "keyboard-controller-ceramic", "keyboard-controller-rom-cover", "keyboard-controller-connectors", "keyboard-controller-caps", "keyboard-controller-metal", "keyboard-controller-ink", "keyboard-insulators", "keyboard-matrix-artwork", "system-foot-metal", "monitor-under-controls", "monitor-stand-metal", "rear-socket-bodies", "rear-socket-contacts", "rear-power-black", "rear-blanking-plates", "rear-legends", "rear-panel", "rear-recesses", "rear-socket-inserts", "rear-fasteners", "rear-nameplate", "rear-nameplate-ink", "monitor-joint-lip", "keyboard-pcb-metal", "keyboard-controller-traces", "monitor-power-lead", "monitor-signal-lead", "monitor-plug-bodies", "monitor-plug-metal", "monitor-plug-collars", "keyboard-guides", "keyboard-contact-pads", "prototype-rubber", "drive-diskette-0", "drive-diskette-1", "drive-diskette-label-0", "drive-diskette-label-1", "drive-direction-0", "drive-direction-1", "drive-shaft-0", "drive-shaft-1", "drive-release-0", "drive-release-1", "keyboard-pcb-supports", "keyboard-pcb-fasteners", "keyboard-entry-wires", "keyboard-contact-routes", "keyboard-controller-solder", "drive-protect-tab-0", "drive-protect-tab-1", "keyboard-controller-leads", "keyboard-entry-choke", "monitor-mount-pads", "monitor-cable-clips", "fan-retainers", "fan-cushions", "psu-grommets", "drive-adapter-boards", "drive-adapter-traces", "drive-adapter-sockets", "logic-artwork", "drive-adapter-edge", "drive-adapter-contacts", "case-lid-inserts", "case-lid-fixings", "logic-inductors", "power-housing", "front-labels"];
+colors=["Wheat", "Wheat", "#8d887a", "#242627", "#d6d9cf", "#74776f", "Wheat", "#333333", "Wheat", "#8c857a", "#141919", "#0b1712", "#9daeb1", "#242929", "#202526", "#bac1b8", "#c6343b", "#242725", "#b7b3a0", "#101312", "#242827", "#590b0b", "#590b0b", "#9daeb1", "#252928", "#96988f", "#30312e", "#242929", "#c3b995", "#96988f", "#487eac", "#a2a4a0", "#bec2bd", "#282c2b", "#28675a", "#b3a775", "#9e793b", "#afb4ae", "#386349", "#25292b", "#b3b8b4", "#b1b5a1", "#a2a6a3", "#b5b9b2", "#303634", "#282d2a", "#a0a59b", "#975b50", "#9e3930", "#252a28", "#b6a05b", "#91ae94", "#30352f", "Wheat", "#363d3a", "#78765f", "#38372e", "#ae7545", "#a3a79c", "#486551", "#343835", "#438c9b", "#979e92", "#b2a374", "#969782", "#d0c6a4", "#78a58d", "#c2bba4", "#a8aaa4", "#a8aaa4", "#30322f", "#30322f", "#242827", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#b5b9b2", "#282c2b", "#b5b9b2", "#94978e", "#242929", "#b5b9b2", "#bd9867", "#c3bbaa", "#8c8c81", "#ded6be", "#71917c", "#aa622e", "#282a28", "#9c9d91", "#b8b7ac", "#bd403d", "#b4a576", "#aaa99c", "#b9b7ac", "#b4a576", "#aaa99c", "#b0b3a9", "#353936", "#b5b9b2", "#b5b9b2", "#46322a", "#46322a", "#aaa982", "#272a2b", "#ad8875", "#168dcc", "#c4ceca", "#23383b", "#b8bbb4", "#c8c8bd", "#59424a", "#487856", "#b5b9b2", "#252928", "#b5b9b2", "#a5aaa2", "#b5ad7f", "#252928", "#babdb7", "#777362", "#a9a18c", "#181c1c", "#c4c1a8", "#b7b8ae", "#bfc1b8", "#343b39", "#34362f", "#bec4bd", "#b8beb7", "#b7b8ad", "#747f85", "#bfc3ab", "#92968c", "#80654e", "#d9d9c8", "#363833", "#30322d", "#242321", "#242321", "#d8d4bf", "#d8d4bf", "#d0d2c7", "#d0d2c7", "#a6a7a0", "#a6a7a0", "#a6a7a0", "#a6a7a0", "#59424a", "#b8bbb4", "#c6c5bb", "#487856", "#b8bbb4", "#b4b5ad", "#b4b5ad", "Silver", "#35352f", "#292d29", "#b7b9b1", "#afb7aa", "#c8bd8e", "#292d2c", "#70444b", "#b9c1b7", "#c9c7ae", "#5b9f8f", "#262b29", "#b8bcb5", "#2c3030", "#a9afaa", "#d7d7c8", "#222522", "#dedfd0"];
 if(part=="assembly") { for(i=[0:len(parts)-1]) if(parts[i]!="prototype-spring" && parts[i]!="prototype-stem" && parts[i]!="prototype-rubber" && parts[i]!="prototype-pcb-pad" && parts[i]!="prototype-pcb-solder") color(colors[i]) shape(parts[i]); keyboard_mechanisms(); keyboard_indicators(); }
 else if(part=="interior") { keyboard_mechanisms(); for(i=[31:len(parts)-1]) if(parts[i]!="monitor-shell-upper" && parts[i]!="prototype-spring" && parts[i]!="prototype-stem" && parts[i]!="prototype-rubber" && parts[i]!="prototype-pcb-pad" && parts[i]!="prototype-pcb-solder") color(colors[i]) shape(parts[i]); }
 else shape(part);
