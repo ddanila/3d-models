@@ -12,7 +12,7 @@ The October 13 inserted-disk views (`113529099`, `113537277`) now set a 7 mm dee
 
 The keyboard controller is oriented with its input end toward the actual cable opening (`123907435`). A continuous internal lead reaches its shield clamp, passing through a round grooved black bush captured in a 1 mm bent metal support (`123539882`); the rectangular opening has bare edges. The plug has the asymmetric housing, screw layout and offset cable outlet from `090425989` / `090431122`. DAC preserves the input connection when separating the keyboard for inspection.
 
-The system unit has a W/M motherboard with integrated A44 U8272 and 32 RAM packages, plus a separate display controller mounted component-side down. [board-layout.json](board-layout.json) records the shared placement, sources and uncertainty. There are 118 nominal KiCad DIP packages and 2,274 lead apertures. The October 14 component-side photographs locate 39 display-board ICs, including three UL6516D memories and the SAB8275P, red upright capacitors and the white wound component. Generated P01–P39 IDs identify photo positions, not printed board designators. Mainboard positions still follow the W drawing and await full photo calibration. R19/R102 and C90/C91 follow the documented CPU/DMA adjacency, with estimated positions and no invented electrical values. Unidentified footprints retain generic labels. Clean chip legends identify documented devices; illustrative copper routes are not a netlist.
+The system unit has a W/M motherboard with integrated A44 U8272 and 32 RAM packages, plus a separate display controller mounted component-side down. [board-layout.json](board-layout.json) records the shared placement, sources and uncertainty. There are 118 nominal KiCad DIP packages and 2,274 lead apertures. The October 14 component-side photographs locate 39 display-board ICs, including three UL6516D memories and the SAB8275P, red upright capacitors and the white wound component. Generated P01–P39 IDs identify photo positions, not printed board designators. Mainboard RAM/CTC placement follows owner photographs, and eleven processor-area packages plus the long socket use a local nominal-pin-pitch projective fit. Other positions retain W drawing estimates; whole-board calibration is incomplete. R19/R102 and C90/C91 follow the documented CPU/DMA adjacency, with estimated positions and no invented electrical values. Unidentified footprints retain generic labels. Clean chip legends identify documented devices; illustrative copper routes are not a netlist.
 
 The [October 14 photo inventory](reference/owner-20261014.json) records 52 new owner photographs, with 22 selected originals published after metadata removal. These show this exact museum specimen. The drive carrier now has thin folded returns and underside windows exposing the large motor rotors; those rotors share the emulator-driven spindle motion. Their dimensions remain photo estimates. Owner photographs establish the drive adapters, their two mounting holes, cover stiffeners, fan retention and PSU access cover. The fan now has five swept blades and a broader hub matching the visible specimen; blade curvature remains estimated. Ribbon plugs now enter the pale adapter sockets; the fan aperture is concentric with the rotor/frame. The display controller’s visible board number does not prove an exact schematic revision match. Hidden monitor electronics remain comparative, and enclosed PSU electronics are not reconstructed.
 
@@ -144,3 +144,24 @@ netlist; hidden lead bends and exact copper widths remain unverified.
 The accepted keyboard exterior and physical verification classifications are
 unchanged. Check package/board clearance with `tools/check-assembly.py` and
 compare the canonical review views against the owner photographs.
+
+### Pin-pitch registration, connector construction and finishes — export v38
+
+`tools/register-processor-photo.py` reproduces a local projective fit from four
+DMA DIP-40 lead centres in PXL_20261014_073200542.jpg. The reference dimensions
+are nominal 2.54 mm lead pitch and 15.24 mm row spacing, not new measurements.
+`processorPinRegistration` records image size, selected points, transform and
+component centres. The rear-facing photo basis also corrects the earlier mirrored motherboard placement; board-attached holes, pads and connectors move together, and ribbon ends follow their socket. Pin-one orientation remains provisional. Eleven package positions and the long socket now use this
+fit. Reference-designator correspondence, lead picking and extrapolation remain
+provisional. Obscured mounts and unregistered parts are not relocated by guess.
+
+The keyboard controller connector follows the closed, segmented pale bridge
+visible in PXL_20261012_123622947.jpg. Connector and resistor tails now share
+board apertures and underside solder eyes. The matrix socket remains a separate
+photo-based assembly: detached photographs do not establish exact mating
+orientation, so no invented cable or forced docking has been added.
+
+Canonical material profiles distinguish tinned leads, solder, phenolic board,
+ceramic, IC moulding and painted metal. The browser uses the same profiles for
+instanced ICs. They describe clean finishes, without copied wear or baked photo
+lighting. The accepted exterior and printed/verified classifications are unchanged.

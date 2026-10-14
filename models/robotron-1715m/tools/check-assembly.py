@@ -10,6 +10,7 @@ def volume(path):
         total+=a[0]*(bv[1]*c[2]-bv[2]*c[1])+a[1]*(bv[2]*c[0]-bv[0]*c[2])+a[2]*(bv[0]*c[1]-bv[1]*c[0])
     return abs(total/6)
 checks={
+ 'keyboard-discrete-leads-vs-board': ('keyboard_controller_leads();','keyboard_controller_board();'),
  'keyboard-imported-leads-vs-board': ('keyboard_controller_pose()for(p=concat(controller_dips,[[114,8,24,15.24]]))owner_dip_pins(p);','keyboard_controller_board();'),
  'keyboard-cable-vs-chip-bodies': ('keyboard_internal_cable();','keyboard_controller_chips();'),
  'keyboard-chips-vs-caps': ('keyboard_controller_chips();','keyboard_controller_caps();'),

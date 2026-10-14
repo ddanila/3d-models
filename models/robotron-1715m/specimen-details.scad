@@ -23,9 +23,13 @@ controller_transistors=[[-120,4,0],[-113,-7,25],[-109,-15,25],
  [-105,-7,25],[-101,-10,25],[-97,-7,25],[-93,-10,25],[-89,-7,25],
  [-105,10,-25],[-100,11,-25],[-101,17,-25]];
 module controller_transistor_pose(p){translate([p[0],p[1],1.6])rotate([0,0,p[2]])children();}
+// Shared tail locations keep board apertures, joints and lead endpoints aligned.
+controller_connector_tails=[for(i=[0:12],side=[-1,1])[-25+i*2.54,3+side*7]];
+controller_resistor_tails=[for(x=[-80,-74,-68,-62,-56,-50,-44,-38],y=[-11,3])[x,y]];
 module keyboard_controller_board(){keyboard_controller_pose()difference(){
  translate([-135,-23,0])cube([270,46,1.6]);
  for(x=[-130,130],y=[-18,18])translate([x,y,-1])cylinder(d=3.2,h=4);
+ for(p=concat(controller_connector_tails,controller_resistor_tails))translate([p[0],p[1],-1])cylinder(d=.85,h=4,$fn=16);
  for(p=controller_transistors)controller_transistor_pose(p)for(x=[-1.27,0,1.27])translate([x,0,-2])cylinder(d=.85,h=4,$fn=12);
  for(p=concat(controller_dips,[[114,8,24,15.24]]),q=controller_package(p)[3])
    translate(concat(controller_pin(p,q),[-1]))cylinder(d=1.05,h=4,$fn=16);
@@ -44,8 +48,13 @@ module keyboard_controller_ceramic(){keyboard_controller_pose(){
 }}
 module keyboard_controller_rom_cover(){keyboard_controller_pose()translate([112,8,6.35])slab(18,13,.15,.2);}
 module keyboard_controller_connectors(){keyboard_controller_pose(){
- translate([-10,3,1.6])difference(){slab(43,10,6,.6);translate([0,0,1])slab(36,5,7,.3);}
- for(x=[-33,13])translate([x,3,1.6])cube([3,15,4],center=true);
+ // Owner 123622947: pale closed bridge with moulded divisions and end ears.
+ // Contact entry is on the side; the top is not an open rectangular trough.
+ translate([-10,3,1.6])difference(){
+  union(){slab(38,10,6,.5);slab(46,6,2,.5);}
+  for(i=[0:11])translate([-13.7+i*2.54,0,5.7])cube([.18,10.2,.7],center=true);
+  for(i=[0:12],side=[-1,1])translate([-15+i*2.54,side*4.7,2.6])cube([1,1.4,1.2],center=true);
+ }
 }}
 module keyboard_controller_caps(){keyboard_controller_pose(){
  for(p=[[-124,10],[-118,-13],[-106,16],[-92,-15],[130,-10]])translate([p[0],p[1],1.6])cylinder(d=5,h=9,$fn=24);
@@ -353,6 +362,7 @@ module keyboard_controller_solder(){keyboard_controller_pose(){
   let(v=controller_pin(p,q))controller_solder_eye(v[0],v[1]);
  for(p=controller_transistors)translate([p[0],p[1],0])rotate([0,0,p[2]])
   for(x=[-1.27,0,1.27])controller_solder_eye(x,0,.85,1.2);
+ for(p=concat(controller_connector_tails,controller_resistor_tails))controller_solder_eye(p[0],p[1],.85,1.7);
  for(x=[-130,130],y=[-18,18])translate([x,y,-.4])difference(){cylinder(d=6,h=.4,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=16);}
 }}
 

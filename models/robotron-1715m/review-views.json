@@ -135,6 +135,28 @@
       "fov": 31,
       "include": "^keyboard-controller-",
       "note": "Compare long underside buses, diagonal breaks and through-hole solder eyes; visual artwork, not a verified netlist."
+    },
+    {
+      "name": "motherboard-processor",
+      "photo": "PXL_20261014_073200542.jpg",
+      "position": [
+        -115,
+        65,
+        600
+      ],
+      "target": [
+        -115,
+        65,
+        14
+      ],
+      "up": [
+        0,
+        -1,
+        0
+      ],
+      "fov": 28,
+      "include": "^logic-.*motherboard$",
+      "note": "Local pin-pitch-registered processor area and long socket. Surrounding unregistered components retain drawing estimates; this is not a calibrated whole-board camera."
     }
   ]
 }

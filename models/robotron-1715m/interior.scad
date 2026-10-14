@@ -150,8 +150,8 @@ module ribbon_run(points,w=42,t=.8) {
     for(i=[0:len(points)-2])hull(){translate(points[i])cube([w,1,t],center=true);translate(points[i+1])cube([w,1,t],center=true);}
 }
 function drive_ribbon_path(unit,dx=0,lift=0)=unit==0?
- [[-158+dx,16,87.5+lift],[-158+dx,24,109+lift],[-181+dx,39,120+lift],[-207+dx,37,88+lift],[-219+dx,35,24+lift]]:
- [[-4+dx,16,87.5+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-91+dx,39,95+lift],[-130+dx,28,73+lift],[-196+dx,22,50+lift],[-219+dx,35,24+lift]];
+ [[-158+dx,16,87.5+lift],[-158+dx,24,109+lift],[-181+dx,39,120+lift],[-20+dx,37,88+lift],[7+dx,35,24+lift]]:
+ [[-4+dx,16,87.5+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-91+dx,39,95+lift],[-130+dx,28,73+lift],[-20+dx,22,50+lift],[7+dx,35,24+lift]];
 // 0.3 mm clearance on both vertical faces; 8 mm insertion into socket.
 module drive_ribbon_plugs(){for(x=[-158,-4])translate([x-16.5,4,85.3])cube([33,12,4.4]);}
 module ribbons(){for(u=[0:1])ribbon_run(drive_ribbon_path(u),33);}

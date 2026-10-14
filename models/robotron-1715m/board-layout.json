@@ -35,11 +35,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -215.454,
+            3.454,
             -154.471,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -60,11 +60,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -201.588,
+            -10.412,
             -154.471,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -85,11 +85,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -187.723,
+            -24.277,
             -154.471,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -110,11 +110,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -173.857,
+            -38.143,
             -154.471,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -135,11 +135,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -159.992,
+            -52.008,
             -154.471,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -160,11 +160,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -146.126,
+            -65.874,
             -154.471,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -185,11 +185,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -132.261,
+            -79.739,
             -154.471,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -210,11 +210,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -118.395,
+            -93.605,
             -154.471,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -235,11 +235,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -215.454,
+            3.454,
             -125.059,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -260,11 +260,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -201.588,
+            -10.412,
             -125.059,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -285,11 +285,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -187.723,
+            -24.277,
             -125.059,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -310,11 +310,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -173.857,
+            -38.143,
             -125.059,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -335,11 +335,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -159.992,
+            -52.008,
             -125.059,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -360,11 +360,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -146.126,
+            -65.874,
             -125.059,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -385,11 +385,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -132.261,
+            -79.739,
             -125.059,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -410,11 +410,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -118.395,
+            -93.605,
             -125.059,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -435,11 +435,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -215.454,
+            3.454,
             -95.647,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -460,11 +460,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -201.588,
+            -10.412,
             -95.647,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -485,11 +485,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -187.723,
+            -24.277,
             -95.647,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -510,11 +510,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -173.857,
+            -38.143,
             -95.647,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -535,11 +535,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -159.992,
+            -52.008,
             -95.647,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -560,11 +560,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -146.126,
+            -65.874,
             -95.647,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -585,11 +585,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -132.261,
+            -79.739,
             -95.647,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -610,11 +610,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -118.395,
+            -93.605,
             -95.647,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -635,11 +635,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -215.454,
+            3.454,
             -66.445,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -660,11 +660,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -201.588,
+            -10.412,
             -66.445,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -685,11 +685,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -187.723,
+            -24.277,
             -66.445,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -710,11 +710,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -173.857,
+            -38.143,
             -66.445,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -735,11 +735,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -159.992,
+            -52.008,
             -66.445,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -760,11 +760,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -146.126,
+            -65.874,
             -66.445,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -785,11 +785,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -132.261,
+            -79.739,
             -66.445,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -810,11 +810,11 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -118.395,
+            -93.605,
             -66.445,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
           "schematicLabel": "U2164",
@@ -835,23 +835,23 @@
           "label": "UA880 CPU",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -90.829,
-            65.101,
+            -122.708,
+            66.117,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
-          "status": "Owner processor-photo registered placement; W drawing reference correspondence and covered chip identity provisional",
+          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
           "inspection": {
             "title": "A1 · UA880 CPU",
-            "text": "Z80-compatible main CPU. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Package position registered to owner processor-area photo; covered identity and drawing correspondence remain provisional.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "text": "Z80-compatible main CPU. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
           },
           "photoCentre": [
-            762,
-            468
+            808,
+            503
           ]
         },
         {
@@ -859,23 +859,23 @@
           "label": "UA858 DMA",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -120.724,
-            65.101,
+            -91.163,
+            65.46,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
-          "status": "Owner processor-photo registered placement; W drawing reference correspondence and covered chip identity provisional",
+          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
           "inspection": {
             "title": "A2 · UA858 DMA",
-            "text": "System DMA controller; floppy transfers. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Package position registered to owner processor-area photo; covered identity and drawing correspondence remain provisional.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "text": "System DMA controller; floppy transfers. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
           },
           "photoCentre": [
-            620,
-            468
+            658,
+            503
           ]
         },
         {
@@ -883,23 +883,23 @@
           "label": "UA8560 SIO",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -63.04,
-            65.101,
+            -151.394,
+            66.714,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
-          "status": "Owner processor-photo registered placement; W drawing reference correspondence and covered chip identity provisional",
+          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
           "inspection": {
             "title": "A3 · UA8560 SIO",
-            "text": "Serial I/O, including keyboard receiver. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Package position registered to owner processor-area photo; covered identity and drawing correspondence remain provisional.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "text": "Serial I/O, including keyboard receiver. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
           },
           "photoCentre": [
-            894,
-            468
+            952,
+            503
           ]
         },
         {
@@ -907,23 +907,23 @@
           "label": "U8272 FDC",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -37.777,
-            65.101,
+            -175.676,
+            67.22,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
-          "status": "Owner processor-photo registered placement; W drawing reference correspondence and covered chip identity provisional",
+          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
           "inspection": {
             "title": "A44 · U8272 FDC",
-            "text": "Floppy-disk controller. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Package position registered to owner processor-area photo; covered identity and drawing correspondence remain provisional.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "text": "Floppy-disk controller. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
           },
           "photoCentre": [
-            1014,
-            468
+            1080,
+            503
           ]
         },
         {
@@ -931,7 +931,7 @@
           "label": "UA857D CTC",
           "model": "DIP-28_W15.24mm",
           "position": [
-            -112.303,
+            -99.697,
             -16.235,
             13.6
           ],
@@ -956,7 +956,7 @@
           "label": "UA857D CTC",
           "model": "DIP-28_W15.24mm",
           "position": [
-            -112.303,
+            -99.697,
             7.924,
             13.6
           ],
@@ -981,107 +981,127 @@
           "label": "U2716 boot ROM",
           "model": "DIP-24_W15.24mm",
           "position": [
-            -203,
-            66,
+            -53.54,
+            14.797,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
           "inspection": {
             "title": "A6 · U2716 boot ROM",
-            "text": "Boot EPROM. Documented W/M design; package and local placement estimated. Package: DIP-24_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "text": "Boot EPROM. Documented W/M design; package and local placement estimated. Package: DIP-24_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            498,
+            278
+          ]
         },
         {
           "ref": "A45",
           "label": "DS8282",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -203,
-            -26,
+            -52.756,
+            42.993,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
           "inspection": {
             "title": "A45 · DS8282",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            490,
+            403
+          ]
         },
         {
           "ref": "A10",
           "label": "DS8286",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -203,
-            -8,
+            -55.329,
+            106.655,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
           "inspection": {
             "title": "A10 · DS8286",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            490,
+            708
+          ]
         },
         {
           "ref": "A9",
           "label": "DS8282",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -203,
-            10,
+            -54.518,
+            86.579,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
           "inspection": {
             "title": "A9 · DS8282",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            490,
+            608
+          ]
         },
         {
           "ref": "A8",
           "label": "DS8286",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -203,
-            28,
+            -53.693,
+            66.166,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
           "inspection": {
             "title": "A8 · DS8286",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            490,
+            510
+          ]
         },
         {
           "ref": "A12",
           "label": "DS8205",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -203,
+            -9,
             46,
             13.6
           ],
@@ -1101,7 +1121,7 @@
           "label": "DL000",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -166,
+            -46,
             -18,
             13.6
           ],
@@ -1121,7 +1141,7 @@
           "label": "DL002",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -166,
+            -46,
             0,
             13.6
           ],
@@ -1141,27 +1161,31 @@
           "label": "DS8205",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -166,
-            18,
+            -189.056,
+            124.547,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
           "inspection": {
             "title": "A11 · DS8205",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            1180,
+            824
+          ]
         },
         {
           "ref": "A41",
           "label": "74S287",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -166,
+            -46,
             36,
             13.6
           ],
@@ -1181,31 +1205,35 @@
           "label": "DS8286",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -166,
-            49,
+            -119.776,
+            23.759,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
+          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
           "inspection": {
             "title": "A114 · DS8286",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
+            "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
+          },
+          "photoCentre": [
+            790,
+            300
+          ]
         },
         {
           "ref": "A29",
           "label": "DL074",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -43,
+            -169,
             -156,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1221,11 +1249,11 @@
           "label": "D121",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -43,
+            -169,
             -136,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1241,11 +1269,11 @@
           "label": "75450",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -43,
+            -169,
             -116,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1261,11 +1289,11 @@
           "label": "D240",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -43,
+            -169,
             -96,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1281,11 +1309,11 @@
           "label": "DL074",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -43,
+            -169,
             -76,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1301,11 +1329,11 @@
           "label": "74S00",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -43,
+            -169,
             -56,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1321,11 +1349,11 @@
           "label": "DL003",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -70,
+            -142,
             -156,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1341,11 +1369,11 @@
           "label": "DL000",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -70,
+            -142,
             -136,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1361,11 +1389,11 @@
           "label": "DL002",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -70,
+            -142,
             -116,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1381,11 +1409,11 @@
           "label": "DL008",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -70,
+            -142,
             -96,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1401,11 +1429,11 @@
           "label": "DL008",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -70,
+            -142,
             -76,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1421,11 +1449,11 @@
           "label": "DL004",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -70,
+            -142,
             -56,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1441,11 +1469,11 @@
           "label": "DL074",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -96,
+            -116,
             -156,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1461,11 +1489,11 @@
           "label": "74S74",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -96,
+            -116,
             -136,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1481,11 +1509,11 @@
           "label": "74S00",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -96,
+            -116,
             -116,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1501,11 +1529,11 @@
           "label": "DL002",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -96,
+            -116,
             -96,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1521,11 +1549,11 @@
           "label": "D200",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -96,
+            -116,
             -76,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1541,11 +1569,11 @@
           "label": "DL000",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -96,
+            -116,
             -56,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1561,11 +1589,11 @@
           "label": "DL074",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -16,
+            -196,
             -136,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1581,11 +1609,11 @@
           "label": "74S74",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -16,
+            -196,
             -116,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1601,11 +1629,11 @@
           "label": "DL112",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -16,
+            -196,
             -96,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1621,11 +1649,11 @@
           "label": "DL000",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -16,
+            -196,
             -76,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1641,11 +1669,11 @@
           "label": "DL295",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -16,
+            -196,
             -56,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1661,11 +1689,11 @@
           "label": "DL004",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -215,
+            3,
             144,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1681,11 +1709,11 @@
           "label": "K170UP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -186,
+            -26,
             144,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1701,11 +1729,11 @@
           "label": "K155LP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -157,
+            -55,
             144,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1721,11 +1749,11 @@
           "label": "K170AP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -128,
+            -84,
             144,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1741,11 +1769,11 @@
           "label": "K170UP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -99,
+            -113,
             144,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1761,11 +1789,11 @@
           "label": "K170UP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -70,
+            -142,
             144,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1781,11 +1809,11 @@
           "label": "K170AP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -41,
+            -171,
             144,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "status": "Documented W/M design; package and local placement estimated",
           "inspection": {
@@ -1801,11 +1829,11 @@
         {
           "kind": "ceramic",
           "position": [
-            -225,
+            13,
             -125,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 4
@@ -1813,11 +1841,11 @@
         {
           "kind": "ceramic",
           "position": [
-            -225,
+            13,
             -44,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 4
@@ -1825,11 +1853,11 @@
         {
           "kind": "ceramic",
           "position": [
-            -180,
+            -32,
             -20,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 4
@@ -1837,11 +1865,11 @@
         {
           "kind": "ceramic",
           "position": [
-            -141,
+            -71,
             -5,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 4
@@ -1853,7 +1881,7 @@
             40,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 4
@@ -1861,11 +1889,11 @@
         {
           "kind": "ceramic",
           "position": [
-            -77,
+            -135,
             40,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 4
@@ -1873,11 +1901,11 @@
         {
           "kind": "ceramic",
           "position": [
-            -50,
+            -162,
             40,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 4
@@ -1885,11 +1913,11 @@
         {
           "kind": "ceramic",
           "position": [
-            -207,
+            -5,
             105,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 4
@@ -1897,11 +1925,11 @@
         {
           "kind": "ceramic",
           "position": [
-            -140,
+            -72,
             113,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 4
@@ -1909,11 +1937,11 @@
         {
           "kind": "ceramic",
           "position": [
-            -10,
+            -202,
             130,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 4
@@ -1921,11 +1949,11 @@
         {
           "kind": "electrolytic",
           "position": [
-            -225,
+            13,
             118,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 6.3,
           "height": 10
@@ -1933,11 +1961,11 @@
         {
           "kind": "electrolytic",
           "position": [
-            -179,
+            -33,
             120,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 6.3,
           "height": 10
@@ -1945,11 +1973,11 @@
         {
           "kind": "electrolytic",
           "position": [
-            -121,
+            -91,
             120,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 6.3,
           "height": 10
@@ -1957,11 +1985,11 @@
         {
           "kind": "electrolytic",
           "position": [
-            -11,
+            -201,
             110,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 6.3,
           "height": 10
@@ -1969,11 +1997,11 @@
         {
           "kind": "crystal",
           "position": [
-            -32,
+            -180,
             -165,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 6
@@ -1981,11 +2009,11 @@
         {
           "kind": "crystal",
           "position": [
-            -84,
+            -128,
             -165,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "side": 1,
           "diameter": 5,
           "height": 6
@@ -1994,7 +2022,7 @@
           "ref": "R19",
           "kind": "resistor",
           "position": [
-            -198,
+            -14,
             56,
             13.6
           ],
@@ -2008,7 +2036,7 @@
           "ref": "R102",
           "kind": "resistor",
           "position": [
-            -155,
+            -57,
             54.5,
             13.6
           ],
@@ -2022,11 +2050,11 @@
           "ref": "C90",
           "kind": "ceramic",
           "position": [
-            -187,
+            -25,
             82,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "diameter": 5.5,
           "height": 4,
           "side": 1,
@@ -2036,11 +2064,11 @@
           "ref": "C91",
           "kind": "ceramic",
           "position": [
-            -144,
+            -68,
             82,
             13.6
           ],
-          "rotation": 0,
+          "rotation": 180,
           "diameter": 5.5,
           "height": 4,
           "side": 1,
@@ -2050,50 +2078,51 @@
       "connectors": [
         {
           "position": [
-            -5,
+            -207,
             -4,
             13.6
           ],
           "n": 13,
-          "rotation": 0,
+          "rotation": 180,
           "side": 1
         },
         {
           "position": [
-            -219,
+            7,
             35,
             13.6
           ],
           "n": 13,
-          "rotation": 0,
+          "rotation": 180,
           "side": 1
         },
         {
           "position": [
-            -7,
-            20,
+            -5.951,
+            102.64,
             13.6
           ],
           "n": 32,
-          "rotation": 0,
-          "side": 1
+          "rotation": 180,
+          "side": 1,
+          "status": "Owner-photo position; nominal 2.54 mm pitch; connector identity provisional"
         }
       ],
       "mounts": [
         [
-          -225,
+          13,
           -170
         ],
         [
-          12,
+          -224,
           -170
         ],
         [
-          -225,
+          13,
           165
         ],
         [
-          12,
+          -224,
           165
         ]
       ]
@@ -3644,5 +3673,107 @@
       ]
     },
     "scope": "Local registration using the shared first CTC and nominal package scale; perspective and reference correspondence provisional. Covered labels not inferred from photos."
-  }
+  },
+  "processorPinRegistration": {
+    "photo": "PXL_20261014_073200542.jpg",
+    "reviewResolution": [
+      1600,
+      1205
+    ],
+    "photoPoints": [
+      [
+        625,
+        388
+      ],
+      [
+        694,
+        385
+      ],
+      [
+        694,
+        621
+      ],
+      [
+        622,
+        621
+      ]
+    ],
+    "modelPoints": [
+      [
+        -83.65599999999999,
+        40.971000000000004
+      ],
+      [
+        -98.896,
+        40.971000000000004
+      ],
+      [
+        -98.896,
+        89.231
+      ],
+      [
+        -83.65599999999999,
+        89.231
+      ]
+    ],
+    "homography": [
+      -0.2983585769729874,
+      -0.02323666909938284,
+      91.55137032621657,
+      0.021599228110090123,
+      0.2783079866711311,
+      -70.57851384960522,
+      0.00024205968901043208,
+      0.00023496065664316797,
+      1
+    ],
+    "centres": {
+      "A1": [
+        808,
+        503
+      ],
+      "A2": [
+        658,
+        503
+      ],
+      "A3": [
+        952,
+        503
+      ],
+      "A44": [
+        1080,
+        503
+      ],
+      "A114": [
+        790,
+        300
+      ],
+      "A11": [
+        1180,
+        824
+      ],
+      "A6": [
+        498,
+        278
+      ],
+      "A45": [
+        490,
+        403
+      ],
+      "A8": [
+        490,
+        510
+      ],
+      "A9": [
+        490,
+        608
+      ],
+      "A10": [
+        490,
+        708
+      ]
+    },
+    "scope": "Local projective correction from nominal DMA DIP-40 pitch. Lead-centre picking, nominal row spacing, lens distortion and extrapolation remain uncertain; global board dimensions not calibrated."
+  },
+  "motherboardRearPhotoBasis": "Image right maps to canonical -X; v37 positive-X placement corrected about board centre X=-106 mm."
 }
