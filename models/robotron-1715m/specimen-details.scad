@@ -2,7 +2,7 @@
 // Feature dimensions/positions are estimates, not an electrical reconstruction.
 // Component pitch is nominal 2.54 mm; board envelope inferred from DIP-40.
 module keyboard_controller_pose() {
-    translate([-65,keyboard_y+74,8]) children();
+    translate([-65,keyboard_y+74,8])rotate([0,0,180]) children();
 }
 // x,y,pins,row spacing; positions follow 123622947, not a generic chip grid.
 controller_dips=[[62,8,40,15.24],[20,-12,14,7.62],[20,12,14,7.62],
@@ -49,7 +49,7 @@ module keyboard_controller_metal(){keyboard_controller_pose(){
  for(i=[0:12],s=[-1,1])translate([-25+i*2.54,3+s*2.54,2])cylinder(d=.65,h=4,$fn=8);
  for(p=[[-124,10],[-118,-13],[-106,16],[-92,-15],[130,-10]])translate([p[0],p[1],10.65])cylinder(d=4.5,h=.2,$fn=24);
  // Cable shield clamp, folded over the incoming lead.
- translate([-125,0,1.6])difference(){cube([8,22,5],center=true);rotate([0,90,0])cylinder(d=5.8,h=10,center=true,$fn=24);}
+ translate([-125,0,4.5])difference(){cube([8,22,5.8],center=true);rotate([0,90,0])cylinder(d=5.8,h=10,center=true,$fn=24);}
  for(x=[-130,130],y=[-18,18])translate([x,y,1.6])screw(5,1);
 }}
 module keyboard_controller_ink(){keyboard_controller_pose(){
@@ -292,7 +292,7 @@ module keyboard_pcb_fasteners(){
 // Short lead bundle and strain relief at the owner-photographed controller entry.
 // Routes are visual estimates; no undocumented electrical pinout is asserted.
 module keyboard_entry_wires(){keyboard_controller_pose()
- for(i=[0:3])wire_run([[-145,-2+i*1.5,4],[-135,-2+i*1.5,4],[-123,-7+i*3,6],[-116,-7+i*3,3]],.55);
+ for(i=[0:3])wire_run([[-125,-2+i*1.5,4.5],[-123,-7+i*3,6],[-116,-7+i*3,3]],.55);
 }
 module keyboard_contact_routes(){
  translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])

@@ -36,7 +36,7 @@ rubber_color = "#30322d";
 part = "keyboard-review";
 lift = view=="exploded" ? separation : 0;
 board_parts = ["keyboard-pcb", "keyboard-contact-pads", "keyboard-matrix-artwork", "keyboard-pcb-metal", "keyboard-insulators"];
-base_parts = ["keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet"];
+base_parts = ["keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-cable-support", "keyboard-internal-cable", "keyboard-entry-wires"];
 plate_parts = ["keyboard-plate", "keyboard-switches", "keyboard-guides"];
 case_parts = ["keyboard-shell", "keyboard-deck", "keyboard-fillers"];
 function has(list,name) = len([for(item=list)if(item==name)1])>0;

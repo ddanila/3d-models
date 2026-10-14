@@ -78,8 +78,11 @@ module teac_traces(long_board=false) {
     if(long_board)for(i=[0:4])translate([10+i*2.4,82,32.65])cube([.5,42-i*3,.12]);
 }
 
+// Owner inserted-disk photos place media 7 mm deeper than the previous fit.
+// Move the spindle, clamp and head contact system with the jacket; browser
+// pivots/labels share that correction. The frame/guide-rail envelope is unchanged.
 // Separate moving parts; pivots/travel are shared with the browser manifest.
-module teac_spindle() {
+module teac_spindle() { translate([0,7,0]) {
     // Large underside rotor visible through the carrier in owner 073718163.
     // It shares the emulated spindle phase, not a decorative static motor disc.
     translate([70,59,-1.5])difference(){
@@ -93,7 +96,8 @@ module teac_spindle() {
     translate([70,59,37])difference(){cylinder(d=12,h=3,$fn=24);translate([-1,-7,2])cube([2,14,2]);}
 
 }
-module teac_head_shape() {
+}
+module teac_head_shape() { translate([0,7,0]) {
     translate([59,119,19])difference(){
         union(){cube([24,34,5]);translate([4,2,4])cube([16,24,4]);for(x=[-9,24])translate([x,4,0])cube([9,9,7]);}
         for(y=[5,28])translate([12,y,-1])cylinder(d=4,h=12,$fn=16);
@@ -105,13 +109,14 @@ module teac_head_shape() {
         cylinder(d=6,h=8,$fn=20);translate([0,0,-.1])cylinder(d=3.2,h=8.2,$fn=20);
     }
 }
+}
 // Clearance extends through every carriage tab, not only the bearing sleeves.
 module teac_head() {
     difference(){teac_head_shape();
         for(x=[46,92])translate([x,70,18])rotate([-90,0,0])cylinder(d=3.2,h=125,$fn=24);
     }
 }
-module teac_head_metal() {
+module teac_head_metal() { translate([0,7,0]) {
     translate([62,145,23])difference(){cube([18,6,1]);for(x=[3,15])translate([x,3,-1])cylinder(d=2,h=4,$fn=12);}
     for(x=[64,77])translate([x,148,24])screw(3,1);
 
@@ -121,10 +126,12 @@ module teac_head_metal() {
     }
     translate([64,148,26.8])cube([10,.4,.4]);
 }
-module teac_clamp() {
+}
+module teac_clamp() { translate([0,7,0]) {
     translate([66,46,34])cube([38,4,2]);
     translate([66,46,34])cube([8,18,1.4]);
     translate([70,59,32])difference(){cylinder(d=20,h=2,$fn=32);translate([0,0,-1])cylinder(d=10,h=4,$fn=24);}
+}
 }
 module teac_components() {
     for(p=[[12,26],[43,70]])translate([p[0],p[1],33]){
@@ -151,24 +158,26 @@ module teac_cable_plug(adapter=false) {
 }
 
 // Separate upper load arm. Pivot and lift are illustrative until measured.
-module teac_head_arm() {
+module teac_head_arm() { translate([0,7,0]) {
     translate([62,122,30])difference(){cube([18,15,1]);translate([2,2,-1])cube([14,11,3]);}
     translate([64,122,29])cube([14,10,1]);
     translate([69,133,30])cube([2,15,.5]);
 }
+}
 // Exposed flexible magnetic medium, without its stationary paper jacket.
 // Opaque magnetic disc rotates independently of its stationary jacket.
-module teac_medium() {
+module teac_medium() { translate([0,7,0]) {
     translate([70,59,29.5])difference(){
         cylinder(r=65,h=.08,$fn=128);
         translate([0,0,-.1])cylinder(r=14.3,h=.3,$fn=48);
         translate([-24,6,-.1])cylinder(r=1.3,h=.3,$fn=16);
     }
 }
+}
 
 // Owner photos 2026-10-13, scaled against nominal 133.35 mm jacket.
 // Clean reference geometry: wear omitted; thickness and seams estimated.
-module teac_diskette_jacket() {
+module teac_diskette_jacket() { translate([0,7,0]) {
     translate([70,59,29.5])difference(){
         translate([-66.675,-66.675,-.5])cube([133.35,133.35,1.2]);
         translate([-65.675,-65.675,-.1])cube([131.35,131.35,.4]);
@@ -183,13 +192,15 @@ module teac_diskette_jacket() {
         translate([-56,-56,-.51])cube([112,.25,.08]);
     }
 }
-module teac_diskette_label() {
+}
+module teac_diskette_label() { translate([0,7,0]) {
     translate([70,59,29.6])difference(){
         cylinder(d=34,h=.08,$fn=64);
         translate([0,0,-.1])cylinder(d=28.6,h=.3,$fn=64);
     }
     translate([70+10.5,59-62,30.22])linear_extrude(.08)
         offset(r=2)offset(delta=-2)square([51,36]);
+}
 }
 // Separate white storage envelope actually used by the owner (not original).
 // No ruler: overall dimensions and .2 mm paper thickness remain estimates.
@@ -204,7 +215,7 @@ module teac_storage_sleeve() {
 // Photo-referenced operating rod and eccentric fork. Hidden cam dimensions
 // remain illustrative. Browser rotates this with the front lever, not the head.
 module teac_latch_shaft() {
-    translate([118,-6,32])rotate([-90,0,0])cylinder(d=3,h=58,$fn=24);
+    translate([118,-8,32])rotate([-90,0,0])cylinder(d=3,h=60,$fn=24);
     translate([118,48,32])rotate([90,0,0])linear_extrude(2,center=true)
         hull(){circle(d=7,$fn=24);translate([5,0])circle(d=5,$fn=20);}
     translate([123,45,32])rotate([-90,0,0])cylinder(d=3,h=7,$fn=20);
@@ -220,10 +231,11 @@ module teac_release_rail() {
 
 // Removable opaque write-protect sticker over the owner's jacket notch.
 // TEAC FD-55 maintenance manual: covered notch inhibits writes.
-module teac_protect_tab(){
+module teac_protect_tab(){ translate([0,7,0]) {
  translate([70-66.8,59-38,29.5])union(){
   translate([0,0,.72])cube([8,9,.18]);
   translate([0,0,-.7])cube([8,9,.18]);
   translate([0,0,-.7])cube([.18,9,1.6]);
  }
+}
 }

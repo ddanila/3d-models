@@ -3,8 +3,8 @@
     "id": "keyboard-controller",
     "part": "keyboard-controller-chips",
     "position": [
-      -3,
-      -273,
+      -127,
+      -289,
       18
     ],
     "title": "UB880D keyboard controller",

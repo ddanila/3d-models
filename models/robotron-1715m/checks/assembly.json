@@ -33,6 +33,31 @@
       "passed": true
     },
     {
+      "interface": "lever-open-vs-inserted-diskette",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "lever-closed-vs-inserted-diskette",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "keyboard-cable-vs-controller-board",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "keyboard-cable-vs-shield-clamp",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "cable-grommet-vs-sheet-support",
+      "intersectionMm3": 0.0,
+      "passed": true
+    },
+    {
       "interface": "board-vs-drive-bracket",
       "intersectionMm3": 0,
       "passed": true
