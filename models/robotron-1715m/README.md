@@ -79,3 +79,39 @@ python3 scripts/model-status.py
 Use `export.py --parts NAME ...` for a bounded mesh rebuild; it refreshes manifest hashes. Run `configure.py` when changing the keyboard configuration. The [combined STL ZIP](robotron-1715m.stl.zip) is a visual assembly reference; per-assembly downloads preserve sources. STL does not preserve OpenSCAD colors.
 
 After committing canonical changes, run `python3 scripts/sync-robotron-model.py ../3d-models` in DAC. It verifies hashes and records the exact source commit. Firmware and emulator code stay in their own repository. DAC loads all interior geometry before showing the model as ready, preserving the view through closed-case openings. Repeated package instances share geometry. Optional inspection photographs load on demand; visual geometry is never deferred until a cover opens.
+
+### Drawing and component audit — export v36
+
+`hardware-audit.json` records the W/M motherboard and CRT drawing numbers,
+keyboard schematic, connector identities, evidence boundaries and remaining
+emulation work. `board-layout.json` now carries per-chip inspection text,
+owner-photo links and original drawing links for the museum. Museum P numbers
+on the display board are placement identifiers, **not** schematic designators.
+The owner display PCB reads **1.93.310402.1 B 2**; exact equivalence to the W CRT
+drawing remains unverified. Mainboard RAM labels now reflect the photographed
+M4164B-12 population (32 × 64 Kbit = 256 KiB); CTC labels reflect UA857D.
+Positions/references inherited from the W drawing remain estimates, rather
+than claiming a complete calibrated reconstruction of this specimen.
+
+The keyboard's eleven photo-positioned three-lead transistor bodies now use
+KiCad's pinned `TO-92_Inline.step`, with its rounded back, flat face and separate
+metal leads. `tools/convert-transistors.py` preserves the upstream shape and
+checks solid validity, three leads and volume conservation. `transistors.json`
+records mesh hashes/bounds; upstream STEP, credits and licences are preserved.
+This is a generic package match, not proof of the DDR electrical type or exact
+mould/lead bends. The keyboard schematic identifies eight SC308C input stages
+and three oscillator transistors; photographed substitute identities remain
+unverified. Imported geometry retains its upstream licence, not MIT.
+
+The controller has matching drilled lead holes, a thin open saddle clamp with
+mounting ears, and white/black/pink/blue incoming wires following the owner
+photo's colors. Routes and terminations remain visual estimates, not a verified
+pinout. Cover fixings are open 1 mm stamped tabs with fixing holes, following
+PXL_20261013_150144938.jpg. Wear is not reproduced. Exterior keyboard dimensions
+and the accepted sheet bends are unchanged. Detached controller-to-matrix
+mechanical docking still needs confirmation; no speculative cable was added.
+
+Validation: STEP split invariants, selected solid-clearance checks, repeatable
+owner-photo review views and browser instance-picking tests. These checks are
+**not physical print/fit verification**; model verification classifications
+remain unchanged.

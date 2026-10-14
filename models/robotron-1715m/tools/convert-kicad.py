@@ -8,7 +8,7 @@ import hashlib,json,struct
 import cadquery as cq
 root=Path(__file__).resolve().parents[1]/'components/kicad'
 records=[]
-for path in sorted((root/'source').glob('*.step')):
+for path in sorted((root/'source').glob('DIP-*.step')):
     name=path.stem; pins=int(name.split('-')[1].split('_')[0]); width=float(name.split('_W')[1][:-2])
     source=cq.importers.importStep(str(path)).val()
     b=source.BoundingBox();cx=(b.xmin+b.xmax)/2;cy=(b.ymin+b.ymax)/2

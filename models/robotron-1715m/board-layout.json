@@ -32,7 +32,7 @@
       "components": [
         {
           "ref": "A89",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -216,
@@ -41,11 +41,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A89 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A90",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -204,
@@ -54,11 +62,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A90 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A91",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -192,
@@ -67,11 +83,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A91 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A92",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -180,
@@ -80,11 +104,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A92 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A93",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -168,
@@ -93,11 +125,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A93 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A94",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -156,
@@ -106,11 +146,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A94 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A95",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -144,
@@ -119,11 +167,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A95 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A96",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -132,
@@ -132,11 +188,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A96 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A81",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -216,
@@ -145,11 +209,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A81 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A82",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -204,
@@ -158,11 +230,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A82 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A83",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -192,
@@ -171,11 +251,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A83 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A84",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -180,
@@ -184,11 +272,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A84 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A85",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -168,
@@ -197,11 +293,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A85 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A86",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -156,
@@ -210,11 +314,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A86 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A87",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -144,
@@ -223,11 +335,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A87 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A88",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -132,
@@ -236,11 +356,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A88 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A73",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -216,
@@ -249,11 +377,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A73 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A74",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -204,
@@ -262,11 +398,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A74 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A75",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -192,
@@ -275,11 +419,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A75 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A76",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -180,
@@ -288,11 +440,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A76 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A77",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -168,
@@ -301,11 +461,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A77 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A78",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -156,
@@ -314,11 +482,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A78 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A79",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -144,
@@ -327,11 +503,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A79 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A80",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -132,
@@ -340,11 +524,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A80 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A65",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -216,
@@ -353,11 +545,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A65 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A66",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -204,
@@ -366,11 +566,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A66 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A67",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -192,
@@ -379,11 +587,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A67 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A68",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -180,
@@ -392,11 +608,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A68 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A69",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -168,
@@ -405,11 +629,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A69 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A70",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -156,
@@ -418,11 +650,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A70 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A71",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -144,
@@ -431,11 +671,19 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A71 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A72",
-          "label": "U2164",
+          "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
             -132,
@@ -444,7 +692,15 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional",
+          "schematicLabel": "U2164",
+          "inspection": {
+            "title": "A72 · M4164B-12",
+            "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Package: DIP-16_W7.62mm. The drawing uses U2164. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A1",
@@ -457,7 +713,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A1 · UA880 CPU",
+            "text": "Z80-compatible main CPU. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A2",
@@ -470,7 +733,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A2 · UA858 DMA",
+            "text": "System DMA controller; floppy transfers. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A3",
@@ -483,7 +753,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A3 · UA8560 SIO",
+            "text": "Serial I/O, including keyboard receiver. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A44",
@@ -496,11 +773,18 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A44 · U8272 FDC",
+            "text": "Floppy-disk controller. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A4",
-          "label": "UA8570 CTC",
+          "label": "UA857D CTC",
           "model": "DIP-28_W15.24mm",
           "position": [
             -68,
@@ -509,11 +793,19 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms two UA857D packages; schematic references and local placement provisional",
+          "schematicLabel": "UA8570 CTC",
+          "inspection": {
+            "title": "A4 · UA857D CTC",
+            "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Package: DIP-28_W15.24mm. The drawing uses UA8570 CTC. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A5",
-          "label": "UA8570 CTC",
+          "label": "UA857D CTC",
           "model": "DIP-28_W15.24mm",
           "position": [
             -111,
@@ -522,7 +814,15 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Owner photo confirms two UA857D packages; schematic references and local placement provisional",
+          "schematicLabel": "UA8570 CTC",
+          "inspection": {
+            "title": "A5 · UA857D CTC",
+            "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Package: DIP-28_W15.24mm. The drawing uses UA8570 CTC. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A6",
@@ -535,7 +835,14 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A6 · U2716 boot ROM",
+            "text": "Boot EPROM. Documented W/M design; package and local placement estimated. Package: DIP-24_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A45",
@@ -548,7 +855,14 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A45 · DS8282",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A10",
@@ -561,7 +875,14 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A10 · DS8286",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A9",
@@ -574,7 +895,14 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A9 · DS8282",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A8",
@@ -587,7 +915,14 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A8 · DS8286",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A12",
@@ -600,7 +935,14 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A12 · DS8205",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A99",
@@ -613,7 +955,14 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A99 · DL000",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A60",
@@ -626,7 +975,14 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A60 · DL002",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A11",
@@ -639,7 +995,14 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A11 · DS8205",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A41",
@@ -652,7 +1015,14 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A41 · 74S287",
+            "text": "CAS/bank decode PROM. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A114",
@@ -665,7 +1035,14 @@
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A114 · DS8286",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A29",
@@ -678,7 +1055,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A29 · DL074",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A15",
@@ -691,7 +1075,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A15 · D121",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A16",
@@ -704,7 +1095,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A16 · 75450",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A31",
@@ -717,7 +1115,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A31 · D240",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A17",
@@ -730,7 +1135,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A17 · DL074",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A30",
@@ -743,7 +1155,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A30 · 74S00",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A34",
@@ -756,7 +1175,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A34 · DL003",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A40",
@@ -769,7 +1195,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A40 · DL000",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A32",
@@ -782,7 +1215,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A32 · DL002",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A39",
@@ -795,7 +1235,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A39 · DL008",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A38",
@@ -808,7 +1255,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A38 · DL008",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A36",
@@ -821,7 +1275,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A36 · DL004",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A37",
@@ -834,7 +1295,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A37 · DL074",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A58",
@@ -847,7 +1315,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A58 · 74S74",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A100",
@@ -860,7 +1335,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A100 · 74S00",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A26",
@@ -873,7 +1355,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A26 · DL002",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A59",
@@ -886,7 +1375,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A59 · D200",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A33",
@@ -899,7 +1395,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A33 · DL000",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A102",
@@ -912,7 +1415,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A102 · DL074",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A101",
@@ -925,7 +1435,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A101 · 74S74",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A105",
@@ -938,7 +1455,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A105 · DL112",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A112",
@@ -951,7 +1475,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A112 · DL000",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A54",
@@ -964,7 +1495,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A54 · DL295",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A18",
@@ -977,7 +1515,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A18 · DL004",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A19",
@@ -990,7 +1535,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A19 · K170UP2",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A24",
@@ -1003,7 +1555,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A24 · K155LP2",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A21",
@@ -1016,7 +1575,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A21 · K170AP2",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A23",
@@ -1029,7 +1595,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A23 · K170UP2",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A20",
@@ -1042,7 +1615,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A20 · K170UP2",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "A22",
@@ -1055,7 +1635,14 @@
           ],
           "rotation": 0,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated"
+          "status": "Documented W/M design; package and local placement estimated",
+          "inspection": {
+            "title": "A22 · K170AP2",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072654600",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         }
       ],
       "passives": [
@@ -1390,7 +1977,14 @@
           "photoCenter": [
             587,
             325
-          ]
+          ],
+          "inspection": {
+            "title": "P01 · MH74S00",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P02",
@@ -1407,7 +2001,14 @@
           "photoCenter": [
             690,
             325
-          ]
+          ],
+          "inspection": {
+            "title": "P02 · K555TM2",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P03",
@@ -1424,7 +2025,14 @@
           "photoCenter": [
             794,
             325
-          ]
+          ],
+          "inspection": {
+            "title": "P03 · 74LS123",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P04",
@@ -1441,7 +2049,14 @@
           "photoCenter": [
             900,
             325
-          ]
+          ],
+          "inspection": {
+            "title": "P04 · 74LS175",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P05",
@@ -1458,7 +2073,14 @@
           "photoCenter": [
             997,
             325
-          ]
+          ],
+          "inspection": {
+            "title": "P05 · 74LS175",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P06",
@@ -1475,7 +2097,14 @@
           "photoCenter": [
             1075,
             325
-          ]
+          ],
+          "inspection": {
+            "title": "P06 · K155LA3",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P07",
@@ -1492,7 +2121,14 @@
           "photoCenter": [
             1180,
             325
-          ]
+          ],
+          "inspection": {
+            "title": "P07 · MH74S00",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P08",
@@ -1509,7 +2145,14 @@
           "photoCenter": [
             1275,
             325
-          ]
+          ],
+          "inspection": {
+            "title": "P08 · MH74S00",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P09",
@@ -1526,7 +2169,14 @@
           "photoCenter": [
             1375,
             325
-          ]
+          ],
+          "inspection": {
+            "title": "P09 · K555TM5",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P10",
@@ -1543,7 +2193,14 @@
           "photoCenter": [
             1470,
             325
-          ]
+          ],
+          "inspection": {
+            "title": "P10 · MH74S00",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P11",
@@ -1560,7 +2217,14 @@
           "photoCenter": [
             395,
             510
-          ]
+          ],
+          "inspection": {
+            "title": "P11 · DL257D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P12",
@@ -1577,7 +2241,14 @@
           "photoCenter": [
             500,
             510
-          ]
+          ],
+          "inspection": {
+            "title": "P12 · DL093D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P13",
@@ -1594,7 +2265,14 @@
           "photoCenter": [
             995,
             510
-          ]
+          ],
+          "inspection": {
+            "title": "P13 · DL253D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P14",
@@ -1611,7 +2289,14 @@
           "photoCenter": [
             1380,
             510
-          ]
+          ],
+          "inspection": {
+            "title": "P14 · SN74LS112N",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P15",
@@ -1628,7 +2313,14 @@
           "photoCenter": [
             1460,
             510
-          ]
+          ],
+          "inspection": {
+            "title": "P15 · SN74S11N",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P16",
@@ -1645,7 +2337,14 @@
           "photoCenter": [
             640,
             590
-          ]
+          ],
+          "inspection": {
+            "title": "P16 · UL6516D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-24_W15.24mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P17",
@@ -1662,7 +2361,14 @@
           "photoCenter": [
             1108,
             590
-          ]
+          ],
+          "inspection": {
+            "title": "P17 · UL6516D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-24_W15.24mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P18",
@@ -1679,7 +2385,14 @@
           "photoCenter": [
             1237,
             590
-          ]
+          ],
+          "inspection": {
+            "title": "P18 · UL6516D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-24_W15.24mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P19",
@@ -1696,7 +2409,14 @@
           "photoCenter": [
             830,
             655
-          ]
+          ],
+          "inspection": {
+            "title": "P19 · SAB8275P",
+            "text": "Programmable CRT controller: character rows, attributes and cursor; the board fetches display data locally. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-40_W15.24mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P20",
@@ -1713,7 +2433,14 @@
           "photoCenter": [
             395,
             685
-          ]
+          ],
+          "inspection": {
+            "title": "P20 · DL253D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P21",
@@ -1730,7 +2457,14 @@
           "photoCenter": [
             500,
             680
-          ]
+          ],
+          "inspection": {
+            "title": "P21 · DL093D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P22",
@@ -1747,7 +2481,14 @@
           "photoCenter": [
             995,
             690
-          ]
+          ],
+          "inspection": {
+            "title": "P22 · DL295D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P23",
@@ -1764,7 +2505,14 @@
           "photoCenter": [
             1380,
             680
-          ]
+          ],
+          "inspection": {
+            "title": "P23 · DL295D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P24",
@@ -1781,7 +2529,14 @@
           "photoCenter": [
             1470,
             680
-          ]
+          ],
+          "inspection": {
+            "title": "P24 · DL295D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P25",
@@ -1798,7 +2553,14 @@
           "photoCenter": [
             395,
             855
-          ]
+          ],
+          "inspection": {
+            "title": "P25 · DL257D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P26",
@@ -1815,7 +2577,14 @@
           "photoCenter": [
             500,
             855
-          ]
+          ],
+          "inspection": {
+            "title": "P26 · DL093D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P27",
@@ -1832,7 +2601,14 @@
           "photoCenter": [
             600,
             855
-          ]
+          ],
+          "inspection": {
+            "title": "P27 · D201D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P28",
@@ -1849,7 +2625,14 @@
           "photoCenter": [
             705,
             850
-          ]
+          ],
+          "inspection": {
+            "title": "P28 · K580VA86",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-20_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P29",
@@ -1866,7 +2649,14 @@
           "photoCenter": [
             995,
             855
-          ]
+          ],
+          "inspection": {
+            "title": "P29 · DL257D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P30",
@@ -1883,7 +2673,14 @@
           "photoCenter": [
             1108,
             845
-          ]
+          ],
+          "inspection": {
+            "title": "P30 · K580VA86",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-20_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P31",
@@ -1900,7 +2697,14 @@
           "photoCenter": [
             1198,
             855
-          ]
+          ],
+          "inspection": {
+            "title": "P31 · MH74S00",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P32",
@@ -1917,7 +2721,14 @@
           "photoCenter": [
             1270,
             855
-          ]
+          ],
+          "inspection": {
+            "title": "P32 · K555LA3",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P33",
@@ -1934,7 +2745,14 @@
           "photoCenter": [
             395,
             1035
-          ]
+          ],
+          "inspection": {
+            "title": "P33 · D200D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P34",
@@ -1951,7 +2769,14 @@
           "photoCenter": [
             500,
             1035
-          ]
+          ],
+          "inspection": {
+            "title": "P34 · K555TM5",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P35",
@@ -1968,7 +2793,14 @@
           "photoCenter": [
             600,
             1035
-          ]
+          ],
+          "inspection": {
+            "title": "P35 · K555LA3",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P36",
@@ -1985,7 +2817,14 @@
           "photoCenter": [
             700,
             1035
-          ]
+          ],
+          "inspection": {
+            "title": "P36 · K555LA2",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P37",
@@ -2002,7 +2841,14 @@
           "photoCenter": [
             800,
             1035
-          ]
+          ],
+          "inspection": {
+            "title": "P37 · K555TM1",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P38",
@@ -2019,7 +2865,14 @@
           "photoCenter": [
             995,
             1035
-          ]
+          ],
+          "inspection": {
+            "title": "P38 · K555LA2",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         },
         {
           "ref": "P39",
@@ -2036,7 +2889,14 @@
           "photoCenter": [
             1080,
             1035
-          ]
+          ],
+          "inspection": {
+            "title": "P39 · DL002D",
+            "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_072935298",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          }
         }
       ],
       "passives": [

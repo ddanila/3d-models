@@ -10,7 +10,8 @@
     "title": "UB880D keyboard controller",
     "photo": "20261012_123622947",
     "evidence": "Owner photo",
-    "dimensions": "Package pitch nominal; placement photo-estimated."
+    "dimensions": "UB880D CPU and replacement EPROM follow the owner photo. The 56-330-4103-7 drawing describes a RAM-less U880, 2 KiB ROM, 13 × 8 matrix and address-clocked LED latches. Generic KiCad TO-92 bodies and three leads replace blocks; electrical transistor identity and hidden bends remain unverified.",
+    "source": "https://www.sax.de/~zander/pc1715/pc_tasts.pdf"
   },
   {
     "id": "keyboard-matrix",
@@ -47,7 +48,7 @@
     "title": "Monitor stand ring",
     "photo": "20261012_125132359.MP",
     "evidence": "Owner measurement",
-    "dimensions": "174 mm OD \u00d7 167 mm ID \u00d7 5 mm. Physical print/fit unverified."
+    "dimensions": "174 mm OD × 167 mm ID × 5 mm. Physical print/fit unverified."
   },
   {
     "id": "rear-signal",
@@ -55,7 +56,8 @@
     "title": "Rear connectors",
     "photo": "20261012_125413618",
     "evidence": "Owner photo",
-    "dimensions": "Socket outlines follow photos; contact spacing and hidden depths estimated."
+    "dimensions": "W drawing identifies X3 keyboard, X4 printer and X5 V24. Socket outlines follow owner photos; contact spacing and hidden depths estimated. Connector view/pinout is not verified against the specimen.",
+    "source": "https://xepb.org/robotron/docs/1715w.zip"
   },
   {
     "id": "drive-head",
@@ -70,7 +72,7 @@
     "part": "fan-retainers",
     "title": "Crossed fan retainers",
     "photo": "20261013_150303351",
-    "evidence": "This museum specimen \u2014 owner photo",
+    "evidence": "This museum specimen — owner photo",
     "dimensions": "Crossed straps and cushioning observed; dimensions photo-estimated.",
     "position": [
       65,
@@ -83,7 +85,7 @@
     "part": "drive-adapter-boards",
     "title": "05-330-0024 drive adapter",
     "photo": "20261013_150516969",
-    "evidence": "This museum specimen \u2014 owner photo",
+    "evidence": "This museum specimen — owner photo",
     "dimensions": "Black 34-way drive socket, pale 26-way ribbon connector and retaining latch. Board outline and routing estimated."
   },
   {
@@ -91,7 +93,7 @@
     "part": "psu-grommets",
     "title": "PSU cover access grommets",
     "photo": "20261013_150247694",
-    "evidence": "This museum specimen \u2014 owner photo",
+    "evidence": "This museum specimen — owner photo",
     "dimensions": "Two dark access grommets observed. Shield interior remains unverified."
   },
   {
@@ -118,7 +120,7 @@
     "title": "U8272 on W/M main board",
     "source": "https://xepb.org/robotron/docs/1715w.zip",
     "evidence": "Your specimen + documented W/M design",
-    "dimensions": "A44 follows the W placement drawing. Component-side owner photo available; complete position calibration remains pending.",
+    "dimensions": "A44 U8272 is on the W/M motherboard; the small add-on board is the display controller. Click individual IC bodies for roles and source links. Local placement and exact specimen revision remain provisional.",
     "photo": "20261014_072654600"
   },
   {

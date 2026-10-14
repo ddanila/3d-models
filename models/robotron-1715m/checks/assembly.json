@@ -3,6 +3,21 @@
   "toleranceMm3": 0.001,
   "results": [
     {
+      "interface": "keyboard-cable-vs-chip-bodies",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "keyboard-chips-vs-caps",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "keyboard-transistor-lead-holes",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
       "interface": "matrix-socket-vs-board",
       "intersectionMm3": 4.5e-05,
       "passed": true

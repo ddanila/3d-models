@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-14",
+  "sources": {
+    "wm": {
+      "url": "https://xepb.org/robotron/docs/1715w.zip",
+      "drawing": "1.93.310411.8/09; 1.93.310412.6/04"
+    },
+    "keyboard": {
+      "url": "https://www.sax.de/~zander/pc1715/pc_tasts.pdf",
+      "drawing": "56-330-4103-7 / 1.93.304103.0/04"
+    },
+    "crtc": {
+      "url": "https://www.emuverse.ru/downloads/datasheets/peripherals/display/8275/8275.pdf",
+      "pages": "8-237, 8-241"
+    }
+  },
+  "limitations": "Drawings establish circuit roles, not exact specimen revision, dimensions or every component marking. Hidden routing and pin-one orientations remain provisional.",
+  "motherboard": {
+    "ram": "32 x 64-Kbit DRAM = 256 KiB. Drawing: U2164; owner photo: M4164B-12.",
+    "roles": {
+      "A1": "Z80-compatible main CPU",
+      "A2": "System DMA controller; floppy transfers",
+      "A3": "Serial I/O, including keyboard receiver",
+      "A4": "Counter/timer",
+      "A5": "Counter/timer",
+      "A6": "Boot EPROM",
+      "A41": "CAS/bank decode PROM",
+      "A44": "Floppy-disk controller"
+    }
+  },
+  "keyboard": {
+    "cpu": "A5 U880 in schematic; UB880D in owner photo",
+    "rom": "A8 U556/U2716-compatible 2 KiB ROM; transplanted specimen ROM contents unverified",
+    "matrix": "13 scan selections x 8 inputs; no RAM on controller",
+    "leds": "A6A/A6B DL074 latches: address A14/A13 data, IORQ with A15 low clocks them",
+    "transistors": "Schematic: V4.1–V4.8 SC308C input stages, V3.1/V3.2 SC236D and V4.9 SC308C oscillator stages. Generic TO-92 model; photographed substitutes not electrically identified.",
+    "unresolved": "Detached controller-to-matrix docking orientation and hidden lead bends; no invented joining cable"
+  },
+  "connectors": [
+    {
+      "ref": "X2",
+      "role": "Motherboard to display board"
+    },
+    {
+      "ref": "X3",
+      "role": "Keyboard"
+    },
+    {
+      "ref": "X4",
+      "role": "Printer"
+    },
+    {
+      "ref": "X5",
+      "role": "V24 serial"
+    },
+    {
+      "ref": "X6",
+      "role": "Floppy interface"
+    },
+    {
+      "ref": "CRT X1",
+      "role": "Video A5, intensity A1, composite sync A3; 0 V B2; vertical sync B1; +12 V A4/B5; return A2/B3; shield B4",
+      "caution": "Drawing connector view; not a verified specimen cable wiring instruction"
+    }
+  ],
+  "display": {
+    "controller": "SAB8275P in owner photo; D05 8275-compatible device in drawing",
+    "fetch": "Local counters, RAM and multiplexers. Do not conflate with system UA858 floppy DMA.",
+    "implemented": "Seven-bit invisible-attribute data; CA inherits reverse/GPA; status read-clear and parameter-length errors.",
+    "remaining": "Cycle-level row DMA/underrun, 16-byte FIFO overflow timing, light pen, spaced rows and exact raster/IRQ timing are not implemented. Nominal frame/blink timing remains approximate."
+  }
+}

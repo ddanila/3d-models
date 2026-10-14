@@ -19,9 +19,16 @@ module owner_dip_pins(p) {
   translate([-.4,min(0,-s*1.4),2.7])cube([.8,1.4,.35]);
  }
 }
+// Owner 123622947: staggered transistor population, not a rectangular grid.
+// KiCad generic TO-92; no unverified electrical type or DDR mould identity.
+controller_transistors=[[-120,4,0],[-113,-7,25],[-109,-15,25],
+ [-105,-7,25],[-101,-10,25],[-97,-7,25],[-93,-10,25],[-89,-7,25],
+ [-105,10,-25],[-100,11,-25],[-101,17,-25]];
+module controller_transistor_pose(p){translate([p[0],p[1],1.6])rotate([0,0,p[2]])children();}
 module keyboard_controller_board(){keyboard_controller_pose()difference(){
  translate([-135,-23,0])cube([270,46,1.6]);
  for(x=[-130,130],y=[-18,18])translate([x,y,-1])cylinder(d=3.2,h=4);
+ for(p=controller_transistors)controller_transistor_pose(p)for(x=[-1.27,0,1.27])translate([x,0,-2])cylinder(d=.85,h=4,$fn=12);
  for(p=concat(controller_dips,[[114,8,24,15.24]]),i=[0:p[2]/2-1],side=[-1,1])
    translate([p[0]+(i-(p[2]/2-1)/2)*2.54,p[1]+side*p[3]/2,-1])cylinder(d=.9,h=4,$fn=12);
 }}
@@ -29,7 +36,7 @@ module keyboard_controller_chips(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_body(p);
  // Socket below the photographed UB880D and socket below replacement EPROM.
  for(p=[[62,8,54,19],[114,8,34,19]])translate([p[0],p[1],1.6])difference(){slab(p[2],p[3],1.2,.6);slab(p[2]-4,p[3]-4,2,.4);}
- for(x=[-113,-104,-95,-86],y=[-12,5])translate([x,y,3])rotate([0,0,25])cube([4,3,5]);
+ for(p=controller_transistors)controller_transistor_pose(p)import("components/kicad/meshes/TO-92_Inline-body.stl");
 }}
 module keyboard_controller_ceramic(){keyboard_controller_pose(){
  translate([114,8,2.8])slab(32,13.5,3.5,.7);
@@ -47,11 +54,21 @@ module keyboard_controller_caps(){keyboard_controller_pose(){
 }}
 module keyboard_controller_metal(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_pins(p);
+ for(p=controller_transistors)controller_transistor_pose(p)import("components/kicad/meshes/TO-92_Inline-leads.stl");
  owner_dip_pins([114,8,24,15.24]);
  for(i=[0:12],s=[-1,1])translate([-25+i*2.54,3+s*2.54,2])cylinder(d=.65,h=4,$fn=8);
  for(p=[[-124,10],[-118,-13],[-106,16],[-92,-15],[130,-10]])translate([p[0],p[1],10.65])cylinder(d=4.5,h=.2,$fn=24);
  // Cable shield clamp, folded over the incoming lead.
- translate([-125,0,4.5])difference(){cube([8,22,5.8],center=true);rotate([0,90,0])cylinder(d=5.8,h=10,center=true,$fn=24);}
+ // Thin saddle, open below, with separate mounting ears (owner photo).
+ translate([-125,0,4.5])intersection(){
+  difference(){rotate([0,90,0])cylinder(r=3.9,h=8,center=true,$fn=48);rotate([0,90,0])cylinder(r=2.9,h=10,center=true,$fn=48);}
+  translate([-5,-5,0])cube([10,10,5]);
+ }
+ for(s=[-1,1])translate([-125,s*3.4,1.6]){
+  translate([-4,-.5,0])cube([8,1,2.9]);
+  difference(){translate([-4,min(0,s*6),0])cube([8,6,1]);translate([0,s*3,-1])cylinder(d=2.8,h=3,$fn=24);}
+ }
+ translate([-125,-6.4,2.6])screw(4.5,1);
  for(x=[-130,130],y=[-18,18])translate([x,y,1.6])screw(5,1);
 }}
 module keyboard_controller_ink(){keyboard_controller_pose(){
@@ -264,6 +281,9 @@ module specimen_shape(p){
  if(p=="keyboard-pcb-supports")keyboard_pcb_supports();
  if(p=="keyboard-pcb-fasteners")keyboard_pcb_fasteners();
  if(p=="keyboard-entry-wires")keyboard_entry_wires();
+ if(p=="keyboard-entry-black")keyboard_entry_wires(1);
+ if(p=="keyboard-entry-pink")keyboard_entry_wires(2);
+ if(p=="keyboard-entry-blue")keyboard_entry_wires(3);
  if(p=="keyboard-contact-routes")keyboard_contact_routes();
  if(p=="keyboard-pcb-metal")keyboard_pcb_metal();
  if(p=="keyboard-controller-traces")keyboard_controller_traces();
@@ -297,8 +317,8 @@ module keyboard_pcb_fasteners(){
 }
 // Short lead bundle and strain relief at the owner-photographed controller entry.
 // Routes are visual estimates; no undocumented electrical pinout is asserted.
-module keyboard_entry_wires(){keyboard_controller_pose()
- for(i=[0:3])wire_run([[-125,-2+i*1.5,4.5],[-123,-7+i*3,6],[-116,-7+i*3,3]],.55);
+module keyboard_entry_wires(i=0){keyboard_controller_pose()
+ wire_run([[-125,-2+i*1.5,4.5],[-123,-7+i*3,6],[-116,-7+i*3,3]],.55);
 }
 module keyboard_contact_routes(){
  translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])

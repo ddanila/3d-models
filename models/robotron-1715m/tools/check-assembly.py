@@ -10,6 +10,9 @@ def volume(path):
         total+=a[0]*(bv[1]*c[2]-bv[2]*c[1])+a[1]*(bv[2]*c[0]-bv[0]*c[2])+a[2]*(bv[0]*c[1]-bv[1]*c[0])
     return abs(total/6)
 checks={
+ 'keyboard-cable-vs-chip-bodies': ('keyboard_internal_cable();','keyboard_controller_chips();'),
+ 'keyboard-chips-vs-caps': ('keyboard_controller_chips();','keyboard_controller_caps();'),
+ 'keyboard-transistor-lead-holes': ('keyboard_controller_pose()for(p=controller_transistors)controller_transistor_pose(p)for(x=[-1.27,0,1.27])translate([x,0,-1.6])cylinder(d=.6,h=1.6,$fn=12);','keyboard_controller_board();'),
  'matrix-socket-vs-board': ('keyboard_matrix_socket();','keyboard_pcb();'),
  'matrix-socket-vs-controller': ('keyboard_matrix_socket();','keyboard_controller_board();'),
  'keyboard-guide-vs-moving-carrier-rest': ('switch_guide();','translate([0,0,11.3])contact_carrier();'),
