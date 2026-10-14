@@ -3,6 +3,21 @@
   "toleranceMm3": 0.001,
   "results": [
     {
+      "interface": "board-connectors-vs-chip-bodies",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "motherboard-ribbon-plug-vs-chip-bodies",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "motherboard-ribbon-plug-vs-socket",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
       "interface": "keyboard-discrete-leads-vs-board",
       "intersectionMm3": 0,
       "passed": true

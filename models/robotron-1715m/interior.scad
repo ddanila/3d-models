@@ -73,6 +73,8 @@ module logic_connectors(){connector_pose()translate([0,0,3.7])board_socket($pins
 module logic_connector_contacts(){connector_pose()translate([0,0,3.7])board_socket_contacts($pins);}
 function display_xy(p)=[-222+(p[0]-40)/1630*220,10+(1-(p[1]-180)/1170)*165];
 module logic_artwork(){
+ if(pcb_selected("motherboard"))for(path=pcb_motherboard_routes,i=[0:len(path)-2])hull()for(j=[i,i+1])translate(concat(path[j],[13.605]))cylinder(d=.32,h=.035,$fn=8);
+
  if(pcb_selected("display-controller")){
   // Clean raised route geometry from the owner's solder-side photograph.
   for(path=pcb_display_routes,i=[0:len(path)-2])hull()for(j=[i,i+1])translate(concat(display_xy(path[j]),[42.62]))cylinder(d=.42,h=.08,$fn=8);
@@ -80,6 +82,8 @@ module logic_artwork(){
   for(p=pcb_footprints)if(p[3]=="display-controller")translate([p[0]-.9,p[1],42.62])cube([1.8,.3,.08]);
  }
 }
+module logic_silkscreen(){if(pcb_selected("motherboard"))for(p=pcb_motherboard_markings)translate(concat(p[1],[13.65]))rotate([0,0,p[3]])linear_extrude(.025)text(p[0],size=p[2],halign="center",valign="center",font="Liberation Sans:style=Bold");}
+module logic_ribbon_plug(){if(pcb_selected("motherboard"))translate(pcb_ribbon_socket)translate([0,0,8.5])cube([32.2,4.4,6.2],center=true);}
 module psu_chassis() {
     // Folded shield, right hand compartment, photo-scaled within 500x400 case.
     translate([94,-183,9])difference(){cube([144,369,104]);translate([1,1,1])cube([142,367,105]);
@@ -149,9 +153,13 @@ module fan_rotor() {
 module ribbon_run(points,w=42,t=.8) {
     for(i=[0:len(points)-2])hull(){translate(points[i])cube([w,1,t],center=true);translate(points[i+1])cube([w,1,t],center=true);}
 }
-function drive_ribbon_path(unit,dx=0,lift=0)=unit==0?
- [[-158+dx,16,87.5+lift],[-158+dx,24,109+lift],[-181+dx,39,120+lift],[-20+dx,37,88+lift],[7+dx,35,24+lift]]:
- [[-4+dx,16,87.5+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-91+dx,39,95+lift],[-130+dx,28,73+lift],[-20+dx,22,50+lift],[7+dx,35,24+lift]];
+// Both visible drive runs terminate in the photographed motherboard socket.
+// Routing between the photographed ends is a provisional service loop.
+function ribbon_end(dx=0,lift=0)=[pcb_ribbon_socket[0]+dx,pcb_ribbon_socket[1],pcb_ribbon_socket[2]+11.6+lift];
+function drive_ribbon_path(unit,dx=0,lift=0)=concat(unit==0?
+ [[-158+dx,16,87.5+lift],[-158+dx,24,109+lift],[-181+dx,39,120+lift],[-175+dx,83,65+lift]]:
+ [[-4+dx,16,87.5+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-125+dx,65,95+lift],[-175+dx,83,66+lift]],
+ [[pcb_ribbon_socket[0]+dx,pcb_ribbon_socket[1]-16,35+lift],ribbon_end(dx,lift)]);
 // 0.3 mm clearance on both vertical faces; 8 mm insertion into socket.
 module drive_ribbon_plugs(){for(x=[-158,-4])translate([x-16.5,4,85.3])cube([33,12,4.4]);}
 module ribbons(){for(u=[0:1])ribbon_run(drive_ribbon_path(u),33);}
@@ -213,6 +221,8 @@ module interior_shape(p) {
     if(p=="logic-connector-contacts")logic_connector_contacts();
     if(p=="logic-boards")logic_boards();
     if(p=="logic-artwork")logic_artwork();
+    if(p=="logic-silkscreen")logic_silkscreen();
+    if(p=="logic-ribbon-plug")logic_ribbon_plug();
     if(p=="logic-chips")logic_chips();
     if(p=="logic-pins")logic_pins();
     if(p=="logic-connectors")logic_connectors();

@@ -165,3 +165,19 @@ Canonical material profiles distinguish tinned leads, solder, phenolic board,
 ceramic, IC moulding and painted metal. The browser uses the same profiles for
 instanced ICs. They describe clean finishes, without copied wear or baked photo
 lighting. The accepted exterior and printed/verified classifications are unchanged.
+
+### v39: photographed board detail and cable endpoints
+
+Owner `PXL_20261014_073200542.jpg` supplies 26 manually selected visible copper
+segments, the visible `25.8` board marking, eleven small component positions and
+the motherboard ribbon socket. `board-layout.json` retains the image coordinates
+and the existing nominal DIP-pitch homography. Copper is clean shallow geometry
+under a green mask finish; it is a partial visual reconstruction, not a netlist.
+No wear, hidden connections, inferred resistor values or invented reference
+labels were added. Four earlier upper-board capacitor estimates remain marked.
+
+The ribbon ends now meet a seated plug in that socket. The plug clears the
+socket dividers; intermediate cable bends remain provisional. Physical
+printed-and-verified classifications are unchanged. Rebuild with
+`tools/configure-pcb.py`, the normal export/package tools, and run
+`tools/check-assembly.py` before importing into DAC.

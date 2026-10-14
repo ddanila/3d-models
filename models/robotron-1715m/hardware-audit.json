@@ -27,14 +27,17 @@
       "A41": "CAS/bank decode PROM",
       "A44": "Floppy-disk controller"
     },
-    "placement": "32 RAM and two CTC positions registered against owner photos; eleven processor-area packages and one long socket use a local projective fit to nominal DIP-40 lead pitch. Global board dimensions and reference correspondence remain provisional."
+    "placement": "32 RAM and two CTC positions registered against owner photos; eleven processor-area packages and one long socket use a local projective fit to nominal DIP-40 lead pitch. Global board dimensions and reference correspondence remain provisional.",
+    "artwork": "Partial visible masked copper paths and board marking traced from owner 073200542 using the existing local pitch fit. No hidden routes or electrical netlist inferred.",
+    "passives": "Eleven lower-board resistors/capacitors registered from owner 073200542; nominal body dimensions and unknown electrical values.",
+    "ribbon": "Motherboard ribbon socket and plug registered to owner 073200542; drive-to-board service loops remain approximate."
   },
   "keyboard": {
     "cpu": "A5 U880 in schematic; UB880D in owner photo",
     "rom": "A8 U556/U2716-compatible 2 KiB ROM; transplanted specimen ROM contents unverified",
     "matrix": "13 scan selections x 8 inputs; no RAM on controller",
     "leds": "A6A/A6B DL074 latches: address A14/A13 data, IORQ with A15 low clocks them",
-    "transistors": "Schematic: V4.1–V4.8 SC308C input stages, V3.1/V3.2 SC236D and V4.9 SC308C oscillator stages. Generic TO-92 model; photographed substitutes not electrically identified.",
+    "transistors": "Schematic: V4.1\u2013V4.8 SC308C input stages, V3.1/V3.2 SC236D and V4.9 SC308C oscillator stages. Generic TO-92 model; photographed substitutes not electrically identified.",
     "unresolved": "Detached controller-to-matrix mating orientation and hidden lead bends; no invented joining cable. Visible connector/resistor tails share PCB holes and underside solder eyes."
   },
   "connectors": [
@@ -67,7 +70,7 @@
   "display": {
     "controller": "SAB8275P in owner photo; D05 8275-compatible device in drawing",
     "fetch": "Local counters, RAM and multiplexers. Do not conflate with system UA858 floppy DMA.",
-    "implemented": "Bounded attribute FIFO; row-based nominal character-clock scheduling; programmed burst gaps and stop-DMA dummy consumption; read-clear FO, DU and raster IR status; underrun blanking/retrace recovery. Runtime timing is separate from host rendering.",
-    "remaining": "Display-board DACK response is idealized at one byte per character clock. Row bytes are sampled together; no per-byte bus contention or visible raster tearing. Nominal 13.824 MHz / 8 clock is a family reference, not measured on this W/M specimen. CPU interrupt wiring, light pen, spaced-row pixel output and exact board delays remain unverified/unimplemented."
+    "implemented": "Bounded attribute FIFO; row-based nominal character-clock scheduling; programmed burst gaps and stop-DMA dummy consumption; read-clear FO, DU and raster IR status; underrun blanking/retrace recovery. Runtime timing is separate from host rendering. Completed fetched rows now latch at scanout boundaries with retained field attributes; host rendering reads historical rows, not current VRAM.",
+    "remaining": "Display-board DACK response is idealized at one byte per character clock. Row bytes are sampled together; row-level scanout only, without per-byte bus contention or scanline-accurate tearing. Nominal 13.824 MHz / 8 clock is a family reference, not measured on this W/M specimen. CPU interrupt wiring, light pen, spaced-row pixel output and exact board delays remain unverified/unimplemented."
   }
 }

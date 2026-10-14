@@ -1809,23 +1809,238 @@
           "label": "K170AP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -171,
-            144,
+            -195.164,
+            101.622,
+            13.6
+          ],
+          "rotation": 90,
+          "side": 1,
+          "status": "Visible 14-pin body registered from owner 073200542; A22 is a provisional drawing correspondence, not an identified specimen reference.",
+          "inspection": {
+            "title": "A22 · K170AP2",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position follows the visible right-side 14-pin package in owner 073200542; reference correspondence remains unverified.",
+            "evidence": "Owner photograph + W/M documentation; estimated placement",
+            "photo": "20261014_073200542",
+            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+          },
+          "photoCentre": [
+            1204,
+            691
+          ]
+        }
+      ],
+      "passives": [
+        {
+          "kind": "crystal",
+          "position": [
+            -180,
+            -165,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Documented W/M design; package and local placement estimated",
-          "inspection": {
-            "title": "A22 · K170AP2",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
-            "evidence": "Owner photograph + W/M documentation; estimated placement",
-            "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
-          }
-        }
-      ],
-      "passives": [
+          "diameter": 5,
+          "height": 6
+        },
+        {
+          "kind": "crystal",
+          "position": [
+            -128,
+            -165,
+            13.6
+          ],
+          "rotation": 180,
+          "side": 1,
+          "diameter": 5,
+          "height": 6
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -101.765,
+            24.237,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            707,
+            307
+          ],
+          "status": "Owner photo 073200542, local pitch fit; dimensions estimated and electrical values unknown"
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -50.965,
+            28.153,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            485,
+            337
+          ],
+          "status": "Owner photo 073200542, local pitch fit; dimensions estimated and electrical values unknown"
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -52.49,
+            53.702,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            487,
+            452
+          ],
+          "status": "Owner photo 073200542, local pitch fit; dimensions estimated and electrical values unknown"
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -53.135,
+            74.995,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            486,
+            552
+          ],
+          "status": "Owner photo 073200542, local pitch fit; dimensions estimated and electrical values unknown"
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -91.984,
+            92.767,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            661,
+            639
+          ],
+          "status": "Owner photo 073200542, local pitch fit; dimensions estimated and electrical values unknown"
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -123.881,
+            95.136,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            817,
+            652
+          ],
+          "status": "Owner photo 073200542, local pitch fit; dimensions estimated and electrical values unknown"
+        },
+        {
+          "kind": "ceramic",
+          "position": [
+            -150.704,
+            93.512,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 4,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            955,
+            644
+          ],
+          "status": "Owner photo 073200542, local pitch fit; dimensions estimated and electrical values unknown"
+        },
+        {
+          "kind": "resistor",
+          "position": [
+            -110.16,
+            59.137,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 2.5,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            747,
+            470
+          ],
+          "status": "Owner photo 073200542, local pitch fit; dimensions estimated and electrical values unknown"
+        },
+        {
+          "kind": "resistor",
+          "position": [
+            -76.669,
+            85.223,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 2.5,
+          "height": 4,
+          "side": 1,
+          "photoCentre": [
+            590,
+            601
+          ],
+          "status": "Owner photo 073200542, local pitch fit; dimensions estimated and electrical values unknown"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -60.647,
+            75.294,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 5,
+          "height": 8,
+          "side": 1,
+          "photoCentre": [
+            519,
+            553
+          ],
+          "status": "Owner photo 073200542, local pitch fit; dimensions estimated and electrical values unknown"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -27.652,
+            114.285,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 5,
+          "height": 8,
+          "side": 1,
+          "photoCentre": [
+            366,
+            744
+          ],
+          "status": "Owner photo 073200542, local pitch fit; dimensions estimated and electrical values unknown"
+        },
         {
           "kind": "ceramic",
           "position": [
@@ -1873,206 +2088,6 @@
           "side": 1,
           "diameter": 5,
           "height": 4
-        },
-        {
-          "kind": "ceramic",
-          "position": [
-            -106,
-            40,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 5,
-          "height": 4
-        },
-        {
-          "kind": "ceramic",
-          "position": [
-            -135,
-            40,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 5,
-          "height": 4
-        },
-        {
-          "kind": "ceramic",
-          "position": [
-            -162,
-            40,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 5,
-          "height": 4
-        },
-        {
-          "kind": "ceramic",
-          "position": [
-            -5,
-            105,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 5,
-          "height": 4
-        },
-        {
-          "kind": "ceramic",
-          "position": [
-            -72,
-            113,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 5,
-          "height": 4
-        },
-        {
-          "kind": "ceramic",
-          "position": [
-            -202,
-            130,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 5,
-          "height": 4
-        },
-        {
-          "kind": "electrolytic",
-          "position": [
-            13,
-            118,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 6.3,
-          "height": 10
-        },
-        {
-          "kind": "electrolytic",
-          "position": [
-            -33,
-            120,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 6.3,
-          "height": 10
-        },
-        {
-          "kind": "electrolytic",
-          "position": [
-            -91,
-            120,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 6.3,
-          "height": 10
-        },
-        {
-          "kind": "electrolytic",
-          "position": [
-            -201,
-            110,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 6.3,
-          "height": 10
-        },
-        {
-          "kind": "crystal",
-          "position": [
-            -180,
-            -165,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 5,
-          "height": 6
-        },
-        {
-          "kind": "crystal",
-          "position": [
-            -128,
-            -165,
-            13.6
-          ],
-          "rotation": 180,
-          "side": 1,
-          "diameter": 5,
-          "height": 6
-        },
-        {
-          "ref": "R19",
-          "kind": "resistor",
-          "position": [
-            -14,
-            56,
-            13.6
-          ],
-          "rotation": 90,
-          "diameter": 2.5,
-          "height": 4,
-          "side": 1,
-          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
-        },
-        {
-          "ref": "R102",
-          "kind": "resistor",
-          "position": [
-            -57,
-            54.5,
-            13.6
-          ],
-          "rotation": 90,
-          "diameter": 2.5,
-          "height": 4,
-          "side": 1,
-          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
-        },
-        {
-          "ref": "C90",
-          "kind": "ceramic",
-          "position": [
-            -25,
-            82,
-            13.6
-          ],
-          "rotation": 180,
-          "diameter": 5.5,
-          "height": 4,
-          "side": 1,
-          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
-        },
-        {
-          "ref": "C91",
-          "kind": "ceramic",
-          "position": [
-            -68,
-            82,
-            13.6
-          ],
-          "rotation": 180,
-          "diameter": 5.5,
-          "height": 4,
-          "side": 1,
-          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
         }
       ],
       "connectors": [
@@ -2088,13 +2103,14 @@
         },
         {
           "position": [
-            7,
-            35,
+            -177.66,
+            138.819,
             13.6
           ],
           "n": 13,
-          "rotation": 180,
-          "side": 1
+          "rotation": 90,
+          "side": 1,
+          "status": "Ribbon socket visible in owner 073200542; local photo fit, nominal 26-way pitch; hidden wiring provisional"
         },
         {
           "position": [
@@ -3775,5 +3791,966 @@
     },
     "scope": "Local projective correction from nominal DMA DIP-40 pitch. Lead-centre picking, nominal row spacing, lens distortion and extrapolation remain uncertain; global board dimensions not calibrated."
   },
-  "motherboardRearPhotoBasis": "Image right maps to canonical -X; v37 positive-X placement corrected about board centre X=-106 mm."
+  "motherboardRearPhotoBasis": "Image right maps to canonical -X; v37 positive-X placement corrected about board centre X=-106 mm.",
+  "motherboardArtwork": {
+    "photo": "PXL_20261014_073200542.jpg",
+    "reviewResolution": [
+      1600,
+      1205
+    ],
+    "photoPaths": [
+      [
+        [
+          365,
+          352
+        ],
+        [
+          530,
+          352
+        ],
+        [
+          545,
+          340
+        ],
+        [
+          695,
+          340
+        ]
+      ],
+      [
+        [
+          365,
+          365
+        ],
+        [
+          544,
+          365
+        ],
+        [
+          562,
+          350
+        ],
+        [
+          718,
+          350
+        ]
+      ],
+      [
+        [
+          365,
+          378
+        ],
+        [
+          418,
+          378
+        ],
+        [
+          430,
+          366
+        ],
+        [
+          612,
+          366
+        ]
+      ],
+      [
+        [
+          366,
+          396
+        ],
+        [
+          414,
+          396
+        ],
+        [
+          428,
+          382
+        ]
+      ],
+      [
+        [
+          584,
+          293
+        ],
+        [
+          636,
+          293
+        ],
+        [
+          651,
+          282
+        ],
+        [
+          709,
+          282
+        ]
+      ],
+      [
+        [
+          584,
+          306
+        ],
+        [
+          648,
+          306
+        ],
+        [
+          665,
+          292
+        ],
+        [
+          709,
+          292
+        ]
+      ],
+      [
+        [
+          584,
+          320
+        ],
+        [
+          656,
+          320
+        ],
+        [
+          674,
+          305
+        ],
+        [
+          695,
+          305
+        ]
+      ],
+      [
+        [
+          584,
+          331
+        ],
+        [
+          662,
+          331
+        ],
+        [
+          680,
+          317
+        ],
+        [
+          700,
+          317
+        ]
+      ],
+      [
+        [
+          829,
+          329
+        ],
+        [
+          883,
+          329
+        ],
+        [
+          901,
+          341
+        ],
+        [
+          963,
+          341
+        ]
+      ],
+      [
+        [
+          829,
+          338
+        ],
+        [
+          872,
+          338
+        ],
+        [
+          890,
+          350
+        ],
+        [
+          940,
+          350
+        ]
+      ],
+      [
+        [
+          829,
+          347
+        ],
+        [
+          860,
+          347
+        ],
+        [
+          876,
+          358
+        ],
+        [
+          950,
+          358
+        ]
+      ],
+      [
+        [
+          321,
+          647
+        ],
+        [
+          428,
+          647
+        ],
+        [
+          440,
+          638
+        ],
+        [
+          535,
+          638
+        ],
+        [
+          548,
+          646
+        ],
+        [
+          603,
+          646
+        ],
+        [
+          616,
+          658
+        ],
+        [
+          748,
+          658
+        ]
+      ],
+      [
+        [
+          321,
+          656
+        ],
+        [
+          431,
+          656
+        ],
+        [
+          443,
+          648
+        ],
+        [
+          531,
+          648
+        ],
+        [
+          545,
+          657
+        ],
+        [
+          599,
+          657
+        ],
+        [
+          611,
+          669
+        ],
+        [
+          786,
+          669
+        ]
+      ],
+      [
+        [
+          321,
+          667
+        ],
+        [
+          439,
+          667
+        ],
+        [
+          451,
+          658
+        ],
+        [
+          526,
+          658
+        ]
+      ],
+      [
+        [
+          557,
+          681
+        ],
+        [
+          586,
+          681
+        ],
+        [
+          603,
+          691
+        ],
+        [
+          939,
+          691
+        ]
+      ],
+      [
+        [
+          557,
+          691
+        ],
+        [
+          580,
+          691
+        ],
+        [
+          598,
+          702
+        ],
+        [
+          950,
+          702
+        ]
+      ],
+      [
+        [
+          557,
+          702
+        ],
+        [
+          576,
+          702
+        ],
+        [
+          593,
+          713
+        ],
+        [
+          871,
+          713
+        ]
+      ],
+      [
+        [
+          557,
+          713
+        ],
+        [
+          574,
+          713
+        ],
+        [
+          590,
+          724
+        ],
+        [
+          850,
+          724
+        ]
+      ],
+      [
+        [
+          557,
+          724
+        ],
+        [
+          571,
+          724
+        ],
+        [
+          588,
+          736
+        ],
+        [
+          736,
+          736
+        ]
+      ],
+      [
+        [
+          716,
+          409
+        ],
+        [
+          738,
+          409
+        ],
+        [
+          754,
+          423
+        ]
+      ],
+      [
+        [
+          716,
+          419
+        ],
+        [
+          730,
+          419
+        ],
+        [
+          748,
+          434
+        ]
+      ],
+      [
+        [
+          716,
+          430
+        ],
+        [
+          726,
+          430
+        ],
+        [
+          747,
+          447
+        ]
+      ],
+      [
+        [
+          715,
+          563
+        ],
+        [
+          735,
+          563
+        ],
+        [
+          754,
+          546
+        ]
+      ],
+      [
+        [
+          715,
+          576
+        ],
+        [
+          731,
+          576
+        ],
+        [
+          755,
+          553
+        ]
+      ],
+      [
+        [
+          715,
+          589
+        ],
+        [
+          728,
+          589
+        ],
+        [
+          755,
+          564
+        ]
+      ],
+      [
+        [
+          715,
+          602
+        ],
+        [
+          724,
+          602
+        ],
+        [
+          755,
+          573
+        ]
+      ]
+    ],
+    "paths": [
+      [
+        [
+          -21.8,
+          30.118
+        ],
+        [
+          -61.733,
+          32.067
+        ],
+        [
+          -65.154,
+          29.557
+        ],
+        [
+          -99.116,
+          31.293
+        ]
+      ],
+      [
+        [
+          -22.0,
+          33.121
+        ],
+        [
+          -65.085,
+          35.118
+        ],
+        [
+          -69.163,
+          31.986
+        ],
+        [
+          -104.14,
+          33.707
+        ]
+      ],
+      [
+        [
+          -22.2,
+          36.108
+        ],
+        [
+          -35.249,
+          36.681
+        ],
+        [
+          -38.02,
+          34.09
+        ],
+        [
+          -80.663,
+          36.058
+        ]
+      ],
+      [
+        [
+          -22.722,
+          40.23
+        ],
+        [
+          -34.503,
+          40.707
+        ],
+        [
+          -37.728,
+          37.692
+        ]
+      ],
+      [
+        [
+          -73.953,
+          19.484
+        ],
+        [
+          -85.88,
+          20.202
+        ],
+        [
+          -89.254,
+          17.948
+        ],
+        [
+          -102.221,
+          18.756
+        ]
+      ],
+      [
+        [
+          -74.016,
+          22.417
+        ],
+        [
+          -88.623,
+          23.259
+        ],
+        [
+          -92.424,
+          20.374
+        ],
+        [
+          -102.215,
+          20.965
+        ]
+      ],
+      [
+        [
+          -74.083,
+          25.559
+        ],
+        [
+          -90.445,
+          26.458
+        ],
+        [
+          -94.451,
+          23.375
+        ],
+        [
+          -99.117,
+          23.645
+        ]
+      ],
+      [
+        [
+          -74.136,
+          28.016
+        ],
+        [
+          -91.803,
+          28.95
+        ],
+        [
+          -95.795,
+          26.094
+        ],
+        [
+          -100.22,
+          26.34
+        ]
+      ],
+      [
+        [
+          -127.885,
+          30.432
+        ],
+        [
+          -139.069,
+          31.027
+        ],
+        [
+          -142.652,
+          33.727
+        ],
+        [
+          -155.108,
+          34.362
+        ]
+      ],
+      [
+        [
+          -127.837,
+          32.338
+        ],
+        [
+          -136.747,
+          32.797
+        ],
+        [
+          -140.344,
+          35.489
+        ],
+        [
+          -150.437,
+          35.985
+        ]
+      ],
+      [
+        [
+          -127.789,
+          34.238
+        ],
+        [
+          -134.217,
+          34.558
+        ],
+        [
+          -137.429,
+          37.014
+        ],
+        [
+          -152.357,
+          37.726
+        ]
+      ],
+      [
+        [
+          -15.659,
+          94.672
+        ],
+        [
+          -40.761,
+          94.56
+        ],
+        [
+          -43.418,
+          92.713
+        ],
+        [
+          -64.792,
+          92.65
+        ],
+        [
+          -67.703,
+          94.24
+        ],
+        [
+          -79.653,
+          94.188
+        ],
+        [
+          -82.478,
+          96.534
+        ],
+        [
+          -109.991,
+          96.36
+        ]
+      ],
+      [
+        [
+          -15.802,
+          96.543
+        ],
+        [
+          -41.546,
+          96.388
+        ],
+        [
+          -44.208,
+          94.748
+        ],
+        [
+          -63.972,
+          94.656
+        ],
+        [
+          -67.108,
+          96.433
+        ],
+        [
+          -78.832,
+          96.361
+        ],
+        [
+          -81.444,
+          98.696
+        ],
+        [
+          -117.633,
+          98.398
+        ]
+      ],
+      [
+        [
+          -15.976,
+          98.821
+        ],
+        [
+          -43.49,
+          98.604
+        ],
+        [
+          -46.13,
+          96.765
+        ],
+        [
+          -62.933,
+          96.659
+        ]
+      ],
+      [
+        [
+          -69.861,
+          101.156
+        ],
+        [
+          -76.131,
+          101.091
+        ],
+        [
+          -79.809,
+          103.0
+        ],
+        [
+          -147.277,
+          102.194
+        ]
+      ],
+      [
+        [
+          -69.914,
+          103.118
+        ],
+        [
+          -74.882,
+          103.059
+        ],
+        [
+          -78.781,
+          105.147
+        ],
+        [
+          -149.259,
+          104.175
+        ]
+      ],
+      [
+        [
+          -69.971,
+          105.268
+        ],
+        [
+          -74.071,
+          105.212
+        ],
+        [
+          -77.756,
+          107.289
+        ],
+        [
+          -134.135,
+          106.408
+        ]
+      ],
+      [
+        [
+          -70.029,
+          107.41
+        ],
+        [
+          -73.69,
+          107.353
+        ],
+        [
+          -77.159,
+          109.42
+        ],
+        [
+          -130.011,
+          108.496
+        ]
+      ],
+      [
+        [
+          -70.086,
+          109.543
+        ],
+        [
+          -73.097,
+          109.491
+        ],
+        [
+          -76.78,
+          111.732
+        ],
+        [
+          -107.427,
+          111.135
+        ]
+      ],
+      [
+        [
+          -103.652,
+          46.253
+        ],
+        [
+          -108.368,
+          46.433
+        ],
+        [
+          -111.74,
+          49.482
+        ]
+      ],
+      [
+        [
+          -103.643,
+          48.356
+        ],
+        [
+          -106.643,
+          48.465
+        ],
+        [
+          -110.446,
+          51.724
+        ]
+      ],
+      [
+        [
+          -103.634,
+          50.66
+        ],
+        [
+          -105.774,
+          50.734
+        ],
+        [
+          -110.207,
+          54.408
+        ]
+      ],
+      [
+        [
+          -103.311,
+          77.797
+        ],
+        [
+          -107.483,
+          77.839
+        ],
+        [
+          -111.457,
+          74.507
+        ]
+      ],
+      [
+        [
+          -103.3,
+          80.38
+        ],
+        [
+          -106.633,
+          80.406
+        ],
+        [
+          -111.648,
+          75.9
+        ]
+      ],
+      [
+        [
+          -103.29,
+          82.952
+        ],
+        [
+          -105.993,
+          82.967
+        ],
+        [
+          -111.623,
+          78.079
+        ]
+      ],
+      [
+        [
+          -103.28,
+          85.511
+        ],
+        [
+          -105.148,
+          85.518
+        ],
+        [
+          -111.603,
+          79.855
+        ]
+      ]
+    ],
+    "width": 0.32,
+    "status": "Partial visible top-side copper under solder mask, manually traced through local pin-pitch registration. Hidden connections, net identity, vias and complete artwork are not reconstructed. Width estimated; no wear copied.",
+    "markings": [
+      {
+        "text": "25.8",
+        "position": [
+          -136.632,
+          163.527
+        ],
+        "height": 1.8,
+        "rotation": 180,
+        "status": "Visible board marking, photo-estimated size; no inferred component references."
+      }
+    ]
+  }
 }
