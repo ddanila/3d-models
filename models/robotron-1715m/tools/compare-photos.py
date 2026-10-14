@@ -49,4 +49,4 @@ for view in config['views']:
  sections.append(f'<h2>{view["name"]}</h2><p>{html.escape(view["limitations"])}</p><div><img src="../../reference/photos/{view["photo"]}"><img src="{view["name"]}-model.svg">{overlay_view}</div>')
 (out/'index.html').write_text('<!doctype html><meta charset="utf-8"><title>Robotron photo / mesh review</title><style>body{background:#202426;color:#eee;font:16px system-ui;margin:24px}div{display:flex}img,svg{width:33.33%;object-fit:contain;background:#ddd}</style><h1>Owner photo · exported mesh · overlay</h1><p>'+html.escape(config['status'])+'</p>'+''.join(sections))
 (out/'alignment.json').write_text(json.dumps(reports,indent=2)+'\n')
-print('Wrote two reproducible photo/STL comparisons to',out)
+print(f'Wrote {len(reports)} reproducible photo/STL comparisons to',out)

@@ -18,6 +18,16 @@ The [October 14 photo inventory](reference/owner-20261014.json) records 52 new o
 
 The family manual gives nominal envelopes of 500 × 400 × 130 mm (system), 320 × 350 × 330 mm (monitor including stand), and 500 × 200 × 40 mm (keyboard). These are family specifications, not new measurements of this specimen. See the [original manual, printed p.35](https://xepb.org/robotron/docs/pc_manu.pdf#page=36) and [W drawings](https://xepb.org/robotron/docs/1715w.zip). The [TEAC specification](https://www.bitsavers.org/pdf/teac/FD-55FV-13_Specification_Rev_E.pdf) documents 2.54 mm signal-contact pitch; adapter-board dimensions remain estimated.
 
+The keyboard matrix PCB now has the stepped connector tongue and separate pale
+socket with bent contacts visible in `123048886` / `123103225`. The tongue sits
+on the photographed side when viewed from underneath. Its location is fitted to
+the board photo, but the detached controller's mating/docking arrangement remains
+unverified; no connecting ribbon or electrical pinout is invented. Grey axial
+resistors with blue end bands are separate from the brown ceramic components.
+The quick SCAD review now includes the PCB supports, washers and contact routes
+and preserves the controller's distinct laminate colour. Rounded lid tabs and
+the painted 1 mm keyboard support plate retain the accepted exterior envelope.
+
 ## Evidence and verification
 
 [Evidence categories](evidence.json) distinguish **your specimen**, **documented W/M design**, and **comparative estimate**. Physical status is separate: photographs and visual approval never confer **printed and verified**. The repository’s model-status registry is authoritative. These assembled electronics remain physically unverified.
@@ -26,10 +36,30 @@ Owner photographs and original work are MIT. Imported KiCad packages retain thei
 
 ## Repeatable review
 
-- [Photo / exported mesh / overlay comparisons](checks/photo-comparisons/index.html): fan and adapter, generated from [stored landmarks](photo-alignment.json). Open locally in a browser. Planar projection flattens depth; fitted anchors and adjusted hole residuals are review aids, not independent dimensional validation.
+- [Photo / exported mesh / overlay comparisons](checks/photo-comparisons/index.html): fan, adapter and keyboard matrix board, generated from [stored landmarks](photo-alignment.json). Open locally in a browser. Planar projection flattens depth; fitted anchors and adjusted hole residuals are review aids, not independent dimensional validation.
 - [Assembly fit report](checks/assembly.json): plug/socket plastic, fan/frame and airway, board mounting holes, boards/bracket/shield, and discrete-component/chip-body clearance. Only the listed pairs are checked; touching surfaces are permitted. Contacts entering plugs are intentional.
 - [Drive motion report](checks/mechanics.json): all 80 modeled head positions against the fixed mechanism. It does not certify every linkage or physical tolerance.
 - [Historical development notes](HISTORY.md): dated decisions and superseded layouts, kept out of the current specification.
+
+## Photo-directed browser review
+
+[review-views.json](review-views.json) stores six camera poses in canonical
+millimetres: drive front, keyboard matrix underside, controller, cable entry,
+plug and monitor profile. The browser manifest carries the same configuration.
+From DAC, start `npm run dev -- --port 4173`, then run:
+
+```sh
+node scripts/review-robotron.mjs http://127.0.0.1:4173 /tmp/dac-robotron-review ../3d-models/models/robotron-1715m
+```
+
+Open `/tmp/dac-robotron-review/index.html` for owner-photo/render pairs. It loads
+the actual DAC model, records its canonical revision and mesh hashes, and renders
+fixed poses without running the emulator. Use it after geometry/material edits;
+it is a local review aid, not another CI job or pixel-perfect photograph match.
+Lighting is neutral and includes underside fill. Camera perspective, hidden
+controller docking and board routing remain estimates. The planar matrix overlay
+provides a separate outline/connector comparison; its fitted residual is not
+independent validation. Physical verification status is unchanged.
 
 ## Rebuild and publish
 

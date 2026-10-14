@@ -19,7 +19,7 @@ module keyboard_mechanisms() {
 }
 module keyboard_plate() {
     translate([0,keyboard_y,17+keyboard_z_shift])rotate([keyboard_slope,0,0])difference(){
-        translate([0,-16,0])slab(484,114,1.2,3);for(k=keys)translate([k[0],k[1],-1])cylinder(d=12.5,h=4,$fn=32);
+        translate([0,-16,0])slab(484,114,1,3);for(k=keys)translate([k[0],k[1],-1])cylinder(d=12.5,h=4,$fn=32);
         for(x=[-225,225],y=[-55,45])translate([x,y,-1])cylinder(d=3.4,h=4,$fn=16);
     }
 }

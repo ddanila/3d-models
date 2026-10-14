@@ -33,7 +33,9 @@ module keyboard_controller_chips(){keyboard_controller_pose(){
 }}
 module keyboard_controller_ceramic(){keyboard_controller_pose(){
  translate([114,8,2.8])slab(32,13.5,3.5,.7);
- for(x=[-80,-74,-68,-62,-56,-50,-44,-38])translate([x,-2,3])rotate([90,0,0])cylinder(d=2.5,h=6,$fn=16);
+ // Small ceramic discs beside the logic; axial resistors have their own finish.
+ for(p=[[-40,-4],[13,-5],[38,-6],[78,-3],[105,-3]])
+  translate([p[0],p[1],3])rotate([90,0,0])cylinder(d=3.8,h=1.2,$fn=24);
 }}
 module keyboard_controller_rom_cover(){keyboard_controller_pose()translate([112,8,6.35])slab(18,13,.15,.2);}
 module keyboard_controller_connectors(){keyboard_controller_pose(){
@@ -245,6 +247,10 @@ module specimen_shape(p){
  if(p=="rear-nameplate-ink")rear_nameplate_ink();
  if(p=="keyboard-controller-leads")keyboard_controller_leads();
  if(p=="keyboard-entry-choke")keyboard_entry_choke();
+ if(p=="keyboard-controller-resistors")keyboard_controller_resistors();
+ if(p=="keyboard-controller-resistor-bands")keyboard_controller_resistor_bands();
+ if(p=="keyboard-matrix-socket")keyboard_matrix_socket();
+ if(p=="keyboard-matrix-contacts")keyboard_matrix_contacts();
  if(p=="keyboard-controller-board")keyboard_controller_board();
  if(p=="keyboard-controller-chips")keyboard_controller_chips();
  if(p=="keyboard-controller-ceramic")keyboard_controller_ceramic();
@@ -321,3 +327,33 @@ module keyboard_entry_choke(){keyboard_controller_pose(){
  translate([-115,3,4])rotate([90,0,0])difference(){cylinder(d=7,h=4,$fn=32);translate([0,0,-1])cylinder(d=3.2,h=6,$fn=24);}
  for(i=[0:3])wire_run([[-118+i,4,4],[-118+i,3,8],[-118+i,-2,8],[-118+i,-3,3]],.3);
 }}
+
+// Owner matrix-board socket: stepped pale body, mounting ears, recessed mouth
+// and two rows of bent contacts. Envelope and seating depth are photo estimates.
+module keyboard_matrix_pose(){
+ translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])children();
+}
+module keyboard_matrix_socket(){keyboard_matrix_pose()
+ translate([85,48,-20.918])difference(){
+  union(){slab(42,10,6,.6);translate([0,-1,0])slab(34,14,6,.6);slab(52,8,2,.6);}
+  translate([0,0,-.1])slab(30,2.2,4,.3);
+  for(x=[-23,23])translate([x,1,-1])cylinder(d=2.8,h=8,$fn=20);
+ }}
+module keyboard_matrix_contacts(){keyboard_matrix_pose(){
+ // Visible tails turn toward the board's long trace buses. No pinout implied.
+ for(i=[0:12],row=[0:1])let(x=85+(i-6)*2.54,y=39-row*2.54){
+  wire_run([[x,44,-18],[x,y,-18],[x,y,-14.98]],.23);
+  translate([x,y,-15.38])difference(){cylinder(d=1.7,h=.45,$fn=16);cylinder(d=.55,h=.5,$fn=12);}
+ }
+}}
+
+// Owner 123622947: grey axial resistor bodies and blue end bands, separate from
+// the brown ceramic EPROM. Values are deliberately not inferred from colours.
+module keyboard_controller_resistors(){keyboard_controller_pose()
+ for(x=[-80,-74,-68,-62,-56,-50,-44,-38])translate([x,-2,3])rotate([90,0,0])
+  cylinder(d=2.3,h=6,$fn=24);
+}
+module keyboard_controller_resistor_bands(){keyboard_controller_pose()
+ for(x=[-80,-74,-68,-62,-56,-50,-44,-38],y=[-2.35,-7.35])translate([x,y,3])rotate([90,0,0])
+  difference(){cylinder(d=2.34,h=.55,$fn=24);translate([0,0,-.1])cylinder(d=2.28,h=.8,$fn=24);}
+}

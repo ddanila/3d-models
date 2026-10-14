@@ -35,14 +35,14 @@ rubber_color = "#30322d";
 // Suppress the full-machine top-level output in the included source.
 part = "keyboard-review";
 lift = view=="exploded" ? separation : 0;
-board_parts = ["keyboard-pcb", "keyboard-contact-pads", "keyboard-matrix-artwork", "keyboard-pcb-metal", "keyboard-insulators"];
+board_parts = ["keyboard-pcb", "keyboard-contact-pads", "keyboard-matrix-artwork", "keyboard-pcb-metal", "keyboard-insulators", "keyboard-pcb-supports", "keyboard-pcb-fasteners", "keyboard-contact-routes", "keyboard-matrix-socket", "keyboard-matrix-contacts"];
 base_parts = ["keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-cable-support", "keyboard-internal-cable", "keyboard-entry-wires"];
 plate_parts = ["keyboard-plate", "keyboard-switches", "keyboard-guides"];
 case_parts = ["keyboard-shell", "keyboard-deck", "keyboard-fillers"];
 function has(list,name) = len([for(item=list)if(item==name)1])>0;
 function tint(name,index) = name=="keyboard-shell" || name=="keyboard-bottom" ? shell_color :
     name=="keyboard-deck" || name=="keyboard-fillers" ? deck_color :
-    name=="keyboard-pcb" || name=="keyboard-controller-board" ? pcb_color : colors[index];
+    name=="keyboard-pcb" ? pcb_color : colors[index];
 function controller(name) = len(name)>=20 && [for(i=[0:19])name[i]]==[for(i=[0:19])"keyboard-controller-"[i]];
 function layer(name) = controller(name) ? 4 : has(case_parts,name) ? 3 : has(plate_parts,name) ? 2 : has(board_parts,name) ? 1 : 0;
 

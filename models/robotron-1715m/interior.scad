@@ -167,7 +167,12 @@ module power_wires(offset=0) {
 }
 module keyboard_pcb() {
     translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])translate([0,0,-14.918])difference(){
-        translate([-240,-71,0])cube([480,110,1.6]);
+        union(){
+            translate([-240,-71,0])cube([480,110,1.6]);
+            // Raised connector tongue, owner 123048886 / 123103225.
+            translate([50,38,0])cube([70,15,1.6]);
+        }
+        for(x=[62,108])translate([x,49,-1])cylinder(d=2.8,h=4,$fn=20);
         for(x=[-220,0,220],y=[-65,33])translate([x,y,-1])cylinder(d=3.2,h=4,$fn=16);
     }
 }

@@ -39,5 +39,26 @@
     ],
     "reviewResiduals": [],
     "limitations": "Mounting centres align the view; the nominal 84 mm envelope remains an estimate. Straps are simplified, and flattened projection does not reproduce rotor depth or lens distortion."
+  },
+  {
+    "name": "keyboard-matrix",
+    "homography": [
+      -3.101866891312838,
+      0.08180503856431279,
+      957.644224714495,
+      -4.5527144301953126e-17,
+      -3.1002487419642386,
+      -344.2008815695265,
+      -4.4722145679718193e-20,
+      0.00010739278191957011,
+      1
+    ],
+    "reviewResiduals": [
+      {
+        "name": "connector centre",
+        "residualPixels": 5.16
+      }
+    ],
+    "limitations": "Outline-corner alignment; socket centre is a review residual used to guide this reconstruction, not independent validation. PCB mounting, underside routing and controller docking remain approximate. Projection flattens socket depth."
   }
 ]

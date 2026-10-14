@@ -66,10 +66,10 @@ match the existing browser model; they were previously browser-only additions.
 The shared full-machine SCAD assembly includes them too. Browser export still
 leaves these separate lenses to the runtime, avoiding duplicate geometry.
 
-The underside cable opening has two opposing folded rubber strips, with the
-short metal edges exposed, following owner photo `PXL_20261009_133005363.jpg`.
-It is not a four-sided boot like the monitor outlet. Use
-`python3 render.py --view underside` to inspect this detail.
+The underside cable opening has bare sheet-metal edges. The incoming lead passes
+through a round grooved black bush captured in a bent 1 mm support, following
+owner close-up `PXL_20261012_123539882.jpg`. This supersedes the earlier two-strip
+rubber interpretation. Use `python3 render.py --view underside` to inspect it.
 
 The light shell now ends at a straight, open lower rim above the separate bottom
 lid, with six individual screw tabs. Inside photos `PXL_20261012_123048886.jpg`
@@ -119,3 +119,9 @@ correct, including the black overlay’s 5 mm outer radii. Preserve this exterio
 as the review baseline while refining internals. Internal board/mechanism detail
 and provisional hidden dimensions still need further work; this is not approval
 of the internals or a manufacturing-ready assembly.
+
+The board/exploded presets include PCB supports, fasteners, short contact routes
+and the underside socket on the stepped PCB tongue. The narrow controller keeps
+its own pale laminate colour and separate grey/blue axial resistors. The socket
+outline follows owner photos; its docking with the detached controller remains
+unverified. No unobserved cable is added between them.

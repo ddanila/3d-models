@@ -10,6 +10,10 @@ def volume(path):
         total+=a[0]*(bv[1]*c[2]-bv[2]*c[1])+a[1]*(bv[2]*c[0]-bv[0]*c[2])+a[2]*(bv[0]*c[1]-bv[1]*c[0])
     return abs(total/6)
 checks={
+ 'matrix-socket-vs-board': ('keyboard_matrix_socket();','keyboard_pcb();'),
+ 'matrix-socket-vs-controller': ('keyboard_matrix_socket();','keyboard_controller_board();'),
+ 'keyboard-guide-vs-moving-carrier-rest': ('switch_guide();','translate([0,0,11.3])contact_carrier();'),
+ 'keyboard-guide-vs-moving-carrier-pressed': ('switch_guide();','translate([0,0,9.1])contact_carrier();'),
  'ribbon-plugs-vs-socket-plastic': ('drive_ribbon_plugs();','drive_adapter_sockets();'),
  'ribbon-plugs-vs-adapter-board': ('drive_ribbon_plugs();','drive_adapter_boards();'),
  'fan-rotor-vs-frame': ('fan_rotor();','fan_frame();'),

@@ -3,6 +3,26 @@
   "toleranceMm3": 0.001,
   "results": [
     {
+      "interface": "matrix-socket-vs-board",
+      "intersectionMm3": 4.5e-05,
+      "passed": true
+    },
+    {
+      "interface": "matrix-socket-vs-controller",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "keyboard-guide-vs-moving-carrier-rest",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "keyboard-guide-vs-moving-carrier-pressed",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
       "interface": "ribbon-plugs-vs-socket-plastic",
       "intersectionMm3": 0.0,
       "passed": true
