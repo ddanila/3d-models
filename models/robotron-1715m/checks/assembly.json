@@ -1,0 +1,52 @@
+{
+  "scope": "Static nominal geometry only. Contacts intentionally enter plug bodies; electrical contact force, cable flex, fastener threads, and all unlisted part pairs are outside this audit. Zero volume permits touching surfaces. This is not physical verification.",
+  "toleranceMm3": 0.001,
+  "results": [
+    {
+      "interface": "ribbon-plugs-vs-socket-plastic",
+      "intersectionMm3": 0.0,
+      "passed": true
+    },
+    {
+      "interface": "ribbon-plugs-vs-adapter-board",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "fan-rotor-vs-frame",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "fan-airway-vs-psu-wall",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "board-mounting-hole-clearance",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "board-vs-drive-bracket",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "board-vs-psu-shield",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "new-resistors-vs-chip-bodies",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "bypass-caps-vs-chip-bodies",
+      "intersectionMm3": 0,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

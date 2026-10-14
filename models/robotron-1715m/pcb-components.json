@@ -1237,6 +1237,62 @@
           "side": 1,
           "diameter": 5,
           "height": 6
+        },
+        {
+          "ref": "R19",
+          "kind": "resistor",
+          "position": [
+            -198,
+            56,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 2.5,
+          "height": 4,
+          "side": 1,
+          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
+        },
+        {
+          "ref": "R102",
+          "kind": "resistor",
+          "position": [
+            -155,
+            54.5,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 2.5,
+          "height": 4,
+          "side": 1,
+          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
+        },
+        {
+          "ref": "C90",
+          "kind": "ceramic",
+          "position": [
+            -187,
+            82,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 5.5,
+          "height": 4,
+          "side": 1,
+          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
+        },
+        {
+          "ref": "C91",
+          "kind": "ceramic",
+          "position": [
+            -144,
+            82,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 5.5,
+          "height": 4,
+          "side": 1,
+          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
         }
       ],
       "connectors": [
@@ -1825,7 +1881,7 @@
           "kind": "ceramic",
           "position": [
             -210,
-            153,
+            160,
             41
           ],
           "rotation": 90,
@@ -1837,7 +1893,7 @@
           "kind": "ceramic",
           "position": [
             -190,
-            153,
+            160,
             41
           ],
           "rotation": 90,
@@ -1849,7 +1905,7 @@
           "kind": "ceramic",
           "position": [
             -169,
-            152,
+            160,
             41
           ],
           "rotation": 90,
@@ -14808,6 +14864,62 @@
       1
     ],
     [
+      -193.5,
+      56.0,
+      13.6,
+      "motherboard",
+      1
+    ],
+    [
+      -202.5,
+      56.0,
+      13.6,
+      "motherboard",
+      1
+    ],
+    [
+      -150.5,
+      54.5,
+      13.6,
+      "motherboard",
+      1
+    ],
+    [
+      -159.5,
+      54.5,
+      13.6,
+      "motherboard",
+      1
+    ],
+    [
+      -187.0,
+      80.75,
+      13.6,
+      "motherboard",
+      1
+    ],
+    [
+      -187.0,
+      83.25,
+      13.6,
+      "motherboard",
+      1
+    ],
+    [
+      -144.0,
+      80.75,
+      13.6,
+      "motherboard",
+      1
+    ],
+    [
+      -144.0,
+      83.25,
+      13.6,
+      "motherboard",
+      1
+    ],
+    [
       -6.27,
       -19.240000000000002,
       13.6,
@@ -18925,42 +19037,42 @@
     ],
     [
       -211.25,
-      153.0,
+      160.0,
       41,
       "display-controller",
       -1
     ],
     [
       -208.75,
-      153.0,
+      160.0,
       41,
       "display-controller",
       -1
     ],
     [
       -191.25,
-      153.0,
+      160.0,
       41,
       "display-controller",
       -1
     ],
     [
       -188.75,
-      153.0,
+      160.0,
       41,
       "display-controller",
       -1
     ],
     [
       -170.25,
-      152.0,
+      160.0,
       41,
       "display-controller",
       -1
     ],
     [
       -167.75,
-      152.0,
+      160.0,
       41,
       "display-controller",
       -1

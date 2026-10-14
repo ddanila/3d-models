@@ -1,0 +1,43 @@
+[
+  {
+    "name": "drive-adapter",
+    "homography": [
+      -8.495282002543487,
+      21.465574160987508,
+      -2028.4254430309172,
+      -14.102094832182056,
+      -11.855432922820631,
+      -626.934590910372,
+      -0.0005476307273871293,
+      0.0007027480346357497,
+      1
+    ],
+    "reviewResiduals": [
+      {
+        "name": "left mounting hole",
+        "residualPixels": 1.9
+      },
+      {
+        "name": "right mounting hole",
+        "residualPixels": 10.86
+      }
+    ],
+    "limitations": "Board outline dimensions and connector spacing remain estimates. Only two mounting holes are visible; the former four-corner pattern was removed. Holdout points guided the correction, so they are review residuals, not independent validation. Trace routes are illustrative."
+  },
+  {
+    "name": "fan",
+    "homography": [
+      15.326935127791426,
+      0.389717901943207,
+      -899.9945568987487,
+      2.0594715430012562,
+      -12.441562919508211,
+      1326.4089609162806,
+      0.0015408849419175563,
+      -0.003348153694635017,
+      1
+    ],
+    "reviewResiduals": [],
+    "limitations": "Mounting centres align the view; the nominal 84 mm envelope remains an estimate. Straps are simplified, and flattened projection does not reproduce rotor depth or lens distortion."
+  }
+]

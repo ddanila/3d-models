@@ -1245,6 +1245,62 @@
           "side": 1,
           "diameter": 5,
           "height": 6
+        },
+        {
+          "ref": "R19",
+          "kind": "resistor",
+          "position": [
+            -198,
+            56,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 2.5,
+          "height": 4,
+          "side": 1,
+          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
+        },
+        {
+          "ref": "R102",
+          "kind": "resistor",
+          "position": [
+            -155,
+            54.5,
+            13.6
+          ],
+          "rotation": 90,
+          "diameter": 2.5,
+          "height": 4,
+          "side": 1,
+          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
+        },
+        {
+          "ref": "C90",
+          "kind": "ceramic",
+          "position": [
+            -187,
+            82,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 5.5,
+          "height": 4,
+          "side": 1,
+          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
+        },
+        {
+          "ref": "C91",
+          "kind": "ceramic",
+          "position": [
+            -144,
+            82,
+            13.6
+          ],
+          "rotation": 0,
+          "diameter": 5.5,
+          "height": 4,
+          "side": 1,
+          "evidence": "1715W placement drawing 1.93.310411.8/09, sheet B; relative CPU/DMA adjacency. Position and package size estimated, electrical value untranscribed."
         }
       ],
       "connectors": [
@@ -1833,7 +1889,7 @@
           "kind": "ceramic",
           "position": [
             -210,
-            153,
+            160,
             41
           ],
           "rotation": 90,
@@ -1845,7 +1901,7 @@
           "kind": "ceramic",
           "position": [
             -190,
-            153,
+            160,
             41
           ],
           "rotation": 90,
@@ -1857,7 +1913,7 @@
           "kind": "ceramic",
           "position": [
             -169,
-            152,
+            160,
             41
           ],
           "rotation": 90,

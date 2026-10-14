@@ -73,7 +73,7 @@ module logic_artwork(){
 module psu_chassis() {
     // Folded shield, right hand compartment, photo-scaled within 500x400 case.
     translate([94,-183,9])difference(){cube([144,369,104]);translate([2,2,2])cube([140,365,105]);
-        translate([-1,292,52])rotate([0,90,0])cylinder(d=79,h=4,$fn=48);}
+        translate([-1,292,58])rotate([0,90,0])cylinder(d=79,h=4,$fn=48);}
 }
 module psu_cover() {
     translate([94,-183,113])difference(){cube([144,369,1.4]);
@@ -97,7 +97,7 @@ module psu_grommets(){for(y=[-125,-5])translate([224,y,114.4])difference(){cylin
 // black drive-edge socket below. Clean geometry excludes stains/solder oxidation.
 adapter_w=58;adapter_h=38;adapter_pitch=2.54;
 module drive_adapter_pose(){for(x=[-158,-4])translate([x-29,2,57])rotate([90,0,0])children();}
-module drive_adapter_boards(){drive_adapter_pose()difference(){cube([adapter_w,adapter_h,1.6]);for(x=[3,55],y=[3,35])translate([x,y,-1])cylinder(d=3,h=4,$fn=20);}}
+module drive_adapter_boards(){drive_adapter_pose()difference(){cube([adapter_w,adapter_h,1.6]);for(x=[5.5,53])translate([x,33,-1])cylinder(d=3,h=4,$fn=20);}}
 module drive_adapter_traces(){drive_adapter_pose(){
  // 34 drive contacts to the narrower 26-way ribbon interface. Paths reproduce
  // visible staggered bends; they are not offered as an electrical pinout.
@@ -123,10 +123,16 @@ module drive_adapter_contacts(){drive_adapter_pose(){
  // Metal latch bar runs across the white connector, visible in side photo.
  translate([8,24,-16])cube([43,1,2]);
 }}
+// Five swept blades and broad hub visible in owner 150303351; hidden curvature estimated.
 module fan_rotor() {
     translate([80,109,67])rotate([0,90,0]){
-        cylinder(d=27,h=11,center=true,$fn=32);
-        for(a=[0:60:300])rotate([0,0,a])translate([11,-7,-3])rotate([25,0,0])linear_extrude(2)polygon([[0,0],[23,3],[23,15],[3,12]]);
+        difference(){
+            cylinder(d=38,h=15,center=true,$fn=64);
+            for(a=[0:45:315])rotate([0,0,a])translate([14,0,-8])cylinder(d=2,h=2,$fn=16);
+        }
+        for(a=[0:72:288])rotate([0,0,a])rotate([18,0,0])translate([0,0,-.6])linear_extrude(1.2)
+            polygon(concat([for(t=[0:5:40])[18*cos(t),18*sin(t)]],
+                           [for(t=[52:-5:7])[37*cos(t),37*sin(t)]]));
     }
 }
 // Smooth ribbon runs with a real rectangular cross-section, not a photo plane.
@@ -134,8 +140,10 @@ module ribbon_run(points,w=42,t=.8) {
     for(i=[0:len(points)-2])hull(){translate(points[i])cube([w,1,t],center=true);translate(points[i+1])cube([w,1,t],center=true);}
 }
 function drive_ribbon_path(unit,dx=0,lift=0)=unit==0?
- [[-158+dx,-13,89+lift],[-158+dx,24,109+lift],[-181+dx,39,120+lift],[-207+dx,37,88+lift],[-219+dx,35,24+lift]]:
- [[-4+dx,-13,89+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-91+dx,39,95+lift],[-130+dx,28,73+lift],[-196+dx,22,50+lift],[-219+dx,35,24+lift]];
+ [[-158+dx,16,87.5+lift],[-158+dx,24,109+lift],[-181+dx,39,120+lift],[-207+dx,37,88+lift],[-219+dx,35,24+lift]]:
+ [[-4+dx,16,87.5+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-91+dx,39,95+lift],[-130+dx,28,73+lift],[-196+dx,22,50+lift],[-219+dx,35,24+lift]];
+// 0.3 mm clearance on both vertical faces; 8 mm insertion into socket.
+module drive_ribbon_plugs(){for(x=[-158,-4])translate([x-16.5,4,85.3])cube([33,12,4.4]);}
 module ribbons(){for(u=[0:1])ribbon_run(drive_ribbon_path(u),33);}
 module ribbon_ridges(){for(u=[0:1],i=[0:25])ribbon_run(drive_ribbon_path(u,(i-12.5)*1.27,.45),.35,.12);}
 module ribbon_stripes(){for(u=[0:1])ribbon_run(drive_ribbon_path(u,-15.9,.55),.7,.12);}
@@ -203,7 +211,7 @@ module interior_shape(p) {
       drive_pair()teac_cable_plug(adapter=true);
       // Removable ribbon plug seats in the pale adapter socket, not at the
       // drive edge connector already occupied by the adapter itself.
-      for(x=[-158,-4])translate([x-16.5,-13,84])cube([33,5,7]);
+      drive_ribbon_plugs();
     }
     if(p=="ribbon-stripes")ribbon_stripes();
     if(p=="power-wires-red")power_wires(0);

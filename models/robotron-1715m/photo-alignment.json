@@ -1,0 +1,24 @@
+{
+  "status": "Manual planar alignment for visual review; not camera calibration or physical measurement. Four anchors determine each homography and cannot independently verify their own fit. Depth is flattened; perspective on projecting parts remains approximate.",
+  "views": [
+    {
+      "name": "drive-adapter",
+      "photo": "PXL_20261013_150520316.jpg",
+      "axes": [0, 2],
+      "anchors": [[[-187,57],[686,1168]],[[-129,57],[262,465]],[[-129,95],[973,58]],[[-187,95],[1368,756]]],
+      "meshes": [["drive-adapter-boards", "#765334"], ["drive-adapter-traces", "#c9c2a1"]],
+      "clipX": -80,
+      "holdouts": [{"name":"left mounting hole", "model":[-181.5,90],"photo":[1245,744]}, {"name":"right mounting hole", "model":[-134,90],"photo":[923,181]}],
+      "limitations": "Board outline dimensions and connector spacing remain estimates. Only two mounting holes are visible; the former four-corner pattern was removed. Holdout points guided the correction, so they are review residuals, not independent validation. Trace routes are illustrative."
+    },
+    {
+      "name": "fan",
+      "photo": "PXL_20261013_150303351.jpg",
+      "axes": [1, 2],
+      "anchors": [[[72,104],[320,237]],[[146,104],[1572,380]],[[146,30],[1200,1115]],[[72,30],[213,1090]]],
+      "meshes": [["fan-frame", "#575450"], ["fan-rotor", "#333635"], ["fan-retainers", "#aaa79b"]],
+      "holdouts": [],
+      "limitations": "Mounting centres align the view; the nominal 84 mm envelope remains an estimate. Straps are simplified, and flattened projection does not reproduce rotor depth or lens distortion."
+    }
+  ]
+}
