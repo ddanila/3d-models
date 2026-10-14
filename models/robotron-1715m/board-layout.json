@@ -5,9 +5,14 @@
     "drawings": "https://xepb.org/robotron/docs/1715w.zip",
     "motherboard": "1715W/teil_a/Belegungsplan 1715 W A.jpg + B.jpg (1.93.310411.8/09)",
     "display": "1715W/teil_b/Stromlauf CRT-Steuerung A.jpg + B.jpg (1.93.310412.6/04)",
-    "photo": "PXL_20261013_150312308.jpg"
+    "photo": "PXL_20261013_150312308.jpg",
+    "componentPhotos": [
+      "PXL_20261014_072935298.jpg",
+      "PXL_20261014_072654600.jpg",
+      "PXL_20261014_073200542.jpg"
+    ]
   },
-  "limitations": "W/M topology and named large devices follow drawings. Mainboard package placement is scaled from the placement drawing; display placement follows owner solder footprints, while functions follow the CRT schematic. Board envelopes and unseen component choices remain estimates; no verified netlist or exact 310402/310412 revision match.",
+  "limitations": "Display population and placement now follow the owner component-side photo; photo-derived envelope and pin-one orientation remain provisional. Mainboard placement still follows the W drawing, with owner component photos retained for further calibration. No verified netlist or exact schematic-revision equivalence is claimed.",
   "boards": [
     {
       "name": "motherboard",
@@ -1372,590 +1377,915 @@
       "components": [
         {
           "ref": "P01",
-          "label": "Logic footprint",
+          "label": "MH74S00",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -207.8957055214724,
-            144.32692307692307,
+            -63.92,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            115,
-            355,
-            174,
-            440
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            587,
+            325
           ]
         },
         {
           "ref": "P02",
-          "label": "Logic footprint",
+          "label": "K555TM2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -198.85276073619633,
-            144.0448717948718,
+            -80.4,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            193,
-            356,
-            230,
-            443
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            690,
+            325
           ]
         },
         {
           "ref": "P03",
-          "label": "Logic footprint",
-          "model": "DIP-14_W7.62mm",
+          "label": "74LS123",
+          "model": "DIP-16_W7.62mm",
           "position": [
-            -186.23312883435582,
-            143.3397435897436,
+            -97.04,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            280,
-            363,
-            330,
-            446
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            794,
+            325
           ]
         },
         {
           "ref": "P04",
-          "label": "Logic footprint",
+          "label": "74LS175",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -168.75460122699388,
-            143.3397435897436,
+            -114.0,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            402,
-            363,
-            467,
-            446
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            900,
+            325
           ]
         },
         {
           "ref": "P05",
-          "label": "Logic footprint",
+          "label": "74LS175",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -152.35582822085888,
-            143.76282051282053,
+            -129.52,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            523,
-            348,
-            589,
-            455
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            997,
+            325
           ]
         },
         {
           "ref": "P06",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "K155LA3",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -136.6319018404908,
-            143.97435897435898,
+            -142.0,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            639,
-            345,
-            706,
-            455
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1075,
+            325
           ]
         },
         {
           "ref": "P07",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "MH74S00",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -120.9079754601227,
-            143.90384615384616,
+            -158.8,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            755,
-            346,
-            823,
-            455
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1180,
+            325
           ]
         },
         {
           "ref": "P08",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "MH74S00",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -103.6319018404908,
-            144.75,
+            -174.0,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            884,
-            342,
-            950,
-            447
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1275,
+            325
           ]
         },
         {
           "ref": "P09",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "K555TM5",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -90.20245398773005,
-            144.60897435897436,
+            -190.0,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            986,
-            342,
-            1047,
-            449
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1375,
+            325
           ]
         },
         {
           "ref": "P10",
-          "label": "Logic footprint",
+          "label": "MH74S00",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -74.27607361963189,
-            143.48076923076923,
+            -205.2,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            1103,
-            354,
-            1166,
-            453
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1470,
+            325
           ]
         },
         {
           "ref": "P11",
-          "label": "Logic footprint",
-          "model": "DIP-14_W7.62mm",
+          "label": "DL257D",
+          "model": "DIP-16_W7.62mm",
           "position": [
-            -56.19018404907976,
-            143.48076923076923,
+            -33.2,
+            114.338,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            1237,
-            355,
-            1300,
-            452
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            395,
+            510
           ]
         },
         {
           "ref": "P12",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -200.0674846625767,
-            117.17948717948718,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            113,
-            556,
-            292,
-            624
-          ]
-        },
-        {
-          "ref": "P13",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -200.0674846625767,
-            98.56410256410255,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            113,
-            689,
-            292,
-            755
-          ]
-        },
-        {
-          "ref": "P14",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -199.9325153374233,
-            80.93589743589745,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            113,
-            814,
-            294,
-            880
-          ]
-        },
-        {
-          "ref": "P15",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -164.09815950920245,
-            101.66666666666667,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            366,
-            667,
-            572,
-            733
-          ]
-        },
-        {
-          "ref": "P16",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -164.09815950920245,
-            83.47435897435896,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            366,
-            796,
-            572,
-            862
-          ]
-        },
-        {
-          "ref": "P17",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -164.09815950920245,
-            66.12820512820514,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            366,
-            918,
-            572,
-            986
-          ]
-        },
-        {
-          "ref": "P18",
-          "label": "Logic footprint",
+          "label": "DL093D",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -123.67484662576688,
-            105.33333333333333,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            692,
-            640,
-            845,
-            708
-          ]
-        },
-        {
-          "ref": "P19",
-          "label": "Logic footprint",
-          "model": "DIP-14_W7.62mm",
-          "position": [
-            -123.5398773006135,
-            80.72435897435898,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            694,
-            815,
-            845,
-            882
-          ]
-        },
-        {
-          "ref": "P20",
-          "label": "Logic footprint",
-          "model": "DIP-14_W7.62mm",
-          "position": [
-            -90.33742331288343,
-            105.33333333333333,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            939,
-            640,
-            1092,
-            708
-          ]
-        },
-        {
-          "ref": "P21",
-          "label": "CRT controller (schematic)",
-          "model": "DIP-40_W15.24mm",
-          "position": [
-            -60.44171779141104,
-            89.67948717948717,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            1120,
-            691,
-            1354,
-            879
-          ]
-        },
-        {
-          "ref": "P22",
-          "label": "Logic footprint",
-          "model": "DIP-24_W15.24mm",
-          "position": [
-            -27.104294478527606,
-            98.9871794871795,
+            -50.0,
+            114.338,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            1445,
-            569,
-            1523,
-            869
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            500,
+            510
+          ]
+        },
+        {
+          "ref": "P13",
+          "label": "DL253D",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -129.2,
+            114.338,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            995,
+            510
+          ]
+        },
+        {
+          "ref": "P14",
+          "label": "SN74LS112N",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -190.8,
+            114.338,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1380,
+            510
+          ]
+        },
+        {
+          "ref": "P15",
+          "label": "SN74S11N",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -203.6,
+            114.338,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1460,
+            510
+          ]
+        },
+        {
+          "ref": "P16",
+          "label": "UL6516D",
+          "model": "DIP-24_W15.24mm",
+          "position": [
+            -72.4,
+            102.206,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            640,
+            590
+          ]
+        },
+        {
+          "ref": "P17",
+          "label": "UL6516D",
+          "model": "DIP-24_W15.24mm",
+          "position": [
+            -147.28,
+            102.206,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1108,
+            590
+          ]
+        },
+        {
+          "ref": "P18",
+          "label": "UL6516D",
+          "model": "DIP-24_W15.24mm",
+          "position": [
+            -167.92,
+            102.206,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1237,
+            590
+          ]
+        },
+        {
+          "ref": "P19",
+          "label": "SAB8275P",
+          "model": "DIP-40_W15.24mm",
+          "position": [
+            -102.8,
+            92.348,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            830,
+            655
+          ]
+        },
+        {
+          "ref": "P20",
+          "label": "DL253D",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -33.2,
+            87.799,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            395,
+            685
+          ]
+        },
+        {
+          "ref": "P21",
+          "label": "DL093D",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -50.0,
+            88.557,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            500,
+            680
+          ]
+        },
+        {
+          "ref": "P22",
+          "label": "DL295D",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -129.2,
+            87.04,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            995,
+            690
           ]
         },
         {
           "ref": "P23",
-          "label": "U6516 SRAM (schematic)",
-          "model": "DIP-24_W15.24mm",
+          "label": "DL295D",
+          "model": "DIP-16_W7.62mm",
           "position": [
-            -127.7239263803681,
-            52.801282051282044,
+            -190.8,
+            88.557,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            635,
-            993,
-            842,
-            1100
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1380,
+            680
           ]
         },
         {
           "ref": "P24",
-          "label": "U6516 SRAM (schematic)",
-          "model": "DIP-24_W15.24mm",
+          "label": "DL295D",
+          "model": "DIP-16_W7.62mm",
           "position": [
-            -85.27607361963192,
-            52.87179487179487,
+            -205.2,
+            88.557,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            951,
-            992,
-            1155,
-            1100
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1470,
+            680
           ]
         },
         {
           "ref": "P25",
-          "label": "U6516 SRAM (schematic)",
-          "model": "DIP-24_W15.24mm",
+          "label": "DL257D",
+          "model": "DIP-16_W7.62mm",
           "position": [
-            -48.901840490797554,
-            52.87179487179487,
+            -33.2,
+            62.017,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            1220,
-            992,
-            1425,
-            1100
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            395,
+            855
           ]
         },
         {
           "ref": "P26",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "DL093D",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -199.73006134969324,
-            29.743589743589748,
+            -50.0,
+            62.017,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            116,
-            1175,
-            294,
-            1245
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            500,
+            855
           ]
         },
         {
           "ref": "P27",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "D201D",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -167.87730061349694,
-            28.68589743589744,
+            -66.0,
+            62.017,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            352,
-            1185,
-            530,
-            1250
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            600,
+            855
+          ]
+        },
+        {
+          "ref": "P28",
+          "label": "K580VA86",
+          "model": "DIP-20_W7.62mm",
+          "position": [
+            -82.8,
+            62.776,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            705,
+            850
+          ]
+        },
+        {
+          "ref": "P29",
+          "label": "DL257D",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -129.2,
+            62.017,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            995,
+            855
+          ]
+        },
+        {
+          "ref": "P30",
+          "label": "K580VA86",
+          "model": "DIP-20_W7.62mm",
+          "position": [
+            -147.28,
+            63.534,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1108,
+            845
+          ]
+        },
+        {
+          "ref": "P31",
+          "label": "MH74S00",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -161.68,
+            62.017,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1198,
+            855
+          ]
+        },
+        {
+          "ref": "P32",
+          "label": "K555LA3",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -173.2,
+            62.017,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1270,
+            855
+          ]
+        },
+        {
+          "ref": "P33",
+          "label": "D200D",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -33.2,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            395,
+            1035
+          ]
+        },
+        {
+          "ref": "P34",
+          "label": "K555TM5",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -50.0,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            500,
+            1035
+          ]
+        },
+        {
+          "ref": "P35",
+          "label": "K555LA3",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -66.0,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            600,
+            1035
+          ]
+        },
+        {
+          "ref": "P36",
+          "label": "K555LA2",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -82.0,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            700,
+            1035
+          ]
+        },
+        {
+          "ref": "P37",
+          "label": "K555TM1",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -98.0,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            800,
+            1035
+          ]
+        },
+        {
+          "ref": "P38",
+          "label": "K555LA2",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -129.2,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            995,
+            1035
+          ]
+        },
+        {
+          "ref": "P39",
+          "label": "DL002D",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -142.8,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1080,
+            1035
           ]
         }
       ],
       "passives": [
         {
-          "kind": "ceramic",
+          "kind": "film",
           "position": [
-            -210,
-            160,
+            -58.0,
+            151.494,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
           "side": -1,
-          "diameter": 5,
-          "height": 4
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -91.12,
+            143.911,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -121.5,
+            144.669,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated; nearby clearance-adjusted position"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -135,
+            150.735,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated; nearby clearance-adjusted position"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -166.8,
+            150.735,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -176.4,
+            80.064,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -156.4,
+            77.183,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -91.6,
+            62.776,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -122.0,
+            27.895,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -154.0,
+            43.819,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
         },
         {
           "kind": "ceramic",
           "position": [
-            -190,
-            160,
+            -102.8,
+            146.186,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
           "side": -1,
-          "diameter": 5,
-          "height": 4
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
         },
         {
           "kind": "ceramic",
           "position": [
-            -169,
-            160,
+            -137.3,
+            133.295,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
           "side": -1,
-          "diameter": 5,
-          "height": 4
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated; nearby clearance-adjusted position"
         },
         {
           "kind": "ceramic",
           "position": [
-            -125,
-            157,
+            -214.8,
+            146.186,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
           "side": -1,
-          "diameter": 5,
-          "height": 4
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
         },
         {
           "kind": "ceramic",
           "position": [
-            -73,
-            155,
+            -197.2,
+            127.229,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
           "side": -1,
-          "diameter": 5,
-          "height": 4
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
         },
         {
-          "kind": "ceramic",
+          "kind": "electrolytic",
           "position": [
-            -21,
-            148,
+            -82.0,
+            167.417,
             41
           ],
-          "rotation": 90,
-          "side": -1,
+          "rotation": 0,
           "diameter": 5,
-          "height": 4
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -203.6,
+            161.351,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 5,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -146.0,
+            80.216,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 5,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -78.0,
+            46.852,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 5,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -26.8,
+            70.358,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 5,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated; nearby clearance-adjusted position"
         }
       ],
       "connectors": [

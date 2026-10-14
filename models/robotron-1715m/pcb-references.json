@@ -56,7 +56,8 @@
     "source": "https://www.robotrontechnik.de/bilder/Zubehoer/Bildschirme/K7222/012-6920_k.jpg",
     "credit": "Robotrontechnik \u2014 reference K7222 board 012-6920, not verified in Danila\u2019s monitor",
     "page": "https://www.robotrontechnik.de/html/zubehoer/bildschirme.htm#k7222-25",
-    "exclude": []
+    "exclude": [],
+    "evidenceOnly": true
   },
   {
     "name": "display-controller",

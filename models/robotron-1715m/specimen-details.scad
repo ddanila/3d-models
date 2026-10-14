@@ -212,7 +212,7 @@ module rear_power_black(){
 }
 module rear_blanking_plates(){
  for(p=[[-78,73],[-179,73],[-78,48]])rear_pose(p[0],p[1])translate([0,0,.8]){
-  slab(85,18,1.2,1.5);translate([0,0,1.2])slab(83,16,.4,1.5);
+  slab(85,18,1,1.5); // Same 1 mm painted sheet as the rear panel.
  }
 }
 module rear_fasteners(){

@@ -5,10 +5,20 @@ include <pcb-components.scad>
 include <components/pcb-discretes.scad>
 module drive_pair() { for(x=[-158,-4])translate([x-73,-203,60])children(); }
 module drive_bracket() {
-    translate([-235,-199,55])difference(){cube([310,197,2]);
-        for(x=[10,164])translate([x,15,-1])cube([132,168,4]);}
-    for(x=[-235,71])translate([x,-199,22])cube([3,197,35]);
-    for(y=[-196,-12])translate([-235,y,52])cube([310,3,7]);
+    // Owner 20261014_073718163: folded carrier with two smaller underside
+    // windows, rolled front/rear returns and paired centre fixings. 1 mm sheet.
+    difference(){
+        translate([-235,-199,55])cube([310,197,1]);
+        for(x=[-207,-53])translate([x,-163,54])cube([90,120,3]);
+        for(x=[-229,-82,-72,69],y=[-174,-32])translate([x,y,54])cylinder(d=3.4,h=3,$fn=20);
+        for(x=[-209,-55],y=[-188,-32])translate([x,y,54])cylinder(d=5,h=3,$fn=20);
+    }
+    for(x=[-235,74])translate([x,-199,22])cube([1,197,34]);
+    for(y=[-199,-3]){
+        translate([-235,y,56])cube([310,1,6]);
+        translate([-235,y+(y==-199?0:-4),61])cube([310,5,1]);
+    }
+    for(x=[-229,-82,-72,69],y=[-174,-32])translate([x,y,54.5])rotate([180,0,0])screw(5,1.2);
 }
 // Selection is shared by standalone OpenSCAD and the per-board browser exports.
 pcb_board = "";
@@ -72,13 +82,13 @@ module logic_artwork(){
 }
 module psu_chassis() {
     // Folded shield, right hand compartment, photo-scaled within 500x400 case.
-    translate([94,-183,9])difference(){cube([144,369,104]);translate([2,2,2])cube([140,365,105]);
+    translate([94,-183,9])difference(){cube([144,369,104]);translate([1,1,1])cube([142,367,105]);
         translate([-1,292,58])rotate([0,90,0])cylinder(d=79,h=4,$fn=48);}
 }
 module psu_cover() {
-    translate([94,-183,113])difference(){cube([144,369,1.4]);
+    translate([94,-183,113])difference(){cube([144,369,1]);
         for(y=[-125,-5])translate([130,y+183,-1])cylinder(d=11,h=4,$fn=24);}
-    for(x=[101,230],y=[-175,0,177])translate([x,y,114.4])screw(5,1.2);
+    for(x=[101,230],y=[-175,0,177])translate([x,y,114])screw(5,1.2);
 }
 module fan_frame() {
     translate([68,67,25])difference(){cube([25,84,84]);translate([-1,42,42])rotate([0,90,0])cylinder(d=77,h=27,$fn=48);
@@ -90,7 +100,7 @@ module fan_retainers(){
     for(y=[72,146],z=[30,104])translate([65.2,y,z])rotate([0,90,0])screw(5,1.2);
 }
 module fan_cushions(){for(y=[65,147])translate([68,y,27])cube([25,4,80]);}
-module psu_grommets(){for(y=[-125,-5])translate([224,y,114.4])difference(){cylinder(d=14,h=1.5,$fn=32);translate([0,0,-1])cylinder(d=7,h=4,$fn=24);}}
+module psu_grommets(){for(y=[-125,-5])translate([224,y,114])difference(){cylinder(d=14,h=1.5,$fn=32);translate([0,0,-1])cylinder(d=7,h=4,$fn=24);}}
 // Brown 05-330-0024 adapter, photo 150520316. Nominal 2.54mm connector pitch;
 // routing is visual, not an electrical netlist. Both drive interfaces are seen in 150535694.
 // Installed adapter: vertical board, white ribbon connector on its rear face;

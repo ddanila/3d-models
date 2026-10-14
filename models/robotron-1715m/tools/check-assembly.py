@@ -15,10 +15,13 @@ checks={
  'fan-rotor-vs-frame': ('fan_rotor();','fan_frame();'),
  'fan-airway-vs-psu-wall': ('translate([93,109,67])rotate([0,90,0])cylinder(d=77,h=4,$fn=48);','psu_chassis();'),
  'board-mounting-hole-clearance': ('for(p=pcb_mounts)translate([p[0],p[1],p[3]-1.6])cylinder(d=3,h=1.6,$fn=20);','logic_boards();'),
+ 'drive-rotors-vs-carrier': ('for(x=[-231,-77])translate([x,-203,60])teac_spindle();','drive_bracket();'),
  'board-vs-drive-bracket': ('logic_boards();','drive_bracket();'),
  'board-vs-psu-shield': ('logic_boards();','psu_chassis();'),
  'new-resistors-vs-chip-bodies': ('logic_discretes("logic-resistors");','logic_chips();'),
  'bypass-caps-vs-chip-bodies': ('logic_discretes("logic-ceramics");','logic_chips();'),
+ 'film-caps-vs-chip-bodies': ('logic_discretes("logic-film");','logic_chips();'),
+ 'electrolytic-caps-vs-chip-bodies': ('logic_discretes("logic-electrolytics");','logic_chips();'),
 }
 results=[]
 with tempfile.TemporaryDirectory() as tmp:

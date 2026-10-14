@@ -117,8 +117,9 @@
     ],
     "title": "U8272 on W/M main board",
     "source": "https://xepb.org/robotron/docs/1715w.zip",
-    "evidence": "Documented W/M design",
-    "dimensions": "A44 in original W placement drawing; specimen population and placement unverified."
+    "evidence": "Your specimen + documented W/M design",
+    "dimensions": "A44 follows the W placement drawing. Component-side owner photo available; complete position calibration remains pending.",
+    "photo": "20261014_072654600"
   },
   {
     "id": "cover-ribs",

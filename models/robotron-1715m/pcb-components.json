@@ -1364,590 +1364,915 @@
       "components": [
         {
           "ref": "P01",
-          "label": "Logic footprint",
+          "label": "MH74S00",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -207.8957055214724,
-            144.32692307692307,
+            -63.92,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            115,
-            355,
-            174,
-            440
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            587,
+            325
           ]
         },
         {
           "ref": "P02",
-          "label": "Logic footprint",
+          "label": "K555TM2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -198.85276073619633,
-            144.0448717948718,
+            -80.4,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            193,
-            356,
-            230,
-            443
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            690,
+            325
           ]
         },
         {
           "ref": "P03",
-          "label": "Logic footprint",
-          "model": "DIP-14_W7.62mm",
+          "label": "74LS123",
+          "model": "DIP-16_W7.62mm",
           "position": [
-            -186.23312883435582,
-            143.3397435897436,
+            -97.04,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            280,
-            363,
-            330,
-            446
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            794,
+            325
           ]
         },
         {
           "ref": "P04",
-          "label": "Logic footprint",
+          "label": "74LS175",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -168.75460122699388,
-            143.3397435897436,
+            -114.0,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            402,
-            363,
-            467,
-            446
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            900,
+            325
           ]
         },
         {
           "ref": "P05",
-          "label": "Logic footprint",
+          "label": "74LS175",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -152.35582822085888,
-            143.76282051282053,
+            -129.52,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            523,
-            348,
-            589,
-            455
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            997,
+            325
           ]
         },
         {
           "ref": "P06",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "K155LA3",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -136.6319018404908,
-            143.97435897435898,
+            -142.0,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            639,
-            345,
-            706,
-            455
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1075,
+            325
           ]
         },
         {
           "ref": "P07",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "MH74S00",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -120.9079754601227,
-            143.90384615384616,
+            -158.8,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            755,
-            346,
-            823,
-            455
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1180,
+            325
           ]
         },
         {
           "ref": "P08",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "MH74S00",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -103.6319018404908,
-            144.75,
+            -174.0,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            884,
-            342,
-            950,
-            447
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1275,
+            325
           ]
         },
         {
           "ref": "P09",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "K555TM5",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -90.20245398773005,
-            144.60897435897436,
+            -190.0,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            986,
-            342,
-            1047,
-            449
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1375,
+            325
           ]
         },
         {
           "ref": "P10",
-          "label": "Logic footprint",
+          "label": "MH74S00",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -74.27607361963189,
-            143.48076923076923,
+            -205.2,
+            142.394,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            1103,
-            354,
-            1166,
-            453
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1470,
+            325
           ]
         },
         {
           "ref": "P11",
-          "label": "Logic footprint",
-          "model": "DIP-14_W7.62mm",
+          "label": "DL257D",
+          "model": "DIP-16_W7.62mm",
           "position": [
-            -56.19018404907976,
-            143.48076923076923,
+            -33.2,
+            114.338,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            1237,
-            355,
-            1300,
-            452
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            395,
+            510
           ]
         },
         {
           "ref": "P12",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -200.0674846625767,
-            117.17948717948718,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            113,
-            556,
-            292,
-            624
-          ]
-        },
-        {
-          "ref": "P13",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -200.0674846625767,
-            98.56410256410255,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            113,
-            689,
-            292,
-            755
-          ]
-        },
-        {
-          "ref": "P14",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -199.9325153374233,
-            80.93589743589745,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            113,
-            814,
-            294,
-            880
-          ]
-        },
-        {
-          "ref": "P15",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -164.09815950920245,
-            101.66666666666667,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            366,
-            667,
-            572,
-            733
-          ]
-        },
-        {
-          "ref": "P16",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -164.09815950920245,
-            83.47435897435896,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            366,
-            796,
-            572,
-            862
-          ]
-        },
-        {
-          "ref": "P17",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
-          "position": [
-            -164.09815950920245,
-            66.12820512820514,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            366,
-            918,
-            572,
-            986
-          ]
-        },
-        {
-          "ref": "P18",
-          "label": "Logic footprint",
+          "label": "DL093D",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -123.67484662576688,
-            105.33333333333333,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            692,
-            640,
-            845,
-            708
-          ]
-        },
-        {
-          "ref": "P19",
-          "label": "Logic footprint",
-          "model": "DIP-14_W7.62mm",
-          "position": [
-            -123.5398773006135,
-            80.72435897435898,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            694,
-            815,
-            845,
-            882
-          ]
-        },
-        {
-          "ref": "P20",
-          "label": "Logic footprint",
-          "model": "DIP-14_W7.62mm",
-          "position": [
-            -90.33742331288343,
-            105.33333333333333,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            939,
-            640,
-            1092,
-            708
-          ]
-        },
-        {
-          "ref": "P21",
-          "label": "CRT controller (schematic)",
-          "model": "DIP-40_W15.24mm",
-          "position": [
-            -60.44171779141104,
-            89.67948717948717,
-            41
-          ],
-          "rotation": 90,
-          "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            1120,
-            691,
-            1354,
-            879
-          ]
-        },
-        {
-          "ref": "P22",
-          "label": "Logic footprint",
-          "model": "DIP-24_W15.24mm",
-          "position": [
-            -27.104294478527606,
-            98.9871794871795,
+            -50.0,
+            114.338,
             41
           ],
           "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            1445,
-            569,
-            1523,
-            869
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            500,
+            510
+          ]
+        },
+        {
+          "ref": "P13",
+          "label": "DL253D",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -129.2,
+            114.338,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            995,
+            510
+          ]
+        },
+        {
+          "ref": "P14",
+          "label": "SN74LS112N",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -190.8,
+            114.338,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1380,
+            510
+          ]
+        },
+        {
+          "ref": "P15",
+          "label": "SN74S11N",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -203.6,
+            114.338,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1460,
+            510
+          ]
+        },
+        {
+          "ref": "P16",
+          "label": "UL6516D",
+          "model": "DIP-24_W15.24mm",
+          "position": [
+            -72.4,
+            102.206,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            640,
+            590
+          ]
+        },
+        {
+          "ref": "P17",
+          "label": "UL6516D",
+          "model": "DIP-24_W15.24mm",
+          "position": [
+            -147.28,
+            102.206,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1108,
+            590
+          ]
+        },
+        {
+          "ref": "P18",
+          "label": "UL6516D",
+          "model": "DIP-24_W15.24mm",
+          "position": [
+            -167.92,
+            102.206,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1237,
+            590
+          ]
+        },
+        {
+          "ref": "P19",
+          "label": "SAB8275P",
+          "model": "DIP-40_W15.24mm",
+          "position": [
+            -102.8,
+            92.348,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            830,
+            655
+          ]
+        },
+        {
+          "ref": "P20",
+          "label": "DL253D",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -33.2,
+            87.799,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            395,
+            685
+          ]
+        },
+        {
+          "ref": "P21",
+          "label": "DL093D",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -50.0,
+            88.557,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            500,
+            680
+          ]
+        },
+        {
+          "ref": "P22",
+          "label": "DL295D",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -129.2,
+            87.04,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            995,
+            690
           ]
         },
         {
           "ref": "P23",
-          "label": "U6516 SRAM (schematic)",
-          "model": "DIP-24_W15.24mm",
+          "label": "DL295D",
+          "model": "DIP-16_W7.62mm",
           "position": [
-            -127.7239263803681,
-            52.801282051282044,
+            -190.8,
+            88.557,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            635,
-            993,
-            842,
-            1100
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1380,
+            680
           ]
         },
         {
           "ref": "P24",
-          "label": "U6516 SRAM (schematic)",
-          "model": "DIP-24_W15.24mm",
+          "label": "DL295D",
+          "model": "DIP-16_W7.62mm",
           "position": [
-            -85.27607361963192,
-            52.87179487179487,
+            -205.2,
+            88.557,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            951,
-            992,
-            1155,
-            1100
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1470,
+            680
           ]
         },
         {
           "ref": "P25",
-          "label": "U6516 SRAM (schematic)",
-          "model": "DIP-24_W15.24mm",
+          "label": "DL257D",
+          "model": "DIP-16_W7.62mm",
           "position": [
-            -48.901840490797554,
-            52.87179487179487,
+            -33.2,
+            62.017,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            1220,
-            992,
-            1425,
-            1100
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            395,
+            855
           ]
         },
         {
           "ref": "P26",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "DL093D",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -199.73006134969324,
-            29.743589743589748,
+            -50.0,
+            62.017,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            116,
-            1175,
-            294,
-            1245
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            500,
+            855
           ]
         },
         {
           "ref": "P27",
-          "label": "Logic footprint",
-          "model": "DIP-16_W7.62mm",
+          "label": "D201D",
+          "model": "DIP-14_W7.62mm",
           "position": [
-            -167.87730061349694,
-            28.68589743589744,
+            -66.0,
+            62.017,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
           "side": -1,
-          "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-          "photoRect": [
-            352,
-            1185,
-            530,
-            1250
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            600,
+            855
+          ]
+        },
+        {
+          "ref": "P28",
+          "label": "K580VA86",
+          "model": "DIP-20_W7.62mm",
+          "position": [
+            -82.8,
+            62.776,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            705,
+            850
+          ]
+        },
+        {
+          "ref": "P29",
+          "label": "DL257D",
+          "model": "DIP-16_W7.62mm",
+          "position": [
+            -129.2,
+            62.017,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            995,
+            855
+          ]
+        },
+        {
+          "ref": "P30",
+          "label": "K580VA86",
+          "model": "DIP-20_W7.62mm",
+          "position": [
+            -147.28,
+            63.534,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1108,
+            845
+          ]
+        },
+        {
+          "ref": "P31",
+          "label": "MH74S00",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -161.68,
+            62.017,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1198,
+            855
+          ]
+        },
+        {
+          "ref": "P32",
+          "label": "K555LA3",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -173.2,
+            62.017,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1270,
+            855
+          ]
+        },
+        {
+          "ref": "P33",
+          "label": "D200D",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -33.2,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            395,
+            1035
+          ]
+        },
+        {
+          "ref": "P34",
+          "label": "K555TM5",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -50.0,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            500,
+            1035
+          ]
+        },
+        {
+          "ref": "P35",
+          "label": "K555LA3",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -66.0,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            600,
+            1035
+          ]
+        },
+        {
+          "ref": "P36",
+          "label": "K555LA2",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -82.0,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            700,
+            1035
+          ]
+        },
+        {
+          "ref": "P37",
+          "label": "K555TM1",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -98.0,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            800,
+            1035
+          ]
+        },
+        {
+          "ref": "P38",
+          "label": "K555LA2",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -129.2,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            995,
+            1035
+          ]
+        },
+        {
+          "ref": "P39",
+          "label": "DL002D",
+          "model": "DIP-14_W7.62mm",
+          "position": [
+            -142.8,
+            34.72,
+            41
+          ],
+          "rotation": 0,
+          "side": -1,
+          "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+          "photoCenter": [
+            1080,
+            1035
           ]
         }
       ],
       "passives": [
         {
-          "kind": "ceramic",
+          "kind": "film",
           "position": [
-            -210,
-            160,
+            -58.0,
+            151.494,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
           "side": -1,
-          "diameter": 5,
-          "height": 4
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -91.12,
+            143.911,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -121.5,
+            144.669,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated; nearby clearance-adjusted position"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -135,
+            150.735,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated; nearby clearance-adjusted position"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -166.8,
+            150.735,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -176.4,
+            80.064,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -156.4,
+            77.183,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -91.6,
+            62.776,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -122.0,
+            27.895,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "film",
+          "position": [
+            -154.0,
+            43.819,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
         },
         {
           "kind": "ceramic",
           "position": [
-            -190,
-            160,
+            -102.8,
+            146.186,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
           "side": -1,
-          "diameter": 5,
-          "height": 4
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
         },
         {
           "kind": "ceramic",
           "position": [
-            -169,
-            160,
+            -137.3,
+            133.295,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
           "side": -1,
-          "diameter": 5,
-          "height": 4
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated; nearby clearance-adjusted position"
         },
         {
           "kind": "ceramic",
           "position": [
-            -125,
-            157,
+            -214.8,
+            146.186,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
           "side": -1,
-          "diameter": 5,
-          "height": 4
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
         },
         {
           "kind": "ceramic",
           "position": [
-            -73,
-            155,
+            -197.2,
+            127.229,
             41
           ],
-          "rotation": 90,
+          "rotation": 0,
+          "diameter": 4,
+          "height": 8,
           "side": -1,
-          "diameter": 5,
-          "height": 4
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
         },
         {
-          "kind": "ceramic",
+          "kind": "electrolytic",
           "position": [
-            -21,
-            148,
+            -82.0,
+            167.417,
             41
           ],
-          "rotation": 90,
-          "side": -1,
+          "rotation": 0,
           "diameter": 5,
-          "height": 4
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -203.6,
+            161.351,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 5,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -146.0,
+            80.216,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 5,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -78.0,
+            46.852,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 5,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated"
+        },
+        {
+          "kind": "electrolytic",
+          "position": [
+            -26.8,
+            70.358,
+            41
+          ],
+          "rotation": 0,
+          "diameter": 5,
+          "height": 8,
+          "side": -1,
+          "evidence": "Visible in owner 20261014_072935298; values untranscribed, envelope estimated; nearby clearance-adjusted position"
         }
       ],
       "connectors": [
@@ -1987,35 +2312,40 @@
     "drawings": "https://xepb.org/robotron/docs/1715w.zip",
     "motherboard": "1715W/teil_a/Belegungsplan 1715 W A.jpg + B.jpg (1.93.310411.8/09)",
     "display": "1715W/teil_b/Stromlauf CRT-Steuerung A.jpg + B.jpg (1.93.310412.6/04)",
-    "photo": "PXL_20261013_150312308.jpg"
+    "photo": "PXL_20261013_150312308.jpg",
+    "componentPhotos": [
+      "PXL_20261014_072935298.jpg",
+      "PXL_20261014_072654600.jpg",
+      "PXL_20261014_073200542.jpg"
+    ]
   },
-  "limitations": "W/M topology and named large devices follow drawings. Mainboard package placement is scaled from the placement drawing; display placement follows owner solder footprints, while functions follow the CRT schematic. Board envelopes and unseen component choices remain estimates; no verified netlist or exact 310402/310412 revision match.",
+  "limitations": "Display population and placement now follow the owner component-side photo; photo-derived envelope and pin-one orientation remain provisional. Mainboard placement still follows the W drawing, with owner component photos retained for further calibration. No verified netlist or exact schematic-revision equivalence is claimed.",
   "mounts": [
     [
       -225,
       -170,
-      3,
+      1,
       13.6,
       "motherboard"
     ],
     [
       12,
       -170,
-      3,
+      1,
       13.6,
       "motherboard"
     ],
     [
       -225,
       165,
-      3,
+      1,
       13.6,
       "motherboard"
     ],
     [
       12,
       165,
-      3,
+      1,
       13.6,
       "motherboard"
     ],
@@ -4372,21 +4702,19 @@
     },
     {
       "ref": "P01",
-      "label": "Logic footprint",
+      "label": "MH74S00",
       "model": "DIP-14_W7.62mm",
       "position": [
-        -207.8957055214724,
-        144.32692307692307,
+        -63.92,
+        142.394,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        115,
-        355,
-        174,
-        440
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        587,
+        325
       ],
       "id": "display-controller-P01",
       "board": "display-controller",
@@ -4395,21 +4723,19 @@
     },
     {
       "ref": "P02",
-      "label": "Logic footprint",
+      "label": "K555TM2",
       "model": "DIP-14_W7.62mm",
       "position": [
-        -198.85276073619633,
-        144.0448717948718,
+        -80.4,
+        142.394,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        193,
-        356,
-        230,
-        443
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        690,
+        325
       ],
       "id": "display-controller-P02",
       "board": "display-controller",
@@ -4418,21 +4744,19 @@
     },
     {
       "ref": "P03",
-      "label": "Logic footprint",
-      "model": "DIP-14_W7.62mm",
+      "label": "74LS123",
+      "model": "DIP-16_W7.62mm",
       "position": [
-        -186.23312883435582,
-        143.3397435897436,
+        -97.04,
+        142.394,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        280,
-        363,
-        330,
-        446
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        794,
+        325
       ],
       "id": "display-controller-P03",
       "board": "display-controller",
@@ -4441,21 +4765,19 @@
     },
     {
       "ref": "P04",
-      "label": "Logic footprint",
+      "label": "74LS175",
       "model": "DIP-16_W7.62mm",
       "position": [
-        -168.75460122699388,
-        143.3397435897436,
+        -114.0,
+        142.394,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        402,
-        363,
-        467,
-        446
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        900,
+        325
       ],
       "id": "display-controller-P04",
       "board": "display-controller",
@@ -4464,21 +4786,19 @@
     },
     {
       "ref": "P05",
-      "label": "Logic footprint",
+      "label": "74LS175",
       "model": "DIP-16_W7.62mm",
       "position": [
-        -152.35582822085888,
-        143.76282051282053,
+        -129.52,
+        142.394,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        523,
-        348,
-        589,
-        455
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        997,
+        325
       ],
       "id": "display-controller-P05",
       "board": "display-controller",
@@ -4487,21 +4807,19 @@
     },
     {
       "ref": "P06",
-      "label": "Logic footprint",
-      "model": "DIP-16_W7.62mm",
+      "label": "K155LA3",
+      "model": "DIP-14_W7.62mm",
       "position": [
-        -136.6319018404908,
-        143.97435897435898,
+        -142.0,
+        142.394,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        639,
-        345,
-        706,
-        455
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1075,
+        325
       ],
       "id": "display-controller-P06",
       "board": "display-controller",
@@ -4510,21 +4828,19 @@
     },
     {
       "ref": "P07",
-      "label": "Logic footprint",
-      "model": "DIP-16_W7.62mm",
+      "label": "MH74S00",
+      "model": "DIP-14_W7.62mm",
       "position": [
-        -120.9079754601227,
-        143.90384615384616,
+        -158.8,
+        142.394,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        755,
-        346,
-        823,
-        455
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1180,
+        325
       ],
       "id": "display-controller-P07",
       "board": "display-controller",
@@ -4533,21 +4849,19 @@
     },
     {
       "ref": "P08",
-      "label": "Logic footprint",
-      "model": "DIP-16_W7.62mm",
+      "label": "MH74S00",
+      "model": "DIP-14_W7.62mm",
       "position": [
-        -103.6319018404908,
-        144.75,
+        -174.0,
+        142.394,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        884,
-        342,
-        950,
-        447
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1275,
+        325
       ],
       "id": "display-controller-P08",
       "board": "display-controller",
@@ -4556,21 +4870,19 @@
     },
     {
       "ref": "P09",
-      "label": "Logic footprint",
-      "model": "DIP-16_W7.62mm",
+      "label": "K555TM5",
+      "model": "DIP-14_W7.62mm",
       "position": [
-        -90.20245398773005,
-        144.60897435897436,
+        -190.0,
+        142.394,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        986,
-        342,
-        1047,
-        449
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1375,
+        325
       ],
       "id": "display-controller-P09",
       "board": "display-controller",
@@ -4579,21 +4891,19 @@
     },
     {
       "ref": "P10",
-      "label": "Logic footprint",
+      "label": "MH74S00",
       "model": "DIP-14_W7.62mm",
       "position": [
-        -74.27607361963189,
-        143.48076923076923,
+        -205.2,
+        142.394,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        1103,
-        354,
-        1166,
-        453
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1470,
+        325
       ],
       "id": "display-controller-P10",
       "board": "display-controller",
@@ -4602,21 +4912,19 @@
     },
     {
       "ref": "P11",
-      "label": "Logic footprint",
-      "model": "DIP-14_W7.62mm",
+      "label": "DL257D",
+      "model": "DIP-16_W7.62mm",
       "position": [
-        -56.19018404907976,
-        143.48076923076923,
+        -33.2,
+        114.338,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        1237,
-        355,
-        1300,
-        452
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        395,
+        510
       ],
       "id": "display-controller-P11",
       "board": "display-controller",
@@ -4625,21 +4933,19 @@
     },
     {
       "ref": "P12",
-      "label": "Logic footprint",
-      "model": "DIP-16_W7.62mm",
+      "label": "DL093D",
+      "model": "DIP-14_W7.62mm",
       "position": [
-        -200.0674846625767,
-        117.17948717948718,
+        -50.0,
+        114.338,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        113,
-        556,
-        292,
-        624
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        500,
+        510
       ],
       "id": "display-controller-P12",
       "board": "display-controller",
@@ -4648,21 +4954,19 @@
     },
     {
       "ref": "P13",
-      "label": "Logic footprint",
+      "label": "DL253D",
       "model": "DIP-16_W7.62mm",
       "position": [
-        -200.0674846625767,
-        98.56410256410255,
+        -129.2,
+        114.338,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        113,
-        689,
-        292,
-        755
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        995,
+        510
       ],
       "id": "display-controller-P13",
       "board": "display-controller",
@@ -4671,21 +4975,19 @@
     },
     {
       "ref": "P14",
-      "label": "Logic footprint",
+      "label": "SN74LS112N",
       "model": "DIP-16_W7.62mm",
       "position": [
-        -199.9325153374233,
-        80.93589743589745,
+        -190.8,
+        114.338,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        113,
-        814,
-        294,
-        880
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1380,
+        510
       ],
       "id": "display-controller-P14",
       "board": "display-controller",
@@ -4694,21 +4996,19 @@
     },
     {
       "ref": "P15",
-      "label": "Logic footprint",
-      "model": "DIP-16_W7.62mm",
+      "label": "SN74S11N",
+      "model": "DIP-14_W7.62mm",
       "position": [
-        -164.09815950920245,
-        101.66666666666667,
+        -203.6,
+        114.338,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        366,
-        667,
-        572,
-        733
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1460,
+        510
       ],
       "id": "display-controller-P15",
       "board": "display-controller",
@@ -4717,21 +5017,19 @@
     },
     {
       "ref": "P16",
-      "label": "Logic footprint",
-      "model": "DIP-16_W7.62mm",
+      "label": "UL6516D",
+      "model": "DIP-24_W15.24mm",
       "position": [
-        -164.09815950920245,
-        83.47435897435896,
+        -72.4,
+        102.206,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        366,
-        796,
-        572,
-        862
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        640,
+        590
       ],
       "id": "display-controller-P16",
       "board": "display-controller",
@@ -4740,21 +5038,19 @@
     },
     {
       "ref": "P17",
-      "label": "Logic footprint",
-      "model": "DIP-16_W7.62mm",
+      "label": "UL6516D",
+      "model": "DIP-24_W15.24mm",
       "position": [
-        -164.09815950920245,
-        66.12820512820514,
+        -147.28,
+        102.206,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        366,
-        918,
-        572,
-        986
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1108,
+        590
       ],
       "id": "display-controller-P17",
       "board": "display-controller",
@@ -4763,21 +5059,19 @@
     },
     {
       "ref": "P18",
-      "label": "Logic footprint",
-      "model": "DIP-14_W7.62mm",
+      "label": "UL6516D",
+      "model": "DIP-24_W15.24mm",
       "position": [
-        -123.67484662576688,
-        105.33333333333333,
+        -167.92,
+        102.206,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        692,
-        640,
-        845,
-        708
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1237,
+        590
       ],
       "id": "display-controller-P18",
       "board": "display-controller",
@@ -4786,21 +5080,19 @@
     },
     {
       "ref": "P19",
-      "label": "Logic footprint",
-      "model": "DIP-14_W7.62mm",
+      "label": "SAB8275P",
+      "model": "DIP-40_W15.24mm",
       "position": [
-        -123.5398773006135,
-        80.72435897435898,
+        -102.8,
+        92.348,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        694,
-        815,
-        845,
-        882
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        830,
+        655
       ],
       "id": "display-controller-P19",
       "board": "display-controller",
@@ -4809,21 +5101,19 @@
     },
     {
       "ref": "P20",
-      "label": "Logic footprint",
-      "model": "DIP-14_W7.62mm",
+      "label": "DL253D",
+      "model": "DIP-16_W7.62mm",
       "position": [
-        -90.33742331288343,
-        105.33333333333333,
+        -33.2,
+        87.799,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        939,
-        640,
-        1092,
-        708
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        395,
+        685
       ],
       "id": "display-controller-P20",
       "board": "display-controller",
@@ -4832,21 +5122,19 @@
     },
     {
       "ref": "P21",
-      "label": "CRT controller (schematic)",
-      "model": "DIP-40_W15.24mm",
+      "label": "DL093D",
+      "model": "DIP-14_W7.62mm",
       "position": [
-        -60.44171779141104,
-        89.67948717948717,
+        -50.0,
+        88.557,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        1120,
-        691,
-        1354,
-        879
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        500,
+        680
       ],
       "id": "display-controller-P21",
       "board": "display-controller",
@@ -4855,21 +5143,19 @@
     },
     {
       "ref": "P22",
-      "label": "Logic footprint",
-      "model": "DIP-24_W15.24mm",
+      "label": "DL295D",
+      "model": "DIP-16_W7.62mm",
       "position": [
-        -27.104294478527606,
-        98.9871794871795,
+        -129.2,
+        87.04,
         41
       ],
       "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        1445,
-        569,
-        1523,
-        869
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        995,
+        690
       ],
       "id": "display-controller-P22",
       "board": "display-controller",
@@ -4878,21 +5164,19 @@
     },
     {
       "ref": "P23",
-      "label": "U6516 SRAM (schematic)",
-      "model": "DIP-24_W15.24mm",
+      "label": "DL295D",
+      "model": "DIP-16_W7.62mm",
       "position": [
-        -127.7239263803681,
-        52.801282051282044,
+        -190.8,
+        88.557,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        635,
-        993,
-        842,
-        1100
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1380,
+        680
       ],
       "id": "display-controller-P23",
       "board": "display-controller",
@@ -4901,21 +5185,19 @@
     },
     {
       "ref": "P24",
-      "label": "U6516 SRAM (schematic)",
-      "model": "DIP-24_W15.24mm",
+      "label": "DL295D",
+      "model": "DIP-16_W7.62mm",
       "position": [
-        -85.27607361963192,
-        52.87179487179487,
+        -205.2,
+        88.557,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        951,
-        992,
-        1155,
-        1100
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1470,
+        680
       ],
       "id": "display-controller-P24",
       "board": "display-controller",
@@ -4924,21 +5206,19 @@
     },
     {
       "ref": "P25",
-      "label": "U6516 SRAM (schematic)",
-      "model": "DIP-24_W15.24mm",
+      "label": "DL257D",
+      "model": "DIP-16_W7.62mm",
       "position": [
-        -48.901840490797554,
-        52.87179487179487,
+        -33.2,
+        62.017,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        1220,
-        992,
-        1425,
-        1100
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        395,
+        855
       ],
       "id": "display-controller-P25",
       "board": "display-controller",
@@ -4947,21 +5227,19 @@
     },
     {
       "ref": "P26",
-      "label": "Logic footprint",
-      "model": "DIP-16_W7.62mm",
+      "label": "DL093D",
+      "model": "DIP-14_W7.62mm",
       "position": [
-        -199.73006134969324,
-        29.743589743589748,
+        -50.0,
+        62.017,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        116,
-        1175,
-        294,
-        1245
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        500,
+        855
       ],
       "id": "display-controller-P26",
       "board": "display-controller",
@@ -4970,23 +5248,273 @@
     },
     {
       "ref": "P27",
-      "label": "Logic footprint",
-      "model": "DIP-16_W7.62mm",
+      "label": "D201D",
+      "model": "DIP-14_W7.62mm",
       "position": [
-        -167.87730061349694,
-        28.68589743589744,
+        -66.0,
+        62.017,
         41
       ],
-      "rotation": 90,
+      "rotation": 0,
       "side": -1,
-      "status": "Owner solder footprint; nominal package. Function only assigned where supported by CRT schematic, exact revision unconfirmed.",
-      "photoRect": [
-        352,
-        1185,
-        530,
-        1250
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        600,
+        855
       ],
       "id": "display-controller-P27",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P28",
+      "label": "K580VA86",
+      "model": "DIP-20_W7.62mm",
+      "position": [
+        -82.8,
+        62.776,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        705,
+        850
+      ],
+      "id": "display-controller-P28",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P29",
+      "label": "DL257D",
+      "model": "DIP-16_W7.62mm",
+      "position": [
+        -129.2,
+        62.017,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        995,
+        855
+      ],
+      "id": "display-controller-P29",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P30",
+      "label": "K580VA86",
+      "model": "DIP-20_W7.62mm",
+      "position": [
+        -147.28,
+        63.534,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1108,
+        845
+      ],
+      "id": "display-controller-P30",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P31",
+      "label": "MH74S00",
+      "model": "DIP-14_W7.62mm",
+      "position": [
+        -161.68,
+        62.017,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1198,
+        855
+      ],
+      "id": "display-controller-P31",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P32",
+      "label": "K555LA3",
+      "model": "DIP-14_W7.62mm",
+      "position": [
+        -173.2,
+        62.017,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1270,
+        855
+      ],
+      "id": "display-controller-P32",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P33",
+      "label": "D200D",
+      "model": "DIP-14_W7.62mm",
+      "position": [
+        -33.2,
+        34.72,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        395,
+        1035
+      ],
+      "id": "display-controller-P33",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P34",
+      "label": "K555TM5",
+      "model": "DIP-14_W7.62mm",
+      "position": [
+        -50.0,
+        34.72,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        500,
+        1035
+      ],
+      "id": "display-controller-P34",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P35",
+      "label": "K555LA3",
+      "model": "DIP-14_W7.62mm",
+      "position": [
+        -66.0,
+        34.72,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        600,
+        1035
+      ],
+      "id": "display-controller-P35",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P36",
+      "label": "K555LA2",
+      "model": "DIP-14_W7.62mm",
+      "position": [
+        -82.0,
+        34.72,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        700,
+        1035
+      ],
+      "id": "display-controller-P36",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P37",
+      "label": "K555TM1",
+      "model": "DIP-14_W7.62mm",
+      "position": [
+        -98.0,
+        34.72,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        800,
+        1035
+      ],
+      "id": "display-controller-P37",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P38",
+      "label": "K555LA2",
+      "model": "DIP-14_W7.62mm",
+      "position": [
+        -129.2,
+        34.72,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        995,
+        1035
+      ],
+      "id": "display-controller-P38",
+      "board": "display-controller",
+      "top": 3.680000066757202,
+      "markings": false
+    },
+    {
+      "ref": "P39",
+      "label": "DL002D",
+      "model": "DIP-14_W7.62mm",
+      "position": [
+        -142.8,
+        34.72,
+        41
+      ],
+      "rotation": 0,
+      "side": -1,
+      "status": "Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional",
+      "photoCenter": [
+        1080,
+        1035
+      ],
+      "id": "display-controller-P39",
       "board": "display-controller",
       "top": 3.680000066757202,
       "markings": false
@@ -15732,3389 +16260,4733 @@
       1
     ],
     [
-      -211.7057055214724,
-      151.68017307692307,
+      -67.73,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -211.7057055214724,
-      149.40692307692308,
+      -67.73,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -211.7057055214724,
-      146.86692307692306,
+      -67.73,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -211.7057055214724,
-      144.32692307692307,
+      -67.73,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -211.7057055214724,
-      141.78692307692307,
+      -67.73,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -211.7057055214724,
-      139.24692307692305,
+      -67.73,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -211.7057055214724,
-      136.97367307692306,
+      -67.73,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -204.0857055214724,
-      151.68017307692307,
+      -60.11,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -204.0857055214724,
-      149.40692307692308,
+      -60.11,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -204.0857055214724,
-      146.86692307692306,
+      -60.11,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -204.0857055214724,
-      144.32692307692307,
+      -60.11,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -204.0857055214724,
-      141.78692307692307,
+      -60.11,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -204.0857055214724,
-      139.24692307692305,
+      -60.11,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -204.0857055214724,
-      136.97367307692306,
+      -60.11,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -202.66276073619633,
-      151.3981217948718,
+      -84.21000000000001,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -202.66276073619633,
-      149.1248717948718,
+      -84.21000000000001,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -202.66276073619633,
-      146.5848717948718,
+      -84.21000000000001,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -202.66276073619633,
-      144.0448717948718,
+      -84.21000000000001,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -202.66276073619633,
-      141.5048717948718,
+      -84.21000000000001,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -202.66276073619633,
-      138.96487179487178,
+      -84.21000000000001,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -202.66276073619633,
-      136.6916217948718,
+      -84.21000000000001,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -195.04276073619633,
-      151.3981217948718,
+      -76.59,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -195.04276073619633,
-      149.1248717948718,
+      -76.59,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -195.04276073619633,
-      146.5848717948718,
+      -76.59,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -195.04276073619633,
-      144.0448717948718,
+      -76.59,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -195.04276073619633,
-      141.5048717948718,
+      -76.59,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -195.04276073619633,
-      138.96487179487178,
+      -76.59,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -195.04276073619633,
-      136.6916217948718,
+      -76.59,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -190.04312883435583,
-      150.6929935897436,
+      -100.85000000000001,
+      151.01725000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -190.04312883435583,
-      148.4197435897436,
+      -100.85000000000001,
+      148.744,
       41,
       "display-controller",
       -1
     ],
     [
-      -190.04312883435583,
-      145.87974358974358,
+      -100.85000000000001,
+      146.204,
       41,
       "display-controller",
       -1
     ],
     [
-      -190.04312883435583,
-      143.3397435897436,
+      -100.85000000000001,
+      143.66400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -190.04312883435583,
-      140.7997435897436,
+      -100.85000000000001,
+      141.124,
       41,
       "display-controller",
       -1
     ],
     [
-      -190.04312883435583,
-      138.25974358974358,
+      -100.85000000000001,
+      138.584,
       41,
       "display-controller",
       -1
     ],
     [
-      -190.04312883435583,
-      135.9864935897436,
+      -100.85000000000001,
+      136.044,
       41,
       "display-controller",
       -1
     ],
     [
-      -182.42312883435582,
-      150.6929935897436,
+      -100.85000000000001,
+      133.77075,
       41,
       "display-controller",
       -1
     ],
     [
-      -182.42312883435582,
-      148.4197435897436,
+      -93.23,
+      151.01725000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -182.42312883435582,
-      145.87974358974358,
+      -93.23,
+      148.744,
       41,
       "display-controller",
       -1
     ],
     [
-      -182.42312883435582,
-      143.3397435897436,
+      -93.23,
+      146.204,
       41,
       "display-controller",
       -1
     ],
     [
-      -182.42312883435582,
-      140.7997435897436,
+      -93.23,
+      143.66400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -182.42312883435582,
-      138.25974358974358,
+      -93.23,
+      141.124,
       41,
       "display-controller",
       -1
     ],
     [
-      -182.42312883435582,
-      135.9864935897436,
+      -93.23,
+      138.584,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.5646012269939,
-      151.9629935897436,
+      -93.23,
+      136.044,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.5646012269939,
-      149.68974358974359,
+      -93.23,
+      133.77075,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.5646012269939,
-      147.1497435897436,
+      -117.81,
+      151.01725000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.5646012269939,
-      144.6097435897436,
+      -117.81,
+      148.744,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.5646012269939,
-      142.06974358974358,
+      -117.81,
+      146.204,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.5646012269939,
-      139.5297435897436,
+      -117.81,
+      143.66400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.5646012269939,
-      136.9897435897436,
+      -117.81,
+      141.124,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.5646012269939,
-      134.71649358974358,
+      -117.81,
+      138.584,
       41,
       "display-controller",
       -1
     ],
     [
-      -164.94460122699388,
-      151.9629935897436,
+      -117.81,
+      136.044,
       41,
       "display-controller",
       -1
     ],
     [
-      -164.94460122699388,
-      149.68974358974359,
+      -117.81,
+      133.77075,
       41,
       "display-controller",
       -1
     ],
     [
-      -164.94460122699388,
-      147.1497435897436,
+      -110.19,
+      151.01725000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -164.94460122699388,
-      144.6097435897436,
+      -110.19,
+      148.744,
       41,
       "display-controller",
       -1
     ],
     [
-      -164.94460122699388,
-      142.06974358974358,
+      -110.19,
+      146.204,
       41,
       "display-controller",
       -1
     ],
     [
-      -164.94460122699388,
-      139.5297435897436,
+      -110.19,
+      143.66400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -164.94460122699388,
-      136.9897435897436,
+      -110.19,
+      141.124,
       41,
       "display-controller",
       -1
     ],
     [
-      -164.94460122699388,
-      134.71649358974358,
+      -110.19,
+      138.584,
       41,
       "display-controller",
       -1
     ],
     [
-      -156.16582822085888,
-      152.38607051282054,
+      -110.19,
+      136.044,
       41,
       "display-controller",
       -1
     ],
     [
-      -156.16582822085888,
-      150.11282051282052,
+      -110.19,
+      133.77075,
       41,
       "display-controller",
       -1
     ],
     [
-      -156.16582822085888,
-      147.57282051282053,
+      -133.33,
+      151.01725000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -156.16582822085888,
-      145.03282051282054,
+      -133.33,
+      148.744,
       41,
       "display-controller",
       -1
     ],
     [
-      -156.16582822085888,
-      142.49282051282051,
+      -133.33,
+      146.204,
       41,
       "display-controller",
       -1
     ],
     [
-      -156.16582822085888,
-      139.95282051282052,
+      -133.33,
+      143.66400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -156.16582822085888,
-      137.41282051282053,
+      -133.33,
+      141.124,
       41,
       "display-controller",
       -1
     ],
     [
-      -156.16582822085888,
-      135.1395705128205,
+      -133.33,
+      138.584,
       41,
       "display-controller",
       -1
     ],
     [
-      -148.54582822085888,
-      152.38607051282054,
+      -133.33,
+      136.044,
       41,
       "display-controller",
       -1
     ],
     [
-      -148.54582822085888,
-      150.11282051282052,
+      -133.33,
+      133.77075,
       41,
       "display-controller",
       -1
     ],
     [
-      -148.54582822085888,
-      147.57282051282053,
+      -125.71000000000001,
+      151.01725000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -148.54582822085888,
-      145.03282051282054,
+      -125.71000000000001,
+      148.744,
       41,
       "display-controller",
       -1
     ],
     [
-      -148.54582822085888,
-      142.49282051282051,
+      -125.71000000000001,
+      146.204,
       41,
       "display-controller",
       -1
     ],
     [
-      -148.54582822085888,
-      139.95282051282052,
+      -125.71000000000001,
+      143.66400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -148.54582822085888,
-      137.41282051282053,
+      -125.71000000000001,
+      141.124,
       41,
       "display-controller",
       -1
     ],
     [
-      -148.54582822085888,
-      135.1395705128205,
+      -125.71000000000001,
+      138.584,
       41,
       "display-controller",
       -1
     ],
     [
-      -140.4419018404908,
-      152.597608974359,
+      -125.71000000000001,
+      136.044,
       41,
       "display-controller",
       -1
     ],
     [
-      -140.4419018404908,
-      150.32435897435897,
+      -125.71000000000001,
+      133.77075,
       41,
       "display-controller",
       -1
     ],
     [
-      -140.4419018404908,
-      147.78435897435898,
+      -145.81,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -140.4419018404908,
-      145.244358974359,
+      -145.81,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -140.4419018404908,
-      142.70435897435897,
+      -145.81,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -140.4419018404908,
-      140.16435897435898,
+      -145.81,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -140.4419018404908,
-      137.62435897435898,
+      -145.81,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -140.4419018404908,
-      135.35110897435897,
+      -145.81,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -132.8219018404908,
-      152.597608974359,
+      -145.81,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -132.8219018404908,
-      150.32435897435897,
+      -138.19,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -132.8219018404908,
-      147.78435897435898,
+      -138.19,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -132.8219018404908,
-      145.244358974359,
+      -138.19,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -132.8219018404908,
-      142.70435897435897,
+      -138.19,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -132.8219018404908,
-      140.16435897435898,
+      -138.19,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -132.8219018404908,
-      137.62435897435898,
+      -138.19,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -132.8219018404908,
-      135.35110897435897,
+      -138.19,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -124.7179754601227,
-      152.52709615384617,
+      -162.61,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -124.7179754601227,
-      150.25384615384615,
+      -162.61,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -124.7179754601227,
-      147.71384615384616,
+      -162.61,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -124.7179754601227,
-      145.17384615384617,
+      -162.61,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -124.7179754601227,
-      142.63384615384615,
+      -162.61,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -124.7179754601227,
-      140.09384615384616,
+      -162.61,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -124.7179754601227,
-      137.55384615384617,
+      -162.61,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -124.7179754601227,
-      135.28059615384615,
+      -154.99,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -117.0979754601227,
-      152.52709615384617,
+      -154.99,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -117.0979754601227,
-      150.25384615384615,
+      -154.99,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -117.0979754601227,
-      147.71384615384616,
+      -154.99,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -117.0979754601227,
-      145.17384615384617,
+      -154.99,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -117.0979754601227,
-      142.63384615384615,
+      -154.99,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -117.0979754601227,
-      140.09384615384616,
+      -154.99,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -117.0979754601227,
-      137.55384615384617,
+      -177.81,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -117.0979754601227,
-      135.28059615384615,
+      -177.81,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -107.4419018404908,
-      153.37325,
+      -177.81,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -107.4419018404908,
-      151.1,
+      -177.81,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -107.4419018404908,
-      148.56,
+      -177.81,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -107.4419018404908,
-      146.02,
+      -177.81,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -107.4419018404908,
-      143.48,
+      -177.81,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -107.4419018404908,
-      140.94,
+      -170.19,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -107.4419018404908,
-      138.4,
+      -170.19,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -107.4419018404908,
-      136.12675,
+      -170.19,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -99.8219018404908,
-      153.37325,
+      -170.19,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -99.8219018404908,
-      151.1,
+      -170.19,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -99.8219018404908,
-      148.56,
+      -170.19,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -99.8219018404908,
-      146.02,
+      -170.19,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -99.8219018404908,
-      143.48,
+      -193.81,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -99.8219018404908,
-      140.94,
+      -193.81,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -99.8219018404908,
-      138.4,
+      -193.81,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -99.8219018404908,
-      136.12675,
+      -193.81,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -94.01245398773005,
-      153.23222435897438,
+      -193.81,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -94.01245398773005,
-      150.95897435897436,
+      -193.81,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -94.01245398773005,
-      148.41897435897437,
+      -193.81,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -94.01245398773005,
-      145.87897435897438,
+      -186.19,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -94.01245398773005,
-      143.33897435897435,
+      -186.19,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -94.01245398773005,
-      140.79897435897436,
+      -186.19,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -94.01245398773005,
-      138.25897435897437,
+      -186.19,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -94.01245398773005,
-      135.98572435897435,
+      -186.19,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -86.39245398773005,
-      153.23222435897438,
+      -186.19,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -86.39245398773005,
-      150.95897435897436,
+      -186.19,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -86.39245398773005,
-      148.41897435897437,
+      -209.01,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -86.39245398773005,
-      145.87897435897438,
+      -209.01,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -86.39245398773005,
-      143.33897435897435,
+      -209.01,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -86.39245398773005,
-      140.79897435897436,
+      -209.01,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -86.39245398773005,
-      138.25897435897437,
+      -209.01,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -86.39245398773005,
-      135.98572435897435,
+      -209.01,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -78.08607361963189,
-      150.83401923076923,
+      -209.01,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -78.08607361963189,
-      148.56076923076924,
+      -201.39,
+      149.74725,
       41,
       "display-controller",
       -1
     ],
     [
-      -78.08607361963189,
-      146.02076923076922,
+      -201.39,
+      147.47400000000002,
       41,
       "display-controller",
       -1
     ],
     [
-      -78.08607361963189,
-      143.48076923076923,
+      -201.39,
+      144.934,
       41,
       "display-controller",
       -1
     ],
     [
-      -78.08607361963189,
-      140.94076923076923,
+      -201.39,
+      142.394,
       41,
       "display-controller",
       -1
     ],
     [
-      -78.08607361963189,
-      138.4007692307692,
+      -201.39,
+      139.854,
       41,
       "display-controller",
       -1
     ],
     [
-      -78.08607361963189,
-      136.12751923076922,
+      -201.39,
+      137.314,
       41,
       "display-controller",
       -1
     ],
     [
-      -70.46607361963189,
-      150.83401923076923,
+      -201.39,
+      135.04075,
       41,
       "display-controller",
       -1
     ],
     [
-      -70.46607361963189,
-      148.56076923076924,
+      -37.010000000000005,
+      122.96124999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -70.46607361963189,
-      146.02076923076922,
+      -37.010000000000005,
+      120.68799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -70.46607361963189,
-      143.48076923076923,
+      -37.010000000000005,
+      118.148,
       41,
       "display-controller",
       -1
     ],
     [
-      -70.46607361963189,
-      140.94076923076923,
+      -37.010000000000005,
+      115.60799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -70.46607361963189,
-      138.4007692307692,
+      -37.010000000000005,
+      113.068,
       41,
       "display-controller",
       -1
     ],
     [
-      -70.46607361963189,
-      136.12751923076922,
+      -37.010000000000005,
+      110.52799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -60.00018404907976,
-      150.83401923076923,
+      -37.010000000000005,
+      107.988,
       41,
       "display-controller",
       -1
     ],
     [
-      -60.00018404907976,
-      148.56076923076924,
+      -37.010000000000005,
+      105.71475,
       41,
       "display-controller",
       -1
     ],
     [
-      -60.00018404907976,
-      146.02076923076922,
+      -29.390000000000004,
+      122.96124999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -60.00018404907976,
-      143.48076923076923,
+      -29.390000000000004,
+      120.68799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -60.00018404907976,
-      140.94076923076923,
+      -29.390000000000004,
+      118.148,
       41,
       "display-controller",
       -1
     ],
     [
-      -60.00018404907976,
-      138.4007692307692,
+      -29.390000000000004,
+      115.60799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -60.00018404907976,
-      136.12751923076922,
+      -29.390000000000004,
+      113.068,
       41,
       "display-controller",
       -1
     ],
     [
-      -52.38018404907976,
-      150.83401923076923,
+      -29.390000000000004,
+      110.52799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -52.38018404907976,
-      148.56076923076924,
+      -29.390000000000004,
+      107.988,
       41,
       "display-controller",
       -1
     ],
     [
-      -52.38018404907976,
-      146.02076923076922,
+      -29.390000000000004,
+      105.71475,
       41,
       "display-controller",
       -1
     ],
     [
-      -52.38018404907976,
-      143.48076923076923,
+      -53.81,
+      121.69125,
       41,
       "display-controller",
       -1
     ],
     [
-      -52.38018404907976,
-      140.94076923076923,
+      -53.81,
+      119.41799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -52.38018404907976,
-      138.4007692307692,
+      -53.81,
+      116.878,
       41,
       "display-controller",
       -1
     ],
     [
-      -52.38018404907976,
-      136.12751923076922,
+      -53.81,
+      114.338,
       41,
       "display-controller",
       -1
     ],
     [
-      -208.69073466257672,
-      113.36948717948718,
+      -53.81,
+      111.79799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -206.4174846625767,
-      113.36948717948718,
+      -53.81,
+      109.258,
       41,
       "display-controller",
       -1
     ],
     [
-      -203.8774846625767,
-      113.36948717948718,
+      -53.81,
+      106.98474999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -201.3374846625767,
-      113.36948717948718,
+      -46.19,
+      121.69125,
       41,
       "display-controller",
       -1
     ],
     [
-      -198.7974846625767,
-      113.36948717948718,
+      -46.19,
+      119.41799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -196.2574846625767,
-      113.36948717948718,
+      -46.19,
+      116.878,
       41,
       "display-controller",
       -1
     ],
     [
-      -193.7174846625767,
-      113.36948717948718,
+      -46.19,
+      114.338,
       41,
       "display-controller",
       -1
     ],
     [
-      -191.4442346625767,
-      113.36948717948718,
+      -46.19,
+      111.79799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -208.69073466257672,
-      120.98948717948718,
+      -46.19,
+      109.258,
       41,
       "display-controller",
       -1
     ],
     [
-      -206.4174846625767,
-      120.98948717948718,
+      -46.19,
+      106.98474999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -203.8774846625767,
-      120.98948717948718,
+      -133.01,
+      122.96124999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -201.3374846625767,
-      120.98948717948718,
+      -133.01,
+      120.68799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -198.7974846625767,
-      120.98948717948718,
+      -133.01,
+      118.148,
       41,
       "display-controller",
       -1
     ],
     [
-      -196.2574846625767,
-      120.98948717948718,
+      -133.01,
+      115.60799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -193.7174846625767,
-      120.98948717948718,
+      -133.01,
+      113.068,
       41,
       "display-controller",
       -1
     ],
     [
-      -191.4442346625767,
-      120.98948717948718,
+      -133.01,
+      110.52799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -208.69073466257672,
-      94.75410256410255,
+      -133.01,
+      107.988,
       41,
       "display-controller",
       -1
     ],
     [
-      -206.4174846625767,
-      94.75410256410255,
+      -133.01,
+      105.71475,
       41,
       "display-controller",
       -1
     ],
     [
-      -203.8774846625767,
-      94.75410256410255,
+      -125.38999999999999,
+      122.96124999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -201.3374846625767,
-      94.75410256410255,
+      -125.38999999999999,
+      120.68799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -198.7974846625767,
-      94.75410256410255,
+      -125.38999999999999,
+      118.148,
       41,
       "display-controller",
       -1
     ],
     [
-      -196.2574846625767,
-      94.75410256410255,
+      -125.38999999999999,
+      115.60799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -193.7174846625767,
-      94.75410256410255,
+      -125.38999999999999,
+      113.068,
       41,
       "display-controller",
       -1
     ],
     [
-      -191.4442346625767,
-      94.75410256410255,
+      -125.38999999999999,
+      110.52799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -208.69073466257672,
-      102.37410256410256,
+      -125.38999999999999,
+      107.988,
       41,
       "display-controller",
       -1
     ],
     [
-      -206.4174846625767,
-      102.37410256410256,
+      -125.38999999999999,
+      105.71475,
       41,
       "display-controller",
       -1
     ],
     [
-      -203.8774846625767,
-      102.37410256410256,
+      -194.61,
+      122.96124999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -201.3374846625767,
-      102.37410256410256,
+      -194.61,
+      120.68799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -198.7974846625767,
-      102.37410256410256,
+      -194.61,
+      118.148,
       41,
       "display-controller",
       -1
     ],
     [
-      -196.2574846625767,
-      102.37410256410256,
+      -194.61,
+      115.60799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -193.7174846625767,
-      102.37410256410256,
+      -194.61,
+      113.068,
       41,
       "display-controller",
       -1
     ],
     [
-      -191.4442346625767,
-      102.37410256410256,
+      -194.61,
+      110.52799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -208.5557653374233,
-      77.12589743589744,
+      -194.61,
+      107.988,
       41,
       "display-controller",
       -1
     ],
     [
-      -206.2825153374233,
-      77.12589743589744,
+      -194.61,
+      105.71475,
       41,
       "display-controller",
       -1
     ],
     [
-      -203.7425153374233,
-      77.12589743589744,
+      -186.99,
+      122.96124999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -201.2025153374233,
-      77.12589743589744,
+      -186.99,
+      120.68799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -198.6625153374233,
-      77.12589743589744,
+      -186.99,
+      118.148,
       41,
       "display-controller",
       -1
     ],
     [
-      -196.1225153374233,
-      77.12589743589744,
+      -186.99,
+      115.60799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -193.5825153374233,
-      77.12589743589744,
+      -186.99,
+      113.068,
       41,
       "display-controller",
       -1
     ],
     [
-      -191.30926533742328,
-      77.12589743589744,
+      -186.99,
+      110.52799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -208.5557653374233,
-      84.74589743589745,
+      -186.99,
+      107.988,
       41,
       "display-controller",
       -1
     ],
     [
-      -206.2825153374233,
-      84.74589743589745,
+      -186.99,
+      105.71475,
       41,
       "display-controller",
       -1
     ],
     [
-      -203.7425153374233,
-      84.74589743589745,
+      -207.41,
+      121.69125,
       41,
       "display-controller",
       -1
     ],
     [
-      -201.2025153374233,
-      84.74589743589745,
+      -207.41,
+      119.41799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -198.6625153374233,
-      84.74589743589745,
+      -207.41,
+      116.878,
       41,
       "display-controller",
       -1
     ],
     [
-      -196.1225153374233,
-      84.74589743589745,
+      -207.41,
+      114.338,
       41,
       "display-controller",
       -1
     ],
     [
-      -193.5825153374233,
-      84.74589743589745,
+      -207.41,
+      111.79799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -191.30926533742328,
-      84.74589743589745,
+      -207.41,
+      109.258,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.72140950920246,
-      97.85666666666667,
+      -207.41,
+      106.98474999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -170.44815950920244,
-      97.85666666666667,
+      -199.79,
+      121.69125,
       41,
       "display-controller",
       -1
     ],
     [
-      -167.90815950920245,
-      97.85666666666667,
+      -199.79,
+      119.41799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -165.36815950920246,
-      97.85666666666667,
+      -199.79,
+      116.878,
       41,
       "display-controller",
       -1
     ],
     [
-      -162.82815950920244,
-      97.85666666666667,
+      -199.79,
+      114.338,
       41,
       "display-controller",
       -1
     ],
     [
-      -160.28815950920244,
-      97.85666666666667,
+      -199.79,
+      111.79799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -157.74815950920245,
-      97.85666666666667,
+      -199.79,
+      109.258,
       41,
       "display-controller",
       -1
     ],
     [
-      -155.47490950920243,
-      97.85666666666667,
+      -199.79,
+      106.98474999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.72140950920246,
-      105.47666666666667,
+      -79.893,
+      115.911,
       41,
       "display-controller",
       -1
     ],
     [
-      -170.44815950920244,
-      105.47666666666667,
+      -79.893,
+      113.636,
       41,
       "display-controller",
       -1
     ],
     [
-      -167.90815950920245,
-      105.47666666666667,
+      -79.893,
+      111.096,
       41,
       "display-controller",
       -1
     ],
     [
-      -165.36815950920246,
-      105.47666666666667,
+      -79.893,
+      108.556,
       41,
       "display-controller",
       -1
     ],
     [
-      -162.82815950920244,
-      105.47666666666667,
+      -79.893,
+      106.016,
       41,
       "display-controller",
       -1
     ],
     [
-      -160.28815950920244,
-      105.47666666666667,
+      -79.893,
+      103.476,
       41,
       "display-controller",
       -1
     ],
     [
-      -157.74815950920245,
-      105.47666666666667,
+      -79.893,
+      100.936,
       41,
       "display-controller",
       -1
     ],
     [
-      -155.47490950920243,
-      105.47666666666667,
+      -79.893,
+      98.396,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.72140950920246,
-      79.66435897435896,
+      -79.893,
+      95.85600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -170.44815950920244,
-      79.66435897435896,
+      -79.893,
+      93.316,
       41,
       "display-controller",
       -1
     ],
     [
-      -167.90815950920245,
-      79.66435897435896,
+      -79.893,
+      90.77600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -165.36815950920246,
-      79.66435897435896,
+      -79.893,
+      88.501,
       41,
       "display-controller",
       -1
     ],
     [
-      -162.82815950920244,
-      79.66435897435896,
+      -64.90700000000001,
+      115.911,
       41,
       "display-controller",
       -1
     ],
     [
-      -160.28815950920244,
-      79.66435897435896,
+      -64.90700000000001,
+      113.636,
       41,
       "display-controller",
       -1
     ],
     [
-      -157.74815950920245,
-      79.66435897435896,
+      -64.90700000000001,
+      111.096,
       41,
       "display-controller",
       -1
     ],
     [
-      -155.47490950920243,
-      79.66435897435896,
+      -64.90700000000001,
+      108.556,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.72140950920246,
-      87.28435897435897,
+      -64.90700000000001,
+      106.016,
       41,
       "display-controller",
       -1
     ],
     [
-      -170.44815950920244,
-      87.28435897435897,
+      -64.90700000000001,
+      103.476,
       41,
       "display-controller",
       -1
     ],
     [
-      -167.90815950920245,
-      87.28435897435897,
+      -64.90700000000001,
+      100.936,
       41,
       "display-controller",
       -1
     ],
     [
-      -165.36815950920246,
-      87.28435897435897,
+      -64.90700000000001,
+      98.396,
       41,
       "display-controller",
       -1
     ],
     [
-      -162.82815950920244,
-      87.28435897435897,
+      -64.90700000000001,
+      95.85600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -160.28815950920244,
-      87.28435897435897,
+      -64.90700000000001,
+      93.316,
       41,
       "display-controller",
       -1
     ],
     [
-      -157.74815950920245,
-      87.28435897435897,
+      -64.90700000000001,
+      90.77600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -155.47490950920243,
-      87.28435897435897,
+      -64.90700000000001,
+      88.501,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.72140950920246,
-      62.318205128205136,
+      -154.773,
+      115.911,
       41,
       "display-controller",
       -1
     ],
     [
-      -170.44815950920244,
-      62.318205128205136,
+      -154.773,
+      113.636,
       41,
       "display-controller",
       -1
     ],
     [
-      -167.90815950920245,
-      62.318205128205136,
+      -154.773,
+      111.096,
       41,
       "display-controller",
       -1
     ],
     [
-      -165.36815950920246,
-      62.318205128205136,
+      -154.773,
+      108.556,
       41,
       "display-controller",
       -1
     ],
     [
-      -162.82815950920244,
-      62.318205128205136,
+      -154.773,
+      106.016,
       41,
       "display-controller",
       -1
     ],
     [
-      -160.28815950920244,
-      62.318205128205136,
+      -154.773,
+      103.476,
       41,
       "display-controller",
       -1
     ],
     [
-      -157.74815950920245,
-      62.318205128205136,
+      -154.773,
+      100.936,
       41,
       "display-controller",
       -1
     ],
     [
-      -155.47490950920243,
-      62.318205128205136,
+      -154.773,
+      98.396,
       41,
       "display-controller",
       -1
     ],
     [
-      -172.72140950920246,
-      69.93820512820514,
+      -154.773,
+      95.85600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -170.44815950920244,
-      69.93820512820514,
+      -154.773,
+      93.316,
       41,
       "display-controller",
       -1
     ],
     [
-      -167.90815950920245,
-      69.93820512820514,
+      -154.773,
+      90.77600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -165.36815950920246,
-      69.93820512820514,
+      -154.773,
+      88.501,
       41,
       "display-controller",
       -1
     ],
     [
-      -162.82815950920244,
-      69.93820512820514,
+      -139.787,
+      115.911,
       41,
       "display-controller",
       -1
     ],
     [
-      -160.28815950920244,
-      69.93820512820514,
+      -139.787,
+      113.636,
       41,
       "display-controller",
       -1
     ],
     [
-      -157.74815950920245,
-      69.93820512820514,
+      -139.787,
+      111.096,
       41,
       "display-controller",
       -1
     ],
     [
-      -155.47490950920243,
-      69.93820512820514,
+      -139.787,
+      108.556,
       41,
       "display-controller",
       -1
     ],
     [
-      -131.02809662576686,
-      101.52333333333333,
+      -139.787,
+      106.016,
       41,
       "display-controller",
       -1
     ],
     [
-      -128.75484662576687,
-      101.52333333333333,
+      -139.787,
+      103.476,
       41,
       "display-controller",
       -1
     ],
     [
-      -126.21484662576688,
-      101.52333333333333,
+      -139.787,
+      100.936,
       41,
       "display-controller",
       -1
     ],
     [
-      -123.67484662576688,
-      101.52333333333333,
+      -139.787,
+      98.396,
       41,
       "display-controller",
       -1
     ],
     [
-      -121.13484662576687,
-      101.52333333333333,
+      -139.787,
+      95.85600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -118.59484662576688,
-      101.52333333333333,
+      -139.787,
+      93.316,
       41,
       "display-controller",
       -1
     ],
     [
-      -116.32159662576687,
-      101.52333333333333,
+      -139.787,
+      90.77600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -131.02809662576686,
-      109.14333333333333,
+      -139.787,
+      88.501,
       41,
       "display-controller",
       -1
     ],
     [
-      -128.75484662576687,
-      109.14333333333333,
+      -175.41299999999998,
+      115.911,
       41,
       "display-controller",
       -1
     ],
     [
-      -126.21484662576688,
-      109.14333333333333,
+      -175.41299999999998,
+      113.636,
       41,
       "display-controller",
       -1
     ],
     [
-      -123.67484662576688,
-      109.14333333333333,
+      -175.41299999999998,
+      111.096,
       41,
       "display-controller",
       -1
     ],
     [
-      -121.13484662576687,
-      109.14333333333333,
+      -175.41299999999998,
+      108.556,
       41,
       "display-controller",
       -1
     ],
     [
-      -118.59484662576688,
-      109.14333333333333,
+      -175.41299999999998,
+      106.016,
       41,
       "display-controller",
       -1
     ],
     [
-      -116.32159662576687,
-      109.14333333333333,
+      -175.41299999999998,
+      103.476,
       41,
       "display-controller",
       -1
     ],
     [
-      -130.8931273006135,
-      76.91435897435898,
+      -175.41299999999998,
+      100.936,
       41,
       "display-controller",
       -1
     ],
     [
-      -128.6198773006135,
-      76.91435897435898,
+      -175.41299999999998,
+      98.396,
       41,
       "display-controller",
       -1
     ],
     [
-      -126.0798773006135,
-      76.91435897435898,
+      -175.41299999999998,
+      95.85600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -123.5398773006135,
-      76.91435897435898,
+      -175.41299999999998,
+      93.316,
       41,
       "display-controller",
       -1
     ],
     [
-      -120.99987730061349,
-      76.91435897435898,
+      -175.41299999999998,
+      90.77600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -118.4598773006135,
-      76.91435897435898,
+      -175.41299999999998,
+      88.501,
       41,
       "display-controller",
       -1
     ],
     [
-      -116.1866273006135,
-      76.91435897435898,
+      -160.427,
+      115.911,
       41,
       "display-controller",
       -1
     ],
     [
-      -130.8931273006135,
-      84.53435897435898,
+      -160.427,
+      113.636,
       41,
       "display-controller",
       -1
     ],
     [
-      -128.6198773006135,
-      84.53435897435898,
+      -160.427,
+      111.096,
       41,
       "display-controller",
       -1
     ],
     [
-      -126.0798773006135,
-      84.53435897435898,
+      -160.427,
+      108.556,
       41,
       "display-controller",
       -1
     ],
     [
-      -123.5398773006135,
-      84.53435897435898,
+      -160.427,
+      106.016,
       41,
       "display-controller",
       -1
     ],
     [
-      -120.99987730061349,
-      84.53435897435898,
+      -160.427,
+      103.476,
       41,
       "display-controller",
       -1
     ],
     [
-      -118.4598773006135,
-      84.53435897435898,
+      -160.427,
+      100.936,
       41,
       "display-controller",
       -1
     ],
     [
-      -116.1866273006135,
-      84.53435897435898,
+      -160.427,
+      98.396,
       41,
       "display-controller",
       -1
     ],
     [
-      -97.69067331288343,
-      101.52333333333333,
+      -160.427,
+      95.85600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -95.41742331288343,
-      101.52333333333333,
+      -160.427,
+      93.316,
       41,
       "display-controller",
       -1
     ],
     [
-      -92.87742331288344,
-      101.52333333333333,
+      -160.427,
+      90.77600000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -90.33742331288343,
-      101.52333333333333,
+      -160.427,
+      88.501,
       41,
       "display-controller",
       -1
     ],
     [
-      -87.79742331288342,
-      101.52333333333333,
+      -110.42,
+      116.21125,
       41,
       "display-controller",
       -1
     ],
     [
-      -85.25742331288343,
-      101.52333333333333,
+      -110.42,
+      113.938,
       41,
       "display-controller",
       -1
     ],
     [
-      -82.98417331288343,
-      101.52333333333333,
+      -110.42,
+      111.398,
       41,
       "display-controller",
       -1
     ],
     [
-      -97.69067331288343,
-      109.14333333333333,
+      -110.42,
+      108.858,
       41,
       "display-controller",
       -1
     ],
     [
-      -95.41742331288343,
-      109.14333333333333,
+      -110.42,
+      106.318,
       41,
       "display-controller",
       -1
     ],
     [
-      -92.87742331288344,
-      109.14333333333333,
+      -110.42,
+      103.77799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -90.33742331288343,
-      109.14333333333333,
+      -110.42,
+      101.238,
       41,
       "display-controller",
       -1
     ],
     [
-      -87.79742331288342,
-      109.14333333333333,
+      -110.42,
+      98.698,
       41,
       "display-controller",
       -1
     ],
     [
-      -85.25742331288343,
-      109.14333333333333,
+      -110.42,
+      96.158,
       41,
       "display-controller",
       -1
     ],
     [
-      -82.98417331288343,
-      109.14333333333333,
+      -110.42,
+      93.618,
       41,
       "display-controller",
       -1
     ],
     [
-      -84.30496779141103,
-      82.05948717948716,
+      -110.42,
+      91.078,
       41,
       "display-controller",
       -1
     ],
     [
-      -82.03171779141104,
-      82.05948717948716,
+      -110.42,
+      88.538,
       41,
       "display-controller",
       -1
     ],
     [
-      -79.49171779141103,
-      82.05948717948716,
+      -110.42,
+      85.998,
       41,
       "display-controller",
       -1
     ],
     [
-      -76.95171779141104,
-      82.05948717948716,
+      -110.42,
+      83.458,
       41,
       "display-controller",
       -1
     ],
     [
-      -74.41171779141104,
-      82.05948717948716,
+      -110.42,
+      80.918,
       41,
       "display-controller",
       -1
     ],
     [
-      -71.87171779141104,
-      82.05948717948716,
+      -110.42,
+      78.378,
       41,
       "display-controller",
       -1
     ],
     [
-      -69.33171779141104,
-      82.05948717948716,
+      -110.42,
+      75.838,
       41,
       "display-controller",
       -1
     ],
     [
-      -66.79171779141103,
-      82.05948717948716,
+      -110.42,
+      73.298,
       41,
       "display-controller",
       -1
     ],
     [
-      -64.25171779141104,
-      82.05948717948716,
+      -110.42,
+      70.758,
       41,
       "display-controller",
       -1
     ],
     [
-      -61.71171779141104,
-      82.05948717948716,
+      -110.42,
+      68.48474999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -59.171717791411034,
-      82.05948717948716,
+      -95.17999999999999,
+      116.21125,
       41,
       "display-controller",
       -1
     ],
     [
-      -56.631717791411035,
-      82.05948717948716,
+      -95.17999999999999,
+      113.938,
       41,
       "display-controller",
       -1
     ],
     [
-      -54.091717791411035,
-      82.05948717948716,
+      -95.17999999999999,
+      111.398,
       41,
       "display-controller",
       -1
     ],
     [
-      -51.551717791411036,
-      82.05948717948716,
+      -95.17999999999999,
+      108.858,
       41,
       "display-controller",
       -1
     ],
     [
-      -49.01171779141104,
-      82.05948717948716,
+      -95.17999999999999,
+      106.318,
       41,
       "display-controller",
       -1
     ],
     [
-      -46.47171779141104,
-      82.05948717948716,
+      -95.17999999999999,
+      103.77799999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -43.93171779141103,
-      82.05948717948716,
+      -95.17999999999999,
+      101.238,
       41,
       "display-controller",
       -1
     ],
     [
-      -41.39171779141104,
-      82.05948717948716,
+      -95.17999999999999,
+      98.698,
       41,
       "display-controller",
       -1
     ],
     [
-      -38.85171779141103,
-      82.05948717948716,
+      -95.17999999999999,
+      96.158,
       41,
       "display-controller",
       -1
     ],
     [
-      -36.578467791411036,
-      82.05948717948716,
+      -95.17999999999999,
+      93.618,
       41,
       "display-controller",
       -1
     ],
     [
-      -84.30496779141103,
-      97.29948717948717,
+      -95.17999999999999,
+      91.078,
       41,
       "display-controller",
       -1
     ],
     [
-      -82.03171779141104,
-      97.29948717948717,
+      -95.17999999999999,
+      88.538,
       41,
       "display-controller",
       -1
     ],
     [
-      -79.49171779141103,
-      97.29948717948717,
+      -95.17999999999999,
+      85.998,
       41,
       "display-controller",
       -1
     ],
     [
-      -76.95171779141104,
-      97.29948717948717,
+      -95.17999999999999,
+      83.458,
       41,
       "display-controller",
       -1
     ],
     [
-      -74.41171779141104,
-      97.29948717948717,
+      -95.17999999999999,
+      80.918,
       41,
       "display-controller",
       -1
     ],
     [
-      -71.87171779141104,
-      97.29948717948717,
+      -95.17999999999999,
+      78.378,
       41,
       "display-controller",
       -1
     ],
     [
-      -69.33171779141104,
-      97.29948717948717,
+      -95.17999999999999,
+      75.838,
       41,
       "display-controller",
       -1
     ],
     [
-      -66.79171779141103,
-      97.29948717948717,
+      -95.17999999999999,
+      73.298,
       41,
       "display-controller",
       -1
     ],
     [
-      -64.25171779141104,
-      97.29948717948717,
+      -95.17999999999999,
+      70.758,
       41,
       "display-controller",
       -1
     ],
     [
-      -61.71171779141104,
-      97.29948717948717,
+      -95.17999999999999,
+      68.48474999999999,
       41,
       "display-controller",
       -1
     ],
     [
-      -59.171717791411034,
-      97.29948717948717,
+      -37.010000000000005,
+      96.42225,
       41,
       "display-controller",
       -1
     ],
     [
-      -56.631717791411035,
-      97.29948717948717,
+      -37.010000000000005,
+      94.149,
       41,
       "display-controller",
       -1
     ],
     [
-      -54.091717791411035,
-      97.29948717948717,
+      -37.010000000000005,
+      91.60900000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -51.551717791411036,
-      97.29948717948717,
+      -37.010000000000005,
+      89.069,
       41,
       "display-controller",
       -1
     ],
     [
-      -49.01171779141104,
-      97.29948717948717,
+      -37.010000000000005,
+      86.52900000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -46.47171779141104,
-      97.29948717948717,
+      -37.010000000000005,
+      83.989,
       41,
       "display-controller",
       -1
     ],
     [
-      -43.93171779141103,
-      97.29948717948717,
+      -37.010000000000005,
+      81.44900000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -41.39171779141104,
-      97.29948717948717,
+      -37.010000000000005,
+      79.17575000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -38.85171779141103,
-      97.29948717948717,
+      -29.390000000000004,
+      96.42225,
       41,
       "display-controller",
       -1
     ],
     [
-      -36.578467791411036,
-      97.29948717948717,
+      -29.390000000000004,
+      94.149,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      112.6921794871795,
+      -29.390000000000004,
+      91.60900000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      110.41717948717951,
+      -29.390000000000004,
+      89.069,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      107.8771794871795,
+      -29.390000000000004,
+      86.52900000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      105.3371794871795,
+      -29.390000000000004,
+      83.989,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      102.7971794871795,
+      -29.390000000000004,
+      81.44900000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      100.2571794871795,
+      -29.390000000000004,
+      79.17575000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      97.71717948717951,
+      -53.81,
+      95.91025,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      95.1771794871795,
+      -53.81,
+      93.637,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      92.63717948717951,
+      -53.81,
+      91.09700000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      90.0971794871795,
+      -53.81,
+      88.557,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      87.5571794871795,
+      -53.81,
+      86.017,
       41,
       "display-controller",
       -1
     ],
     [
-      -34.59729447852761,
-      85.2821794871795,
+      -53.81,
+      83.477,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      112.6921794871795,
+      -53.81,
+      81.20375,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      110.41717948717951,
+      -46.19,
+      95.91025,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      107.8771794871795,
+      -46.19,
+      93.637,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      105.3371794871795,
+      -46.19,
+      91.09700000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      102.7971794871795,
+      -46.19,
+      88.557,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      100.2571794871795,
+      -46.19,
+      86.017,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      97.71717948717951,
+      -46.19,
+      83.477,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      95.1771794871795,
+      -46.19,
+      81.20375,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      92.63717948717951,
+      -133.01,
+      95.66325,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      90.0971794871795,
+      -133.01,
+      93.39,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      87.5571794871795,
+      -133.01,
+      90.85000000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.611294478527604,
-      85.2821794871795,
+      -133.01,
+      88.31,
       41,
       "display-controller",
       -1
     ],
     [
-      -141.4289263803681,
-      45.30828205128204,
+      -133.01,
+      85.77000000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -139.1539263803681,
-      45.30828205128204,
+      -133.01,
+      83.23,
       41,
       "display-controller",
       -1
     ],
     [
-      -136.6139263803681,
-      45.30828205128204,
+      -133.01,
+      80.69000000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -134.0739263803681,
-      45.30828205128204,
+      -133.01,
+      78.41675000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -131.5339263803681,
-      45.30828205128204,
+      -125.38999999999999,
+      95.66325,
       41,
       "display-controller",
       -1
     ],
     [
-      -128.9939263803681,
-      45.30828205128204,
+      -125.38999999999999,
+      93.39,
       41,
       "display-controller",
       -1
     ],
     [
-      -126.4539263803681,
-      45.30828205128204,
+      -125.38999999999999,
+      90.85000000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -123.9139263803681,
-      45.30828205128204,
+      -125.38999999999999,
+      88.31,
       41,
       "display-controller",
       -1
     ],
     [
-      -121.3739263803681,
-      45.30828205128204,
+      -125.38999999999999,
+      85.77000000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -118.8339263803681,
-      45.30828205128204,
+      -125.38999999999999,
+      83.23,
       41,
       "display-controller",
       -1
     ],
     [
-      -116.2939263803681,
-      45.30828205128204,
+      -125.38999999999999,
+      80.69000000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -114.0189263803681,
-      45.30828205128204,
+      -125.38999999999999,
+      78.41675000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -141.4289263803681,
-      60.294282051282046,
+      -194.61,
+      97.18025,
       41,
       "display-controller",
       -1
     ],
     [
-      -139.1539263803681,
-      60.294282051282046,
+      -194.61,
+      94.907,
       41,
       "display-controller",
       -1
     ],
     [
-      -136.6139263803681,
-      60.294282051282046,
+      -194.61,
+      92.367,
       41,
       "display-controller",
       -1
     ],
     [
-      -134.0739263803681,
-      60.294282051282046,
+      -194.61,
+      89.827,
       41,
       "display-controller",
       -1
     ],
     [
-      -131.5339263803681,
-      60.294282051282046,
+      -194.61,
+      87.287,
       41,
       "display-controller",
       -1
     ],
     [
-      -128.9939263803681,
-      60.294282051282046,
+      -194.61,
+      84.747,
       41,
       "display-controller",
       -1
     ],
     [
-      -126.4539263803681,
-      60.294282051282046,
+      -194.61,
+      82.20700000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -123.9139263803681,
-      60.294282051282046,
+      -194.61,
+      79.93375,
       41,
       "display-controller",
       -1
     ],
     [
-      -121.3739263803681,
-      60.294282051282046,
+      -186.99,
+      97.18025,
       41,
       "display-controller",
       -1
     ],
     [
-      -118.8339263803681,
-      60.294282051282046,
+      -186.99,
+      94.907,
       41,
       "display-controller",
       -1
     ],
     [
-      -116.2939263803681,
-      60.294282051282046,
+      -186.99,
+      92.367,
       41,
       "display-controller",
       -1
     ],
     [
-      -114.0189263803681,
-      60.294282051282046,
+      -186.99,
+      89.827,
       41,
       "display-controller",
       -1
     ],
     [
-      -98.98107361963191,
-      45.37879487179487,
+      -186.99,
+      87.287,
       41,
       "display-controller",
       -1
     ],
     [
-      -96.70607361963192,
-      45.37879487179487,
+      -186.99,
+      84.747,
       41,
       "display-controller",
       -1
     ],
     [
-      -94.16607361963192,
-      45.37879487179487,
+      -186.99,
+      82.20700000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -91.62607361963191,
-      45.37879487179487,
+      -186.99,
+      79.93375,
       41,
       "display-controller",
       -1
     ],
     [
-      -89.08607361963192,
-      45.37879487179487,
+      -209.01,
+      97.18025,
       41,
       "display-controller",
       -1
     ],
     [
-      -86.54607361963191,
-      45.37879487179487,
+      -209.01,
+      94.907,
       41,
       "display-controller",
       -1
     ],
     [
-      -84.00607361963192,
-      45.37879487179487,
+      -209.01,
+      92.367,
       41,
       "display-controller",
       -1
     ],
     [
-      -81.46607361963191,
-      45.37879487179487,
+      -209.01,
+      89.827,
       41,
       "display-controller",
       -1
     ],
     [
-      -78.92607361963192,
-      45.37879487179487,
+      -209.01,
+      87.287,
       41,
       "display-controller",
       -1
     ],
     [
-      -76.38607361963192,
-      45.37879487179487,
+      -209.01,
+      84.747,
       41,
       "display-controller",
       -1
     ],
     [
-      -73.84607361963191,
-      45.37879487179487,
+      -209.01,
+      82.20700000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -71.57107361963192,
-      45.37879487179487,
+      -209.01,
+      79.93375,
       41,
       "display-controller",
       -1
     ],
     [
-      -98.98107361963191,
-      60.36479487179487,
+      -201.39,
+      97.18025,
       41,
       "display-controller",
       -1
     ],
     [
-      -96.70607361963192,
-      60.36479487179487,
+      -201.39,
+      94.907,
       41,
       "display-controller",
       -1
     ],
     [
-      -94.16607361963192,
-      60.36479487179487,
+      -201.39,
+      92.367,
       41,
       "display-controller",
       -1
     ],
     [
-      -91.62607361963191,
-      60.36479487179487,
+      -201.39,
+      89.827,
       41,
       "display-controller",
       -1
     ],
     [
-      -89.08607361963192,
-      60.36479487179487,
+      -201.39,
+      87.287,
       41,
       "display-controller",
       -1
     ],
     [
-      -86.54607361963191,
-      60.36479487179487,
+      -201.39,
+      84.747,
       41,
       "display-controller",
       -1
     ],
     [
-      -84.00607361963192,
-      60.36479487179487,
+      -201.39,
+      82.20700000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -81.46607361963191,
-      60.36479487179487,
+      -201.39,
+      79.93375,
       41,
       "display-controller",
       -1
     ],
     [
-      -78.92607361963192,
-      60.36479487179487,
+      -37.010000000000005,
+      70.64025000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -76.38607361963192,
-      60.36479487179487,
+      -37.010000000000005,
+      68.367,
       41,
       "display-controller",
       -1
     ],
     [
-      -73.84607361963191,
-      60.36479487179487,
+      -37.010000000000005,
+      65.827,
       41,
       "display-controller",
       -1
     ],
     [
-      -71.57107361963192,
-      60.36479487179487,
+      -37.010000000000005,
+      63.287000000000006,
       41,
       "display-controller",
       -1
     ],
     [
-      -62.60684049079755,
-      45.37879487179487,
+      -37.010000000000005,
+      60.747,
       41,
       "display-controller",
       -1
     ],
     [
-      -60.33184049079755,
-      45.37879487179487,
+      -37.010000000000005,
+      58.207,
       41,
       "display-controller",
       -1
     ],
     [
-      -57.791840490797554,
-      45.37879487179487,
+      -37.010000000000005,
+      55.667,
       41,
       "display-controller",
       -1
     ],
     [
-      -55.251840490797555,
-      45.37879487179487,
+      -37.010000000000005,
+      53.393750000000004,
       41,
       "display-controller",
       -1
     ],
     [
-      -52.711840490797556,
-      45.37879487179487,
+      -29.390000000000004,
+      70.64025000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -50.17184049079756,
-      45.37879487179487,
+      -29.390000000000004,
+      68.367,
       41,
       "display-controller",
       -1
     ],
     [
-      -47.63184049079755,
-      45.37879487179487,
+      -29.390000000000004,
+      65.827,
       41,
       "display-controller",
       -1
     ],
     [
-      -45.09184049079755,
-      45.37879487179487,
+      -29.390000000000004,
+      63.287000000000006,
       41,
       "display-controller",
       -1
     ],
     [
-      -42.55184049079755,
-      45.37879487179487,
+      -29.390000000000004,
+      60.747,
       41,
       "display-controller",
       -1
     ],
     [
-      -40.01184049079755,
-      45.37879487179487,
+      -29.390000000000004,
+      58.207,
       41,
       "display-controller",
       -1
     ],
     [
-      -37.471840490797554,
-      45.37879487179487,
+      -29.390000000000004,
+      55.667,
       41,
       "display-controller",
       -1
     ],
     [
-      -35.196840490797555,
-      45.37879487179487,
+      -29.390000000000004,
+      53.393750000000004,
       41,
       "display-controller",
       -1
     ],
     [
-      -62.60684049079755,
-      60.36479487179487,
+      -53.81,
+      69.37025,
       41,
       "display-controller",
       -1
     ],
     [
-      -60.33184049079755,
-      60.36479487179487,
+      -53.81,
+      67.09700000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -57.791840490797554,
-      60.36479487179487,
+      -53.81,
+      64.557,
       41,
       "display-controller",
       -1
     ],
     [
-      -55.251840490797555,
-      60.36479487179487,
+      -53.81,
+      62.017,
       41,
       "display-controller",
       -1
     ],
     [
-      -52.711840490797556,
-      60.36479487179487,
+      -53.81,
+      59.477000000000004,
       41,
       "display-controller",
       -1
     ],
     [
-      -50.17184049079756,
-      60.36479487179487,
+      -53.81,
+      56.937000000000005,
       41,
       "display-controller",
       -1
     ],
     [
-      -47.63184049079755,
-      60.36479487179487,
+      -53.81,
+      54.66375,
       41,
       "display-controller",
       -1
     ],
     [
-      -45.09184049079755,
-      60.36479487179487,
+      -46.19,
+      69.37025,
       41,
       "display-controller",
       -1
     ],
     [
-      -42.55184049079755,
-      60.36479487179487,
+      -46.19,
+      67.09700000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -40.01184049079755,
-      60.36479487179487,
+      -46.19,
+      64.557,
       41,
       "display-controller",
       -1
     ],
     [
-      -37.471840490797554,
-      60.36479487179487,
+      -46.19,
+      62.017,
       41,
       "display-controller",
       -1
     ],
     [
-      -35.196840490797555,
-      60.36479487179487,
+      -46.19,
+      59.477000000000004,
       41,
       "display-controller",
       -1
     ],
     [
-      -208.35331134969326,
-      25.93358974358975,
+      -46.19,
+      56.937000000000005,
       41,
       "display-controller",
       -1
     ],
     [
-      -206.08006134969324,
-      25.93358974358975,
+      -46.19,
+      54.66375,
       41,
       "display-controller",
       -1
     ],
     [
-      -203.54006134969325,
-      25.93358974358975,
+      -69.81,
+      69.37025,
       41,
       "display-controller",
       -1
     ],
     [
-      -201.00006134969325,
-      25.93358974358975,
+      -69.81,
+      67.09700000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -198.46006134969323,
-      25.93358974358975,
+      -69.81,
+      64.557,
       41,
       "display-controller",
       -1
     ],
     [
-      -195.92006134969324,
-      25.93358974358975,
+      -69.81,
+      62.017,
       41,
       "display-controller",
       -1
     ],
     [
-      -193.38006134969325,
-      25.93358974358975,
+      -69.81,
+      59.477000000000004,
       41,
       "display-controller",
       -1
     ],
     [
-      -191.10681134969323,
-      25.93358974358975,
+      -69.81,
+      56.937000000000005,
       41,
       "display-controller",
       -1
     ],
     [
-      -208.35331134969326,
-      33.55358974358975,
+      -69.81,
+      54.66375,
       41,
       "display-controller",
       -1
     ],
     [
-      -206.08006134969324,
-      33.55358974358975,
+      -62.19,
+      69.37025,
       41,
       "display-controller",
       -1
     ],
     [
-      -203.54006134969325,
-      33.55358974358975,
+      -62.19,
+      67.09700000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -201.00006134969325,
-      33.55358974358975,
+      -62.19,
+      64.557,
       41,
       "display-controller",
       -1
     ],
     [
-      -198.46006134969323,
-      33.55358974358975,
+      -62.19,
+      62.017,
       41,
       "display-controller",
       -1
     ],
     [
-      -195.92006134969324,
-      33.55358974358975,
+      -62.19,
+      59.477000000000004,
       41,
       "display-controller",
       -1
     ],
     [
-      -193.38006134969325,
-      33.55358974358975,
+      -62.19,
+      56.937000000000005,
       41,
       "display-controller",
       -1
     ],
     [
-      -191.10681134969323,
-      33.55358974358975,
+      -62.19,
+      54.66375,
       41,
       "display-controller",
       -1
     ],
     [
-      -176.50055061349696,
-      24.875897435897443,
+      -86.61,
+      73.93925,
       41,
       "display-controller",
       -1
     ],
     [
-      -174.22730061349694,
-      24.875897435897443,
+      -86.61,
+      71.666,
       41,
       "display-controller",
       -1
     ],
     [
-      -171.68730061349694,
-      24.875897435897443,
+      -86.61,
+      69.126,
       41,
       "display-controller",
       -1
     ],
     [
-      -169.14730061349695,
-      24.875897435897443,
+      -86.61,
+      66.586,
       41,
       "display-controller",
       -1
     ],
     [
-      -166.60730061349693,
-      24.875897435897443,
+      -86.61,
+      64.046,
       41,
       "display-controller",
       -1
     ],
     [
-      -164.06730061349694,
-      24.875897435897443,
+      -86.61,
+      61.506,
       41,
       "display-controller",
       -1
     ],
     [
-      -161.52730061349695,
-      24.875897435897443,
+      -86.61,
+      58.966,
       41,
       "display-controller",
       -1
     ],
     [
-      -159.25405061349693,
-      24.875897435897443,
+      -86.61,
+      56.426,
       41,
       "display-controller",
       -1
     ],
     [
-      -176.50055061349696,
-      32.49589743589744,
+      -86.61,
+      53.886,
       41,
       "display-controller",
       -1
     ],
     [
-      -174.22730061349694,
-      32.49589743589744,
+      -86.61,
+      51.612750000000005,
       41,
       "display-controller",
       -1
     ],
     [
-      -171.68730061349694,
-      32.49589743589744,
+      -78.99,
+      73.93925,
       41,
       "display-controller",
       -1
     ],
     [
-      -169.14730061349695,
-      32.49589743589744,
+      -78.99,
+      71.666,
       41,
       "display-controller",
       -1
     ],
     [
-      -166.60730061349693,
-      32.49589743589744,
+      -78.99,
+      69.126,
       41,
       "display-controller",
       -1
     ],
     [
-      -164.06730061349694,
-      32.49589743589744,
+      -78.99,
+      66.586,
       41,
       "display-controller",
       -1
     ],
     [
-      -161.52730061349695,
-      32.49589743589744,
+      -78.99,
+      64.046,
       41,
       "display-controller",
       -1
     ],
     [
-      -159.25405061349693,
-      32.49589743589744,
+      -78.99,
+      61.506,
       41,
       "display-controller",
       -1
     ],
     [
-      -211.25,
-      160.0,
+      -78.99,
+      58.966,
       41,
       "display-controller",
       -1
     ],
     [
-      -208.75,
-      160.0,
+      -78.99,
+      56.426,
       41,
       "display-controller",
       -1
     ],
     [
-      -191.25,
-      160.0,
+      -78.99,
+      53.886,
       41,
       "display-controller",
       -1
     ],
     [
-      -188.75,
-      160.0,
+      -78.99,
+      51.612750000000005,
       41,
       "display-controller",
       -1
     ],
     [
-      -170.25,
-      160.0,
+      -133.01,
+      70.64025000000001,
       41,
       "display-controller",
       -1
     ],
     [
-      -167.75,
-      160.0,
+      -133.01,
+      68.367,
       41,
       "display-controller",
       -1
     ],
     [
-      -126.25,
-      157.0,
+      -133.01,
+      65.827,
       41,
       "display-controller",
       -1
     ],
     [
-      -123.75,
-      157.0,
+      -133.01,
+      63.287000000000006,
       41,
       "display-controller",
       -1
     ],
     [
-      -74.25,
-      155.0,
+      -133.01,
+      60.747,
       41,
       "display-controller",
       -1
     ],
     [
-      -71.75,
-      155.0,
+      -133.01,
+      58.207,
       41,
       "display-controller",
       -1
     ],
     [
-      -22.25,
-      148.0,
+      -133.01,
+      55.667,
       41,
       "display-controller",
       -1
     ],
     [
-      -19.75,
-      148.0,
+      -133.01,
+      53.393750000000004,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      70.64025000000001,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      68.367,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      65.827,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      63.287000000000006,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      60.747,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      58.207,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      55.667,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      53.393750000000004,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -151.09,
+      74.69725,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -151.09,
+      72.424,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -151.09,
+      69.884,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -151.09,
+      67.344,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -151.09,
+      64.804,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -151.09,
+      62.263999999999996,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -151.09,
+      59.724,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -151.09,
+      57.184,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -151.09,
+      54.644,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -151.09,
+      52.37075,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -143.47,
+      74.69725,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -143.47,
+      72.424,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -143.47,
+      69.884,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -143.47,
+      67.344,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -143.47,
+      64.804,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -143.47,
+      62.263999999999996,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -143.47,
+      59.724,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -143.47,
+      57.184,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -143.47,
+      54.644,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -143.47,
+      52.37075,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -165.49,
+      69.37025,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -165.49,
+      67.09700000000001,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -165.49,
+      64.557,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -165.49,
+      62.017,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -165.49,
+      59.477000000000004,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -165.49,
+      56.937000000000005,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -165.49,
+      54.66375,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -157.87,
+      69.37025,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -157.87,
+      67.09700000000001,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -157.87,
+      64.557,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -157.87,
+      62.017,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -157.87,
+      59.477000000000004,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -157.87,
+      56.937000000000005,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -157.87,
+      54.66375,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -177.01,
+      69.37025,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -177.01,
+      67.09700000000001,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -177.01,
+      64.557,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -177.01,
+      62.017,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -177.01,
+      59.477000000000004,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -177.01,
+      56.937000000000005,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -177.01,
+      54.66375,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -169.39,
+      69.37025,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -169.39,
+      67.09700000000001,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -169.39,
+      64.557,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -169.39,
+      62.017,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -169.39,
+      59.477000000000004,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -169.39,
+      56.937000000000005,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -169.39,
+      54.66375,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -37.010000000000005,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -37.010000000000005,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -37.010000000000005,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -37.010000000000005,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -37.010000000000005,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -37.010000000000005,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -37.010000000000005,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -29.390000000000004,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -29.390000000000004,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -29.390000000000004,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -29.390000000000004,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -29.390000000000004,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -29.390000000000004,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -29.390000000000004,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -53.81,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -53.81,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -53.81,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -53.81,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -53.81,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -53.81,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -53.81,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -46.19,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -46.19,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -46.19,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -46.19,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -46.19,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -46.19,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -46.19,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -69.81,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -69.81,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -69.81,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -69.81,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -69.81,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -69.81,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -69.81,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -62.19,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -62.19,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -62.19,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -62.19,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -62.19,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -62.19,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -62.19,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -85.81,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -85.81,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -85.81,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -85.81,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -85.81,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -85.81,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -85.81,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -78.19,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -78.19,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -78.19,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -78.19,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -78.19,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -78.19,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -78.19,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -101.81,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -101.81,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -101.81,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -101.81,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -101.81,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -101.81,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -101.81,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -94.19,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -94.19,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -94.19,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -94.19,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -94.19,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -94.19,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -94.19,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -133.01,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -133.01,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -133.01,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -133.01,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -133.01,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -133.01,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -133.01,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -125.38999999999999,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -146.61,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -146.61,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -146.61,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -146.61,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -146.61,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -146.61,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -146.61,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -138.99,
+      42.07325,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -138.99,
+      39.8,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -138.99,
+      37.26,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -138.99,
+      34.72,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -138.99,
+      32.18,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -138.99,
+      29.64,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -138.99,
+      27.36675,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -58.0,
+      152.744,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -58.0,
+      150.244,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -91.12,
+      145.161,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -91.12,
+      142.661,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -121.5,
+      145.919,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -121.5,
+      143.419,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -135.0,
+      151.985,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -135.0,
+      149.485,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -166.8,
+      151.985,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -166.8,
+      149.485,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -176.4,
+      81.314,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -176.4,
+      78.814,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -156.4,
+      78.433,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -156.4,
+      75.933,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -91.6,
+      64.02600000000001,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -91.6,
+      61.526,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -122.0,
+      29.145,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -122.0,
+      26.645,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -154.0,
+      45.069,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -154.0,
+      42.569,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -102.8,
+      147.436,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -102.8,
+      144.936,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -137.3,
+      134.545,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -137.3,
+      132.045,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -214.8,
+      147.436,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -214.8,
+      144.936,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -197.2,
+      128.47899999999998,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -197.2,
+      125.979,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -82.0,
+      168.667,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -82.0,
+      166.167,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -203.6,
+      162.601,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -203.6,
+      160.101,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -146.0,
+      81.466,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -146.0,
+      78.966,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -78.0,
+      48.102,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -78.0,
+      45.602,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -26.8,
+      71.608,
+      41,
+      "display-controller",
+      -1
+    ],
+    [
+      -26.8,
+      69.108,
       41,
       "display-controller",
       -1

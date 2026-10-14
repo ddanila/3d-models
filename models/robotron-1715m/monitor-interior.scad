@@ -12,8 +12,8 @@ module monitor_joint_lip() {
     // the outer sidewalls near the rear, breaking the mid-height seam.
     difference() {
         translate([0,0,monitor_joint_z-2.6])linear_extrude(5.2)difference(){
-            offset(delta=-2.5)monitor_joint_profile();
-            offset(delta=-4.5)monitor_joint_profile();
+            offset(delta=-1.2)monitor_joint_profile();
+            offset(delta=-2.2)monitor_joint_profile();
         }
         translate([-500,-500,monitor_joint_z-4])cube([1000,386,10]);
     }

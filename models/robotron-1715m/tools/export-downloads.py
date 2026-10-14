@@ -4,7 +4,7 @@ from pathlib import Path
 import json,subprocess,tempfile,zipfile,hashlib
 root=Path(__file__).resolve().parents[1];dest=root/'browser/downloads';dest.mkdir(exist_ok=True)
 manifest=json.loads((root/'browser/model.json').read_text())
-logic=['logic-boards','logic-chips','logic-pins','logic-connectors','logic-resistors','logic-ceramics','logic-electrolytics','logic-crystals','logic-passive-leads','logic-film','logic-pads','logic-solder','logic-connector-contacts','logic-mounts']
+logic=['logic-inductors','logic-boards','logic-chips','logic-pins','logic-connectors','logic-resistors','logic-ceramics','logic-electrolytics','logic-crystals','logic-passive-leads','logic-film','logic-pads','logic-solder','logic-connector-contacts','logic-mounts']
 drive=['teac_frame()','teac_mechanism()','teac_black()','teac_contacts()','teac_coils()','teac_power_socket()','teac_spindle()','teac_head()','teac_head_metal()','teac_head_arm()','teac_medium()','teac_diskette_jacket()','teac_diskette_label()','teac_clamp()','teac_latch_shaft()','teac_release_rail()','teac_components()','teac_cable_plug()']
 # Original editable sources plus every imported KiCad geometry source and notice.
 sources={}
@@ -40,7 +40,7 @@ Evidence and limitations: source/README.md
 Drive references: owner photos PXL_20250212_094033966.jpg and
 PXL_20250212_094038758.jpg, referenced in that documentation.
 Board reconstruction: original Robotron W placement drawing and CRT schematic,
-https://xepb.org/robotron/docs/1715w.zip , plus Danila’s owner solder-side photos.
+https://xepb.org/robotron/docs/1715w.zip , plus Danila’s owner component- and solder-side photos.
 See source/board-layout.json for evidence and estimated positions. Photos are not bundled.
 Dimensions, hidden parts and linkage motion remain estimated. Not a validated
 manufacturing model; parts may touch or remain separate within the STL.

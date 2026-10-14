@@ -12,18 +12,20 @@
         "specimen"
       ],
       "photo": "20261013_150009163",
-      "note": "Folded channels, vents and retaining details from this machine; local dimensions estimated.",
+      "note": "Owner confirms 1 mm painted bent sheet. Return lips, transverse stiffeners, vent inserts and rear rail follow specimen photos; bend radii/placement estimated.",
       "physicalVerification": "unverified"
     },
     {
       "id": "motherboard",
       "title": "W/M motherboard",
       "classes": [
+        "specimen",
         "documented"
       ],
       "source": "https://xepb.org/robotron/docs/1715w.zip",
-      "note": "W placement drawing and nominal packages; exact specimen population and local dimensions unverified.",
-      "physicalVerification": "unverified"
+      "note": "Owner component faces now available; current package placement still follows the W drawing and needs full specimen calibration.",
+      "physicalVerification": "unverified",
+      "photo": "20261014_072654600"
     },
     {
       "id": "display-controller",
@@ -32,9 +34,9 @@
         "specimen",
         "documented"
       ],
-      "photo": "20261013_150312308",
+      "photo": "20261014_072935298",
       "source": "https://xepb.org/robotron/docs/1715w.zip",
-      "note": "Owner solder face and mounting, W CRT circuit roles; 310402/310412 revision match unconfirmed.",
+      "note": "39 visible packages and component placement from this specimen, including SAB8275P, three UL6516D memories and the wound component. Nominal packages/photo scaling; no exact schematic-revision equivalence claimed.",
       "physicalVerification": "unverified"
     },
     {
@@ -56,7 +58,7 @@
         "documented"
       ],
       "photo": "20261013_150549721",
-      "note": "Owner mechanisms and plates; documented nominal envelope/travel, suffix and small dimensions unverified.",
+      "note": "Owner mechanisms, plates and new underside photos; folded 1 mm carrier, large spindle rotors and access windows. Nominal envelope/travel and small dimensions remain provisional.",
       "physicalVerification": "unverified"
     },
     {

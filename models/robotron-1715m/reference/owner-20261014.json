@@ -1,0 +1,272 @@
+{
+  "owner": "Danila",
+  "license": "MIT",
+  "date": "2026-10-14",
+  "specimen": "Danila\u2019s museum Robotron W 1715/330, machine 67581",
+  "archive": "Photos-1-001 (12).zip",
+  "archive_sha256": "dd23300533bf665418c88572836d25872263dd16b53d7c8b5f407571d9a55c7d",
+  "reviewed": 52,
+  "note": "All 52 reviewed as contact sheets, selected board/carrier/case views at full resolution. Component faces of motherboard and display board are now visible. Owner confirms 1 mm bent painted enclosure sheet. Dimensions beyond supplied measurements remain estimates; wear omitted.",
+  "photos": [
+    {
+      "file": "PXL_20261014_072654600.jpg",
+      "sha256": "38ee266c50aa3e286c18d288ba17a5ab666e10857fc0e014f82eac4b18757c1a",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_072658072.jpg",
+      "sha256": "ad5b9e465865d5fd9868378b2a4a6edaf4e47624482517e693cb398a9f5ae4dd",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_072700902.jpg",
+      "sha256": "f43bd45c577d864727d5e5a8a0e235caa1b8e04d4c37299ea224f2b12789d939",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_072704307.jpg",
+      "sha256": "236a3c4afdf2b50c28af4576567dfb76f28691385c99774dcb390bff48751688",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_072709950.jpg",
+      "sha256": "460a4d4ede675d113a31c57702bb9b74e3818f87bb53ebd14c7047cd1190d490",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_072717487.jpg",
+      "sha256": "ee30340702da52043ae21e59242f1fe9e73d244b610afc50bab074a85d3022a3",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_072719957.jpg",
+      "sha256": "f9bb4a9368e7d87fe9e43cf87b0bf647e2174d69ec6e8933ee29745af2ac2e10",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_072723829.jpg",
+      "sha256": "b957321a85136b3704d1646c2b9b9958b1de20e39d7023799e577456e1695f85",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_072726550.jpg",
+      "sha256": "67837074fcf9e17ab82d519237059eb607c3597f44ce5bc4cc2f4cac47ba9f73",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_072935298.jpg",
+      "sha256": "e97e1fde0879cdef95334d1a72cda805af7adf0cc9717c740bc056cf56a7b3e2",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_072937751.MP.jpg",
+      "sha256": "9f30b2396c26c76f4645882aae12293034a97e21dab7645d673ea021333e15a1",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_072939488.MP.jpg",
+      "sha256": "16cba177475abf07d98360f998e2a860461897f7fc714508f78f250bfbe50485",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_072941759.jpg",
+      "sha256": "57668cf62daadce78eb0d42919ecbee07644710699ea2253c6c4dd8146ee8b85",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_072944002.jpg",
+      "sha256": "106affab7b4188616f482b775fe7147114805dd92fb1d551fc417b02e3fa762b",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073156184.jpg",
+      "sha256": "f6848a33feae58ea122f22cf6529493ad73c15f87d9aac8d79499abc1891cabf",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073200542.jpg",
+      "sha256": "56a6d82570d5eefca2dc687e73aa5e8f03ced075357de18903f871f8a8ca61b3",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073202471.jpg",
+      "sha256": "00702863fc8f985e702b95c63c661117decc93fa0f32aabd798b797eebbc172a",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073203748.jpg",
+      "sha256": "e67b651268903d5dbb94db37b3bce496277a2898d5af75b17e709dad5205f20c",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073205151.jpg",
+      "sha256": "161e356786d81c5f7c3a8d8714fbbc1985ceece4ab6958c19ff5fc5a5a59fb43",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073207487.jpg",
+      "sha256": "68bb209ee1de8caea8e69749ba1f539c3bce91d6b2c4b6a80d4e730432f8824c",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073209014.MP.jpg",
+      "sha256": "318c3286a1e47ba978c2883bbad7bf0f446bf96c1c66606d393222b71a036204",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073211069.jpg",
+      "sha256": "aff0651d349b430b9f8e09deded23af062ee4e72e08c00513e21f24a68b0b6a4",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073213563.jpg",
+      "sha256": "fb42f16cded16ba91e26a7a0cf0d29e1f076f22f4495b1b1af7d3dc58a7a4e73",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073216018.jpg",
+      "sha256": "9b26de27de591253e3688e92e7c9e80540ec7dc6f144a560f1f18149196bc7a6",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073219091.jpg",
+      "sha256": "c9f9ef238cc9ba6df9f11f1dd10c8a7db3edd8fe734be1833ef524285c6329e9",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073228373.jpg",
+      "sha256": "f6818c341d8d253e40523cb6e2c6ced45cba0b922da184adca29c75fbdec812e",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073309497.jpg",
+      "sha256": "a0581cfaa3cc2f3ecc47eebe0f8cd52bfc645f190155b4bf9e0816472900c40d",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073311162.jpg",
+      "sha256": "5e156bc576d9b4a33297792dc500f3d23b7d7ad2237a0119c08804db363d534d",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073313122.jpg",
+      "sha256": "3eb803d573e3b40beabedd4e688519f5b090d0811392ec625de663275e6f67a2",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073318184.jpg",
+      "sha256": "525f285542d61d85b5b250978c9640fe35d6246a990e4f41b6ba4706e673a2bc",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073320804.jpg",
+      "sha256": "f94ec4ed835b47d623965663079c461a5181c51521952528d160bc3109fb5c02",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073322148.jpg",
+      "sha256": "4ad519461e7b0f7ca42125a50d745e3aac8101ebcfc6ff28e04df01d0f1cfd83",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073323470.jpg",
+      "sha256": "5449294c9b06609e92dde845d2fb8d67d86b417d74312318dcf1f662388b2880",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073326138.jpg",
+      "sha256": "e84e6a776bf21c400e7b1ec2f422faeff9a771152e14b4f41d027055c3d42d3c",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073327415.jpg",
+      "sha256": "c002ce4e4386aff18b193f5e2b354c514829cbff1d1ad53417efd05a47ea6f4e",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073631495.jpg",
+      "sha256": "c2b3ff507471efcbacbc59578d6a513569d1d63eb49c8421103f77cf2356f872",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073634588.jpg",
+      "sha256": "58d9f7370f51abcae8eed38537f47b5d0b30fa9396304503bb426d770bf80ed6",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073636885.jpg",
+      "sha256": "4378e4f554e3154f267b2f731c4d1ac6af9b170258a9400de203cd5134f9cade",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073639455.jpg",
+      "sha256": "db66fb483401ee5d855b2868233b072eb60e2e3b760df81664780cdc787cbdd6",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073642069.jpg",
+      "sha256": "e4c8b3069bff4fb0efedefa4a6a805404198256c18defa95aa9cfd07ab33e9f8",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073644579.jpg",
+      "sha256": "be7a830179e1bea0c38cf4b4e12518b800d8b00e2f66cc8b5438614584d12d8f",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073654717.jpg",
+      "sha256": "1368cdf62a82604a26d8729374ff248cd43df0e617c1c6d3a67d997ed49fb685",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073704024.jpg",
+      "sha256": "23a939f18dfa787cb24b0f66f36e9587b25ca02c39b0f9c410642eb2c29e2d20",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073713772.jpg",
+      "sha256": "b0aa113906356669c1c3f1fd07d198a5296548adca5aef0180919c7dd6d575b0",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073718163.jpg",
+      "sha256": "bd9eceb5644fe7c0143d482349181c4499211f4348ee89731aefdcccd8fbfa09",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073721624.jpg",
+      "sha256": "ae32a590b4240df9990c036fb7e51366e9030d450f364aa5807626de7978fd0d",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073724129.jpg",
+      "sha256": "c0d1e2c0c6427ceff2264f8b2308dc7291fa761d2045ec997957085743d5dfed",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073725881.jpg",
+      "sha256": "4b28b295bd338b185a79ab249cc563bb23ca9e4ad6b103ca131e9483eddb7bdf",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073727435.jpg",
+      "sha256": "de6073b91846635cb49a88c6e6407c9d98926e5332d839153c219c974d62e279",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073730822.jpg",
+      "sha256": "a0ca82bd07bd1398eccfed73024bf3bd6ab8e27c8be605f34815b5a554a62894",
+      "published": true
+    },
+    {
+      "file": "PXL_20261014_073733318.jpg",
+      "sha256": "c35c459fc8f5bee0ced82bab5c245706d4e528c1f9f3dd6c1cb2e5ada8644b7f",
+      "published": false
+    },
+    {
+      "file": "PXL_20261014_073735053.jpg",
+      "sha256": "266cde5d82d4b6c97d8f7cc3fe7a520ee129692dbf1b4336a722feb9fc420cb9",
+      "published": false
+    }
+  ]
+}

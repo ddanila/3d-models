@@ -1,6 +1,7 @@
 // Millimetres. Overall envelopes: Robotron manual p.35 (see README).
-// Local feature positions, wall thickness and radii remain photo estimates.
-case_w = 500; case_d = 400; case_h = 130; seam_z = 36; wall = 3;
+// Owner confirms painted bent 1 mm sheet for all three enclosures.
+// Local feature positions and bend radii remain photo estimates.
+case_w = 500; case_d = 400; case_h = 130; seam_z = 36; wall = 1;
 // Display envelope includes its pedestal and front bezel.
 monitor_w = 320; monitor_d = 334; monitor_h = 280;
 monitor_y = 25; monitor_z = case_h + 50;

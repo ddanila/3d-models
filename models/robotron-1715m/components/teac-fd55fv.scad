@@ -80,6 +80,14 @@ module teac_traces(long_board=false) {
 
 // Separate moving parts; pivots/travel are shared with the browser manifest.
 module teac_spindle() {
+    // Large underside rotor visible through the carrier in owner 073718163.
+    // It shares the emulated spindle phase, not a decorative static motor disc.
+    translate([70,59,-1.5])difference(){
+        cylinder(d=82,h=1,$fn=96);
+        for(a=[0:120:359])translate([9*cos(a),9*sin(a),-.1])cylinder(d=1.6,h=1.3,$fn=12);
+    }
+    translate([70,59,-2])cylinder(d=8,h=2,$fn=32);
+
     translate([70,59,28])cylinder(d=26,h=9,$fn=40);
     translate([70,59,36.7])difference(){cylinder(d=16,h=.7,$fn=32);translate([0,0,-.1])cylinder(d=10,h=1,$fn=24);translate([0,-9,-.1])cube([9,18,1]);}
     translate([70,59,37])difference(){cylinder(d=12,h=3,$fn=24);translate([-1,-7,2])cube([2,14,2]);}

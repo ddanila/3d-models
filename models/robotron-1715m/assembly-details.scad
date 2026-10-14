@@ -33,7 +33,13 @@ module logic_mounts() {
     }
 }
 module chassis_fasteners() {
-    for(x=[-241,236],y=[-180,165])translate([x,y,4]){
+    // Folded rear mounting rail, owner 073309497 / 073311162; placement estimated.
+    translate([-235,184,84])difference(){
+        union(){cube([470,1,10]);translate([0,-5,9])cube([470,6,1]);}
+        for(x=[20:65:450])translate([x,-1,3])cube([24,3,4]);
+    }
+
+    for(x=[-241,236],y=[-180,165])translate([x,y,1]){
         difference(){cube([5,16,25]);translate([-1,8,19])rotate([0,90,0])cylinder(d=3.4,h=8,$fn=16);}
         translate([2.5,8,-2])screw(4,1.4);
     }

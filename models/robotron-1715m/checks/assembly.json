@@ -28,6 +28,11 @@
       "passed": true
     },
     {
+      "interface": "drive-rotors-vs-carrier",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
       "interface": "board-vs-drive-bracket",
       "intersectionMm3": 0,
       "passed": true
@@ -44,6 +49,16 @@
     },
     {
       "interface": "bypass-caps-vs-chip-bodies",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "film-caps-vs-chip-bodies",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "electrolytic-caps-vs-chip-bodies",
       "intersectionMm3": 0,
       "passed": true
     }
