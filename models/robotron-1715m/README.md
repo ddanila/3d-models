@@ -2,13 +2,16 @@
 
 The canonical OpenSCAD source for Danila’s museum machine and the DAC browser export. Geometry uses millimetres: X right, Y rear, Z up. Open [model.scad](model.scad) for the complete machine, or [keyboard/model.scad](keyboard/model.scad) for fast colored keyboard review. Select a named `part` to export it independently.
 
-## Photo corrections, v45
+## Photo corrections, v46
 
 Compared with Danila's own [connector](reference/photos/PXL_20261010_090425989.jpg),
 [controller component face](reference/photos/PXL_20261012_123622947.jpg),
 [bottom lid](reference/photos/PXL_20261012_123319025.jpg) and
 [monitor edge](reference/photos/PXL_20261012_125018215.jpg):
 
+- Both drive arrows retain their two ends, but each head has only its outer
+  triangular half, as visible in `PXL_20261013_113537277.jpg`. The inside edge
+  continues into the tip without a second barb. Drive downloads include the marks.
 - The plug now has rounded release fingers, recessed moulded channels, visible
   coil springs with relieved seats, and a projecting grey contact insert.
 - The controller resistor bank runs across the board, with additional axial

@@ -136,8 +136,10 @@ module drive_ramp(w,y0,y1,z0,z1) {
 module drive_direction(unit) {
     translate([[-158,-4][unit]+45,-case_d/2-5.08,77])rotate([90,0,0])rotate([-atan(.25),0,0])linear_extrude(.08){
         difference(){circle(r=12,$fn=64);circle(r=10.8,$fn=64);translate([-15,0])square([30,16]);translate([-15,-15])square([15,30]);}
-        polygon([[0,-10.3],[0,-12.7],[-4,-11.5]]);
-        polygon([[10.3,0],[12.7,0],[11.5,4]]);
+        // Owner 113537277: half-heads only on the OUTSIDE of the curved shaft.
+        // The inner edge continues straight into each tip, without a second barb.
+        polygon([[0,-10.8],[0,-13.2],[-4,-10.8]]);
+        polygon([[10.8,0],[13.2,0],[10.8,4]]);
     }
 }
 module drive_led(i) {

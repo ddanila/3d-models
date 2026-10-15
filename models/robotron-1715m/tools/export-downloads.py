@@ -22,7 +22,7 @@ with tempfile.TemporaryDirectory() as temp:
         else:
             body=''.join(p+';\n' for p in drive)+f'teac_boards({"true" if name.endswith("1") else "false"});\nteac_traces({"true" if name.endswith("1") else "false"});\n'
         if name.startswith('drive-'):
-            unit=int(name[-1]);body+=f'translate([{[231,77][unit]},203,-60]){{drives({unit});drive_insets({unit});drive_latches({unit});drive_led({unit});}}\n'
+            unit=int(name[-1]);body+=f'translate([{[231,77][unit]},203,-60]){{drives({unit});drive_insets({unit});drive_latches({unit});drive_led({unit});drive_direction({unit});}}\n'
         wrapper='include <source/model.scad>\npart="download-only";\n'+body
         audit=temp/'export.scad';out=temp/'model.stl'
         audit.write_text(wrapper.replace('source/model.scad',str(root/'model.scad')))
