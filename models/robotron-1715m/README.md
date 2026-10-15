@@ -12,7 +12,7 @@ The October 13 inserted-disk views (`113529099`, `113537277`) now set a 7 mm dee
 
 The keyboard controller is oriented with its input end toward the actual cable opening (`123907435`). A continuous internal lead reaches its shield clamp, passing through a round grooved black bush captured in a 1 mm bent metal support (`123539882`); the rectangular opening has bare edges. The plug has the asymmetric housing, screw layout and offset cable outlet from `090425989` / `090431122`. DAC preserves the input connection when separating the keyboard for inspection.
 
-The system unit has a W/M motherboard with integrated A44 U8272 and 32 RAM packages, plus a separate display controller mounted component-side down. [board-layout.json](board-layout.json) records the shared placement, sources and uncertainty. There are <!-- pcb-counts -->138 nominal KiCad DIP packages and 2,568 lead apertures<!-- /pcb-counts -->. The October 14 component-side photographs locate 39 display-board ICs, including three UL6516D memories and the SAB8275P, red upright capacitors and the white wound component. Generated P01–P39 IDs identify photo positions, not printed board designators. Photo-registered mainboard packages and connectors use the v41 two-photo, six-package nominal-pitch calibration below. Other positions retain W drawing estimates; board edges and hidden mounts remain unmeasured. R19/R102 and C90/C91 follow the documented CPU/DMA adjacency, with estimated positions and no invented electrical values. Unidentified footprints retain generic labels. Clean chip legends identify documented devices; illustrative copper routes are not a netlist.
+The system unit has a W/M motherboard with integrated A44 U8272 and 32 RAM packages, plus a separate display controller mounted component-side down. [board-layout.json](board-layout.json) records the shared placement, sources and uncertainty. There are <!-- pcb-counts -->138 nominal KiCad DIP packages and 2,568 lead apertures<!-- /pcb-counts -->. The October 14 component-side photographs locate 39 display-board ICs, including three UL6516D memories and the SAB8275P, red upright capacitors and the white wound component. Generated P01–P39 IDs identify photo positions, not printed board designators. Photo-registered mainboard packages and connectors use the v41 two-photo, six-package nominal-pitch calibration below. Other positions retain W drawing estimates; board edges and hidden mounts remain unmeasured. R19/R102 and C90/C91 follow the documented CPU/DMA adjacency, with estimated positions and no invented electrical values. Unidentified footprints retain generic labels. Clean chip legends reproduce only owner-photo-supported markings; schematic designators remain inspection metadata. Illustrative copper routes are not a netlist.
 
 The [October 14 photo inventory](reference/owner-20261014.json) records 52 new owner photographs, with 22 selected originals published after metadata removal. These show this exact museum specimen. The drive carrier now has thin folded returns and underside windows exposing the large motor rotors; those rotors share the emulator-driven spindle motion. Their dimensions remain photo estimates. Owner photographs establish the drive adapters, their two mounting holes, cover stiffeners, fan retention and PSU access cover. The fan now has five swept blades and a broader hub matching the visible specimen; blade curvature remains estimated. Ribbon plugs now enter the pale adapter sockets; the fan aperture is concentric with the rotor/frame. The display controller’s visible board number does not prove an exact schematic revision match. Hidden monitor electronics remain comparative, and enclosed PSU electronics are not reconstructed.
 
@@ -241,3 +241,31 @@ the rear edge of the display PCB instead of through its substrate. Intermediate
 folds and the extension in a separated view remain illustrative, not measured
 cable slack. Geometry checks sample 21 positions in both connected and parked
 states against both PCB substrates, chip bodies and the drive-carrier envelope.
+
+### v42: component evidence, mounting and cable clearance
+
+Chip metadata now separates photographed markings from schematic identity.
+Only observed markings are printed on package surfaces; the DAC atlas preserves
+letter proportions and complete strings. Component inspection pairs a crop of
+the original owner photo with a rotatable clean nominal package, retaining the
+full-photo and drawing links. Crop bounds provide context, not metrology.
+
+The [mounting audit](checks/mounting-audit.json) records two visible open holes
+and an upper-edge screw/washer. Open holes no longer receive invented fasteners;
+two obscured legacy mounting positions remain estimates. Underside spacers and
+threads have not been measured. Keyboard controller end holes are paired and
+open in the detached-board photo. Matrix-board corners have a small estimated
+radius and the connector carries its visible `2У0` mould legend. The approved
+keyboard exterior is unchanged. Hidden switch contacts and controller-to-matrix
+mating are still illustrative/unresolved.
+
+Ribbon routing now clears the rear case edge and avoids intersecting its other
+span, including separated/disconnected inspection poses. The photographed
+terminal positions are preserved; intervening folds and animated slack remain
+estimates. DAC tests cover full-width strip crossings, connector envelopes,
+case returns and PSU boundaries across 21 poses in each connection state.
+Two power-harness entry zones still intersect the modeled solid PSU wall:
+local geometry/photos do not yet establish the aperture shape. These are
+explicit audit exceptions, not claims of correct feed-throughs.
+
+No additional part is classified as physically printed and verified.

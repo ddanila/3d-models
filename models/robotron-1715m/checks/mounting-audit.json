@@ -1,0 +1,65 @@
+{
+  "scope": "Visible features only. No hidden spacers measured; photo calibration residuals apply.",
+  "mounts": [
+    {
+      "id": "upper-left-open",
+      "position": [
+        4.842,
+        -177.307
+      ],
+      "photo": "PXL_20261014_072654600.jpg",
+      "photoPoint": [
+        320,
+        222
+      ],
+      "occupied": false,
+      "status": "Visible open board hole; diameter and hidden underside support estimated"
+    },
+    {
+      "id": "lower-left-open",
+      "position": [
+        12.682,
+        178.228
+      ],
+      "photo": "PXL_20261014_073200542.jpg",
+      "photoPoint": [
+        155,
+        1050
+      ],
+      "occupied": false,
+      "status": "Visible open board hole; diameter and hidden underside support estimated"
+    },
+    {
+      "id": "upper-edge-screw",
+      "position": [
+        -19.114,
+        -177.426
+      ],
+      "photo": "PXL_20261014_072654600.jpg",
+      "photoPoint": [
+        431,
+        224
+      ],
+      "occupied": true,
+      "status": "Visible screw and washer; thread and underside support unverified"
+    },
+    {
+      "id": "unresolved-right-1",
+      "position": [
+        -224,
+        -170
+      ],
+      "occupied": true,
+      "status": "Legacy estimated mounting position; obscured in reviewed owner photos, not photo-verified"
+    },
+    {
+      "id": "unresolved-right-3",
+      "position": [
+        -224,
+        165
+      ],
+      "occupied": true,
+      "status": "Legacy estimated mounting position; obscured in reviewed owner photos, not photo-verified"
+    }
+  ]
+}

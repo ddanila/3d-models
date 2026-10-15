@@ -48,12 +48,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.2036111111111111,
+              0.19798671586715866,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             409,
             337
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A90",
@@ -73,12 +88,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.24027777777777778,
+              0.19798671586715866,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             475,
             337
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A91",
@@ -98,12 +128,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.27694444444444444,
+              0.19798671586715866,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             541,
             337
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A92",
@@ -123,12 +168,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3136111111111111,
+              0.19798671586715866,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             607,
             337
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A93",
@@ -148,12 +208,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3502777777777778,
+              0.19798671586715866,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             673,
             337
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A94",
@@ -173,12 +248,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3869444444444444,
+              0.19798671586715866,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             739,
             337
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A95",
@@ -198,12 +288,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.4236111111111111,
+              0.19798671586715866,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             805,
             337
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A96",
@@ -223,12 +328,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.4602777777777778,
+              0.19798671586715866,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             871,
             337
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A81",
@@ -248,12 +368,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.2036111111111111,
+              0.30130774907749075,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             409,
             477
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A82",
@@ -273,12 +408,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.24027777777777778,
+              0.30130774907749075,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             475,
             477
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A83",
@@ -298,12 +448,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.27694444444444444,
+              0.30130774907749075,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             541,
             477
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A84",
@@ -323,12 +488,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3136111111111111,
+              0.30130774907749075,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             607,
             477
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A85",
@@ -348,12 +528,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3502777777777778,
+              0.30130774907749075,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             673,
             477
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A86",
@@ -373,12 +568,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3869444444444444,
+              0.30130774907749075,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             739,
             477
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A87",
@@ -398,12 +608,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.4236111111111111,
+              0.30130774907749075,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             805,
             477
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A88",
@@ -423,12 +648,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.4602777777777778,
+              0.30130774907749075,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             871,
             477
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A73",
@@ -448,12 +688,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.2036111111111111,
+              0.40462878228782284,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             409,
             617
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A74",
@@ -473,12 +728,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.24027777777777778,
+              0.40462878228782284,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             475,
             617
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A75",
@@ -498,12 +768,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.27694444444444444,
+              0.40462878228782284,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             541,
             617
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A76",
@@ -523,12 +808,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3136111111111111,
+              0.40462878228782284,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             607,
             617
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A77",
@@ -548,12 +848,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3502777777777778,
+              0.40462878228782284,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             673,
             617
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A78",
@@ -573,12 +888,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3869444444444444,
+              0.40462878228782284,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             739,
             617
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A79",
@@ -598,12 +928,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.4236111111111111,
+              0.40462878228782284,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             805,
             617
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A80",
@@ -623,12 +968,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.4602777777777778,
+              0.40462878228782284,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             871,
             617
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A65",
@@ -648,12 +1008,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.2036111111111111,
+              0.5072118081180811,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             409,
             756
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A66",
@@ -673,12 +1048,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.24027777777777778,
+              0.5072118081180811,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             475,
             756
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A67",
@@ -698,12 +1088,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.27694444444444444,
+              0.5072118081180811,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             541,
             756
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A68",
@@ -723,12 +1128,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3136111111111111,
+              0.5072118081180811,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             607,
             756
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A69",
@@ -748,12 +1168,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3502777777777778,
+              0.5072118081180811,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             673,
             756
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A70",
@@ -773,12 +1208,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3869444444444444,
+              0.5072118081180811,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             739,
             756
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A71",
@@ -798,12 +1248,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.4236111111111111,
+              0.5072118081180811,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             805,
             756
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A72",
@@ -823,12 +1288,27 @@
             "text": "64-Kbit dynamic RAM; one of 32 devices forming 256 KiB. Owner photo confirms M4164B-12 bank population; W drawing references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-16_W7.62mm.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.4602777777777778,
+              0.5072118081180811,
+              0.04722222222222222,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             871,
             756
-          ]
+          ],
+          "marking": {
+            "text": "M4164B-12",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A1",
@@ -847,7 +1327,18 @@
             "text": "Z80-compatible main CPU. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.4659375,
+              0.29462572614107885,
+              0.078125,
+              0.24560331950207467
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             808,
@@ -869,11 +1360,22 @@
           "side": 1,
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "A2 · UA858 DMA",
+            "title": "A2 · UA858D",
             "text": "System DMA controller; floppy transfers. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional. Visible specimen legend: UA858D. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3721875,
+              0.29462572614107885,
+              0.078125,
+              0.24560331950207467
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             658,
@@ -883,7 +1385,11 @@
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
           },
-          "orientationEvidence": "Owner 073200542: corner pin-one feature at image lower-right, opposite to SIO."
+          "orientationEvidence": "Owner 073200542: corner pin-one feature at image lower-right, opposite to SIO.",
+          "marking": {
+            "text": "UA858D",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A3",
@@ -898,11 +1404,22 @@
           "side": 1,
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "A3 · UA8560 SIO",
+            "title": "A3 · UA8560D",
             "text": "Serial I/O, including keyboard receiver. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional. Visible specimen legend: UA8560D. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.5559375,
+              0.29462572614107885,
+              0.078125,
+              0.24560331950207467
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             952,
@@ -912,7 +1429,11 @@
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
           },
-          "orientationEvidence": "Owner 073200542: corner pin-one feature at image upper-left; opposite to DMA lower-right. Molded circular ejector marks are not used as pin-one marks."
+          "orientationEvidence": "Owner 073200542: corner pin-one feature at image upper-left; opposite to DMA lower-right. Molded circular ejector marks are not used as pin-one marks.",
+          "marking": {
+            "text": "UA8560D",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
+          }
         },
         {
           "ref": "A44",
@@ -931,7 +1452,18 @@
             "text": "Floppy-disk controller. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.6359375,
+              0.29462572614107885,
+              0.078125,
+              0.24560331950207467
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             1080,
@@ -954,11 +1486,22 @@
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "UA8570 CTC",
           "inspection": {
-            "title": "A4 · UA857D CTC",
+            "title": "A4 · UA857D",
             "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-28_W15.24mm. Visible specimen legend: UA857D. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.43980444444444444,
+              0.6881918819188192,
+              0.12039111111111113,
+              0.09225092250922509
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             900,
@@ -967,6 +1510,10 @@
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "UA857D",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -983,11 +1530,22 @@
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "UA8570 CTC",
           "inspection": {
-            "title": "A5 · UA857D CTC",
+            "title": "A5 · UA857D",
             "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-28_W15.24mm. Visible specimen legend: UA857D. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.43980444444444444,
+              0.7730627306273062,
+              0.12039111111111113,
+              0.09225092250922509
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             900,
@@ -996,6 +1554,10 @@
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "UA857D",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -1011,11 +1573,22 @@
           "side": 1,
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "A6 · U2716 boot ROM",
+            "title": "A6 · M2716-1F1",
             "text": "Boot EPROM. Documented W/M design; package and local placement estimated. Package: DIP-24_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional. Visible specimen legend: M2716-1F1. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.251785,
+              0.17883817427385892,
+              0.11893000000000001,
+              0.1037344398340249
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             498,
@@ -1026,6 +1599,10 @@
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "M2716-1F1",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -1045,7 +1622,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.263295,
+              0.2991701244813278,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             490,
@@ -1069,7 +1657,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.263295,
+              0.5522821576763486,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             490,
@@ -1093,7 +1692,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.263295,
+              0.46929460580912863,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             490,
@@ -1117,7 +1727,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.263295,
+              0.3879668049792531,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             490,
@@ -1141,7 +1762,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.513295,
+              0.024481327800829875,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             890,
@@ -1165,7 +1797,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1185,7 +1822,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1205,7 +1847,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.677045,
+              0.6551867219917012,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             1152,
@@ -1225,11 +1878,22 @@
           "side": 1,
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "A41 · 74S287",
+            "title": "A41 · UCY 74S405",
             "text": "CAS/bank decode PROM. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional. Visible specimen legend: UCY 74S405. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.513295,
+              0.09004149377593361,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             890,
@@ -1238,6 +1902,10 @@
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "UCY 74S405",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -1253,11 +1921,22 @@
           "side": 1,
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "A114 · DS8286",
+            "title": "A114 · КР580ВА86",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional. Visible specimen legend: КР580ВА86. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.45079499999999995,
+              0.21369294605809128,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             790,
@@ -1266,6 +1945,10 @@
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "КР580ВА86",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -1285,7 +1968,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1305,7 +1993,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1325,7 +2018,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1345,7 +2043,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1365,7 +2068,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1385,7 +2093,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1405,7 +2118,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1425,7 +2143,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1445,7 +2168,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1465,7 +2193,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1485,7 +2218,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1505,7 +2243,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1525,7 +2268,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1545,7 +2293,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1565,7 +2318,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1585,7 +2343,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1605,7 +2368,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1625,7 +2393,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1645,7 +2418,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1665,7 +2443,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1685,7 +2468,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1705,7 +2493,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1725,7 +2518,12 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Drawing-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -1745,7 +2543,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.1361725,
+              0.7282157676348547,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             280,
@@ -1769,7 +2578,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.22054749999999998,
+              0.6452282157676349,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             415,
@@ -1793,7 +2613,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.30617249999999996,
+              0.6253112033195021,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             552,
@@ -1817,7 +2648,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3067975,
+              0.6775933609958507,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             553,
@@ -1841,7 +2683,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3080475,
+              0.7282157676348547,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             555,
@@ -1865,7 +2718,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3974225,
+              0.6535269709543569,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             698,
@@ -1889,7 +2753,18 @@
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position follows the visible right-side 14-pin package in owner 073200542; reference correspondence remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_073200542",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.7136724999999999,
+              0.5381742738589211,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "photoCentre": [
             1204,
@@ -1912,15 +2787,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 1",
+            "title": "PHOTO-01 · UCY 74S405",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: UCY 74S405. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.513295,
+              0.14896265560165975,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "UCY 74S405",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "UCY 74S405",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -1939,15 +2829,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 2",
+            "title": "PHOTO-02 · К555ЛА3",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: К555ЛА3. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.6111725,
+              0.08921161825726141,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "К555ЛА3",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "К555ЛА3",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -1966,10 +2871,21 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 3",
+            "title": "PHOTO-03 · unidentified package",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.6111725,
+              0.14813278008298755,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": ""
         },
@@ -1989,15 +2905,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 4",
+            "title": "PHOTO-04 · К155КП7",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: К155КП7. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.6111725,
+              0.2153526970954357,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "К155КП7",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "К155КП7",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -2016,15 +2947,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 5",
+            "title": "PHOTO-05 · SN74LS295BN",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: SN74LS295BN. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.6870449999999999,
+              0.1,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "SN74LS295BN",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "SN74LS295BN",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -2043,15 +2989,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 6",
+            "title": "PHOTO-06 · К155ТЛ1",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: К155ТЛ1. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.6905475,
+              0.15228215767634853,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "К155ТЛ1",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "К155ТЛ1",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -2070,15 +3031,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 7",
+            "title": "PHOTO-07 · К555ЛА3",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: К555ЛА3. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.6911725,
+              0.21452282157676347,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "К555ЛА3",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "К555ЛА3",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -2097,15 +3073,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 8",
+            "title": "PHOTO-08 · DL074D",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: DL074D. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.7330475,
+              0.2966804979253112,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "DL074D",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "DL074D",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -2124,15 +3115,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 9",
+            "title": "PHOTO-09 · К555ЛА3",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: К555ЛА3. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.7299225,
+              0.36141078838174273,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "К555ЛА3",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "К555ЛА3",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -2151,15 +3157,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 10",
+            "title": "PHOTO-10 · DL004D",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: DL004D. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.7299225,
+              0.4186721991701245,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "DL004D",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "DL004D",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -2178,15 +3199,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 11",
+            "title": "PHOTO-11 · 174LS181",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: 174LS181. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.725795,
+              0.47759336099585065,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "174LS181",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "174LS181",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -2205,15 +3241,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 12",
+            "title": "PHOTO-12 · 74LS175",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: 74LS175. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.6189199999999999,
+              0.5390041493775933,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "74LS175",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "74LS175",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -2232,10 +3283,21 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 13",
+            "title": "PHOTO-13 · unidentified package",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.6811725,
+              0.5995850622406639,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": ""
         },
@@ -2255,10 +3317,21 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 14",
+            "title": "PHOTO-14 · unidentified package",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.52267,
+              0.5946058091286307,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": ""
         },
@@ -2278,10 +3351,21 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 15",
+            "title": "PHOTO-15 · unidentified package",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.52267,
+              0.6526970954356847,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": ""
         },
@@ -2301,15 +3385,30 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 16",
+            "title": "PHOTO-16 · DL074D",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: DL074D. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.3974225,
+              0.5946058091286307,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": "DL074D",
           "legendEvidence": {
             "photo": "PXL_20261014_073200542.jpg",
             "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "marking": {
+            "text": "DL074D",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -2328,10 +3427,21 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 17",
+            "title": "PHOTO-17 · unidentified package",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.3974225,
+              0.7149377593360996,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": ""
         },
@@ -2351,10 +3461,21 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 18",
+            "title": "PHOTO-18 · unidentified package",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.523295,
+              0.716597510373444,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": ""
         },
@@ -2374,10 +3495,21 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 19",
+            "title": "PHOTO-19 · unidentified package",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.523295,
+              0.774688796680498,
+              0.08591000000000001,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": ""
         },
@@ -2397,10 +3529,21 @@
           ],
           "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
-            "title": "Photographed logic package 21",
+            "title": "PHOTO-21 · unidentified package",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
             "photo": "20261014_073200542",
-            "evidence": "Your specimen; photo-estimated placement"
+            "evidence": "Your specimen; photo-estimated placement",
+            "crop": [
+              0.6111725,
+              0.6634854771784232,
+              0.077655,
+              0.07053941908713693
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           },
           "label": ""
         }
@@ -2967,23 +4110,89 @@
       ],
       "mounts": [
         [
-          13,
-          -170
+          4.842,
+          -177.307
+        ],
+        [
+          12.682,
+          178.228
+        ],
+        [
+          -19.114,
+          -177.426
         ],
         [
           -224,
           -170
-        ],
-        [
-          13,
-          165
         ],
         [
           -224,
           165
         ]
       ],
-      "envelopeEvidence": "Rectangular envelope of two-photo edge picks, rounded outward to millimetres; photo estimate, not a dimensional certificate. Mounts remain provisional."
+      "envelopeEvidence": "Rectangular envelope of two-photo edge picks, rounded outward to millimetres; photo estimate, not a dimensional certificate. Mounts remain provisional.",
+      "mountEvidence": [
+        {
+          "id": "upper-left-open",
+          "position": [
+            4.842,
+            -177.307
+          ],
+          "photo": "PXL_20261014_072654600.jpg",
+          "photoPoint": [
+            320,
+            222
+          ],
+          "occupied": false,
+          "status": "Visible open board hole; diameter and hidden underside support estimated"
+        },
+        {
+          "id": "lower-left-open",
+          "position": [
+            12.682,
+            178.228
+          ],
+          "photo": "PXL_20261014_073200542.jpg",
+          "photoPoint": [
+            155,
+            1050
+          ],
+          "occupied": false,
+          "status": "Visible open board hole; diameter and hidden underside support estimated"
+        },
+        {
+          "id": "upper-edge-screw",
+          "position": [
+            -19.114,
+            -177.426
+          ],
+          "photo": "PXL_20261014_072654600.jpg",
+          "photoPoint": [
+            431,
+            224
+          ],
+          "occupied": true,
+          "status": "Visible screw and washer; thread and underside support unverified"
+        },
+        {
+          "id": "unresolved-right-1",
+          "position": [
+            -224,
+            -170
+          ],
+          "occupied": true,
+          "status": "Legacy estimated mounting position; obscured in reviewed owner photos, not photo-verified"
+        },
+        {
+          "id": "unresolved-right-3",
+          "position": [
+            -224,
+            165
+          ],
+          "occupied": true,
+          "status": "Legacy estimated mounting position; obscured in reviewed owner photos, not photo-verified"
+        }
+      ]
     },
     {
       "name": "display-controller",
@@ -3022,7 +4231,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3011111111111111,
+              0.19400442804428042,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3046,7 +4266,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.35833333333333334,
+              0.19400442804428042,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3070,7 +4301,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.4161111111111111,
+              0.18913062730627306,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3094,7 +4336,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.475,
+              0.18913062730627306,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3118,7 +4371,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.5288888888888889,
+              0.18913062730627306,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3142,7 +4406,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.5722222222222222,
+              0.19400442804428042,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3166,7 +4441,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.6305555555555555,
+              0.19400442804428042,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3190,7 +4476,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.6833333333333333,
+              0.19400442804428042,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3214,7 +4511,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.7388888888888889,
+              0.19400442804428042,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3238,7 +4546,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.7916666666666666,
+              0.19400442804428042,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3262,7 +4581,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.19444444444444445,
+              0.3256619926199262,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3286,7 +4616,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.25277777777777777,
+              0.33053579335793354,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3310,7 +4651,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.5277777777777778,
+              0.3256619926199262,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3334,7 +4686,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.7416666666666667,
+              0.3256619926199262,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3358,7 +4721,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.7861111111111111,
+              0.33053579335793354,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3382,7 +4756,22 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-24_W15.24mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.33055555555555555,
+              0.3652073800738007,
+              0.05,
+              0.14043394833948342
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
+          },
+          "marking": {
+            "text": "UL6516D",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -3406,7 +4795,22 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-24_W15.24mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.5905555555555555,
+              0.3652073800738007,
+              0.05,
+              0.14043394833948342
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
+          },
+          "marking": {
+            "text": "UL6516D",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -3430,7 +4834,22 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-24_W15.24mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.6622222222222223,
+              0.3652073800738007,
+              0.05,
+              0.14043394833948342
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
+          },
+          "marking": {
+            "text": "UL6516D",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -3454,7 +4873,22 @@
             "text": "Programmable CRT controller: character rows, attributes and cursor; the board fetches display data locally. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-40_W15.24mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.4361111111111111,
+              0.3741874538745387,
+              0.05,
+              0.21841476014760147
+            ],
+            "confidence": {
+              "Marking": "Observed in owner photo",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
+          },
+          "marking": {
+            "text": "SAB8275P",
+            "evidence": "Readable owner-photo marking; date/lot codes omitted. Schematic correspondence remains provisional."
           }
         },
         {
@@ -3478,7 +4912,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.19444444444444445,
+              0.4548132841328413,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3502,7 +4947,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.25277777777777777,
+              0.4559970479704797,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3526,7 +4982,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.5277777777777778,
+              0.4585033210332103,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3550,7 +5017,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.7416666666666667,
+              0.45112324723247227,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3574,7 +5052,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.7916666666666666,
+              0.45112324723247227,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3598,7 +5087,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.19444444444444445,
+              0.5802745387453874,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3622,7 +5122,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.25277777777777777,
+              0.5851483394833948,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3646,7 +5157,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.30833333333333335,
+              0.5851483394833948,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3670,7 +5192,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-20_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.36666666666666664,
+              0.5668369003690037,
+              0.05,
+              0.12093874538745389
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3694,7 +5227,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-16_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.5277777777777778,
+              0.5802745387453874,
+              0.05,
+              0.10144354243542436
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3718,7 +5262,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-20_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.5905555555555555,
+              0.5631468634686346,
+              0.05,
+              0.12093874538745389
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3742,7 +5297,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.6405555555555555,
+              0.5851483394833948,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3766,7 +5332,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.6805555555555556,
+              0.5851483394833948,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3790,7 +5367,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.19444444444444445,
+              0.717989667896679,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3814,7 +5402,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.25277777777777777,
+              0.717989667896679,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3838,7 +5437,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.30833333333333335,
+              0.717989667896679,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3862,7 +5472,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.3638888888888889,
+              0.717989667896679,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3886,7 +5507,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.41944444444444445,
+              0.717989667896679,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3910,7 +5542,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.5277777777777778,
+              0.717989667896679,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         },
         {
@@ -3934,7 +5577,18 @@
             "text": "Logic/package placement on the W/M display controller. Owner component photo 20261014_072935298; nominal package, photo-scaled location and pin-one orientation provisional. Package: DIP-14_W7.62mm. P references are museum photo-placement IDs, not schematic designators. The photographed board is marked 1.93.310402.1 B 2; exact equivalence to the W CRT drawing remains unverified.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072935298",
-            "reference": "https://xepb.org/robotron/docs/1715w.zip"
+            "reference": "https://xepb.org/robotron/docs/1715w.zip",
+            "crop": [
+              0.575,
+              0.717989667896679,
+              0.05,
+              0.0916959409594096
+            ],
+            "confidence": {
+              "Marking": "Not confirmed; omitted from chip surface",
+              "Placement": "Photo-estimated",
+              "Schematic identity": "Provisional"
+            }
           }
         }
       ],

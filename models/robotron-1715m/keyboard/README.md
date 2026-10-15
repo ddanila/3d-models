@@ -125,3 +125,17 @@ and the underside socket on the stepped PCB tongue. The narrow controller keeps
 its own pale laminate colour and separate grey/blue axial resistors. The socket
 outline follows owner photos; its docking with the detached controller remains
 unverified. No unobserved cable is added between them.
+
+## Internal review — 2026-10-15
+
+Owner 123622947 shows paired open holes at each narrow controller-board end.
+The model now leaves them open instead of adding four unsupported screws. Hole
+centres and diameters remain photo estimates; the visible cable clamp remains.
+Owner 123103225 supplies the matrix connector's molded 2У0 marking. The broad
+PCB and connector tongue have small rounded outside corners. These changes do
+not alter the approved exterior. Existing support heights remain estimated.
+
+The photos reviewed here show the underside, not bare switch contact faces.
+The two isolated comb electrodes and their short routes therefore remain a
+functional illustration, not a photo-traced contact pattern. No new hidden
+controller-to-matrix connection or support is inferred from these photographs.

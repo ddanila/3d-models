@@ -26,9 +26,11 @@ module controller_transistor_pose(p){translate([p[0],p[1],1.6])rotate([0,0,p[2]]
 // Shared tail locations keep board apertures, joints and lead endpoints aligned.
 controller_connector_tails=[for(i=[0:12],side=[-1,1])[-25+i*2.54,3+side*7]];
 controller_resistor_tails=[for(x=[-80,-74,-68,-62,-56,-50,-44,-38],y=[-11,3])[x,y]];
+// Paired open end holes visible in owner 123622947; no invented screws.
+controller_end_holes=[for(x=[-133,133],y=[10,17.5])[x,y]];
 module keyboard_controller_board(){keyboard_controller_pose()difference(){
  translate([-135,-23,0])cube([270,46,1.6]);
- for(x=[-130,130],y=[-18,18])translate([x,y,-1])cylinder(d=3.2,h=4);
+ for(p=controller_end_holes)translate(concat(p,[-1]))cylinder(d=3.2,h=4,$fn=24);
  for(p=concat(controller_connector_tails,controller_resistor_tails))translate([p[0],p[1],-1])cylinder(d=.85,h=4,$fn=16);
  for(p=controller_transistors)controller_transistor_pose(p)for(x=[-1.27,0,1.27])translate([x,0,-2])cylinder(d=.85,h=4,$fn=12);
  for(p=concat(controller_dips,[[114,8,24,15.24]]),q=controller_package(p)[3])
@@ -76,7 +78,7 @@ module keyboard_controller_metal(){keyboard_controller_pose(){
   difference(){translate([-4,min(0,s*6),0])cube([8,6,1]);translate([0,s*3,-1])cylinder(d=2.8,h=3,$fn=24);}
  }
  translate([-125,-6.4,2.6])screw(4.5,1);
- for(x=[-130,130],y=[-18,18])translate([x,y,1.6])screw(5,1);
+ // End holes are visibly unoccupied in the detached-board photograph.
 }}
 module keyboard_controller_ink(){keyboard_controller_pose(){
  translate([62,8,6.49])linear_extrude(.08)text("UB880D",size=3,halign="center",valign="center",font="Liberation Sans");
@@ -386,6 +388,8 @@ module keyboard_matrix_socket(){keyboard_matrix_pose()
  translate([85,48,-20.918])difference(){
   union(){slab(42,10,6,.6);translate([0,-1,0])slab(34,14,6,.6);slab(52,8,2,.6);}
   translate([0,0,-.1])slab(30,2.2,4,.3);
+  // Molded connector legend visible in owner 123103225, clean relief only.
+  translate([0,-3.6,.24])rotate([0,180,180])linear_extrude(.25)text("2У0",size=2.1,halign="center",valign="center",font="Liberation Sans:style=Bold");
   for(x=[-23,23])translate([x,1,-1])cylinder(d=2.8,h=8,$fn=20);
  }}
 module keyboard_matrix_contacts(){keyboard_matrix_pose(){

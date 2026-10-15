@@ -174,9 +174,9 @@ function ribbon_end(dx=0,lift=0)=[pcb_ribbon_socket[0]+dx,pcb_ribbon_socket[1],p
 // A continuous daisy-chain: board -> drive 1 -> drive 0. The drive-to-drive
 // span moves with both drives; folds between photographed terminals are estimated.
 function drive_ribbon_path(unit,dx=0,lift=0)=unit==0?
- [[-158+dx,16,87.5+lift],[-158+dx,24,109+lift],[-100+dx,39,120+lift],[-30+dx,31,110+lift],[-4+dx,23,103+lift],[-4+dx,16,87.5+lift]]:
- [[-4+dx,16,87.5+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-125+dx,65,95+lift],[-175+dx,185,66+lift],
- [pcb_ribbon_socket[0]+dx,196,48+lift],[pcb_ribbon_socket[0]+dx,196,25.2+lift],
+ [[-158+dx,16,87+lift],[-158+dx,24,96+lift],[-100+dx,39,99+lift],[-30+dx,31,96+lift],[-4+dx,23,91+lift],[-4+dx,16,87+lift]]:
+ [[-4+dx,16,88+lift],[-4+dx,16,113+lift],[-48+dx,41,123+lift],[-125+dx,65,95+lift],[pcb_ribbon_socket[0]+dx,181,66+lift],
+ [pcb_ribbon_socket[0]+dx,181,48+lift],[pcb_ribbon_socket[0]+dx,181,25.2+lift],
  [pcb_ribbon_socket[0]+dx,pcb_ribbon_socket[1]+12,25.2+lift],ribbon_end(dx,lift)];
 // 0.3 mm clearance on both vertical faces; 8 mm insertion into socket.
 module drive_ribbon_plugs(){for(x=[-158,-4])translate([x-16.5,4,85.3])cube([33,12,4.4]);}
@@ -197,9 +197,9 @@ module power_wires(offset=0) {
 module keyboard_pcb() {
     translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])translate([0,0,-14.918])difference(){
         union(){
-            translate([-240,-71,0])cube([480,110,1.6]);
+            linear_extrude(1.6)offset(r=.8)offset(delta=-.8)translate([-240,-71])square([480,110]);
             // Raised connector tongue, owner 123048886 / 123103225.
-            translate([50,38,0])cube([70,15,1.6]);
+            linear_extrude(1.6)offset(r=.8)offset(delta=-.8)translate([50,38])square([70,15]);
         }
         for(x=[62,108])translate([x,49,-1])cylinder(d=2.8,h=4,$fn=20);
         for(x=[-220,0,220],y=[-65,33])translate([x,y,-1])cylinder(d=3.2,h=4,$fn=16);

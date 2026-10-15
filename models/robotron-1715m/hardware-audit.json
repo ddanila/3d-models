@@ -30,8 +30,9 @@
     "placement": "v41 uses six nominal DIP lead rectangles across two owner photo planes, joined at the upper CTC. Independent lower CTC disagreement is 1.15 mm. The 251 x 368 mm edge envelope, unregistered components and mounts remain estimated; edge observations are retained in checks/board-calibration.json.",
     "artwork": "Additional visible component-side paths and twenty circular tinned lands traced from owner 073200542. No hidden routes or electrical netlist inferred.",
     "passives": "Eleven lower-board resistors/capacitors registered from owner 073200542; nominal body dimensions and unknown electrical values.",
-    "ribbon": "Continuous board-to-drive-1-to-drive-0 chain, routed around display-board rear edge. Canonical path sections preserve browser ribbon width during inspection. Intermediate folds, available slack and separated-view extension remain illustrative.",
-    "detailPass": "v41 records visible specimen chip legends and opposite DMA/SIO orientation; obscured markings and schematic correspondence remain unresolved."
+    "ribbon": "Continuous board-to-drive-1-to-drive-0 chain, routed around display-board rear edge. Canonical path sections preserve browser ribbon width during inspection. Intermediate folds, available slack and separated-view extension remain illustrative. v42 removes a rear-wall crossing and inter-span crossing; both spans leave the shared drive plug at distinct heights. PSU lead-entry positions remain unresolved.",
+    "detailPass": "v42 prints only owner-photo-supported chip markings, without schematic designators or truncation. Package inspection includes photo crop, clean nominal model and separate marking/placement/identity confidence.",
+    "mounting": "v42 distinguishes two visible open holes from one visible upper-edge screw/washer. Two obscured legacy mounting locations remain estimated. See checks/mounting-audit.json; no hidden supports or thread dimensions measured."
   },
   "keyboard": {
     "cpu": "A5 U880 in schematic; UB880D in owner photo",
@@ -39,7 +40,8 @@
     "matrix": "13 scan selections x 8 inputs; no RAM on controller",
     "leds": "A6A/A6B DL074 latches: address A14/A13 data, IORQ with A15 low clocks them",
     "transistors": "Schematic: V4.1–V4.8 SC308C input stages, V3.1/V3.2 SC236D and V4.9 SC308C oscillator stages. Generic TO-92 model; photographed substitutes not electrically identified.",
-    "unresolved": "Detached controller-to-matrix mating orientation and hidden lead bends; no invented joining cable. Visible connector/resistor tails share PCB holes and underside solder eyes."
+    "unresolved": "Detached controller-to-matrix mating orientation and hidden lead bends; no invented joining cable. Visible connector/resistor tails share PCB holes and underside solder eyes.",
+    "internalReview": "Paired open controller-board end holes, small matrix PCB corner rounding and observed 2У0 connector legend. Exposed switch-contact geometry and hidden controller/matrix mating remain unresolved."
   },
   "connectors": [
     {

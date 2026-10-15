@@ -24,7 +24,7 @@ module keyboard_plate() {
     }
 }
 module logic_mounts() {
-    for(p=pcb_mounts)if(pcb_selected(p[4]))translate([p[0],p[1],p[2]]){
+    for(p=pcb_mounts)if(pcb_selected(p[4]) && p[5])translate([p[0],p[1],p[2]]){
         // Hex support ends at the board underside; screw crosses the clearance hole.
         difference(){cylinder(d=6,h=p[3]-p[2]-1.6,$fn=6);translate([0,0,-.1])cylinder(d=2.6,h=p[3]-p[2],$fn=16);}
         translate([0,0,p[3]-p[2]])difference(){cylinder(d=6,h=.45,$fn=24);translate([0,0,-.1])cylinder(d=3.4,h=.7,$fn=16);}

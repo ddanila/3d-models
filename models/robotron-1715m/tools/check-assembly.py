@@ -29,6 +29,8 @@ checks={
  'ribbon-plugs-vs-adapter-board': ('drive_ribbon_plugs();','drive_adapter_boards();'),
  'fan-rotor-vs-frame': ('fan_rotor();','fan_frame();'),
  'fan-airway-vs-psu-wall': ('translate([93,109,67])rotate([0,90,0])cylinder(d=77,h=4,$fn=48);','psu_chassis();'),
+ 'board-mounts-vs-chip-bodies': ('logic_mounts();','logic_chips();'),
+ 'keyboard-open-end-holes-vs-components': ('keyboard_controller_pose()for(p=controller_end_holes)translate(concat(p,[0]))cylinder(d=3.2,h=12,$fn=24);','union(){keyboard_controller_chips();keyboard_controller_caps();keyboard_controller_ceramic();}'),
  'board-mounting-hole-clearance': ('for(p=pcb_mounts)translate([p[0],p[1],p[3]-1.6])cylinder(d=3,h=1.6,$fn=20);','logic_boards();'),
  'drive-rotors-vs-carrier': ('for(x=[-231,-77])translate([x,-203,60])teac_spindle();','drive_bracket();'),
  'lever-open-vs-inserted-diskette': ('drive_latches(0);','translate([-231,-203,60])teac_diskette_jacket();'),

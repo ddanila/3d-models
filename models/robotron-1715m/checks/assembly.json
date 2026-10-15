@@ -59,7 +59,7 @@
     },
     {
       "interface": "matrix-socket-vs-board",
-      "intersectionMm3": 4.5e-05,
+      "intersectionMm3": 0.000241,
       "passed": true
     },
     {
@@ -94,6 +94,16 @@
     },
     {
       "interface": "fan-airway-vs-psu-wall",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "board-mounts-vs-chip-bodies",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "keyboard-open-end-holes-vs-components",
       "intersectionMm3": 0,
       "passed": true
     },
