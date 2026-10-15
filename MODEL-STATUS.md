@@ -14,7 +14,7 @@ This distinction is independent of visual review, render checks and valid STL ge
 | [pk8010-korvet/pk8010-korvet-side-lid/model.scad](models/pk8010-korvet/pk8010-korvet-side-lid/model.scad) | **Printed and verified** |
 | [rg1n-loopback-case/model.scad](models/rg1n-loopback-case/model.scad) | **Printed and verified** |
 | [rg1n-loopback-case/part-lid.scad](models/rg1n-loopback-case/part-lid.scad) | **Printed and verified** |
-| [robotron-1715m/display-base-ring/model.scad](models/robotron-1715m/display-base-ring/model.scad) | Not physically verified |
+| [robotron-1715m/display-base-ring/model.scad](models/robotron-1715m/display-base-ring/model.scad) | **Printed and verified** |
 | [robotron-1715m/key-switch/model.scad](models/robotron-1715m/key-switch/model.scad) | Not physically verified |
 | [robotron-1715m/keyboard/model.scad](models/robotron-1715m/keyboard/model.scad) | Not physically verified |
 | [robotron-1715m/keycap/model.scad](models/robotron-1715m/keycap/model.scad) | Not physically verified |

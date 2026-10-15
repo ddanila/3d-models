@@ -1,7 +1,7 @@
 // Robotron 1715M display base protective insert. Dimensions in millimetres.
 // Print flat, with either annular face on the bed.
-outer_diameter = 174;
-wall_thickness = 3.5; // Radial thickness; inner diameter = 167 mm.
+outer_diameter = 174.5;
+wall_thickness = 3.5; // Radial thickness; inner diameter = 167.5 mm.
 height = 5;
 
 inner_diameter = outer_diameter - 2 * wall_thickness;
