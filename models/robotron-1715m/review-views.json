@@ -199,12 +199,12 @@
         0
       ],
       "fov": 45,
-      "include": "^keyboard-(shell|pcb$|pcb-metal|matrix-|insulators|controller-|entry|internal-cable|grommet|cable-support)",
+      "include": "^keyboard-(shell|pcb$|pcb-metal|matrix-|insulators|controller-|entry|internal-cable|grommet|cable-support|pcb-supports|pcb-fasteners)",
       "note": "Installed underside: narrow controller overlaps the rear matrix-board edge; its cable end faces the lid opening."
     },
     {
       "name": "monitor-bezel",
-      "photo": "PXL_20261012_125018215.jpg",
+      "photo": "PXL_20261012_125012845.jpg",
       "position": [
         410,
         -680,
@@ -217,7 +217,29 @@
       ],
       "fov": 29,
       "include": "^(monitor-shell|bezel|crt-)",
-      "note": "Owner glass edge and formed bezel transition; camera and material estimates, not optical calibration."
+      "note": "Rolled raised bead, inner step, recessed land and CRT-edge lip from owner close-up; local radii remain photo estimates."
+    },
+    {
+      "name": "keyboard-case-mounts",
+      "photo": "PXL_20261012_123106382.jpg",
+      "position": [
+        -90,
+        -160,
+        -140
+      ],
+      "target": [
+        60,
+        -310,
+        10
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "fov": 48,
+      "include": "^keyboard-(shell|pcb-supports|pcb-fasteners|insulators|pcb$)$",
+      "note": "Case-fixed bent sheet supports and slotted edge-strip fasteners; bottom lid and controller omitted."
     }
   ]
 }

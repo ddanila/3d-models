@@ -3,6 +3,21 @@
   "toleranceMm3": 0.001,
   "results": [
     {
+      "interface": "keyboard-case-supports-vs-matrix",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "keyboard-case-supports-vs-controller",
+      "intersectionMm3": 0.0,
+      "passed": true
+    },
+    {
+      "interface": "keyboard-case-supports-vs-mount-screws",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
       "interface": "controller-resistors-vs-components",
       "intersectionMm3": 0,
       "passed": true
@@ -19,7 +34,7 @@
     },
     {
       "interface": "controller-mounts-vs-board",
-      "intersectionMm3": 0.0,
+      "intersectionMm3": 0,
       "passed": true
     },
     {

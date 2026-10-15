@@ -1029,6 +1029,62 @@
       "source": "Photos-1-001 (12).zip",
       "original_sha256": "a0ca82bd07bd1398eccfed73024bf3bd6ab8e27c8be605f34815b5a554a62894",
       "sha256": "8002e2129090fedadad003786551d08020a9a54ce4adee961d4ab1441ac033f2"
+    },
+    {
+      "file": "PXL_20261012_123106382.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (5).zip: owner keyboard mounting and formed bezel close-ups",
+      "original_sha256": "5fec5afd4e3ce9151e2271d84f781371556a14782caa37fa275092b11c65bb1f",
+      "sha256": "bcc15908c8f8c41ec25b2ca915b67fb493e15aaeded12ea302f05b39d48db3b8"
+    },
+    {
+      "file": "PXL_20261012_123109703.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (5).zip: owner keyboard mounting and formed bezel close-ups",
+      "original_sha256": "fefcede54d868b9f2626cf7cfd7a78bb9c6866054e853acee5d52ba808233713",
+      "sha256": "698db6f8e982b9baa9a4331c72a6e00949828cbfe91866af2b54644ead587a72"
+    },
+    {
+      "file": "PXL_20261012_123114519.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (5).zip: owner keyboard mounting and formed bezel close-ups",
+      "original_sha256": "ac7c89f0ab5cd9b3c674811baa357aa8cea6c10ef4b8be92b9ae1e216170f483",
+      "sha256": "3bac62de64d9799493a1ae4dd4c45f87fca7637b1576531047b6f8898c79709d"
+    },
+    {
+      "file": "PXL_20261012_123122852.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (5).zip: owner keyboard mounting and formed bezel close-ups",
+      "original_sha256": "7740a736c7f6c59b301641ec00ea6816c1aafe3eb3f8f3be6e87561e72eea8cf",
+      "sha256": "a77e382c1f8c18354750d94991dd78111551ec375cd540c2cc2e8670b6ae1abe"
+    },
+    {
+      "file": "PXL_20261012_123126017.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (5).zip: owner keyboard mounting and formed bezel close-ups",
+      "original_sha256": "160d471325d397b55eb25024ca7e15c1164176ee8768c3cdf634e386321a7fd2",
+      "sha256": "c6d58cfae2ed5e57df23b0361c8d470758387c710611bbdcc31ca77fe950cfd7"
+    },
+    {
+      "file": "PXL_20261012_125012845.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (5).zip: owner keyboard mounting and formed bezel close-ups",
+      "original_sha256": "95f5eedbb58f5e1b71c39e38816535a3e8de2d82b7cd4a41dd7c4dc52a52856f",
+      "sha256": "dd05d7acc281b966ab28b90f2c964e998200aea4655742848e4dc6e9beffd96e"
+    },
+    {
+      "file": "PXL_20261012_125025415.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (5).zip: owner keyboard mounting and formed bezel close-ups",
+      "original_sha256": "09c9e512de5663fbafe5b375838b2ac4669206edfdf5d693cd3aa2e90c5afb95",
+      "sha256": "736f4e4966f2e354670441797adc22bd618a7a25f74b76ab2400354c8f2e32de"
     }
   ]
 }

@@ -35,10 +35,10 @@ rubber_color = "#30322d";
 // Suppress the full-machine top-level output in the included source.
 part = "keyboard-review";
 lift = view=="exploded" ? separation : 0;
-board_parts = ["keyboard-pcb", "keyboard-contact-pads", "keyboard-matrix-artwork", "keyboard-pcb-metal", "keyboard-insulators", "keyboard-pcb-supports", "keyboard-pcb-fasteners", "keyboard-contact-routes", "keyboard-matrix-socket", "keyboard-matrix-contacts"];
+board_parts = ["keyboard-pcb", "keyboard-contact-pads", "keyboard-matrix-artwork", "keyboard-pcb-metal", "keyboard-insulators", "keyboard-pcb-fasteners", "keyboard-contact-routes", "keyboard-matrix-socket", "keyboard-matrix-contacts"];
 base_parts = ["keyboard-entry-rubber", "keyboard-base-insulator", "keyboard-bottom", "keyboard-feet", "keyboard-metal", "keyboard-grommet", "keyboard-cable-support", "keyboard-internal-cable", "keyboard-entry-wires", "keyboard-entry-black", "keyboard-entry-pink", "keyboard-entry-blue"];
 plate_parts = ["keyboard-plate", "keyboard-switches", "keyboard-guides"];
-case_parts = ["keyboard-shell", "keyboard-deck", "keyboard-fillers"];
+case_parts = ["keyboard-pcb-supports", "keyboard-shell", "keyboard-deck", "keyboard-fillers"];
 function has(list,name) = len([for(item=list)if(item==name)1])>0;
 function tint(name,index) = name=="keyboard-shell" || name=="keyboard-bottom" ? shell_color :
     name=="keyboard-deck" || name=="keyboard-fillers" ? deck_color :
@@ -65,7 +65,7 @@ module review_key(i) {
 // Center the keyboard at the origin so orbit/zoom stays local to this assembly.
 translate([0,-keyboard_y,0]) {
     for(i=[0:len(parts)-1])let(p=parts[i])
-        if((view!="boards" && (has(base_parts,p) || has(case_parts,p) || has(plate_parts,p))) || has(board_parts,p) || controller(p))
+        if((view!="boards" && (has(base_parts,p) || has(case_parts,p) || has(plate_parts,p))) || has(board_parts,p) || p=="keyboard-pcb-supports" || controller(p))
             translate([0,controller(p) ? lift*1.3 : 0,lift*layer(p)])
                 color(tint(p,i))render(convexity=10)shape(p);
     if(view!="boards") {

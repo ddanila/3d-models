@@ -63,13 +63,13 @@
       "file": "PXL_20261012_123106382.jpg",
       "archive": "Photos-1-001 (5).zip",
       "sha256": "5fec5afd4e3ce9151e2271d84f781371556a14782caa37fa275092b11c65bb1f",
-      "published": false
+      "published": true
     },
     {
       "file": "PXL_20261012_123109703.jpg",
       "archive": "Photos-1-001 (5).zip",
       "sha256": "fefcede54d868b9f2626cf7cfd7a78bb9c6866054e853acee5d52ba808233713",
-      "published": false
+      "published": true
     },
     {
       "file": "PXL_20261012_123111689.jpg",
@@ -81,7 +81,7 @@
       "file": "PXL_20261012_123114519.jpg",
       "archive": "Photos-1-001 (5).zip",
       "sha256": "ac7c89f0ab5cd9b3c674811baa357aa8cea6c10ef4b8be92b9ae1e216170f483",
-      "published": false
+      "published": true
     },
     {
       "file": "PXL_20261012_123120290.jpg",
@@ -93,13 +93,13 @@
       "file": "PXL_20261012_123122852.jpg",
       "archive": "Photos-1-001 (5).zip",
       "sha256": "7740a736c7f6c59b301641ec00ea6816c1aafe3eb3f8f3be6e87561e72eea8cf",
-      "published": false
+      "published": true
     },
     {
       "file": "PXL_20261012_123126017.jpg",
       "archive": "Photos-1-001 (5).zip",
       "sha256": "160d471325d397b55eb25024ca7e15c1164176ee8768c3cdf634e386321a7fd2",
-      "published": false
+      "published": true
     },
     {
       "file": "PXL_20261012_123132916.jpg",
@@ -699,7 +699,7 @@
       "file": "PXL_20261012_125012845.jpg",
       "archive": "Photos-1-001 (5).zip",
       "sha256": "95f5eedbb58f5e1b71c39e38816535a3e8de2d82b7cd4a41dd7c4dc52a52856f",
-      "published": false
+      "published": true
     },
     {
       "file": "PXL_20261012_125018215.jpg",
@@ -717,7 +717,7 @@
       "file": "PXL_20261012_125025415.jpg",
       "archive": "Photos-1-001 (5).zip",
       "sha256": "09c9e512de5663fbafe5b375838b2ac4669206edfdf5d693cd3aa2e90c5afb95",
-      "published": false
+      "published": true
     },
     {
       "file": "PXL_20261012_125033633.jpg",

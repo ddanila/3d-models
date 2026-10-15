@@ -91,8 +91,14 @@ module keyboard_controller_ink(){keyboard_controller_pose(){
  translate([-10,-16,1.72])linear_extrude(.06)text("5891",size=2.2,halign="center",font="Liberation Sans");
  translate([114,-20,1.72])linear_extrude(.06)text("062-330-4102",size=1.6,halign="center",font="Liberation Sans");
 }}
-module keyboard_insulators(){
- translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])translate([0,0,-16.718])for(y=[-75,43])translate([0,y,0])slab(482,10,1.5,.5);
+// Owner 123114519 / 123126017: slotted brown edge strips with retained screws.
+keyboard_mount_x=[-210,0,210];
+keyboard_mount_rows=[-76,44];
+module keyboard_insulators(){keyboard_matrix_pose()
+ for(y=keyboard_mount_rows)translate([0,y,-16.418])difference(){
+  slab(482,10,1.5,.5);
+  for(x=keyboard_mount_x)hull()for(d=[0,6])translate([x,sign(y)*d,-.1])cylinder(d=3.2,h=1.7,$fn=24);
+ }
 }
 // Visible underside buses from 123907435. This is artwork, not a netlist.
 // Long paths and staggered diagonal jogs follow owner underside photo 123907435.
@@ -306,20 +312,41 @@ module specimen_shape(p){
  if(p=="rear-legends")rear_legends();
 }
 
-// Insulating shoulder washers/supports aligned with the PCB's six real holes.
-// Photo 123907435 establishes retained fasteners and dark insulating strips;
-// diameters and stand-off height are estimates, not measured replacement parts.
-module keyboard_pcb_supports(){
- translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])
- for(x=[-220,0,220],y=[-65,33])translate([x,y,-18.418])difference(){
-   cylinder(d=7,h=3.5,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=4,$fn=20);
+// Case-mounted bent sheet supports, not floating cylindrical PCB spacers.
+// Owner close-ups 123106382/123109703 and 123114519/123126017 establish
+// separate tab levels and slotted edge-strip fasteners. Hidden attachment areas
+// and exact bend radii remain nominal; original paint damage is not reproduced.
+function matrix_mount_world(y,z)=[keyboard_y+y*cos(keyboard_slope)-z*sin(keyboard_slope),
+  28+keyboard_z_shift+y*sin(keyboard_slope)+z*cos(keyboard_slope)];
+module keyboard_mount_leaf(length=20,width=10,hole=3.2){
+ difference(){
+  linear_extrude(1)hull(){translate([-width/2,0])square([width,.01]);translate([0,length-width/2])circle(d=width,$fn=32);}
+  translate([0,length-width/2,-.1])cylinder(d=hole,h=1.2,$fn=24);
  }
 }
-module keyboard_pcb_fasteners(){
- translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])
- for(x=[-220,0,220],y=[-65,33])translate([x,y,-13.318]){
-   difference(){cylinder(d=6,h=.4,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=20);}
-   translate([0,0,.4])screw(5,1);
+module keyboard_pcb_supports(){
+ // Six leaves run from the shell wall to the edge strips. Each ends in a
+ // rounded drilled tongue; its upright return actually meets the case wall.
+ for(x=keyboard_mount_x,y=keyboard_mount_rows)let(p=matrix_mount_world(y,-14.918),
+  wall_y=keyboard_y+(y<0?-99:68),reach=abs(wall_y-p[0])+4.5){
+  translate([x,wall_y,p[1]])rotate([0,0,y<0?0:180])keyboard_mount_leaf(reach,9);
+  translate([x-4.5,wall_y-(y>0?1:0),p[1]])cube([9,1,y>0?27-p[1]:5]);
+  // Rear return meets the underside of the case shelf; front meets its wall.
+  if(y>0)translate([x-4.5,wall_y-1,27])cube([9,7,1]);
+ }
+ // Two lower rear tabs support the narrow controller at its paired end holes.
+ for(x=[keyboard_controller_x-133,keyboard_controller_x+133])
+  let(y=keyboard_y+keyboard_controller_y+17.5,z=keyboard_controller_z+1.6){
+   translate([x,keyboard_y+99,z])rotate([0,0,180])keyboard_mount_leaf(keyboard_y+99-y+5);
+   translate([x-5,keyboard_y+98,z])cube([10,1,6]);
+  }
+}
+module keyboard_pcb_fasteners(){keyboard_matrix_pose()
+ for(x=keyboard_mount_x,y=keyboard_mount_rows)translate([x,y,-16.418]){
+  // Heads face the removable bottom lid; shafts enter the case-mounted leaves.
+  translate([0,0,-.4])difference(){cylinder(d=6,h=.4,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=20);}
+  translate([0,0,-.4])rotate([180,0,0])screw(5,1);
+  cylinder(d=2.8,h=2.5,$fn=20);
  }
 }
 // Short lead bundle and strain relief at the owner-photographed controller entry.
@@ -399,7 +426,7 @@ module keyboard_controller_mounts(){keyboard_controller_pose()
    translate([0,0,.45])screw(4.6,1);
   }
   cylinder(d=2.8,h=2.6,$fn=20);
-  translate([0,3,1.6])difference(){slab(7,14,1,1);translate([0,-3,-.1])cylinder(d=3.2,h=1.3,$fn=20);}
+  // The sheet support remains attached to the case in keyboard_pcb_supports().
  }
 }
 // Clean braided shield pigtail, not the individual frayed strands in 123539882.

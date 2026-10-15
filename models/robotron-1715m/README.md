@@ -2,6 +2,30 @@
 
 The canonical OpenSCAD source for Danila’s museum machine and the DAC browser export. Geometry uses millimetres: X right, Y rear, Z up. Open [model.scad](model.scad) for the complete machine, or [keyboard/model.scad](keyboard/model.scad) for fast colored keyboard review. Select a named `part` to export it independently.
 
+## Case-mounted keyboard supports and formed bezel, v47
+
+Owner close-ups `123106382` / `123109703` show separate bent metal tabs at
+multiple levels. `123114519` / `123122852` / `123126017` show slotted brown edge
+strips and screws facing the removable keyboard lid. These now replace the
+illustrative floating cylindrical PCB supports: six drilled leaves support the
+matrix assembly at its edge strips, with returns meeting the case wall or rear
+shelf, and two lower rear leaves support the controller. The leaves stay with
+the case during DAC disassembly; screws and insulating strips follow the boards.
+The six existing matrix apertures remain open, not occupied by invented spacers.
+Visible construction follows the photos; hidden attachment footprints, support
+lengths and bend radii remain nominal rather than measured fabrication details.
+
+The [bezel close-up](reference/photos/PXL_20261012_125012845.jpg) shows a rounded
+raised border, inward step, recessed land and final lip at the CRT. The bezel is
+now one continuous closed skin with a nominal 1 mm rear offset along its surface
+normals, rather than overlapping separately modeled rings. Cross-section depths
+and radii remain photo estimates. The seven additional owner close-ups are
+published with metadata stripped; no wear is copied into the geometry.
+
+The accepted exterior keyboard dimensions and physical-verification records
+remain unchanged. Review the installed board, case mounts and front-oblique
+monitor views before changing these supports or the bezel profile.
+
 ## Photo corrections, v46
 
 Compared with Danila's own [connector](reference/photos/PXL_20261010_090425989.jpg),
