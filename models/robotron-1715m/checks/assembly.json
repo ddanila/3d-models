@@ -231,6 +231,46 @@
       "interface": "electrolytic-caps-vs-chip-bodies",
       "intersectionMm3": 0,
       "passed": true
+    },
+    {
+      "interface": "lever-sweep-15-vs-diskette",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "lever-sweep-30-vs-diskette",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "lever-sweep-45-vs-diskette",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "lever-sweep-60-vs-diskette",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "lever-sweep-75-vs-diskette",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "key-carrier-sweep-9.65-vs-guide",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "key-carrier-sweep-10.2-vs-guide",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "key-carrier-sweep-10.75-vs-guide",
+      "intersectionMm3": 0,
+      "passed": true
     }
   ],
   "passed": true

@@ -1,0 +1,1387 @@
+{
+  "scope": "Nominal DIP lead/hole XY and board-face Z, socket lift, package rotation consistency. Pin-one orientation still requires individual specimen evidence; this is not electrical or physical verification.",
+  "packages": 138,
+  "passed": true,
+  "results": [
+    {
+      "board": "motherboard",
+      "ref": "A89",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A90",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A91",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A92",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A93",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A94",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A95",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A96",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A81",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A82",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A83",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A84",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A85",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A86",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A87",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A88",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A73",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A74",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A75",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A76",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A77",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A78",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A79",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A80",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A65",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A66",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A67",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A68",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A69",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A70",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A71",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A72",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A1",
+      "model": "DIP-40_W15.24mm",
+      "pins": 40,
+      "rotation": 180,
+      "socketHeight": 2.5,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A2",
+      "model": "DIP-40_W15.24mm",
+      "pins": 40,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A3",
+      "model": "DIP-40_W15.24mm",
+      "pins": 40,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A44",
+      "model": "DIP-40_W15.24mm",
+      "pins": 40,
+      "rotation": 180,
+      "socketHeight": 2.5,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A4",
+      "model": "DIP-28_W15.24mm",
+      "pins": 28,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A5",
+      "model": "DIP-28_W15.24mm",
+      "pins": 28,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A6",
+      "model": "DIP-24_W15.24mm",
+      "pins": 24,
+      "rotation": 90,
+      "socketHeight": 2.5,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A45",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A10",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A9",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A8",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A12",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A99",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A60",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A11",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A41",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A114",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A29",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A15",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A16",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A31",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A17",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A30",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A34",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A40",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A32",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A39",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A38",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A36",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A37",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A58",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A100",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A26",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A59",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A33",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A102",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A101",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A105",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A112",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A54",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 180,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A18",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A19",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A24",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A21",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A23",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A20",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "A22",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-01",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-02",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-03",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-04",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-05",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-06",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-07",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-08",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-09",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-10",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-11",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-12",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-13",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-14",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-15",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-16",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-17",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-18",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-19",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "motherboard",
+      "ref": "PHOTO-21",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 90,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P01",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P02",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P03",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P04",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P05",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P06",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P07",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P08",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P09",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P10",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P11",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P12",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P13",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P14",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P15",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P16",
+      "model": "DIP-24_W15.24mm",
+      "pins": 24,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P17",
+      "model": "DIP-24_W15.24mm",
+      "pins": 24,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P18",
+      "model": "DIP-24_W15.24mm",
+      "pins": 24,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P19",
+      "model": "DIP-40_W15.24mm",
+      "pins": 40,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P20",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P21",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P22",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P23",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P24",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P25",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P26",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P27",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P28",
+      "model": "DIP-20_W7.62mm",
+      "pins": 20,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P29",
+      "model": "DIP-16_W7.62mm",
+      "pins": 16,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P30",
+      "model": "DIP-20_W7.62mm",
+      "pins": 20,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P31",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P32",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P33",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P34",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P35",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P36",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P37",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P38",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    },
+    {
+      "board": "display-controller",
+      "ref": "P39",
+      "model": "DIP-14_W7.62mm",
+      "pins": 14,
+      "rotation": 0,
+      "socketHeight": 0,
+      "maxLeadToHoleErrorMm": 0.0,
+      "passed": true
+    }
+  ]
+}

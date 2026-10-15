@@ -57,6 +57,10 @@ checks={
  'film-caps-vs-chip-bodies': ('logic_discretes("logic-film");','logic_chips();'),
  'electrolytic-caps-vs-chip-bodies': ('logic_discretes("logic-electrolytics");','logic_chips();'),
 }
+for angle in [15,30,45,60,75]:
+ checks[f'lever-sweep-{angle}-vs-diskette']=(f'translate([-113,-211,92])rotate([0,{angle},0])translate([113,211,-92])drive_latches(0);','translate([-231,-203,60])teac_diskette_jacket();')
+for z in [9.65,10.2,10.75]:
+ checks[f'key-carrier-sweep-{z}-vs-guide']=('switch_guide();',f'translate([0,0,{z}])contact_carrier();')
 results=[]
 with tempfile.TemporaryDirectory() as tmp:
  for name,(a,b) in checks.items():

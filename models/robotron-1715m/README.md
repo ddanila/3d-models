@@ -378,3 +378,14 @@ The lower shoe now projects from the carriage; the upper shoe is staggered
 Contact coordinates are exported from OpenSCAD for browser geometry checks.
 Shoe outlines, medium thickness and arm lift remain estimates; the exact
 specimen drive suffix and mechanical dynamics remain unverified.
+
+### Expanded assembly qualification
+
+`tools/check-assembly.py` now also samples the lever at 15° intervals between
+its endpoints and the key carrier at three travel positions. These are discrete
+collision checks, not a proof for every continuous position or flexible cable.
+`tools/check-pcb-interfaces.py` checks all 138 DIP instances against the nominal
+board apertures, including rotation, board face and socket lift. Reports are in
+`checks/assembly.json` and `checks/pcb-interfaces.json`. Pin-one orientation,
+hidden wiring and actual fit still require specimen evidence. Neither audit
+changes printed-and-verified status.
