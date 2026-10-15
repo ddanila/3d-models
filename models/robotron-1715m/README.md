@@ -365,3 +365,16 @@ pass for a mostly obscured PCB. Colour and optical
 properties are visual estimates, not measured material data. OpenSCAD shows
 the same nominal colours; STL carries geometry only. No physical verification
 status changed.
+
+### Head-to-track alignment — export v48
+
+The two read/write contact faces now sit at the TEAC FD-55FV-13 Rev.E
+[p.108 radii](https://retrocmp.de/fdd/teac/TEAC_FD55-FV.pdf#page=10):
+57.150 mm (side 0) and 55.033 mm (side 1) at cylinder zero. Both move
+inward by 25.4/96 mm per cylinder, reaching 36.247917 and 34.130917 mm
+at cylinder 79. The previous approximate shoes lay beyond the medium's edge.
+The lower shoe now projects from the carriage; the upper shoe is staggered
+2.117 mm inward and contacts the opposite surface of the 0.08 mm model medium.
+Contact coordinates are exported from OpenSCAD for browser geometry checks.
+Shoe outlines, medium thickness and arm lift remain estimates; the exact
+specimen drive suffix and mechanical dynamics remain unverified.

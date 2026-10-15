@@ -2,6 +2,13 @@
 // Photos 20250212: K5601 / TEAC 15532064-00A and Ratan / 15532092-00A.
 // Envelope 146 x 203 x 41.3 mm remains the TEAC drawing reference, not a measurement.
 // Local front-left-bottom; x increases to the right when facing the computer.
+// TEAC FD-55FV-13 Rev.E p.108: radii refer to the read/write gaps,
+// not the carriage outline. Side 1 is staggered toward the spindle.
+teac_track_pitch=25.4/96;
+teac_track_zero=[57.150,55.033];
+teac_medium_z=29.5;
+teac_medium_thickness=.08;
+function teac_gap(side,track=0)=[70,66+teac_track_zero[side]-track*teac_track_pitch,teac_medium_z+side*teac_medium_thickness];
 teac_width=146; teac_depth=203; teac_height=41.3;
 module teac_frame() {
     difference() {
@@ -102,7 +109,13 @@ module teac_head_shape() { translate([0,7,0]) {
         union(){cube([24,34,5]);translate([4,2,4])cube([16,24,4]);for(x=[-9,24])translate([x,4,0])cube([9,9,7]);}
         for(y=[5,28])translate([12,y,-1])cylinder(d=4,h=12,$fn=16);
     }
-    translate([64,121,27])cube([14,10,3]);
+    // Project the lower head shoe forward from the carriage onto side 0.
+    // Shoe envelope is estimated; the centre of its contact face is calibrated.
+    hull(){
+        translate([64,126,27])cube([12,4,1]);
+        translate([67,59+teac_track_zero[0]-3,27])cube([6,6,1]);
+    }
+    translate([67,59+teac_track_zero[0]-3,28])cube([6,6,teac_medium_z-28]);
     translate([48.5,125,19])cube([11,8,3]);
     // Bearing sleeves follow the head with clearance around the fixed guide rails.
     for(x=[46,92])translate([x,128,18])rotate([-90,0,0])difference(){
@@ -159,8 +172,12 @@ module teac_cable_plug(adapter=false) {
 
 // Separate upper load arm. Pivot and lift are illustrative until measured.
 module teac_head_arm() { translate([0,7,0]) {
-    translate([62,122,30])difference(){cube([18,15,1]);translate([2,2,-1])cube([14,11,3]);}
-    translate([64,122,29])cube([14,10,1]);
+    translate([62,59+teac_track_zero[1]-3,30])difference(){
+        cube([18,137-(59+teac_track_zero[1]-3),1]);
+        translate([2,8,-1])cube([14,12,3]);
+    }
+    translate([67,59+teac_track_zero[1]-3,teac_medium_z+teac_medium_thickness])
+        cube([6,6,30-teac_medium_z-teac_medium_thickness]);
     translate([69,133,30])cube([2,15,.5]);
 }
 }
