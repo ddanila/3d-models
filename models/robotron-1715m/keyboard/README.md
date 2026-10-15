@@ -142,3 +142,9 @@ The photos reviewed here show the underside, not bare switch contact faces.
 The two isolated comb electrodes and their short routes therefore remain a
 functional illustration, not a photo-traced contact pattern. No new hidden
 controller-to-matrix connection or support is inferred from these photographs.
+
+The v44 interior adds the installed controller fasteners, pressed bottom-lid
+recesses and edge slots, clean cable shielding, aligned end solder rings and
+photo-registered board artwork. See the parent README and `keyboard-artwork.json`
+for photo references and limits. The matrix and controller have distinct
+nominal colours; DAC additionally models slight matrix-laminate transmission.

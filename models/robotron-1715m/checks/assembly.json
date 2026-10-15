@@ -3,6 +3,26 @@
   "toleranceMm3": 0.001,
   "results": [
     {
+      "interface": "controller-shield-vs-components",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "controller-mounts-vs-board",
+      "intersectionMm3": 0.0,
+      "passed": true
+    },
+    {
+      "interface": "controller-mounts-vs-matrix",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "controller-shield-vs-board",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
       "interface": "ic-sockets-vs-chip-plastic",
       "intersectionMm3": 0,
       "passed": true

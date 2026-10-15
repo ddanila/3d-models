@@ -28,7 +28,7 @@ clear_key_color = "#ffffff";
 clear_key_alpha = 0.28; // [0:0.01:1]
 inlay_color = "#a3a7a8";
 red_key_color = "#b82e35";
-pcb_color = "#91ae94";
+pcb_color = "#6f9c80";
 rubber_color = "#30322d";
 
 /* [Hidden] */

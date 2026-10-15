@@ -26,7 +26,7 @@ module controller_transistor_pose(p){translate([p[0],p[1],1.6])rotate([0,0,p[2]]
 // Shared tail locations keep board apertures, joints and lead endpoints aligned.
 controller_connector_tails=[for(i=[0:12],side=[-1,1])[-25+i*2.54,3+side*7]];
 controller_resistor_tails=[for(x=[-80,-74,-68,-62,-56,-50,-44,-38],y=[-11,3])[x,y]];
-// Paired open end holes visible in owner 123622947; no invented screws.
+// Paired end holes in detached photo 123622947; installed retainers are separate.
 controller_end_holes=[for(x=[-133,133],y=[10,17.5])[x,y]];
 module keyboard_controller_board(){keyboard_controller_pose()difference(){
  translate([-135,-23,0])cube([270,46,1.6]);
@@ -93,35 +93,21 @@ module keyboard_insulators(){
 // Visible underside buses from 123907435. This is artwork, not a netlist.
 // Long paths and staggered diagonal jogs follow owner underside photo 123907435.
 // Photo-derived geometry only: not a traced or continuity-tested circuit.
-matrix_paths=[
- [[-231,-61],[-185,-61],[-170,-58],[150,-58],[223,-58]],
- [[-222,-42],[-145,-42],[-133,-47],[84,-47],[95,-42],[216,-42]],
- [[-235,-29],[-90,-29],[-78,-24],[170,-24]],
- [[-203,-12],[-60,-12],[-53,-15],[213,-15]],
- [[-235,3],[-180,3],[-172,0],[-118,0],[-107,5],[132,5],[148,12]],
- [[-215,13],[-155,13],[-146,8],[-24,8],[-14,15],[195,15]],
- [[-234,24],[-200,24],[-187,19],[-14,19],[-6,25],[220,25]],
- [[-181,35],[-116,35],[-102,28],[140,28]]
-];
-function matrix_bus(i)=matrix_paths[i];
+include <keyboard-artwork.scad>
 module board_trace(path,width=.75,height=.12){
  for(i=[0:len(path)-2])hull()for(j=[i,i+1])translate([path[j][0],path[j][1],0])cylinder(d=width,h=height,$fn=12);
 }
-module keyboard_matrix_artwork(){
- translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])translate([0,0,-15.118]){
-  for(i=[0:7])board_trace(matrix_bus(i),1.5);
-  for(i=[0:7],j=[0,len(matrix_bus(i))-1])translate(matrix_bus(i)[j])cylinder(d=3,h=.12,$fn=20);
-  // Narrow parallel bundle joining the controller side of the broad board.
-  for(i=[0:5])board_trace([[-65+i*1.6,12],[-35+i*1.6,12],[-24+i*1.6,24],[56,24+i*1.3],[69,38+i*1.3],[180,38+i*1.3]],.6);
+module keyboard_matrix_artwork(){keyboard_matrix_pose()translate([0,0,-14.998]){
+ for(path=matrix_photo_paths)board_trace(path,.95,.08);
+ for(path=matrix_photo_paths)for(i=[0,len(path)-1])translate(path[i])cylinder(d=2.1,h=.08,$fn=16);
+}}
+module keyboard_pcb_metal(){keyboard_matrix_pose(){
+ // Owner photo 123048886: irregularly spaced solder joints, not screw heads.
+ for(p=matrix_photo_pads)translate([p[0],p[1],-14.998])scale([1,1,.35])sphere(d=2.2,$fn=20);
+ for(path=matrix_photo_paths)for(i=[0,len(path)-1])translate([path[i][0],path[i][1],-15.06])difference(){
+  cylinder(d=1.2,h=.14,$fn=16);translate([0,0,-.1])cylinder(d=.5,h=.4,$fn=12);
  }
-}
-module keyboard_pcb_metal(){
- translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])translate([0,0,-15.368]){
-  for(i=[0:7],j=[0,len(matrix_bus(i))-1])translate(matrix_bus(i)[j])difference(){cylinder(d=1.6,h=.23,$fn=20);translate([0,0,-.1])cylinder(d=.65,h=.5,$fn=12);}
-  // Clean screw heads and through-board solder points visible in the photos.
-  for(x=[-214,-152,-82,-12,58,128,198],y=[-51,1,32])translate([x,y,0])rotate([180,0,0])screw(3.5,.6);
- }
-}
+}}
 // Routes digitized as clean polylines from owner 123622947 (top) and
 // 123648677 (underside). Broad buses and diagonal breaks are photo estimates;
 // hidden paths and electrical continuity have not been reconstructed.
@@ -139,16 +125,9 @@ module keyboard_controller_traces(){keyboard_controller_pose(){
    translate(v)difference(){cylinder(d=1.7,h=.1,$fn=20);cylinder(d=1.05,h=.2,$fn=16);}
    board_trace([v,[v[0],v[1]+side*1.7],[v[0]+1.2,v[1]+side*2.9]],.45,.08);
   }
- // Parallel underside bus follows the right edge in 123648677; side
- // reversal is intentional because the photograph looks through the back.
- for(i=[0:6])translate([0,0,-.1])board_trace([
-  [-105+i*2,3+i*1.35],[-94+i*2,3+i*1.35],[-88+i*2,15+i*.85],
-  [46+i*2,15+i*.85],[53+i*2,8+i*.85],[91+i*2,8+i*.85],
-  [99+i*2,17+i*.65],[126,17+i*.65]],.42,.1);
- for(i=[0:4])translate([0,0,-.1])board_trace([
-  [-64,-17+i*2.2],[-31-i*2,-17+i*2.2],[-25-i*2,-11+i*2.2],
-  [9+i*2,-11+i*2.2],[16+i*2,-17+i*2.2],[72,-17+i*2.2],
-  [78,-11+i*2.2],[124,-11+i*2.2]],.45,.1);
+ // Manually registered underside segments, including the outer bus and CPU fanout.
+ for(path=controller_photo_paths)translate([0,0,-.10])board_trace(path,.35,.10);
+ for(path=controller_photo_paths)for(i=[0,len(path)-1])translate([path[i][0],path[i][1],-.10])cylinder(d=.9,h=.10,$fn=12);
  // Staggered transistor-stage routes and plated eyes (no invented values).
  for(p=controller_transistors)controller_transistor_pose(p)
   for(x=[-1.27,0,1.27])translate([x,0,-.1])difference(){cylinder(d=1.2,h=.1,$fn=20);cylinder(d=.85,h=.2,$fn=16);}
@@ -345,7 +324,7 @@ module keyboard_pcb_fasteners(){
 // Short lead bundle and strain relief at the owner-photographed controller entry.
 // Routes are visual estimates; no undocumented electrical pinout is asserted.
 module keyboard_entry_wires(i=0){keyboard_controller_pose()
- wire_run([[-125,-2+i*1.5,4.5],[-123,-7+i*3,6],[-116,-7+i*3,3]],.55);
+ wire_run([[-121,-2+i*1.5,4.5],[-119,-7+i*3,6],[-116,-7+i*3,3]],.55);
 }
 module keyboard_contact_routes(){
  translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])
@@ -365,7 +344,7 @@ module keyboard_controller_solder(){keyboard_controller_pose(){
  for(p=controller_transistors)translate([p[0],p[1],0])rotate([0,0,p[2]])
   for(x=[-1.27,0,1.27])controller_solder_eye(x,0,.85,1.2);
  for(p=concat(controller_connector_tails,controller_resistor_tails))controller_solder_eye(p[0],p[1],.85,1.7);
- for(x=[-130,130],y=[-18,18])translate([x,y,-.4])difference(){cylinder(d=6,h=.4,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=16);}
+ for(p=controller_end_holes)translate([p[0],p[1],-.15])difference(){cylinder(d=3.8,h=.15,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=16);}
 }}
 
 // Bent connector tails and axial leads visible in 123622947. Nominal diameters.
@@ -410,3 +389,28 @@ module keyboard_controller_resistor_bands(){keyboard_controller_pose()
  for(x=[-80,-74,-68,-62,-56,-50,-44,-38],y=[-2.35,-7.35])translate([x,y,3])rotate([90,0,0])
   difference(){cylinder(d=2.34,h=.55,$fn=24);translate([0,0,-.1])cylinder(d=2.28,h=.8,$fn=24);}
 }
+
+// Installed photo 123907435: one retained screw in each paired end-hole group.
+// Visible straps only; unseen threads and chassis attachment remain unmeasured.
+module keyboard_controller_mounts(){keyboard_controller_pose()
+ for(x=[-133,133])translate([x,17.5,0]){
+  translate([0,0,-.15])rotate([180,0,0]){
+   difference(){cylinder(d=5.4,h=.45,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.7,$fn=20);}
+   translate([0,0,.45])screw(4.6,1);
+  }
+  cylinder(d=2.8,h=2.6,$fn=20);
+  translate([0,3,1.6])difference(){slab(7,14,1,1);translate([0,-3,-.1])cylinder(d=3.2,h=1.3,$fn=20);}
+ }
+}
+// Clean braided shield pigtail, not the individual frayed strands in 123539882.
+// The braid leaves the stripped jacket and terminates on the broad tinned land.
+module keyboard_controller_shield(){keyboard_controller_pose(){
+ for(hand=[-1,1],strand=[0:3])wire_run([for(i=[0:24])let(t=i/24,a=hand*t*720+strand*90)
+  [-122-8*min(1,t*2)+.6*cos(a),-1+13*t,5.2-2.6*t+.6*sin(a)]],.12);
+ translate([-130,12,2.31])scale([1.3,1,.35])sphere(d=4,$fn=28);
+ // Broad solderable ground land, clean nominal surface.
+ difference(){
+  translate([-131,14,1.61])slab(8,16,.12,.4);
+  for(p=controller_end_holes)translate([p[0],p[1],1.5])cylinder(d=3.2,h=.5,$fn=24);
+ }
+}}

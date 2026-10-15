@@ -133,8 +133,8 @@
         0
       ],
       "fov": 31,
-      "include": "^keyboard-controller-",
-      "note": "Compare long underside buses, diagonal breaks and through-hole solder eyes; visual artwork, not a verified netlist."
+      "include": "^keyboard-controller-(?!mounts)",
+      "note": "Compare long underside buses, diagonal breaks and through-hole solder eyes; visual artwork, not a verified netlist. Retaining straps are omitted here to match the detached photograph; see installed-board view."
     },
     {
       "name": "motherboard-processor",

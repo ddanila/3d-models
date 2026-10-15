@@ -282,3 +282,31 @@ sheet lies on the inner bottom cover. These replace the previous mirrored
 placement and incorrect bare-edge interpretation. Positions and mating depth
 remain photo estimates, not measured fits or print verification. The browser’s
 separated view keeps the bush end anchored while the cable follows the board.
+
+### v44: keyboard construction and board finish
+
+The bottom lid now has three front-edge slots and four hollow pressed foot
+pockets with a nominal 1 mm floor, following owner `123319025`. Two controller
+screws and their visible retaining straps follow installed photo `123907435`;
+the unused holes remain open. End solder rings now use the same coordinates as
+the actual holes. Hidden threads and strap attachment details are unverified.
+
+The cable termination has a clean braided shield pigtail, broad tinned land and
+solder termination based on `123539882`, without copying frayed strands or wear.
+The jacket now reaches the exit of its saddle clamp.
+
+`keyboard-artwork.json` records 26 matrix and 43 controller underside route
+segments against owner photos `123048886` and `123648677`. Rebuild the projected
+polylines with `python3 tools/configure-keyboard-artwork.py`. Matrix solder
+points use irregular photographed positions and rounded joints instead of a
+grid of screw heads. These are visual centre-line estimates: obscured paths,
+exact pad shapes and circuit continuity remain unverified. Photographic
+perspective and assumed PCB envelopes limit their dimensional accuracy.
+
+The matrix laminate is greener with restrained light transmission in DAC; the
+controller has a separate warmer, rougher fibreglass finish. Thin-laminate
+translucency uses restrained alpha blending, avoiding a whole-scene refraction
+pass for a mostly obscured PCB. Colour and optical
+properties are visual estimates, not measured material data. OpenSCAD shows
+the same nominal colours; STL carries geometry only. No physical verification
+status changed.
