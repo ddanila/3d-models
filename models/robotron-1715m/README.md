@@ -10,7 +10,7 @@ The front controls follow owner photos `PXL_20261012_124827690.jpg` and `PXL_202
 
 The October 13 inserted-disk views (`113529099`, `113537277`) now set a 7 mm deeper media/mechanism datum, longer projecting lever boss, flush activity lenses and a higher upper finger recess. The entire lever sweep clears the inserted jacket; hub, clamp, head and label positions move together. The fascia returns reach the enclosure instead of leaving an open horizontal slot. The monitor surround follows the rolled perimeter and dished inner return in `133017092` / `125018215`. Local depths and angles remain photo estimates.
 
-The keyboard controller is oriented with its input end toward the actual cable opening (`123907435`). A continuous internal lead reaches its shield clamp, passing through a round grooved black bush captured in a 1 mm bent metal support (`123539882`); the rectangular opening has bare edges. The plug has the asymmetric housing, screw layout and offset cable outlet from `090425989` / `090431122`. DAC preserves the input connection when separating the keyboard for inspection.
+The keyboard controller is oriented with its input end toward the actual cable opening (`123907435`). A continuous internal lead reaches its shield clamp, passing through a round grooved black bush captured in a 1 mm bent metal support (`123539882`); the rectangular opening has two rubber strips along its long edges. The plug has the asymmetric housing, screw layout and offset cable outlet from `090425989` / `090431122`. DAC preserves the input connection when separating the keyboard for inspection.
 
 The system unit has a W/M motherboard with integrated A44 U8272 and 32 RAM packages, plus a separate display controller mounted component-side down. [board-layout.json](board-layout.json) records the shared placement, sources and uncertainty. There are <!-- pcb-counts -->138 nominal KiCad DIP packages and 2,568 lead apertures<!-- /pcb-counts -->. The October 14 component-side photographs locate 39 display-board ICs, including three UL6516D memories and the SAB8275P, red upright capacitors and the white wound component. Generated P01–P39 IDs identify photo positions, not printed board designators. Photo-registered mainboard packages and connectors use the v41 two-photo, six-package nominal-pitch calibration below. Other positions retain W drawing estimates; board edges and hidden mounts remain unmeasured. R19/R102 and C90/C91 follow the documented CPU/DMA adjacency, with estimated positions and no invented electrical values. Unidentified footprints retain generic labels. Clean chip legends reproduce only owner-photo-supported markings; schematic designators remain inspection metadata. Illustrative copper routes are not a netlist.
 
@@ -269,3 +269,16 @@ local geometry/photos do not yet establish the aperture shape. These are
 explicit audit exceptions, not claims of correct feed-throughs.
 
 No additional part is classified as physically printed and verified.
+
+### v43: installed keyboard board and cable entry
+
+Owner photos `123048886`, `123907435` and `123319025` establish the installed
+orientation: the narrow controller overlaps the rear edge of the matrix PCB,
+with its connector aligned to the matrix socket. The cable opening sits to its
+left in typing coordinates. Its folded, notched sheet-metal support is on the
+short edge toward the controller, holding the round grooved bush horizontally.
+Two separate rubber strips wrap the opening’s long edges; the brown insulating
+sheet lies on the inner bottom cover. These replace the previous mirrored
+placement and incorrect bare-edge interpretation. Positions and mating depth
+remain photo estimates, not measured fits or print verification. The browser’s
+separated view keeps the bush end anchored while the cable follows the board.

@@ -66,10 +66,13 @@ match the existing browser model; they were previously browser-only additions.
 The shared full-machine SCAD assembly includes them too. Browser export still
 leaves these separate lenses to the runtime, avoiding duplicate geometry.
 
-The underside cable opening has bare sheet-metal edges. The incoming lead passes
-through a round grooved black bush captured in a bent 1 mm support, following
-owner close-up `PXL_20261012_123539882.jpg`. This supersedes the earlier two-strip
-rubber interpretation. Use `python3 render.py --view underside` to inspect it.
+The underside cable opening has two black rubber strips on its long edges,
+as shown in owner photos `123247922` and `123319025`. A separate round grooved
+bush holds the incoming lead in a folded support on the short edge toward the
+controller. The controller overlaps the rear edge of the matrix PCB; its cable
+end faces the opening. The brown bottom-cover insulating sheet is also modeled.
+This v43 correction supersedes the earlier bare-edge and mirrored placement
+interpretation. Exact mating depth remains estimated.
 
 The light shell now ends at a straight, open lower rim above the separate bottom
 lid, with six individual screw tabs. Inside photos `PXL_20261012_123048886.jpg`

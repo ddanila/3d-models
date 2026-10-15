@@ -17,3 +17,11 @@ keyboard_deck_z = keyboard_front_height + keyboard_d/2*tan(keyboard_slope) + 5/c
 keyboard_z_shift = keyboard_deck_z-26;
 ring_od = 174; ring_id = 167; ring_h = 5; // Danila's measured insert.
 $fn = 24;
+
+// Owner underside photos 123319025 / 123907435. Rear stays +Y in both
+// views; underside images reverse X. Positions are photo estimates.
+keyboard_cable_x = -80; keyboard_cable_y = 55;
+keyboard_support_x = keyboard_cable_x+21;
+keyboard_controller_x = 95; keyboard_controller_y = 46.6;
+keyboard_controller_z = 5.5;
+keyboard_cable_z = keyboard_controller_z+4.5;

@@ -45,13 +45,13 @@
       "name": "keyboard-controller",
       "photo": "PXL_20261012_123622947.jpg",
       "position": [
-        -65,
-        -281,
+        95,
+        -308.4,
         620
       ],
       "target": [
-        -65,
-        -281,
+        95,
+        -308.4,
         8
       ],
       "up": [
@@ -67,17 +67,17 @@
       "name": "keyboard-cable",
       "photo": "PXL_20261012_123539882.jpg",
       "position": [
-        110,
-        -200,
-        145
+        -90,
+        -220,
+        125
       ],
       "target": [
-        65,
-        -281,
-        11
+        -50,
+        -304,
+        10
       ],
       "fov": 38,
-      "include": "^keyboard-(controller-|entry|grommet|cable-support|internal-cable)",
+      "include": "^keyboard-(controller-|entry|grommet|cable-support|internal-cable|base-insulator)",
       "note": "Incoming lead, round bush, bent support and shield clamp; the owner's photo shows these removed from the shell."
     },
     {
@@ -118,13 +118,13 @@
       "name": "keyboard-controller-underside",
       "photo": "PXL_20261012_123648677.jpg",
       "position": [
-        -65,
-        -281,
+        95,
+        -308.4,
         -620
       ],
       "target": [
-        -65,
-        -281,
+        95,
+        -308.4,
         8
       ],
       "up": [
@@ -157,6 +157,50 @@
       "fov": 28,
       "include": "^logic-.*motherboard$",
       "note": "Local pin-pitch-registered processor area and long socket. Surrounding unregistered components retain drawing estimates; this is not a calibrated whole-board camera."
+    },
+    {
+      "name": "keyboard-bottom-entry",
+      "photo": "PXL_20261012_123319025.jpg",
+      "position": [
+        0,
+        -355,
+        650
+      ],
+      "target": [
+        0,
+        -355,
+        0
+      ],
+      "up": [
+        0,
+        -1,
+        0
+      ],
+      "fov": 45,
+      "include": "^keyboard-(bottom|entry-rubber|base-insulator|cable-support|grommet)$",
+      "note": "Inner bottom lid: two edge strips and short-edge bush support toward the controller insulation sheet."
+    },
+    {
+      "name": "keyboard-installed-boards",
+      "photo": "PXL_20261012_123907435.jpg",
+      "position": [
+        0,
+        -355,
+        -650
+      ],
+      "target": [
+        0,
+        -355,
+        15
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "fov": 45,
+      "include": "^keyboard-(shell|pcb$|pcb-metal|matrix-|insulators|controller-|entry|internal-cable|grommet|cable-support)",
+      "note": "Installed underside: narrow controller overlaps the rear matrix-board edge; its cable end faces the lid opening."
     }
   ]
 }

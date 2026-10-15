@@ -63,6 +63,21 @@
       "passed": true
     },
     {
+      "interface": "matrix-socket-vs-controller-connector",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "keyboard-controller-vs-matrix-board",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "keyboard-entry-rubber-vs-lid",
+      "intersectionMm3": 0.0,
+      "passed": true
+    },
+    {
       "interface": "matrix-socket-vs-controller",
       "intersectionMm3": 0,
       "passed": true
@@ -139,7 +154,7 @@
     },
     {
       "interface": "cable-grommet-vs-sheet-support",
-      "intersectionMm3": 0.0,
+      "intersectionMm3": 0,
       "passed": true
     },
     {

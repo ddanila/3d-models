@@ -2,7 +2,7 @@
 // Feature dimensions/positions are estimates, not an electrical reconstruction.
 // Component pitch is nominal 2.54 mm; board envelope inferred from DIP-40.
 module keyboard_controller_pose() {
-    translate([-65,keyboard_y+74,8])rotate([0,0,180]) children();
+    translate([keyboard_controller_x,keyboard_y+keyboard_controller_y,keyboard_controller_z]) children();
 }
 // x,y,pins,row spacing; positions follow 123622947, not a generic chip grid.
 controller_dips=[[62,8,40,15.24],[20,-12,14,7.62],[20,12,14,7.62],
