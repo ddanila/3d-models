@@ -18,13 +18,13 @@
       "name": "motherboard",
       "title": "W/M motherboard",
       "origin": [
-        -231,
-        -178,
+        -235.0,
+        -183.0,
         12
       ],
       "size": [
-        250,
-        355
+        251.0,
+        368.0
       ],
       "side": 1,
       "face": 13.6,
@@ -35,13 +35,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            3.454,
-            -154.471,
+            -4.569,
+            -159.895,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A89 · M4164B-12",
@@ -60,13 +60,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -10.412,
-            -154.471,
+            -17.243,
+            -160.116,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A90 · M4164B-12",
@@ -85,13 +85,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -24.277,
-            -154.471,
+            -30.04,
+            -160.339,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A91 · M4164B-12",
@@ -110,13 +110,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -38.143,
-            -154.471,
+            -42.959,
+            -160.565,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A92 · M4164B-12",
@@ -135,13 +135,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -52.008,
-            -154.471,
+            -56.004,
+            -160.792,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A93 · M4164B-12",
@@ -160,13 +160,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -65.874,
-            -154.471,
+            -69.176,
+            -161.022,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A94 · M4164B-12",
@@ -185,13 +185,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -79.739,
-            -154.471,
+            -82.476,
+            -161.254,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A95 · M4164B-12",
@@ -210,13 +210,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -93.605,
-            -154.471,
+            -95.907,
+            -161.488,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A96 · M4164B-12",
@@ -235,13 +235,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            3.454,
-            -125.059,
+            -4.669,
+            -131.722,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A81 · M4164B-12",
@@ -260,13 +260,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -10.412,
-            -125.059,
+            -17.308,
+            -131.808,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A82 · M4164B-12",
@@ -285,13 +285,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -24.277,
-            -125.059,
+            -30.069,
+            -131.895,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A83 · M4164B-12",
@@ -310,13 +310,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -38.143,
-            -125.059,
+            -42.952,
+            -131.983,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A84 · M4164B-12",
@@ -335,13 +335,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -52.008,
-            -125.059,
+            -55.96,
+            -132.072,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A85 · M4164B-12",
@@ -360,13 +360,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -65.874,
-            -125.059,
+            -69.094,
+            -132.162,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A86 · M4164B-12",
@@ -385,13 +385,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -79.739,
-            -125.059,
+            -82.356,
+            -132.253,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A87 · M4164B-12",
@@ -410,13 +410,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -93.605,
-            -125.059,
+            -95.747,
+            -132.344,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A88 · M4164B-12",
@@ -435,13 +435,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            3.454,
-            -95.647,
+            -4.768,
+            -103.705,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A73 · M4164B-12",
@@ -460,13 +460,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -10.412,
-            -95.647,
+            -17.373,
+            -103.658,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A74 · M4164B-12",
@@ -485,13 +485,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -24.277,
-            -95.647,
+            -30.098,
+            -103.611,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A75 · M4164B-12",
@@ -510,13 +510,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -38.143,
-            -95.647,
+            -42.945,
+            -103.563,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A76 · M4164B-12",
@@ -535,13 +535,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -52.008,
-            -95.647,
+            -55.916,
+            -103.515,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A77 · M4164B-12",
@@ -560,13 +560,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -65.874,
-            -95.647,
+            -69.012,
+            -103.466,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A78 · M4164B-12",
@@ -585,13 +585,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -79.739,
-            -95.647,
+            -82.236,
+            -103.417,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A79 · M4164B-12",
@@ -610,13 +610,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -93.605,
-            -95.647,
+            -95.589,
+            -103.368,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A80 · M4164B-12",
@@ -635,13 +635,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            3.454,
-            -66.445,
+            -4.866,
+            -76.042,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A65 · M4164B-12",
@@ -660,13 +660,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -10.412,
-            -66.445,
+            -17.437,
+            -75.865,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A66 · M4164B-12",
@@ -685,13 +685,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -24.277,
-            -66.445,
+            -30.127,
+            -75.685,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A67 · M4164B-12",
@@ -710,13 +710,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -38.143,
-            -66.445,
+            -42.938,
+            -75.504,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A68 · M4164B-12",
@@ -735,13 +735,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -52.008,
-            -66.445,
+            -55.873,
+            -75.321,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A69 · M4164B-12",
@@ -760,13 +760,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -65.874,
-            -66.445,
+            -68.932,
+            -75.137,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A70 · M4164B-12",
@@ -785,13 +785,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -79.739,
-            -66.445,
+            -82.118,
+            -74.95,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A71 · M4164B-12",
@@ -810,13 +810,13 @@
           "label": "M4164B-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -93.605,
-            -66.445,
+            -95.432,
+            -74.762,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "U2164",
           "inspection": {
             "title": "A72 · M4164B-12",
@@ -835,13 +835,13 @@
           "label": "UA880 CPU",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -122.708,
-            66.117,
+            -121.869,
+            65.018,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A1 · UA880 CPU",
             "text": "Z80-compatible main CPU. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
@@ -858,19 +858,19 @@
         },
         {
           "ref": "A2",
-          "label": "UA858 DMA",
+          "label": "UA858D",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -91.163,
-            65.46,
+            -91.276,
+            65.101,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A2 · UA858 DMA",
-            "text": "System DMA controller; floppy transfers. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "text": "System DMA controller; floppy transfers. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional. Visible specimen legend: UA858D. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
@@ -878,23 +878,28 @@
           "photoCentre": [
             658,
             503
-          ]
+          ],
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "orientationEvidence": "Owner 073200542: corner pin-one feature at image lower-right, opposite to SIO."
         },
         {
           "ref": "A3",
-          "label": "UA8560 SIO",
+          "label": "UA8560D",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -151.394,
-            66.714,
+            -151.443,
+            64.937,
             13.6
           ],
-          "rotation": 180,
+          "rotation": 0,
           "side": 1,
-          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A3 · UA8560 SIO",
-            "text": "Serial I/O, including keyboard receiver. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "text": "Serial I/O, including keyboard receiver. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional. Visible specimen legend: UA8560D. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
@@ -902,20 +907,25 @@
           "photoCentre": [
             952,
             503
-          ]
+          ],
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          },
+          "orientationEvidence": "Owner 073200542: corner pin-one feature at image upper-left; opposite to DMA lower-right. Molded circular ejector marks are not used as pin-one marks."
         },
         {
           "ref": "A44",
           "label": "U8272 FDC",
           "model": "DIP-40_W15.24mm",
           "position": [
-            -175.676,
-            67.22,
+            -177.903,
+            64.865,
             13.6
           ],
           "rotation": 180,
           "side": 1,
-          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A44 · U8272 FDC",
             "text": "Floppy-disk controller. Documented W/M design; package and local placement estimated. Package: DIP-40_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
@@ -932,20 +942,20 @@
         },
         {
           "ref": "A4",
-          "label": "UA857D CTC",
+          "label": "UA857D",
           "model": "DIP-28_W15.24mm",
           "position": [
-            -99.697,
-            -16.235,
+            -101.026,
+            -25.769,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "UA8570 CTC",
           "inspection": {
             "title": "A4 · UA857D CTC",
-            "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-28_W15.24mm.",
+            "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-28_W15.24mm. Visible specimen legend: UA857D. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
@@ -953,24 +963,28 @@
           "photoCentre": [
             900,
             995
-          ]
+          ],
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "A5",
-          "label": "UA857D CTC",
+          "label": "UA857D",
           "model": "DIP-28_W15.24mm",
           "position": [
-            -99.697,
-            7.924,
+            -100.885,
+            -2.405,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Owner-photo registered position; nominal package size, board envelope and W reference correspondence remain provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "schematicLabel": "UA8570 CTC",
           "inspection": {
             "title": "A5 · UA857D CTC",
-            "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-28_W15.24mm.",
+            "text": "Counter/timer. Owner photo confirms two UA857D packages; schematic references and local placement provisional. Placement now registered against the owner component-side photograph; board dimensions and reference correspondence remain provisional. Package: DIP-28_W15.24mm. Visible specimen legend: UA857D. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_072654600",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
@@ -978,23 +992,27 @@
           "photoCentre": [
             900,
             1110
-          ]
+          ],
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "A6",
-          "label": "U2716 boot ROM",
+          "label": "M2716-1F1",
           "model": "DIP-24_W15.24mm",
           "position": [
-            -53.54,
-            14.797,
+            -59.441,
+            19.843,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A6 · U2716 boot ROM",
-            "text": "Boot EPROM. Documented W/M design; package and local placement estimated. Package: DIP-24_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "text": "Boot EPROM. Documented W/M design; package and local placement estimated. Package: DIP-24_W15.24mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional. Visible specimen legend: M2716-1F1. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
@@ -1004,20 +1022,24 @@
             278
           ],
           "socketHeight": 2.5,
-          "socketEvidence": "Pale socket rails visible in owner 073200542; nominal pitch, estimated 2.5 mm lift and hidden contact geometry."
+          "socketEvidence": "Pale socket rails visible in owner 073200542; nominal pitch, estimated 2.5 mm lift and hidden contact geometry.",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "A45",
           "label": "DS8282",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -52.756,
-            42.993,
+            -57.525,
+            44.941,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A45 · DS8282",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
@@ -1035,13 +1057,13 @@
           "label": "DS8286",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -55.329,
-            106.655,
+            -56.738,
+            107.23,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A10 · DS8286",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
@@ -1059,13 +1081,13 @@
           "label": "DS8282",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -54.518,
-            86.579,
+            -56.998,
+            86.636,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A9 · DS8282",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
@@ -1083,13 +1105,13 @@
           "label": "DS8286",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -53.693,
-            66.166,
+            -57.251,
+            66.617,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A8 · DS8286",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
@@ -1107,13 +1129,13 @@
           "label": "DS8205",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -142.541,
-            -25.412,
+            -138.368,
+            -21.962,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Photo-registered body; schematic reference correspondence remains provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A12 · DS8205",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
@@ -1171,13 +1193,13 @@
           "label": "DS8205",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -184.144,
-            126.061,
+            -193.854,
+            133.717,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A11 · DS8205",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
@@ -1192,19 +1214,19 @@
         },
         {
           "ref": "A41",
-          "label": "74S287",
+          "label": "UCY 74S405",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -141.894,
-            -7.459,
+            -138.426,
+            -6.255,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Photo-registered body; schematic reference correspondence remains provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A41 · 74S287",
-            "text": "CAS/bank decode PROM. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
+            "text": "CAS/bank decode PROM. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional. Visible specimen legend: UCY 74S405. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; estimated placement",
             "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
@@ -1212,23 +1234,27 @@
           "photoCentre": [
             890,
             151
-          ]
+          ],
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "A114",
-          "label": "DS8286",
+          "label": "КР580ВА86",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -119.776,
-            23.759,
+            -118.205,
+            23.799,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Local owner-photo pin-pitch registration; package pitch nominal, reference correspondence provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A114 · DS8286",
-            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional.",
+            "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-16_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position uses a local projective fit to nominal DIP-40 lead pitch in owner photo 073200542. Reference correspondence and exact dimensions remain provisional. Visible specimen legend: КР580ВА86. Schematic correspondence remains provisional.",
             "evidence": "Owner photograph + W/M documentation; photo-estimated placement",
             "photo": "20261014_073200542",
             "reference": "https://xepb.org/robotron/docs/1715w.zip"
@@ -1236,7 +1262,11 @@
           "photoCentre": [
             790,
             300
-          ]
+          ],
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "A29",
@@ -1703,13 +1733,13 @@
           "label": "DL004",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -10.411,
-            149.16,
+            -13.33,
+            151.135,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Photo-registered body; schematic reference correspondence remains provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A18 · DL004",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
@@ -1727,13 +1757,13 @@
           "label": "K170UP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -39.688,
-            128.834,
+            -41.154,
+            130.42,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Photo-registered body; schematic reference correspondence remains provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A19 · K170UP2",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
@@ -1751,13 +1781,13 @@
           "label": "K155LP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -69.39,
-            123.332,
+            -69.176,
+            125.547,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Photo-registered body; schematic reference correspondence remains provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A24 · K155LP2",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
@@ -1775,13 +1805,13 @@
           "label": "K170AP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -69.927,
-            135.086,
+            -69.248,
+            138.723,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Photo-registered body; schematic reference correspondence remains provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A21 · K170AP2",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
@@ -1799,13 +1829,13 @@
           "label": "K170UP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -70.652,
-            146.206,
+            -69.53,
+            151.549,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Photo-registered body; schematic reference correspondence remains provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A23 · K170UP2",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
@@ -1823,13 +1853,13 @@
           "label": "K170UP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -99.701,
-            128.663,
+            -99.128,
+            132.803,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Photo-registered body; schematic reference correspondence remains provisional",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A20 · K170UP2",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Body position follows owner 073200542; schematic reference correspondence is provisional.",
@@ -1847,13 +1877,13 @@
           "label": "K170AP2",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -195.164,
-            101.622,
+            -204.342,
+            103.98,
             13.6
           ],
           "rotation": 90,
           "side": 1,
-          "status": "Visible 14-pin body registered from owner 073200542; A22 is a provisional drawing correspondence, not an identified specimen reference.",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "A22 · K170AP2",
             "text": "Logic/package placement on the W/M motherboard. Documented W/M design; package and local placement estimated. Package: DIP-14_W7.62mm. A references follow the W placement drawing 1.93.310411.8/09; exact specimen revision and pin-one orientation remain unverified. Position follows the visible right-side 14-pin package in owner 073200542; reference correspondence remains unverified.",
@@ -1870,8 +1900,8 @@
           "ref": "PHOTO-01",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -141.328,
-            8.228,
+            -138.477,
+            7.948,
             13.6
           ],
           "rotation": 90,
@@ -1880,21 +1910,25 @@
             890,
             222
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 1",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: UCY 74S405. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "UCY 74S405",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-02",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -172.672,
-            -4.949,
+            -168.913,
+            -6.789,
             13.6
           ],
           "rotation": 90,
@@ -1903,21 +1937,25 @@
             1040,
             150
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 2",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: К555ЛА3. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "К555ЛА3",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-03",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -171.728,
-            10.272,
+            -169.053,
+            7.462,
             13.6
           ],
           "rotation": 90,
@@ -1926,7 +1964,7 @@
             1040,
             221
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 3",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
@@ -1939,8 +1977,8 @@
           "ref": "PHOTO-04",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -170.68,
-            27.167,
+            -169.213,
+            23.821,
             13.6
           ],
           "rotation": 90,
@@ -1949,21 +1987,25 @@
             1040,
             302
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 4",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: К155КП7. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "К155КП7",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-05",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -197.361,
-            0.01,
+            -195.139,
+            -4.466,
             13.6
           ],
           "rotation": 90,
@@ -1972,21 +2014,25 @@
             1168,
             163
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 5",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: SN74LS295BN. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "SN74LS295BN",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-06",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -196.082,
-            13.122,
+            -195.125,
+            8.228,
             13.6
           ],
           "rotation": 90,
@@ -1995,21 +2041,25 @@
             1167,
             226
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 6",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: К155ТЛ1. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "К155ТЛ1",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-07",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -195.002,
-            28.387,
+            -195.561,
+            23.421,
             13.6
           ],
           "rotation": 90,
@@ -2018,21 +2068,25 @@
             1168,
             301
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 7",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: К555ЛА3. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "К555ЛА3",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-08",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -205.478,
-            48.401,
+            -209.781,
+            43.551,
             13.6
           ],
           "rotation": 90,
@@ -2041,21 +2095,25 @@
             1235,
             400
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 8",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: DL074D. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "DL074D",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-09",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -203.211,
-            63.133,
+            -209.025,
+            59.612,
             13.6
           ],
           "rotation": 90,
@@ -2064,21 +2122,25 @@
             1230,
             478
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 9",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: К555ЛА3. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "К555ЛА3",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-10",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -202.025,
-            75.879,
+            -209.279,
+            73.902,
             13.6
           ],
           "rotation": 90,
@@ -2087,21 +2149,25 @@
             1230,
             547
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 10",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: DL004D. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "DL004D",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-11",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -200.833,
-            88.696,
+            -209.541,
+            88.692,
             13.6
           ],
           "rotation": 90,
@@ -2110,21 +2176,25 @@
             1230,
             618
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 11",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: 174LS181. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "174LS181",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-12",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -169.486,
-            102.108,
+            -173.967,
+            104.135,
             13.6
           ],
           "rotation": 90,
@@ -2133,21 +2203,25 @@
             1059,
             692
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 12",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: 74LS175. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "74LS175",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-13",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -185.064,
-            114.637,
+            -193.649,
+            119.533,
             13.6
           ],
           "rotation": 90,
@@ -2156,7 +2230,7 @@
             1152,
             765
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 13",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
@@ -2169,8 +2243,8 @@
           "ref": "PHOTO-14",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -140.332,
-            114.645,
+            -141.994,
+            118.09,
             13.6
           ],
           "rotation": 90,
@@ -2179,7 +2253,7 @@
             905,
             759
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 14",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
@@ -2192,8 +2266,8 @@
           "ref": "PHOTO-15",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -139.85,
-            127.09,
+            -142.057,
+            132.814,
             13.6
           ],
           "rotation": 90,
@@ -2202,7 +2276,7 @@
             905,
             829
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 15",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
@@ -2215,8 +2289,8 @@
           "ref": "PHOTO-16",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -99.711,
-            115.59,
+            -99.19,
+            117.943,
             13.6
           ],
           "rotation": 90,
@@ -2225,21 +2299,25 @@
             698,
             759
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 16",
-            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
+            "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified. Visible specimen legend: DL074D. Schematic correspondence remains provisional.",
             "photo": "20261014_073200542",
             "evidence": "Your specimen; photo-estimated placement"
           },
-          "label": ""
+          "label": "DL074D",
+          "legendEvidence": {
+            "photo": "PXL_20261014_073200542.jpg",
+            "status": "Visible package marking; does not establish schematic reference identity. Date/lot codes omitted."
+          }
         },
         {
           "ref": "PHOTO-17",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -99.691,
-            141.953,
+            -99.062,
+            148.385,
             13.6
           ],
           "rotation": 90,
@@ -2248,7 +2326,7 @@
             698,
             904
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 17",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
@@ -2261,8 +2339,8 @@
           "ref": "PHOTO-18",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -139.517,
-            140.441,
+            -142.335,
+            149.111,
             13.6
           ],
           "rotation": 90,
@@ -2271,7 +2349,7 @@
             906,
             906
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 18",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
@@ -2284,8 +2362,8 @@
           "ref": "PHOTO-19",
           "model": "DIP-16_W7.62mm",
           "position": [
-            -139.056,
-            152.295,
+            -142.399,
+            164.017,
             13.6
           ],
           "rotation": 90,
@@ -2294,7 +2372,7 @@
             906,
             976
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 19",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
@@ -2307,8 +2385,8 @@
           "ref": "PHOTO-21",
           "model": "DIP-14_W7.62mm",
           "position": [
-            -164.397,
-            128.465,
+            -170.313,
+            135.712,
             13.6
           ],
           "rotation": 90,
@@ -2317,7 +2395,7 @@
             1040,
             842
           ],
-          "status": "Owner-photo package silhouette; pin count nominal, electrical identity not assigned",
+          "status": "Multi-package owner-photo registration; nominal pitches, reference correspondence provisional",
           "inspection": {
             "title": "Photographed logic package 21",
             "text": "Visible package body registered from owner 073200542. This photo identifier is not a schematic reference. Nominal DIP geometry; identity, pin-one direction and exact dimensions remain unverified.",
@@ -2355,8 +2433,8 @@
         {
           "kind": "ceramic",
           "position": [
-            -101.765,
-            24.237,
+            -101.398,
+            25.333,
             13.6
           ],
           "rotation": 90,
@@ -2372,8 +2450,8 @@
         {
           "kind": "ceramic",
           "position": [
-            -50.965,
-            28.153,
+            -56.692,
+            31.671,
             13.6
           ],
           "rotation": 90,
@@ -2389,8 +2467,8 @@
         {
           "kind": "ceramic",
           "position": [
-            -52.49,
-            53.702,
+            -56.796,
+            54.847,
             13.6
           ],
           "rotation": 90,
@@ -2406,8 +2484,8 @@
         {
           "kind": "ceramic",
           "position": [
-            -53.135,
-            74.995,
+            -56.335,
+            75.179,
             13.6
           ],
           "rotation": 90,
@@ -2423,8 +2501,8 @@
         {
           "kind": "ceramic",
           "position": [
-            -91.984,
-            92.767,
+            -91.726,
+            93.021,
             13.6
           ],
           "rotation": 90,
@@ -2440,8 +2518,8 @@
         {
           "kind": "ceramic",
           "position": [
-            -123.881,
-            95.136,
+            -123.731,
+            95.733,
             13.6
           ],
           "rotation": 90,
@@ -2457,8 +2535,8 @@
         {
           "kind": "ceramic",
           "position": [
-            -150.704,
-            93.512,
+            -152.246,
+            94.092,
             13.6
           ],
           "rotation": 90,
@@ -2474,8 +2552,8 @@
         {
           "kind": "resistor",
           "position": [
-            -110.16,
-            59.137,
+            -109.416,
+            58.31,
             13.6
           ],
           "rotation": 0,
@@ -2491,8 +2569,8 @@
         {
           "kind": "resistor",
           "position": [
-            -76.669,
-            85.223,
+            -77.306,
+            85.193,
             13.6
           ],
           "rotation": 0,
@@ -2508,8 +2586,8 @@
         {
           "kind": "electrolytic",
           "position": [
-            -60.647,
-            75.294,
+            -63.003,
+            75.373,
             13.6
           ],
           "rotation": 0,
@@ -2525,8 +2603,8 @@
         {
           "kind": "electrolytic",
           "position": [
-            -27.652,
-            114.285,
+            -31.472,
+            114.607,
             13.6
           ],
           "rotation": 0,
@@ -2590,8 +2668,8 @@
         {
           "kind": "film",
           "position": [
-            -194.779,
-            39.946,
+            -196.568,
+            35.231,
             13.6
           ],
           "rotation": 90,
@@ -2607,8 +2685,8 @@
         {
           "kind": "film",
           "position": [
-            -205.047,
-            58.672,
+            -210.605,
+            54.654,
             13.6
           ],
           "rotation": 90,
@@ -2624,8 +2702,8 @@
         {
           "kind": "film",
           "position": [
-            -200.656,
-            79.328,
+            -208.092,
+            77.853,
             13.6
           ],
           "rotation": 90,
@@ -2641,8 +2719,8 @@
         {
           "kind": "film",
           "position": [
-            -201.858,
-            96.128,
+            -211.799,
+            97.484,
             13.6
           ],
           "rotation": 90,
@@ -2658,8 +2736,8 @@
         {
           "kind": "film",
           "position": [
-            -202.357,
-            110.482,
+            -214.438,
+            114.957,
             13.6
           ],
           "rotation": 90,
@@ -2675,8 +2753,8 @@
         {
           "kind": "film",
           "position": [
-            -135.317,
-            122.467,
+            -136.831,
+            127.101,
             13.6
           ],
           "rotation": 90,
@@ -2692,8 +2770,8 @@
         {
           "kind": "film",
           "position": [
-            -135.263,
-            134.945,
+            -137.297,
+            142.083,
             13.6
           ],
           "rotation": 90,
@@ -2709,8 +2787,8 @@
         {
           "kind": "film",
           "position": [
-            -135.222,
-            146.784,
+            -137.764,
+            156.729,
             13.6
           ],
           "rotation": 90,
@@ -2726,8 +2804,8 @@
         {
           "kind": "electrolytic",
           "position": [
-            -154.791,
-            116.255,
+            -158.251,
+            120.458,
             13.6
           ],
           "rotation": 0,
@@ -2743,8 +2821,8 @@
         {
           "kind": "electrolytic",
           "position": [
-            -152.844,
-            125.599,
+            -156.662,
+            131.621,
             13.6
           ],
           "rotation": 0,
@@ -2760,8 +2838,8 @@
         {
           "kind": "resistor",
           "position": [
-            -160.654,
-            112.759,
+            -164.691,
+            116.486,
             13.6
           ],
           "rotation": 0,
@@ -2777,8 +2855,8 @@
         {
           "kind": "resistor",
           "position": [
-            -162.84,
-            112.711,
+            -167.197,
+            116.494,
             13.6
           ],
           "rotation": 0,
@@ -2794,8 +2872,8 @@
         {
           "kind": "resistor",
           "position": [
-            -167.364,
-            112.612,
+            -172.425,
+            116.511,
             13.6
           ],
           "rotation": 0,
@@ -2811,8 +2889,8 @@
         {
           "kind": "resistor",
           "position": [
-            -169.522,
-            112.564,
+            -174.936,
+            116.519,
             13.6
           ],
           "rotation": 0,
@@ -2828,8 +2906,8 @@
         {
           "kind": "resistor",
           "position": [
-            -173.812,
-            112.47,
+            -179.963,
+            116.536,
             13.6
           ],
           "rotation": 0,
@@ -2858,25 +2936,33 @@
         },
         {
           "position": [
-            -177.66,
-            138.819,
+            -187.319,
+            149.64,
             13.6
           ],
           "n": 13,
           "rotation": 90,
           "side": 1,
-          "status": "Ribbon socket visible in owner 073200542; local photo fit, nominal 26-way pitch; hidden wiring provisional"
+          "status": "Ribbon socket visible in owner 073200542; local photo fit, nominal 26-way pitch; hidden wiring provisional",
+          "photoCentre": [
+            1119.9996354158445,
+            906.9976971203494
+          ]
         },
         {
           "position": [
-            -5.951,
-            102.64,
+            -13.954,
+            102.408,
             13.6
           ],
           "n": 32,
           "rotation": 180,
           "side": 1,
-          "status": "Owner-photo position; nominal 2.54 mm pitch; connector identity provisional"
+          "status": "Owner-photo position; nominal 2.54 mm pitch; connector identity provisional",
+          "photoCentre": [
+            277.9995423487544,
+            684.9983308372952
+          ]
         }
       ],
       "mounts": [
@@ -2896,7 +2982,8 @@
           -224,
           165
         ]
-      ]
+      ],
+      "envelopeEvidence": "Rectangular envelope of two-photo edge picks, rounded outward to millimetres; photo estimate, not a dimensional certificate. Mounts remain provisional."
     },
     {
       "name": "display-controller",
@@ -5021,475 +5108,791 @@
           755,
           573
         ]
+      ],
+      [
+        [
+          1013,
+          338
+        ],
+        [
+          1093,
+          338
+        ],
+        [
+          1108,
+          351
+        ],
+        [
+          1122,
+          351
+        ]
+      ],
+      [
+        [
+          1009,
+          348
+        ],
+        [
+          1082,
+          348
+        ],
+        [
+          1099,
+          362
+        ],
+        [
+          1119,
+          362
+        ]
+      ],
+      [
+        [
+          1004,
+          359
+        ],
+        [
+          1072,
+          359
+        ],
+        [
+          1088,
+          373
+        ]
+      ],
+      [
+        [
+          329,
+          587
+        ],
+        [
+          380,
+          587
+        ],
+        [
+          400,
+          568
+        ],
+        [
+          423,
+          568
+        ]
+      ],
+      [
+        [
+          329,
+          597
+        ],
+        [
+          384,
+          597
+        ],
+        [
+          405,
+          578
+        ],
+        [
+          423,
+          578
+        ]
+      ],
+      [
+        [
+          329,
+          607
+        ],
+        [
+          388,
+          607
+        ],
+        [
+          409,
+          589
+        ],
+        [
+          423,
+          589
+        ]
+      ],
+      [
+        [
+          327,
+          619
+        ],
+        [
+          395,
+          619
+        ],
+        [
+          414,
+          600
+        ],
+        [
+          423,
+          600
+        ]
+      ],
+      [
+        [
+          933,
+          656
+        ],
+        [
+          969,
+          656
+        ],
+        [
+          983,
+          666
+        ],
+        [
+          1010,
+          666
+        ]
+      ],
+      [
+        [
+          928,
+          667
+        ],
+        [
+          960,
+          667
+        ],
+        [
+          976,
+          678
+        ],
+        [
+          1010,
+          678
+        ]
       ]
     ],
     "paths": [
       [
         [
-          -21.8,
-          30.118
+          -32.678,
+          34.833
         ],
         [
-          -61.733,
-          32.067
+          -65.678,
+          34.625
         ],
         [
-          -65.154,
-          29.557
+          -68.716,
+          32.194
         ],
         [
-          -99.116,
-          31.293
+          -98.945,
+          31.995
         ]
       ],
       [
         [
-          -22.0,
-          33.121
+          -32.632,
+          37.438
         ],
         [
-          -65.085,
-          35.118
+          -68.463,
+          37.224
         ],
         [
-          -69.163,
-          31.986
+          -72.112,
+          34.183
         ],
         [
-          -104.14,
-          33.707
+          -103.593,
+          33.983
         ]
       ],
       [
         [
-          -22.2,
-          36.108
+          -32.586,
+          40.046
         ],
         [
-          -35.249,
-          36.681
+          -43.169,
+          39.986
         ],
         [
-          -38.02,
-          34.09
+          -45.605,
+          37.561
         ],
         [
-          -80.663,
-          36.058
+          -82.152,
+          37.343
         ]
       ],
       [
         [
-          -22.722,
-          40.23
+          -32.722,
+          43.66
         ],
         [
-          -34.503,
-          40.707
+          -42.313,
+          43.61
         ],
         [
-          -37.728,
-          37.692
+          -45.157,
+          40.779
         ]
       ],
       [
         [
-          -73.953,
-          19.484
+          -76.639,
+          22.708
         ],
         [
-          -85.88,
-          20.202
+          -87.093,
+          22.628
         ],
         [
-          -89.254,
-          17.948
+          -90.127,
+          20.398
         ],
         [
-          -102.221,
-          18.756
+          -101.822,
+          20.306
         ]
       ],
       [
         [
-          -74.016,
-          22.417
+          -76.616,
+          25.314
         ],
         [
-          -88.623,
-          23.259
+          -89.493,
+          25.219
         ],
         [
-          -92.424,
-          20.374
+          -92.936,
+          22.382
         ],
         [
-          -102.215,
-          20.965
+          -101.814,
+          22.314
         ]
       ],
       [
         [
-          -74.083,
-          25.559
+          -76.591,
+          28.124
         ],
         [
-          -90.445,
-          26.458
+          -91.089,
+          28.021
         ],
         [
-          -94.451,
-          23.375
+          -94.737,
+          24.98
         ],
         [
-          -99.117,
-          23.645
+          -98.976,
+          24.948
         ]
       ],
       [
         [
-          -74.136,
-          28.016
+          -76.571,
+          30.333
         ],
         [
-          -91.803,
-          28.95
+          -92.287,
+          30.227
         ],
         [
-          -95.795,
-          26.094
+          -95.936,
+          27.384
         ],
         [
-          -100.22,
-          26.34
+          -99.976,
+          27.355
         ]
       ],
       [
         [
-          -127.885,
-          30.432
+          -126.129,
+          29.593
         ],
         [
-          -139.069,
-          31.027
+          -137.128,
+          29.518
         ],
         [
-          -142.652,
-          33.727
+          -140.81,
+          31.923
         ],
         [
-          -155.108,
-          34.362
+          -153.491,
+          31.84
         ]
       ],
       [
         [
-          -127.837,
-          32.338
+          -126.131,
+          31.412
         ],
         [
-          -136.747,
-          32.797
+          -134.89,
+          31.354
         ],
         [
-          -140.344,
-          35.489
+          -138.571,
+          33.761
         ],
         [
-          -150.437,
-          35.985
+          -148.793,
+          33.697
         ]
       ],
       [
         [
-          -127.789,
-          34.238
+          -126.133,
+          33.233
         ],
         [
-          -134.217,
-          34.558
+          -132.448,
+          33.193
         ],
         [
-          -137.429,
-          37.014
+          -135.718,
+          35.401
         ],
         [
-          -152.357,
-          37.726
+          -150.85,
+          35.308
         ]
       ],
       [
         [
-          -15.659,
-          94.672
+          -22.761,
+          94.623
         ],
         [
-          -40.761,
-          94.56
+          -44.342,
+          94.639
         ],
         [
-          -43.418,
-          92.713
+          -46.796,
+          92.791
         ],
         [
-          -64.792,
-          92.65
+          -66.053,
+          92.801
         ],
         [
-          -67.703,
-          94.24
+          -68.678,
+          94.45
         ],
         [
-          -79.653,
-          94.188
+          -79.876,
+          94.458
         ],
         [
-          -82.478,
-          96.534
+          -82.509,
+          96.937
         ],
         [
-          -109.991,
-          96.36
+          -109.536,
+          96.964
         ]
       ],
       [
         [
-          -15.802,
-          96.543
+          -22.725,
+          96.468
         ],
         [
-          -41.546,
-          96.388
+          -44.921,
+          96.489
         ],
         [
-          -44.208,
-          94.748
+          -47.373,
+          94.846
         ],
         [
-          -63.972,
-          94.656
+          -65.218,
+          94.86
         ],
         [
-          -67.108,
-          96.433
+          -68.044,
+          96.717
         ],
         [
-          -78.832,
-          96.361
+          -79.042,
+          96.727
         ],
         [
-          -81.444,
-          98.696
+          -81.471,
+          99.209
         ],
         [
-          -117.633,
-          98.398
+          -117.347,
+          99.254
         ]
       ],
       [
         [
-          -15.976,
-          98.821
+          -22.681,
+          98.725
         ],
         [
-          -43.49,
-          98.604
+          -46.506,
+          98.753
         ],
         [
-          -46.13,
-          96.765
+          -48.963,
+          96.904
         ],
         [
-          -62.933,
-          96.659
+          -64.179,
+          96.919
         ]
       ],
       [
         [
-          -69.861,
-          101.156
+          -70.436,
+          101.674
         ],
         [
-          -76.131,
-          101.091
+          -76.349,
+          101.683
         ],
         [
-          -79.809,
-          103.0
+          -79.801,
+          103.758
         ],
         [
-          -147.277,
-          102.194
+          -148.985,
+          103.881
         ]
       ],
       [
         [
-          -69.914,
-          103.118
+          -70.416,
+          103.741
         ],
         [
-          -74.882,
-          103.059
+          -75.106,
+          103.749
         ],
         [
-          -78.781,
-          105.147
+          -78.761,
+          106.034
         ],
         [
-          -149.259,
-          104.175
+          -151.283,
+          106.183
         ]
       ],
       [
         [
-          -69.971,
-          105.268
+          -70.393,
+          106.017
         ],
         [
-          -74.071,
-          105.212
+          -74.269,
+          106.025
         ],
         [
-          -77.756,
-          107.289
+          -77.721,
+          108.312
         ],
         [
-          -134.135,
-          106.408
+          -134.907,
+          108.445
         ]
       ],
       [
         [
-          -70.029,
-          107.41
+          -70.371,
+          108.295
         ],
         [
-          -73.69,
-          107.353
+          -73.84,
+          108.303
         ],
         [
-          -77.159,
-          109.42
+          -77.088,
+          110.593
         ],
         [
-          -130.011,
-          108.496
+          -130.565,
+          110.731
         ]
       ],
       [
         [
-          -70.086,
-          109.543
+          -70.348,
+          110.575
         ],
         [
-          -73.097,
-          109.491
+          -73.206,
+          110.583
         ],
         [
-          -76.78,
-          111.732
+          -76.658,
+          113.083
         ],
         [
-          -107.427,
-          111.135
+          -107.029,
+          113.171
         ]
       ],
       [
         [
-          -103.652,
-          46.253
+          -103.146,
+          45.926
         ],
         [
-          -108.368,
-          46.433
+          -107.614,
+          45.904
         ],
         [
-          -111.74,
-          49.482
+          -110.862,
+          48.732
         ]
       ],
       [
         [
-          -103.643,
-          48.356
+          -103.139,
+          47.956
         ],
         [
-          -106.643,
-          48.465
+          -105.983,
+          47.942
         ],
         [
-          -110.446,
-          51.724
+          -109.636,
+          50.975
         ]
       ],
       [
         [
-          -103.634,
-          50.66
+          -103.131,
+          50.19
         ],
         [
-          -105.774,
-          50.734
+          -105.163,
+          50.181
         ],
         [
-          -110.207,
-          54.408
+          -109.427,
+          53.621
         ]
       ],
       [
         [
-          -103.311,
-          77.797
+          -102.832,
+          77.365
         ],
         [
-          -107.483,
-          77.839
+          -106.92,
+          77.36
         ],
         [
-          -111.457,
-          74.507
+          -110.813,
+          73.862
         ]
       ],
       [
         [
-          -103.3,
-          80.38
+          -102.823,
+          80.037
         ],
         [
-          -106.633,
-          80.406
+          -106.094,
+          80.034
         ],
         [
-          -111.648,
-          75.9
+          -111.015,
+          75.299
         ]
       ],
       [
         [
-          -103.29,
-          82.952
+          -102.813,
+          82.712
         ],
         [
-          -105.993,
-          82.967
+          -105.473,
+          82.71
         ],
         [
-          -111.623,
-          78.079
+          -111.011,
+          77.56
         ]
       ],
       [
         [
-          -103.28,
-          85.511
+          -102.804,
+          85.39
         ],
         [
-          -105.148,
-          85.518
+          -104.646,
+          85.389
         ],
         [
-          -111.603,
-          79.855
+          -111.007,
+          79.412
+        ]
+      ],
+      [
+        [
+          -163.739,
+          31.163
+        ],
+        [
+          -180.193,
+          31.054
+        ],
+        [
+          -183.318,
+          33.682
+        ],
+        [
+          -186.208,
+          33.663
+        ]
+      ],
+      [
+        [
+          -162.935,
+          33.2
+        ],
+        [
+          -177.95,
+          33.105
+        ],
+        [
+          -181.489,
+          35.935
+        ],
+        [
+          -185.618,
+          35.91
+        ]
+      ],
+      [
+        [
+          -161.927,
+          35.443
+        ],
+        [
+          -175.915,
+          35.358
+        ],
+        [
+          -179.247,
+          38.193
+        ]
+      ],
+      [
+        [
+          -24.605,
+          82.356
+        ],
+        [
+          -34.857,
+          82.349
+        ],
+        [
+          -38.947,
+          78.467
+        ],
+        [
+          -43.579,
+          78.462
+        ]
+      ],
+      [
+        [
+          -24.566,
+          84.397
+        ],
+        [
+          -35.627,
+          84.392
+        ],
+        [
+          -39.921,
+          80.507
+        ],
+        [
+          -43.548,
+          80.504
+        ]
+      ],
+      [
+        [
+          -24.527,
+          86.439
+        ],
+        [
+          -36.399,
+          86.436
+        ],
+        [
+          -40.691,
+          82.754
+        ],
+        [
+          -43.513,
+          82.752
+        ]
+      ],
+      [
+        [
+          -24.078,
+          88.892
+        ],
+        [
+          -37.769,
+          88.892
+        ],
+        [
+          -41.663,
+          85.002
+        ],
+        [
+          -43.479,
+          85.002
+        ]
+      ],
+      [
+        [
+          -147.701,
+          96.585
+        ],
+        [
+          -155.166,
+          96.592
+        ],
+        [
+          -158.089,
+          98.679
+        ],
+        [
+          -163.703,
+          98.686
+        ]
+      ],
+      [
+        [
+          -146.677,
+          98.874
+        ],
+        [
+          -153.314,
+          98.882
+        ],
+        [
+          -156.652,
+          101.18
+        ],
+        [
+          -163.724,
+          101.191
         ]
       ]
     ],
@@ -5499,13 +5902,182 @@
       {
         "text": "25.8",
         "position": [
-          -136.632,
-          163.527
+          -140.149,
+          178.342
         ],
         "height": 1.8,
         "rotation": 180,
-        "status": "Visible board marking, photo-estimated size; no inferred component references."
+        "status": "Visible board marking, photo-estimated size; no inferred component references.",
+        "photoCentre": [
+          895.002357412295,
+          1043.0026712243414
+        ]
       }
+    ],
+    "photoLands": [
+      [
+        597,
+        388
+      ],
+      [
+        597,
+        414
+      ],
+      [
+        599,
+        438
+      ],
+      [
+        598,
+        468
+      ],
+      [
+        599,
+        492
+      ],
+      [
+        600,
+        518
+      ],
+      [
+        600,
+        543
+      ],
+      [
+        601,
+        566
+      ],
+      [
+        601,
+        592
+      ],
+      [
+        601,
+        618
+      ],
+      [
+        889,
+        393
+      ],
+      [
+        889,
+        419
+      ],
+      [
+        889,
+        444
+      ],
+      [
+        889,
+        470
+      ],
+      [
+        889,
+        495
+      ],
+      [
+        890,
+        522
+      ],
+      [
+        890,
+        546
+      ],
+      [
+        890,
+        574
+      ],
+      [
+        890,
+        600
+      ],
+      [
+        891,
+        624
+      ]
+    ],
+    "landsStatus": "Visible circular tinned lands in owner 073200542; nominal 1.6 mm diameter. No hidden routing or electrical test-point function inferred.",
+    "lands": [
+      [
+        -79.091,
+        41.801
+      ],
+      [
+        -79.047,
+        47.057
+      ],
+      [
+        -79.411,
+        51.917
+      ],
+      [
+        -79.159,
+        58.009
+      ],
+      [
+        -79.321,
+        62.892
+      ],
+      [
+        -79.48,
+        68.193
+      ],
+      [
+        -79.438,
+        73.301
+      ],
+      [
+        -79.603,
+        78.01
+      ],
+      [
+        -79.559,
+        83.343
+      ],
+      [
+        -79.516,
+        88.689
+      ],
+      [
+        -138.398,
+        42.495
+      ],
+      [
+        -138.418,
+        47.789
+      ],
+      [
+        -138.436,
+        52.891
+      ],
+      [
+        -138.455,
+        58.208
+      ],
+      [
+        -138.473,
+        63.331
+      ],
+      [
+        -138.699,
+        68.875
+      ],
+      [
+        -138.717,
+        73.814
+      ],
+      [
+        -138.738,
+        79.589
+      ],
+      [
+        -138.758,
+        84.963
+      ],
+      [
+        -138.982,
+        89.934
+      ]
     ]
   },
   "lowerBoardPhotoRegistration": {
@@ -5518,11 +6090,65 @@
   },
   "motherboardJumpers": {
     "position": [
-      -119.095,
-      116.237,
+      -119.195,
+      119.267,
       13.6
     ],
     "photo": "PXL_20261014_073200542.jpg",
-    "status": "Visible pale link blocks, estimated construction; no electrical configuration inferred."
+    "status": "Visible pale link blocks, estimated construction; no electrical configuration inferred.",
+    "photoCentre": [
+      795.0011322908827,
+      764.9995438578105
+    ]
+  },
+  "multiPhotoCalibration": {
+    "version": 1,
+    "photoObservations": "board-photo-observations.json",
+    "processor": {
+      "normalizedHomography": [
+        -194.05975850416317,
+        4.745813969677199,
+        37.20872363146005,
+        -2.021150409409233,
+        194.47138378578447,
+        -33.65665819894305,
+        -0.02284395495589912,
+        -0.03939176594109392
+      ],
+      "rmsMillimetres": 0.35632809780378366
+    },
+    "ram": {
+      "normalizedHomography": [
+        -209.8818840637201,
+        -0.8880846520605362,
+        72.10251640914944,
+        8.992090039264424,
+        218.47231766729422,
+        -225.057329674715,
+        -0.07917473974836782,
+        0.02194682637073773
+      ],
+      "rmsMillimetres": 0.07237527312608724
+    },
+    "holdoutCTCDistanceMm": 1.150658853005719,
+    "observedEdgePoints": [
+      [
+        9.564886883023412,
+        -182.40880663851013
+      ],
+      [
+        -234.42773942478934,
+        -182.5755498890725
+      ],
+      [
+        15.825274127396698,
+        181.9944450303233
+      ],
+      [
+        -226.23690060765495,
+        184.6641794137107
+      ]
+    ],
+    "limitations": "Two independently fitted photo planes joined at the common upper CTC. Lower CTC is an independent cross-photo holdout. Coplanarity, lead-centre selection and lens distortion limit accuracy. Board envelope contains observed edge points, rounded outward to millimetres. It remains a photo estimate; hidden mounts and enclosure dimensions are not inferred."
   }
 }

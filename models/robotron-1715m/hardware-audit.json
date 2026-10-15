@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "sources": {
     "wm": {
       "url": "https://xepb.org/robotron/docs/1715w.zip",
@@ -27,18 +27,18 @@
       "A41": "CAS/bank decode PROM",
       "A44": "Floppy-disk controller"
     },
-    "placement": "32 RAM and two CTC positions registered against owner photos; eleven processor-area packages and one long socket use a local projective fit to nominal DIP-40 lead pitch. Global board dimensions and reference correspondence remain provisional.",
-    "artwork": "Partial visible masked copper paths and board marking traced from owner 073200542 using the existing local pitch fit. No hidden routes or electrical netlist inferred.",
+    "placement": "v41 uses six nominal DIP lead rectangles across two owner photo planes, joined at the upper CTC. Independent lower CTC disagreement is 1.15 mm. The 251 x 368 mm edge envelope, unregistered components and mounts remain estimated; edge observations are retained in checks/board-calibration.json.",
+    "artwork": "Additional visible component-side paths and twenty circular tinned lands traced from owner 073200542. No hidden routes or electrical netlist inferred.",
     "passives": "Eleven lower-board resistors/capacitors registered from owner 073200542; nominal body dimensions and unknown electrical values.",
-    "ribbon": "Single continuous board-to-drive-1-to-drive-0 daisy-chain reconstruction with rounded folds and consistent width; intermediate path/slack remain illustrative. Nominal recessed power contacts follow the four visible entry wells.",
-    "detailPass": "v40: nine formerly estimated package positions registered and twenty additional visible packages added from owner 073200542. PHOTO identifiers are not schematic references. Pale sockets under CPU/FDC/EPROM and visible jumper blocks are photo-estimated."
+    "ribbon": "Continuous board-to-drive-1-to-drive-0 chain, routed around display-board rear edge. Canonical path sections preserve browser ribbon width during inspection. Intermediate folds, available slack and separated-view extension remain illustrative.",
+    "detailPass": "v41 records visible specimen chip legends and opposite DMA/SIO orientation; obscured markings and schematic correspondence remain unresolved."
   },
   "keyboard": {
     "cpu": "A5 U880 in schematic; UB880D in owner photo",
     "rom": "A8 U556/U2716-compatible 2 KiB ROM; transplanted specimen ROM contents unverified",
     "matrix": "13 scan selections x 8 inputs; no RAM on controller",
     "leds": "A6A/A6B DL074 latches: address A14/A13 data, IORQ with A15 low clocks them",
-    "transistors": "Schematic: V4.1\u2013V4.8 SC308C input stages, V3.1/V3.2 SC236D and V4.9 SC308C oscillator stages. Generic TO-92 model; photographed substitutes not electrically identified.",
+    "transistors": "Schematic: V4.1–V4.8 SC308C input stages, V3.1/V3.2 SC236D and V4.9 SC308C oscillator stages. Generic TO-92 model; photographed substitutes not electrically identified.",
     "unresolved": "Detached controller-to-matrix mating orientation and hidden lead bends; no invented joining cable. Visible connector/resistor tails share PCB holes and underside solder eyes."
   },
   "connectors": [
@@ -71,7 +71,7 @@
   "display": {
     "controller": "SAB8275P in owner photo; D05 8275-compatible device in drawing",
     "fetch": "Local counters, RAM and multiplexers. Do not conflate with system UA858 floppy DMA.",
-    "implemented": "Individual byte fetches with programmed burst gaps, FIFO overflow at the overflowing write, stop/dummy consumption and row deadlines. Completed rows retain decoded glyph/cursor/blink/attribute output; host rendering does not re-read VRAM or character ROM. Snapshot layout 6 retains partial fetch state.",
-    "remaining": "Local DACK response remains idealized at one byte per character clock. Scanout sampling is per row, not per scanline; CPU contention, exact W/M clock/delays, light pen and CPU IRQ wiring remain unverified/unimplemented."
+    "implemented": "Individual byte fetches, programmed burst gaps, FIFO overflow/dummy reads and row deadlines. Glyph/cursor/attribute output is sampled per scanline and retained, including intensity. Snapshot layout 7 preserves partially scanned frames.",
+    "remaining": "Local DACK response remains idealized at one byte per character clock. Individual dot timing, CPU contention, exact W/M clock/delays, light pen and CPU IRQ wiring remain unverified/unimplemented."
   }
 }

@@ -4,7 +4,7 @@ from pathlib import Path
 import json,subprocess,tempfile,zipfile,hashlib
 root=Path(__file__).resolve().parents[1];dest=root/'browser/downloads';dest.mkdir(exist_ok=True)
 manifest=json.loads((root/'browser/model.json').read_text())
-logic=['logic-inductors','logic-boards','logic-chips','logic-pins','logic-connectors','logic-resistors','logic-ceramics','logic-electrolytics','logic-crystals','logic-passive-leads','logic-film','logic-pads','logic-solder','logic-connector-contacts','logic-mounts']
+logic=['logic-visible-lands','logic-ic-sockets','logic-ic-contacts','logic-jumpers','logic-silkscreen','logic-ribbon-plug','logic-artwork','logic-inductors','logic-boards','logic-chips','logic-pins','logic-connectors','logic-resistors','logic-ceramics','logic-electrolytics','logic-crystals','logic-passive-leads','logic-film','logic-pads','logic-solder','logic-connector-contacts','logic-mounts']
 drive=['teac_frame()','teac_mechanism()','teac_black()','teac_contacts()','teac_coils()','teac_power_socket()','teac_spindle()','teac_head()','teac_head_metal()','teac_head_arm()','teac_medium()','teac_diskette_jacket()','teac_diskette_label()','teac_clamp()','teac_latch_shaft()','teac_release_rail()','teac_components()','teac_cable_plug()']
 # Original editable sources plus every imported KiCad geometry source and notice.
 sources={}
@@ -18,7 +18,7 @@ with tempfile.TemporaryDirectory() as temp:
     temp=Path(temp)
     for name in ['motherboard','display-controller','drive-0','drive-1']:
         if name in ['motherboard','display-controller']:
-            body='pcb_board='+json.dumps(name)+';\n'+''.join('shape('+json.dumps(p)+');\n' for p in logic)+('shape("logic-artwork");\n' if name=='display-controller' else '')
+            body='pcb_board='+json.dumps(name)+';\n'+''.join('shape('+json.dumps(p)+');\n' for p in logic)
         else:
             body=''.join(p+';\n' for p in drive)+f'teac_boards({"true" if name.endswith("1") else "false"});\nteac_traces({"true" if name.endswith("1") else "false"});\n'
         if name.startswith('drive-'):

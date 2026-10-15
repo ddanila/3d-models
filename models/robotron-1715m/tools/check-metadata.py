@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+"""Cheap consistency check; no OpenSCAD or browser required."""
+import hashlib,json,re,zipfile
+from pathlib import Path
+root=Path(__file__).resolve().parents[1]
+def read(p):return json.loads((root/p).read_text())
+pcb=read('pcb-components.json');model=read('browser/model.json')
+counts={'packages':len(pcb['instances']),'leadHoles':len(pcb['footprints'])}
+assert model['pcbComponents']==pcb,'stale browser PCB metadata'
+assert model['hardwareAudit']==read('hardware-audit.json'),'stale hardware evidence'
+assert model['evidence']==read('evidence.json'),'stale evidence labels'
+assert model['componentCounts']==counts,'stale component counts'
+text=f"<!-- pcb-counts -->{counts['packages']} nominal KiCad DIP packages and {counts['leadHoles']:,} lead apertures<!-- /pcb-counts -->"
+assert text in (root/'README.md').read_text(),'stale README counts'
+for item in model['parts']+model['keyMeshes']+read('browser/downloads.json'):
+ p=root/'browser'/item['file'];blob=p.read_bytes()
+ assert hashlib.sha256(blob).hexdigest()==item['sha256'],str(p)+' checksum mismatch'
+ if 'bytes' in item:assert len(blob)==item['bytes'],str(p)+' size mismatch'
+for item in read('browser/downloads.json'):
+ with zipfile.ZipFile(root/'browser'/item['file']) as z:
+  for name in ['board-layout.json','pcb-components.json','hardware-audit.json','README.md','interior.scad','model.scad','pcb-components.scad']:
+   assert z.read('source/'+name)==(root/name).read_bytes(),item['name']+': stale '+name
+  wrapper=z.read('model.scad').decode()
+  if item['name']=='motherboard':
+   for name in ['logic-ic-sockets','logic-ic-contacts','logic-jumpers','logic-visible-lands']:
+    assert 'shape("'+name+'")' in wrapper,'missing downloadable geometry '+name
+print('PASS counts, evidence, meshes and self-contained download sources')

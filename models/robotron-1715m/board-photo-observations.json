@@ -1,0 +1,212 @@
+{
+  "reviewResolution": [
+    1600,
+    1205
+  ],
+  "units": "Nominal lead pitches in mm; photo picks are estimates.",
+  "processor": {
+    "photo": "PXL_20261014_073200542.jpg",
+    "packages": [
+      {
+        "id": "DMA",
+        "corners": [
+          [
+            625,
+            388
+          ],
+          [
+            694,
+            385
+          ],
+          [
+            694,
+            621
+          ],
+          [
+            622,
+            621
+          ]
+        ],
+        "size": [
+          15.24,
+          48.26
+        ]
+      },
+      {
+        "id": "SIO",
+        "corners": [
+          [
+            921,
+            387
+          ],
+          [
+            991,
+            389
+          ],
+          [
+            993,
+            624
+          ],
+          [
+            922,
+            624
+          ]
+        ],
+        "size": [
+          15.24,
+          48.26
+        ]
+      },
+      {
+        "id": "CTC-lower",
+        "corners": [
+          [
+            619,
+            151
+          ],
+          [
+            786,
+            153
+          ],
+          [
+            786,
+            231
+          ],
+          [
+            618,
+            229
+          ]
+        ],
+        "size": [
+          33.02,
+          15.24
+        ]
+      }
+    ],
+    "anchorPhoto": [
+      658,
+      503
+    ],
+    "anchorModel": [
+      -91.276,
+      65.101
+    ],
+    "sharedCTC": [
+      703,
+      59
+    ],
+    "holdoutCTC": [
+      703,
+      187
+    ],
+    "edgePoints": [
+      [
+        140,
+        1068
+      ],
+      [
+        1300,
+        1068
+      ]
+    ]
+  },
+  "ram": {
+    "photo": "PXL_20261014_072654600.jpg",
+    "packages": [
+      {
+        "id": "RAM-upper-left",
+        "corners": [
+          [
+            340,
+            257
+          ],
+          [
+            375,
+            257
+          ],
+          [
+            375,
+            335
+          ],
+          [
+            340,
+            335
+          ]
+        ],
+        "size": [
+          7.62,
+          17.78
+        ]
+      },
+      {
+        "id": "RAM-lower-right",
+        "corners": [
+          [
+            734,
+            634
+          ],
+          [
+            767,
+            634
+          ],
+          [
+            767,
+            711
+          ],
+          [
+            734,
+            711
+          ]
+        ],
+        "size": [
+          7.62,
+          17.78
+        ]
+      },
+      {
+        "id": "RAM-middle",
+        "corners": [
+          [
+            453,
+            505
+          ],
+          [
+            489,
+            505
+          ],
+          [
+            489,
+            584
+          ],
+          [
+            453,
+            584
+          ]
+        ],
+        "size": [
+          7.62,
+          17.78
+        ]
+      }
+    ],
+    "anchorPhoto": [
+      799,
+      892
+    ],
+    "holdoutCTC": [
+      799,
+      998
+    ],
+    "edgePoints": [
+      [
+        298,
+        199
+      ],
+      [
+        1346,
+        224
+      ]
+    ]
+  },
+  "limitations": "Two independently fitted photo planes joined at the common upper CTC. Lower CTC is an independent cross-photo holdout. Coplanarity, lead-centre selection and lens distortion limit accuracy. Board envelope contains observed edge points, rounded outward to millimetres. It remains a photo estimate; hidden mounts and enclosure dimensions are not inferred."
+}

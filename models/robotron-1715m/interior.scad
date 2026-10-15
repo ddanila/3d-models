@@ -175,8 +175,9 @@ function ribbon_end(dx=0,lift=0)=[pcb_ribbon_socket[0]+dx,pcb_ribbon_socket[1],p
 // span moves with both drives; folds between photographed terminals are estimated.
 function drive_ribbon_path(unit,dx=0,lift=0)=unit==0?
  [[-158+dx,16,87.5+lift],[-158+dx,24,109+lift],[-100+dx,39,120+lift],[-30+dx,31,110+lift],[-4+dx,23,103+lift],[-4+dx,16,87.5+lift]]:
- [[-4+dx,16,87.5+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-125+dx,65,95+lift],[-175+dx,83,66+lift],
- [pcb_ribbon_socket[0]+dx,pcb_ribbon_socket[1]-16,35+lift],ribbon_end(dx,lift)];
+ [[-4+dx,16,87.5+lift],[-4+dx,27,113+lift],[-48+dx,41,123+lift],[-125+dx,65,95+lift],[-175+dx,185,66+lift],
+ [pcb_ribbon_socket[0]+dx,196,48+lift],[pcb_ribbon_socket[0]+dx,196,25.2+lift],
+ [pcb_ribbon_socket[0]+dx,pcb_ribbon_socket[1]+12,25.2+lift],ribbon_end(dx,lift)];
 // 0.3 mm clearance on both vertical faces; 8 mm insertion into socket.
 module drive_ribbon_plugs(){for(x=[-158,-4])translate([x-16.5,4,85.3])cube([33,12,4.4]);}
 module ribbons(){for(u=[0:1])ribbon_run(drive_ribbon_path(u),33);}
@@ -241,6 +242,7 @@ module interior_shape(p) {
     if(p=="logic-connector-contacts")logic_connector_contacts();
     if(p=="logic-boards")logic_boards();
     if(p=="logic-artwork")logic_artwork();
+    if(p=="logic-visible-lands")logic_visible_lands();
     if(p=="logic-silkscreen")logic_silkscreen();
     if(p=="logic-ribbon-plug")logic_ribbon_plug();
     if(p=="logic-ic-sockets")logic_ic_sockets();
@@ -269,3 +271,6 @@ module interior_shape(p) {
     if(p=="keyboard-pcb")keyboard_pcb();
     if(p=="keyboard-switches")keyboard_switches();
 }
+
+// Exposed circular lands picked from owner component-side photo; no netlist.
+module logic_visible_lands(){if(pcb_selected("motherboard"))for(p=pcb_visible_lands)translate(concat(p,[13.61]))cylinder(d=1.6,h=.045,$fn=16);}

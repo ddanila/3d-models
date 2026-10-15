@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "photoObservations": "board-photo-observations.json",
+  "processor": {
+    "normalizedHomography": [
+      -194.05975850416317,
+      4.745813969677199,
+      37.20872363146005,
+      -2.021150409409233,
+      194.47138378578447,
+      -33.65665819894305,
+      -0.02284395495589912,
+      -0.03939176594109392
+    ],
+    "rmsMillimetres": 0.35632809780378366
+  },
+  "ram": {
+    "normalizedHomography": [
+      -209.8818840637201,
+      -0.8880846520605362,
+      72.10251640914944,
+      8.992090039264424,
+      218.47231766729422,
+      -225.057329674715,
+      -0.07917473974836782,
+      0.02194682637073773
+    ],
+    "rmsMillimetres": 0.07237527312608724
+  },
+  "holdoutCTCDistanceMm": 1.150658853005719,
+  "observedEdgePoints": [
+    [
+      9.564886883023412,
+      -182.40880663851013
+    ],
+    [
+      -234.42773942478934,
+      -182.5755498890725
+    ],
+    [
+      15.825274127396698,
+      181.9944450303233
+    ],
+    [
+      -226.23690060765495,
+      184.6641794137107
+    ]
+  ],
+  "limitations": "Two independently fitted photo planes joined at the common upper CTC. Lower CTC is an independent cross-photo holdout. Coplanarity, lead-centre selection and lens distortion limit accuracy. Board envelope contains observed edge points, rounded outward to millimetres. It remains a photo estimate; hidden mounts and enclosure dimensions are not inferred."
+}

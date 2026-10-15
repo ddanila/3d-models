@@ -12,7 +12,7 @@ The October 13 inserted-disk views (`113529099`, `113537277`) now set a 7 mm dee
 
 The keyboard controller is oriented with its input end toward the actual cable opening (`123907435`). A continuous internal lead reaches its shield clamp, passing through a round grooved black bush captured in a 1 mm bent metal support (`123539882`); the rectangular opening has bare edges. The plug has the asymmetric housing, screw layout and offset cable outlet from `090425989` / `090431122`. DAC preserves the input connection when separating the keyboard for inspection.
 
-The system unit has a W/M motherboard with integrated A44 U8272 and 32 RAM packages, plus a separate display controller mounted component-side down. [board-layout.json](board-layout.json) records the shared placement, sources and uncertainty. There are 118 nominal KiCad DIP packages and 2,274 lead apertures. The October 14 component-side photographs locate 39 display-board ICs, including three UL6516D memories and the SAB8275P, red upright capacitors and the white wound component. Generated P01–P39 IDs identify photo positions, not printed board designators. Mainboard RAM/CTC placement follows owner photographs, and eleven processor-area packages plus the long socket use a local nominal-pin-pitch projective fit. Other positions retain W drawing estimates; whole-board calibration is incomplete. R19/R102 and C90/C91 follow the documented CPU/DMA adjacency, with estimated positions and no invented electrical values. Unidentified footprints retain generic labels. Clean chip legends identify documented devices; illustrative copper routes are not a netlist.
+The system unit has a W/M motherboard with integrated A44 U8272 and 32 RAM packages, plus a separate display controller mounted component-side down. [board-layout.json](board-layout.json) records the shared placement, sources and uncertainty. There are <!-- pcb-counts -->138 nominal KiCad DIP packages and 2,568 lead apertures<!-- /pcb-counts -->. The October 14 component-side photographs locate 39 display-board ICs, including three UL6516D memories and the SAB8275P, red upright capacitors and the white wound component. Generated P01–P39 IDs identify photo positions, not printed board designators. Photo-registered mainboard packages and connectors use the v41 two-photo, six-package nominal-pitch calibration below. Other positions retain W drawing estimates; board edges and hidden mounts remain unmeasured. R19/R102 and C90/C91 follow the documented CPU/DMA adjacency, with estimated positions and no invented electrical values. Unidentified footprints retain generic labels. Clean chip legends identify documented devices; illustrative copper routes are not a netlist.
 
 The [October 14 photo inventory](reference/owner-20261014.json) records 52 new owner photographs, with 22 selected originals published after metadata removal. These show this exact museum specimen. The drive carrier now has thin folded returns and underside windows exposing the large motor rotors; those rotors share the emulator-driven spindle motion. Their dimensions remain photo estimates. Owner photographs establish the drive adapters, their two mounting holes, cover stiffeners, fan retention and PSU access cover. The fan now has five swept blades and a broader hub matching the visible specimen; blade curvature remains estimated. Ribbon plugs now enter the pale adapter sockets; the fan aperture is concentric with the rotor/frame. The display controller’s visible board number does not prove an exact schematic revision match. Hidden monitor electronics remain comparative, and enclosed PSU electronics are not reconstructed.
 
@@ -202,3 +202,42 @@ measured. Drive power wells contain nominal recessed crimp contacts. Browser
 separation moves the complete drive-to-drive span together and anchors board/PSU
 ends. Existing washers/supports remain estimated; no additional hidden mounting
 hardware or electrical values are invented. Physical print verification is unchanged.
+
+### v41: two-photo registration and visible board detail
+
+Six nominal lead rectangles (three per photo) now establish separate projective
+fits for the RAM and processor photographs. The common upper CTC joins the two
+planes; the unused lower CTC agrees to 1.15 mm. Fit residuals are 0.36 mm and
+0.07 mm respectively, **not dimensional accuracy guarantees**. The four observed
+edge points disagree with a perfect rectangle by several millimetres. The board uses a 251 × 368 mm rectangular envelope containing those edge picks,
+rounded outward to whole millimetres. This is a photo estimate, not a measured
+outline. Hidden mounts retain their provisional positions. All photo-registered packages, passives, visible
+connector centres and artwork use the new transforms. Unregistered packages
+remain drawing estimates. See [observations](board-photo-observations.json) and
+[calibration report](checks/board-calibration.json).
+
+Reproduce with `python tools/calibrate-board.py --apply` (NumPy and SciPy), then
+`python tools/configure-pcb.py`. Both commands are idempotent. Legacy registration
+scripts record earlier passes; do not run them over the calibrated layout.
+The original pixels and nominal lead pitches remain available for review.
+
+Readable specimen legends replace several generic labels, including M2716-1F1,
+UA858D and UA8560D. The serial chip's corner pin-one feature faces opposite the
+DMA chip; circular mould ejector marks are not treated as pin-one indicators.
+Covered CPU/FDC markings remain unverified. Additional visible copper segments
+and twenty circular tinned lands are geometry, not whole-photo skins or an
+inferred netlist. Wear and tape texture are not copied into the clean model.
+
+Board download STLs now include sockets, contacts, jumpers, artwork and lands,
+as well as their editable sources. `tools/check-metadata.py` verifies generated
+README counts, browser counts/evidence, mesh/download hashes and key source files
+inside every archive. Run it after `tools/export-downloads.py`; it needs only
+Python's standard library. Physical print verification is unchanged.
+
+The browser export also carries the canonical subdivided ribbon paths. DAC moves
+section centres and rotates their cross sections without widening the 33 mm
+ribbon or separating its conductor stripes. The board-end route passes around
+the rear edge of the display PCB instead of through its substrate. Intermediate
+folds and the extension in a separated view remain illustrative, not measured
+cable slack. Geometry checks sample 21 positions in both connected and parked
+states against both PCB substrates, chip bodies and the drive-carrier envelope.
