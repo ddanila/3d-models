@@ -19,13 +19,15 @@ module owner_dip_pins(p) {
 }
 // Owner 123622947: staggered transistor population, not a rectangular grid.
 // KiCad generic TO-92; no unverified electrical type or DDR mould identity.
-controller_transistors=[[-120,4,0],[-113,-7,25],[-109,-15,25],
- [-105,-7,25],[-101,-10,25],[-97,-7,25],[-93,-10,25],[-89,-7,25],
- [-105,10,-25],[-100,11,-25],[-101,17,-25]];
+controller_transistors=[[-118.395, -12.014, 0], [-104.408, -12.666, 25], [-99.738, -12.884, 25], [-93.813, -6.933, 25], [-88.123, -6.539, 25], [-82.426, -6.145, 25], [-77.894, -5.533, 25], [-97.96, 8.316, -25], [-92.928, 10.056, -25]];
 module controller_transistor_pose(p){translate([p[0],p[1],1.6])rotate([0,0,p[2]])children();}
 // Shared tail locations keep board apertures, joints and lead endpoints aligned.
 controller_connector_tails=[for(i=[0:12],side=[-1,1])[-25+i*2.54,3+side*7]];
-controller_resistor_tails=[for(x=[-80,-74,-68,-62,-56,-50,-44,-38],y=[-11,3])[x,y]];
+// Photo projected resistor positions; three ROM/CPU-end placements adjusted
+// within the approximate photo registration to clear nominal package bodies.
+controller_resistors=[[-66.651, -5.884, -0.756, 10.08], [-66.609, -2.273, -0.739, 10.078], [-66.569, 1.172, -0.722, 10.077], [-66.526, 4.781, -0.699, 10.076], [-66.487, 8.226, -0.683, 10.074], [-66.444, 11.833, -0.66, 10.073], [-66.401, 15.439, -0.637, 10.072], [-66.364, 18.716, -0.626, 10.07], [-111.706, 14.889, 87.58, 11.581], [-108.544, 14.75, 87.586, 11.585], [-104.882, 14.589, 87.592, 11.59], [-86.028, 13.759, 87.631, 11.611], [-82.182, 13.59, 87.642, 11.616], [-78.334, 13.421, 87.647, 11.62], [-49.675, -0.001, 0.156, 10.28], [-49.636, 3.615, 0.271, 9.941], [68.794, -5.2, 84.875, 8.317], [80.052, -4, 1.38, 9.676], [128, -8.522, 86.55, 9.355]];
+function resistor_end(p,s)=[p[0]+s*p[3]/2*cos(p[2]),p[1]+s*p[3]/2*sin(p[2])];
+controller_resistor_tails=[for(p=controller_resistors,s=[-1,1])resistor_end(p,s)];
 // Paired end holes in detached photo 123622947; installed retainers are separate.
 controller_end_holes=[for(x=[-133,133],y=[10,17.5])[x,y]];
 module keyboard_controller_board(){keyboard_controller_pose()difference(){
@@ -59,14 +61,14 @@ module keyboard_controller_connectors(){keyboard_controller_pose(){
  }
 }}
 module keyboard_controller_caps(){keyboard_controller_pose(){
- for(p=[[-124,10],[-118,-13],[-106,16],[-92,-15],[130,-10]])translate([p[0],p[1],1.6])cylinder(d=5,h=9,$fn=24);
+ for(p=[[-114.695, 3.019], [-106.445, -2.752], [-101.335, 18.111], [132, -4.5]])translate([p[0],p[1],1.6])cylinder(d=5,h=9,$fn=24);
 }}
 module keyboard_controller_metal(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_pins(p);
  for(p=controller_transistors)controller_transistor_pose(p)import("components/kicad/meshes/TO-92_Inline-leads.stl");
  owner_dip_pins([114,8,24,15.24]);
  for(i=[0:12],s=[-1,1])translate([-25+i*2.54,3+s*2.54,2])cylinder(d=.65,h=4,$fn=8);
- for(p=[[-124,10],[-118,-13],[-106,16],[-92,-15],[130,-10]])translate([p[0],p[1],10.65])cylinder(d=4.5,h=.2,$fn=24);
+ for(p=[[-114.695, 3.019], [-106.445, -2.752], [-101.335, 18.111], [132, -4.5]])translate([p[0],p[1],10.65])cylinder(d=4.5,h=.2,$fn=24);
  // Cable shield clamp, folded over the incoming lead.
  // Thin saddle, open below, with separate mounting ears (owner photo).
  translate([-125,0,4.5])intersection(){
@@ -85,7 +87,9 @@ module keyboard_controller_ink(){keyboard_controller_pose(){
  // Only legible markings from owner photo 123622947; uncertain identities omitted.
  for(p=[[20,12,"К555ЛА9"],[20,-12,"К555ЛА9"],[-48,12,"К555ЛА9"],[89,-12,"К155ТМ2"],[114,-12,"К555ЛА7"]])
    translate([p[0],p[1],5.29])linear_extrude(.06)text(p[2],size=1.65,halign="center",valign="center",font="Liberation Sans");
- translate([128,8,6.35])slab(4,12,.12,.1);
+ translate([126.2,8,6.35])slab(7.2,12,.12,.1);
+ translate([-10,-16,1.72])linear_extrude(.06)text("5891",size=2.2,halign="center",font="Liberation Sans");
+ translate([114,-20,1.72])linear_extrude(.06)text("062-330-4102",size=1.6,halign="center",font="Liberation Sans");
 }}
 module keyboard_insulators(){
  translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])translate([0,0,-16.718])for(y=[-75,43])translate([0,y,0])slab(482,10,1.5,.5);
@@ -112,13 +116,10 @@ module keyboard_pcb_metal(){keyboard_matrix_pose(){
 // 123648677 (underside). Broad buses and diagonal breaks are photo estimates;
 // hidden paths and electrical continuity have not been reconstructed.
 module keyboard_controller_traces(){keyboard_controller_pose(){
- for(i=[0:4])translate([0,0,1.62])board_trace([
-  [-128,-21+i*1.2],[-59-i*2,-21+i*1.2],[-51-i*2,-13+i*1.2],
-  [-32,-13+i*1.2],[-26,-19+i*1.2],[25,-19+i*1.2],
-  [31,-13+i*1.2],[88,-13+i*1.2],[96,-21+i*1.2],[129,-21+i*1.2]],.48,.08);
- // The broad top rail steps around the matrix connector and EPROM socket.
- translate([0,0,1.62])board_trace([[-84,1],[-57,1],[-53,6],[-34,6],[-30,13],
-  [12,13],[16,4],[33,4],[38,-1],[93,-1],[97,-2],[129,-2]],1.4,.08);
+ for(path=controller_top_photo_paths)translate([0,0,1.62])board_trace(path,.7,.08);
+ // Broad tinned return visible around the connector and transistor bank.
+ translate([0,0,1.62])board_trace([[-85,1],[-60,1],[-56,7],[-34,7],[-30,13],[12,13],[16,4]],2.1,.08);
+ for(p=controller_resistor_tails)translate([p[0],p[1],1.62])difference(){cylinder(d=1.9,h=.1,$fn=16);cylinder(d=.85,h=.2,$fn=12);}
  for(p=concat(controller_dips,[[114,8,24,15.24]]),q=controller_package(p)[3])
   let(v=controller_pin(p,q),side=q[1]<0?-1:1)
   translate([0,0,1.62]){
@@ -350,8 +351,8 @@ module keyboard_controller_solder(){keyboard_controller_pose(){
 // Bent connector tails and axial leads visible in 123622947. Nominal diameters.
 module keyboard_controller_leads(){keyboard_controller_pose(){
  for(i=[0:12],side=[-1,1])wire_run([[-25+i*2.54,3+side*2.54,4],[-25+i*2.54,3+side*7,2.2],[-25+i*2.54,3+side*7,-.5]],.28);
- for(x=[-80,-74,-68,-62,-56,-50,-44,-38])for(y=[-9,1])
-  wire_run([[x,y,3],[x,y+(y<0?-2:2),3],[x,y+(y<0?-2:2),-.5]],.25);
+ for(p=controller_resistors,s=[-1,1])let(end=resistor_end(p,s))
+  wire_run([[p[0]+s*2.6*cos(p[2]),p[1]+s*2.6*sin(p[2]),3.2],[end[0],end[1],3.2],[end[0],end[1],-.5]],.25);
 }}
 module keyboard_entry_choke(){keyboard_controller_pose(){
  translate([-115,3,4])rotate([90,0,0])difference(){cylinder(d=7,h=4,$fn=32);translate([0,0,-1])cylinder(d=3.2,h=6,$fn=24);}
@@ -382,12 +383,11 @@ module keyboard_matrix_contacts(){keyboard_matrix_pose(){
 // Owner 123622947: grey axial resistor bodies and blue end bands, separate from
 // the brown ceramic EPROM. Values are deliberately not inferred from colours.
 module keyboard_controller_resistors(){keyboard_controller_pose()
- for(x=[-80,-74,-68,-62,-56,-50,-44,-38])translate([x,-2,3])rotate([90,0,0])
-  cylinder(d=2.3,h=6,$fn=24);
+ for(p=controller_resistors)translate([p[0],p[1],3.2])rotate([0,0,p[2]])rotate([0,90,0])cylinder(d=2.3,h=5.2,center=true,$fn=24);
 }
 module keyboard_controller_resistor_bands(){keyboard_controller_pose()
- for(x=[-80,-74,-68,-62,-56,-50,-44,-38],y=[-2.35,-7.35])translate([x,y,3])rotate([90,0,0])
-  difference(){cylinder(d=2.34,h=.55,$fn=24);translate([0,0,-.1])cylinder(d=2.28,h=.8,$fn=24);}
+ for(p=controller_resistors,s=[-1,1])translate([p[0],p[1],3.2])rotate([0,0,p[2]])translate([s*2.1,0,0])rotate([0,90,0])
+  difference(){cylinder(d=2.34,h=.55,center=true,$fn=24);cylinder(d=2.28,h=.8,center=true,$fn=24);}
 }
 
 // Installed photo 123907435: one retained screw in each paired end-hole group.
@@ -414,3 +414,8 @@ module keyboard_controller_shield(){keyboard_controller_pose(){
   for(p=controller_end_holes)translate([p[0],p[1],1.5])cylinder(d=3.2,h=.5,$fn=24);
  }
 }}
+
+// Owner ROM paper identifier; crisp clean text, no photographed staining.
+module keyboard_controller_rom_ink(){keyboard_controller_pose()
+ translate([126.2,8,6.49])rotate([0,0,90])linear_extrude(.05)text("642",size=2.8,halign="center",valign="center",font="Liberation Sans");
+}

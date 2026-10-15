@@ -177,7 +177,7 @@
         0
       ],
       "fov": 45,
-      "include": "^keyboard-(bottom|entry-rubber|base-insulator|cable-support|grommet)$",
+      "include": "^keyboard-(bottom|metal|entry-rubber|base-insulator|cable-support|grommet)$",
       "note": "Inner bottom lid: two edge strips and short-edge bush support toward the controller insulation sheet."
     },
     {
@@ -201,6 +201,23 @@
       "fov": 45,
       "include": "^keyboard-(shell|pcb$|pcb-metal|matrix-|insulators|controller-|entry|internal-cable|grommet|cable-support)",
       "note": "Installed underside: narrow controller overlaps the rear matrix-board edge; its cable end faces the lid opening."
+    },
+    {
+      "name": "monitor-bezel",
+      "photo": "PXL_20261012_125018215.jpg",
+      "position": [
+        410,
+        -680,
+        420
+      ],
+      "target": [
+        0,
+        -142,
+        324
+      ],
+      "fov": 29,
+      "include": "^(monitor-shell|bezel|crt-)",
+      "note": "Owner glass edge and formed bezel transition; camera and material estimates, not optical calibration."
     }
   ]
 }

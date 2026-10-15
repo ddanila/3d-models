@@ -10,6 +10,8 @@ def volume(path):
         total+=a[0]*(bv[1]*c[2]-bv[2]*c[1])+a[1]*(bv[2]*c[0]-bv[0]*c[2])+a[2]*(bv[0]*c[1]-bv[1]*c[0])
     return abs(total/6)
 checks={
+ 'controller-resistors-vs-components': ('keyboard_controller_resistors();','union(){keyboard_controller_chips();keyboard_controller_caps();keyboard_controller_connectors();}'),
+ 'plug-springs-vs-housing': ('plug_screws();','cable_plug();'),
  'controller-shield-vs-components': ('keyboard_controller_shield();','union(){keyboard_controller_chips();keyboard_controller_caps();}'),
  'controller-mounts-vs-board': ('keyboard_controller_mounts();','keyboard_controller_board();'),
  'controller-mounts-vs-matrix': ('keyboard_controller_mounts();','keyboard_pcb();'),

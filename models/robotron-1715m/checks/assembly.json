@@ -3,6 +3,16 @@
   "toleranceMm3": 0.001,
   "results": [
     {
+      "interface": "controller-resistors-vs-components",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
+      "interface": "plug-springs-vs-housing",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
       "interface": "controller-shield-vs-components",
       "intersectionMm3": 0,
       "passed": true
@@ -59,7 +69,7 @@
     },
     {
       "interface": "keyboard-imported-leads-vs-board",
-      "intersectionMm3": 0.0,
+      "intersectionMm3": 0,
       "passed": true
     },
     {

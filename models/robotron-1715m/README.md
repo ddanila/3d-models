@@ -2,6 +2,34 @@
 
 The canonical OpenSCAD source for Danila’s museum machine and the DAC browser export. Geometry uses millimetres: X right, Y rear, Z up. Open [model.scad](model.scad) for the complete machine, or [keyboard/model.scad](keyboard/model.scad) for fast colored keyboard review. Select a named `part` to export it independently.
 
+## Photo corrections, v45
+
+Compared with Danila's own [connector](reference/photos/PXL_20261010_090425989.jpg),
+[controller component face](reference/photos/PXL_20261012_123622947.jpg),
+[bottom lid](reference/photos/PXL_20261012_123319025.jpg) and
+[monitor edge](reference/photos/PXL_20261012_125018215.jpg):
+
+- The plug now has rounded release fingers, recessed moulded channels, visible
+  coil springs with relieved seats, and a projecting grey contact insert.
+- The controller resistor bank runs across the board, with additional axial
+  resistors and staggered transistors placed from the photograph. Capacitors
+  follow the four visible cans. Leads, apertures and solder joints share positions.
+- Component-side routes are recorded in [keyboard-artwork.json](keyboard-artwork.json)
+  and projected by the same generator as the underside. Edge tracks retain a
+  nominal 0.5 mm margin. This is visible artwork, not a verified circuit/netlist.
+- The replacement ROM has a blue cover and separate paper identifier; legible
+  board identification is clean CAD lettering, without photographed wear.
+- The 1 mm bottom plate has clipped corners and occupied foot fasteners beside
+  the open holes. Its insulating sheet uses a darker brown phenolic finish.
+- The monitor's bowed dark glass perimeter is wider and glossier, with an
+  overlapping formed-sheet bezel return. A separate front-oblique review checks
+  the glass junction as well as the existing side-profile view.
+
+Photo registration, spring dimensions, lead bends and optical properties remain
+estimates. Three CPU/ROM-end resistor positions were adjusted within the photo
+fit to clear nominal package bodies. No physical verification status changed.
+The accepted keyboard shell/deck dimensions remain unchanged.
+
 ## Current reconstruction
 
 The main unit, monitor and keyboard enclosures use the owner-confirmed 1 mm bent painted sheet. The system fascia has a thin face with folded returns; the monitor bezel is hollow, and the roof vents penetrate the shell. Local bend radii remain estimates. The exterior follows Danila’s photographs, with clean paint, plastic, rubber and metal rather than full-panel photo skins or copied wear. Small manufacturer labels use credited local photo crops. The keyboard’s approved exterior dimensions and separate sheet-metal layers are documented in the [keyboard workflow](keyboard/README.md). Interior dimensions remain provisional unless explicitly measured. The latest owner keycap correction is shared by the assembled keyboard: 15 mm round body, 15/11/9 mm underside diameters, 5 mm spring recess and tapered crown. The 18/23 mm wide-key dimensions describe the lower raised body.
