@@ -127,3 +127,8 @@ generated DIP placements/pin counts (A1/A6 corrected to DIP-14), pads, outline a
 artwork. The CPU socket and ink follow its placement. Native generated arrays also
 drive the ROM body/socket/cover/ink transforms. Existing discrete visuals remain
 separate pending physical reference identification.
+
+The museum clips unassigned photo graphics to the board outline for rendering.
+Five projected top-artwork endpoint occurrences overshoot the nominal outline;
+the native review preserves them so registration error remains inspectable.
+Clipping is not a continuity or routing correction.

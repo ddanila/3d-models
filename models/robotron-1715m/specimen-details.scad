@@ -124,11 +124,17 @@ module keyboard_pcb_metal(){keyboard_matrix_pose(){
 // Routes digitized as clean polylines from owner 123622947 (top) and
 // 123648677 (underside). Broad buses and diagonal breaks are photo estimates;
 // hidden paths and electrical continuity have not been reconstructed.
+// Clip only unassigned photo graphics at the physical board edge. The native
+// review retains registration overshoot for inspection; this does not route it.
+module controller_photo_art(paths,z,height){translate([0,0,z])intersection(){
+ linear_extrude(height)polygon(controller_pcb_outline);
+ union()for(a=paths)board_trace(a[0],a[1],height);
+}}
 module keyboard_controller_traces(){keyboard_controller_pose(){
  // Native KiCad review graphics retain their unresolved status. No generic
  // fanouts are invented to connect them to pads.
- for(a=controller_pcb_top_art)translate([0,0,1.62])board_trace(a[0],a[1],.08);
- for(a=controller_pcb_bottom_art)translate([0,0,-.10])board_trace(a[0],a[1],.10);
+ controller_photo_art(controller_pcb_top_art,1.62,.08);
+ controller_photo_art(controller_pcb_bottom_art,-.10,.10);
  for(a=controller_pcb_top_copper)translate([0,0,1.62])board_trace(a[0],a[1],.08);
  for(a=controller_pcb_bottom_copper)translate([0,0,-.10])board_trace(a[0],a[1],.10);
  for(p=controller_pcb_dip_pads)translate([p[0],p[1],1.62])difference(){cylinder(d=1.7,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
