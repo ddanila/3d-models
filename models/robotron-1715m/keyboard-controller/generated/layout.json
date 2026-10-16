@@ -247,7 +247,7 @@
         -12.0
       ],
       "ref": "A1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "7406"
     },
@@ -498,7 +498,7 @@
         -12.0
       ],
       "ref": "A2.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "DL003"
     },
@@ -749,7 +749,7 @@
         12.0
       ],
       "ref": "A2.2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "DL003"
     },
@@ -1000,7 +1000,7 @@
         12.0
       ],
       "ref": "A2.3",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "DL003"
     },
@@ -1353,7 +1353,7 @@
         -12.0
       ],
       "ref": "A4",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "I8282"
     },
@@ -2046,7 +2046,7 @@
         8.0
       ],
       "ref": "A5",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "U880"
     },
@@ -2297,7 +2297,7 @@
         -12.0
       ],
       "ref": "A6",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "DL074"
     },
@@ -2548,7 +2548,7 @@
         -12.0
       ],
       "ref": "A7",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "DL000"
     },
@@ -2969,7 +2969,7 @@
         8.0
       ],
       "ref": "A8",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "U556_2716"
     },
@@ -2999,7 +2999,7 @@
         10.0
       ],
       "ref": "H1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "Photo estimated mounting hole"
     },
@@ -3029,7 +3029,7 @@
         17.5
       ],
       "ref": "H2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "Photo estimated mounting hole"
     },
@@ -3059,7 +3059,7 @@
         10.0
       ],
       "ref": "H3",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "Photo estimated mounting hole"
     },
@@ -3089,7 +3089,7 @@
         17.5
       ],
       "ref": "H4",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "Photo estimated mounting hole"
     },
@@ -3527,7 +3527,7 @@
         3.0
       ],
       "ref": "X1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "MATRIX_CONNECTOR"
     },
@@ -3625,7 +3625,7 @@
         0.0
       ],
       "ref": "XT1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "KEYBOARD_CABLE"
     }
@@ -3681,6 +3681,24 @@
       ]
     ]
   ],
+  "outlinePolygon": [
+    [
+      -135.0,
+      23.0
+    ],
+    [
+      135.0,
+      23.0
+    ],
+    [
+      135.0,
+      -23.0
+    ],
+    [
+      -135.0,
+      -23.0
+    ]
+  ],
   "routes": [],
   "schema": 1,
   "unplaced": [
@@ -3727,7 +3745,7 @@
         -50.0
       ],
       "ref": "C1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "220p"
     },
@@ -3774,7 +3792,7 @@
         -50.0
       ],
       "ref": "C2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "10u"
     },
@@ -3821,7 +3839,7 @@
         -50.0
       ],
       "ref": "C3.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "47u"
     },
@@ -3868,7 +3886,7 @@
         -75.0
       ],
       "ref": "C3.2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "47u"
     },
@@ -3915,7 +3933,7 @@
         -75.0
       ],
       "ref": "C4",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "10u"
     },
@@ -3962,7 +3980,7 @@
         -75.0
       ],
       "ref": "C5.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "47n"
     },
@@ -4009,7 +4027,7 @@
         -75.0
       ],
       "ref": "C5.2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "47n"
     },
@@ -4056,7 +4074,7 @@
         -75.0
       ],
       "ref": "C5.3",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "47n"
     },
@@ -4103,7 +4121,7 @@
         -75.0
       ],
       "ref": "C5.4",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "47n"
     },
@@ -4150,7 +4168,7 @@
         -75.0
       ],
       "ref": "C5.5",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "47n"
     },
@@ -4197,7 +4215,7 @@
         -75.0
       ],
       "ref": "C6",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "470p"
     },
@@ -4244,7 +4262,7 @@
         -75.0
       ],
       "ref": "L1.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "CHOKE"
     },
@@ -4291,7 +4309,7 @@
         -75.0
       ],
       "ref": "L1.2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "CHOKE"
     },
@@ -4338,7 +4356,7 @@
         -75.0
       ],
       "ref": "L1.3",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "CHOKE"
     },
@@ -4385,7 +4403,7 @@
         -75.0
       ],
       "ref": "L1.4",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "CHOKE"
     },
@@ -4551,7 +4569,7 @@
         -100.0
       ],
       "ref": "R1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "8x910"
     },
@@ -4598,7 +4616,7 @@
         -125.0
       ],
       "ref": "R10.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "560"
     },
@@ -4645,7 +4663,7 @@
         -150.0
       ],
       "ref": "R10.2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "560"
     },
@@ -4692,7 +4710,7 @@
         -150.0
       ],
       "ref": "R10.3",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "560"
     },
@@ -4739,7 +4757,7 @@
         -150.0
       ],
       "ref": "R11.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "130"
     },
@@ -4786,7 +4804,7 @@
         -150.0
       ],
       "ref": "R11.2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "130"
     },
@@ -4952,7 +4970,7 @@
         -100.0
       ],
       "ref": "R2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "8x4k7"
     },
@@ -4999,7 +5017,7 @@
         -100.0
       ],
       "ref": "R3",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "22k"
     },
@@ -5046,7 +5064,7 @@
         -100.0
       ],
       "ref": "R4.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "220"
     },
@@ -5093,7 +5111,7 @@
         -100.0
       ],
       "ref": "R4.2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "220"
     },
@@ -5140,7 +5158,7 @@
         -100.0
       ],
       "ref": "R4.3",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "220"
     },
@@ -5187,7 +5205,7 @@
         -100.0
       ],
       "ref": "R5",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "10k"
     },
@@ -5234,7 +5252,7 @@
         -100.0
       ],
       "ref": "R6.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "1k"
     },
@@ -5281,7 +5299,7 @@
         -100.0
       ],
       "ref": "R6.3",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "1k"
     },
@@ -5328,7 +5346,7 @@
         -100.0
       ],
       "ref": "R6.4",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "1k"
     },
@@ -5375,7 +5393,7 @@
         -100.0
       ],
       "ref": "R6.5",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "1k"
     },
@@ -5422,7 +5440,7 @@
         -100.0
       ],
       "ref": "R6.6",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "1k"
     },
@@ -5469,7 +5487,7 @@
         -125.0
       ],
       "ref": "R7",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "3k3"
     },
@@ -5516,7 +5534,7 @@
         -125.0
       ],
       "ref": "R8",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "47k"
     },
@@ -5563,7 +5581,7 @@
         -125.0
       ],
       "ref": "R9.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "3k9"
     },
@@ -5610,7 +5628,7 @@
         -125.0
       ],
       "ref": "R9.2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "3k9"
     },
@@ -5657,7 +5675,7 @@
         -125.0
       ],
       "ref": "R9.3",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "3k9"
     },
@@ -5704,7 +5722,7 @@
         -125.0
       ],
       "ref": "R9.4",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "3k9"
     },
@@ -5751,7 +5769,7 @@
         -125.0
       ],
       "ref": "R9.5",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "3k9"
     },
@@ -5798,7 +5816,7 @@
         -125.0
       ],
       "ref": "R9.6",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "3k9"
     },
@@ -5845,7 +5863,7 @@
         -125.0
       ],
       "ref": "R9.7",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "3k9"
     },
@@ -5892,7 +5910,7 @@
         -125.0
       ],
       "ref": "R9.8",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "3k9"
     },
@@ -5939,7 +5957,7 @@
         -125.0
       ],
       "ref": "R9.9",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "3k9"
     },
@@ -5986,7 +6004,7 @@
         -150.0
       ],
       "ref": "V1.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "DIODE"
     },
@@ -6033,7 +6051,7 @@
         -150.0
       ],
       "ref": "V1.2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "DIODE"
     },
@@ -6080,7 +6098,7 @@
         -150.0
       ],
       "ref": "V2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "DIODE"
     },
@@ -6144,7 +6162,7 @@
         -150.0
       ],
       "ref": "V3.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "SC236D"
     },
@@ -6208,7 +6226,7 @@
         -150.0
       ],
       "ref": "V3.2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "SC236D"
     },
@@ -6272,7 +6290,7 @@
         -150.0
       ],
       "ref": "V4.1",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "SC308C"
     },
@@ -6336,7 +6354,7 @@
         -150.0
       ],
       "ref": "V4.2",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "SC308C"
     },
@@ -6400,7 +6418,7 @@
         -150.0
       ],
       "ref": "V4.3",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "SC308C"
     },
@@ -6464,7 +6482,7 @@
         -175.0
       ],
       "ref": "V4.4",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "SC308C"
     },
@@ -6528,7 +6546,7 @@
         -175.0
       ],
       "ref": "V4.5",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "SC308C"
     },
@@ -6592,7 +6610,7 @@
         -175.0
       ],
       "ref": "V4.6",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "SC308C"
     },
@@ -6656,7 +6674,7 @@
         -175.0
       ],
       "ref": "V4.7",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "SC308C"
     },
@@ -6720,7 +6738,7 @@
         -175.0
       ],
       "ref": "V4.8",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "SC308C"
     },
@@ -6784,7 +6802,7 @@
         -175.0
       ],
       "ref": "V4.9",
-      "rotation": -0.0,
+      "rotation": 0.0,
       "side": "top",
       "type": "SC308C"
     }

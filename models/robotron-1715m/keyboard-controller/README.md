@@ -68,3 +68,23 @@ do not change the transcription merely to match software. Reconciling the drawin
 reference firmware and actual specimen is required before promoting behavioral
 changes. In particular, replacing LED behavior broke the existing S600 stable-LED
 qualification and was not retained in the production emulator.
+
+## Generated geometry review
+
+Open `review.scad` for a standalone reconstruction view. It consumes only
+KiCad-derived arrays for the outline, holes, pads, package positions and artwork.
+Cyan lines are unresolved photo graphics; assigned copper uses a separate layer.
+Package bodies in this review are nominal envelopes. The accepted museum model
+is not replaced by this incomplete board.
+
+`python3 tools/test_export.py` checks source/output hashes, asymmetric CPU/ROM
+and pad-number landmarks, closed outline area and stale-file rejection. These
+checks run in CI without KiCad. The initial SCAD export rendered successfully
+with the Manifold backend. The Edge.Cuts loop is reconstructed by endpoint
+connectivity, not by file order; unsupported open or branched outlines fail.
+
+Pending promotion work: verify package orientation against independent photo
+landmarks, place the remaining reference components, establish discrete lead
+numbers, associate visible paths with nets, resolve airwires and review the
+analog transcription and jumper representation. Full physical assembly migration
+and continuity qualification remain open; successful exports do not close them.

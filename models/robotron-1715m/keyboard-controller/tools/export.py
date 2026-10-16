@@ -36,7 +36,7 @@ def main():
  def coord(p):return [round(p.x/1e6,6),round(p.y/1e6,6)]
  seen=set()
  for f in sorted(board.GetFootprints(),key=lambda x:x.GetReference()):
-  ref=f.GetReference();pos=xy(f.GetPosition());in_board=-135<=pos[0]<=135 and -23<=pos[1]<=23;row={'ref':ref,'type':f.GetValue(),'position':pos,'rotation':-f.GetOrientationDegrees(),'side':'bottom' if f.IsFlipped() else 'top','evidence':f.GetFieldText('Evidence') if f.HasField('Evidence') else 'photo-estimated-hole','pads':[]}
+  ref=f.GetReference();pos=xy(f.GetPosition());in_board=-135<=pos[0]<=135 and -23<=pos[1]<=23;row={'ref':ref,'type':f.GetValue(),'position':pos,'rotation':f.GetOrientationDegrees(),'side':'bottom' if f.IsFlipped() else 'top','evidence':f.GetFieldText('Evidence') if f.HasField('Evidence') else 'photo-estimated-hole','pads':[]}
   for p in sorted(f.Pads(),key=lambda x:x.GetNumber()):
    net=p.GetNetname();net=None if not net or net.startswith('unconnected-') else net
    pin=p.GetNumber();a={'ref':ref,'pin':pin,'net':net,'position':xy(p.GetPosition()),'size':coord(p.GetSize()),'drill':coord(p.GetDrillSize())};row['pads'].append(a)
@@ -52,6 +52,7 @@ def main():
    if (ref,pin) not in seen:mismatches.append([ref,pin,'missing pad'])
  if mismatches:raise SystemExit('Schematic/PCB pad-net mismatch: '+repr(mismatches[:10]))
  routes=[];art=[];edges=[]
+ if board.Zones():raise SystemExit('Zone export not yet supported: refuse to omit geometry')
  for d in board.GetDrawings():
   if d.GetShape()!=pcb.SHAPE_T_SEGMENT:continue
   item={'id':str(d.m_Uuid.AsString()),'points':[xy(d.GetStart()),xy(d.GetEnd())],'width':round(d.GetWidth()/1e6,6)}
@@ -61,13 +62,22 @@ def main():
   if isinstance(d,pcb.PCB_VIA):raise SystemExit('Via export not yet supported: refuse to omit geometry')
   if isinstance(d,pcb.PCB_ARC):raise SystemExit('Arc export not yet supported: refuse to omit geometry')
   routes.append({'id':d.m_Uuid.AsString(),'points':[xy(d.GetStart()),xy(d.GetEnd())],'width':d.GetWidth()/1e6,'net':d.GetNetname(),'side':'top' if d.GetLayer()==pcb.F_Cu else 'bottom','evidence':'KiCad route; historical provenance requires review'})
- layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'components':placed,'unplaced':unplaced,'routes':routes,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
+ # Chain Edge.Cuts explicitly; KiCad serialization order is not polygon order.
+ pending=edges[:];outline=[pending.pop(0)[0]]
+ while pending or len(outline)==1:
+  candidates=[(i,b if a==outline[-1] else a) for i,(a,b) in enumerate(edges if len(outline)==1 else pending) if a==outline[-1] or b==outline[-1]]
+  if len(outline)==1:
+   outline.append(edges[0][1]);continue
+  if len(candidates)!=1:raise SystemExit('Outline is open, branched or has unsupported multiple loops')
+  i,nxt=candidates[0];pending.pop(i);outline.append(nxt)
+ if outline[-1]!=outline[0]:raise SystemExit('Outline is not closed')
+ layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline[:-1],'components':placed,'unplaced':unplaced,'routes':routes,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
  write('layout.json',layout)
  # Semantic symbols preserve source numbered pins. ERC does not validate analog models.
  erc_summary=[{'type':v['type'],'severity':v['severity'],'description':v['description'],'items':[i['description'] for i in v['items']]} for v in violations]
  write('qualification.json',{'components':len(components),'placed':len(placed),'unplaced':len(unplaced),'padNetMismatches':mismatches,'electricalCopperSegments':len(routes),'unresolvedPhotoSegments':len(art),'erc':erc_summary,'drc':{'violations':dict(collections.Counter(v['type'] for v in drc_data['violations'])),'unconnectedItems':len(drc_data['unconnected_items'])},'limitations':['Signal pin directions are typed; power/passive terminals and analog behavior require separate review. Two isolated-label ERC warnings are RD_N (unused CPU output) and SHIELD (external cable shield).','Unrouted PCB, not fabrication ready. Photo graphics are not electrical copper.','Digital reference circuit; discrete pin numbering, specimen substitutions and analog section require review.']})
- scad=['// Generated from controller.kicad_pcb. Model-local mm; no independent placement edits.', 'controller_pcb_edges='+json.dumps(edges)+';', 'controller_pcb_holes='+json.dumps(holes)+';', 'controller_pcb_pads='+json.dumps([[*p['position'],*p['size'],p['net']] for p in pads if p['pin']])+';']
+ scad=['// Generated from controller.kicad_pcb. Model-local mm; no independent placement edits.', 'controller_pcb_outline='+json.dumps(outline[:-1])+';', 'controller_pcb_edges='+json.dumps(edges)+';', 'controller_pcb_holes='+json.dumps(holes)+';', 'controller_pcb_pads='+json.dumps([[*p['position'],*p['size'],p['net']] for p in pads if p['pin']])+';']
  scad+=['controller_pcb_dips='+json.dumps([[*c['position'],len(c['pads']),15.24 if len(c['pads']) in (24,40) else 7.62,c['ref'],c['rotation']] for c in placed if c['ref'].startswith('A')])+';']
  for side in ['top','bottom']:
   scad+=['controller_pcb_'+side+'_art='+json.dumps([[a['points'],a['width']] for a in art if a['side']==side])+';', 'controller_pcb_'+side+'_copper='+json.dumps([[a['points'],a['width']] for a in routes if a['side']==side])+';']
