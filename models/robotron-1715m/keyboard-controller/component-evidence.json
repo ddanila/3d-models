@@ -1,0 +1,511 @@
+{
+  "A5": {
+    "referenceType": "U880",
+    "position": [
+      62,
+      8
+    ],
+    "placementEvidence": "inherited-photo-estimate",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "A8": {
+    "referenceType": "U556_2716",
+    "position": [
+      114,
+      8
+    ],
+    "placementEvidence": "inherited-photo-estimate",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "A4": {
+    "referenceType": "I8282",
+    "position": [
+      57,
+      -12
+    ],
+    "placementEvidence": "inherited-photo-estimate",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "A1": {
+    "referenceType": "7406",
+    "position": [
+      -48,
+      -12
+    ],
+    "placementEvidence": "inherited-photo-estimate",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "A6": {
+    "referenceType": "DL074",
+    "position": [
+      89,
+      -12
+    ],
+    "placementEvidence": "inherited-photo-estimate",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "A2.1": {
+    "referenceType": "DL003",
+    "position": [
+      20,
+      -12
+    ],
+    "placementEvidence": "inherited-photo-estimate",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "A2.2": {
+    "referenceType": "DL003",
+    "position": [
+      20,
+      12
+    ],
+    "placementEvidence": "inherited-photo-estimate",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "A2.3": {
+    "referenceType": "DL003",
+    "position": [
+      -48,
+      12
+    ],
+    "placementEvidence": "inherited-photo-estimate",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "A7": {
+    "referenceType": "DL000",
+    "position": [
+      114,
+      -12
+    ],
+    "placementEvidence": "inherited-photo-estimate",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "X1": {
+    "referenceType": "MATRIX_CONNECTOR",
+    "position": [
+      -10,
+      3
+    ],
+    "placementEvidence": "inherited-photo-estimate",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "XT1": {
+    "referenceType": "KEYBOARD_CABLE",
+    "position": [
+      -125,
+      0
+    ],
+    "placementEvidence": "inherited-photo-estimate",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R10.1": {
+    "referenceType": "560",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R10.2": {
+    "referenceType": "560",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R10.3": {
+    "referenceType": "560",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R9.9": {
+    "referenceType": "3k9",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R6.3": {
+    "referenceType": "1k",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R6.4": {
+    "referenceType": "1k",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R6.5": {
+    "referenceType": "1k",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R6.6": {
+    "referenceType": "1k",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R11.1": {
+    "referenceType": "130",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R11.2": {
+    "referenceType": "130",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "L1.1": {
+    "referenceType": "CHOKE",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "L1.2": {
+    "referenceType": "CHOKE",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "L1.3": {
+    "referenceType": "CHOKE",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "L1.4": {
+    "referenceType": "CHOKE",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R9.3": {
+    "referenceType": "3k9",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R9.5": {
+    "referenceType": "3k9",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R9.6": {
+    "referenceType": "3k9",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R9.7": {
+    "referenceType": "3k9",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R9.8": {
+    "referenceType": "3k9",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R9.4": {
+    "referenceType": "3k9",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R9.2": {
+    "referenceType": "3k9",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R9.1": {
+    "referenceType": "3k9",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R2": {
+    "referenceType": "8x4k7",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R1": {
+    "referenceType": "8x910",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "V4.3": {
+    "referenceType": "SC308C",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Semantic E/B/C pins only; physical package pin numbering unresolved"
+  },
+  "V4.4": {
+    "referenceType": "SC308C",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Semantic E/B/C pins only; physical package pin numbering unresolved"
+  },
+  "V4.8": {
+    "referenceType": "SC308C",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Semantic E/B/C pins only; physical package pin numbering unresolved"
+  },
+  "V4.7": {
+    "referenceType": "SC308C",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Semantic E/B/C pins only; physical package pin numbering unresolved"
+  },
+  "V4.1": {
+    "referenceType": "SC308C",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Semantic E/B/C pins only; physical package pin numbering unresolved"
+  },
+  "V4.6": {
+    "referenceType": "SC308C",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Semantic E/B/C pins only; physical package pin numbering unresolved"
+  },
+  "V4.2": {
+    "referenceType": "SC308C",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Semantic E/B/C pins only; physical package pin numbering unresolved"
+  },
+  "V4.5": {
+    "referenceType": "SC308C",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Semantic E/B/C pins only; physical package pin numbering unresolved"
+  },
+  "V3.1": {
+    "referenceType": "SC236D",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "V3.2": {
+    "referenceType": "SC236D",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "V4.9": {
+    "referenceType": "SC308C",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R3": {
+    "referenceType": "22k",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R4.1": {
+    "referenceType": "220",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R5": {
+    "referenceType": "10k",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R6.1": {
+    "referenceType": "1k",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R7": {
+    "referenceType": "3k3",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R8": {
+    "referenceType": "47k",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R4.2": {
+    "referenceType": "220",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "R4.3": {
+    "referenceType": "220",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "C1": {
+    "referenceType": "220p",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "C2": {
+    "referenceType": "10u",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "C4": {
+    "referenceType": "10u",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "C6": {
+    "referenceType": "470p",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "V1.1": {
+    "referenceType": "DIODE",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Semantic diode terminals; confirm footprint orientation before placement"
+  },
+  "V1.2": {
+    "referenceType": "DIODE",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Semantic diode terminals; confirm footprint orientation before placement"
+  },
+  "V2": {
+    "referenceType": "DIODE",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "connector-label-or-semantic-terminal",
+    "note": "Semantic diode terminals; confirm footprint orientation before placement"
+  },
+  "C5.1": {
+    "referenceType": "47n",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "C5.2": {
+    "referenceType": "47n",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "C5.3": {
+    "referenceType": "47n",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "C5.4": {
+    "referenceType": "47n",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "C5.5": {
+    "referenceType": "47n",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "C3.1": {
+    "referenceType": "47u",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  },
+  "C3.2": {
+    "referenceType": "47u",
+    "position": null,
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-numbered",
+    "note": "Reference schematic; specimen identity/placement requires review"
+  }
+}

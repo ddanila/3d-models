@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+"""Export the native KiCad authorities. Run with KiCad's Python (pcbnew).
+--check needs only standard Python and checks all pinned sources and outputs.
+"""
+import argparse,hashlib,json,math,os,shutil,subprocess,tempfile,collections,xml.etree.ElementTree as ET
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def write(name,value):
+ p=ROOT/'generated'/name;p.parent.mkdir(exist_ok=True);p.write_text(value if isinstance(value,str) else json.dumps(value,indent=2,sort_keys=True)+'\n')
+def check():
+ m=json.loads((ROOT/'generated/manifest.json').read_text())
+ for group in ['sources','outputs']:
+  for name,sha in m[group].items():
+   p=ROOT/name
+   if not p.is_file() or digest(p)!=sha:raise SystemExit('Stale or missing '+name+'; regenerate with tools/export.py')
+ print('Controller sources and generated outputs match pinned hashes')
+def main():
+ parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');args=parser.parse_args()
+ if args.check:return check()
+ import pcbnew as pcb
+ cli=os.environ.get('KICAD_CLI') or shutil.which('kicad-cli') or '/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli'
+ with tempfile.TemporaryDirectory() as t:
+  xml=Path(t)/'net.xml';erc=Path(t)/'erc.json';drc=Path(t)/'drc.json'
+  subprocess.run([cli,'sch','export','netlist','--format','kicadxml','-o',str(xml),str(ROOT/'controller.kicad_sch')],check=True)
+  subprocess.run([cli,'sch','erc','--format','json','-o',str(erc),str(ROOT/'controller.kicad_sch')],check=True)
+  subprocess.run([cli,'pcb','drc','--format','json','-o',str(drc),str(ROOT/'controller.kicad_pcb')],check=True)
+  drc_data=json.loads(drc.read_text())
+  r=ET.parse(xml).getroot();violations=json.loads(erc.read_text())['sheets'][0]['violations']
+ components={c.get('ref'):{'type':c.findtext('value'),'pins':{p.get('num'):None for p in c.findall('./units/unit/pins/pin')}} for c in r.findall('./components/comp')}
+ for n in r.findall('./nets/net'):
+  name=n.get('name');name=None if name.startswith('unconnected-') else name
+  for node in n.findall('node'):components[node.get('ref')]['pins'][node.get('pin')]=name
+ board=pcb.LoadBoard(str(ROOT/'controller.kicad_pcb'));placed=[];unplaced=[];pads=[];holes=[];mismatches=[]
+ def xy(p):return [round(p.x/1e6-150,6),round(50-p.y/1e6,6)]
+ def coord(p):return [round(p.x/1e6,6),round(p.y/1e6,6)]
+ seen=set()
+ for f in sorted(board.GetFootprints(),key=lambda x:x.GetReference()):
+  ref=f.GetReference();pos=xy(f.GetPosition());in_board=-135<=pos[0]<=135 and -23<=pos[1]<=23;row={'ref':ref,'type':f.GetValue(),'position':pos,'rotation':-f.GetOrientationDegrees(),'side':'bottom' if f.IsFlipped() else 'top','evidence':f.GetFieldText('Evidence') if f.HasField('Evidence') else 'photo-estimated-hole','pads':[]}
+  for p in sorted(f.Pads(),key=lambda x:x.GetNumber()):
+   net=p.GetNetname();net=None if not net or net.startswith('unconnected-') else net
+   pin=p.GetNumber();a={'ref':ref,'pin':pin,'net':net,'position':xy(p.GetPosition()),'size':coord(p.GetSize()),'drill':coord(p.GetDrillSize())};row['pads'].append(a)
+   if ref in components:
+    seen.add((ref,pin))
+    if pin not in components[ref]['pins'] or net!=components[ref]['pins'][pin]:mismatches.append([ref,pin,net,components[ref]['pins'].get(pin)])
+   if in_board:
+    pads.append(a)
+    if a['drill'][0]:holes.append([*a['position'],a['drill'][0]])
+  (placed if in_board else unplaced).append(row)
+ for ref,c in components.items():
+  for pin in c['pins']:
+   if (ref,pin) not in seen:mismatches.append([ref,pin,'missing pad'])
+ if mismatches:raise SystemExit('Schematic/PCB pad-net mismatch: '+repr(mismatches[:10]))
+ routes=[];art=[];edges=[]
+ for d in board.GetDrawings():
+  if d.GetShape()!=pcb.SHAPE_T_SEGMENT:continue
+  item={'id':str(d.m_Uuid.AsString()),'points':[xy(d.GetStart()),xy(d.GetEnd())],'width':round(d.GetWidth()/1e6,6)}
+  if d.GetLayer()==pcb.Edge_Cuts:edges.append(item['points'])
+  elif d.GetLayer() in (pcb.Dwgs_User,pcb.Cmts_User):art.append(dict(item,side='top' if d.GetLayer()==pcb.Dwgs_User else 'bottom',net=None,evidence='photo-polyline; net unresolved'))
+ for d in board.GetTracks():
+  if isinstance(d,pcb.PCB_VIA):raise SystemExit('Via export not yet supported: refuse to omit geometry')
+  if isinstance(d,pcb.PCB_ARC):raise SystemExit('Arc export not yet supported: refuse to omit geometry')
+  routes.append({'id':d.m_Uuid.AsString(),'points':[xy(d.GetStart()),xy(d.GetEnd())],'width':d.GetWidth()/1e6,'net':d.GetNetname(),'side':'top' if d.GetLayer()==pcb.F_Cu else 'bottom','evidence':'KiCad route; historical provenance requires review'})
+ layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'components':placed,'unplaced':unplaced,'routes':routes,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
+ write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
+ write('layout.json',layout)
+ # Semantic symbols preserve source numbered pins. ERC does not validate analog models.
+ erc_summary=[{'type':v['type'],'severity':v['severity'],'description':v['description'],'items':[i['description'] for i in v['items']]} for v in violations]
+ write('qualification.json',{'components':len(components),'placed':len(placed),'unplaced':len(unplaced),'padNetMismatches':mismatches,'electricalCopperSegments':len(routes),'unresolvedPhotoSegments':len(art),'erc':erc_summary,'drc':{'violations':dict(collections.Counter(v['type'] for v in drc_data['violations'])),'unconnectedItems':len(drc_data['unconnected_items'])},'limitations':['Signal pin directions are typed; power/passive terminals and analog behavior require separate review. Two isolated-label ERC warnings are RD_N (unused CPU output) and SHIELD (external cable shield).','Unrouted PCB, not fabrication ready. Photo graphics are not electrical copper.','Digital reference circuit; discrete pin numbering, specimen substitutions and analog section require review.']})
+ scad=['// Generated from controller.kicad_pcb. Model-local mm; no independent placement edits.', 'controller_pcb_edges='+json.dumps(edges)+';', 'controller_pcb_holes='+json.dumps(holes)+';', 'controller_pcb_pads='+json.dumps([[*p['position'],*p['size'],p['net']] for p in pads if p['pin']])+';']
+ scad+=['controller_pcb_dips='+json.dumps([[*c['position'],len(c['pads']),15.24 if len(c['pads']) in (24,40) else 7.62,c['ref'],c['rotation']] for c in placed if c['ref'].startswith('A')])+';']
+ for side in ['top','bottom']:
+  scad+=['controller_pcb_'+side+'_art='+json.dumps([[a['points'],a['width']] for a in art if a['side']==side])+';', 'controller_pcb_'+side+'_copper='+json.dumps([[a['points'],a['width']] for a in routes if a['side']==side])+';']
+ write('controller.scad','\n'.join(scad).replace('null','undef')+'\n')
+ # Review drawing retains both board sides and identifies unresolved artwork.
+ import html
+ svg=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="-145 -40 290 155"><rect x="-145" y="-40" width="290" height="155" fill="#17232a"/>']
+ for side,offset in [('top',0),('bottom',75)]:
+  svg.append(f'<g transform="translate(0 {offset})"><text x="-135" y="-28" fill="white" font-size="4">{side}: cyan = unresolved photo artwork; pads = reference nets</text>')
+  for a in art:
+   if a['side']==side:svg.append('<polyline fill="none" stroke="#50b5c8" stroke-width=".35" points="'+' '.join(f'{x},{-y}' for x,y in a['points'])+'"/>')
+  for c in placed:
+   for p in c['pads']:
+    x,y=p['position'];svg.append(f'<circle cx="{x}" cy="{-y}" r=".65" fill="#ffc969"><title>{html.escape(c["ref"]+":"+p["pin"]+" "+str(p["net"]))}</title></circle>')
+   x,y=c['position'];svg.append(f'<text x="{x}" y="{-y-4}" fill="white" font-size="2.8">{c["ref"]}</text>')
+  svg.append('</g>')
+ write('review.svg',''.join(svg)+'</svg>\n')
+ inputs=['controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py']
+ outputs=sorted(p for p in (ROOT/'generated').iterdir() if p.name!='manifest.json')
+ write('manifest.json',{'schema':1,'tools':{'kicad':subprocess.check_output([cli,'version'],text=True).strip(),'pcbnew':pcb.GetBuildVersion()},'sources':{p:digest(ROOT/p) for p in inputs},'outputs':{str(p.relative_to(ROOT)):digest(p) for p in outputs}})
+ print('Exported',len(components),'components;',len(unplaced),'unplaced;',len(art),'unresolved photo segments')
+if __name__=='__main__':main()

@@ -1,0 +1,1 @@
+(sym_lib_table (lib (name "kbd")(type "KiCad")(uri "${KIPRJMOD}/kbd.kicad_sym")(options "")(descr "Reference controller symbols")))

@@ -1,0 +1,39 @@
+{
+  "components": 68,
+  "drc": {
+    "unconnectedItems": 233,
+    "violations": {
+      "silk_edge_clearance": 2,
+      "silk_over_copper": 19,
+      "silk_overlap": 66
+    }
+  },
+  "electricalCopperSegments": 0,
+  "erc": [
+    {
+      "description": "Label connected to only one pin",
+      "items": [
+        "Label 'RD_N'"
+      ],
+      "severity": "warning",
+      "type": "isolated_pin_label"
+    },
+    {
+      "description": "Label connected to only one pin",
+      "items": [
+        "Label 'SHIELD'"
+      ],
+      "severity": "warning",
+      "type": "isolated_pin_label"
+    }
+  ],
+  "limitations": [
+    "Signal pin directions are typed; power/passive terminals and analog behavior require separate review. Two isolated-label ERC warnings are RD_N (unused CPU output) and SHIELD (external cable shield).",
+    "Unrouted PCB, not fabrication ready. Photo graphics are not electrical copper.",
+    "Digital reference circuit; discrete pin numbering, specimen substitutions and analog section require review."
+  ],
+  "padNetMismatches": [],
+  "placed": 15,
+  "unplaced": 57,
+  "unresolvedPhotoSegments": 294
+}
