@@ -23,3 +23,31 @@ python3 models/robotron-1715m/tools/check-assembly.py
 python3 models/robotron-1715m/tools/check-covers.py
 python3 models/robotron-1715m/tools/compare-photos.py
 ```
+
+## Sampled inspection motion — 2026-10-16
+
+`tools/check-inspection-motion.py` samples 11 positions for each of the system
+cover, monitor upper cover, keyboard controller and keyboard matrix. The initial
+straight controller path crossed the rear shell at 20% (426.483 mm³) and 30%
+(2978.941 mm³); see [initial results](inspection-motion-before.json) and
+[initial chart](inspection-motion-before.svg). A lift-first attempt cleared the
+bare board, but checking its packages/connectors/leads found a 26.297 mm³ contact
+with the shelf at 10%. No enclosure or PCB geometry was trimmed to hide it.
+
+The canonical [inspection path](../inspection-paths.json) now moves the controller
+16 mm forward, lifts it 70 mm, then moves it to the existing rear inspection
+position. DAC moves its components and cable endpoint together. The final
+[44 samples](inspection-motion.json) and [chart](inspection-motion.svg) are clear
+below 0.001 mm³, including the controller's attached components. Covers currently
+jump to their open pose; keyboard separation is animated. These are museum
+inspection paths, not instructions for physically opening the specimen.
+
+This checks the named solids against their enclosure, not every pair in the
+assembly or continuous swept volume. Fasteners, available cable slack and
+physical fit remain unverified. DAC's separate cable geometry tests sample 21
+positions in connected and parked modes; their recorded PSU-entry exceptions
+remain explicit. Canonical CAD stays v48 and no print-verification status changes.
+
+[Evidence colour rules](../evidence-map.json) distinguish supplied dimensions,
+owner-photo reconstruction, comparative references and unmapped geometry. These
+are independent of the model registry's printed-and-verified classification.

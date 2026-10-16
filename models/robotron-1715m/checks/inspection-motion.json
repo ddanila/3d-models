@@ -1,0 +1,491 @@
+{
+  "scope": "44 sampled translations (controller follows canonical staged waypoints) between museum inspection poses. Cover toggles currently jump between endpoints; these samples investigate a potential interpolation, not an existing physical hinge or removal path. Keyboard separation is animated. Tests named moving solids against their enclosure, including controller packages/connectors/leads; touching allowed. Fasteners must be removed for physical disassembly. Cable deformation is qualified separately in DAC cable-geometry.spec.js at 21 positions in connected/parked modes; available physical slack remains unmeasured.",
+  "toleranceMm3": 0.001,
+  "results": [
+    {
+      "part": "system-lid",
+      "fraction": 0.0,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.1,
+      "translationMm": [
+        0.0,
+        40.0,
+        18.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.2,
+      "translationMm": [
+        0.0,
+        80.0,
+        36.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.3,
+      "translationMm": [
+        0.0,
+        120.0,
+        54.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.4,
+      "translationMm": [
+        0.0,
+        160.0,
+        72.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.5,
+      "translationMm": [
+        0.0,
+        200.0,
+        90.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.6,
+      "translationMm": [
+        0.0,
+        240.0,
+        108.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.7,
+      "translationMm": [
+        0.0,
+        280.0,
+        126.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.8,
+      "translationMm": [
+        0.0,
+        320.0,
+        144.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.9,
+      "translationMm": [
+        0.0,
+        360.0,
+        162.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 1.0,
+      "translationMm": [
+        0.0,
+        400.0,
+        180.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.0,
+      "translationMm": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.1,
+      "translationMm": [
+        0.0,
+        -21.0,
+        15.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.2,
+      "translationMm": [
+        0.0,
+        -42.0,
+        31.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.3,
+      "translationMm": [
+        0.0,
+        -63.0,
+        46.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.4,
+      "translationMm": [
+        0.0,
+        -84.0,
+        62.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.5,
+      "translationMm": [
+        0.0,
+        -105.0,
+        77.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.6,
+      "translationMm": [
+        0.0,
+        -126.0,
+        93.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.7,
+      "translationMm": [
+        0.0,
+        -147.0,
+        108.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.8,
+      "translationMm": [
+        0.0,
+        -168.0,
+        124.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.9,
+      "translationMm": [
+        0.0,
+        -189.0,
+        139.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 1.0,
+      "translationMm": [
+        0.0,
+        -210.0,
+        155.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.0,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.1,
+      "translationMm": [
+        0.0,
+        -4.8,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.2,
+      "translationMm": [
+        0.0,
+        -9.6,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.3,
+      "translationMm": [
+        0.0,
+        -14.4,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.4,
+      "translationMm": [
+        0.0,
+        -16.0,
+        14.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.5,
+      "translationMm": [
+        0.0,
+        -16.0,
+        35.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.6,
+      "translationMm": [
+        0.0,
+        -16.0,
+        56.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.7,
+      "translationMm": [
+        0.0,
+        1.6,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.8,
+      "translationMm": [
+        0.0,
+        54.4,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.9,
+      "translationMm": [
+        0.0,
+        107.2,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 1.0,
+      "translationMm": [
+        0.0,
+        160.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.0,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.1,
+      "translationMm": [
+        0.0,
+        0.0,
+        2.2
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.2,
+      "translationMm": [
+        0.0,
+        0.0,
+        4.4
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.3,
+      "translationMm": [
+        0.0,
+        0.0,
+        6.6
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.4,
+      "translationMm": [
+        0.0,
+        0.0,
+        8.8
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.5,
+      "translationMm": [
+        0.0,
+        0.0,
+        11.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.6,
+      "translationMm": [
+        0.0,
+        0.0,
+        13.2
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.7,
+      "translationMm": [
+        0.0,
+        0.0,
+        15.4
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.8,
+      "translationMm": [
+        0.0,
+        0.0,
+        17.6
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.9,
+      "translationMm": [
+        0.0,
+        0.0,
+        19.8
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 1.0,
+      "translationMm": [
+        0.0,
+        0.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    }
+  ],
+  "allSamplesClear": true
+}
