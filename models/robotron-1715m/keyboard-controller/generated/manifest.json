@@ -1,8 +1,8 @@
 {
   "outputs": {
     "generated/connectivity.json": "2f72140842b1b8ebab498c22bb36112720f8c210d4457c0ee9fc3c459e3febc6",
-    "generated/controller.scad": "357fd3236052a82d8e3212227a06ac8e678883a897e70d84c9f0164792c643df",
-    "generated/layout.json": "b592e6a79fa0d820d93a35211f33e36df58312ad7908753f0a584784c81074e5",
+    "generated/controller.scad": "7987e705b9d2a135aa438da5d4f61d3cc886fc6acf96decb0b2373fc4dcd9a13",
+    "generated/layout.json": "2cc2ad9e953fa4a40f5427f27169a9159a8e1ab18d76cc033adf94b9f131ab6e",
     "generated/qualification.json": "7539c10cbe77e23401a35df555dc99dabf97f47f229de8bac5c1c54999acccc9",
     "generated/review.svg": "8cb1db618092398c56f4fde0d1d69c08ccd6af1540d5472a4a6fae8780611fee"
   },
@@ -11,12 +11,13 @@
     "component-evidence.json": "ba65bc502fb57854960d529c08e9da70b37547cd521b8204d3667cb21e302c5f",
     "controller.kicad_pcb": "fc20f1cde57cbadbb86aaf7c06f49582bb4392aac9b723379ed414e91eb372ac",
     "controller.kicad_pro": "228a3c4233e34cdc44da56b5155bb70714d024e3aa456057327f77e68841ea99",
-    "controller.kicad_sch": "84edc5aa76acaa24325a7b09fe87de870e44b4d28f9b81802a233bc0bc2fb091",
-    "evidence.json": "4d21260c17c43d13c2f5c27080df30fc99496917e97cdee1f86c9ad6ea216ac0",
+    "controller.kicad_sch": "c17a8f31fe4087ffd1774abad4822bbfd3f16ee4b35e9de2258be480c1ce7632",
+    "evidence.json": "e57eeeea1fc8f9d495c96e2b9d99e34b7a3dd1d2ec03957655467b6bc8ddd3b8",
     "fp-lib-table": "f6503b3e185475d8be43527f0ee177079a36e60001ae5ad21a1ababaed9f28bd",
     "kbd.kicad_sym": "08a2e33cd5017b9722d206a21a65d4ea6a2e7b46393d12ee8ac29dacc8644e99",
     "sym-lib-table": "27194f2ba44182e9ce1b0fd5db14f03003a7cefcf53a287c7cb9d8b8e361a841",
-    "tools/export.py": "b721e672adeda69fc623374e787dc9f995eda34f037aea8c0ea161e1c65ee4b5"
+    "tools/export.py": "a6ee04857db9398805f86d37efcccc95e5f2ff341174efeb966466e1df7722ed",
+    "tools/geometry.py": "be71777d095f87f7f53643239e274989006de4ead1ad7181478d502e05351780"
   },
   "tools": {
     "kicad": "10.0.6",

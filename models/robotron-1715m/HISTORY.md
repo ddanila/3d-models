@@ -2,6 +2,22 @@
 
 Historical notes, including superseded layouts. For the current model use [README.md](README.md).
 
+## Keyboard controller evidence review on 2026 10 16
+
+Full-resolution owner photos `PXL_20261012_123622947.jpg` and
+`PXL_20261012_123648677.jpg` establish board marking `05-330-4102-8 1c`,
+correcting the previous `062-330-4102` transcription. The end logic package reads
+`К555ЛА3`, not `К555ЛА7`. The shared SCAD inscription and browser ink mesh are
+corrected; component positions and trace geometry retain their existing scope.
+Source copies in the motherboard/drive download archives are refreshed without
+changing their unrelated geometry.
+
+The separate `keyboard-controller/` project contains native KiCad authorities,
+checked exports and a standalone SCAD review. It does not replace the accepted
+physical assembly while copper continuity and placement remain unresolved.
+Its evidence ledger distinguishes the Zander reference from the kbdbabel drawing
+for the specimen's board family, including the conflicting RD/WR clock connection.
+
 ## Evidence and dimensions
 
 The original [Robotron 1715/1715W manual, printed p.35 (PDF page 36)](https://xepb.org/robotron/docs/pc_manu.pdf#page=36), digitized by U. Zander, lists these nominal envelopes:

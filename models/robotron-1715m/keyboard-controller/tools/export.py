@@ -4,6 +4,7 @@
 """
 import argparse,hashlib,json,math,os,shutil,subprocess,tempfile,collections,xml.etree.ElementTree as ET
 from pathlib import Path
+from geometry import arc_points, outline_polygon
 ROOT=Path(__file__).resolve().parents[1]
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(name,value):
@@ -51,33 +52,32 @@ def main():
   for pin in c['pins']:
    if (ref,pin) not in seen:mismatches.append([ref,pin,'missing pad'])
  if mismatches:raise SystemExit('Schematic/PCB pad-net mismatch: '+repr(mismatches[:10]))
- routes=[];art=[];edges=[]
+ routes=[];art=[];edges=[];vias=[]
  if board.Zones():raise SystemExit('Zone export not yet supported: refuse to omit geometry')
  for d in board.GetDrawings():
-  if d.GetShape()!=pcb.SHAPE_T_SEGMENT:continue
-  item={'id':str(d.m_Uuid.AsString()),'points':[xy(d.GetStart()),xy(d.GetEnd())],'width':round(d.GetWidth()/1e6,6)}
-  if d.GetLayer()==pcb.Edge_Cuts:edges.append(item['points'])
+  layer=d.GetLayer()
+  if layer not in (pcb.Edge_Cuts,pcb.Dwgs_User,pcb.Cmts_User):continue
+  if d.GetShape()==pcb.SHAPE_T_ARC:points=arc_points(xy(d.GetStart()),xy(d.GetArcMid()),xy(d.GetEnd()))
+  elif d.GetShape()==pcb.SHAPE_T_SEGMENT:points=[xy(d.GetStart()),xy(d.GetEnd())]
+  else:raise SystemExit('Unsupported review/outline shape; refuse to omit geometry')
+  item={'id':str(d.m_Uuid.AsString()),'points':points,'width':round(d.GetWidth()/1e6,6)}
+  if d.GetLayer()==pcb.Edge_Cuts:edges.extend([[a,b] for a,b in zip(points,points[1:])])
   elif d.GetLayer() in (pcb.Dwgs_User,pcb.Cmts_User):art.append(dict(item,side='top' if d.GetLayer()==pcb.Dwgs_User else 'bottom',net=None,evidence='photo-polyline; net unresolved'))
  for d in board.GetTracks():
-  if isinstance(d,pcb.PCB_VIA):raise SystemExit('Via export not yet supported: refuse to omit geometry')
-  if isinstance(d,pcb.PCB_ARC):raise SystemExit('Arc export not yet supported: refuse to omit geometry')
-  routes.append({'id':d.m_Uuid.AsString(),'points':[xy(d.GetStart()),xy(d.GetEnd())],'width':d.GetWidth()/1e6,'net':d.GetNetname(),'side':'top' if d.GetLayer()==pcb.F_Cu else 'bottom','evidence':'KiCad route; historical provenance requires review'})
- # Chain Edge.Cuts explicitly; KiCad serialization order is not polygon order.
- pending=edges[:];outline=[pending.pop(0)[0]]
- while pending or len(outline)==1:
-  candidates=[(i,b if a==outline[-1] else a) for i,(a,b) in enumerate(edges if len(outline)==1 else pending) if a==outline[-1] or b==outline[-1]]
-  if len(outline)==1:
-   outline.append(edges[0][1]);continue
-  if len(candidates)!=1:raise SystemExit('Outline is open, branched or has unsupported multiple loops')
-  i,nxt=candidates[0];pending.pop(i);outline.append(nxt)
- if outline[-1]!=outline[0]:raise SystemExit('Outline is not closed')
- layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline[:-1],'components':placed,'unplaced':unplaced,'routes':routes,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
+  if isinstance(d,pcb.PCB_VIA):
+   if d.GetViaType()!=pcb.VIATYPE_THROUGH:raise SystemExit('Only through vias are supported')
+   v={'id':d.m_Uuid.AsString(),'position':xy(d.GetPosition()),'diameter':d.GetWidth(pcb.F_Cu)/1e6,'drill':d.GetDrillValue()/1e6,'net':d.GetNetname()};vias.append(v);holes.append([*v['position'],v['drill']]);pads.append({'ref':v['id'],'pin':'via','position':v['position'],'size':[v['diameter']]*2,'drill':[v['drill']]*2,'net':v['net']});continue
+  if d.GetLayer() not in (pcb.F_Cu,pcb.B_Cu):raise SystemExit('Internal-layer tracks are unsupported')
+  points=arc_points(xy(d.GetStart()),xy(d.GetMid()),xy(d.GetEnd())) if isinstance(d,pcb.PCB_ARC) else [xy(d.GetStart()),xy(d.GetEnd())]
+  routes.append({'id':d.m_Uuid.AsString(),'points':points,'width':d.GetWidth()/1e6,'net':d.GetNetname(),'side':'top' if d.GetLayer()==pcb.F_Cu else 'bottom','evidence':'KiCad route; historical provenance requires review'})
+ outline=outline_polygon(edges)
+ layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline,'components':placed,'unplaced':unplaced,'routes':routes,'vias':vias,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
  write('layout.json',layout)
  # Semantic symbols preserve source numbered pins. ERC does not validate analog models.
  erc_summary=[{'type':v['type'],'severity':v['severity'],'description':v['description'],'items':[i['description'] for i in v['items']]} for v in violations]
  write('qualification.json',{'components':len(components),'placed':len(placed),'unplaced':len(unplaced),'padNetMismatches':mismatches,'electricalCopperSegments':len(routes),'unresolvedPhotoSegments':len(art),'erc':erc_summary,'drc':{'violations':dict(collections.Counter(v['type'] for v in drc_data['violations'])),'unconnectedItems':len(drc_data['unconnected_items'])},'limitations':['Signal pin directions are typed; power/passive terminals and analog behavior require separate review. Two isolated-label ERC warnings are RD_N (unused CPU output) and SHIELD (external cable shield).','Unrouted PCB, not fabrication ready. Photo graphics are not electrical copper.','Digital reference circuit; discrete pin numbering, specimen substitutions and analog section require review.']})
- scad=['// Generated from controller.kicad_pcb. Model-local mm; no independent placement edits.', 'controller_pcb_outline='+json.dumps(outline[:-1])+';', 'controller_pcb_edges='+json.dumps(edges)+';', 'controller_pcb_holes='+json.dumps(holes)+';', 'controller_pcb_pads='+json.dumps([[*p['position'],*p['size'],p['net']] for p in pads if p['pin']])+';']
+ scad=['// Generated from controller.kicad_pcb. Model-local mm; no independent placement edits.', 'controller_pcb_outline='+json.dumps(outline)+';', 'controller_pcb_edges='+json.dumps(edges)+';', 'controller_pcb_holes='+json.dumps(holes)+';', 'controller_pcb_pads='+json.dumps([[*p['position'],*p['size'],p['net'],p['drill'][0]] for p in pads if p['pin']])+';']
  scad+=['controller_pcb_dips='+json.dumps([[*c['position'],len(c['pads']),15.24 if len(c['pads']) in (24,40) else 7.62,c['ref'],c['rotation']] for c in placed if c['ref'].startswith('A')])+';']
  for side in ['top','bottom']:
   scad+=['controller_pcb_'+side+'_art='+json.dumps([[a['points'],a['width']] for a in art if a['side']==side])+';', 'controller_pcb_'+side+'_copper='+json.dumps([[a['points'],a['width']] for a in routes if a['side']==side])+';']
@@ -95,7 +95,7 @@ def main():
    x,y=c['position'];svg.append(f'<text x="{x}" y="{-y-4}" fill="white" font-size="2.8">{c["ref"]}</text>')
   svg.append('</g>')
  write('review.svg',''.join(svg)+'</svg>\n')
- inputs=['controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py']
+ inputs=['controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py']
  outputs=sorted(p for p in (ROOT/'generated').iterdir() if p.name!='manifest.json')
  write('manifest.json',{'schema':1,'tools':{'kicad':subprocess.check_output([cli,'version'],text=True).strip(),'pcbnew':pcb.GetBuildVersion()},'sources':{p:digest(ROOT/p) for p in inputs},'outputs':{str(p.relative_to(ROOT)):digest(p) for p in outputs}})
  print('Exported',len(components),'components;',len(unplaced),'unplaced;',len(art),'unresolved photo segments')

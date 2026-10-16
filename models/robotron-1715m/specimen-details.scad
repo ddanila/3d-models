@@ -85,11 +85,11 @@ module keyboard_controller_metal(){keyboard_controller_pose(){
 module keyboard_controller_ink(){keyboard_controller_pose(){
  translate([62,8,6.49])linear_extrude(.08)text("UB880D",size=3,halign="center",valign="center",font="Liberation Sans");
  // Only legible markings from owner photo 123622947; uncertain identities omitted.
- for(p=[[20,12,"К555ЛА9"],[20,-12,"К555ЛА9"],[-48,12,"К555ЛА9"],[89,-12,"К155ТМ2"],[114,-12,"К555ЛА7"]])
+ for(p=[[20,12,"К555ЛА9"],[20,-12,"К555ЛА9"],[-48,12,"К555ЛА9"],[89,-12,"К155ТМ2"],[114,-12,"К555ЛА3"]])
    translate([p[0],p[1],5.29])linear_extrude(.06)text(p[2],size=1.65,halign="center",valign="center",font="Liberation Sans");
  translate([126.2,8,6.35])slab(7.2,12,.12,.1);
  translate([-10,-16,1.72])linear_extrude(.06)text("5891",size=2.2,halign="center",font="Liberation Sans");
- translate([114,-20,1.72])linear_extrude(.06)text("062-330-4102",size=1.6,halign="center",font="Liberation Sans");
+ translate([114,-20,1.72])linear_extrude(.06)text("05-330-4102",size=1.6,halign="center",font="Liberation Sans");
 }}
 // Owner 123114519 / 123126017: slotted brown edge strips with retained screws.
 keyboard_mount_x=[-210,0,210];

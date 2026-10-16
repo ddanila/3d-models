@@ -24,11 +24,18 @@
       "path": "../reference/photos/PXL_20261012_123648677.jpg",
       "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
       "use": "Specimen placement and visible copper; approximate planar registration"
+    },
+    {
+      "id": "kbdbabel-comparison",
+      "url": "https://xepb.org/robotron/docs/kbdbabel_doc_robotron_pc1715.pdf",
+      "sha256": "88c1aa6171e143ebda660147fa5d6c43ea128080ef5d9558fed630f3d9fc28e1",
+      "use": "Comparison: 05-330-4102-8 1c board markings match the specimen family. Drawing shows 2732 and different connector/clock details; not blindly merged with Zander connectivity.",
+      "credit": "Andreas Kurz / kbdbabel, revision 1.3, 2009-01-18; document states CC-BY-SA 3.0. PDF not redistributed."
     }
   ],
   "specimen": {
-    "boardMarking": "062-330-4102",
-    "revision": "Unconfirmed against reference schematic 56-330-4103-7",
+    "boardMarking": "05-330-4102-8 1c L (underside); 05-330-4102 and -8 B 1c (top)",
+    "revision": "Photo marking matches the board family/revision in kbdbabel; component substitutions and electrical identity still require verification.",
     "rom": "Replacement EPROM, unread; S600 is reference firmware"
   },
   "gaps": [
@@ -56,6 +63,11 @@
       "id": "package-pinmap",
       "status": "unresolved",
       "detail": "Specimen substitutions and discrete package orientations require verification."
+    },
+    {
+      "id": "clock-source-disagreement",
+      "status": "unresolved",
+      "detail": "Zander connects WR to the output inverter; kbdbabel connects RD and leaves WR unused. Resolve by following specimen copper/continuity. The current HDL explicitly models the Zander reference."
     }
   ]
 }

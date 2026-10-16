@@ -3,7 +3,7 @@
 Work in progress under the [museum implementation plan](https://github.com/ddanila/dac/blob/main/docs/robotron/keyboard-controller-plan.md).
 
 The reference circuit is Zander drawing 56-330-4103-7. The photographed specimen
-is marked 062-330-4102 and has an unidentified replacement EPROM. Do not treat
+is marked 05-330-4102-8 1c and has an unidentified replacement EPROM. Do not treat
 the reference firmware or every reference component as identified specimen parts.
 
 `evidence.json` records source hashes, uses and unresolved claims. The published
@@ -46,9 +46,9 @@ python3 tools/export.py --check
 The exporter verifies every PCB pad against schematic connectivity and emits
 `generated/connectivity.json`, layout metadata, SCAD arrays, a two-sided SVG
 review, qualification results and source/output hashes. `--check` needs only
-standard Python. New vias/arcs currently cause export to fail explicitly rather
-than lose geometry. These exporter features still need implementation before
-routing can rely on them.
+standard Python. Circular arcs are sampled with a 0.025 mm chord-error target, and through vias
+retain copper diameter and drill geometry. Zones, blind vias and internal-layer
+tracks fail explicitly rather than silently disappear.
 
 The initial ERC has two isolated-label warnings: the unused CPU RD_N output and
 the cable shield boundary. DRC reports unresolved airwires and silk placement
@@ -88,3 +88,19 @@ landmarks, place the remaining reference components, establish discrete lead
 numbers, associate visible paths with nets, resolve airwires and review the
 analog transcription and jumper representation. Full physical assembly migration
 and continuity qualification remain open; successful exports do not close them.
+
+## Additional source review
+
+Full-resolution top and underside owner photos establish **05-330-4102-8 1c**,
+correcting the older model-derived `062-330-4102` identification. The kbdbabel
+drawing names the same board family/revision, but its output-clock connection
+uses RD rather than Zander's WR and its ROM is labeled 2732. These are recorded
+as source disagreements, not resolved by selecting whichever matches software.
+The current HDL remains explicitly the Zander reference circuit. The canonical model inscription is corrected to `05-330-4102`; the clearly
+visible end logic chip is marked `К555ЛА3`, correcting its earlier transcription.
+
+Run `tools/test_kicad.py` with KiCad's Python for an additional integration test:
+a temporary PCB with a curved track and through via must export correctly, and
+a deliberate pad/net mismatch must be rejected. This test does not edit the
+canonical PCB. The source PDF is linked and hashed in `evidence.json`; its stated
+CC-BY-SA 3.0 attribution is retained there and it is not redistributed here.

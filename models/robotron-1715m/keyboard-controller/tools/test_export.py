@@ -2,8 +2,17 @@
 """Fast consistency and handedness checks; no KiCad install required."""
 import importlib.util,json,subprocess,sys,tempfile,unittest,shutil
 from pathlib import Path
+from geometry import arc_points,outline_polygon
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_curves_and_outline_errors(self):
+  points=arc_points([10,0],[0,10],[-10,0])
+  self.assertEqual(points[0],[10,0]);self.assertEqual(points[-1],[-10,0])
+  self.assertGreater(max(y for x,y in points),9.9)
+  for x,y in points:self.assertAlmostEqual(x*x+y*y,100,places=4)
+  reverse=arc_points([-10,0],[0,10],[10,0]);self.assertGreater(max(y for x,y in reverse),9.9)
+  with self.assertRaises(ValueError):outline_polygon([[[0,0],[1,0]],[[1,0],[1,1]]])
+  with self.assertRaises(ValueError):arc_points([0,0],[1,0],[2,0])
  def test_pinned_sources(self):subprocess.run([sys.executable,R/'tools/export.py','--check'],check=True)
  def test_asymmetric_landmarks(self):
   layout=json.loads((R/'generated/layout.json').read_text());cs={c['ref']:c for c in layout['components']}

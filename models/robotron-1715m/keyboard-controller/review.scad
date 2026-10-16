@@ -10,7 +10,7 @@ module board(){difference(){
 }}
 rotate(side=="bottom"?[180,0,0]:[0,0,0]){
  color("#9e9a79")board();
- for(z=[-.08,1.6])color("#d8c98e")translate([0,0,z])for(p=controller_pcb_pads)translate([p[0],p[1],0])difference(){cylinder(d=p[2],h=.08);translate([0,0,-.1])cylinder(d=.85,h=.3);}
+ for(z=[-.08,1.6])color("#d8c98e")translate([0,0,z])for(p=controller_pcb_pads)translate([p[0],p[1],0])difference(){cylinder(d=p[2],h=.08);translate([0,0,-.1])cylinder(d=p[5],h=.3);}
  color("#b87b32"){
   translate([0,0,1.6])for(a=controller_pcb_top_copper)route(a);
   translate([0,0,-.08])for(a=controller_pcb_bottom_copper)route(a);
