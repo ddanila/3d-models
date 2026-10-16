@@ -1,5 +1,5 @@
 {
-  "scope": "44 sampled translations (controller follows canonical staged waypoints) between museum inspection poses. Cover toggles currently jump between endpoints; these samples investigate a potential interpolation, not an existing physical hinge or removal path. Keyboard separation is animated. Tests named moving solids against their enclosure, including controller packages/connectors/leads; touching allowed. Fasteners must be removed for physical disassembly. Cable deformation is qualified separately in DAC cable-geometry.spec.js at 21 positions in connected/parked modes; available physical slack remains unmeasured.",
+  "scope": "205 sampled translations every 2.5% (keyboard layers, matrix and controller follow canonical staged waypoints) between museum inspection poses. Cover toggles currently jump between endpoints; these samples investigate a potential interpolation, not an existing physical hinge or removal path. Keyboard separation is animated. Tests named moving solids against their enclosure and controller against the concurrently moving matrix, including controller packages/connectors/leads; touching allowed. Fasteners must be removed for physical disassembly. Cable deformation is qualified separately in DAC cable-geometry.spec.js at 21 positions in connected/parked modes; available physical slack remains unmeasured.",
   "toleranceMm3": 0.001,
   "results": [
     {
@@ -9,6 +9,39 @@
         0.0,
         0.0,
         0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.025,
+      "translationMm": [
+        0.0,
+        10.0,
+        4.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.05,
+      "translationMm": [
+        0.0,
+        20.0,
+        9.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.075,
+      "translationMm": [
+        0.0,
+        30.0,
+        13.5
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -26,11 +59,77 @@
     },
     {
       "part": "system-lid",
+      "fraction": 0.125,
+      "translationMm": [
+        0.0,
+        50.0,
+        22.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.15,
+      "translationMm": [
+        0.0,
+        60.0,
+        27.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.175,
+      "translationMm": [
+        0.0,
+        70.0,
+        31.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
       "fraction": 0.2,
       "translationMm": [
         0.0,
         80.0,
         36.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.225,
+      "translationMm": [
+        0.0,
+        90.0,
+        40.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.25,
+      "translationMm": [
+        0.0,
+        100.0,
+        45.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.275,
+      "translationMm": [
+        0.0,
+        110.0,
+        49.5
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -48,11 +147,77 @@
     },
     {
       "part": "system-lid",
+      "fraction": 0.325,
+      "translationMm": [
+        0.0,
+        130.0,
+        58.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.35,
+      "translationMm": [
+        0.0,
+        140.0,
+        63.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.375,
+      "translationMm": [
+        0.0,
+        150.0,
+        67.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
       "fraction": 0.4,
       "translationMm": [
         0.0,
         160.0,
         72.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.425,
+      "translationMm": [
+        0.0,
+        170.0,
+        76.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.45,
+      "translationMm": [
+        0.0,
+        180.0,
+        81.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.475,
+      "translationMm": [
+        0.0,
+        190.0,
+        85.5
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -70,11 +235,77 @@
     },
     {
       "part": "system-lid",
+      "fraction": 0.525,
+      "translationMm": [
+        0.0,
+        210.0,
+        94.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.55,
+      "translationMm": [
+        0.0,
+        220.0,
+        99.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.575,
+      "translationMm": [
+        0.0,
+        230.0,
+        103.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
       "fraction": 0.6,
       "translationMm": [
         0.0,
         240.0,
         108.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.625,
+      "translationMm": [
+        0.0,
+        250.0,
+        112.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.65,
+      "translationMm": [
+        0.0,
+        260.0,
+        117.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.675,
+      "translationMm": [
+        0.0,
+        270.0,
+        121.5
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -92,6 +323,39 @@
     },
     {
       "part": "system-lid",
+      "fraction": 0.725,
+      "translationMm": [
+        0.0,
+        290.0,
+        130.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.75,
+      "translationMm": [
+        0.0,
+        300.0,
+        135.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.775,
+      "translationMm": [
+        0.0,
+        310.0,
+        139.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
       "fraction": 0.8,
       "translationMm": [
         0.0,
@@ -103,11 +367,77 @@
     },
     {
       "part": "system-lid",
+      "fraction": 0.825,
+      "translationMm": [
+        0.0,
+        330.0,
+        148.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.85,
+      "translationMm": [
+        0.0,
+        340.0,
+        153.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.875,
+      "translationMm": [
+        0.0,
+        350.0,
+        157.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
       "fraction": 0.9,
       "translationMm": [
         0.0,
         360.0,
         162.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.925,
+      "translationMm": [
+        0.0,
+        370.0,
+        166.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.95,
+      "translationMm": [
+        0.0,
+        380.0,
+        171.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "system-lid",
+      "fraction": 0.975,
+      "translationMm": [
+        0.0,
+        390.0,
+        175.5
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -128,8 +458,41 @@
       "fraction": 0.0,
       "translationMm": [
         0.0,
-        -0.0,
+        0.0,
         0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.025,
+      "translationMm": [
+        0.0,
+        -5.25,
+        3.875
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.05,
+      "translationMm": [
+        0.0,
+        -10.5,
+        7.75
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.075,
+      "translationMm": [
+        0.0,
+        -15.75,
+        11.625
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -147,11 +510,77 @@
     },
     {
       "part": "monitor-upper",
+      "fraction": 0.125,
+      "translationMm": [
+        0.0,
+        -26.25,
+        19.375
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.15,
+      "translationMm": [
+        0.0,
+        -31.5,
+        23.25
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.175,
+      "translationMm": [
+        0.0,
+        -36.75,
+        27.125
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
       "fraction": 0.2,
       "translationMm": [
         0.0,
         -42.0,
         31.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.225,
+      "translationMm": [
+        0.0,
+        -47.25,
+        34.875
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.25,
+      "translationMm": [
+        0.0,
+        -52.5,
+        38.75
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.275,
+      "translationMm": [
+        0.0,
+        -57.75,
+        42.625
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -169,11 +598,77 @@
     },
     {
       "part": "monitor-upper",
+      "fraction": 0.325,
+      "translationMm": [
+        0.0,
+        -68.25,
+        50.375
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.35,
+      "translationMm": [
+        0.0,
+        -73.5,
+        54.25
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.375,
+      "translationMm": [
+        0.0,
+        -78.75,
+        58.125
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
       "fraction": 0.4,
       "translationMm": [
         0.0,
         -84.0,
         62.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.425,
+      "translationMm": [
+        0.0,
+        -89.25,
+        65.875
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.45,
+      "translationMm": [
+        0.0,
+        -94.5,
+        69.75
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.475,
+      "translationMm": [
+        0.0,
+        -99.75,
+        73.625
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -191,11 +686,77 @@
     },
     {
       "part": "monitor-upper",
+      "fraction": 0.525,
+      "translationMm": [
+        0.0,
+        -110.25,
+        81.375
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.55,
+      "translationMm": [
+        0.0,
+        -115.5,
+        85.25
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.575,
+      "translationMm": [
+        0.0,
+        -120.75,
+        89.125
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
       "fraction": 0.6,
       "translationMm": [
         0.0,
         -126.0,
         93.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.625,
+      "translationMm": [
+        0.0,
+        -131.25,
+        96.875
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.65,
+      "translationMm": [
+        0.0,
+        -136.5,
+        100.75
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.675,
+      "translationMm": [
+        0.0,
+        -141.75,
+        104.625
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -213,6 +774,39 @@
     },
     {
       "part": "monitor-upper",
+      "fraction": 0.725,
+      "translationMm": [
+        0.0,
+        -152.25,
+        112.375
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.75,
+      "translationMm": [
+        0.0,
+        -157.5,
+        116.25
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.775,
+      "translationMm": [
+        0.0,
+        -162.75,
+        120.125
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
       "fraction": 0.8,
       "translationMm": [
         0.0,
@@ -224,11 +818,77 @@
     },
     {
       "part": "monitor-upper",
+      "fraction": 0.825,
+      "translationMm": [
+        0.0,
+        -173.25,
+        127.875
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.85,
+      "translationMm": [
+        0.0,
+        -178.5,
+        131.75
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.875,
+      "translationMm": [
+        0.0,
+        -183.75,
+        135.625
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
       "fraction": 0.9,
       "translationMm": [
         0.0,
         -189.0,
         139.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.925,
+      "translationMm": [
+        0.0,
+        -194.25,
+        143.375
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.95,
+      "translationMm": [
+        0.0,
+        -199.5,
+        147.25
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "monitor-upper",
+      "fraction": 0.975,
+      "translationMm": [
+        0.0,
+        -204.75,
+        151.125
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -257,10 +917,76 @@
     },
     {
       "part": "keyboard-controller",
+      "fraction": 0.025,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.05,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.075,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
       "fraction": 0.1,
       "translationMm": [
         0.0,
-        -4.8,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.125,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.15,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.175,
+      "translationMm": [
+        0.0,
+        0.0,
         0.0
       ],
       "intersectionMm3": 0,
@@ -271,7 +997,40 @@
       "fraction": 0.2,
       "translationMm": [
         0.0,
-        -9.6,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.225,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.25,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.275,
+      "translationMm": [
+        0.0,
+        0.0,
         0.0
       ],
       "intersectionMm3": 0,
@@ -282,7 +1041,40 @@
       "fraction": 0.3,
       "translationMm": [
         0.0,
-        -14.4,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.325,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.35,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.375,
+      "translationMm": [
+        0.0,
+        0.0,
         0.0
       ],
       "intersectionMm3": 0,
@@ -293,8 +1085,41 @@
       "fraction": 0.4,
       "translationMm": [
         0.0,
-        -16.0,
-        14.0
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.425,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.45,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.475,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -302,6 +1127,116 @@
     {
       "part": "keyboard-controller",
       "fraction": 0.5,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.525,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.55,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.575,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.6,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.625,
+      "translationMm": [
+        0.0,
+        -4.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.65,
+      "translationMm": [
+        0.0,
+        -8.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.675,
+      "translationMm": [
+        0.0,
+        -12.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.7,
+      "translationMm": [
+        0.0,
+        -16.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.725,
+      "translationMm": [
+        0.0,
+        -16.0,
+        17.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.75,
       "translationMm": [
         0.0,
         -16.0,
@@ -312,22 +1247,11 @@
     },
     {
       "part": "keyboard-controller",
-      "fraction": 0.6,
+      "fraction": 0.775,
       "translationMm": [
         0.0,
         -16.0,
-        56.0
-      ],
-      "intersectionMm3": 0,
-      "clear": true
-    },
-    {
-      "part": "keyboard-controller",
-      "fraction": 0.7,
-      "translationMm": [
-        0.0,
-        1.6,
-        70.0
+        52.5
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -337,7 +1261,40 @@
       "fraction": 0.8,
       "translationMm": [
         0.0,
-        54.4,
+        -16.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.825,
+      "translationMm": [
+        0.0,
+        28.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.85,
+      "translationMm": [
+        0.0,
+        72.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.875,
+      "translationMm": [
+        0.0,
+        116.0,
         70.0
       ],
       "intersectionMm3": 0,
@@ -348,7 +1305,40 @@
       "fraction": 0.9,
       "translationMm": [
         0.0,
-        107.2,
+        160.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.925,
+      "translationMm": [
+        0.0,
+        160.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.95,
+      "translationMm": [
+        0.0,
+        160.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-controller",
+      "fraction": 0.975,
+      "translationMm": [
+        0.0,
+        160.0,
         70.0
       ],
       "intersectionMm3": 0,
@@ -378,7 +1368,18 @@
     },
     {
       "part": "keyboard-matrix",
-      "fraction": 0.1,
+      "fraction": 0.025,
+      "translationMm": [
+        0.0,
+        0.0,
+        1.1
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.05,
       "translationMm": [
         0.0,
         0.0,
@@ -389,7 +1390,18 @@
     },
     {
       "part": "keyboard-matrix",
-      "fraction": 0.2,
+      "fraction": 0.075,
+      "translationMm": [
+        0.0,
+        0.0,
+        3.3
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.1,
       "translationMm": [
         0.0,
         0.0,
@@ -400,7 +1412,18 @@
     },
     {
       "part": "keyboard-matrix",
-      "fraction": 0.3,
+      "fraction": 0.125,
+      "translationMm": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.15,
       "translationMm": [
         0.0,
         0.0,
@@ -411,7 +1434,18 @@
     },
     {
       "part": "keyboard-matrix",
-      "fraction": 0.4,
+      "fraction": 0.175,
+      "translationMm": [
+        0.0,
+        0.0,
+        7.7
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.2,
       "translationMm": [
         0.0,
         0.0,
@@ -422,7 +1456,18 @@
     },
     {
       "part": "keyboard-matrix",
-      "fraction": 0.5,
+      "fraction": 0.225,
+      "translationMm": [
+        0.0,
+        0.0,
+        9.9
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.25,
       "translationMm": [
         0.0,
         0.0,
@@ -433,7 +1478,18 @@
     },
     {
       "part": "keyboard-matrix",
-      "fraction": 0.6,
+      "fraction": 0.275,
+      "translationMm": [
+        0.0,
+        0.0,
+        12.1
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.3,
       "translationMm": [
         0.0,
         0.0,
@@ -444,7 +1500,18 @@
     },
     {
       "part": "keyboard-matrix",
-      "fraction": 0.7,
+      "fraction": 0.325,
+      "translationMm": [
+        0.0,
+        0.0,
+        14.3
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.35,
       "translationMm": [
         0.0,
         0.0,
@@ -455,7 +1522,18 @@
     },
     {
       "part": "keyboard-matrix",
-      "fraction": 0.8,
+      "fraction": 0.375,
+      "translationMm": [
+        0.0,
+        0.0,
+        16.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.4,
       "translationMm": [
         0.0,
         0.0,
@@ -466,11 +1544,253 @@
     },
     {
       "part": "keyboard-matrix",
-      "fraction": 0.9,
+      "fraction": 0.425,
+      "translationMm": [
+        0.0,
+        0.0,
+        18.7
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.45,
       "translationMm": [
         0.0,
         0.0,
         19.8
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.475,
+      "translationMm": [
+        0.0,
+        0.0,
+        20.9
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.5,
+      "translationMm": [
+        0.0,
+        0.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.525,
+      "translationMm": [
+        0.0,
+        -15.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.55,
+      "translationMm": [
+        0.0,
+        -30.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.575,
+      "translationMm": [
+        0.0,
+        -45.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.6,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.625,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.65,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.675,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.7,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.725,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.75,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.775,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.8,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.825,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.85,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.875,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.9,
+      "translationMm": [
+        0.0,
+        -60.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.925,
+      "translationMm": [
+        0.0,
+        -45.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.95,
+      "translationMm": [
+        0.0,
+        -30.0,
+        22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "keyboard-matrix",
+      "fraction": 0.975,
+      "translationMm": [
+        0.0,
+        -15.0,
+        22.0
       ],
       "intersectionMm3": 0,
       "clear": true
@@ -482,6 +1802,457 @@
         0.0,
         0.0,
         22.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.0,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.025,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.05,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.075,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.1,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.125,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.15,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.175,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.2,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.225,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.25,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.275,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.3,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.325,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.35,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.375,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.4,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.425,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.45,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.475,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.5,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.525,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.55,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.575,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.6,
+      "translationMm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.625,
+      "translationMm": [
+        0.0,
+        -4.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.65,
+      "translationMm": [
+        0.0,
+        -8.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.675,
+      "translationMm": [
+        0.0,
+        -12.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.7,
+      "translationMm": [
+        0.0,
+        -16.0,
+        0.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.725,
+      "translationMm": [
+        0.0,
+        -16.0,
+        17.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.75,
+      "translationMm": [
+        0.0,
+        -16.0,
+        35.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.775,
+      "translationMm": [
+        0.0,
+        -16.0,
+        52.5
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.8,
+      "translationMm": [
+        0.0,
+        -16.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.825,
+      "translationMm": [
+        0.0,
+        28.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.85,
+      "translationMm": [
+        0.0,
+        72.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.875,
+      "translationMm": [
+        0.0,
+        116.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.9,
+      "translationMm": [
+        0.0,
+        160.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.925,
+      "translationMm": [
+        0.0,
+        160.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.95,
+      "translationMm": [
+        0.0,
+        160.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 0.975,
+      "translationMm": [
+        0.0,
+        160.0,
+        70.0
+      ],
+      "intersectionMm3": 0,
+      "clear": true
+    },
+    {
+      "part": "controller-matrix",
+      "fraction": 1.0,
+      "translationMm": [
+        0.0,
+        160.0,
+        70.0
       ],
       "intersectionMm3": 0,
       "clear": true

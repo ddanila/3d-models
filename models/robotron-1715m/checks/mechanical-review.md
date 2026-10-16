@@ -26,23 +26,30 @@ python3 models/robotron-1715m/tools/compare-photos.py
 
 ## Sampled inspection motion — 2026-10-16
 
-`tools/check-inspection-motion.py` samples 11 positions for each of the system
-cover, monitor upper cover, keyboard controller and keyboard matrix. The initial
+`tools/check-inspection-motion.py` samples 41 positions for each of the system
+cover, monitor upper cover, keyboard controller and keyboard matrix, plus controller against the moving matrix. The initial
 straight controller path crossed the rear shell at 20% (426.483 mm³) and 30%
 (2978.941 mm³); see [initial results](inspection-motion-before.json) and
 [initial chart](inspection-motion-before.svg). A lift-first attempt cleared the
 bare board, but checking its packages/connectors/leads found a 26.297 mm³ contact
 with the shelf at 10%. No enclosure or PCB geometry was trimmed to hide it.
 
-The canonical [inspection path](../inspection-paths.json) now moves the controller
-16 mm forward, lifts it 70 mm, then moves it to the existing rear inspection
-position. DAC moves its components and cable endpoint together. The final
-[44 samples](inspection-motion.json) and [chart](inspection-motion.svg) are clear
-below 0.001 mm³, including the controller's attached components. Covers currently
-jump to their open pose; keyboard separation is animated. These are museum
-inspection paths, not instructions for physically opening the specimen.
+The first revised path cleared the enclosure, but a second check found a
+265.801 mm³ controller/matrix intersection at 40% separation. The canonical
+[inspection paths](../inspection-paths.json) now stage the layers: open them during
+the first half, move the raised matrix 60 mm forward, move the controller 16 mm
+forward and lift it 70 mm before moving it rearward, then return the matrix to its
+usual inspection position. Final positions are unchanged; components and cable
+endpoints follow their respective boards.
 
-This checks the named solids against their enclosure, not every pair in the
+The final [205 samples](inspection-motion.json) and [chart](inspection-motion.svg)
+at 2.5% intervals are clear below 0.001 mm³, including the controller's attached
+components against both the shell and moving matrix. Covers currently jump to
+their open pose; keyboard separation is animated. These are museum inspection
+paths, not instructions for physically opening the specimen.
+
+This checks the named solids against their enclosure and the two boards against each other,
+not every pair in the
 assembly or continuous swept volume. Fasteners, available cable slack and
 physical fit remain unverified. DAC's separate cable geometry tests sample 21
 positions in connected and parked modes; their recorded PSU-entry exceptions
