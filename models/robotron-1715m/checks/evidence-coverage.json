@@ -1,0 +1,1268 @@
+{
+  "scope": "Canonical exported part names only. First matching rule wins; overlaps are listed for review. Runtime-generated packages, labels and helpers are audited separately in DAC. Coverage is not proof of dimensions or physical print verification.",
+  "parts": [
+    {
+      "part": "case-base",
+      "rule": 4,
+      "overriddenRules": [
+        20
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "case-lid",
+      "rule": 5,
+      "overriddenRules": [
+        19
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "fascia",
+      "rule": 4,
+      "overriddenRules": [
+        20
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "drives",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "power",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "reset",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "pedestal",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "ring",
+      "rule": 8,
+      "overriddenRules": [],
+      "category": "measured"
+    },
+    {
+      "part": "monitor-shell-lower",
+      "rule": 7,
+      "overriddenRules": [
+        18
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "bezel",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "crt-rim",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "crt-glass",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-shell",
+      "rule": 6,
+      "overriddenRules": [
+        13
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-deck",
+      "rule": 10,
+      "overriddenRules": [
+        13
+      ],
+      "category": "measured"
+    },
+    {
+      "part": "hardware",
+      "rule": 3,
+      "overriddenRules": [],
+      "category": "reference"
+    },
+    {
+      "part": "cable",
+      "rule": 1,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-insets",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-latch-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-led-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-led-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-bottom",
+      "rule": 6,
+      "overriddenRules": [
+        13
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-feet",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-metal",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-grommet",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-fillers",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "cable-plug",
+      "rule": 1,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "plug-screws",
+      "rule": 1,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-tape",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-frames",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-mechanisms",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-motors",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-boards",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-contacts",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-coils",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-bracket",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-boards-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-boards-display-controller",
+      "rule": 0,
+      "overriddenRules": [
+        17
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "logic-connectors-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-connectors-display-controller",
+      "rule": 0,
+      "overriddenRules": [
+        17
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "psu-chassis",
+      "rule": 16,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "psu-cover",
+      "rule": 16,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "fan-frame",
+      "rule": 16,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "fan-rotor",
+      "rule": 16,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "ribbon-cables",
+      "rule": 2,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "ribbon-stripes",
+      "rule": 2,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "power-wires-red",
+      "rule": 2,
+      "overriddenRules": [
+        20
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "power-wires-black",
+      "rule": 2,
+      "overriddenRules": [
+        20
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "power-wires-yellow",
+      "rule": 2,
+      "overriddenRules": [
+        20
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-pcb",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-switches",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-shell-upper",
+      "rule": 7,
+      "overriddenRules": [
+        18
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "tube-funnel",
+      "rule": 11,
+      "overriddenRules": [],
+      "category": "reference"
+    },
+    {
+      "part": "tube-neck",
+      "rule": 11,
+      "overriddenRules": [],
+      "category": "reference"
+    },
+    {
+      "part": "monitor-yoke",
+      "rule": 11,
+      "overriddenRules": [
+        18
+      ],
+      "category": "reference"
+    },
+    {
+      "part": "monitor-coils",
+      "rule": 11,
+      "overriddenRules": [
+        18
+      ],
+      "category": "reference"
+    },
+    {
+      "part": "monitor-chassis",
+      "rule": 11,
+      "overriddenRules": [
+        18
+      ],
+      "category": "reference"
+    },
+    {
+      "part": "monitor-boards",
+      "rule": 11,
+      "overriddenRules": [
+        18
+      ],
+      "category": "reference"
+    },
+    {
+      "part": "monitor-components",
+      "rule": 11,
+      "overriddenRules": [
+        18
+      ],
+      "category": "reference"
+    },
+    {
+      "part": "monitor-capacitors",
+      "rule": 11,
+      "overriddenRules": [
+        18
+      ],
+      "category": "reference"
+    },
+    {
+      "part": "monitor-shield",
+      "rule": 11,
+      "overriddenRules": [
+        18
+      ],
+      "category": "reference"
+    },
+    {
+      "part": "monitor-wires",
+      "rule": 11,
+      "overriddenRules": [
+        18
+      ],
+      "category": "reference"
+    },
+    {
+      "part": "plug-insert",
+      "rule": 1,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-power-sockets",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-traces",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-label-plates",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-spindle-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-spindle-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-head-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-head-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-latch-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-clamp-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-clamp-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-head-metal-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-head-metal-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-board-components",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-mounts-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-mounts-display-controller",
+      "rule": 0,
+      "overriddenRules": [
+        17
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "chassis-fasteners",
+      "rule": 3,
+      "overriddenRules": [],
+      "category": "reference"
+    },
+    {
+      "part": "keyboard-plate",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-fasteners",
+      "rule": 11,
+      "overriddenRules": [
+        18
+      ],
+      "category": "reference"
+    },
+    {
+      "part": "monitor-passives",
+      "rule": 11,
+      "overriddenRules": [
+        18
+      ],
+      "category": "reference"
+    },
+    {
+      "part": "monitor-socket",
+      "rule": 11,
+      "overriddenRules": [
+        18
+      ],
+      "category": "reference"
+    },
+    {
+      "part": "prototype-spring",
+      "rule": 9,
+      "overriddenRules": [
+        13
+      ],
+      "category": "measured"
+    },
+    {
+      "part": "prototype-stem",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-resistors-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-ceramics-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-ceramics-display-controller",
+      "rule": 0,
+      "overriddenRules": [
+        17
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "logic-electrolytics-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-electrolytics-display-controller",
+      "rule": 0,
+      "overriddenRules": [
+        17
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "logic-crystals-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-passive-leads-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-passive-leads-display-controller",
+      "rule": 0,
+      "overriddenRules": [
+        17
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "logic-film-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-film-display-controller",
+      "rule": 0,
+      "overriddenRules": [
+        17
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "logic-connector-contacts-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-connector-contacts-display-controller",
+      "rule": 0,
+      "overriddenRules": [
+        17
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "prototype-pcb-pad",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "prototype-pcb-solder",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "ribbon-ridges",
+      "rule": 2,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-cable-plugs",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-head-arm-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-head-arm-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-medium-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-medium-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-board",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-chips",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-ceramic",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-rom-cover",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-connectors",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-caps",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-metal",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-ink",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-insulators",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-matrix-artwork",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "system-foot-metal",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-under-controls",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-stand-metal",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "rear-socket-bodies",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "rear-socket-contacts",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "rear-power-black",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "rear-blanking-plates",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "rear-legends",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "rear-panel",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "rear-recesses",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "rear-socket-inserts",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "rear-fasteners",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "rear-nameplate",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "rear-nameplate-ink",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-joint-lip",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-pcb-metal",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-traces",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-power-lead",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-signal-lead",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-plug-bodies",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-plug-metal",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-plug-collars",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-guides",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-contact-pads",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "prototype-rubber",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-diskette-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-diskette-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-diskette-label-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-diskette-label-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-direction-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-direction-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-shaft-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-shaft-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-release-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-release-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-pcb-supports",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-pcb-fasteners",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-entry-wires",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-contact-routes",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-solder",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-protect-tab-0",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-protect-tab-1",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-leads",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-entry-choke",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-mount-pads",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "monitor-cable-clips",
+      "rule": 18,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "fan-retainers",
+      "rule": 16,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "fan-cushions",
+      "rule": 16,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "psu-grommets",
+      "rule": 16,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-adapter-boards",
+      "rule": 14,
+      "overriddenRules": [
+        15
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "drive-adapter-traces",
+      "rule": 14,
+      "overriddenRules": [
+        15
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "drive-adapter-sockets",
+      "rule": 14,
+      "overriddenRules": [
+        15
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "logic-artwork-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-artwork-display-controller",
+      "rule": 0,
+      "overriddenRules": [
+        17
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "drive-adapter-edge",
+      "rule": 14,
+      "overriddenRules": [
+        15
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "drive-adapter-contacts",
+      "rule": 14,
+      "overriddenRules": [
+        15
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "case-lid-inserts",
+      "rule": 5,
+      "overriddenRules": [
+        19
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "case-lid-fixings",
+      "rule": 5,
+      "overriddenRules": [
+        19
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "logic-inductors-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-inductors-display-controller",
+      "rule": 0,
+      "overriddenRules": [
+        17
+      ],
+      "category": "photo"
+    },
+    {
+      "part": "power-housing",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "front-labels",
+      "rule": 20,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-cable-support",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-internal-cable",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-matrix-socket",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-matrix-contacts",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-resistors",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-resistor-bands",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-entry-black",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-entry-pink",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-entry-blue",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-silkscreen-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-ribbon-plug-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-ic-sockets-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-ic-contacts-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-jumpers-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "drive-cable-contacts",
+      "rule": 15,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "logic-visible-lands-motherboard",
+      "rule": 17,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-entry-rubber",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-base-insulator",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-mounts",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-shield",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    },
+    {
+      "part": "keyboard-controller-rom-ink",
+      "rule": 13,
+      "overriddenRules": [],
+      "category": "photo"
+    }
+  ],
+  "unmapped": []
+}

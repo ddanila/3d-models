@@ -58,3 +58,26 @@ remain explicit. Canonical CAD stays v48 and no print-verification status change
 [Evidence colour rules](../evidence-map.json) distinguish supplied dimensions,
 owner-photo reconstruction, comparative references and unmapped geometry. These
 are independent of the model registry's printed-and-verified classification.
+
+## Staged cover motion and evidence audit (October 16)
+
+The expanded `inspection-motion.json` now tests seven pairs at 41 positions
+(287 samples). Case lid, inserts, fixings and fascia are checked against the
+PSU chassis/cover, fan frame, logic boards and connectors. The monitor upper
+shell is additionally checked against the tube, yoke, chassis, boards,
+components, capacitors and shield. The first diagonal paths intersected these
+contents (`cover-motion-before.json`); canonical paths now lift fully before
+translating. All 287 sampled intersections are below 0.001 mm³. DAC animates
+these paths, including reverse movement and attached visual elements.
+
+This remains sampled museum motion, not a physical disassembly procedure or
+continuous swept-volume proof. It does not cover all solids or establish cable
+slack, fastener removal or the exact physical separation sequence. No geometry
+or STL changed, and no model gained printed-and-verified status.
+
+`tools/audit-evidence.py` records ordered source-rule coverage in
+`evidence-coverage.json`: all 197 exported parts have a mapping, with overlaps
+listed explicitly. Display-controller parts use their own specimen photo;
+owner-confirmed sheet thickness is separated from estimated bends and joins.
+Runtime-generated meshes are audited in DAC. Source coverage is not dimensional
+verification. Generic hardware remains a comparative reference.
