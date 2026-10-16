@@ -29,6 +29,13 @@
       "category": "reference"
     },
     {
+      "pattern": "^(opaque-key-cap|clear-key-shell|keycap-|silver-key-|key-[0-9])",
+      "assembly": "keyboard",
+      "category": "photo",
+      "verification": "keycap",
+      "note": "Owner keycap photos; known raised widths and spring dimensions are recorded separately."
+    },
+    {
       "pattern": "^(keyboard|keycap|silver-key|keys-|prototype-)",
       "assembly": "keyboard",
       "category": "photo",
