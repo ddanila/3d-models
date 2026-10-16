@@ -81,3 +81,21 @@ listed explicitly. Display-controller parts use their own specimen photo;
 owner-confirmed sheet thickness is separated from estimated bends and joins.
 Runtime-generated meshes are audited in DAC. Source coverage is not dimensional
 verification. Generic hardware remains a comparative reference.
+
+## Component relationships and monitor lead references
+
+`relationships.json` groups the keyboard matrix supports/fasteners, controller
+mounts, cable restraint, monitor captive leads/plugs and drive adapter/ribbon
+parts. These are mechanical, photo-referenced relationships; they do not certify
+pin wiring, electrical continuity, thread sizes or hidden joints. Each group's
+part names and source photo are checked by `tools/check-metadata.py`.
+
+`monitor-cable-paths.json` records the exact Bezier control points and nominal
+radii from `monitor-cables.scad`; the cheap metadata check detects divergence.
+DAC uses these as the rest centerlines and rotates tube cross sections during
+inspection, preserving their shape instead of stretching vertices by height.
+The browser's deformation is an illustrative inspection route, not new CAD or
+an estimate of available physical cable length. No STL or physical verification
+status changes. DAC's `docs/robotron/monitor-cable-audit.json` reports 164 sampled
+poses for endpoint attachment, bend radius and direction change; it is not an
+all-parts collision or strain certificate.

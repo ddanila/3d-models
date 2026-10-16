@@ -24,4 +24,14 @@ for item in read('browser/downloads.json'):
   if item['name']=='motherboard':
    for name in ['logic-ic-sockets','logic-ic-contacts','logic-jumpers','logic-visible-lands']:
     assert 'shape("'+name+'")' in wrapper,'missing downloadable geometry '+name
+names={p['name'] for p in model['parts']}
+for group in read('relationships.json')['groups']:
+ assert group['kind']=='mechanical', 'relationship must not imply an unverified electrical net'
+ assert set(group['members'])<=names, group['title']+': unknown model part'
+ assert (root/'reference/photos'/('PXL_'+group['photo']+'.jpg')).is_file(),group['title']+': missing source photo'
+scad=(root/'monitor-cables.scad').read_text()
+for name,lead in read('monitor-cable-paths.json')['leads'].items():
+ block=scad.split('module '+name.replace('-','_')+'() {')[1].split('\n}')[0]
+ curves=json.loads(block.split('monitor_lead(')[1].rsplit(',',1)[0].strip())
+ assert curves==lead['curves'],name+': centerline differs from canonical SCAD'
 print('PASS counts, evidence, meshes and self-contained download sources')
