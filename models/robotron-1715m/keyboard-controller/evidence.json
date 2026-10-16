@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "id": "schematic",
+      "url": "https://www.sax.de/~zander/pc1715/pc_tasts.pdf",
+      "sha256": "ddae459f60872a322202f29332346270cf9735eaa198a9795a5b7cbe68e8443f",
+      "use": "Reference electrical circuit"
+    },
+    {
+      "id": "placement",
+      "url": "https://www.sax.de/~zander/pc1715/pc_tastb.pdf",
+      "sha256": "dc6a44388be4d9263ebf02f7631105058f658946abe96341fac7f418a2d3671e",
+      "use": "Unfinished placement sheet; do not derive placement from it"
+    },
+    {
+      "id": "photo-top",
+      "path": "../reference/photos/PXL_20261012_123622947.jpg",
+      "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "use": "Specimen placement and visible copper; approximate planar registration"
+    },
+    {
+      "id": "photo-bottom",
+      "path": "../reference/photos/PXL_20261012_123648677.jpg",
+      "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+      "use": "Specimen placement and visible copper; approximate planar registration"
+    }
+  ],
+  "specimen": {
+    "boardMarking": "062-330-4102",
+    "revision": "Unconfirmed against reference schematic 56-330-4103-7",
+    "rom": "Replacement EPROM, unread; S600 is reference firmware"
+  },
+  "gaps": [
+    {
+      "id": "placement-sheet",
+      "status": "unusable",
+      "detail": "Published placement PDF has unplaced components and a KC87 printer-module template title."
+    },
+    {
+      "id": "hidden-copper",
+      "status": "unresolved",
+      "detail": "Photo artwork has not been electrically traced; no continuity claim."
+    },
+    {
+      "id": "dimensions",
+      "status": "estimated",
+      "detail": "270 by 46 by 1.6 mm envelope and existing package placements are inherited photo estimates."
+    },
+    {
+      "id": "specimen-timing",
+      "status": "unmeasured",
+      "detail": "RC oscillator and propagation delays are not measured."
+    },
+    {
+      "id": "package-pinmap",
+      "status": "unresolved",
+      "detail": "Specimen substitutions and discrete package orientations require verification."
+    }
+  ]
+}
