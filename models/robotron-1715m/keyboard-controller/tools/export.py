@@ -5,6 +5,7 @@
 import argparse,hashlib,json,math,os,shutil,subprocess,tempfile,collections,xml.etree.ElementTree as ET
 from pathlib import Path
 from geometry import arc_points, outline_polygon
+from photo_registration import review as photo_review, svg as photo_svg
 ROOT=Path(__file__).resolve().parents[1]
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(name,value):
@@ -74,10 +75,12 @@ def main():
  layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline,'components':placed,'unplaced':unplaced,'routes':routes,'vias':vias,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
  write('layout.json',layout)
+ photo=photo_review(layout);write('photo-registration.json',photo);write('photo-registration.svg',photo_svg(photo))
  # Semantic symbols preserve source numbered pins. ERC does not validate analog models.
  erc_summary=[{'type':v['type'],'severity':v['severity'],'description':v['description'],'items':[i['description'] for i in v['items']]} for v in violations]
  write('qualification.json',{'components':len(components),'placed':len(placed),'unplaced':len(unplaced),'padNetMismatches':mismatches,'electricalCopperSegments':len(routes),'unresolvedPhotoSegments':len(art),'erc':erc_summary,'drc':{'violations':dict(collections.Counter(v['type'] for v in drc_data['violations'])),'unconnectedItems':len(drc_data['unconnected_items'])},'limitations':['Signal pin directions are typed; power/passive terminals and analog behavior require separate review. Two isolated-label ERC warnings are RD_N (unused CPU output) and SHIELD (external cable shield).','Unrouted PCB, not fabrication ready. Photo graphics are not electrical copper.','Digital reference circuit; discrete pin numbering, specimen substitutions and analog section require review.']})
  scad=['// Generated from controller.kicad_pcb. Model-local mm; no independent placement edits.', 'controller_pcb_outline='+json.dumps(outline)+';', 'controller_pcb_edges='+json.dumps(edges)+';', 'controller_pcb_holes='+json.dumps(holes)+';', 'controller_pcb_pads='+json.dumps([[*p['position'],*p['size'],p['net'],p['drill'][0]] for p in pads if p['pin']])+';']
+ scad+=['controller_pcb_dip_pads='+json.dumps([[*p['position'],p['drill'][0],p['ref'],p['pin']]for p in pads if p['ref'].startswith('A')])+';']
  scad+=['controller_pcb_dips='+json.dumps([[*c['position'],len(c['pads']),15.24 if len(c['pads']) in (24,40) else 7.62,c['ref'],c['rotation']] for c in placed if c['ref'].startswith('A')])+';']
  for side in ['top','bottom']:
   scad+=['controller_pcb_'+side+'_art='+json.dumps([[a['points'],a['width']] for a in art if a['side']==side])+';', 'controller_pcb_'+side+'_copper='+json.dumps([[a['points'],a['width']] for a in routes if a['side']==side])+';']
@@ -95,7 +98,7 @@ def main():
    x,y=c['position'];svg.append(f'<text x="{x}" y="{-y-4}" fill="white" font-size="2.8">{c["ref"]}</text>')
   svg.append('</g>')
  write('review.svg',''.join(svg)+'</svg>\n')
- inputs=['controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py']
+ inputs=['controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/photo_registration.py','photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
  outputs=sorted(p for p in (ROOT/'generated').iterdir() if p.name!='manifest.json')
  write('manifest.json',{'schema':1,'tools':{'kicad':subprocess.check_output([cli,'version'],text=True).strip(),'pcbnew':pcb.GetBuildVersion()},'sources':{p:digest(ROOT/p) for p in inputs},'outputs':{str(p.relative_to(ROOT)):digest(p) for p in outputs}})
  print('Exported',len(components),'components;',len(unplaced),'unplaced;',len(art),'unresolved photo segments')

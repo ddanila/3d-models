@@ -1,9 +1,9 @@
 name: Keyboard controller export consistency
 on:
   push:
-    paths: ['models/robotron-1715m/keyboard-controller/**', '.github/workflows/keyboard-controller.yml']
+    paths: ['models/robotron-1715m/**', '.github/workflows/keyboard-controller.yml']
   pull_request:
-    paths: ['models/robotron-1715m/keyboard-controller/**', '.github/workflows/keyboard-controller.yml']
+    paths: ['models/robotron-1715m/**', '.github/workflows/keyboard-controller.yml']
 permissions:
   contents: read
 jobs:
@@ -12,3 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_export.py
+      - run: python3 models/robotron-1715m/tools/check-metadata.py

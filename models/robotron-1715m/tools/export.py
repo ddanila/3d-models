@@ -260,4 +260,10 @@ for patch in patches:
     path=out/'textures'/f"{patch['name']}.jpg";crop.save(path,quality=92)
     patch['texture']=str(path.relative_to(out));patch['textureSha256']=hashlib.sha256(path.read_bytes()).hexdigest()
     patch['textureUv']=[[(u*w-left)/(right-left),(v*h-top)/(bottom-top)] for u,v in uv]
+# A partial export may not bless stale controller meshes with new source hashes.
+controller_parts={'keyboard-controller-'+n for n in ['board','chips','metal','ink','traces','solder','ceramic','rom-cover','rom-ink']}
+if args.parts is None or controller_parts.issubset(set(args.parts)):
+    manifest['keyboardControllerSource']={name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in ['specimen-details.scad','keyboard-controller/generated/controller.scad','controller-package-data.scad']}
+elif (out/'model.json').exists():
+    manifest['keyboardControllerSource']=json.loads((out/'model.json').read_text()).get('keyboardControllerSource',{})
 (out/'model.json').write_text(json.dumps(manifest,indent=2)+'\n')

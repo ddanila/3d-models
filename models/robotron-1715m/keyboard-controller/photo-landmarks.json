@@ -1,0 +1,271 @@
+{
+  "schema": 1,
+  "photo": "../reference/photos/PXL_20261012_123622947.jpg",
+  "imageSize": [
+    3072,
+    4080
+  ],
+  "photoCorners": [
+    [
+      1085.157,
+      447.368
+    ],
+    [
+      1716.114,
+      438.421
+    ],
+    [
+      1872.734,
+      3992.763
+    ],
+    [
+      1257.439,
+      3995.0
+    ]
+  ],
+  "modelCorners": [
+    [
+      -135,
+      -23
+    ],
+    [
+      -135,
+      23
+    ],
+    [
+      135,
+      23
+    ],
+    [
+      135,
+      -23
+    ]
+  ],
+  "scope": "Manual top-photo lead/pad landmarks. Nominal board envelope, not dimensional metrology or electrical continuity. Lead feet may obscure hole centres. ROM socket orientation and discrete references remain unresolved.",
+  "pixelUncertainty": 8,
+  "maxResidualMm": 1.25,
+  "components": {
+    "A1": {
+      "pins": {
+        "1": [
+          1285,
+          1495
+        ],
+        "7": [
+          1300,
+          1690
+        ],
+        "8": [
+          1399,
+          1681
+        ],
+        "14": [
+          1389,
+          1482
+        ]
+      },
+      "orientationEvidence": "Visible notch or pin-one mark at cable-facing end; reference package pin order.",
+      "placementStatus": "photo-estimated",
+      "checkPins": {
+        "4": [
+          1292,
+          1590
+        ],
+        "11": [
+          1394,
+          1580
+        ]
+      }
+    },
+    "A2.3": {
+      "pins": {
+        "1": [
+          1630,
+          1475
+        ],
+        "7": [
+          1646,
+          1675
+        ],
+        "8": [
+          1730,
+          1670
+        ],
+        "14": [
+          1710,
+          1468
+        ]
+      },
+      "orientationEvidence": "Visible notch or pin-one mark at cable-facing end; reference package pin order.",
+      "placementStatus": "photo-estimated",
+      "checkPins": {
+        "4": [
+          1638,
+          1575
+        ]
+      }
+    },
+    "A2.1": {
+      "pins": {
+        "1": [
+          1420,
+          2465
+        ],
+        "7": [
+          1433,
+          2647
+        ],
+        "8": [
+          1530,
+          2644
+        ],
+        "14": [
+          1515,
+          2460
+        ]
+      },
+      "orientationEvidence": "Visible notch or pin-one mark at cable-facing end; reference package pin order.",
+      "placementStatus": "photo-estimated",
+      "checkPins": {
+        "4": [
+          1425,
+          2555
+        ]
+      }
+    },
+    "A2.2": {
+      "pins": {
+        "1": [
+          1645,
+          2448
+        ],
+        "7": [
+          1655,
+          2635
+        ],
+        "8": [
+          1745,
+          2630
+        ],
+        "14": [
+          1735,
+          2445
+        ]
+      },
+      "orientationEvidence": "Visible notch or pin-one mark at cable-facing end; reference package pin order.",
+      "placementStatus": "photo-estimated",
+      "checkPins": {
+        "4": [
+          1648,
+          2540
+        ]
+      }
+    },
+    "A4": {
+      "pins": {
+        "1": [
+          1342,
+          2815
+        ],
+        "10": [
+          1350,
+          3090
+        ],
+        "11": [
+          1450,
+          3080
+        ],
+        "20": [
+          1438,
+          2808
+        ]
+      },
+      "orientationEvidence": "Visible notch or pin-one mark at cable-facing end; reference package pin order.",
+      "placementStatus": "photo-estimated"
+    },
+    "A5": {
+      "pins": {
+        "1": [
+          1575,
+          2748
+        ],
+        "20": [
+          1600,
+          3357
+        ],
+        "21": [
+          1785,
+          3355
+        ],
+        "40": [
+          1760,
+          2740
+        ]
+      },
+      "orientationEvidence": "Visible notch or pin-one mark at cable-facing end; reference package pin order.",
+      "placementStatus": "photo-estimated",
+      "checkPins": {
+        "14": [
+          1595,
+          3170
+        ]
+      }
+    },
+    "A6": {
+      "pins": {
+        "1": [
+          1335,
+          3270
+        ],
+        "7": [
+          1345,
+          3452
+        ],
+        "8": [
+          1435,
+          3445
+        ],
+        "14": [
+          1428,
+          3265
+        ]
+      },
+      "orientationEvidence": "Visible notch or pin-one mark at cable-facing end; reference package pin order.",
+      "placementStatus": "photo-estimated",
+      "checkPins": {
+        "4": [
+          1340,
+          3365
+        ]
+      }
+    },
+    "A7": {
+      "pins": {
+        "1": [
+          1340,
+          3575
+        ],
+        "7": [
+          1350,
+          3760
+        ],
+        "8": [
+          1447,
+          3760
+        ],
+        "14": [
+          1436,
+          3572
+        ]
+      },
+      "orientationEvidence": "Visible notch or pin-one mark at cable-facing end; reference package pin order.",
+      "placementStatus": "photo-estimated",
+      "checkPins": {
+        "4": [
+          1345,
+          3670
+        ]
+      }
+    }
+  }
+}

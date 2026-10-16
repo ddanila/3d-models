@@ -52,7 +52,7 @@
     {
       "id": "dimensions",
       "status": "estimated",
-      "detail": "270 by 46 by 1.6 mm envelope and existing package placements are inherited photo estimates."
+      "detail": "Nominal 270 by 46 by 1.6 mm envelope. Seven DIP placements fitted to numbered top-photo landmarks; A4 fails tolerance and A8 orientation remains unqualified. See generated/photo-registration.json."
     },
     {
       "id": "specimen-timing",

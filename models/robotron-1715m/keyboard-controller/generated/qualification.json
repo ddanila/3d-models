@@ -2,11 +2,7 @@
   "components": 68,
   "drc": {
     "unconnectedItems": 233,
-    "violations": {
-      "silk_edge_clearance": 2,
-      "silk_over_copper": 19,
-      "silk_overlap": 66
-    }
+    "violations": {}
   },
   "electricalCopperSegments": 0,
   "erc": [

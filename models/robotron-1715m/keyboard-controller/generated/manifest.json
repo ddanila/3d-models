@@ -1,23 +1,28 @@
 {
   "outputs": {
     "generated/connectivity.json": "2f72140842b1b8ebab498c22bb36112720f8c210d4457c0ee9fc3c459e3febc6",
-    "generated/controller.scad": "7987e705b9d2a135aa438da5d4f61d3cc886fc6acf96decb0b2373fc4dcd9a13",
-    "generated/layout.json": "2cc2ad9e953fa4a40f5427f27169a9159a8e1ab18d76cc033adf94b9f131ab6e",
-    "generated/qualification.json": "7539c10cbe77e23401a35df555dc99dabf97f47f229de8bac5c1c54999acccc9",
-    "generated/review.svg": "8cb1db618092398c56f4fde0d1d69c08ccd6af1540d5472a4a6fae8780611fee"
+    "generated/controller.scad": "8eddaa4b07188d7afea48c2a8e5e4d461e88b0ef48f156e04e9106381f46f3bf",
+    "generated/layout.json": "43f506d80839eeb79ae14f9f33d558424b150ddd86813e9e1e4f5c3134fbfb15",
+    "generated/photo-registration.json": "f5e570487a39aa14cb1933fb070a85fafb58d44c598179b6c02955726f2e2180",
+    "generated/photo-registration.svg": "271160dac0bc14b12135418692e9309dc3b3396de9c893cdb26d757030625478",
+    "generated/qualification.json": "ca8da6cdf716feb90978674cc9260666c2f5b22a79d8ff2f80599fe689c8b7cd",
+    "generated/review.svg": "c003eaac7a26b99d145814cef2c02e1447eb992cdabde531f6ae3b3a433cef6f"
   },
   "schema": 1,
   "sources": {
-    "component-evidence.json": "ba65bc502fb57854960d529c08e9da70b37547cd521b8204d3667cb21e302c5f",
-    "controller.kicad_pcb": "fc20f1cde57cbadbb86aaf7c06f49582bb4392aac9b723379ed414e91eb372ac",
-    "controller.kicad_pro": "228a3c4233e34cdc44da56b5155bb70714d024e3aa456057327f77e68841ea99",
+    "../reference/photos/PXL_20261012_123622947.jpg": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+    "component-evidence.json": "15bb1004f171f67c9308b5d803812ad1747f6fd3d345930e3236a2750323491b",
+    "controller.kicad_pcb": "1234f040dd646b6cd26af4489242fd4df026737064f32cd6c2584ad638b85e54",
+    "controller.kicad_pro": "6583dcdffccee3fd6c5e10ab0e3e900b75a7054cc98669379d044c91cda33356",
     "controller.kicad_sch": "c17a8f31fe4087ffd1774abad4822bbfd3f16ee4b35e9de2258be480c1ce7632",
-    "evidence.json": "e57eeeea1fc8f9d495c96e2b9d99e34b7a3dd1d2ec03957655467b6bc8ddd3b8",
+    "evidence.json": "e46521ad64198ae454823f7bd157980500a590e81d1d8d72a578021a222d634c",
     "fp-lib-table": "f6503b3e185475d8be43527f0ee177079a36e60001ae5ad21a1ababaed9f28bd",
     "kbd.kicad_sym": "08a2e33cd5017b9722d206a21a65d4ea6a2e7b46393d12ee8ac29dacc8644e99",
+    "photo-landmarks.json": "2f5210258deff2ede1a02b1bf41dbb8da6ee3912ab40dece03c63698119f0305",
     "sym-lib-table": "27194f2ba44182e9ce1b0fd5db14f03003a7cefcf53a287c7cb9d8b8e361a841",
-    "tools/export.py": "a6ee04857db9398805f86d37efcccc95e5f2ff341174efeb966466e1df7722ed",
-    "tools/geometry.py": "be71777d095f87f7f53643239e274989006de4ead1ad7181478d502e05351780"
+    "tools/export.py": "bfddb5a84aff3791ff92a12b0125052450830d1e428fde8d632a14beae4f64df",
+    "tools/geometry.py": "be71777d095f87f7f53643239e274989006de4ead1ad7181478d502e05351780",
+    "tools/photo_registration.py": "2a2bb445d4dd7879f40b37ba4bc9f22ed00c2092ab91717267ab4c53a401b878"
   },
   "tools": {
     "kicad": "10.0.6",

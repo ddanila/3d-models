@@ -1,5 +1,6 @@
 // Standalone electrical reconstruction review; does not replace qualified museum geometry.
 include <generated/controller.scad>
+include <../controller-package-data.scad>
 $fn=20;
 side="top"; // [top,bottom]
 show_unresolved_artwork=true;
@@ -20,5 +21,9 @@ rotate(side=="bottom"?[180,0,0]:[0,0,0]){
   translate([0,0,1.7])for(a=controller_pcb_top_art)route(a,.03);
   translate([0,0,-.15])for(a=controller_pcb_bottom_art)route(a,.03);
  }
- color("#22252b")for(p=controller_pcb_dips)translate([p[0],p[1],1.6])rotate([0,0,p[5]])translate([-(p[2]/2*2.54)/2,-(p[3]-1)/2,0])cube([p[2]/2*2.54,p[3]-1,3]);
+ for(p=controller_pcb_dips)for(pkg=controller_packages)if(pkg[0]==p[2])
+  translate([p[0],p[1],1.6])rotate([0,0,p[5]-90]){
+   color("#22252b")import(str("../",pkg[1]));
+   color("#b8b8b2")import(str("../",pkg[2]));
+  }
 }

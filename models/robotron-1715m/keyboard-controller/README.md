@@ -56,26 +56,25 @@ issues; see `generated/qualification.json`. These are recorded failures, not
 waived manufacturing checks. Schematic/PCB net agreement does not validate the
 transcription or identify the specimen's circuitry.
 
-## Electrical discrepancy under investigation
+## Digital reference qualification
 
-The directly transcribed A2.2B gate inverts IORQ for the 8282 strobe and LED latch
-clock. A2.2C separately inverts A15 for output enable. This differs from the
-emulator's A15-gated LED behavior. Multi-column sense combines active contacts
-through the transistor front end, whereas the current emulator ANDs selected
-matrix bytes. A1 also inverts WR directly, whereas the emulator limits output
-strobes to an address range. The co-simulation harness records these differences;
-do not change the transcription merely to match software. Reconciling the drawing,
-reference firmware and actual specimen is required before promoting behavioral
-changes. In particular, replacing LED behavior broke the existing S600 stable-LED
-qualification and was not retained in the production emulator.
+The unchanged reference transcription now agrees with the corrected emulator on
+131,072 bus transactions, including memory-write serial clocks, and the TV80/S600
+workload's 390 serial bits and 11,971 raw LED state records. The earlier A15-gated
+LED behavior, narrow input/output decode and ANDed columns were emulator errors
+relative to this drawing. Display indicators use a separate, explicitly approximate
+2 ms peak hold. CPU phase offsets and analog behavior remain unqualified; logical
+agreement with a reference is not identification of the photographed specimen.
 
 ## Generated geometry review
 
 Open `review.scad` for a standalone reconstruction view. It consumes only
 KiCad-derived arrays for the outline, holes, pads, package positions and artwork.
 Cyan lines are unresolved photo graphics; assigned copper uses a separate layer.
-Package bodies in this review are nominal envelopes. The accepted museum model
-is not replaced by this incomplete board.
+Detailed packages reuse the pinned KiCad body/lead meshes. The museum now consumes
+the native DIP placement, numbered pads, outline and photo-artwork export. Other
+discretes and mechanical details remain photo estimates. Generic procedural fanouts
+were removed rather than presented as historical copper.
 
 `python3 tools/test_export.py` checks source/output hashes, asymmetric CPU/ROM
 and pad-number landmarks, closed outline area and stale-file rejection. These
@@ -86,7 +85,7 @@ connectivity, not by file order; unsupported open or branched outlines fail.
 Pending promotion work: verify package orientation against independent photo
 landmarks, place the remaining reference components, establish discrete lead
 numbers, associate visible paths with nets, resolve airwires and review the
-analog transcription and jumper representation. Full physical assembly migration
+analog transcription and jumper representation. Full discrete-component migration
 and continuity qualification remain open; successful exports do not close them.
 
 ## Additional source review
@@ -104,3 +103,27 @@ a temporary PCB with a curved track and through via must export correctly, and
 a deliberate pad/net mismatch must be rejected. This test does not edit the
 canonical PCB. The source PDF is linked and hashed in `evidence.json`; its stated
 CC-BY-SA 3.0 attribution is retained there and it is not redistributed here.
+
+## Photo landmark alignment and model migration
+
+`photo-landmarks.json` records raw image pixels for eight packages, including
+held-out lead landmarks on seven. `generated/photo-registration.json` reports
+residuals against the nominal board plane; the companion SVG overlays observed
+points (green) and PCB pads (red) on the original photo. Seven rigid fits pass the
+1.25 mm review tolerance. A4 does not, and its inherited placement is retained.
+This loose photo tolerance does not establish fabrication dimensions or continuity.
+A8 and discrete lead numbering remain outside this qualification.
+
+`tools/photo_registration.py` reviews the current fit; KiCad Python with `--apply
+--refs A1 ...` can apply explicitly selected acceptable fits to the native PCB,
+after which exports must be regenerated. Fit inputs and photo hashes are pinned.
+The schematic remains the connectivity authority; landmark data contains no nets.
+
+Reference labels are on F.Fab and evidence fields are hidden metadata, not invented
+historical silkscreen. This removes the earlier placeholder-text DRC failures:
+there are zero other DRC violations, but **233 unconnected items remain**. The
+board is still unrouted and not fabrication ready. The accepted model now uses
+generated DIP placements/pin counts (A1/A6 corrected to DIP-14), pads, outline and
+artwork. The CPU socket and ink follow its placement. Native generated arrays also
+drive the ROM body/socket/cover/ink transforms. Existing discrete visuals remain
+separate pending physical reference identification.
