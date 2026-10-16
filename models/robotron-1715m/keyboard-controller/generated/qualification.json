@@ -1,7 +1,7 @@
 {
-  "components": 68,
+  "components": 70,
   "drc": {
-    "unconnectedItems": 233,
+    "unconnectedItems": 234,
     "violations": {}
   },
   "electricalCopperSegments": 0,
@@ -26,10 +26,10 @@
   "limitations": [
     "Signal pin directions are typed; power/passive terminals and analog behavior require separate review. Two isolated-label ERC warnings are RD_N (unused CPU output) and SHIELD (external cable shield).",
     "Unrouted PCB, not fabrication ready. Photo graphics are not electrical copper.",
-    "Digital reference circuit; discrete pin numbering, specimen substitutions and analog section require review."
+    "Digital reference circuit; discrete pin numbering, specimen substitutions and analog timing remain unqualified; reset topology and bridge boundaries reviewed against Zander."
   ],
   "padNetMismatches": [],
   "placed": 15,
-  "unplaced": 57,
+  "unplaced": 59,
   "unresolvedPhotoSegments": 294
 }

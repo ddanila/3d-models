@@ -3,7 +3,7 @@
 import importlib.util,json,subprocess,sys,tempfile,unittest,shutil
 from pathlib import Path
 from geometry import arc_points,outline_polygon
-from photo_registration import homography,project,rigid_fit
+from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
  def test_curves_and_outline_errors(self):
@@ -24,6 +24,28 @@ class ControllerExportTests(unittest.TestCase):
   for c in report['components']:
    if c['ref']!='A4':self.assertLessEqual(c['maxResidualMm'],report['toleranceMm'],c['ref'])
   self.assertFalse(report['withinPhotoTolerance']) # A4 still requires review.
+ def test_fit_rejects_held_out_error_and_unknown_refs(self):
+  from unittest.mock import patch
+  evidence={'photoCorners':[[0,0],[2,0],[2,2],[0,2]],'modelCorners':[[0,0],[2,0],[2,2],[0,2]],'scope':'test','photo':'unused','maxResidualMm':1.25,'components':{'A1':{'pins':{'1':[0,0],'2':[1,0],'3':[0,1]},'checkPins':{'4':[1,4]}}}}
+  layout={'components':[{'ref':'A1','position':[0,0],'pads':[{'pin':str(i+1),'position':p} for i,p in enumerate([[0,0],[1,0],[0,1],[1,1]])]}]}
+  with patch('photo_registration.Path.read_text',return_value=json.dumps(evidence)),patch('photo_registration.Path.read_bytes',return_value=b'photo'):
+   r=review(layout)
+  self.assertEqual(r['components'][0]['fitMaxResidualMm'],3)
+  with self.assertRaisesRegex(ValueError,'inconsistent'):selected_fits(r,['A1'])
+  with self.assertRaisesRegex(ValueError,'Unknown'):selected_fits(r,['TYPO'])
+ def test_reset_and_service_bridge_topology(self):
+  c=json.loads((R/'generated/connectivity.json').read_text())['components']
+  n=lambda ref,pin:c[ref]['pins'][pin]
+  self.assertEqual(n('BR1','1'),n('A7','8'));self.assertEqual(n('BR1','2'),n('A5','6'));self.assertNotEqual(n('BR1','1'),n('BR1','2'))
+  self.assertEqual(n('BR2','1'),n('V4.9','C'));self.assertEqual(n('BR2','2'),n('A5','26'));self.assertNotEqual(n('BR2','1'),n('BR2','2'))
+  self.assertEqual(n('C1','2'),n('V4.9','C'));self.assertNotEqual(n('C1','2'),n('C4','1'))
+  self.assertEqual(n('V3.1','C'),'/+5V');self.assertEqual(n('V3.2','C'),n('V4.9','B'))
+  self.assertEqual(n('R5','2'),n('V3.2','B'));self.assertEqual(n('V1.2','A'),n('C2','1'))
+  self.assertEqual(n('X1','A9'),n('A5','25'));self.assertEqual(n('R6.5','2'),n('A5','25'));self.assertNotEqual(n('A5','25'),n('A5','24'))
+ def test_cable_filter_pin_mapping(self):
+  c=json.loads((R/'generated/connectivity.json').read_text())['components']
+  for choke,signal,cable,pin in [('L1.1','/TA_TAKT','/CABLE_TAKT','B2'),('L1.2','/GND','/CABLE_GND','A3'),('L1.3','/+5V','/CABLE_5V','B4'),('L1.4','/TA_DATEN','/CABLE_DATEN','A1')]:
+   self.assertEqual(c[choke]['pins'],{'1':signal,'2':cable});self.assertEqual(c['XT1']['pins'][pin],cable)
  def test_pinned_sources(self):subprocess.run([sys.executable,R/'tools/export.py','--check'],check=True)
  def test_asymmetric_landmarks(self):
   layout=json.loads((R/'generated/layout.json').read_text());cs={c['ref']:c for c in layout['components']}

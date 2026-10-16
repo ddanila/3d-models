@@ -23,8 +23,8 @@ qualification results. Unresolved routes and analog timing remain explicit.
 
 Open `controller.kicad_pro` in KiCad 10. The schematic is now the editable
 connectivity authority, with local numbered-pin symbols in `kbd.kicad_sym`.
-The initial transcription contains 68 components; the analog section remains
-subject to review. Signal pins have electrical types. Power rails and semantic
+The reviewed transcription contains 70 components, including BR1/BR2. The reset
+connections were corrected against Zander; analog timing remains unqualified. Signal pins have electrical types. Power rails and semantic
 transistor/diode terminals are explicit, but their physical package pin mappings
 are unresolved. `XT1` preserves the source drawing's `XT` cable interface under
 a KiCad-compatible numbered reference. The matrix and lamps beyond X1 are external.
@@ -58,7 +58,7 @@ transcription or identify the specimen's circuitry.
 
 ## Digital reference qualification
 
-The unchanged reference transcription now agrees with the corrected emulator on
+The digital peripheral reference agrees with the corrected emulator on
 131,072 bus transactions, including memory-write serial clocks, and the TV80/S600
 workload's 390 serial bits and 11,971 raw LED state records. The earlier A15-gated
 LED behavior, narrow input/output decode and ANDed columns were emulator errors
@@ -84,8 +84,8 @@ connectivity, not by file order; unsupported open or branched outlines fail.
 
 Pending promotion work: verify package orientation against independent photo
 landmarks, place the remaining reference components, establish discrete lead
-numbers, associate visible paths with nets, resolve airwires and review the
-analog transcription and jumper representation. Full discrete-component migration
+numbers, associate visible paths with nets, resolve airwires and verify the
+analog component types and physical bridge state. Full discrete-component migration
 and continuity qualification remain open; successful exports do not close them.
 
 ## Additional source review
@@ -121,7 +121,7 @@ The schematic remains the connectivity authority; landmark data contains no nets
 
 Reference labels are on F.Fab and evidence fields are hidden metadata, not invented
 historical silkscreen. This removes the earlier placeholder-text DRC failures:
-there are zero other DRC violations, but **233 unconnected items remain**. The
+there are zero other DRC violations, but **234 unconnected items remain**. The
 board is still unrouted and not fabrication ready. The accepted model now uses
 generated DIP placements/pin counts (A1/A6 corrected to DIP-14), pads, outline and
 artwork. The CPU socket and ink follow its placement. Native generated arrays also
@@ -132,3 +132,37 @@ The museum clips unassigned photo graphics to the board outline for rendering.
 Five projected top-artwork endpoint occurrences overshoot the nominal outline;
 the native review preserves them so registration error remains inspectable.
 Clipping is not a continuity or routing correction.
+
+
+## Reset and clock isolation bridges
+
+BR1 separates A7:8 from A5:6 (CLK). BR2 separates V4.9:C from A5:26
+(active-low RESET). Both are closed bridges in the reference drawing. Opening
+one permits independent stimulus on the CPU side while isolating its onboard
+source. This test use follows from the circuit; the reviewed handbook sections
+do not prescribe a bridge-opening test procedure. Physical locations, bridge
+construction and state on the specimen still need identification. Numbered
+terminals 1/2 are reconstruction identifiers, not observed pad markings.
+
+The reset review corrected V3.1:C to +5V, V3.2:C to the V4.9 base, R5 to
+V3.2:B, V1.2:A to C2's positive node, and C1's lower terminal to the reset
+output. BR2 now separates that output from the CPU reset net. The review also
+corrected X1:A9 and R6.5 to BUSRQ, separate from WAIT/INT/NMI and CLK.
+Regression checks preserve these connections and both bridge boundaries.
+
+The [Robotron service handbook](https://www.tiffe.de/Robotron/PC1715/PC-1715-Servicemanual.pdf#page=91),
+printed pp. 89–92, independently supports WR serial synchronization, active-high
+matrix sensing and IORQ-clocked LED latches. It specifies about 100 ms reset
+hold and a 700 kHz ±10% clock. Its oscillator diagram uses different component
+references, gate pins and capacitance from Zander; these values are documented
+reference expectations, not specimen measurements or a reason to merge circuits.
+`evidence.json` retains the handbook hash and the service-interface mapping.
+
+Photo-fit application now checks held-out landmarks as well as fitted points and
+rejects unknown references before writing the PCB. A good fit of selected corner
+points cannot silently override a failing independent landmark.
+
+The cable review corrected the filter winding references and swapped the erroneous
+XT1 ground/clock assignment: L1.1 carries TA_TAKT to XT1:B2; L1.2 carries GND to
+XT1:A3; L1.3 carries +5V to XT1:B4; L1.4 carries TA_DATEN to XT1:A1. These are
+Zander's terminal labels; verify connector orientation before physical probing.

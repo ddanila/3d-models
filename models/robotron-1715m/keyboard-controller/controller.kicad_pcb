@@ -394,7 +394,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/RESET_N")
+			(net "/RESET_OUT")
 			(uuid "8c09475f-b85f-4a36-9c0b-3bed11fba56c")
 		)
 		(embedded_fonts no)
@@ -977,7 +977,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/TA_DATEN")
+			(net "/TA_TAKT")
 			(uuid "188b4f65-9426-4718-8bd8-60a9cf45eca4")
 		)
 		(pad "2" thru_hole circle
@@ -986,7 +986,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/CABLE_DATEN")
+			(net "/CABLE_TAKT")
 			(uuid "23b4e31d-74c1-404e-869f-dcdbf0665853")
 		)
 		(embedded_fonts no)
@@ -1194,7 +1194,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/CLK")
+			(net "/BUSRQ_N")
 			(uuid "30bda14c-908c-4b76-8cce-97f7dcc3e86a")
 		)
 		(embedded_fonts no)
@@ -1352,7 +1352,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/CLK")
+			(net "/BUSRQ_N")
 			(uuid "a4a695e6-386c-494d-87fd-f7b7b9406278")
 		)
 		(pad "A10" thru_hole circle
@@ -1600,7 +1600,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/RESET_BIAS")
+			(net "/RESET_BIAS_LOW")
 			(uuid "f08c3694-3192-43f7-992a-f71c6d7c2067")
 		)
 		(pad "K" thru_hole circle
@@ -2025,7 +2025,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/RESET_RC")
+			(net "/RESET_OUT")
 			(uuid "a44135eb-f5b1-4dac-8fc8-7d6586085904")
 		)
 		(embedded_fonts no)
@@ -2925,6 +2925,99 @@
 	)
 	(footprint ""
 		(layer "F.Cu")
+		(uuid "282089f3-ce30-4c9e-ab4b-57c34bacfe8b")
+		(at 212 250)
+		(property "Reference" "BR1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9fb0966e-eeef-4167-a2a0-62269552a3de")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BRIDGE"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "57ac23b1-42b5-4be9-bc85-7be9588dfe4d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d8d40c0d-dbd7-4a93-928d-d00b1eac94b8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "28f8647e-d6b0-453d-80fa-69484d8bf4b9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Evidence" "unplaced"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b0ed2120-ed74-43b5-8670-2070feb868dd")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "PinEvidence" "schematic terminal order; specimen numbering unverified"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "2f1f4660-0076-4bde-b3c6-598dcbf9999b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(duplicate_pad_numbers_are_jumpers no)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 1.7 1.7)
+			(drill 0.85)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/OSC_OUT")
+			(uuid "b484c41a-6ce5-4aab-a3e9-f368bc9d99d0")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 1.7 1.7)
+			(drill 0.85)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/CLK")
+			(uuid "dbcb6f1c-23b4-42a9-8e93-bc97286eb86b")
+		)
+		(embedded_fonts no)
+	)
+	(footprint ""
+		(layer "F.Cu")
 		(uuid "2f655e1d-14d6-4d8a-813a-382fd267e632")
 		(at 212 150)
 		(property "Reference" "R6.3"
@@ -3612,7 +3705,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/RESET_BASE")
+			(net "/+5V")
 			(uuid "e1846632-9a1a-4f0a-b476-40320d53cae5")
 		)
 		(pad "E" thru_hole circle
@@ -3933,7 +4026,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/TA_TAKT")
+			(net "/GND")
 			(uuid "18d90f56-5127-4d8d-912d-d6e049b18993")
 		)
 		(pad "2" thru_hole circle
@@ -3942,7 +4035,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/CABLE_TAKT")
+			(net "/CABLE_GND")
 			(uuid "5fab8441-acf3-4535-9fa5-8bf8d1a825d0")
 		)
 		(embedded_fonts no)
@@ -4349,7 +4442,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/+5V")
+			(net "/TA_DATEN")
 			(uuid "6c6c805e-7816-4671-b2d6-e1a295b260a9")
 		)
 		(pad "2" thru_hole circle
@@ -4358,7 +4451,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/CABLE_5V")
+			(net "/CABLE_DATEN")
 			(uuid "6b351e4a-1a61-4735-8ad1-849d645390c7")
 		)
 		(embedded_fonts no)
@@ -5314,7 +5407,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/RESET_N")
+			(net "/RESET_OUT")
 			(uuid "3e4aa4ce-874b-4ded-b93e-5a3d63fc6b61")
 		)
 		(pad "2" thru_hole circle
@@ -5873,7 +5966,7 @@
 			(uuid "689376da-1366-4d4c-9f92-f657d6d24b2a")
 		)
 		(pad "17" thru_hole circle
-			(at 16.51 7.619997 359.8847389)
+			(at 16.51 7.619995 359.8847389)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -5950,7 +6043,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/CPU_PULLUP")
+			(net "/BUSRQ_N")
 			(uuid "4d27d33a-e648-4b02-9fa6-439d3a131ca3")
 		)
 		(pad "26" thru_hole circle
@@ -6053,7 +6146,7 @@
 			(uuid "3c351904-502d-44b5-94d1-595427a6aa52")
 		)
 		(pad "37" thru_hole circle
-			(at -16.51 -7.619997 359.8847389)
+			(at -16.51 -7.619995 359.8847389)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -6941,7 +7034,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/RESET_N")
+			(net "/RESET_OUT")
 			(uuid "4484596d-1ac2-4fc1-87a0-d8115a25e0e3")
 		)
 		(pad "E" thru_hole circle
@@ -7809,7 +7902,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/CABLE_TAKT")
+			(net "/CABLE_GND")
 			(uuid "c09fcf39-c293-49f4-9f74-c2b98bfc9ca2")
 		)
 		(pad "A5" thru_hole circle
@@ -7827,7 +7920,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/CABLE_GND")
+			(net "/CABLE_TAKT")
 			(uuid "dda70d7f-bd0b-4cda-900a-e70e0a14ba55")
 		)
 		(pad "B4" thru_hole circle
@@ -7931,7 +8024,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/GND")
+			(net "/+5V")
 			(uuid "38fd97a9-1cdf-421c-a436-8cb2ee1cec54")
 		)
 		(pad "2" thru_hole circle
@@ -7940,7 +8033,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/CABLE_GND")
+			(net "/CABLE_5V")
 			(uuid "adba5f4b-6d1f-41b9-bb7b-73a3333d895c")
 		)
 		(embedded_fonts no)
@@ -8259,6 +8352,99 @@
 	)
 	(footprint ""
 		(layer "F.Cu")
+		(uuid "d4ca02fd-8e0d-4bff-9144-c2325d6dd45a")
+		(at 236 250)
+		(property "Reference" "BR2"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c56b6a6a-e1e6-4e3e-95b3-6199adcb5d72")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BRIDGE"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4b758533-9750-445a-a046-df8cc6279020")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c11c3651-3c8d-46e3-a29d-b63b2155549e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "649067bd-e97a-4cc9-b965-dc5141170129")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Evidence" "unplaced"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5de175b6-cbee-43a7-b134-946b0cd6ff87")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "PinEvidence" "schematic terminal order; specimen numbering unverified"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b2461954-c62e-41a2-8366-b68db501df8f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(duplicate_pad_numbers_are_jumpers no)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 1.7 1.7)
+			(drill 0.85)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/RESET_OUT")
+			(uuid "11d33643-3e2b-487c-ad74-db7f6f6f67d2")
+		)
+		(pad "2" thru_hole circle
+			(at 2.54 0)
+			(size 1.7 1.7)
+			(drill 0.85)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/RESET_N")
+			(uuid "67924af3-c215-4168-b90c-40e04b2240f8")
+		)
+		(embedded_fonts no)
+	)
+	(footprint ""
+		(layer "F.Cu")
 		(uuid "e4224d51-49a4-4da7-b872-5e4ed55c7228")
 		(at 259.490631 61.668922 0.5195354991)
 		(property "Reference" "A7"
@@ -8410,7 +8596,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/CLK")
+			(net "/OSC_OUT")
 			(uuid "ccb2505d-a51f-4b72-b51e-d17800fa4e9e")
 		)
 		(pad "9" thru_hole circle
@@ -8568,7 +8754,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/RESET_RC")
+			(net "/RESET_BASE")
 			(uuid "3fc0100a-ca1a-4a47-8448-123bc91f1db8")
 		)
 		(pad "E" thru_hole circle
@@ -8785,7 +8971,7 @@
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/RESET_RC")
+			(net "/RESET_BIAS")
 			(uuid "fefa2f13-34c7-41b6-a9f5-94a0ee07839c")
 		)
 		(embedded_fonts no)

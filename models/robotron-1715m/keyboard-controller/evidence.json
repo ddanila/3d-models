@@ -31,6 +31,12 @@
       "sha256": "88c1aa6171e143ebda660147fa5d6c43ea128080ef5d9558fed630f3d9fc28e1",
       "use": "Comparison: 05-330-4102-8 1c board markings match the specimen family. Drawing shows 2732 and different connector/clock details; not blindly merged with Zander connectivity.",
       "credit": "Andreas Kurz / kbdbabel, revision 1.3, 2009-01-18; document states CC-BY-SA 3.0. PDF not redistributed."
+    },
+    {
+      "id": "robotron-service-1985",
+      "url": "https://www.tiffe.de/Robotron/PC1715/PC-1715-Servicemanual.pdf",
+      "sha256": "e810e4722d889a7e357e192486da3a8004b1fd08aca1c0dcef4f3bbc5b66021d",
+      "use": "Manufacturer service handbook, 1985, printed pp. 89\u201392 (PDF pages 91\u201394): WR serial synchronization, matrix sensing, LED latches, reset and nominal clock. Oscillator designators, pin usage and capacitor differ from Zander; not specimen-identical. PDF not redistributed."
     }
   ],
   "specimen": {
@@ -67,7 +73,52 @@
     {
       "id": "clock-source-disagreement",
       "status": "unresolved",
-      "detail": "Zander connects WR to the output inverter; kbdbabel connects RD and leaves WR unused. Resolve by following specimen copper/continuity. The current HDL explicitly models the Zander reference."
+      "detail": "Zander connects WR to the output inverter; kbdbabel connects RD and leaves WR unused. Resolve by following specimen copper/continuity. The current HDL explicitly models the Zander reference. Robotron service handbook pp. 89\u201390 explicitly supports WR. Specimen continuity remains unverified."
     }
-  ]
+  ],
+  "serviceInterfaces": {
+    "scope": "Zander reference topology; physical bridge locations and specimen continuity unverified. Terminal numbers are reconstruction identifiers, not observed pad markings.",
+    "bridges": [
+      {
+        "ref": "BR1",
+        "source": {
+          "ref": "A7",
+          "pin": "8",
+          "net": "/OSC_OUT"
+        },
+        "cpu": {
+          "ref": "A5",
+          "pin": "6",
+          "net": "/CLK"
+        },
+        "referenceState": "closed",
+        "role": "Isolates the oscillator output from the CPU clock input.",
+        "testUse": "Opening the bridge permits external clock injection on the CPU side; inferred electrical use, not a documented factory procedure."
+      },
+      {
+        "ref": "BR2",
+        "source": {
+          "ref": "V4.9",
+          "pin": "C",
+          "net": "/RESET_OUT"
+        },
+        "cpu": {
+          "ref": "A5",
+          "pin": "26",
+          "net": "/RESET_N"
+        },
+        "referenceState": "closed",
+        "role": "Isolates the reset circuit output from the CPU active-low RESET input.",
+        "testUse": "Opening the bridge permits controlled reset injection on the CPU side; inferred electrical use, not a documented factory procedure."
+      }
+    ],
+    "referenceTiming": {
+      "source": "robotron-service-1985",
+      "clockHz": 700000,
+      "clockTolerancePercent": 10,
+      "resetDelayMsApprox": 100,
+      "resetRiseTimeMsLessThan": 1,
+      "scope": "Documented reference values, not measurements of this specimen. Existing 683 kHz emulator clock lies within this reference range."
+    }
+  }
 }

@@ -474,5 +474,19 @@
     "pinEvidence": "schematic-numbered",
     "note": "Reference schematic; specimen identity/placement requires review",
     "placementAuthority": "controller.kicad_pcb"
+  },
+  "BR1": {
+    "referenceType": "BRIDGE",
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-terminal-order; physical numbering unresolved",
+    "note": "Closed bridge in Zander drawing; specimen state and placement unverified.",
+    "placementAuthority": "controller.kicad_pcb"
+  },
+  "BR2": {
+    "referenceType": "BRIDGE",
+    "placementEvidence": "unplaced",
+    "pinEvidence": "schematic-terminal-order; physical numbering unresolved",
+    "note": "Closed bridge in Zander drawing; specimen state and placement unverified.",
+    "placementAuthority": "controller.kicad_pcb"
   }
 }

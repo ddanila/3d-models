@@ -39,7 +39,7 @@ def review(layout):
   src=[p['pcbModel']for p in pins];dst=[p['photoModel']for p in pins];angle,transform=rigid_fit(src,dst)
   checks=[{'pin':pin,'photoPixel':p,'photoModel':project(h,p),'pcbModel':pads[pin],'heldOut':True}for pin,p in record.get('checkPins',{}).items()]
   for p in pins+checks:p['residualMm']=math.dist(p['pcbModel'],p['photoModel']);p['pcbPixel']=project(inverse,p['pcbModel'])
-  rows.append({'ref':ref,'pins':pins,'checkPins':checks,'rmsResidualMm':math.sqrt(sum(p['residualMm']**2 for p in pins)/len(pins)),'maxResidualMm':max(p['residualMm']for p in pins+checks),'fitMaxResidualMm':max(math.dist(transform(a),b)for a,b in zip(src,dst)),'proposedPosition':transform(c['position']),'rotationDeltaDegrees':math.degrees(angle),'status':'photo-estimated'})
+  rows.append({'ref':ref,'pins':pins,'checkPins':checks,'rmsResidualMm':math.sqrt(sum(p['residualMm']**2 for p in pins)/len(pins)),'maxResidualMm':max(p['residualMm']for p in pins+checks),'fitMaxResidualMm':max(math.dist(transform(p['pcbModel']),p['photoModel'])for p in pins+checks),'proposedPosition':transform(c['position']),'rotationDeltaDegrees':math.degrees(angle),'status':'photo-estimated'})
  return {'schema':1,'scope':evidence['scope'],'photoSha256':hashlib.sha256((ROOT/evidence['photo']).read_bytes()).hexdigest(),'toleranceMm':evidence['maxResidualMm'],'components':rows,'withinPhotoTolerance':all(c['maxResidualMm']<=evidence['maxResidualMm']for c in rows)}
 
 def svg(report):
@@ -49,17 +49,25 @@ def svg(report):
    x,y=p['photoPixel'];a,b=p['pcbPixel'];out.append(f'<path d="M{x},{y} L{a},{b}" stroke="yellow" stroke-width="3"/><circle cx="{x}" cy="{y}" r="9" fill="none" stroke="lime" stroke-width="3"/><circle cx="{a}" cy="{b}" r="5" fill="red"/><text x="{x+14}" y="{y}" fill="white" stroke="black" stroke-width=".3" font-size="15">{c["ref"]}:{p["pin"]}</text>')
  return '\n'.join(out+['</svg>'])+'\n'
 
+def selected_fits(report,refs):
+ available={c['ref']for c in report['components']}
+ if refs and set(refs)-available:raise ValueError('Unknown or unreviewed references: '+', '.join(sorted(set(refs)-available)))
+ rows=[c for c in report['components']if not refs or c['ref']in refs]
+ if not rows:raise ValueError('No reviewed placements selected')
+ for c in rows:
+  if c['fitMaxResidualMm']>report['toleranceMm'] or abs(c['rotationDeltaDegrees'])>20:raise ValueError('Review inconsistent landmark fit for '+c['ref'])
+ return rows
+
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--apply',action='store_true');parser.add_argument('--refs',nargs='+');a=parser.parse_args()
  layout=json.loads((ROOT/'generated/layout.json').read_text());report=review(layout)
  if a.apply:
+  try:report['components']=selected_fits(report,a.refs)
+  except ValueError as e:raise SystemExit(str(e))
   from export import check
   check()
   import pcbnew as pcb
-  if a.refs:report['components']=[c for c in report['components']if c['ref'] in a.refs]
   board=pcb.LoadBoard(str(ROOT/'controller.kicad_pcb'));fps={f.GetReference():f for f in board.GetFootprints()}
-  for c in report['components']:
-   if c['fitMaxResidualMm']>report['toleranceMm'] or abs(c['rotationDeltaDegrees'])>20:raise SystemExit('Review inconsistent landmark fit for '+c['ref'])
   for c in report['components']:
    f=fps[c['ref']];x,y=c['proposedPosition'];f.SetPosition(pcb.VECTOR2I(round((x+150)*1e6),round((50-y)*1e6)));f.SetOrientationDegrees(f.GetOrientationDegrees()+c['rotationDeltaDegrees']);f.SetField('Evidence','photo-landmarks.json: '+c['ref']+'; nominal envelope, not metrology')
   pcb.SaveBoard(str(ROOT/'controller.kicad_pcb'),board)

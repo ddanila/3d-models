@@ -1505,7 +1505,7 @@
           "pin": "17",
           "position": [
             78.49909,
-            4.136066
+            4.136068
           ],
           "ref": "A5",
           "size": [
@@ -1654,7 +1654,7 @@
             0.85,
             0.85
           ],
-          "net": "/CPU_PULLUP",
+          "net": "/BUSRQ_N",
           "pin": "25",
           "position": [
             75.989753,
@@ -1879,7 +1879,7 @@
           "pin": "37",
           "position": [
             45.509814,
-            19.442454
+            19.442452
           ],
           "ref": "A5",
           "size": [
@@ -2513,7 +2513,7 @@
             0.85,
             0.85
           ],
-          "net": "/CLK",
+          "net": "/OSC_OUT",
           "pin": "8",
           "position": [
             117.075771,
@@ -3288,7 +3288,7 @@
             0.85,
             0.85
           ],
-          "net": "/CLK",
+          "net": "/BUSRQ_N",
           "pin": "A9",
           "position": [
             -4.92,
@@ -3556,7 +3556,7 @@
             0.85,
             0.85
           ],
-          "net": "/CABLE_TAKT",
+          "net": "/CABLE_GND",
           "pin": "A3",
           "position": [
             -122.46,
@@ -3590,7 +3590,7 @@
             0.85,
             0.85
           ],
-          "net": "/CABLE_GND",
+          "net": "/CABLE_TAKT",
           "pin": "B2",
           "position": [
             -119.92,
@@ -3710,6 +3710,100 @@
             0.85,
             0.85
           ],
+          "net": "/OSC_OUT",
+          "pin": "1",
+          "position": [
+            62.0,
+            -200.0
+          ],
+          "ref": "BR1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/CLK",
+          "pin": "2",
+          "position": [
+            64.54,
+            -200.0
+          ],
+          "ref": "BR1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        62.0,
+        -200.0
+      ],
+      "ref": "BR1",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "BRIDGE"
+    },
+    {
+      "evidence": "unplaced",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/RESET_OUT",
+          "pin": "1",
+          "position": [
+            86.0,
+            -200.0
+          ],
+          "ref": "BR2",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/RESET_N",
+          "pin": "2",
+          "position": [
+            88.54,
+            -200.0
+          ],
+          "ref": "BR2",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        86.0,
+        -200.0
+      ],
+      "ref": "BR2",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "BRIDGE"
+    },
+    {
+      "evidence": "unplaced",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
           "net": "/RESET_BASE",
           "pin": "1",
           "position": [
@@ -3727,7 +3821,7 @@
             0.85,
             0.85
           ],
-          "net": "/RESET_RC",
+          "net": "/RESET_OUT",
           "pin": "2",
           "position": [
             88.54,
@@ -3774,7 +3868,7 @@
             0.85,
             0.85
           ],
-          "net": "/RESET_N",
+          "net": "/RESET_OUT",
           "pin": "2",
           "position": [
             112.54,
@@ -4227,7 +4321,7 @@
             0.85,
             0.85
           ],
-          "net": "/TA_DATEN",
+          "net": "/TA_TAKT",
           "pin": "1",
           "position": [
             62.0,
@@ -4244,7 +4338,7 @@
             0.85,
             0.85
           ],
-          "net": "/CABLE_DATEN",
+          "net": "/CABLE_TAKT",
           "pin": "2",
           "position": [
             64.54,
@@ -4274,7 +4368,7 @@
             0.85,
             0.85
           ],
-          "net": "/TA_TAKT",
+          "net": "/GND",
           "pin": "1",
           "position": [
             86.0,
@@ -4291,7 +4385,7 @@
             0.85,
             0.85
           ],
-          "net": "/CABLE_TAKT",
+          "net": "/CABLE_GND",
           "pin": "2",
           "position": [
             88.54,
@@ -4321,7 +4415,7 @@
             0.85,
             0.85
           ],
-          "net": "/GND",
+          "net": "/+5V",
           "pin": "1",
           "position": [
             110.0,
@@ -4338,7 +4432,7 @@
             0.85,
             0.85
           ],
-          "net": "/CABLE_GND",
+          "net": "/CABLE_5V",
           "pin": "2",
           "position": [
             112.54,
@@ -4368,7 +4462,7 @@
             0.85,
             0.85
           ],
-          "net": "/+5V",
+          "net": "/TA_DATEN",
           "pin": "1",
           "position": [
             134.0,
@@ -4385,7 +4479,7 @@
             0.85,
             0.85
           ],
-          "net": "/CABLE_5V",
+          "net": "/CABLE_DATEN",
           "pin": "2",
           "position": [
             136.54,
@@ -5076,7 +5170,7 @@
             0.85,
             0.85
           ],
-          "net": "/RESET_N",
+          "net": "/RESET_OUT",
           "pin": "1",
           "position": [
             -34.0,
@@ -5187,7 +5281,7 @@
             0.85,
             0.85
           ],
-          "net": "/RESET_RC",
+          "net": "/RESET_BIAS",
           "pin": "2",
           "position": [
             16.54,
@@ -5375,7 +5469,7 @@
             0.85,
             0.85
           ],
-          "net": "/CLK",
+          "net": "/BUSRQ_N",
           "pin": "2",
           "position": [
             112.54,
@@ -6016,7 +6110,7 @@
             0.85,
             0.85
           ],
-          "net": "/RESET_BIAS",
+          "net": "/RESET_BIAS_LOW",
           "pin": "A",
           "position": [
             -10.0,
@@ -6127,7 +6221,7 @@
             0.85,
             0.85
           ],
-          "net": "/RESET_BASE",
+          "net": "/+5V",
           "pin": "C",
           "position": [
             40.54,
@@ -6191,7 +6285,7 @@
             0.85,
             0.85
           ],
-          "net": "/RESET_RC",
+          "net": "/RESET_BASE",
           "pin": "C",
           "position": [
             64.54,
@@ -6767,7 +6861,7 @@
             0.85,
             0.85
           ],
-          "net": "/RESET_N",
+          "net": "/RESET_OUT",
           "pin": "C",
           "position": [
             -7.46,
