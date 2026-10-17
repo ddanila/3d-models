@@ -3722,7 +3722,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "3f756793-9215-4e69-9633-aad5ad42b8ba")
-		(at 44 175)
+		(at 71.793914 37.301443)
 		(property "Reference" "R8"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -3766,7 +3766,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory designator; primary photo pads; underside common strip supports reference GND terminal; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3804,7 +3804,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at -0.154967 -5.718003)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -3813,7 +3813,7 @@
 			(uuid "6de3b5d2-b795-4023-849b-3cca12e093aa")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at 0.154967 5.718002)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -5320,7 +5320,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "742752e4-f0a3-4fc3-81fb-1ad5dbe53bc5")
-		(at 116 150)
+		(at 64.462705 37.12479)
 		(property "Reference" "R4.2"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -5364,7 +5364,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory designator; primary photo pads; underside common strip supports reference GND terminal; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5402,7 +5402,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at -0.225963 -5.86346)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -5411,7 +5411,7 @@
 			(uuid "3e4aa4ce-874b-4ded-b93e-5a3d63fc6b61")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at 0.225964 5.86346)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -8145,7 +8145,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "c7ca1ed9-f906-4d31-96a3-7f2efbe95af3")
-		(at 20 175)
+		(at 68.014788 37.208054)
 		(property "Reference" "R7"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -8189,7 +8189,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory designator; primary photo pads; underside common strip supports reference GND terminal; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8227,7 +8227,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at -0.040894 -5.7841)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -8236,7 +8236,7 @@
 			(uuid "ed473f75-7d42-4e4f-8a51-f53e9c632dc5")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at 0.040894 5.784099)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")

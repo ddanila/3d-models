@@ -164,9 +164,19 @@ class ControllerExportTests(unittest.TestCase):
   evidence=json.loads((R/'component-evidence.json').read_text())
   self.assertEqual([evidence[r]['blueCollarPin']for r in refs],['2']*6+['1','2'])
   text=(R/'generated/controller.scad').read_text();line=next(s for s in text.splitlines()if s.startswith('controller_pcb_resistors='))
-  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),21)
+  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),24)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.7'),-1)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.8'),1)
+ def test_reset_resistor_common_strip_terminal_order(self):
+  layout=json.loads((R/'generated/layout.json').read_text());placed={c['ref']:c for c in layout['components']}
+  evidence=json.loads((R/'component-evidence.json').read_text());nets=[]
+  for ref,signal in [('R4.2','RESET_OUT'),('R7','RESET_EMITTERS'),('R8','RESET_RC')]:
+   pads={p['pin']:p for p in placed[ref]['pads']}
+   self.assertEqual({n:p['net']for n,p in pads.items()},{'1':'/'+signal,'2':'/GND'})
+   self.assertLess(pads['2']['position'][1],pads['1']['position'][1])
+   self.assertLess(evidence[ref]['photoPins']['2'][0],evidence[ref]['photoPins']['1'][0])
+   self.assertNotIn('placementCandidate',evidence[ref]);nets.append({p['net']for p in pads.values()})
+  self.assertEqual(set.intersection(*nets),{'/GND'})
  def test_led_resistor_inner_leads_face_adjacent_connector_rows(self):
   layout=json.loads((R/'generated/layout.json').read_text());placed={c['ref']:c for c in layout['components']}
   a,b=[{p['pin']:p for p in placed[r]['pads']}for r in ['R11.1','R11.2']]

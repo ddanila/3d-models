@@ -3658,6 +3658,53 @@
       "type": "220"
     },
     {
+      "evidence": "Factory designator; primary photo pads; underside common strip supports reference GND terminal; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/RESET_OUT",
+          "pin": "1",
+          "position": [
+            -85.763258,
+            18.73867
+          ],
+          "ref": "R4.2",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/GND",
+          "pin": "2",
+          "position": [
+            -85.311331,
+            7.01175
+          ],
+          "ref": "R4.2",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -85.537295,
+        12.87521
+      ],
+      "ref": "R4.2",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "220"
+    },
+    {
       "evidence": "Factory placement + top-photo lead ends; close-up supports adjacent gate pin orientation; component-evidence.json",
       "pads": [
         {
@@ -3891,6 +3938,100 @@
       "rotation": 0.0,
       "side": "top",
       "type": "1k"
+    },
+    {
+      "evidence": "Factory designator; primary photo pads; underside common strip supports reference GND terminal; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/RESET_EMITTERS",
+          "pin": "1",
+          "position": [
+            -82.026106,
+            18.576046
+          ],
+          "ref": "R7",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/GND",
+          "pin": "2",
+          "position": [
+            -81.944318,
+            7.007847
+          ],
+          "ref": "R7",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -81.985212,
+        12.791946
+      ],
+      "ref": "R7",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "3k3"
+    },
+    {
+      "evidence": "Factory designator; primary photo pads; underside common strip supports reference GND terminal; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/RESET_RC",
+          "pin": "1",
+          "position": [
+            -78.361053,
+            18.41656
+          ],
+          "ref": "R8",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/GND",
+          "pin": "2",
+          "position": [
+            -78.051119,
+            6.980555
+          ],
+          "ref": "R8",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -78.206086,
+        12.698557
+      ],
+      "ref": "R8",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "47k"
     },
     {
       "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
@@ -6949,53 +7090,6 @@
             0.85,
             0.85
           ],
-          "net": "/RESET_OUT",
-          "pin": "1",
-          "position": [
-            -34.0,
-            -100.0
-          ],
-          "ref": "R4.2",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/GND",
-          "pin": "2",
-          "position": [
-            -31.46,
-            -100.0
-          ],
-          "ref": "R4.2",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -34.0,
-        -100.0
-      ],
-      "ref": "R4.2",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "220"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
           "net": "/+5V",
           "pin": "1",
           "position": [
@@ -7081,100 +7175,6 @@
       "rotation": 0.0,
       "side": "top",
       "type": "1k"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/RESET_EMITTERS",
-          "pin": "1",
-          "position": [
-            -130.0,
-            -125.0
-          ],
-          "ref": "R7",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/GND",
-          "pin": "2",
-          "position": [
-            -127.46,
-            -125.0
-          ],
-          "ref": "R7",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -130.0,
-        -125.0
-      ],
-      "ref": "R7",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "3k3"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/RESET_RC",
-          "pin": "1",
-          "position": [
-            -106.0,
-            -125.0
-          ],
-          "ref": "R8",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/GND",
-          "pin": "2",
-          "position": [
-            -103.46,
-            -125.0
-          ],
-          "ref": "R8",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -106.0,
-        -125.0
-      ],
-      "ref": "R8",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "47k"
     },
     {
       "evidence": "unplaced",

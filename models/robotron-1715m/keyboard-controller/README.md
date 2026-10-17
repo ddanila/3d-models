@@ -617,3 +617,18 @@ projection overhangs A7. The initial shared 4.4 mm height intersected the nomina
 DIP body in the close-up render; this clearance estimate removes the intersection
 without moving native pads or the photo-derived body centre. Specimen stand-off
 and tilt remain unmeasured.
+
+## Reset resistor placement from shared underside strip (2026-10-17)
+
+R4.2, R7 and R8 now use native pads rather than legacy visual placeholders.
+The primary top photo supplies lead-entry coordinates; factory drawing
+63-330-4103-2 supplies designator order. The primary underside and comparison
+photo PXL_20261017_080351042 show a strip joining their inner ends, separate
+from the adjacent R6.1 joint. GND is the only shared reference net, supporting
+pin 2 at these inner ends. Individual pin-1 signals remain reference-informed;
+no measured continuity or complete ground path is claimed. Comparison-specimen
+coordinates are not used to place the primary board. No copper was added.
+
+This places 24 resistors and leaves 30 schematic parts unplaced. Pad/drill and
+body dimensions remain nominal. Blue collars preserve the observed end, not
+polarity. The standalone `assembly-review.scad` inherits these changes.
