@@ -61,6 +61,17 @@ class ControllerExportTests(unittest.TestCase):
   c=json.loads((R/'generated/connectivity.json').read_text())['components']
   for choke,signal,cable,pin in [('L1.1','/TA_TAKT','/CABLE_TAKT','B2'),('L1.2','/GND','/CABLE_GND','A3'),('L1.3','/+5V','/CABLE_5V','B4'),('L1.4','/TA_DATEN','/CABLE_DATEN','A1')]:
    self.assertEqual(c[choke]['pins'],{'1':signal,'2':cable});self.assertEqual(c['XT1']['pins'][pin],cable)
+ def test_partial_a1_route_keeps_endpoint_unresolved(self):
+  from route_evidence import annotate
+  layout=json.loads((R/'generated/layout.json').read_text())
+  routes=layout['routes'];self.assertEqual(len(routes),8)
+  annotate(routes,layout['vias'],json.loads((R/'route-evidence.json').read_text()),json.loads((R/'evidence.json').read_text()))
+  self.assertEqual({r['net']for r in routes},{'/WR_N'})
+  self.assertEqual(sum(r['evidence']['status']=='observed'for r in routes),7)
+  self.assertEqual(sum(r['evidence']['status']=='inferred'for r in routes),1)
+  self.assertFalse(layout['vias'])
+  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':1})
+  self.assertIn('magenta',(R/'generated/photo-registration.svg').read_text())
  def test_route_evidence_rejects_stale_or_unsupported_claims(self):
   from route_evidence import annotate,geometry_sha
   from copy import deepcopy

@@ -1,5 +1,230 @@
 {
   "schema": 1,
-  "scope": "Per-native-copper UUID reviews. No copper has yet been assigned. Photo artwork is not electrical copper. Geometry hashes invalidate review after edits; observed means photo-supported geometry, not measured continuity.",
-  "items": {}
+  "scope": "Per-native-copper UUID reviews. A1:1 has one partial top route with an estimated pad attachment. Photo-supported geometry is not measured continuity; the CPU endpoint and output clock source remain unresolved.",
+  "items": {
+    "ec10f645-b9c0-4759-902b-49d63ff81d7d": {
+      "status": "inferred",
+      "geometrySha256": "0afd61fa2a444614ba677f7ad4df8089a2beebb98f3e0141de764ad473ace9ca",
+      "group": "a1-pin1-top-partial",
+      "detail": "Estimated connection from fitted A1:1 pad to the visible lead/track edge; hole centre is obscured. Net /WR_N is the schematic assignment at A1:1, not proof of continuity to CPU WR. The terminal underside match and continuation remain unresolved; no via is asserted.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1285,
+                1495
+              ],
+              [
+                1276,
+                1504
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "c74b9d8e-d470-4ae3-9205-e556c173103f": {
+      "status": "observed",
+      "geometrySha256": "6fb356ea6827378fceca6cec35aa4b12965672a9205887307d778b33c33872ab",
+      "group": "a1-pin1-top-partial",
+      "detail": "Visible top track from A1:1 around X1 to a round terminal near A4. Nominal planar photo projection; 0.35 mm width estimated, not measured. Net /WR_N is the schematic assignment at A1:1, not proof of continuity to CPU WR. The terminal underside match and continuation remain unresolved; no via is asserted.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1276,
+                1504
+              ],
+              [
+                1248,
+                1531
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "1abaa137-7ea6-4ab5-b28b-e7da28f1a974": {
+      "status": "observed",
+      "geometrySha256": "7473126a7c014ad04784fbedbb4971f769c776e4ea7241126b1a688d2839078f",
+      "group": "a1-pin1-top-partial",
+      "detail": "Visible top track from A1:1 around X1 to a round terminal near A4. Nominal planar photo projection; 0.35 mm width estimated, not measured. Net /WR_N is the schematic assignment at A1:1, not proof of continuity to CPU WR. The terminal underside match and continuation remain unresolved; no via is asserted.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1248,
+                1531
+              ],
+              [
+                1258,
+                1755
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "f86a0269-51ef-4b9d-bb52-e8d6162773cb": {
+      "status": "observed",
+      "geometrySha256": "85a630b7d25f333636efc49cb69def193e9e4a5a25b4ee45413c051dc61eec0a",
+      "group": "a1-pin1-top-partial",
+      "detail": "Visible top track from A1:1 around X1 to a round terminal near A4. Nominal planar photo projection; 0.35 mm width estimated, not measured. Net /WR_N is the schematic assignment at A1:1, not proof of continuity to CPU WR. The terminal underside match and continuation remain unresolved; no via is asserted.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1258,
+                1755
+              ],
+              [
+                1355,
+                1841
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "532bfdd8-dbf4-4011-b7f5-b6ee02046215": {
+      "status": "observed",
+      "geometrySha256": "5e8627aaddc93117e3fb7ca8196c1d81f04dc537da1ceca53c2e974109ffac4f",
+      "group": "a1-pin1-top-partial",
+      "detail": "Visible top track from A1:1 around X1 to a round terminal near A4. Nominal planar photo projection; 0.35 mm width estimated, not measured. Net /WR_N is the schematic assignment at A1:1, not proof of continuity to CPU WR. The terminal underside match and continuation remain unresolved; no via is asserted.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1355,
+                1841
+              ],
+              [
+                1371,
+                2247
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "0f8df276-6669-4080-a18a-7f1122ab625b": {
+      "status": "observed",
+      "geometrySha256": "a7363c2517be2d871a03ad2f0fe14f3e54ff6a1fdacec9cf4cb10f67dc6fe443",
+      "group": "a1-pin1-top-partial",
+      "detail": "Visible top track from A1:1 around X1 to a round terminal near A4. Nominal planar photo projection; 0.35 mm width estimated, not measured. Net /WR_N is the schematic assignment at A1:1, not proof of continuity to CPU WR. The terminal underside match and continuation remain unresolved; no via is asserted.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1371,
+                2247
+              ],
+              [
+                1338,
+                2281
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "7fb987f5-c37e-4e47-9251-f09894e62e58": {
+      "status": "observed",
+      "geometrySha256": "afa07cfba82d155a6e5b8bd9ead8afe1e7332ad102880fd625557d6ee141c123",
+      "group": "a1-pin1-top-partial",
+      "detail": "Visible top track from A1:1 around X1 to a round terminal near A4. Nominal planar photo projection; 0.35 mm width estimated, not measured. Net /WR_N is the schematic assignment at A1:1, not proof of continuity to CPU WR. The terminal underside match and continuation remain unresolved; no via is asserted.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1338,
+                2281
+              ],
+              [
+                1215,
+                2285
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "36162e07-131c-45f3-b6a9-3ba40dfcd8f1": {
+      "status": "observed",
+      "geometrySha256": "28094a4332c572a7e4293db1d89256a395629f38d2115774295f00e6ee4c2833",
+      "group": "a1-pin1-top-partial",
+      "detail": "Visible top track from A1:1 around X1 to a round terminal near A4. Nominal planar photo projection; 0.35 mm width estimated, not measured. Net /WR_N is the schematic assignment at A1:1, not proof of continuity to CPU WR. The terminal underside match and continuation remain unresolved; no via is asserted.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1215,
+                2285
+              ],
+              [
+                1241,
+                2966
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    }
+  }
 }

@@ -78,7 +78,7 @@ def main():
  layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline,'components':placed,'unplaced':unplaced,'routes':routes,'vias':vias,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
  write('layout.json',layout)
- photo=photo_review(layout);write('photo-registration.json',photo);write('photo-registration.svg',photo_svg(photo))
+ photo=photo_review(layout);write('photo-registration.json',photo);write('photo-registration.svg',photo_svg(photo,layout))
  bottom=bottom_review(layout);write('bottom-registration.json',bottom);write('bottom-registration.svg',bottom_svg(bottom))
  # Semantic symbols preserve source numbered pins. ERC does not validate analog models.
  erc_summary=[{'type':v['type'],'severity':v['severity'],'description':v['description'],'items':[i['description'] for i in v['items']]} for v in violations]
@@ -96,6 +96,10 @@ def main():
   svg.append(f'<g transform="translate(0 {offset})"><text x="-135" y="-28" fill="white" font-size="4">{side}: cyan = unresolved photo artwork; pads = reference nets</text>')
   for a in art:
    if a['side']==side:svg.append('<polyline fill="none" stroke="#50b5c8" stroke-width=".35" points="'+' '.join(f'{x},{-y}' for x,y in a['points'])+'"/>')
+  for a in routes:
+   if a['side']==side:
+    title=html.escape(a['net']+' '+a['evidence']['status']+' '+a['id'])
+    svg.append('<polyline fill="none" stroke="#ffc969" stroke-width="'+str(a['width'])+'" points="'+' '.join(f'{x},{-y}'for x,y in a['points'])+'"><title>'+title+'</title></polyline>')
   for c in placed:
    for p in c['pads']:
     x,y=p['position'];svg.append(f'<circle cx="{x}" cy="{-y}" r=".65" fill="#ffc969"><title>{html.escape(c["ref"]+":"+p["pin"]+" "+str(p["net"]))}</title></circle>')

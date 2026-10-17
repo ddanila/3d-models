@@ -53,7 +53,7 @@
     {
       "id": "hidden-copper",
       "status": "unresolved",
-      "detail": "Photo artwork has not been electrically traced; no continuity claim."
+      "detail": "A1:1 has a photo-supported partial top track to a terminal near A4, with an inferred pad attachment. Terminal underside correspondence and CPU endpoint remain unresolved. 294 legacy artwork segments remain unassigned; the WR/RD specimen disagreement is not resolved."
     },
     {
       "id": "dimensions",

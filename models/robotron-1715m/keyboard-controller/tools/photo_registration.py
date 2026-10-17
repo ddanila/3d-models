@@ -2,7 +2,7 @@
 """Review numbered lead landmarks against PCB pads; optionally apply a rigid fit.
 Photo annotations never become connectivity or a claim of measured dimensions.
 """
-import argparse,hashlib,json,math
+import argparse,hashlib,json,math,html
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def homography(src,dst):
@@ -42,8 +42,16 @@ def review(layout):
   rows.append({'ref':ref,'pins':pins,'checkPins':checks,'rmsResidualMm':math.sqrt(sum(p['residualMm']**2 for p in pins)/len(pins)),'maxResidualMm':max(p['residualMm']for p in pins+checks),'fitMaxResidualMm':max(math.dist(transform(p['pcbModel']),p['photoModel'])for p in pins+checks),'proposedPosition':transform(c['position']),'rotationDeltaDegrees':math.degrees(angle),'status':'photo-estimated'})
  return {'schema':1,'scope':evidence['scope'],'photoSha256':hashlib.sha256((ROOT/evidence['photo']).read_bytes()).hexdigest(),'toleranceMm':evidence['maxResidualMm'],'components':rows,'withinPhotoTolerance':all(c['maxResidualMm']<=evidence['maxResidualMm']for c in rows)}
 
-def svg(report):
+def svg(report,layout=None):
  e=json.loads((ROOT/'photo-landmarks.json').read_text());w,h=e['imageSize'];out=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}">',f'<image href="../{e["photo"]}" width="{w}" height="{h}"/>']
+ if layout:
+  inverse=homography(e['modelCorners'],e['photoCorners'])
+  for route in layout['routes']:
+   if route['side']!='top':continue
+   points=[project(inverse,p)for p in route['points']]
+   color='orange'if route['evidence']['status']=='inferred'else 'magenta'
+   title=html.escape(route['id']+' '+route['net']+' '+route['evidence']['status'])
+   out.append('<polyline fill="none" stroke="'+color+'" stroke-width="2" points="'+' '.join(f'{x},{y}'for x,y in points)+'"><title>'+title+'</title></polyline>')
  for c in report['components']:
   for p in c['pins']+c['checkPins']:
    x,y=p['photoPixel'];a,b=p['pcbPixel'];out.append(f'<path d="M{x},{y} L{a},{b}" stroke="yellow" stroke-width="3"/><circle cx="{x}" cy="{y}" r="9" fill="none" stroke="lime" stroke-width="3"/><circle cx="{a}" cy="{b}" r="5" fill="red"/><text x="{x+14}" y="{y}" fill="white" stroke="black" stroke-width=".3" font-size="15">{c["ref"]}:{p["pin"]}</text>')

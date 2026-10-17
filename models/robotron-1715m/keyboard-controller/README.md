@@ -217,8 +217,17 @@ measured electrical continuity. Inferred and unresolved records also require
 sources and an explanation. Unassigned photo artwork remains outside this ledger
 and cannot become electrical copper merely by receiving an annotation.
 
-The ledger is currently empty because no electrical copper has been assigned.
-Review of top-photo original pixels x=1190–1510, y=1400–1760 shows a track leaving
-A1 pin 1 toward the board edge, but does not establish its entire endpoint-to-endpoint
-continuity. A1 pins 2 and 4 do not provide an unambiguous visible output route in
-that crop. Do not use the schematic net names as proof of those hidden routes.
+The first assigned route is the partial top track from A1 pin 1 around X1 to a
+round terminal near A4 (original top-photo pixels 1241,2966). Seven segments follow
+visible copper; the short pad-to-visible-lead attachment is inferred because the
+fitted hole centre is obscured. Width 0.35 mm is estimated. The native route uses
+`/WR_N`, the reference schematic net at A1:1; the CPU endpoint and the specimen's
+WR/RD disagreement remain unresolved. No via is asserted at the terminal until
+its underside correspondence is established. DRC therefore retains one
+`track_dangling` finding and 234 airwires. This is an intentionally partial route,
+not fabrication-ready routing. The 294 legacy artwork segments remain unassigned.
+
+`generated/photo-registration.svg` now overlays the native route on the source
+photo: magenta for observed sections, orange for the inferred attachment. The
+geometric review drawing also includes assigned copper. Route evidence retains
+original pixel segment endpoints and the source photo hash for review.
