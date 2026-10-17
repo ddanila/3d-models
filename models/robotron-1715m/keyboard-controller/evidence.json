@@ -80,7 +80,7 @@
     {
       "id": "package-pinmap",
       "status": "unresolved",
-      "detail": "Reviewed DIP placements and twenty native resistor placements are recorded in component-evidence.json. R4.2/R7/R8 still have unnumbered photo endpoint candidates; their underside correspondence and ground-side terminal assignment remain unresolved. Transistor, diode, capacitor and remaining discrete package terminal mappings require review."
+      "detail": "Reviewed DIP placements and twenty-one native resistor placements and BR1 are recorded in component-evidence.json. R4.2/R7/R8 still have unnumbered photo endpoint candidates; their underside correspondence and ground-side terminal assignment remain unresolved. Transistor, diode, capacitor and remaining discrete package terminal mappings require review."
     },
     {
       "id": "clock-source-disagreement",
@@ -107,7 +107,7 @@
         "role": "Isolates the oscillator output from the CPU clock input.",
         "testUse": "Opening the bridge permits external clock injection on the CPU side; inferred electrical use, not a documented factory procedure.",
         "physicalEvidence": {
-          "status": "photo-location-candidate",
+          "status": "photo-placed-reference-terminal-order",
           "source": "robotron-factory-drawings",
           "locator": "PDF page 10, drawing 63-330-4103-2",
           "photoSource": "photo-top",
@@ -123,7 +123,11 @@
             ]
           ],
           "location": "Beyond A7 near the ROM end, beside C6/R10.3",
-          "observation": "A wire-like link is visible between two solder terminals at the factory-designated bridge location. Electrical continuity, construction and source/CPU terminal order are unverified. Endpoint array order is photographic, not schematic pin numbering."
+          "observation": "The original-top-photo left BR1 terminal and R10.3 left lead correspond to a locally connected underside joint pair. Their common reference net is CLK: left BR1 is pin 2 (CPU side), right is pin 1 (oscillator side). This is photo-supported reference orientation, not measured continuity or proof of the complete CPU/oscillator paths.",
+          "terminalMapping": {
+            "1": "right original-photo endpoint; reference OSC_OUT",
+            "2": "left original-photo endpoint; reference CLK, local R10.3 link"
+          }
         }
       },
       {

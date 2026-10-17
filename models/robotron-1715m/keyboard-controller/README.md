@@ -478,3 +478,26 @@ When controller geometry changes, rebuild all names in
 common source stamp is retained for compatibility, but is no longer sufficient
 to qualify the mesh set. Geometry remains photo-estimated, not measured solder
 or lead dimensions.
+
+### BR1 clock bridge and R10.3
+
+BR1 and R10.3 now have photo-estimated native placements. The top photo identifies
+both lead pairs; the underside shows a short connection joining their original-top
+left terminals. Matching that local connection to the reference assigns BR1 pin 2
+and R10.3 pin 2 to CLK, with BR1 pin 1 on OSC_OUT and R10.3 pin 1 on +5V.
+These are reference-derived terminal assignments with local photo support, not
+measured continuity to CPU pin 6 or A7 pin 8.
+
+One inferred bottom CLK segment joins the native pads. Its topology is supported
+by the local joint correspondence; its geometry uses the top-photo placement,
+not the unqualified global underside fit. The recorded bottom pixels are direct
+observations with uncertainty and do not promote that registration. BR1 exports
+native pad holes, lands, solder and a nominal closed wire shape. Its construction,
+bend, height and diameter remain estimates; no factory opening procedure is asserted.
+R10.3 replaces its legacy body and uses native pads for all geometry consumers.
+
+Current totals: 21 native resistors and one bridge, 37 unplaced components,
+25 assigned sections (17 observed, 8 inferred), 229 airwires and one existing A1
+dangling endpoint. Schematic connectivity and digital qualification are unchanged.
+Validation: 21 export checks, native KiCad integration and four mesh-contract
+checks pass. All twelve controller meshes are rebuilt together.

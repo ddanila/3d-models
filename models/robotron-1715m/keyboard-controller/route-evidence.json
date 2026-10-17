@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "scope": "Per-native-copper UUID reviews. Partial A1:1 top route and local R3/R4.1/R5/R6.1 supply connection and separate R6.3/R9.9 supply link, with estimated pad attachments. Photo-supported geometry is not measured continuity; hidden continuations and the output clock source remain unresolved.",
+  "scope": "Per-native-copper UUID reviews. Partial A1:1 top route and local R3/R4.1/R5/R6.1 supply connection and separate R6.3/R9.9 supply link, with estimated pad attachments. Photo-supported geometry is not measured continuity; hidden continuations and the output clock source remain unresolved. BR1/R10.3 has one inferred bottom segment supported by local joint correspondence; it does not qualify global bottom registration.",
   "items": {
     "ec10f645-b9c0-4759-902b-49d63ff81d7d": {
       "status": "inferred",
@@ -664,6 +664,54 @@
               [
                 1382,
                 2497
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "5015c001-226a-4e3e-b7f3-48b31c2fb45e": {
+      "status": "inferred",
+      "geometrySha256": "e03bd5668a6cf1507253aa3a3be64192bbf0a87fcba8c23f078c1ccfc0bb231a",
+      "group": "br1-r103-local-clock",
+      "detail": "The underside photo shows a local straight connection between the R10.3 and BR1 joint pair. Native geometry is inferred between top-photo-placed pads; the global underside registration is not qualified. Width 0.35 mm is estimated. CLK follows the reference common net; continuation to the CPU and measured continuity remain unresolved.",
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1558,
+                3616
+              ],
+              [
+                1559,
+                3660
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        },
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1357,
+                3893
+              ],
+              [
+                1366,
+                3940
               ]
             ],
             "imageSize": [

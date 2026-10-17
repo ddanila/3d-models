@@ -111,7 +111,7 @@ class ControllerExportTests(unittest.TestCase):
   evidence=json.loads((R/'component-evidence.json').read_text())
   self.assertEqual([evidence[r]['blueCollarPin']for r in refs],['2']*6+['1','2'])
   text=(R/'generated/controller.scad').read_text();line=next(s for s in text.splitlines()if s.startswith('controller_pcb_resistors='))
-  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),20)
+  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),21)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.7'),-1)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.8'),1)
  def test_led_resistor_inner_leads_face_adjacent_connector_rows(self):
@@ -125,7 +125,7 @@ class ControllerExportTests(unittest.TestCase):
  def test_partial_a1_route_keeps_endpoint_unresolved(self):
   from route_evidence import annotate
   layout=json.loads((R/'generated/layout.json').read_text())
-  routes=layout['routes'];self.assertEqual(len(routes),24)
+  routes=layout['routes'];self.assertEqual(len(routes),25)
   annotate(routes,layout['vias'],json.loads((R/'route-evidence.json').read_text()),json.loads((R/'evidence.json').read_text()))
   routes=[r for r in routes if r['net']=='/WR_N'];self.assertEqual(len(routes),8)
   self.assertEqual({r['net']for r in routes},{'/WR_N'})
@@ -147,7 +147,7 @@ class ControllerExportTests(unittest.TestCase):
   pads=[tuple(p['position'])for c in layout['components']if c['ref']in ['R3','R4.1']for p in c['pads']if p['pin']=='1']
   self.assertEqual(set(p for p,n in ends.items()if n==1),set(pads))
   self.assertTrue(all(n in [1,2]for n in ends.values()))
-  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['unconnectedItems'],230)
+  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['unconnectedItems'],229)
  def test_reset_supply_tree_reaches_four_resistors(self):
   layout=json.loads((R/'generated/layout.json').read_text())
   routes=[r for r in layout['routes']if r['evidence']['group'].startswith('reset-')]
@@ -178,6 +178,17 @@ class ControllerExportTests(unittest.TestCase):
   self.assertEqual(set(p for p,n in ends.items()if n==1),set(pads))
   reset_points={tuple(p)for r in layout['routes']if r['evidence']['group'].startswith('reset-')for p in r['points']}
   self.assertFalse(set(ends)&reset_points)
+ def test_br1_reference_sides_and_inferred_local_clock_route(self):
+  layout=json.loads((R/'generated/layout.json').read_text());parts={c['ref']:c for c in layout['components']}
+  bridge={p['pin']:p for p in parts['BR1']['pads']};pullup={p['pin']:p for p in parts['R10.3']['pads']}
+  self.assertEqual(bridge['1']['net'],'/OSC_OUT');self.assertEqual(bridge['2']['net'],'/CLK')
+  self.assertEqual(pullup['2']['net'],'/CLK');self.assertEqual(pullup['1']['net'],'/+5V')
+  routes=[r for r in layout['routes']if r['evidence']['group']=='br1-r103-local-clock'];self.assertEqual(len(routes),1)
+  route=routes[0];self.assertEqual(route['side'],'bottom');self.assertEqual(route['evidence']['status'],'inferred')
+  self.assertEqual({tuple(p)for p in route['points']},{tuple(bridge['2']['position']),tuple(pullup['2']['position'])})
+  self.assertFalse(json.loads((R/'generated/bottom-registration.json').read_text())['copperAssignmentQualified'])
+  text=(R/'generated/controller.scad').read_text();line=next(s for s in text.splitlines()if s.startswith('controller_pcb_bridges='))
+  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(exported,[[bridge['1']['position'],bridge['2']['position'],'BR1']])
  def test_route_evidence_rejects_stale_or_unsupported_claims(self):
   from route_evidence import annotate,geometry_sha
   from copy import deepcopy

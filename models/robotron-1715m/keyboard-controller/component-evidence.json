@@ -118,10 +118,40 @@
   },
   "R10.3": {
     "referenceType": "560",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top endpoints and local underside joint pattern",
+    "pinEvidence": "Original-photo left lead joins the left BR1 terminal through a visible local underside track. CLK is their only common reference net, assigning resistor pin 2 and BR1 pin 2 there. Right resistor lead is reference +5V, pin 1. No end-to-end continuity measurement.",
+    "note": "Photo-estimated native replacement of the legacy R10.3 body placement. Reference 560-ohm value, body, hole and pad dimensions are unmeasured. Left blue collar is appearance evidence. Local joint correspondence does not qualify the global underside transform.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1520,
+        3882
+      ],
+      "2": [
+        1357,
+        3893
+      ]
+    },
+    "pixelUncertainty": 8,
+    "supportingSources": [
+      "robotron-factory-drawings",
+      "photo-top",
+      "photo-bottom"
+    ],
+    "bottomPhotoSource": "photo-bottom",
+    "bottomPhotoPins": {
+      "1": [
+        1405,
+        3620
+      ],
+      "2": [
+        1558,
+        3616
+      ]
+    },
+    "bottomPixelUncertainty": 8,
+    "blueCollarPin": "2"
   },
   "R9.9": {
     "referenceType": "3k9",
@@ -826,10 +856,39 @@
   },
   "BR1": {
     "referenceType": "BRIDGE",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-terminal-order; physical numbering unresolved",
-    "note": "Factory placement drawing supports a photo location candidate in evidence.json serviceInterfaces. Native footprint remains unplaced until source/CPU terminal order and pad correspondence are reviewed; no electrical continuity claim.",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top endpoints and local underside joint pattern",
+    "pinEvidence": "Left original-top-photo terminal is pin 2, CPU CLK side, from its visible underside connection to R10.3. Right terminal is reference pin 1, OSC_OUT. Continuation to CPU/oscillator and closed-state continuity remain unmeasured.",
+    "note": "Photo-supported reference terminal orientation, not measured continuity or a factory opening procedure. Wire diameter, stand-off, bend shape, pads and holes are estimated; native bridge geometry is a nominal closed link. Global underside registration remains unqualified.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1423,
+        3934
+      ],
+      "2": [
+        1366,
+        3940
+      ]
+    },
+    "pixelUncertainty": 8,
+    "supportingSources": [
+      "robotron-factory-drawings",
+      "photo-top",
+      "photo-bottom"
+    ],
+    "bottomPhotoSource": "photo-bottom",
+    "bottomPhotoPins": {
+      "1": [
+        1499,
+        3664
+      ],
+      "2": [
+        1559,
+        3660
+      ]
+    },
+    "bottomPixelUncertainty": 8
   },
   "BR2": {
     "referenceType": "BRIDGE",

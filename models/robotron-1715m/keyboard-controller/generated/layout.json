@@ -2974,6 +2974,53 @@
       "type": "U556_2716"
     },
     {
+      "evidence": "Factory location + top lead ends; local underside link supports reference clock-side assignment; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/OSC_OUT",
+          "pin": "1",
+          "position": [
+            130.28935,
+            -10.392125
+          ],
+          "ref": "BR1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/CLK",
+          "pin": "2",
+          "position": [
+            130.740243,
+            -14.676546
+          ],
+          "ref": "BR1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        130.514796,
+        -12.534335
+      ],
+      "ref": "BR1",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "BRIDGE"
+    },
+    {
       "evidence": "photo-estimated-hole",
       "pads": [
         {
@@ -3183,6 +3230,53 @@
         3.677195
       ],
       "ref": "R10.2",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "560"
+    },
+    {
+      "evidence": "Factory location + top lead ends; local underside link supports reference clock-side assignment; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/+5V",
+          "pin": "1",
+          "position": [
+            126.26707,
+            -2.959734
+          ],
+          "ref": "R10.3",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/CLK",
+          "pin": "2",
+          "position": [
+            127.073787,
+            -15.181748
+          ],
+          "ref": "R10.3",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        126.670429,
+        -9.070741
+      ],
+      "ref": "R10.3",
       "rotation": 0.0,
       "side": "top",
       "type": "560"
@@ -5346,6 +5440,70 @@
     },
     {
       "evidence": {
+        "detail": "The underside photo shows a local straight connection between the R10.3 and BR1 joint pair. Native geometry is inferred between top-photo-placed pads; the global underside registration is not qualified. Width 0.35 mm is estimated. CLK follows the reference common net; continuation to the CPU and measured continuity remain unresolved.",
+        "geometrySha256": "e03bd5668a6cf1507253aa3a3be64192bbf0a87fcba8c23f078c1ccfc0bb231a",
+        "group": "br1-r103-local-clock",
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1558,
+                  3616
+                ],
+                [
+                  1559,
+                  3660
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          },
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1357,
+                  3893
+                ],
+                [
+                  1366,
+                  3940
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred"
+      },
+      "id": "5015c001-226a-4e3e-b7f3-48b31c2fb45e",
+      "net": "/CLK",
+      "points": [
+        [
+          127.073787,
+          -15.181748
+        ],
+        [
+          130.740243,
+          -14.676546
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
         "detail": "Visible top track from A1:1 around X1 to a round terminal near A4. Nominal planar photo projection; 0.35 mm width estimated, not measured. Net /WR_N is the schematic assignment at A1:1, not proof of continuity to CPU WR. The terminal underside match and continuation remain unresolved; no via is asserted.",
         "geometrySha256": "a7363c2517be2d871a03ad2f0fe14f3e54ff6a1fdacec9cf4cb10f67dc6fe443",
         "group": "a1-pin1-top-partial",
@@ -5699,53 +5857,6 @@
   ],
   "schema": 1,
   "unplaced": [
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/OSC_OUT",
-          "pin": "1",
-          "position": [
-            62.0,
-            -200.0
-          ],
-          "ref": "BR1",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/CLK",
-          "pin": "2",
-          "position": [
-            64.54,
-            -200.0
-          ],
-          "ref": "BR1",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        62.0,
-        -200.0
-      ],
-      "ref": "BR1",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "BRIDGE"
-    },
     {
       "evidence": "unplaced",
       "pads": [
@@ -6663,53 +6774,6 @@
       "rotation": 0.0,
       "side": "top",
       "type": "8x910"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/+5V",
-          "pin": "1",
-          "position": [
-            -106.0,
-            -150.0
-          ],
-          "ref": "R10.3",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/CLK",
-          "pin": "2",
-          "position": [
-            -103.46,
-            -150.0
-          ],
-          "ref": "R10.3",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -106.0,
-        -150.0
-      ],
-      "ref": "R10.3",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "560"
     },
     {
       "evidence": "unplaced",

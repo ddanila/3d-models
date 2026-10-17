@@ -29,7 +29,7 @@ module controller_transistor_pose(p){translate([p[0],p[1],1.6])rotate([0,0,p[2]]
 controller_connector_tails=[for(i=[0:12],side=[-1,1])[-25+i*2.54,3+side*7]];
 // Photo projected resistor positions; three ROM/CPU-end placements adjusted
 // within the approximate photo registration to clear nominal package bodies.
-controller_legacy_resistors=[[-86.028, 13.759, 87.631, 11.611], [-82.182, 13.59, 87.642, 11.616], [-78.334, 13.421, 87.647, 11.62], [68.794, -5.2, 84.875, 8.317], [80.052, -4, 1.38, 9.676], [128, -8.522, 86.55, 9.355]];
+controller_legacy_resistors=[[-86.028, 13.759, 87.631, 11.611], [-82.182, 13.59, 87.642, 11.616], [-78.334, 13.421, 87.647, 11.62], [68.794, -5.2, 84.875, 8.317], [80.052, -4, 1.38, 9.676]];
 // Placed sensing resistors and output pull-ups inherit native pad geometry.
 controller_resistors=concat(controller_legacy_resistors,controller_pcb_resistors);
 function resistor_end(p,s)=[p[0]+s*p[3]/2*cos(p[2]),p[1]+s*p[3]/2*sin(p[2])];
@@ -42,7 +42,7 @@ module keyboard_controller_board(){keyboard_controller_pose()difference(){
  for(p=controller_end_holes)translate(concat(p,[-1]))cylinder(d=3.2,h=4,$fn=24);
  for(p=concat(controller_connector_tails,controller_legacy_resistor_tails))translate([p[0],p[1],-1])cylinder(d=.85,h=4,$fn=16);
  for(p=controller_transistors)controller_transistor_pose(p)for(x=[-1.27,0,1.27])translate([x,0,-2])cylinder(d=.85,h=4,$fn=12);
- for(p=concat(controller_pcb_dip_pads,controller_pcb_resistor_pads))translate([p[0],p[1],-1])cylinder(d=p[2],h=4,$fn=16);
+ for(p=concat(controller_pcb_dip_pads,controller_pcb_resistor_pads,controller_pcb_bridge_pads))translate([p[0],p[1],-1])cylinder(d=p[2],h=4,$fn=16);
 }}
 module keyboard_controller_chips(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_body(p);
@@ -142,7 +142,7 @@ module keyboard_controller_traces(){keyboard_controller_pose(){
  for(a=controller_pcb_bottom_copper)translate([0,0,-.10])board_trace(a[0],a[1],.10);
  for(p=controller_pcb_dip_pads)translate([p[0],p[1],1.62])difference(){cylinder(d=1.7,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
  for(p=controller_legacy_resistor_tails)translate([p[0],p[1],1.62])difference(){cylinder(d=1.9,h=.1,$fn=16);cylinder(d=.85,h=.2,$fn=12);}
- for(p=controller_pcb_resistor_pads)translate([p[0],p[1],1.62])difference(){scale([p[3],p[4],1])cylinder(d=1,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
+ for(p=concat(controller_pcb_resistor_pads,controller_pcb_bridge_pads))translate([p[0],p[1],1.62])difference(){scale([p[3],p[4],1])cylinder(d=1,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
  // Staggered transistor-stage routes and plated eyes (no invented values).
  for(p=controller_transistors)controller_transistor_pose(p)
   for(x=[-1.27,0,1.27])translate([x,0,-.1])difference(){cylinder(d=1.2,h=.1,$fn=20);cylinder(d=.85,h=.2,$fn=16);}
@@ -375,7 +375,7 @@ module controller_solder_eye(x,y,hole=1.05,outer=2.1){translate([x,y,-.55])diffe
  translate([0,0,-.1])cylinder(d=hole,h=2.4,$fn=16);
 }}
 module keyboard_controller_solder(){keyboard_controller_pose(){
- for(p=controller_pcb_resistor_pads)controller_solder_eye(p[0],p[1],p[2],min(p[3],p[4]));
+ for(p=concat(controller_pcb_resistor_pads,controller_pcb_bridge_pads))controller_solder_eye(p[0],p[1],p[2],min(p[3],p[4]));
  for(p=controller_pcb_dip_pads)controller_solder_eye(p[0],p[1],p[2]);
  for(p=controller_transistors)translate([p[0],p[1],0])rotate([0,0,p[2]])
   for(x=[-1.27,0,1.27])controller_solder_eye(x,0,.85,1.2);
@@ -385,6 +385,8 @@ module keyboard_controller_solder(){keyboard_controller_pose(){
 
 // Bent connector tails and axial leads visible in 123622947. Nominal diameters.
 module keyboard_controller_leads(){keyboard_controller_pose(){
+ // Nominal closed wire-link shape; pad endpoints come from native KiCad.
+ for(b=controller_pcb_bridges)let(a=b[0],c=b[1])wire_run([[a[0],a[1],-.5],[a[0],a[1],2.4],[c[0],c[1],2.4],[c[0],c[1],-.5]],.25);
  for(i=[0:12],side=[-1,1])wire_run([[-25+i*2.54,3+side*2.54,4],[-25+i*2.54,3+side*7,2.2],[-25+i*2.54,3+side*7,-.5]],.28);
  for(p=controller_resistors,s=[-1,1])let(end=resistor_end(p,s))
   wire_run([[p[0]+s*2.6*cos(p[2]),p[1]+s*2.6*sin(p[2]),3.2],[end[0],end[1],3.2],[end[0],end[1],-.5]],.25);

@@ -92,6 +92,8 @@ def main():
    a,b=[p['position']for p in c['pads']];resistors.append([(a[0]+b[0])/2,(a[1]+b[1])/2,math.degrees(math.atan2(b[1]-a[1],b[0]-a[0])),math.dist(a,b),c['ref'],{'1':-1,'2':1}.get(resistor_evidence.get(c['ref'],{}).get('blueCollarPin'),0)])
  scad+=['controller_pcb_resistors='+json.dumps(resistors)+';']
  scad+=['controller_pcb_resistor_pads='+json.dumps([[*p['position'],p['drill'][0],*p['size']]for p in pads if p['ref'].startswith('R')])+';']
+ scad+=['controller_pcb_bridges='+json.dumps([[c['pads'][0]['position'],c['pads'][1]['position'],c['ref']]for c in placed if c['ref'].startswith('BR')])+';']
+ scad+=['controller_pcb_bridge_pads='+json.dumps([[*p['position'],p['drill'][0],*p['size']]for p in pads if p['ref'].startswith('BR')])+';']
  for side in ['top','bottom']:
   scad+=['controller_pcb_'+side+'_art='+json.dumps([[a['points'],a['width']] for a in art if a['side']==side])+';', 'controller_pcb_'+side+'_copper='+json.dumps([[a['points'],a['width']] for a in routes if a['side']==side])+';']
  write('controller.scad','\n'.join(scad).replace('null','undef')+'\n')
