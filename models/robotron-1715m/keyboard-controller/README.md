@@ -313,5 +313,21 @@ not reuse their order as evidence. Before assigning pad numbers, review the
 physical supply/reset terminals: the reference circuit puts R3/R4.1/R5/R6.1 on
 +5V and R4.2/R7/R8 on GND at one end. Adjacency is insufficient evidence that
 all seven terminals share a rail. Underside registration remains unqualified.
-These candidates leave the 49 unplaced components and electrical routing counts
-unchanged; they provide observations for the next placement review.
+R3 and R4.1 have since been promoted to native placements (below); the other five
+remain candidates. Electrical routing counts are unchanged.
+
+### First reset resistor pair
+
+R3 and R4.1 now use native KiCad pad positions from the recorded photo endpoints.
+A visible top-side connection joins their right leads. The reference schematic
+has only one net common to this pair, +5V, supporting assignment of the right
+lead to pin 1 on both parts. The opposite reset-node assignments remain
+reference-derived; no continuity measurement is claimed. This local top-photo
+observation does not depend on the unqualified global underside registration.
+
+The first two legacy resistor estimates were removed. Native geometry now drives
+their bodies, leads, lands, holes and observed blue collar ends; R3 has its collar
+at pin 2, R4.1 at pin 1. Twelve resistors are native and 47 components remain
+unplaced. The visible shared copper has not yet been traced into native tracks.
+R5 and the lower four reset resistors still require terminal review, and the
+missing seventh reset resistor remains an explicit model gap.

@@ -111,7 +111,7 @@ class ControllerExportTests(unittest.TestCase):
   evidence=json.loads((R/'component-evidence.json').read_text())
   self.assertEqual([evidence[r]['blueCollarPin']for r in refs],['2']*6+['1','2'])
   text=(R/'generated/controller.scad').read_text();line=next(s for s in text.splitlines()if s.startswith('controller_pcb_resistors='))
-  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),10)
+  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),12)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.7'),-1)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.8'),1)
  def test_partial_a1_route_keeps_endpoint_unresolved(self):

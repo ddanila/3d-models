@@ -3188,6 +3188,100 @@
       "type": "560"
     },
     {
+      "evidence": "Factory placement + top-photo lead ends; shared right-side connection supports supply orientation; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/+5V",
+          "pin": "1",
+          "position": [
+            -111.708451,
+            19.138192
+          ],
+          "ref": "R3",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/RESET_BIAS_LOW",
+          "pin": "2",
+          "position": [
+            -111.572545,
+            7.162209
+          ],
+          "ref": "R3",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -111.640498,
+        13.150201
+      ],
+      "ref": "R3",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "22k"
+    },
+    {
+      "evidence": "Factory placement + top-photo lead ends; shared right-side connection supports supply orientation; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/+5V",
+          "pin": "1",
+          "position": [
+            -108.210332,
+            19.204648
+          ],
+          "ref": "R4.1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/RESET_DIODE_TOP",
+          "pin": "2",
+          "position": [
+            -108.146083,
+            7.30104
+          ],
+          "ref": "R4.1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -108.178207,
+        13.252844
+      ],
+      "ref": "R4.1",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "220"
+    },
+    {
       "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
       "pads": [
         {
@@ -5796,100 +5890,6 @@
       "rotation": 0.0,
       "side": "top",
       "type": "8x4k7"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/+5V",
-          "pin": "1",
-          "position": [
-            -82.0,
-            -100.0
-          ],
-          "ref": "R3",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/RESET_BIAS_LOW",
-          "pin": "2",
-          "position": [
-            -79.46,
-            -100.0
-          ],
-          "ref": "R3",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -82.0,
-        -100.0
-      ],
-      "ref": "R3",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "22k"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/+5V",
-          "pin": "1",
-          "position": [
-            -58.0,
-            -100.0
-          ],
-          "ref": "R4.1",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/RESET_DIODE_TOP",
-          "pin": "2",
-          "position": [
-            -55.46,
-            -100.0
-          ],
-          "ref": "R4.1",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -58.0,
-        -100.0
-      ],
-      "ref": "R4.1",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "220"
     },
     {
       "evidence": "unplaced",

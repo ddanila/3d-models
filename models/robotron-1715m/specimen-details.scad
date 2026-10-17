@@ -29,7 +29,7 @@ module controller_transistor_pose(p){translate([p[0],p[1],1.6])rotate([0,0,p[2]]
 controller_connector_tails=[for(i=[0:12],side=[-1,1])[-25+i*2.54,3+side*7]];
 // Photo projected resistor positions; three ROM/CPU-end placements adjusted
 // within the approximate photo registration to clear nominal package bodies.
-controller_legacy_resistors=[[-111.706, 14.889, 87.58, 11.581], [-108.544, 14.75, 87.586, 11.585], [-104.882, 14.589, 87.592, 11.59], [-86.028, 13.759, 87.631, 11.611], [-82.182, 13.59, 87.642, 11.616], [-78.334, 13.421, 87.647, 11.62], [68.794, -5.2, 84.875, 8.317], [80.052, -4, 1.38, 9.676], [128, -8.522, 86.55, 9.355]];
+controller_legacy_resistors=[[-104.882, 14.589, 87.592, 11.59], [-86.028, 13.759, 87.631, 11.611], [-82.182, 13.59, 87.642, 11.616], [-78.334, 13.421, 87.647, 11.62], [68.794, -5.2, 84.875, 8.317], [80.052, -4, 1.38, 9.676], [128, -8.522, 86.55, 9.355]];
 // Placed sensing resistors and output pull-ups inherit native pad geometry.
 controller_resistors=concat(controller_legacy_resistors,controller_pcb_resistors);
 function resistor_end(p,s)=[p[0]+s*p[3]/2*cos(p[2]),p[1]+s*p[3]/2*sin(p[2])];
