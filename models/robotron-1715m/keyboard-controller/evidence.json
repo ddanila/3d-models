@@ -166,7 +166,6 @@
       "sha256": "364c56674f14a3361849dbe29b722a00145bb39c6afd45a048099906ceb960ae",
       "specimenId": "comparison-20261017",
       "side": "oblique",
-      "refs": [],
       "use": "Keyboard connector mating face. Separate specimen; comparison evidence only, not primary-specimen placement or continuity."
     },
     {
@@ -175,7 +174,6 @@
       "sha256": "602404556009fe24083bc919b7d495c4876b0e4d8a7546d70a6f9b71ea6f2f22",
       "specimenId": "comparison-20261017",
       "side": "oblique",
-      "refs": [],
       "use": "Keyboard connector bent leads and solder attachments. Separate specimen; comparison evidence only, not primary-specimen placement or continuity."
     },
     {
@@ -212,7 +210,8 @@
         "A7",
         "BR1",
         "R10.3",
-        "C6"
+        "C6",
+        "C5.4"
       ],
       "use": "Bridge and oscillator end; board marking and D100D package. Separate specimen; comparison evidence only, not primary-specimen placement or continuity."
     },
@@ -224,7 +223,8 @@
       "side": "top",
       "refs": [
         "A6",
-        "A7"
+        "A7",
+        "C5.4"
       ],
       "use": "K155TM2 and D100D package markings and surrounding leads. Separate specimen; comparison evidence only, not primary-specimen placement or continuity."
     },
@@ -250,7 +250,9 @@
       "side": "top",
       "refs": [
         "A2.2",
-        "A4"
+        "A4",
+        "C5.2",
+        "C5.3"
       ],
       "use": "Middle-board DL003D gate and surrounding copper. Separate specimen; comparison evidence only, not primary-specimen placement or continuity."
     },
@@ -262,7 +264,8 @@
       "side": "top",
       "refs": [
         "A2.2",
-        "A2.3"
+        "A2.3",
+        "C5.2"
       ],
       "use": "Paired middle-board DL003D packages and traces. Separate specimen; comparison evidence only, not primary-specimen placement or continuity."
     },
@@ -415,7 +418,7 @@
     {
       "id": "package-pinmap",
       "status": "unresolved",
-      "detail": "Reviewed DIP placements and twenty-one native resistor placements and BR1 are recorded in component-evidence.json. R4.2/R7/R8 still have unnumbered photo endpoint candidates; their underside correspondence and ground-side terminal assignment remain unresolved. Transistor, diode, capacitor and remaining discrete package terminal mappings require review. C5.1 now has primary-photo pad/body placement and reference supply-rail pin assignment; the other capacitors remain unplaced."
+      "detail": "Reviewed DIP placements and twenty-one native resistor placements and BR1 are recorded in component-evidence.json. R4.2/R7/R8 still have unnumbered photo endpoint candidates; their underside correspondence and ground-side terminal assignment remain unresolved. Transistor, diode, capacitor and remaining discrete package terminal mappings require review. C5.1\u2013C5.4 now have primary-photo pad/body placements and reference supply-rail pin assignments. Hidden continuations remain untraced. C5.5 and other capacitors remain unplaced; a C5.5 lead entry is obscured by the adjacent electrolytic."
     },
     {
       "id": "clock-source-disagreement",

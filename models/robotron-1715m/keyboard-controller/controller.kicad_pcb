@@ -7598,7 +7598,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "a76095e7-4ad2-45f2-90a1-5de2063bc9f7")
-		(at 92 125)
+		(at 178.044442 41.094985)
 		(property "Reference" "C5.2"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -7642,7 +7642,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory location; primary photo lead entries and body centre; reference rail assignment with untraced continuation; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7680,7 +7680,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at -2.006295 2.426598)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -7689,7 +7689,7 @@
 			(uuid "e735f885-55a8-4f0e-8aae-7c281605d429")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at 2.582998 2.037541)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -8041,7 +8041,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "c65cc180-f646-4e44-9199-761c14638293")
-		(at 140 125)
+		(at 250.810583 62.11194)
 		(property "Reference" "C5.4"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -8085,7 +8085,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory location; primary photo lead entries and body centre; reference rail assignment with untraced continuation; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8123,7 +8123,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at -4.020106 -2.04778)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -8132,7 +8132,7 @@
 			(uuid "8bb94b3a-c94c-45ba-9a0d-29d092c8d41b")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at -3.968285 2.801813)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -8771,7 +8771,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "ebbbbd77-1292-4e20-b2a2-5d0061f4779e")
-		(at 116 125)
+		(at 184.197461 56.2519)
 		(property "Reference" "C5.3"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -8815,7 +8815,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory location; primary photo lead entries and body centre; reference rail assignment with untraced continuation; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8853,7 +8853,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at 4.527624 -1.128755)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -8862,7 +8862,7 @@
 			(uuid "5d6c6884-1cb1-4fb4-88c1-c5d284030260")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at 4.568845 3.544172)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")

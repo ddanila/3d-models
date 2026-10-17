@@ -55,7 +55,7 @@ module keyboard_controller_ceramic(){keyboard_controller_pose(){
  for(c=controller_pcb_ceramics)translate([c[0][0],c[0][1],4.4])rotate([0,0,atan2(c[2][1]-c[1][1],c[2][0]-c[1][0])])rotate([90,0,0])cylinder(d=5.2,h=1.2,center=true,$fn=32);
  controller_rom_pose(2.8)slab(32,13.5,3.5,.7);
  // Small ceramic discs beside the logic; axial resistors have their own finish.
- for(p=[[13,-5],[38,-6],[78,-3],[105,-3]])
+ for(p=[[105,-3]])
   translate([p[0],p[1],3])rotate([90,0,0])cylinder(d=3.8,h=1.2,$fn=24);
 }}
 module keyboard_controller_rom_cover(){keyboard_controller_pose()controller_rom_pose(6.35)translate([-2,0,0])slab(18,13,.15,.2);}

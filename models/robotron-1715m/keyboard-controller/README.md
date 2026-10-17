@@ -62,7 +62,7 @@ No primary-specimen CLK route is restored until correspondence is reconciled.
 
 The user confirms that the primary museum ROM was replaced and may locate the
 original later. ROM identity is a separate firmware question and is not a reason
-to reject otherwise matching PCB evidence. No native geometry or pin map changed. Existing 25 assigned sections, 229 airwires and 36
+to reject otherwise matching PCB evidence. No native geometry or pin map changed. Existing 25 assigned sections, 229 airwires and 33
 unplaced schematic components remain the reconstruction's actual coverage.
 
 ## Native KiCad authorities
@@ -594,5 +594,12 @@ The native footprint origin records the body centre independently from its pads.
 Generated SCAD now exports ceramic bodies and pads; board drilling, copper lands,
 solder joints and bent leads use the same native endpoints. The former C5.1 body
 placeholder is removed. Disc diameter 5.2 mm, thickness 1.2 mm, centre height
-4.4 mm and lead/joint dimensions are nominal. The remaining four disc bodies
-retain legacy estimates. No copper route is added by this placement.
+4.4 mm and lead/joint dimensions are nominal. C5.2–C5.4 also use native pad/body placement; C5.5 retains a legacy estimate. No copper route is added by this placement.
+
+C5.2, C5.3 and C5.4 are identified by the factory placement drawing and primary
+photo lead entries. For each, a visible rail supports one terminal assignment;
+the other terminal follows the reference decoupling circuit. Hidden continuations
+remain untraced and no copper is assigned by placing these parts. Component
+evidence records the distinction. Their body centres remain independent of the
+pads, with nominal disc and bent-lead geometry. C5.5 is not placed because the
+primary photograph obscures a lead entry beside the electrolytic capacitor.

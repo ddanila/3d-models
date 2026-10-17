@@ -830,24 +830,72 @@
   },
   "C5.2": {
     "referenceType": "47n",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "Factory drawing 63-330-4103-2 identifies C5.2 between A2.2 and A2.3; primary photo-top lead entries and body centre.",
+    "pinEvidence": "Nonpolar capacitor. Lower photo lead is on the broad return rail at A2.3:7. Upper lead is assigned +5V from the reference decoupling circuit; its supply continuation is not independently traced. Pin numbers are reconstruction identifiers, not observed polarity. No measured continuity.",
+    "note": "Photo-estimated pad/body placement. Reference 47 nF is not measured. Hole 0.85 mm, pad 1.7 mm, disc diameter 5.2 mm, thickness 1.2 mm and centre height 4.4 mm are nominal.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1587,
+        2582
+      ],
+      "2": [
+        1595,
+        2642
+      ]
+    },
+    "photoBodyCentre": [
+      1621,
+      2608
+    ],
+    "pixelUncertainty": 8
   },
   "C5.3": {
     "referenceType": "47n",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "Factory drawing 63-330-4103-2 identifies C5.3 on the cable side of A4; primary photo-top lead entries and body centre.",
+    "pinEvidence": "Nonpolar capacitor. Right photo lead is on the broad supply rail near A4:20. Left lead is assigned GND from the reference decoupling circuit; its hidden continuation is not independently traced. Pin numbers are reconstruction identifiers, not observed polarity. No measured continuity.",
+    "note": "Photo-estimated pad/body placement. Reference 47 nF is not measured. Hole 0.85 mm, pad 1.7 mm, disc diameter 5.2 mm, thickness 1.2 mm and centre height 4.4 mm are nominal.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1438,
+        2749
+      ],
+      "2": [
+        1375,
+        2750
+      ]
+    },
+    "photoBodyCentre": [
+      1420,
+      2690
+    ],
+    "pixelUncertainty": 8
   },
   "C5.4": {
     "referenceType": "47n",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "Factory drawing 63-330-4103-2 identifies C5.4 between A6 and A7; primary photo-top lead entries and body centre.",
+    "pinEvidence": "Nonpolar capacitor. Left photo lead is on the return-side trace below A6:7. Right lead is assigned +5V from the reference decoupling circuit; the comparison close-up corroborates the two separate rail attachments. Pin numbers are reconstruction identifiers, not observed polarity. No measured continuity.",
+    "note": "Photo-estimated pad/body placement. Reference 47 nF is not measured. Hole 0.85 mm, pad 1.7 mm, disc diameter 5.2 mm, thickness 1.2 mm and centre height 4.4 mm are nominal.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1407,
+        3503
+      ],
+      "2": [
+        1342,
+        3504
+      ]
+    },
+    "photoBodyCentre": [
+      1382,
+      3555
+    ],
+    "pixelUncertainty": 8
   },
   "C5.5": {
     "referenceType": "47n",

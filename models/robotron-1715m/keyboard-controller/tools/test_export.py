@@ -17,7 +17,11 @@ class ControllerExportTests(unittest.TestCase):
   self.assertGreater(c['position'][1]-midpoint[1],2.5)
   scad=(R/'generated/controller.scad').read_text()
   ceramics=json.loads(scad.split('controller_pcb_ceramics=')[1].split(';')[0])
-  self.assertEqual(ceramics,[[c['position'],c['pads'][0]['position'],c['pads'][1]['position'],'C5.1']])
+  self.assertEqual(next(x for x in ceramics if x[3]=='C5.1'),[c['position'],c['pads'][0]['position'],c['pads'][1]['position'],'C5.1'])
+  self.assertEqual({x[3]for x in ceramics},{'C5.1','C5.2','C5.3','C5.4'})
+  for row in ceramics:
+   native=next(x for x in layout['components']if x['ref']==row[3])
+   self.assertEqual(row[:3],[native['position'],*[p['position']for p in native['pads']]])
  def test_curves_and_outline_errors(self):
   points=arc_points([10,0],[0,10],[-10,0])
   self.assertEqual(points[0],[10,0]);self.assertEqual(points[-1],[-10,0])
