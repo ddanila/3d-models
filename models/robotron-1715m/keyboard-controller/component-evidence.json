@@ -125,17 +125,51 @@
   },
   "R9.9": {
     "referenceType": "3k9",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends beside A2.2/A4",
+    "pinEvidence": "The upper leads share visible top copper. Their only common reference net is +5V, assigned pin 1. Lower pin 2 assignments follow the reference schematic; complete signal paths and supply feed remain unverified.",
+    "note": "Factory placement identifies R6.3 on the package side and R9.9 on the board-edge side. Both bodies were absent from legacy geometry. Nominal planar registration; hole centres, body, pad and drill dimensions estimated. Reference resistance is not measured. Lower blue collar is appearance evidence, not polarity.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1337,
+        2499
+      ],
+      "2": [
+        1349,
+        2657
+      ]
+    },
+    "pixelUncertainty": 8,
+    "blueCollarPin": "2",
+    "supportingSources": [
+      "robotron-factory-drawings",
+      "photo-top"
+    ]
   },
   "R6.3": {
     "referenceType": "1k",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends beside A2.2/A4",
+    "pinEvidence": "The upper leads share visible top copper. Their only common reference net is +5V, assigned pin 1. Lower pin 2 assignments follow the reference schematic; complete signal paths and supply feed remain unverified.",
+    "note": "Factory placement identifies R6.3 on the package side and R9.9 on the board-edge side. Both bodies were absent from legacy geometry. Nominal planar registration; hole centres, body, pad and drill dimensions estimated. Reference resistance is not measured. Lower blue collar is appearance evidence, not polarity.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1382,
+        2497
+      ],
+      "2": [
+        1391,
+        2658
+      ]
+    },
+    "pixelUncertainty": 8,
+    "blueCollarPin": "2",
+    "supportingSources": [
+      "robotron-factory-drawings",
+      "photo-top"
+    ]
   },
   "R6.4": {
     "referenceType": "1k",

@@ -3019,7 +3019,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "2f655e1d-14d6-4d8a-813a-382fd267e632")
-		(at 212 150)
+		(at 175.577943 58.340908)
 		(property "Reference" "R6.3"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -3063,7 +3063,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory placement + photo-top lead ends; visible upper-lead supply link; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3101,7 +3101,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at -6.154117 0.052264)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -3110,7 +3110,7 @@
 			(uuid "ea927a0b-1dd9-487a-a44d-5e7a1c63d354")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at 6.154117 -0.052263)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -6186,7 +6186,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "8b1fb97f-27ed-46ad-9cd7-318a9ff0a41a")
-		(at 260 175)
+		(at 175.589924 61.563358)
 		(property "Reference" "R9.9"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -6230,7 +6230,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory placement + photo-top lead ends; visible upper-lead supply link; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6268,7 +6268,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at -6.041188 0.166745)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -6277,7 +6277,7 @@
 			(uuid "89ccd575-1bd4-47df-9909-933d6bb25267")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at 6.041187 -0.166745)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -12379,6 +12379,14 @@
 		(uuid "1c4c573b-a236-4679-b93f-75699423fd0a")
 	)
 	(segment
+		(start 169.478567 60.98653)
+		(end 169.417657 59.133076)
+		(width 0.35)
+		(layer "F.Cu")
+		(net "/+5V")
+		(uuid "2c41a84f-f51a-46a1-a93e-bb036ba69e0b")
+	)
+	(segment
 		(start 60.807422 30.600357)
 		(end 60.797277 31.404095)
 		(width 1)
@@ -12409,6 +12417,14 @@
 		(layer "F.Cu")
 		(net "/+5V")
 		(uuid "937e14a8-174d-4ad0-91f3-3c2d3fbfa7fd")
+	)
+	(segment
+		(start 169.548736 61.730103)
+		(end 169.478567 60.98653)
+		(width 0.35)
+		(layer "F.Cu")
+		(net "/+5V")
+		(uuid "94416e88-6218-4e94-80d1-b46f72907660")
 	)
 	(segment
 		(start 41.592846 28.816639)
@@ -12449,6 +12465,14 @@
 		(layer "F.Cu")
 		(net "/+5V")
 		(uuid "c41bb143-5a93-4a1d-8474-2612b00622fa")
+	)
+	(segment
+		(start 169.417657 59.133076)
+		(end 169.423826 58.393172)
+		(width 0.35)
+		(layer "F.Cu")
+		(net "/+5V")
+		(uuid "ca4a8ba7-a1d9-4413-b3df-ecc6e5938928")
 	)
 	(segment
 		(start 38.291549 30.861808)

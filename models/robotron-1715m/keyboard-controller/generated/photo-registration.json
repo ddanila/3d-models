@@ -1303,6 +1303,104 @@
     {
       "checkPins": [],
       "independentValidation": false,
+      "maxResidualMm": 5.671716718917992e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            19.548736,
+            -11.730103
+          ],
+          "pcbPixel": [
+            1336.9999941616302,
+            2498.999994974947
+          ],
+          "photoModel": [
+            19.548736387200044,
+            -11.730102585560822
+          ],
+          "photoPixel": [
+            1337,
+            2499
+          ],
+          "pin": "1",
+          "residualMm": 5.671716718917992e-07
+        },
+        {
+          "pcbModel": [
+            31.631111,
+            -11.396613
+          ],
+          "pcbPixel": [
+            1348.9999948028346,
+            2656.999998410501
+          ],
+          "photoModel": [
+            31.631111124642544,
+            -11.396612620520408
+          ],
+          "photoPixel": [
+            1349,
+            2657
+          ],
+          "pin": "2",
+          "residualMm": 3.9942524313501057e-07
+        }
+      ],
+      "ref": "R9.9",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
+      "maxResidualMm": 2.020645635727017e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            19.423826,
+            -8.393172
+          ],
+          "pcbPixel": [
+            1381.9999977090401,
+            2496.9999995122557
+          ],
+          "photoModel": [
+            19.42382603864057,
+            -8.393171832196968
+          ],
+          "photoPixel": [
+            1382,
+            2497
+          ],
+          "pin": "1",
+          "residualMm": 1.7219451586957628e-07
+        },
+        {
+          "pcbModel": [
+            31.73206,
+            -8.288645
+          ],
+          "pcbPixel": [
+            1391.000001410308,
+            2657.999997792434
+          ],
+          "photoModel": [
+            31.732060168069314,
+            -8.288645112173054
+          ],
+          "photoPixel": [
+            1391,
+            2658
+          ],
+          "pin": "2",
+          "residualMm": 2.020645635727017e-07
+        }
+      ],
+      "ref": "R6.3",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
       "maxResidualMm": 5.288925157415605e-07,
       "pins": [
         {

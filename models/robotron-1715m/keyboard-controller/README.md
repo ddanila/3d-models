@@ -438,3 +438,20 @@ Native pads drive their bodies, leads, holes, lands and lower-end blue collars.
 The 130-ohm reference value and estimated dimensions are not measurements.
 Eighteen resistors are now native, with 41 components unplaced. No copper was
 added; the 21 assigned sections and 231 airwires remain unchanged.
+
+### A4 control pull-ups
+
+R6.3 and R9.9 are now native components beside A2.2/A4, identified by factory
+placement and top-photo endpoints. Their upper leads share a visible copper
+link; +5V is their only common reference net, supporting pin 1 orientation.
+Lower LATCH_OE_N and IO_ACTIVE assignments remain reference-derived, with complete
+signal paths unverified. Both bodies were missing from legacy geometry, so no
+legacy entries were removed. Native pads drive bodies, leads, holes, lands and
+the lower blue collars. Dimensions and resistance remain unmeasured.
+
+The shared link has one observed track section and two inferred pad attachments,
+with original pixels and geometry-bound evidence. Its supply feed is unresolved.
+It is a separate physical island on the same reference +5V net as the reset
+supply tree; net selection may highlight both without implying a traced join.
+Current totals: 20 native resistors, 39 unplaced components, 24 assigned copper
+sections (17 observed, 7 inferred), 230 airwires, one existing A1 dangling endpoint.

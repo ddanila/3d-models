@@ -65,7 +65,7 @@
     {
       "id": "hidden-copper",
       "status": "unresolved",
-      "detail": "Native copper now includes the partial A1:1 top route and the visible R3/R4.1/R5/R6.1 supply tree, with pad attachments classified as inferred. See route-evidence.json and generated/qualification.json for current coverage and counts. The A1 terminal underside correspondence, CPU endpoint and WR/RD specimen disagreement remain unresolved. Unassigned legacy artwork is not electrical connectivity."
+      "detail": "Native copper now includes the partial A1:1 top route and the visible R3/R4.1/R5/R6.1 supply tree and separate R6.3/R9.9 link, with pad attachments classified as inferred. See route-evidence.json and generated/qualification.json for current coverage and counts. The A1 terminal underside correspondence, CPU endpoint and WR/RD specimen disagreement remain unresolved. Unassigned legacy artwork is not electrical connectivity."
     },
     {
       "id": "dimensions",
@@ -80,7 +80,7 @@
     {
       "id": "package-pinmap",
       "status": "unresolved",
-      "detail": "Reviewed DIP placements and eighteen native resistor placements are recorded in component-evidence.json. R4.2/R7/R8 still have unnumbered photo endpoint candidates; their underside correspondence and ground-side terminal assignment remain unresolved. Transistor, diode, capacitor and remaining discrete package terminal mappings require review."
+      "detail": "Reviewed DIP placements and twenty native resistor placements are recorded in component-evidence.json. R4.2/R7/R8 still have unnumbered photo endpoint candidates; their underside correspondence and ground-side terminal assignment remain unresolved. Transistor, diode, capacitor and remaining discrete package terminal mappings require review."
     },
     {
       "id": "clock-source-disagreement",

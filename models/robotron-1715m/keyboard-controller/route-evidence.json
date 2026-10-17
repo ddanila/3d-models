@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "scope": "Per-native-copper UUID reviews. Partial A1:1 top route and local R3/R4.1/R5/R6.1 supply connection, with estimated pad attachments. Photo-supported geometry is not measured continuity; hidden continuations and the output clock source remain unresolved.",
+  "scope": "Per-native-copper UUID reviews. Partial A1:1 top route and local R3/R4.1/R5/R6.1 supply connection and separate R6.3/R9.9 supply link, with estimated pad attachments. Photo-supported geometry is not measured continuity; hidden continuations and the output clock source remain unresolved.",
   "items": {
     "ec10f645-b9c0-4759-902b-49d63ff81d7d": {
       "status": "inferred",
@@ -580,6 +580,90 @@
               [
                 1683,
                 1055
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "94416e88-6218-4e94-80d1-b46f72907660": {
+      "status": "inferred",
+      "geometrySha256": "91cc165e71aaa6fbe7ad4cbd4293a25e4753e71e2e5703937dae7cb7683f2f25",
+      "group": "a4-pullup-supply-top",
+      "detail": "Estimated pad attachment from visible link to photo-positioned resistor lead end; solder obscures the exact boundary. The shared net is +5V in the reference schematic. Nominal planar scale and 0.35 mm width are estimates. This local island does not establish its supply feed or measured continuity.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1337,
+                2499
+              ],
+              [
+                1347,
+                2498
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "2c41a84f-f51a-46a1-a93e-bb036ba69e0b": {
+      "status": "observed",
+      "geometrySha256": "386e1fb2e4f91c22f1442a8ffc225a93be36b8abcfa7fe0b9073dd84779c0ea1",
+      "group": "a4-pullup-supply-top",
+      "detail": "Visible short top copper link between the upper leads of R9.9 and R6.3. The shared net is +5V in the reference schematic. Nominal planar scale and 0.35 mm width are estimates. This local island does not establish its supply feed or measured continuity.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1347,
+                2498
+              ],
+              [
+                1372,
+                2497
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "ca4a8ba7-a1d9-4413-b3df-ecc6e5938928": {
+      "status": "inferred",
+      "geometrySha256": "233a03a0dd61ce7f6dca9f43d163debcfee08ed9206fb93b8d893f5965df6c01",
+      "group": "a4-pullup-supply-top",
+      "detail": "Estimated pad attachment from visible link to photo-positioned resistor lead end; solder obscures the exact boundary. The shared net is +5V in the reference schematic. Nominal planar scale and 0.35 mm width are estimates. This local island does not establish its supply feed or measured continuity.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1372,
+                2497
+              ],
+              [
+                1382,
+                2497
               ]
             ],
             "imageSize": [

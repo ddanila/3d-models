@@ -3517,6 +3517,53 @@
       "type": "1k"
     },
     {
+      "evidence": "Factory placement + photo-top lead ends; visible upper-lead supply link; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/+5V",
+          "pin": "1",
+          "position": [
+            19.423826,
+            -8.393172
+          ],
+          "ref": "R6.3",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/LATCH_OE_N",
+          "pin": "2",
+          "position": [
+            31.73206,
+            -8.288645
+          ],
+          "ref": "R6.3",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        25.577943,
+        -8.340908
+      ],
+      "ref": "R6.3",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "1k"
+    },
+    {
       "evidence": "Factory placement + top-photo lead ends; close-up supports adjacent gate pin orientation; component-evidence.json",
       "pads": [
         {
@@ -3935,6 +3982,53 @@
         18.579368
       ],
       "ref": "R9.8",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "3k9"
+    },
+    {
+      "evidence": "Factory placement + photo-top lead ends; visible upper-lead supply link; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/+5V",
+          "pin": "1",
+          "position": [
+            19.548736,
+            -11.730103
+          ],
+          "ref": "R9.9",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/IO_ACTIVE",
+          "pin": "2",
+          "position": [
+            31.631111,
+            -11.396613
+          ],
+          "ref": "R9.9",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        25.589924,
+        -11.563358
+      ],
+      "ref": "R9.9",
       "rotation": 0.0,
       "side": "top",
       "type": "3k9"
@@ -4636,6 +4730,50 @@
     },
     {
       "evidence": {
+        "detail": "Visible short top copper link between the upper leads of R9.9 and R6.3. The shared net is +5V in the reference schematic. Nominal planar scale and 0.35 mm width are estimates. This local island does not establish its supply feed or measured continuity.",
+        "geometrySha256": "386e1fb2e4f91c22f1442a8ffc225a93be36b8abcfa7fe0b9073dd84779c0ea1",
+        "group": "a4-pullup-supply-top",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1347,
+                  2498
+                ],
+                [
+                  1372,
+                  2497
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "2c41a84f-f51a-46a1-a93e-bb036ba69e0b",
+      "net": "/+5V",
+      "points": [
+        [
+          19.478567,
+          -10.98653
+        ],
+        [
+          19.417657,
+          -9.133076
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
+    },
+    {
+      "evidence": {
         "detail": "Estimated attachment from visible copper to photo-positioned R6.1:1; solder obscures the precise pad boundary. Net +5V follows the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. Only this visible strip is assigned; hidden branches remain unresolved.",
         "geometrySha256": "85bdee36d571a04e9eee3cec506176713a32c60542032f809655fec80fdedc23",
         "group": "reset-r61-supply-top",
@@ -4809,6 +4947,50 @@
       ],
       "side": "top",
       "width": 1.0
+    },
+    {
+      "evidence": {
+        "detail": "Estimated pad attachment from visible link to photo-positioned resistor lead end; solder obscures the exact boundary. The shared net is +5V in the reference schematic. Nominal planar scale and 0.35 mm width are estimates. This local island does not establish its supply feed or measured continuity.",
+        "geometrySha256": "91cc165e71aaa6fbe7ad4cbd4293a25e4753e71e2e5703937dae7cb7683f2f25",
+        "group": "a4-pullup-supply-top",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1337,
+                  2499
+                ],
+                [
+                  1347,
+                  2498
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred"
+      },
+      "id": "94416e88-6218-4e94-80d1-b46f72907660",
+      "net": "/+5V",
+      "points": [
+        [
+          19.548736,
+          -11.730103
+        ],
+        [
+          19.478567,
+          -10.98653
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
     },
     {
       "evidence": {
@@ -5029,6 +5211,50 @@
       ],
       "side": "top",
       "width": 1.0
+    },
+    {
+      "evidence": {
+        "detail": "Estimated pad attachment from visible link to photo-positioned resistor lead end; solder obscures the exact boundary. The shared net is +5V in the reference schematic. Nominal planar scale and 0.35 mm width are estimates. This local island does not establish its supply feed or measured continuity.",
+        "geometrySha256": "233a03a0dd61ce7f6dca9f43d163debcfee08ed9206fb93b8d893f5965df6c01",
+        "group": "a4-pullup-supply-top",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1372,
+                  2497
+                ],
+                [
+                  1382,
+                  2497
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred"
+      },
+      "id": "ca4a8ba7-a1d9-4413-b3df-ecc6e5938928",
+      "net": "/+5V",
+      "points": [
+        [
+          19.417657,
+          -9.133076
+        ],
+        [
+          19.423826,
+          -8.393172
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
     },
     {
       "evidence": {
@@ -6709,53 +6935,6 @@
           "net": "/+5V",
           "pin": "1",
           "position": [
-            62.0,
-            -100.0
-          ],
-          "ref": "R6.3",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/LATCH_OE_N",
-          "pin": "2",
-          "position": [
-            64.54,
-            -100.0
-          ],
-          "ref": "R6.3",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        62.0,
-        -100.0
-      ],
-      "ref": "R6.3",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "1k"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/+5V",
-          "pin": "1",
-          "position": [
             86.0,
             -100.0
           ],
@@ -6932,53 +7111,6 @@
       "rotation": 0.0,
       "side": "top",
       "type": "47k"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/+5V",
-          "pin": "1",
-          "position": [
-            110.0,
-            -125.0
-          ],
-          "ref": "R9.9",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/IO_ACTIVE",
-          "pin": "2",
-          "position": [
-            112.54,
-            -125.0
-          ],
-          "ref": "R9.9",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        110.0,
-        -125.0
-      ],
-      "ref": "R9.9",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "3k9"
     },
     {
       "evidence": "unplaced",
