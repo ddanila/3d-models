@@ -328,6 +328,21 @@ observation does not depend on the unqualified global underside registration.
 The first two legacy resistor estimates were removed. Native geometry now drives
 their bodies, leads, lands, holes and observed blue collar ends; R3 has its collar
 at pin 2, R4.1 at pin 1. Twelve resistors are native and 47 components remain
-unplaced. The visible shared copper has not yet been traced into native tracks.
+unplaced. The shared copper is now traced into native tracks as described below.
 R5 and the lower four reset resistors still require terminal review, and the
 missing seventh reset resistor remains an explicit model gap.
+
+### Reset supply copper
+
+Five top-side native track segments join R3:1 to R4.1:1 on reference net +5V.
+Three sections follow visible copper in the original top photograph; the two
+short pad attachments are inferred because solder and leads obscure the exact
+hole/copper boundary. `route-evidence.json` binds each UUID, geometry hash,
+classification and original pixel segment to the pinned photo. The nominal
+1.0 mm width and planar scale are estimates, not measured track dimensions.
+
+The overlay was checked against the visible shared strip. This local connection
+does not establish its feed or further continuation. There are now 13 assigned
+segments (10 observed, 3 inferred), 233 airwires and the same single dangling
+A1:1 track endpoint. The 294 legacy artwork segments remain unassigned graphics;
+their appearance is not evidence of extra electrical connectivity.

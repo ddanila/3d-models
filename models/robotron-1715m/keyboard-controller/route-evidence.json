@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "scope": "Per-native-copper UUID reviews. A1:1 has one partial top route with an estimated pad attachment. Photo-supported geometry is not measured continuity; the CPU endpoint and output clock source remain unresolved.",
+  "scope": "Per-native-copper UUID reviews. Partial A1:1 top route and local R3/R4.1 supply connection, with estimated pad attachments. Photo-supported geometry is not measured continuity; hidden continuations and the output clock source remain unresolved.",
   "items": {
     "ec10f645-b9c0-4759-902b-49d63ff81d7d": {
       "status": "inferred",
@@ -216,6 +216,146 @@
               [
                 1241,
                 2966
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "d2cc32a8-8b8a-4bad-979a-943f32536263": {
+      "status": "inferred",
+      "geometrySha256": "3d63bfcbb7741871b3213525e010753f6176d9802ef7035c577e4e44d65dbe35",
+      "group": "reset-pair-supply-top",
+      "detail": "Estimated attachment from photo-positioned resistor pad to visible shared copper; lead/solder obscures the precise hole and copper boundary. The common net is +5V in the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. This local connection does not establish its supply feed or hidden continuation.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1677,
+                753
+              ],
+              [
+                1688,
+                752
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "49b7261f-c582-42e0-ad01-ab98b4c6b8d8": {
+      "status": "observed",
+      "geometrySha256": "fadf3ad3c630632d0fba6f676da91dcab84cb0310189b2359564aca154d8ab69",
+      "group": "reset-pair-supply-top",
+      "detail": "Visible top copper joining the right leads of R3 and R4.1. The common net is +5V in the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. This local connection does not establish its supply feed or hidden continuation.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1688,
+                752
+              ],
+              [
+                1704,
+                751
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "1240fe26-e0fc-412e-b233-fd3811e4d447": {
+      "status": "observed",
+      "geometrySha256": "7ac76dcf97e15589a20a2f314e859bc35573465191a28ef193fecd67dcbc3cbc",
+      "group": "reset-pair-supply-top",
+      "detail": "Visible top copper joining the right leads of R3 and R4.1. The common net is +5V in the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. This local connection does not establish its supply feed or hidden continuation.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1704,
+                751
+              ],
+              [
+                1707,
+                797
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "faca42a7-4620-40bf-aaf2-58b2512a6dbc": {
+      "status": "observed",
+      "geometrySha256": "dae174afa0ac0124f64980c0b5d95d79e6e956acef6763e3b4ae9ecdfe7f27fd",
+      "group": "reset-pair-supply-top",
+      "detail": "Visible top copper joining the right leads of R3 and R4.1. The common net is +5V in the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. This local connection does not establish its supply feed or hidden continuation.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1707,
+                797
+              ],
+              [
+                1691,
+                800
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "a7355e9c-6829-41cd-bb03-a9135945c564": {
+      "status": "inferred",
+      "geometrySha256": "734d2dc07f3d31214eea684115a36e3a0444b5d904863293ceb14186d4426d6d",
+      "group": "reset-pair-supply-top",
+      "detail": "Estimated attachment from photo-positioned resistor pad to visible shared copper; lead/solder obscures the precise hole and copper boundary. The common net is +5V in the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. This local connection does not establish its supply feed or hidden continuation.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1691,
+                800
+              ],
+              [
+                1680,
+                800
               ]
             ],
             "imageSize": [

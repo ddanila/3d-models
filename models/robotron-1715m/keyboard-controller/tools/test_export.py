@@ -117,14 +117,29 @@ class ControllerExportTests(unittest.TestCase):
  def test_partial_a1_route_keeps_endpoint_unresolved(self):
   from route_evidence import annotate
   layout=json.loads((R/'generated/layout.json').read_text())
-  routes=layout['routes'];self.assertEqual(len(routes),8)
+  routes=layout['routes'];self.assertEqual(len(routes),13)
   annotate(routes,layout['vias'],json.loads((R/'route-evidence.json').read_text()),json.loads((R/'evidence.json').read_text()))
+  routes=[r for r in routes if r['net']=='/WR_N'];self.assertEqual(len(routes),8)
   self.assertEqual({r['net']for r in routes},{'/WR_N'})
   self.assertEqual(sum(r['evidence']['status']=='observed'for r in routes),7)
   self.assertEqual(sum(r['evidence']['status']=='inferred'for r in routes),1)
   self.assertFalse(layout['vias'])
   self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':1})
   self.assertIn('magenta',(R/'generated/photo-registration.svg').read_text())
+ def test_reset_pair_supply_route_connects_only_reviewed_pads(self):
+  layout=json.loads((R/'generated/layout.json').read_text())
+  routes=[r for r in layout['routes']if r['evidence'].get('group')=='reset-pair-supply-top']
+  self.assertEqual(len(routes),5);self.assertEqual({r['net']for r in routes},{'/+5V'})
+  self.assertEqual({r['side']for r in routes},{'top'})
+  self.assertEqual(sum(r['evidence']['status']=='observed'for r in routes),3)
+  self.assertEqual(sum(r['evidence']['status']=='inferred'for r in routes),2)
+  # Check actual exported copper reaches both numbered supply pads, with no branches.
+  from collections import Counter
+  ends=Counter(tuple(p)for r in routes for p in r['points'])
+  pads=[tuple(p['position'])for c in layout['components']if c['ref']in ['R3','R4.1']for p in c['pads']if p['pin']=='1']
+  self.assertEqual(set(p for p,n in ends.items()if n==1),set(pads))
+  self.assertTrue(all(n in [1,2]for n in ends.values()))
+  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['unconnectedItems'],233)
  def test_route_evidence_rejects_stale_or_unsupported_claims(self):
   from route_evidence import annotate,geometry_sha
   from copy import deepcopy
