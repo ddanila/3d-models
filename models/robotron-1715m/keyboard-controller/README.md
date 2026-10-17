@@ -382,3 +382,21 @@ native pad positions, body/lead geometry and its observed left blue collar.
 Current totals are 14 native resistors, 45 unplaced components, 21 assigned
 copper sections (16 observed, 5 inferred), and 231 airwires. The supply graph
 connects exactly the four reviewed supply pads. R4.2/R7/R8 remain candidates.
+
+### Source review and remaining reset ground terminals
+
+The manufacturer PDF contents (page 2) lists keyboard layout, populated controller
+placement and schematic as drawings 7–9. Their PDF pages are 9–11, followed by a
+handwritten key-matrix supplement on page 12. Review of these sheets and a contact
+sheet of all 50 pages did not identify a keyboard solder-side copper drawing.
+`evidence.json.sourceReviews` records the scope; this does not establish that no
+other source contains such a drawing. The factory placement recovery supersedes
+the earlier general placement-sheet gap; the separate Zander download remains
+unusable as placement evidence.
+
+R4.2, R7 and R8 remain unplaced. Their top-photo endpoint pairs are retained, but
+the underside pad pattern is ambiguous among nearby resistor and transistor
+joints. An extrapolated global photo transform is not sufficient to select a
+row or assign the ground terminal. No new local fit, ground net assignment or
+bottom copper was promoted from that comparison. Existing top supply routing
+remains supported independently of this unresolved underside correspondence.

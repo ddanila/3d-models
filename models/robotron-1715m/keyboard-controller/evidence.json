@@ -53,13 +53,13 @@
   "gaps": [
     {
       "id": "placement-sheet",
-      "status": "unusable",
-      "detail": "Published placement PDF has unplaced components and a KC87 printer-module template title."
+      "status": "partially-resolved",
+      "detail": "Zander placement download remains unusable, but manufacturer PDF page 10, drawing 63-330-4103-2, provides populated reference placement. It supports reviewed DIP/discrete identities and BR location candidates; it does not establish specimen terminal continuity or solder-side copper."
     },
     {
       "id": "hidden-copper",
       "status": "unresolved",
-      "detail": "A1:1 has a photo-supported partial top track to a terminal near A4, with an inferred pad attachment. Terminal underside correspondence and CPU endpoint remain unresolved. 294 legacy artwork segments remain unassigned; the WR/RD specimen disagreement is not resolved."
+      "detail": "Native copper now includes the partial A1:1 top route and the visible R3/R4.1/R5/R6.1 supply tree, with pad attachments classified as inferred. See route-evidence.json and generated/qualification.json for current coverage and counts. The A1 terminal underside correspondence, CPU endpoint and WR/RD specimen disagreement remain unresolved. Unassigned legacy artwork is not electrical connectivity."
     },
     {
       "id": "dimensions",
@@ -74,7 +74,7 @@
     {
       "id": "package-pinmap",
       "status": "unresolved",
-      "detail": "Specimen substitutions and discrete package orientations require verification."
+      "detail": "Reviewed DIP placements and fourteen native resistor placements are recorded in component-evidence.json. R4.2/R7/R8 still have unnumbered photo endpoint candidates; their underside correspondence and ground-side terminal assignment remain unresolved. Transistor, diode, capacitor and remaining discrete package terminal mappings require review."
     },
     {
       "id": "clock-source-disagreement",
@@ -310,6 +310,38 @@
         ]
       },
       "schematicLocator": "PDF page 11, drawing 56-330-4103-7: address inverter bank and the two A2.2 enable gates beside A4."
+    }
+  ],
+  "sourceReviews": [
+    {
+      "source": "robotron-factory-drawings",
+      "reviewDate": "2026-10-17",
+      "method": "Reviewed contents on PDF page 2, keyboard sheets and a contact sheet of all 50 PDF pages.",
+      "keyboardDrawings": [
+        {
+          "pdfPage": 9,
+          "drawing": "7",
+          "role": "keyboard layout"
+        },
+        {
+          "pdfPage": 10,
+          "drawing": "8",
+          "identifier": "63-330-4103-2",
+          "role": "populated controller placement"
+        },
+        {
+          "pdfPage": 11,
+          "drawing": "9",
+          "identifier": "56-330-4103-7",
+          "role": "controller schematic"
+        },
+        {
+          "pdfPage": 12,
+          "role": "handwritten key matrix supplement"
+        }
+      ],
+      "finding": "No keyboard solder-side copper drawing identified in this 50-page source. The contents list keyboard layout, populated placement and schematic. This is a scoped search result, not proof that no copper drawing exists elsewhere.",
+      "remainingUse": "Placement identities and schematic connectivity can be reviewed against these sheets; precise specimen routing still needs photo or continuity evidence."
     }
   ]
 }
