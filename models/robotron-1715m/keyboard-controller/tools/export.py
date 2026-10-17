@@ -114,6 +114,10 @@ def main():
  write('review.svg',''.join(svg)+'</svg>\n')
  inputs=['controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/route_evidence.py','route-evidence.json','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
  outputs=sorted(p for p in (ROOT/'generated').iterdir() if p.name!='manifest.json')
+ for source in json.loads((ROOT/'evidence.json').read_text())['sources']:
+  if not source.get('path'):continue
+  if digest(ROOT/source['path'])!=source['sha256']:raise SystemExit('Evidence source hash changed: '+source['id'])
+  if source['path'] not in inputs:inputs.append(source['path'])
  write('manifest.json',{'schema':1,'tools':{'kicad':subprocess.check_output([cli,'version'],text=True).strip(),'pcbnew':pcb.GetBuildVersion()},'sources':{p:digest(ROOT/p) for p in inputs},'outputs':{str(p.relative_to(ROOT)):digest(p) for p in outputs}})
  print('Exported',len(components),'components;',len(unplaced),'unplaced;',len(art),'unresolved photo segments')
 if __name__=='__main__':main()

@@ -3282,6 +3282,53 @@
       "type": "220"
     },
     {
+      "evidence": "Factory placement + top-photo lead ends; close-up supports adjacent gate pin orientation; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/OSC1",
+          "pin": "1",
+          "position": [
+            106.825444,
+            -3.880598
+          ],
+          "ref": "R4.3",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/OSC_RC",
+          "pin": "2",
+          "position": [
+            120.654541,
+            -4.650604
+          ],
+          "ref": "R4.3",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        113.739993,
+        -4.265601
+      ],
+      "ref": "R4.3",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "220"
+    },
+    {
       "evidence": "Factory placement + top-photo lead ends; visible supply strip extends from R3/R4.1 to right lead; component-evidence.json",
       "pads": [
         {
@@ -3371,6 +3418,53 @@
         12.885591
       ],
       "ref": "R6.1",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "1k"
+    },
+    {
+      "evidence": "Factory placement + top-photo lead ends; close-up supports adjacent gate pin orientation; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/+5V",
+          "pin": "1",
+          "position": [
+            100.467883,
+            -3.371648
+          ],
+          "ref": "R6.6",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/FF_PULLUP",
+          "pin": "2",
+          "position": [
+            87.696874,
+            -2.724327
+          ],
+          "ref": "R6.6",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        94.082379,
+        -3.047988
+      ],
+      "ref": "R6.6",
       "rotation": 0.0,
       "side": "top",
       "type": "1k"
@@ -6612,53 +6706,6 @@
             0.85,
             0.85
           ],
-          "net": "/OSC1",
-          "pin": "1",
-          "position": [
-            -10.0,
-            -100.0
-          ],
-          "ref": "R4.3",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/OSC_RC",
-          "pin": "2",
-          "position": [
-            -7.46,
-            -100.0
-          ],
-          "ref": "R4.3",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -10.0,
-        -100.0
-      ],
-      "ref": "R4.3",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "220"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
           "net": "/+5V",
           "pin": "1",
           "position": [
@@ -6788,53 +6835,6 @@
         -100.0
       ],
       "ref": "R6.5",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "1k"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/+5V",
-          "pin": "1",
-          "position": [
-            134.0,
-            -100.0
-          ],
-          "ref": "R6.6",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/FF_PULLUP",
-          "pin": "2",
-          "position": [
-            136.54,
-            -100.0
-          ],
-          "ref": "R6.6",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        134.0,
-        -100.0
-      ],
-      "ref": "R6.6",
       "rotation": 0.0,
       "side": "top",
       "type": "1k"

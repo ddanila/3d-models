@@ -10,8 +10,9 @@ class KiCadExportTests(unittest.TestCase):
  def test_routes_via_and_pin_mismatch(self):
   with tempfile.TemporaryDirectory() as tmp:
    r=Path(tmp)/'board';shutil.copytree(R,r,ignore=shutil.ignore_patterns('__pycache__'))
-   photo=json.loads((R/'photo-landmarks.json').read_text())['photo'];(r/photo).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/photo,r/photo)
-   bottom=json.loads((R/'bottom-landmarks.json').read_text())['photo'];(r/bottom).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/bottom,r/bottom)
+   for source in json.loads((R/'evidence.json').read_text())['sources']:
+    if not source.get('path'):continue
+    photo=source['path'];(r/photo).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/photo,r/photo)
    b=pcb.LoadBoard(str(r/'controller.kicad_pcb'));net=b.FindNet('/D0');v=lambda x,y:pcb.VECTOR2I(round(x*1e6),round(y*1e6))
    arc=pcb.PCB_ARC(b);arc.SetStart(v(100,50));arc.SetMid(v(105,45));arc.SetEnd(v(110,50));arc.SetWidth(300000);arc.SetLayer(pcb.F_Cu);arc.SetNet(net);b.Add(arc)
    via=pcb.PCB_VIA(b);via.SetPosition(v(100,50));via.SetWidth(1000000);via.SetDrill(400000);via.SetViaType(pcb.VIATYPE_THROUGH);via.SetLayerPair(pcb.F_Cu,pcb.B_Cu);via.SetNet(net);b.Add(via)

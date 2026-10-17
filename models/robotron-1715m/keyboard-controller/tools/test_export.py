@@ -111,7 +111,7 @@ class ControllerExportTests(unittest.TestCase):
   evidence=json.loads((R/'component-evidence.json').read_text())
   self.assertEqual([evidence[r]['blueCollarPin']for r in refs],['2']*6+['1','2'])
   text=(R/'generated/controller.scad').read_text();line=next(s for s in text.splitlines()if s.startswith('controller_pcb_resistors='))
-  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),14)
+  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),16)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.7'),-1)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.8'),1)
  def test_partial_a1_route_keeps_endpoint_unresolved(self):
@@ -196,10 +196,11 @@ class ControllerExportTests(unittest.TestCase):
  def test_stale_source_and_output_rejected(self):
   with tempfile.TemporaryDirectory() as tmp:
    d=Path(tmp)/'board';shutil.copytree(R,d,ignore=shutil.ignore_patterns('__pycache__'))
-   photo=json.loads((R/'photo-landmarks.json').read_text())['photo'];(d/photo).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/photo,d/photo)
-   bottom=json.loads((R/'bottom-landmarks.json').read_text())['photo'];(d/bottom).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/bottom,d/bottom)
+   photos=[source['path'] for source in json.loads((R/'evidence.json').read_text())['sources'] if source.get('path')]
+   for photo in photos:
+    (d/photo).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/photo,d/photo)
    subprocess.run([sys.executable,d/'tools/export.py','--check'],check=True)
-   for name in ['controller.kicad_sch','controller.kicad_pcb','generated/controller.scad']:
+   for name in ['controller.kicad_sch','controller.kicad_pcb','generated/controller.scad']+photos:
     p=d/name;before=p.read_bytes();p.write_bytes(before+b'\n')
     r=subprocess.run([sys.executable,d/'tools/export.py','--check'],capture_output=True)
     self.assertNotEqual(r.returncode,0,name);p.write_bytes(before)

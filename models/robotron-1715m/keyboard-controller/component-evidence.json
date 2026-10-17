@@ -153,10 +153,28 @@
   },
   "R6.6": {
     "referenceType": "1k",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends; photo-cpu-oscillator-closeup",
+    "pinEvidence": "Upper lead follows visible top trace to A6:10 (FF_PULLUP), assigned pin 2. Lower lead joins the supply land beside A7:14, assigned pin 1. No specimen continuity measurement.",
+    "note": "Body was absent from the legacy geometry. Lead-end estimates use nominal planar registration; hole centres, body, pad and drill dimensions remain estimates. The upper blue collar is observed appearance, not polarity. Reference resistance is not measured on the specimen.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1499,
+        3550
+      ],
+      "2": [
+        1500,
+        3385
+      ]
+    },
+    "pixelUncertainty": 8,
+    "blueCollarPin": "2",
+    "supportingSources": [
+      "robotron-factory-drawings",
+      "photo-top",
+      "photo-cpu-oscillator-closeup"
+    ]
   },
   "R11.1": {
     "referenceType": "130",
@@ -617,10 +635,28 @@
   },
   "R4.3": {
     "referenceType": "220",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends; photo-cpu-oscillator-closeup",
+    "pinEvidence": "Upper lead follows visible top trace toward A7:11 (OSC1), assigned pin 1. Lower OSC_RC terminal assignment follows the reference schematic; capacitor and leads obscure its continuation. No specimen continuity measurement.",
+    "note": "Body was absent from the legacy geometry. Lead-end estimates use nominal planar registration; hole centres, body, pad and drill dimensions remain estimates. The upper blue collar is observed appearance, not polarity. Reference resistance is not measured on the specimen.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1496,
+        3632
+      ],
+      "2": [
+        1494,
+        3810
+      ]
+    },
+    "pixelUncertainty": 8,
+    "blueCollarPin": "1",
+    "supportingSources": [
+      "robotron-factory-drawings",
+      "photo-top",
+      "photo-cpu-oscillator-closeup"
+    ]
   },
   "C1": {
     "referenceType": "220p",

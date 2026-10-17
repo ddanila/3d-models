@@ -400,3 +400,26 @@ joints. An extrapolated global photo transform is not sufficient to select a
 row or assign the ground terminal. No new local fit, ground net assignment or
 bottom copper was promoted from that comparison. Existing top supply routing
 remains supported independently of this unresolved underside correspondence.
+
+### CPU and oscillator resistor pair
+
+R6.6 and R4.3 are now native footprints, using top-photo lead ends and factory
+placement identities. The additional owner close-up PXL_20261012_123729356.jpg
+supports orientation: R6.6's upper lead runs to A6:10 (FF_PULLUP), while its
+lower lead joins the supply land beside A7:14. R4.3's upper lead runs toward
+A7:11 (OSC1); its lower OSC_RC assignment follows the reference schematic, with
+the continuation obscured by the capacitor and leads. These are photo-supported
+reference assignments, not specimen continuity measurements.
+
+The two bodies were absent from legacy geometry: their nominal centres are
+(94.08, -3.05) and (113.74, -4.27) mm, distinct from the remaining legacy
+estimates. No legacy entry was removed. Native pads now drive both bodies,
+leads, holes, lands and their upper blue collars. Exact hole centres and body
+dimensions remain estimated. Sixteen resistors are now native; 43 components
+remain unplaced. No copper was added; 21 assigned sections and 231 airwires remain.
+
+The close-up is pinned as `photo-cpu-oscillator-closeup`. Export now includes
+every local evidence source in the freshness manifest and refuses regeneration
+if a local source's content no longer matches its evidence hash. The perspective
+close-up supports identification; the original top photo remains the planar
+placement authority.

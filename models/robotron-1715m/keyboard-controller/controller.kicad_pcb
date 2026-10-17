@@ -90,7 +90,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "00bf45d1-0ff2-4cd2-a091-c15444d7fa57")
-		(at 284 150)
+		(at 244.082379 53.047988)
 		(property "Reference" "R6.6"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -134,7 +134,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory placement + top-photo lead ends; close-up supports adjacent gate pin orientation; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -172,7 +172,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at 6.385504 0.32366)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -181,7 +181,7 @@
 			(uuid "922f6402-6bc3-4da9-9f2e-4d93490747ea")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at -6.385505 -0.323661)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -4459,7 +4459,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "5c63db62-16bc-4a84-ac3b-5d62af9a44e2")
-		(at 140 150)
+		(at 263.739993 54.265601)
 		(property "Reference" "R4.3"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -4503,7 +4503,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory placement + top-photo lead ends; close-up supports adjacent gate pin orientation; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4541,7 +4541,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at -6.914549 -0.385003)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -4550,7 +4550,7 @@
 			(uuid "45688818-db8a-474c-aa3c-644cf1127d50")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at 6.914548 0.385003)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
