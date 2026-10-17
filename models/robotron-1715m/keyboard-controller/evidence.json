@@ -65,7 +65,7 @@
     {
       "id": "hidden-copper",
       "status": "unresolved",
-      "detail": "Native copper now includes the partial A1:1 top route and the visible R3/R4.1/R5/R6.1 supply tree and separate R6.3/R9.9 link, with pad attachments classified as inferred. See route-evidence.json and generated/qualification.json for current coverage and counts. The A1 terminal underside correspondence, CPU endpoint and WR/RD specimen disagreement remain unresolved. Unassigned legacy artwork is not electrical connectivity. A5:6 now has a partial bottom CLK route within a separately checked local CPU/A4 projection. Its round terminal continuation and link to the separate BR1/R10.3 island remain unresolved; global underside registration is still unqualified."
+      "detail": "Native copper now includes the partial A1:1 top route and the visible R3/R4.1/R5/R6.1 supply tree and separate R6.3/R9.9 link, with pad attachments classified as inferred. See route-evidence.json and generated/qualification.json for current coverage and counts. The A1 terminal underside correspondence, CPU endpoint and WR/RD specimen disagreement remain unresolved. Unassigned legacy artwork is not electrical connectivity. The CPU-side CLK route candidate was withdrawn: its projected terminal appears to join A4:13 D6 on the top photo. Trace junction identity and through-board correspondence must be resolved before assigning a net. The local CPU/A4 geometric fit remains available, but does not prove electrical connectivity."
     },
     {
       "id": "dimensions",
@@ -352,6 +352,67 @@
       ],
       "finding": "No keyboard solder-side copper drawing identified in this 50-page source. The contents list keyboard layout, populated placement and schematic. This is a scoped search result, not proof that no copper drawing exists elsewhere.",
       "remainingUse": "Placement identities and schematic connectivity can be reviewed against these sheets; precise specimen routing still needs photo or continuity evidence."
+    }
+  ],
+  "routeReviews": [
+    {
+      "id": "cpu-clock-terminal-conflict",
+      "status": "assignment-withdrawn",
+      "refs": [
+        "A5",
+        "A4"
+      ],
+      "summary": "CPU-side clock trace assignment withdrawn: the projected round terminal appears to connect to A4:13 D6 on the top photo, conflicting with the tentative CLK origin at A5:6. Local geometric fit checks do not prove a solder joint or through-board connection. No CLK or D6 route is assigned from this observation.",
+      "bottomObservation": {
+        "source": "photo-bottom",
+        "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+        "pixelPolyline": [
+          [
+            1306,
+            2678
+          ],
+          [
+            1328,
+            2678
+          ],
+          [
+            1360,
+            2706
+          ],
+          [
+            1362,
+            2798
+          ],
+          [
+            1354,
+            2811
+          ]
+        ],
+        "pixelUncertainty": 8,
+        "origin": "Tentative apparent junction at A5:6; electrical attachment unresolved"
+      },
+      "topTerminalCandidate": {
+        "source": "photo-top",
+        "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+        "predictedPixel": [
+          1528.53,
+          3053.56
+        ],
+        "observedPixel": [
+          1527,
+          3048
+        ],
+        "pixelUncertainty": 8,
+        "apparentConnection": "A4:13 /D6; cross-side terminal identity not proven"
+      },
+      "withdrawnNativeTrackIds": [
+        "04825d48-75b4-4a99-9396-e3f68858242e",
+        "2fcce126-ddcf-452d-991c-4c3041e97ee0",
+        "85a7658e-8ffa-4085-ab42-8be8b820ffe5",
+        "9881ac20-a9e3-4925-9c99-2af0becf7d38",
+        "aeb73b1b-9de1-4959-b791-5df27b7d8bb8"
+      ],
+      "nextEvidence": "Re-read the exact solder/track junction and pin count from sharper photos or continuity measurements. Do not infer a via or renet to D6 from geometric proximity alone."
     }
   ]
 }

@@ -60,6 +60,10 @@ def validate_registered_routes(routes,report,landmark_sha):
   points=photo['locator'].get('pixelSegment',[])if photo else []
   if route['side']!='bottom' or len(points)!=len(route['points']):raise ValueError('Registered route needs underside pixel correspondence')
   if not all(inside_hull(p,region['anchorHull'])for p in points):raise ValueError('Route exceeds local registration hull')
+  model_hull=[project(region['photoToModel'],p)for p in region['anchorHull']]
+  if not all(inside_hull(p,model_hull)for p in route['points']):raise ValueError('Native route exceeds local registration hull')
+  if record['status']=='inferred' and any(math.dist(project(region['photoToModel'],p),q)>region['toleranceMm']for p,q in zip(points,route['points'])):
+   raise ValueError('Inferred attachment exceeds local registration tolerance')
   if record['status']=='observed' and any(math.dist(project(region['photoToModel'],p),q)>0.000002 for p,q in zip(points,route['points'])):
    raise ValueError('Observed route geometry differs from local photo projection')
 

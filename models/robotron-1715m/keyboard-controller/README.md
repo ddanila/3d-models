@@ -502,30 +502,33 @@ dangling endpoint. Schematic connectivity and digital qualification are unchange
 Validation: 21 export checks, native KiCad integration and four mesh-contract
 checks pass. All twelve controller meshes are rebuilt together.
 
-### CPU-side partial clock trace and local underside projection
+### Local underside projection and withdrawn CPU clock assignment
 
-A separate CPU/A4 region now maps the underside into native PCB coordinates.
+A separate CPU/A4 region maps the underside into native PCB coordinates.
 Its four anchors are A5:40, A4:1, A4:10 and A5:21, in convex boundary order.
 Six independent checks (A5:1/20/6/14 and A4:20/11) have maximum residual 0.661 mm
 against the existing photo-estimated pads, within the existing 1.25 mm tolerance.
-This is a reviewed local nominal projection, not measured board geometry or a
-qualification of the failing global underside registration. Its scope ends at
-the anchor hull; nearby external points cannot inherit the result.
+This reviewed local nominal projection is not measured board geometry and does
+not qualify the failing global underside registration. Its scope ends at the
+anchor hull. Geometric agreement does not prove that two conductors join.
 
-A5:6 now has four observed bottom CLK sections, plus one inferred attachment
-between the native pad and the observed joint. The visible track ends at a round
-terminal near original bottom pixel (1354, 2811). Its top-side correspondence,
-through-board construction and continuation toward BR1 are unresolved; no via
-or complete clock path is asserted. Width remains an estimated 0.35 mm.
+The CPU-side CLK assignment introduced in 966ff11 is withdrawn. The bottom track
+candidate ended at pixel (1354, 2811), projecting near top pixel (1529, 3054).
+The nearby observed top terminal at (1527, 3048) appears to connect to A4:13 D6.
+This conflicts with the tentative A5:6 CLK origin. The five assigned native
+sections have been removed; original observations and retired UUIDs remain in
+`evidence.json:routeReviews`. No replacement D6 assignment or via is asserted.
+Sharper junction photographs or continuity measurements are needed to settle
+pin/terminal correspondence and the apparent attachment. The earlier passing
+geometry and consistency tests did not establish that electrical attachment.
 
-Each route binds the registration landmark hash and original photo segment.
-Export rejects stale calibration, unqualified regions, points outside the convex
-hull and observed geometry inconsistent with the projection. Regression checks
-exercise these rejection paths and a failing independent pad check. The bottom
-SVG shows the local hull, independent checks and original trace observations.
+Registered route validation rejects stale calibration, unqualified regions,
+photo or native points outside the convex hull, observed geometry inconsistent
+with the projection, and inferred attachments beyond the local tolerance.
+Regression checks use synthetic geometry to exercise those guards and ensure
+the withdrawn route never reappears as assigned copper. Local fit observations
+remain available for further review without qualifying any disputed net.
 
-Current totals: 30 assigned sections (21 observed, 9 inferred), 37 unplaced parts,
-229 airwires and two intentionally unfinished route endpoints (A1 and A5 CLK).
-The new path remains physically separate from the BR1/R10.3 clock island. Previous
-placements and routes are unchanged. Twenty-two export checks and native KiCad
-integration pass; schematic connectivity and digital qualification are unchanged.
+Current totals: 25 assigned sections (17 observed, 8 inferred), 37 unplaced parts,
+229 airwires and one unfinished A1 route endpoint. The BR1/R10.3 local connection
+is unchanged. Schematic connectivity and digital qualification are unchanged.

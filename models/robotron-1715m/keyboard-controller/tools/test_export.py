@@ -72,7 +72,7 @@ class ControllerExportTests(unittest.TestCase):
   self.assertGreater(region['extrapolationChecks'][0]['nominalResidualMm'],2)
   bad={'localRegions':[{'anchors':[{'ref':'A4','pin':'1'}]*4,'checks':[{'ref':'A4','pin':'1'}]}]}
   with self.assertRaisesRegex(ValueError,'unique'):local_reviews(bad,{},[])
- def test_cpu_region_limits_and_clock_partial_route(self):
+ def test_cpu_region_limits_and_withdrawn_clock_assignment(self):
   from bottom_registration import review as bottom_review,validate_registered_routes,pcb_regions,inside_hull
   from copy import deepcopy
   import hashlib
@@ -80,22 +80,29 @@ class ControllerExportTests(unittest.TestCase):
   self.assertTrue(region['copperAssignmentQualified']);self.assertFalse(report['copperAssignmentQualified'])
   self.assertEqual(len(region['checks']),6);self.assertLess(region['maxCheckResidualMm'],.67)
   self.assertTrue(any(p['ref']=='A5'and p['pin']=='6'for p in region['checks']))
-  routes=[r for r in layout['routes']if r['evidence']['group']=='cpu-clock-bottom-partial']
-  self.assertEqual(len(routes),5);self.assertEqual(sum(r['evidence']['status']=='observed'for r in routes),4)
-  endpoints=[p for route in routes for p in route['points']]
-  ends=[p for p in endpoints if endpoints.count(p)==1];self.assertEqual(len(ends),2)
-  cpu=next(p['position']for c in layout['components']if c['ref']=='A5'for p in c['pads']if p['pin']=='6')
-  self.assertIn(cpu,ends);self.assertEqual({r['net']for r in routes},{'/CLK'})
-  br1_points={tuple(p)for r in layout['routes']if r['evidence']['group']=='br1-r103-local-clock'for p in r['points']}
-  self.assertFalse(set(map(tuple,endpoints))&br1_points)
-  self.assertFalse(layout['vias'])
+  self.assertFalse(any(r['evidence']['group']=='cpu-clock-bottom-partial'for r in layout['routes']))
+  self.assertEqual(len([r for r in layout['routes']if r['net']=='/CLK']),1)
+  conflict=json.loads((R/'evidence.json').read_text())['routeReviews'][0]
+  self.assertEqual(conflict['status'],'assignment-withdrawn')
+  self.assertFalse(set(conflict['withdrawnNativeTrackIds'])&{r['id']for r in layout['routes']})
+  # Synthetic geometry exercises the registration guard without asserting a net.
+  pixels=[[1328,2678],[1360,2706]]
+  route={'side':'bottom','points':[project(region['photoToModel'],p)for p in pixels],
+   'evidence':{'status':'observed','registration':{'region':'cpu-a4','landmarksSha256':''},
+    'sources':[{'id':'photo-bottom','locator':{'pixelSegment':pixels}}]}}
+  routes=[deepcopy(route),deepcopy(route)]
   digest=hashlib.sha256((R/'bottom-landmarks.json').read_bytes()).hexdigest()
+  for route in routes:route['evidence']['registration']['landmarksSha256']=digest
   validate_registered_routes(routes,report,digest)
   with self.assertRaisesRegex(ValueError,'Stale'):validate_registered_routes(routes,report,'changed')
   bad=deepcopy(routes);bad[1]['evidence']['sources'][0]['locator']['pixelSegment'][0]=[1600,3700]
   with self.assertRaisesRegex(ValueError,'hull'):validate_registered_routes(bad,report,digest)
   bad=deepcopy(routes);bad[1]['points'][0][0]+=1
   with self.assertRaisesRegex(ValueError,'projection'):validate_registered_routes(bad,report,digest)
+  bad=deepcopy(routes);bad[1]['evidence']['status']='inferred';bad[1]['points'][0]=[1000,1000]
+  with self.assertRaisesRegex(ValueError,'hull'):validate_registered_routes(bad,report,digest)
+  bad=deepcopy(routes);bad[1]['evidence']['status']='inferred';bad[1]['points'][0][0]+=2
+  with self.assertRaisesRegex(ValueError,'tolerance'):validate_registered_routes(bad,report,digest)
   bad=deepcopy(report);bad['pcbRegions'][0]['copperAssignmentQualified']=False
   with self.assertRaisesRegex(ValueError,'not locally'):validate_registered_routes(routes,bad,digest)
   evidence=json.loads((R/'bottom-landmarks.json').read_text());pads={(c['ref'],p['pin']):p['position']for c in layout['components']for p in c['pads']}
@@ -155,14 +162,14 @@ class ControllerExportTests(unittest.TestCase):
  def test_partial_a1_route_keeps_endpoint_unresolved(self):
   from route_evidence import annotate
   layout=json.loads((R/'generated/layout.json').read_text())
-  routes=layout['routes'];self.assertEqual(len(routes),30)
+  routes=layout['routes'];self.assertEqual(len(routes),25)
   annotate(routes,layout['vias'],json.loads((R/'route-evidence.json').read_text()),json.loads((R/'evidence.json').read_text()))
   routes=[r for r in routes if r['net']=='/WR_N'];self.assertEqual(len(routes),8)
   self.assertEqual({r['net']for r in routes},{'/WR_N'})
   self.assertEqual(sum(r['evidence']['status']=='observed'for r in routes),7)
   self.assertEqual(sum(r['evidence']['status']=='inferred'for r in routes),1)
   self.assertFalse(layout['vias'])
-  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':2})
+  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':1})
   self.assertIn('magenta',(R/'generated/photo-registration.svg').read_text())
  def test_reset_pair_supply_route_connects_only_reviewed_pads(self):
   layout=json.loads((R/'generated/layout.json').read_text())
