@@ -3,7 +3,7 @@
 Work in progress under the [museum implementation plan](https://github.com/ddanila/dac/blob/main/docs/robotron/keyboard-controller-plan.md).
 
 The reference circuit is Zander drawing 56-330-4103-7. The photographed specimen
-is marked 05-330-4102-8 1c and has an unidentified replacement EPROM. Do not treat
+is marked 05-330-4102-8 1c and has a replacement EPROM, confirmed by the user on 2026-10-17; its contents are unread. Do not treat
 the reference firmware or every reference component as identified specimen parts.
 
 `evidence.json` records source hashes, uses and unresolved claims. The Zander
@@ -45,9 +45,19 @@ reference has been identified. Original image coordinates must not be passed
 through the first specimen's photo transforms. Matching board marks are evidence
 of the family, not proof that all routing or fitted components are identical.
 
-This evidence reopens physical review. The withdrawn CLK assignment remains
-withdrawn pending pin/junction reconciliation; no native geometry or pin map is
-changed by the photo import. Existing 25 assigned sections, 229 airwires and 37
+The first numbered comparison review is retained in
+`evidence.json:routeReviews[0].comparisonReview`. The underside view shows a trace
+from CPU pin 6 to a round terminal. In the top close-up, the likely counterpart
+has a narrow trace passing between A4 leads 12 and 13 toward the package underside,
+separate from the neighbouring lead-13 trace. This weakens the earlier apparent
+D6-conflict interpretation. The coordinate record includes the pin-count basis,
+four CPU corner joints, both observed polylines and pixel uncertainty. The
+cross-side terminal match remains provisional; the hidden continuation is unknown.
+No primary-specimen CLK route is restored until correspondence is reconciled.
+
+The user confirms that the primary museum ROM was replaced and may locate the
+original later. ROM identity is a separate firmware question and is not a reason
+to reject otherwise matching PCB evidence. No native geometry or pin map changed. Existing 25 assigned sections, 229 airwires and 37
 unplaced schematic components remain the reconstruction's actual coverage.
 
 ## Native KiCad authorities
