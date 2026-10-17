@@ -106,14 +106,15 @@ CC-BY-SA 3.0 attribution is retained there and it is not redistributed here.
 
 ## Photo landmark alignment and model migration
 
-`photo-landmarks.json` records raw image pixels for eight packages, including
-held-out lead landmarks on all eight. `generated/photo-registration.json` reports
+`photo-landmarks.json` records raw image pixels for nine packages, including
+held-out lead landmarks on all nine. `generated/photo-registration.json` reports
 residuals against the nominal board plane; the companion SVG overlays observed
-points (green) and PCB pads (red) on the original photo. All eight rigid fits pass the
+points (green) and PCB pads (red) on the original photo. All nine rigid fits pass the
 1.25 mm review tolerance. A4 was corrected after re-reading the last leads and
 adding four held-out intermediate leads; its maximum residual is 0.554 mm.
 This loose photo tolerance does not establish fabrication dimensions or continuity.
-A8 and discrete lead numbering remain outside this qualification.
+A8 uses visible package/socket leads; the PCB hole centres remain obscured.
+Discrete lead numbering remains outside this qualification.
 
 `tools/photo_registration.py` reviews the current fit; KiCad Python with `--apply
 --refs A1 ...` can apply explicitly selected acceptable fits to the native PCB,
@@ -167,3 +168,21 @@ The cable review corrected the filter winding references and swapped the erroneo
 XT1 ground/clock assignment: L1.1 carries TA_TAKT to XT1:B2; L1.2 carries GND to
 XT1:A3; L1.3 carries +5V to XT1:B4; L1.4 carries TA_DATEN to XT1:A1. These are
 Zander's terminal labels; verify connector orientation before physical probing.
+
+
+## Underside registration audit
+
+`bottom-landmarks.json` identifies four anchor pads and six independent check pads
+in the original underside photograph. `generated/bottom-registration.svg` shows
+anchors in cyan, check observations in green and projected PCB pads in red.
+The reflected homography uses the current KiCad placements as its target, so it
+checks relative registration rather than measured board dimensions. Two A1 check
+pads fail the unchanged 1.25 mm tolerance; CPU corner checks are about 1.0–1.1 mm.
+`generated/bottom-registration.json` retains residuals and both transform matrices.
+This audit does not move the PCB, warp artwork or authorize net assignments.
+
+A8's package notch and pin-one dot are visible above its blue tape. Its corrected
+photo-estimated placement uses four corner leads and four held-out right-side
+leads; the maximum residual is about 1.11 mm. The socket obscures board holes and
+the replacement EPROM identity remains unread. Orientation is now photo-supported,
+while exact package-to-board alignment and firmware identity remain open.

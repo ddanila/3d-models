@@ -41,7 +41,7 @@
       -23
     ]
   ],
-  "scope": "Manual top-photo lead/pad landmarks. Nominal board envelope, not dimensional metrology or electrical continuity. Lead feet may obscure hole centres. ROM socket orientation and discrete references remain unresolved.",
+  "scope": "Manual top-photo lead/pad landmarks. Nominal board envelope, not dimensional metrology or electrical continuity. Lead feet and A8 socket obscure hole centres. Replacement ROM identity and discrete references remain unresolved.",
   "pixelUncertainty": 8,
   "maxResidualMm": 1.25,
   "components": {
@@ -285,6 +285,47 @@
           3670
         ]
       }
+    },
+    "A8": {
+      "pins": {
+        "1": [
+          1575,
+          3475
+        ],
+        "12": [
+          1590,
+          3828
+        ],
+        "13": [
+          1779,
+          3813
+        ],
+        "24": [
+          1761,
+          3462
+        ]
+      },
+      "checkPins": {
+        "23": [
+          1763,
+          3494
+        ],
+        "20": [
+          1767,
+          3592
+        ],
+        "17": [
+          1772,
+          3688
+        ],
+        "14": [
+          1777,
+          3785
+        ]
+      },
+      "orientationEvidence": "Package notch and pin-one dot visible at cable-facing end above blue tape. Pin numbers follow DIP-24 order; replacement EPROM identity is unread.",
+      "placementStatus": "photo-estimated",
+      "reviewNote": "2026-10-17: visible package/socket lead locations, not bare PCB hole centers. Blue tape obscures middle left leads; held-out checks use visible right leads. Socket-to-board offsets and ROM identity remain unmeasured."
     }
   }
 }

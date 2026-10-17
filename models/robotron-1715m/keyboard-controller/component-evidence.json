@@ -8,9 +8,9 @@
   },
   "A8": {
     "referenceType": "U556_2716",
-    "placementEvidence": "inherited-photo-estimate",
+    "placementEvidence": "photo-landmarks.json: A8",
     "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
+    "note": "Visible package notch and pin-one dot establish orientation; socket/package leads support estimated fit, not PCB hole metrology. Replacement EPROM identity unread.",
     "placementAuthority": "controller.kicad_pcb"
   },
   "A4": {

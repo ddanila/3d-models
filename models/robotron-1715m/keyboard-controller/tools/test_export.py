@@ -25,6 +25,16 @@ class ControllerExportTests(unittest.TestCase):
    self.assertLessEqual(c['maxResidualMm'],report['toleranceMm'],c['ref'])
   self.assertTrue(report['withinPhotoTolerance'])
   self.assertEqual(len(next(c for c in report['components']if c['ref']=='A4')['checkPins']),4)
+ def test_underside_registration_uses_independent_pads(self):
+  from bottom_registration import review as bottom_review
+  from unittest.mock import patch
+  layout=json.loads((R/'generated/layout.json').read_text());report=bottom_review(layout)
+  self.assertEqual(sum(p['heldOut']for p in report['pins']),6)
+  self.assertFalse(report['withinPhotoTolerance']);self.assertFalse(report['copperAssignmentQualified'])
+  self.assertGreater(report['maxCheckResidualMm'],report['toleranceMm'])
+  e=json.loads((R/'bottom-landmarks.json').read_text());e['checks'][0]=e['anchors'][0]
+  with patch('bottom_registration.Path.read_text',return_value=json.dumps(e)):
+   with self.assertRaisesRegex(ValueError,'unique'):bottom_review(layout)
  def test_fit_rejects_held_out_error_and_unknown_refs(self):
   from unittest.mock import patch
   evidence={'photoCorners':[[0,0],[2,0],[2,2],[0,2]],'modelCorners':[[0,0],[2,0],[2,2],[0,2]],'scope':'test','photo':'unused','maxResidualMm':1.25,'components':{'A1':{'pins':{'1':[0,0],'2':[1,0],'3':[0,1]},'checkPins':{'4':[1,4]}}}}
@@ -66,6 +76,7 @@ class ControllerExportTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as tmp:
    d=Path(tmp)/'board';shutil.copytree(R,d,ignore=shutil.ignore_patterns('__pycache__'))
    photo=json.loads((R/'photo-landmarks.json').read_text())['photo'];(d/photo).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/photo,d/photo)
+   bottom=json.loads((R/'bottom-landmarks.json').read_text())['photo'];(d/bottom).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/bottom,d/bottom)
    subprocess.run([sys.executable,d/'tools/export.py','--check'],check=True)
    for name in ['controller.kicad_sch','controller.kicad_pcb','generated/controller.scad']:
     p=d/name;before=p.read_bytes();p.write_bytes(before+b'\n')

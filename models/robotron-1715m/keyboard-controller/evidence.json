@@ -58,7 +58,7 @@
     {
       "id": "dimensions",
       "status": "estimated",
-      "detail": "Nominal 270 by 46 by 1.6 mm envelope. Eight DIP placements fitted to numbered top-photo landmarks, each with held-out checks. A8 orientation and underside registration remain unqualified. See generated/photo-registration.json."
+      "detail": "Nominal 270 by 46 by 1.6 mm envelope. Nine DIP placements fitted to numbered top-photo landmarks with held-out checks; A8 socket obscures board hole centers. Independent underside review fails tolerance at two A1 check pads; no artwork warp or copper assignment promoted. See generated/photo-registration.json and bottom-registration.json."
     },
     {
       "id": "specimen-timing",

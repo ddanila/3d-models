@@ -1019,11 +1019,191 @@
       "rmsResidualMm": 0.43334134834304383,
       "rotationDeltaDegrees": -1.4620736503051962e-06,
       "status": "photo-estimated"
+    },
+    {
+      "checkPins": [
+        {
+          "heldOut": true,
+          "pcbModel": [
+            96.320559,
+            16.934294
+          ],
+          "pcbPixel": [
+            1769.2316573716644,
+            3495.081455595102
+          ],
+          "photoModel": [
+            96.23441660820063,
+            16.474385502940315
+          ],
+          "photoPixel": [
+            1763,
+            3494
+          ],
+          "pin": "23",
+          "residualMm": 0.4679063339308581
+        },
+        {
+          "heldOut": true,
+          "pcbModel": [
+            103.939458,
+            17.063845
+          ],
+          "pcbPixel": [
+            1775.3651547845716,
+            3593.4487882940352
+          ],
+          "photoModel": [
+            103.82407167824361,
+            16.446030683834003
+          ],
+          "photoPixel": [
+            1767,
+            3592
+          ],
+          "pin": "20",
+          "residualMm": 0.6284970425611628
+        },
+        {
+          "heldOut": true,
+          "pcbModel": [
+            111.558356,
+            17.193396
+          ],
+          "pcbPixel": [
+            1781.4899324782052,
+            3691.6762728887866
+          ],
+          "photoModel": [
+            111.26975235424693,
+            16.498780660644194
+          ],
+          "photoPixel": [
+            1772,
+            3688
+          ],
+          "pin": "17",
+          "residualMm": 0.7521851726871156
+        },
+        {
+          "heldOut": true,
+          "pcbModel": [
+            119.177255,
+            17.322947
+          ],
+          "pcbPixel": [
+            1787.606010182692,
+            3789.764233131453
+          ],
+          "photoModel": [
+            118.80354030548008,
+            16.548272818694798
+          ],
+          "photoPixel": [
+            1777,
+            3785
+          ],
+          "pin": "14",
+          "residualMm": 0.8601062492977246
+        }
+      ],
+      "fitMaxResidualMm": 1.1058027270871147,
+      "maxResidualMm": 1.1058027679148295,
+      "pins": [
+        {
+          "pcbModel": [
+            94.040028,
+            1.653313
+          ],
+          "pcbPixel": [
+            1562.592830848528,
+            3466.6753645265308
+          ],
+          "photoModel": [
+            94.68925941910906,
+            2.5484656830489523
+          ],
+          "photoPixel": [
+            1575,
+            3475
+          ],
+          "pin": "1",
+          "residualMm": 1.1058027679148295
+        },
+        {
+          "pcbModel": [
+            121.97599,
+            2.128333
+          ],
+          "pcbPixel": [
+            1585.5686021923314,
+            3826.6050416293306
+          ],
+          "photoModel": [
+            122.08593775469879,
+            2.454310990069433
+          ],
+          "photoPixel": [
+            1590,
+            3828
+          ],
+          "pin": "12",
+          "residualMm": 0.3440205789963932
+        },
+        {
+          "pcbModel": [
+            121.716888,
+            17.366131
+          ],
+          "pcbPixel": [
+            1789.6427769657785,
+            3822.429262959794
+          ],
+          "photoModel": [
+            120.98040128400756,
+            16.604075558986455
+          ],
+          "photoPixel": [
+            1779,
+            3813
+          ],
+          "pin": "13",
+          "residualMm": 1.059783552434967
+        },
+        {
+          "pcbModel": [
+            93.780926,
+            16.891111
+          ],
+          "pcbPixel": [
+            1767.1852263909175,
+            3462.2612185331864
+          ],
+          "photoModel": [
+            93.75823165453968,
+            16.432036965048898
+          ],
+          "photoPixel": [
+            1761,
+            3462
+          ],
+          "pin": "24",
+          "residualMm": 0.45963464064641213
+        }
+      ],
+      "proposedPosition": [
+        107.87845752808877,
+        9.509722299288434
+      ],
+      "ref": "A8",
+      "rmsResidualMm": 0.8178562069818488,
+      "rotationDeltaDegrees": -6.574805654143467e-07,
+      "status": "photo-estimated"
     }
   ],
   "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
   "schema": 1,
-  "scope": "Manual top-photo lead/pad landmarks. Nominal board envelope, not dimensional metrology or electrical continuity. Lead feet may obscure hole centres. ROM socket orientation and discrete references remain unresolved.",
+  "scope": "Manual top-photo lead/pad landmarks. Nominal board envelope, not dimensional metrology or electrical continuity. Lead feet and A8 socket obscure hole centres. Replacement ROM identity and discrete references remain unresolved.",
   "toleranceMm": 1.25,
   "withinPhotoTolerance": true
 }

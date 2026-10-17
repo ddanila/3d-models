@@ -1,0 +1,95 @@
+{
+  "schema": 1,
+  "photo": "../reference/photos/PXL_20261012_123648677.jpg",
+  "imageSize": [
+    3072,
+    4080
+  ],
+  "scope": "Underside solder-joint centers matched by DIP pin order, with horizontal reflection relative to top. Registration is relative to photo-estimated KiCad placements, not metrology. No copper assigned or artwork transformed by this review.",
+  "toleranceMm": 1.25,
+  "pixelUncertainty": 8,
+  "anchors": [
+    {
+      "ref": "A1",
+      "pin": "1",
+      "photoPixel": [
+        1492,
+        1327
+      ]
+    },
+    {
+      "ref": "A1",
+      "pin": "14",
+      "photoPixel": [
+        1396,
+        1324
+      ]
+    },
+    {
+      "ref": "A8",
+      "pin": "12",
+      "photoPixel": [
+        1348,
+        3556
+      ]
+    },
+    {
+      "ref": "A8",
+      "pin": "13",
+      "photoPixel": [
+        1165,
+        3554
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "ref": "A5",
+      "pin": "1",
+      "photoPixel": [
+        1300,
+        2525
+      ]
+    },
+    {
+      "ref": "A5",
+      "pin": "40",
+      "photoPixel": [
+        1115,
+        2525
+      ]
+    },
+    {
+      "ref": "A5",
+      "pin": "20",
+      "photoPixel": [
+        1310,
+        3138
+      ]
+    },
+    {
+      "ref": "A5",
+      "pin": "21",
+      "photoPixel": [
+        1125,
+        3138
+      ]
+    },
+    {
+      "ref": "A1",
+      "pin": "7",
+      "photoPixel": [
+        1495,
+        1505
+      ]
+    },
+    {
+      "ref": "A1",
+      "pin": "8",
+      "photoPixel": [
+        1400,
+        1505
+      ]
+    }
+  ]
+}
