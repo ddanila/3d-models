@@ -1,7 +1,7 @@
 {
   "outputs": {
-    "generated/bottom-registration.json": "a5416affcd15cdb217407483567bafa355c51c31cd5bf96a8a4b904f5dadfb22",
-    "generated/bottom-registration.svg": "02831ce524eae916f25f856ce833cb5c1c9643626b9aa724987318faffcf2840",
+    "generated/bottom-registration.json": "f88edb7775adf91bdb290b2af44a88acd7f0c16d6449d34d85cb3f684e86ba31",
+    "generated/bottom-registration.svg": "e51e94418c53f39cbac0c671590c2db22b0da61442fbad97cd0a1ad1a20aec72",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
     "generated/controller.scad": "fd85b2e300fb7591ccf756d723e2638b6a2e8fef639ed5ce63ea5074003415e2",
     "generated/layout.json": "902458e454d842baa8d919a383e464f4c49824b94425119434b8442d353956b5",
@@ -14,7 +14,7 @@
   "sources": {
     "../reference/photos/PXL_20261012_123622947.jpg": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
     "../reference/photos/PXL_20261012_123648677.jpg": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
-    "bottom-landmarks.json": "252f7f096542374e595d7c209d5d2063bfeb9135d04695cab08a56fdb9fa22ed",
+    "bottom-landmarks.json": "970f2978451ad8678acff20f10252ccffb7c6325affe3d618ba35b45c94c86f5",
     "component-evidence.json": "0333844537065bbe7e7d573291be87ff636ee17583eb3a76fb0cbdd89e54dbc6",
     "controller.kicad_pcb": "070f05349d5f0c44b512457e6affa8ca71d765b4c145c053bfe45aa9a3964cc4",
     "controller.kicad_pro": "6583dcdffccee3fd6c5e10ab0e3e900b75a7054cc98669379d044c91cda33356",
@@ -25,7 +25,7 @@
     "photo-landmarks.json": "bca0d2f458923f982f1a3447036a07e3803cf111a8ea9ae6b3b781d370e8215a",
     "route-evidence.json": "12a08fbbf36dc8d8db95fcaecaec6dd59b7578c93a6abaa66df879ad395012e7",
     "sym-lib-table": "27194f2ba44182e9ce1b0fd5db14f03003a7cefcf53a287c7cb9d8b8e361a841",
-    "tools/bottom_registration.py": "36f1cf8ac971be978d2da9af9da346b56117eaceb4c1ef9d7d1c57edd06d854b",
+    "tools/bottom_registration.py": "786e0f424dc189504b930a4da262cb7779c62f4bb37540f2c235377ce46b31ea",
     "tools/export.py": "89e75c27b3329db26e96eb2d1da001a751d965afd135296ecec7a821ebe97004",
     "tools/geometry.py": "be71777d095f87f7f53643239e274989006de4ead1ad7181478d502e05351780",
     "tools/photo_registration.py": "bc8094ee4d849ce6789b3dfe8ec467d533c407b5cf23ea2ec1a1342b3ad8671e",

@@ -61,6 +61,17 @@ class ControllerExportTests(unittest.TestCase):
   c=json.loads((R/'generated/connectivity.json').read_text())['components']
   for choke,signal,cable,pin in [('L1.1','/TA_TAKT','/CABLE_TAKT','B2'),('L1.2','/GND','/CABLE_GND','A3'),('L1.3','/+5V','/CABLE_5V','B4'),('L1.4','/TA_DATEN','/CABLE_DATEN','A1')]:
    self.assertEqual(c[choke]['pins'],{'1':signal,'2':cable});self.assertEqual(c['XT1']['pins'][pin],cable)
+ def test_local_registration_does_not_qualify_extrapolated_copper(self):
+  from bottom_registration import review as bottom_review,local_reviews
+  report=bottom_review(json.loads((R/'generated/layout.json').read_text()))
+  region=report['localRegions'][0]
+  self.assertEqual(len(region['checks']),4);self.assertLess(region['maxCheckResidualMm'],.4)
+  self.assertTrue(region['withinPhotoTolerance']);self.assertFalse(region['copperAssignmentQualified'])
+  self.assertTrue(all(p['outsideAnchorBounds']for p in region['candidates']))
+  self.assertLess(region['candidates'][0]['nominalResidualMm'],.3)
+  self.assertGreater(region['extrapolationChecks'][0]['nominalResidualMm'],2)
+  bad={'localRegions':[{'anchors':[{'ref':'A4','pin':'1'}]*4,'checks':[{'ref':'A4','pin':'1'}]}]}
+  with self.assertRaisesRegex(ValueError,'unique'):local_reviews(bad,{},[])
  def test_partial_a1_route_keeps_endpoint_unresolved(self):
   from route_evidence import annotate
   layout=json.loads((R/'generated/layout.json').read_text())

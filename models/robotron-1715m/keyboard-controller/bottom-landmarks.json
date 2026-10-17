@@ -131,5 +131,119 @@
         }
       ]
     }
+  ],
+  "localRegions": [
+    {
+      "id": "a4",
+      "scope": "Local A4 photo-to-photo correspondence only. Corner lead feet on top may differ from underside hole centers. Terminal candidates lie beyond the anchor columns; do not extrapolate this fit to A6 or use it as a whole-board copper calibration.",
+      "anchors": [
+        {
+          "ref": "A4",
+          "pin": "1",
+          "photoPixel": [
+            1514,
+            2578
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "20",
+          "photoPixel": [
+            1424,
+            2581
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "10",
+          "photoPixel": [
+            1519,
+            2857
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "11",
+          "photoPixel": [
+            1426,
+            2859
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "A4",
+          "pin": "5",
+          "photoPixel": [
+            1516,
+            2702
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "16",
+          "photoPixel": [
+            1425,
+            2704
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "8",
+          "photoPixel": [
+            1518,
+            2794
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "13",
+          "photoPixel": [
+            1426,
+            2796
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "id": "a1-track-terminal",
+          "bottomPixel": [
+            1619,
+            2715
+          ],
+          "topPixel": [
+            1241,
+            2966
+          ],
+          "detail": "Upper of two adjacent round terminals. This top endpoint belongs to the partial A1:1 route. Geometric correspondence candidate; through-board construction and continuity not assigned."
+        },
+        {
+          "id": "adjacent-terminal",
+          "bottomPixel": [
+            1620,
+            2745
+          ],
+          "topPixel": [
+            1243,
+            2997
+          ],
+          "detail": "Lower adjacent terminal used to distinguish the pair, not an independent calibration anchor."
+        }
+      ],
+      "extrapolationChecks": [
+        {
+          "id": "a6-nearby-terminal",
+          "bottomPixel": [
+            1610,
+            3085
+          ],
+          "topPixel": [
+            1272,
+            3350
+          ],
+          "detail": "Tentative counterpart near A6; tests the danger of extending the A4 fit along the board. Not a qualified correspondence."
+        }
+      ]
+    }
   ]
 }

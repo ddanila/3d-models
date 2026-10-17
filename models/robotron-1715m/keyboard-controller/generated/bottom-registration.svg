@@ -10,4 +10,10 @@
 <path d="M1125,3112 L1132.2134340173627,3128.3883840704843" stroke="yellow" stroke-width="3"/><circle cx="1125" cy="3112" r="9" fill="none" stroke="lime" stroke-width="3"/><circle cx="1132.2134340173627" cy="3128.3883840704843" r="5" fill="red"/><text x="1139" y="3112" fill="white" stroke="black" stroke-width=".3" font-size="15">A5:21</text>
 <path d="M1495,1505 L1488.1637042669956,1525.1794916604456" stroke="yellow" stroke-width="3"/><circle cx="1495" cy="1505" r="9" fill="none" stroke="lime" stroke-width="3"/><circle cx="1488.1637042669956" cy="1525.1794916604456" r="5" fill="red"/><text x="1509" y="1505" fill="white" stroke="black" stroke-width=".3" font-size="15">A1:7</text>
 <path d="M1400,1505 L1392.568984450706,1522.2324748034202" stroke="yellow" stroke-width="3"/><circle cx="1400" cy="1505" r="9" fill="none" stroke="lime" stroke-width="3"/><circle cx="1392.568984450706" cy="1522.2324748034202" r="5" fill="red"/><text x="1414" y="1505" fill="white" stroke="black" stroke-width=".3" font-size="15">A1:8</text>
+<circle cx="1516" cy="2702" r="8" fill="none" stroke="orange" stroke-width="3"/><text x="1528" y="2702" fill="white" font-size="14">Local A4:5</text>
+<circle cx="1425" cy="2704" r="8" fill="none" stroke="orange" stroke-width="3"/><text x="1437" y="2704" fill="white" font-size="14">Local A4:16</text>
+<circle cx="1518" cy="2794" r="8" fill="none" stroke="orange" stroke-width="3"/><text x="1530" y="2794" fill="white" font-size="14">Local A4:8</text>
+<circle cx="1426" cy="2796" r="8" fill="none" stroke="orange" stroke-width="3"/><text x="1438" y="2796" fill="white" font-size="14">Local A4:13</text>
+<circle cx="1619" cy="2715" r="10" fill="none" stroke="magenta" stroke-width="3"/><text x="1631" y="2715" fill="white" font-size="14">a1-track-terminal?</text>
+<circle cx="1620" cy="2745" r="10" fill="none" stroke="magenta" stroke-width="3"/><text x="1632" y="2745" fill="white" font-size="14">adjacent-terminal?</text>
 </svg>

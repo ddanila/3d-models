@@ -231,3 +231,16 @@ not fabrication-ready routing. The 294 legacy artwork segments remain unassigned
 photo: magenta for observed sections, orange for the inferred attachment. The
 geometric review drawing also includes assigned copper. Route evidence retains
 original pixel segment endpoints and the source photo hash for review.
+
+### Local underside correspondence near A4
+
+The A4-local audit in `bottom-landmarks.json` uses four corner pins and four
+independent interior pins. Those checks are within 0.37 nominal mm. It projects
+the upper/lower terminal pair near A4 close to the corresponding top-photo pair,
+strengthening the candidate match for the A1:1 route endpoint. Both terminals
+lie outside the anchor columns, so this remains extrapolation. Extending that
+same fit toward a tentative terminal near A6 misses by more than 2 mm.
+`generated/bottom-registration.json` retains all predictions, residuals and
+bounds flags; the overlay marks local check pins orange and candidates magenta.
+No copper or via was added by this audit, and board-wide registration remains
+unqualified. A local fit must not silently replace the failing global audit.
