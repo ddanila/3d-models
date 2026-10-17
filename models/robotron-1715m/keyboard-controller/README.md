@@ -253,5 +253,16 @@ page 11, printed drawing 9). `evidence.json` pins the source hash and records
 BR1/BR2 photo location candidates and the differing A2 location labels. This is
 a new usable reference; the previously rejected Zander placement sheet remains
 unusable. Native bridge footprints are still unplaced: identifying a visible
-link does not establish which terminal maps to the source or CPU net. Factory
-label correspondence is provisional and does not rename KiCad or HDL references.
+link does not establish which terminal maps to the source or CPU net. Bridge
+terminal correspondence remains provisional; the A2 correction is documented below.
+
+### A2 reference placement correction
+
+All twelve A2 NAND gate assignments in the factory schematic agree with the
+reconstructed electrical netlist. The three physical placements were mislabeled:
+A2.1 belongs across from A1 on the cable side of X1; A2.2 is beyond X1 on the
+A4 edge; A2.3 is beyond X1 on the CPU edge. Native footprint poses and their photo
+landmarks are corrected together. Pin numbers, schematic connectivity, HDL and
+runtime behavior remain unchanged. `evidence.json` retains the former location
+labels and the independent factory gate review. This corrects the reconstruction;
+it does not establish a different historical circuit variant.

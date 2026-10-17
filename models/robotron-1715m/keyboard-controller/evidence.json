@@ -42,7 +42,7 @@
       "id": "robotron-factory-drawings",
       "url": "https://www.tiffe.de/Robotron/PC1715/PC-1715-Schaltplaene.pdf",
       "sha256": "9d020e9dd41662f85b6a9a44e300cc9800ef20284c2a689e005f69a84f6e3fd3",
-      "use": "Manufacturer service drawings. PDF page 10 (printed drawing 8), 63-330-4103-2 / 1.93.304103.0/09: populated serial keyboard controller placement. PDF page 11 (printed drawing 9), 56-330-4103-7 / 1.93.304103.0/04: schematic. Unlike the unfinished Zander placement sheet, this supplies reference locations. Drawing revision is not proven specimen-identical; A2 physical-location labels differ from the reconstruction. PDF not redistributed."
+      "use": "Manufacturer service drawings. PDF page 10 (printed drawing 8), 63-330-4103-2 / 1.93.304103.0/09: populated serial keyboard controller placement. PDF page 11 (printed drawing 9), 56-330-4103-7 / 1.93.304103.0/04: schematic. Unlike the unfinished Zander placement sheet, this supplies reference locations. Drawing revision is not proven specimen-identical; A2 location labels exposed a reconstruction placement error, corrected after reviewing the factory gate assignments. PDF not redistributed."
     }
   ],
   "specimen": {
@@ -169,8 +169,14 @@
     {
       "source": "robotron-factory-drawings",
       "locator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Physical-location correspondence only, not proof of electrical pin mapping. Preserve existing stable KiCad/HDL references until nets are independently checked.",
-      "physicalLabelCandidates": [
+      "scope": "Factory schematic gate pin assignments agree with the current electrical reference. Factory placement identifies the three photo locations; corrected PCB placements and photo landmarks retain stable schematic/HDL refs. This is a reconstruction correction, not evidence of a board variant.",
+      "packageLabels": {
+        "A6": "DL174",
+        "A7": "DL100"
+      },
+      "note": "A2 placements corrected after reviewing all 12 NAND gates. A6/A7 printed package labels remain a separate type comparison; chip models unchanged.",
+      "status": "reconstruction-placement-error-corrected",
+      "correctedPriorLocations": [
         {
           "reconstructionRef": "A2.3",
           "factoryRef": "A2.1",
@@ -187,11 +193,123 @@
           "location": "ROM side of X1, same board edge as CPU"
         }
       ],
-      "packageLabels": {
-        "A6": "DL174",
-        "A7": "DL100"
+      "schematicGateReview": {
+        "A2.1": [
+          {
+            "inputs": [
+              "1",
+              "2"
+            ],
+            "inputNet": "/A3",
+            "output": "3",
+            "outputNet": "/COL3"
+          },
+          {
+            "inputs": [
+              "4",
+              "5"
+            ],
+            "inputNet": "/A11",
+            "output": "6",
+            "outputNet": "/COL11"
+          },
+          {
+            "inputs": [
+              "9",
+              "10"
+            ],
+            "inputNet": "/A2",
+            "output": "8",
+            "outputNet": "/COL2"
+          },
+          {
+            "inputs": [
+              "12",
+              "13"
+            ],
+            "inputNet": "/A5",
+            "output": "11",
+            "outputNet": "/COL5"
+          }
+        ],
+        "A2.2": [
+          {
+            "inputs": [
+              "1",
+              "2"
+            ],
+            "inputNet": "/A7",
+            "output": "3",
+            "outputNet": "/COL7"
+          },
+          {
+            "inputs": [
+              "4",
+              "5"
+            ],
+            "inputNet": "/IORQ_N",
+            "output": "6",
+            "outputNet": "/IO_ACTIVE"
+          },
+          {
+            "inputs": [
+              "9",
+              "10"
+            ],
+            "inputNet": "/A15",
+            "output": "8",
+            "outputNet": "/LATCH_OE_N"
+          },
+          {
+            "inputs": [
+              "12",
+              "13"
+            ],
+            "inputNet": "/A12",
+            "output": "11",
+            "outputNet": "/COL12"
+          }
+        ],
+        "A2.3": [
+          {
+            "inputs": [
+              "1",
+              "2"
+            ],
+            "inputNet": "/A10",
+            "output": "3",
+            "outputNet": "/COL10"
+          },
+          {
+            "inputs": [
+              "4",
+              "5"
+            ],
+            "inputNet": "/A9",
+            "output": "6",
+            "outputNet": "/COL9"
+          },
+          {
+            "inputs": [
+              "9",
+              "10"
+            ],
+            "inputNet": "/A0",
+            "output": "8",
+            "outputNet": "/COL0"
+          },
+          {
+            "inputs": [
+              "12",
+              "13"
+            ],
+            "inputNet": "/A8",
+            "output": "11",
+            "outputNet": "/COL8"
+          }
+        ]
       },
-      "note": "Factory package markings and the Zander reconstruction values differ; do not replace chip models solely from these printed labels."
+      "schematicLocator": "PDF page 11, drawing 56-330-4103-7: address inverter bank and the two A2.2 enable gates beside A4."
     }
   ]
 }

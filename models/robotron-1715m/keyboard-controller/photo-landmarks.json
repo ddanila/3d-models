@@ -80,6 +80,35 @@
     "A2.3": {
       "pins": {
         "1": [
+          1645,
+          2448
+        ],
+        "7": [
+          1655,
+          2635
+        ],
+        "8": [
+          1745,
+          2630
+        ],
+        "14": [
+          1735,
+          2445
+        ]
+      },
+      "orientationEvidence": "Visible notch or pin-one mark at cable-facing end; reference package pin order.",
+      "placementStatus": "photo-estimated",
+      "checkPins": {
+        "4": [
+          1648,
+          2540
+        ]
+      },
+      "referenceEvidence": "Factory placement 63-330-4103-2, PDF page 10; all four gate pin assignments checked against factory schematic page 11. Corrected prior location labeled A2.2."
+    },
+    "A2.1": {
+      "pins": {
+        "1": [
           1630,
           1475
         ],
@@ -103,9 +132,10 @@
           1638,
           1575
         ]
-      }
+      },
+      "referenceEvidence": "Factory placement 63-330-4103-2, PDF page 10; all four gate pin assignments checked against factory schematic page 11. Corrected prior location labeled A2.3."
     },
-    "A2.1": {
+    "A2.2": {
       "pins": {
         "1": [
           1420,
@@ -131,35 +161,8 @@
           1425,
           2555
         ]
-      }
-    },
-    "A2.2": {
-      "pins": {
-        "1": [
-          1645,
-          2448
-        ],
-        "7": [
-          1655,
-          2635
-        ],
-        "8": [
-          1745,
-          2630
-        ],
-        "14": [
-          1735,
-          2445
-        ]
       },
-      "orientationEvidence": "Visible notch or pin-one mark at cable-facing end; reference package pin order.",
-      "placementStatus": "photo-estimated",
-      "checkPins": {
-        "4": [
-          1648,
-          2540
-        ]
-      }
+      "referenceEvidence": "Factory placement 63-330-4103-2, PDF page 10; all four gate pin assignments checked against factory schematic page 11. Corrected prior location labeled A2.1."
     },
     "A4": {
       "pins": {

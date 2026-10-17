@@ -38,21 +38,21 @@
     "referenceType": "DL003",
     "placementEvidence": "photo-landmarks.json: A2.1",
     "pinEvidence": "schematic-numbered",
-    "note": "Photo-estimated lead landmarks; see generated/photo-registration.json for residuals. Not dimensional metrology or electrical continuity.",
+    "note": "Reference identity corrected using factory placement 63-330-4103-2 and all four gate assignments in factory schematic 56-330-4103-7. Photo lead positions remain estimated; continuity is not measured.",
     "placementAuthority": "controller.kicad_pcb"
   },
   "A2.2": {
     "referenceType": "DL003",
     "placementEvidence": "photo-landmarks.json: A2.2",
     "pinEvidence": "schematic-numbered",
-    "note": "Photo-estimated lead landmarks; see generated/photo-registration.json for residuals. Not dimensional metrology or electrical continuity.",
+    "note": "Reference identity corrected using factory placement 63-330-4103-2 and all four gate assignments in factory schematic 56-330-4103-7. Photo lead positions remain estimated; continuity is not measured.",
     "placementAuthority": "controller.kicad_pcb"
   },
   "A2.3": {
     "referenceType": "DL003",
     "placementEvidence": "photo-landmarks.json: A2.3",
     "pinEvidence": "schematic-numbered",
-    "note": "Photo-estimated lead landmarks; see generated/photo-registration.json for residuals. Not dimensional metrology or electrical continuity.",
+    "note": "Reference identity corrected using factory placement 63-330-4103-2 and all four gate assignments in factory schematic 56-330-4103-7. Photo lead positions remain estimated; continuity is not measured.",
     "placementAuthority": "controller.kicad_pcb"
   },
   "A7": {

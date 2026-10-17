@@ -72,6 +72,22 @@ class ControllerExportTests(unittest.TestCase):
   self.assertGreater(region['extrapolationChecks'][0]['nominalResidualMm'],2)
   bad={'localRegions':[{'anchors':[{'ref':'A4','pin':'1'}]*4,'checks':[{'ref':'A4','pin':'1'}]}]}
   with self.assertRaisesRegex(ValueError,'unique'):local_reviews(bad,{},[])
+ def test_a2_factory_identity_and_placement(self):
+  components=json.loads((R/'generated/connectivity.json').read_text())['components']
+  review=json.loads((R/'evidence.json').read_text())['referenceVariants'][0]
+  self.assertEqual(review['status'],'reconstruction-placement-error-corrected')
+  self.assertEqual(sum(len(g)for g in review['schematicGateReview'].values()),12)
+  for ref,gates in review['schematicGateReview'].items():
+   for gate in gates:
+    for pin in gate['inputs']:self.assertEqual(components[ref]['pins'][pin],gate['inputNet'])
+    self.assertEqual(components[ref]['pins'][gate['output']],gate['outputNet'])
+  placed={c['ref']:c for c in json.loads((R/'generated/layout.json').read_text())['components']}
+  self.assertLess(placed['A2.1']['position'][0],0)
+  self.assertGreater(placed['A2.1']['position'][1],0)
+  self.assertGreater(placed['A2.2']['position'][0],0)
+  self.assertLess(placed['A2.2']['position'][1],0)
+  self.assertGreater(placed['A2.3']['position'][0],0)
+  self.assertGreater(placed['A2.3']['position'][1],0)
  def test_partial_a1_route_keeps_endpoint_unresolved(self):
   from route_evidence import annotate
   layout=json.loads((R/'generated/layout.json').read_text())
