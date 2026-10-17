@@ -53,8 +53,8 @@ No withdrawn CLK assignment is restored merely because nearby traces align.
 Transistor body observations in `component-evidence.json:visualBodyCandidate`
 produce `controller_visual_transistors` only while the corresponding native parts
 are unplaced. These named photo estimates replace the anonymous visual list.
-Their rotations, height, illustrative holes and leads do not assign electrical
-pads. Native placement still requires individual lead identification.
+Their body axes are projected from primary-photo observations; height, flat-face
+polarity, illustrative holes and leads do not assign electrical pads. Native placement still requires individual lead identification.
 
 The L3/12 body dimensions come from pinned SC236/SC308 device drawings in
 `packageReferences`. SC308 has a centre emitter; SC236 has a centre base.

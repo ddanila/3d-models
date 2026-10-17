@@ -106,7 +106,10 @@ def main():
   candidate=component_evidence.get(c['ref'],{}).get('visualBodyCandidate')
   if candidate:
    if candidate['photoSource']!='photo-top' or candidate['status']!='body-only-photo-estimate':raise ValueError('Unsupported visual body candidate')
-   visual_transistors.append([*[round(v,6)for v in project(body_projection,candidate['photoBodyCentre'])],candidate['rotationEstimateDeg'],c['ref']])
+   a,b=[project(body_projection,p)for p in candidate['photoBodyAxis']]
+   if math.dist(a,b)<1e-6:raise ValueError('Degenerate visual body axis: '+c['ref'])
+   angle=math.degrees(math.atan2(b[1]-a[1],b[0]-a[0]))
+   visual_transistors.append([*[round(v,6)for v in project(body_projection,candidate['photoBodyCentre'])],round(angle,6),c['ref']])
  scad+=['controller_visual_transistors='+json.dumps(visual_transistors)+';']
  resistor_evidence=json.loads((ROOT/'component-evidence.json').read_text());resistors=[]
  for c in placed:

@@ -551,10 +551,20 @@
         950
       ],
       "pixelUncertainty": 12,
-      "rotationEstimateDeg": 25,
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration.",
+      "photoBodyAxis": [
+        [
+          1377.86,
+          927.86
+        ],
+        [
+          1355.0,
+          973.57
+        ]
+      ],
+      "axisScope": "Estimated long body axis in the primary component-side photograph, ordered toward increasing image y. Endpoints describe the raised body, not leads or holes. Flat-face polarity and electrical terminal order remain unqualified."
     }
   },
   "V4.4": {
@@ -572,10 +582,20 @@
         1006
       ],
       "pixelUncertainty": 12,
-      "rotationEstimateDeg": 25,
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration.",
+      "photoBodyAxis": [
+        [
+          1347.14,
+          980.71
+        ],
+        [
+          1325.0,
+          1035.71
+        ]
+      ],
+      "axisScope": "Estimated long body axis in the primary component-side photograph, ordered toward increasing image y. Endpoints describe the raised body, not leads or holes. Flat-face polarity and electrical terminal order remain unqualified."
     }
   },
   "V4.8": {
@@ -593,10 +613,20 @@
         1207
       ],
       "pixelUncertainty": 12,
-      "rotationEstimateDeg": 25,
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration.",
+      "photoBodyAxis": [
+        [
+          1350.0,
+          1182.86
+        ],
+        [
+          1323.57,
+          1232.14
+        ]
+      ],
+      "axisScope": "Estimated long body axis in the primary component-side photograph, ordered toward increasing image y. Endpoints describe the raised body, not leads or holes. Flat-face polarity and electrical terminal order remain unqualified."
     }
   },
   "V4.7": {
@@ -614,10 +644,20 @@
         1157
       ],
       "pixelUncertainty": 12,
-      "rotationEstimateDeg": 25,
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration.",
+      "photoBodyAxis": [
+        [
+          1380.71,
+          1130.0
+        ],
+        [
+          1352.86,
+          1182.86
+        ]
+      ],
+      "axisScope": "Estimated long body axis in the primary component-side photograph, ordered toward increasing image y. Endpoints describe the raised body, not leads or holes. Flat-face polarity and electrical terminal order remain unqualified."
     }
   },
   "V4.1": {
@@ -635,10 +675,20 @@
         850
       ],
       "pixelUncertainty": 12,
-      "rotationEstimateDeg": 25,
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration.",
+      "photoBodyAxis": [
+        [
+          1253.57,
+          821.43
+        ],
+        [
+          1232.14,
+          872.86
+        ]
+      ],
+      "axisScope": "Estimated long body axis in the primary component-side photograph, ordered toward increasing image y. Endpoints describe the raised body, not leads or holes. Flat-face polarity and electrical terminal order remain unqualified."
     }
   },
   "V4.6": {
@@ -656,10 +706,20 @@
         1106
       ],
       "pixelUncertainty": 12,
-      "rotationEstimateDeg": 25,
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration.",
+      "photoBodyAxis": [
+        [
+          1342.86,
+          1073.57
+        ],
+        [
+          1316.43,
+          1130.0
+        ]
+      ],
+      "axisScope": "Estimated long body axis in the primary component-side photograph, ordered toward increasing image y. Endpoints describe the raised body, not leads or holes. Flat-face polarity and electrical terminal order remain unqualified."
     }
   },
   "V4.2": {
@@ -677,10 +737,20 @@
         918
       ],
       "pixelUncertainty": 12,
-      "rotationEstimateDeg": 25,
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration.",
+      "photoBodyAxis": [
+        [
+          1252.14,
+          885.0
+        ],
+        [
+          1235.71,
+          941.43
+        ]
+      ],
+      "axisScope": "Estimated long body axis in the primary component-side photograph, ordered toward increasing image y. Endpoints describe the raised body, not leads or holes. Flat-face polarity and electrical terminal order remain unqualified."
     }
   },
   "V4.5": {
@@ -698,10 +768,20 @@
         1061
       ],
       "pixelUncertainty": 12,
-      "rotationEstimateDeg": 25,
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration.",
+      "photoBodyAxis": [
+        [
+          1378.57,
+          1035.71
+        ],
+        [
+          1354.29,
+          1085.71
+        ]
+      ],
+      "axisScope": "Estimated long body axis in the primary component-side photograph, ordered toward increasing image y. Endpoints describe the raised body, not leads or holes. Flat-face polarity and electrical terminal order remain unqualified."
     }
   },
   "V3.1": {
@@ -719,10 +799,20 @@
         943
       ],
       "pixelUncertainty": 12,
-      "rotationEstimateDeg": -25,
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration.",
+      "photoBodyAxis": [
+        [
+          1532.86,
+          930.0
+        ],
+        [
+          1567.86,
+          966.43
+        ]
+      ],
+      "axisScope": "Estimated long body axis in the primary component-side photograph, ordered toward increasing image y. Endpoints describe the raised body, not leads or holes. Flat-face polarity and electrical terminal order remain unqualified."
     }
   },
   "V3.2": {
@@ -740,10 +830,20 @@
         1005
       ],
       "pixelUncertainty": 12,
-      "rotationEstimateDeg": -25,
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration.",
+      "photoBodyAxis": [
+        [
+          1555.71,
+          987.14
+        ],
+        [
+          1585.71,
+          1029.29
+        ]
+      ],
+      "axisScope": "Estimated long body axis in the primary component-side photograph, ordered toward increasing image y. Endpoints describe the raised body, not leads or holes. Flat-face polarity and electrical terminal order remain unqualified."
     }
   },
   "V4.9": {
@@ -761,10 +861,20 @@
         1005
       ],
       "pixelUncertainty": 12,
-      "rotationEstimateDeg": -25,
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
-      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration.",
+      "photoBodyAxis": [
+        [
+          1655.0,
+          978.57
+        ],
+        [
+          1634.29,
+          1034.29
+        ]
+      ],
+      "axisScope": "Estimated long body axis in the primary component-side photograph, ordered toward increasing image y. Endpoints describe the raised body, not leads or holes. Flat-face polarity and electrical terminal order remain unqualified."
     }
   },
   "R3": {
