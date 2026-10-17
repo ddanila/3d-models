@@ -10,7 +10,7 @@
     "title": "UB880D keyboard controller",
     "photo": "20261012_123622947",
     "evidence": "Owner photo",
-    "dimensions": "UB880D CPU and replacement EPROM follow the owner photo. The 56-330-4103-7 drawing describes a RAM-less U880, 2 KiB ROM, 13 × 8 matrix and address-clocked LED latches. L3/12 reference transistor bodies and flat leads use documented package dimensions; nine legacy visual positions, mounting heights and individual lead mappings remain unqualified. Placement and dimensions are photo-estimated; nominal package geometry is not a measurement of this specimen.",
+    "dimensions": "UB880D CPU and replacement EPROM follow the owner photo. The 56-330-4103-7 drawing describes a RAM-less U880, 2 KiB ROM, 13 × 8 matrix and address-clocked LED latches. L3/12 reference transistor bodies and flat leads use documented package dimensions; eleven named body-only photo positions, mounting heights and individual lead mappings remain unqualified. Placement and dimensions are photo-estimated; nominal package geometry is not a measurement of this specimen.",
     "source": "https://www.sax.de/~zander/pc1715/pc_tasts.pdf"
   },
   {

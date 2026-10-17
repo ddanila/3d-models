@@ -542,7 +542,20 @@
     "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
     "placementAuthority": "controller.kicad_pcb",
-    "packageReference": "sc308-l3-12"
+    "packageReference": "sc308-l3-12",
+    "visualBodyCandidate": {
+      "status": "body-only-photo-estimate",
+      "photoSource": "photo-top",
+      "photoBodyCentre": [
+        1364,
+        950
+      ],
+      "pixelUncertainty": 12,
+      "rotationEstimateDeg": 25,
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+    }
   },
   "V4.4": {
     "referenceType": "SC308C",
@@ -550,7 +563,20 @@
     "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
     "placementAuthority": "controller.kicad_pcb",
-    "packageReference": "sc308-l3-12"
+    "packageReference": "sc308-l3-12",
+    "visualBodyCandidate": {
+      "status": "body-only-photo-estimate",
+      "photoSource": "photo-top",
+      "photoBodyCentre": [
+        1334,
+        1006
+      ],
+      "pixelUncertainty": 12,
+      "rotationEstimateDeg": 25,
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+    }
   },
   "V4.8": {
     "referenceType": "SC308C",
@@ -558,7 +584,20 @@
     "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
     "placementAuthority": "controller.kicad_pcb",
-    "packageReference": "sc308-l3-12"
+    "packageReference": "sc308-l3-12",
+    "visualBodyCandidate": {
+      "status": "body-only-photo-estimate",
+      "photoSource": "photo-top",
+      "photoBodyCentre": [
+        1336,
+        1207
+      ],
+      "pixelUncertainty": 12,
+      "rotationEstimateDeg": 25,
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+    }
   },
   "V4.7": {
     "referenceType": "SC308C",
@@ -566,7 +605,20 @@
     "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
     "placementAuthority": "controller.kicad_pcb",
-    "packageReference": "sc308-l3-12"
+    "packageReference": "sc308-l3-12",
+    "visualBodyCandidate": {
+      "status": "body-only-photo-estimate",
+      "photoSource": "photo-top",
+      "photoBodyCentre": [
+        1366,
+        1157
+      ],
+      "pixelUncertainty": 12,
+      "rotationEstimateDeg": 25,
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+    }
   },
   "V4.1": {
     "referenceType": "SC308C",
@@ -574,7 +626,20 @@
     "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
     "placementAuthority": "controller.kicad_pcb",
-    "packageReference": "sc308-l3-12"
+    "packageReference": "sc308-l3-12",
+    "visualBodyCandidate": {
+      "status": "body-only-photo-estimate",
+      "photoSource": "photo-top",
+      "photoBodyCentre": [
+        1246,
+        850
+      ],
+      "pixelUncertainty": 12,
+      "rotationEstimateDeg": 25,
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+    }
   },
   "V4.6": {
     "referenceType": "SC308C",
@@ -582,7 +647,20 @@
     "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
     "placementAuthority": "controller.kicad_pcb",
-    "packageReference": "sc308-l3-12"
+    "packageReference": "sc308-l3-12",
+    "visualBodyCandidate": {
+      "status": "body-only-photo-estimate",
+      "photoSource": "photo-top",
+      "photoBodyCentre": [
+        1326,
+        1106
+      ],
+      "pixelUncertainty": 12,
+      "rotationEstimateDeg": 25,
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+    }
   },
   "V4.2": {
     "referenceType": "SC308C",
@@ -590,7 +668,20 @@
     "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
     "placementAuthority": "controller.kicad_pcb",
-    "packageReference": "sc308-l3-12"
+    "packageReference": "sc308-l3-12",
+    "visualBodyCandidate": {
+      "status": "body-only-photo-estimate",
+      "photoSource": "photo-top",
+      "photoBodyCentre": [
+        1246,
+        918
+      ],
+      "pixelUncertainty": 12,
+      "rotationEstimateDeg": 25,
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+    }
   },
   "V4.5": {
     "referenceType": "SC308C",
@@ -598,7 +689,20 @@
     "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
     "placementAuthority": "controller.kicad_pcb",
-    "packageReference": "sc308-l3-12"
+    "packageReference": "sc308-l3-12",
+    "visualBodyCandidate": {
+      "status": "body-only-photo-estimate",
+      "photoSource": "photo-top",
+      "photoBodyCentre": [
+        1366,
+        1061
+      ],
+      "pixelUncertainty": 12,
+      "rotationEstimateDeg": 25,
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+    }
   },
   "V3.1": {
     "referenceType": "SC236D",
@@ -606,7 +710,20 @@
     "pinEvidence": "Reference L3/12 drawing: E-B-C with centre base for SC236. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Reference schematic; specimen identity/placement requires review",
     "placementAuthority": "controller.kicad_pcb",
-    "packageReference": "sc236-l3-12"
+    "packageReference": "sc236-l3-12",
+    "visualBodyCandidate": {
+      "status": "body-only-photo-estimate",
+      "photoSource": "photo-top",
+      "photoBodyCentre": [
+        1550,
+        943
+      ],
+      "pixelUncertainty": 12,
+      "rotationEstimateDeg": -25,
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+    }
   },
   "V3.2": {
     "referenceType": "SC236D",
@@ -614,7 +731,20 @@
     "pinEvidence": "Reference L3/12 drawing: E-B-C with centre base for SC236. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Reference schematic; specimen identity/placement requires review",
     "placementAuthority": "controller.kicad_pcb",
-    "packageReference": "sc236-l3-12"
+    "packageReference": "sc236-l3-12",
+    "visualBodyCandidate": {
+      "status": "body-only-photo-estimate",
+      "photoSource": "photo-top",
+      "photoBodyCentre": [
+        1564,
+        1005
+      ],
+      "pixelUncertainty": 12,
+      "rotationEstimateDeg": -25,
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+    }
   },
   "V4.9": {
     "referenceType": "SC308C",
@@ -622,7 +752,20 @@
     "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Reference schematic; specimen identity/placement requires review",
     "placementAuthority": "controller.kicad_pcb",
-    "packageReference": "sc308-l3-12"
+    "packageReference": "sc308-l3-12",
+    "visualBodyCandidate": {
+      "status": "body-only-photo-estimate",
+      "photoSource": "photo-top",
+      "photoBodyCentre": [
+        1646,
+        1005
+      ],
+      "pixelUncertainty": 12,
+      "rotationEstimateDeg": -25,
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Factory-designator body observation only. Raised body parallax, rotation, mounting height and lead entry remain estimated. This does not place the native footprint or identify electrical B/E/C pads. Nominal visual holes/leads are illustrative until native migration."
+    }
   },
   "R3": {
     "referenceType": "22k",

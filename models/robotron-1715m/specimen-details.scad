@@ -23,7 +23,7 @@ module owner_dip_pins(p) {
 }
 // Owner 123622947: staggered transistor population, not a rectangular grid.
 // L3/12 reference bodies at legacy photo-estimated positions; no native pin mapping.
-controller_transistors=[[-118.395, -12.014, 0], [-104.408, -12.666, 25], [-99.738, -12.884, 25], [-93.813, -6.933, 25], [-88.123, -6.539, 25], [-82.426, -6.145, 25], [-77.894, -5.533, 25], [-97.96, 8.316, -25], [-92.928, 10.056, -25]];
+controller_transistors=controller_visual_transistors;
 module controller_transistor_pose(p){translate([p[0],p[1],1.6])rotate([0,0,p[2]])children();}
 // Package dimensions come from evidence.json through the controller exporter.
 // Stand-off and trimmed tails retain legacy visual estimates, not specimen measurements.

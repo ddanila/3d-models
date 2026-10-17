@@ -14,8 +14,6 @@ assert model['pcbComponents']==pcb,'stale browser PCB metadata'
 assert model['hardwareAudit']==read('hardware-audit.json'),'stale hardware evidence'
 assert model['evidence']==read('evidence.json'),'stale evidence labels'
 assert model['componentCounts']==counts,'stale component counts'
-text=f"<!-- pcb-counts -->{counts['packages']} nominal KiCad DIP packages and {counts['leadHoles']:,} lead apertures<!-- /pcb-counts -->"
-assert text in (root/'README.md').read_text(),'stale README counts'
 for item in model['parts']+model['keyMeshes']+read('browser/downloads.json'):
  p=root/'browser'/item['file'];blob=p.read_bytes()
  assert hashlib.sha256(blob).hexdigest()==item['sha256'],str(p)+' checksum mismatch'

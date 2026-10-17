@@ -67,9 +67,9 @@ The October 13 inserted-disk views (`113529099`, `113537277`) now set a 7 mm dee
 
 The keyboard controller is oriented with its input end toward the actual cable opening (`123907435`). A continuous internal lead reaches its shield clamp, passing through a round grooved black bush captured in a 1 mm bent metal support (`123539882`); the rectangular opening has two rubber strips along its long edges. The plug has the asymmetric housing, screw layout and offset cable outlet from `090425989` / `090431122`. DAC preserves the input connection when separating the keyboard for inspection.
 
-The system unit has a W/M motherboard with integrated A44 U8272 and 32 RAM packages, plus a separate display controller mounted component-side down. [board-layout.json](board-layout.json) records the shared placement, sources and uncertainty. There are <!-- pcb-counts -->138 nominal KiCad DIP packages and 2,568 lead apertures<!-- /pcb-counts -->. The October 14 component-side photographs locate 39 display-board ICs, including three UL6516D memories and the SAB8275P, red upright capacitors and the white wound component. Generated P01–P39 IDs identify photo positions, not printed board designators. Photo-registered mainboard packages and connectors use the v41 two-photo, six-package nominal-pitch calibration below. Other positions retain W drawing estimates; board edges and hidden mounts remain unmeasured. R19/R102 and C90/C91 follow the documented CPU/DMA adjacency, with estimated positions and no invented electrical values. Unidentified footprints retain generic labels. Clean chip legends reproduce only owner-photo-supported markings; schematic designators remain inspection metadata. Illustrative copper routes are not a netlist.
+The system unit has a W/M motherboard with integrated A44 U8272 and 32 RAM packages, plus a separate display controller mounted component-side down. [board-layout.json](board-layout.json) records the shared placement, sources and uncertainty. The component-side photographs locate display-board ICs, including UL6516D memories and the SAB8275P, red upright capacitors and the white wound component. Generated P01–P39 IDs identify photo positions, not printed board designators. Photo-registered mainboard packages and connectors use the v41 two-photo, six-package nominal-pitch calibration below. Other positions retain W drawing estimates; board edges and hidden mounts remain unmeasured. R19/R102 and C90/C91 follow the documented CPU/DMA adjacency, with estimated positions and no invented electrical values. Unidentified footprints retain generic labels. Clean chip legends reproduce only owner-photo-supported markings; schematic designators remain inspection metadata. Illustrative copper routes are not a netlist.
 
-The [October 14 photo inventory](reference/owner-20261014.json) records 52 new owner photographs, with 22 selected originals published after metadata removal. These show this exact museum specimen. The drive carrier now has thin folded returns and underside windows exposing the large motor rotors; those rotors share the emulator-driven spindle motion. Their dimensions remain photo estimates. Owner photographs establish the drive adapters, their two mounting holes, cover stiffeners, fan retention and PSU access cover. The fan now has five swept blades and a broader hub matching the visible specimen; blade curvature remains estimated. Ribbon plugs now enter the pale adapter sockets; the fan aperture is concentric with the rotor/frame. The display controller’s visible board number does not prove an exact schematic revision match. Hidden monitor electronics remain comparative, and enclosed PSU electronics are not reconstructed.
+The [October 14 photo inventory](reference/owner-20261014.json) records owner photographs and the originals published after metadata removal. These show this exact museum specimen. The drive carrier now has thin folded returns and underside windows exposing the large motor rotors; those rotors share the emulator-driven spindle motion. Their dimensions remain photo estimates. Owner photographs establish the drive adapters, their two mounting holes, cover stiffeners, fan retention and PSU access cover. The fan now has five swept blades and a broader hub matching the visible specimen; blade curvature remains estimated. Ribbon plugs now enter the pale adapter sockets; the fan aperture is concentric with the rotor/frame. The display controller’s visible board number does not prove an exact schematic revision match. Hidden monitor electronics remain comparative, and enclosed PSU electronics are not reconstructed.
 
 The family manual gives nominal envelopes of 500 × 400 × 130 mm (system), 320 × 350 × 330 mm (monitor including stand), and 500 × 200 × 40 mm (keyboard). These are family specifications, not new measurements of this specimen. See the [original manual, printed p.35](https://xepb.org/robotron/docs/pc_manu.pdf#page=36) and [W drawings](https://xepb.org/robotron/docs/1715w.zip). The [TEAC specification](https://www.bitsavers.org/pdf/teac/FD-55FV-13_Specification_Rev_E.pdf) documents 2.54 mm signal-contact pitch; adapter-board dimensions remain estimated.
 
@@ -148,16 +148,10 @@ M4164B-12 population (32 × 64 Kbit = 256 KiB); CTC labels reflect UA857D.
 Positions/references inherited from the W drawing remain estimates, rather
 than claiming a complete calibrated reconstruction of this specimen.
 
-The keyboard controller now uses original procedural L3/12 reference transistor
-bodies and flat leads, replacing the generic KiCad TO-92 visuals. Package dimensions
-come from pinned SC236/SC308 device drawings via the controller exporter. The nine
-legacy visual positions and rotations remain estimates; eleven schematic transistors
-still need native placement and individual lead mapping. The reference circuit has
-eight SC308C sensing stages plus SC236D/SC308C reset circuitry. SC308 has a centre
-emitter while SC236 has a centre base; reference package order is not a qualified
-installed-board pin map. See `keyboard-controller/README.md` for sources and limits.
-The older imported TO-92 assets retain their upstream credits/licences but are no
-longer used by the controller body/lead modules.
+The keyboard controller uses sourced L3/12 transistor bodies at named primary-photo
+observations. Placement, orientation and illustrative leads remain estimates until
+native pad mapping is established. See [the controller guide](keyboard-controller/README.md)
+for evidence, review entry points and regeneration steps.
 
 The controller has matching drilled lead holes, a thin open saddle clamp with
 mounting ears, and white/black/pink/blue incoming wires following the owner
@@ -194,8 +188,7 @@ footprints retain the upstream licences in `components/kicad/NOTICE.txt`.
 
 Top and underside controller artwork now has stepped edge buses and diagonal
 breaks based on PXL_20261012_123622947.jpg and PXL_20261012_123648677.jpg, with
-solder eyes for all transistor leads. Solder eyes stay separate at 1.27 mm
-transistor pitch. These clean polylines are visual approximations, not a traced
+solder eyes for all transistor leads. Transistor solder eyes follow the reference lead spacing. These clean polylines are visual approximations, not a traced
 netlist; hidden lead bends and exact copper widths remain unverified.
 The accepted keyboard exterior and physical verification classifications are
 unchanged. Check package/board clearance with `tools/check-assembly.py` and
@@ -351,7 +344,7 @@ The cable termination has a clean braided shield pigtail, broad tinned land and
 solder termination based on `123539882`, without copying frayed strands or wear.
 The jacket now reaches the exit of its saddle clamp.
 
-`keyboard-artwork.json` records 26 matrix and 43 controller underside route
+`keyboard-artwork.json` records matrix and controller underside route
 segments against owner photos `123048886` and `123648677`. Rebuild the projected
 polylines with `python3 tools/configure-keyboard-artwork.py`. Matrix solder
 points use irregular photographed positions and rounded joints instead of a

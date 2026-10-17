@@ -95,6 +95,19 @@ def main():
  pkg=family[0];body=pkg['bodyDimensionsMm']
  for name,value in [('body',[body['width'],body['depth'],body['height']]),('lead_span',pkg['outerLeadSpanMm']),('lead_section',pkg['leadSectionMm']),('flat_offset',pkg['flatFaceToLeadPlaneMm']),('corner_radius',pkg['backCornerRadiusMm'])]:
   scad+=['controller_l3_12_'+name+'='+json.dumps(value)+';']
+
+ # Unplaced body observations are explicitly visual, never native pad/net geometry.
+ from photo_registration import homography,project
+ landmarks=json.loads((ROOT/'photo-landmarks.json').read_text())
+ body_projection=homography(landmarks['photoCorners'],landmarks['modelCorners'])
+ component_evidence=json.loads((ROOT/'component-evidence.json').read_text())
+ visual_transistors=[]
+ for c in unplaced:
+  candidate=component_evidence.get(c['ref'],{}).get('visualBodyCandidate')
+  if candidate:
+   if candidate['photoSource']!='photo-top' or candidate['status']!='body-only-photo-estimate':raise ValueError('Unsupported visual body candidate')
+   visual_transistors.append([*[round(v,6)for v in project(body_projection,candidate['photoBodyCentre'])],candidate['rotationEstimateDeg'],c['ref']])
+ scad+=['controller_visual_transistors='+json.dumps(visual_transistors)+';']
  resistor_evidence=json.loads((ROOT/'component-evidence.json').read_text());resistors=[]
  for c in placed:
   if c['ref'].startswith('R') and len(c['pads'])==2:

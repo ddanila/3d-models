@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Generate shared OpenSCAD/browser W/M packages and holes from board-layout.json."""
-import json,math,re
+import json,math
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 layout=json.loads((root/'board-layout.json').read_text())
@@ -33,7 +33,3 @@ data=dict(version=4,boards=layout['boards'],sources=layout['sources'],limitation
 arrays=dict(pcb_visible_lands=layout['motherboardArtwork'].get('lands',[]),pcb_component_models=[[m['meshes']['body']['file'],m['meshes']['leads']['file']] for m in models],pcb_component_instances=[[lookup[p['model']],p['position'],p['rotation'],p['board'],p['side']] for p in instances],pcb_jumpers=layout["motherboardJumpers"]["position"],pcb_sockets=sockets,pcb_mounts=mounts,pcb_footprints=footprints,pcb_passives=passives,pcb_connectors=connectors,pcb_boards=[[b['name'],b['origin'],b['size']] for b in layout['boards']],pcb_motherboard_routes=layout['motherboardArtwork']['paths'],pcb_motherboard_markings=[[v['text'],v['position'],v['height'],v['rotation']] for v in layout['motherboardArtwork']['markings']],pcb_ribbon_socket=layout['boards'][0]['connectors'][1]['position'],pcb_display_routes=layout['displayRoutes'])
 (root/'pcb-components.scad').write_text('// Generated from board-layout.json; nominal packages, estimated layout.\n'+''.join(k+'='+json.dumps(v)+';\n' for k,v in arrays.items()))
 print(len(instances),'W/M packages;',len(footprints),'lead holes')
-
-readme=root/'README.md'
-text=f"<!-- pcb-counts -->{len(instances)} nominal KiCad DIP packages and {len(footprints):,} lead apertures<!-- /pcb-counts -->"
-readme.write_text(re.sub(r'<!-- pcb-counts -->.*?<!-- /pcb-counts -->',text,readme.read_text()))
