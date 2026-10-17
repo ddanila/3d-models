@@ -39,7 +39,7 @@
     "rom": "A8 U556/U2716-compatible 2 KiB ROM; transplanted specimen ROM contents unverified",
     "matrix": "13 scan selections x 8 inputs; no RAM on controller",
     "leds": "A6A/A6B DL074 latches: address A14/A13 data, IORQ with A15 low clocks them",
-    "transistors": "Schematic: V4.1\u2013V4.8 SC308C input stages, V3.1/V3.2 SC236D and V4.9 SC308C oscillator stages. Generic TO-92 model; photographed substitutes not electrically identified.",
+    "transistors": "Schematic: V4.1\u2013V4.8 SC308C input stages, V3.1/V3.2 SC236D and V4.9 SC308C reset stages. L3/12 reference bodies at nine legacy estimated visual positions; eleven schematic transistors still need native placement and individual lead mapping.",
     "unresolved": "Exact controller-to-matrix mating depth and hidden lead bends; no invented joining cable. Visible connector/resistor tails share PCB holes and underside solder eyes.",
     "internalReview": "v44: installed end screws/visible straps, photo-projected matrix and controller underside artwork, irregular solder joints, shared end-hole/ring coordinates, clean braided shield termination and 1 mm pressed bottom-lid pockets. Exact hidden attachments, electrical continuity and optical properties remain unverified."
   },

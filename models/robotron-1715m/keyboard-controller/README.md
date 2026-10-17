@@ -676,9 +676,15 @@ C36/D family markings. They support reference-family consistency on that
 specimen, not identification of every primary device. V4.1–V4.9 reference the
 SC308 convention; V3.1/V3.2 reference SC236. All remain physically unplaced.
 
-The current museum transistor bodies still reuse generic TO-92 visual geometry.
-That is a known approximation, not a qualified L3/12 body or physical pin map.
-The next geometry migration must use the documented package shape, review every
-body orientation and lead entry, and keep board stand-off separate from the
-untrimmed lead length in the drawing. Reference package dimensions alone do not
-qualify specimen pad positions or lead continuity.
+The museum now uses an original procedural L3/12 body instead of generic TO-92
+imports: 4.2 mm width/height, 2.5 mm depth, a flat front 1 mm from the lead plane,
+and two rear corners of radius 1 mm. Flat 0.4 × 0.3 mm leads use the reference
+2.5 mm outer span; legacy holes, lands and solder follow the same lead positions.
+The nine existing visual positions and rotations remain estimates, with no
+component/pin assignment. Eleven schematic transistors remain unplaced: the
+visual population is not a completed component inventory.
+
+The existing 2.5 mm body stand-off and 2.5 mm tail length remain explicitly
+estimated. The drawing's 12.5 mm untrimmed lead length is not installed stand-off.
+Native placement still requires every body orientation and board entry to be
+reviewed. Reference dimensions alone do not qualify specimen pads or continuity.

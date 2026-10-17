@@ -1157,7 +1157,9 @@
         0.4,
         0.3
       ],
-      "scope": "Reference package convention. Comparison photos show 308/C markings consistent with this family; primary specimen markings, individual body orientation, lead bends and PCB pad correspondence remain unqualified."
+      "scope": "Reference package convention. Comparison photos show 308/C markings consistent with this family; primary specimen markings, individual body orientation, lead bends and PCB pad correspondence remain unqualified.",
+      "flatFaceToLeadPlaneMm": 1,
+      "backCornerRadiusMm": 1
     },
     {
       "id": "sc236-l3-12",
@@ -1185,7 +1187,9 @@
         0.4,
         0.3
       ],
-      "scope": "Reference package convention. Comparison photos show C36/D markings consistent with this family; primary specimen markings, individual body orientation, lead bends and PCB pad correspondence remain unqualified."
+      "scope": "Reference package convention. Comparison photos show C36/D markings consistent with this family; primary specimen markings, individual body orientation, lead bends and PCB pad correspondence remain unqualified.",
+      "flatFaceToLeadPlaneMm": 1,
+      "backCornerRadiusMm": 1
     }
   ]
 }

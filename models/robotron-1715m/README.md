@@ -148,15 +148,16 @@ M4164B-12 population (32 × 64 Kbit = 256 KiB); CTC labels reflect UA857D.
 Positions/references inherited from the W drawing remain estimates, rather
 than claiming a complete calibrated reconstruction of this specimen.
 
-The keyboard's eleven photo-positioned three-lead transistor bodies now use
-KiCad's pinned `TO-92_Inline.step`, with its rounded back, flat face and separate
-metal leads. `tools/convert-transistors.py` preserves the upstream shape and
-checks solid validity, three leads and volume conservation. `transistors.json`
-records mesh hashes/bounds; upstream STEP, credits and licences are preserved.
-This is a generic package match, not proof of the DDR electrical type or exact
-mould/lead bends. The keyboard schematic identifies eight SC308C input stages
-and three oscillator transistors; photographed substitute identities remain
-unverified. Imported geometry retains its upstream licence, not MIT.
+The keyboard controller now uses original procedural L3/12 reference transistor
+bodies and flat leads, replacing the generic KiCad TO-92 visuals. Package dimensions
+come from pinned SC236/SC308 device drawings via the controller exporter. The nine
+legacy visual positions and rotations remain estimates; eleven schematic transistors
+still need native placement and individual lead mapping. The reference circuit has
+eight SC308C sensing stages plus SC236D/SC308C reset circuitry. SC308 has a centre
+emitter while SC236 has a centre base; reference package order is not a qualified
+installed-board pin map. See `keyboard-controller/README.md` for sources and limits.
+The older imported TO-92 assets retain their upstream credits/licences but are no
+longer used by the controller body/lead modules.
 
 The controller has matching drilled lead holes, a thin open saddle clamp with
 mounting ears, and white/black/pink/blue incoming wires following the owner

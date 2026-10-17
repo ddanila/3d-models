@@ -22,9 +22,28 @@ module owner_dip_pins(p) {
  translate([p[0],p[1],controller_seat(p)])rotate([0,0,p[5]-90])import(controller_package(p)[2]);
 }
 // Owner 123622947: staggered transistor population, not a rectangular grid.
-// KiCad generic TO-92; no unverified electrical type or DDR mould identity.
+// L3/12 reference bodies at legacy photo-estimated positions; no native pin mapping.
 controller_transistors=[[-118.395, -12.014, 0], [-104.408, -12.666, 25], [-99.738, -12.884, 25], [-93.813, -6.933, 25], [-88.123, -6.539, 25], [-82.426, -6.145, 25], [-77.894, -5.533, 25], [-97.96, 8.316, -25], [-92.928, 10.056, -25]];
 module controller_transistor_pose(p){translate([p[0],p[1],1.6])rotate([0,0,p[2]])children();}
+// Package dimensions come from evidence.json through the controller exporter.
+// Stand-off and trimmed tails retain legacy visual estimates, not specimen measurements.
+controller_transistor_standoff=2.5;
+controller_transistor_tail=2.5;
+controller_transistor_lead_x=[-controller_l3_12_lead_span/2,0,controller_l3_12_lead_span/2];
+module controller_miniplast_body(){
+ w=controller_l3_12_body[0];d=controller_l3_12_body[1];h=controller_l3_12_body[2];
+ r=controller_l3_12_corner_radius;front=-controller_l3_12_flat_offset;back=front+d;
+ translate([0,0,controller_transistor_standoff])linear_extrude(h)
+ polygon(concat([[-w/2,front],[w/2,front]],
+  [for(a=[0:10:90])[w/2-r+r*cos(a),back-r+r*sin(a)]],
+  [for(a=[90:10:180])[-w/2+r+r*cos(a),back-r+r*sin(a)]]));
+}
+module controller_miniplast_leads(){
+ for(x=controller_transistor_lead_x)
+ translate([x-controller_l3_12_lead_section[0]/2,-controller_l3_12_lead_section[1]/2,-controller_transistor_tail])
+ cube([controller_l3_12_lead_section[0],controller_l3_12_lead_section[1],controller_transistor_tail+controller_transistor_standoff]);
+}
+
 // Shared tail locations keep board apertures, joints and lead endpoints aligned.
 controller_connector_tails=[for(i=[0:12],side=[-1,1])[-25+i*2.54,3+side*7]];
 // Photo projected resistor positions; three ROM/CPU-end placements adjusted
@@ -41,14 +60,14 @@ module keyboard_controller_board(){keyboard_controller_pose()difference(){
  linear_extrude(1.6)polygon(controller_pcb_outline);
  for(p=controller_end_holes)translate(concat(p,[-1]))cylinder(d=3.2,h=4,$fn=24);
  for(p=concat(controller_connector_tails,controller_legacy_resistor_tails))translate([p[0],p[1],-1])cylinder(d=.85,h=4,$fn=16);
- for(p=controller_transistors)controller_transistor_pose(p)for(x=[-1.27,0,1.27])translate([x,0,-2])cylinder(d=.85,h=4,$fn=12);
+ for(p=controller_transistors)controller_transistor_pose(p)for(x=controller_transistor_lead_x)translate([x,0,-2])cylinder(d=.85,h=4,$fn=12);
  for(p=concat(controller_pcb_dip_pads,controller_pcb_resistor_pads,controller_pcb_bridge_pads,controller_pcb_ceramic_pads))translate([p[0],p[1],-1])cylinder(d=p[2],h=4,$fn=16);
 }}
 module keyboard_controller_chips(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_body(p);
  // Socket below the photographed UB880D and socket below replacement EPROM.
  for(ref=["A5","A8"])let(p=controller_dip(ref),length=ref=="A5"?54:34)translate([p[0],p[1],1.6])rotate([0,0,p[5]])difference(){slab(length,19,1.2,.6);slab(length-4,15,2,.4);}
- for(p=controller_transistors)controller_transistor_pose(p)import("components/kicad/meshes/TO-92_Inline-body.stl");
+ for(p=controller_transistors)controller_transistor_pose(p)controller_miniplast_body();
 }}
 // C5.4 overhangs A7 in the top photo; nominal stand-off avoids body intersection.
 function controller_ceramic_z(c)=c[3]=="C5.4"?8.1:4.4;
@@ -75,7 +94,7 @@ module keyboard_controller_caps(){keyboard_controller_pose(){
 }}
 module keyboard_controller_metal(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_pins(p);
- for(p=controller_transistors)controller_transistor_pose(p)import("components/kicad/meshes/TO-92_Inline-leads.stl");
+ for(p=controller_transistors)controller_transistor_pose(p)controller_miniplast_leads();
  owner_dip_pins(controller_rom);
  for(i=[0:12],s=[-1,1])translate([-25+i*2.54,3+s*2.54,2])cylinder(d=.65,h=4,$fn=8);
  for(p=[[-114.695, 3.019], [-106.445, -2.752], [-101.335, 18.111], [132, -4.5]])translate([p[0],p[1],10.65])cylinder(d=4.5,h=.2,$fn=24);
@@ -149,7 +168,7 @@ module keyboard_controller_traces(){keyboard_controller_pose(){
  for(p=concat(controller_pcb_resistor_pads,controller_pcb_bridge_pads,controller_pcb_ceramic_pads))translate([p[0],p[1],1.62])difference(){scale([p[3],p[4],1])cylinder(d=1,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
  // Staggered transistor-stage routes and plated eyes (no invented values).
  for(p=controller_transistors)controller_transistor_pose(p)
-  for(x=[-1.27,0,1.27])translate([x,0,-.1])difference(){cylinder(d=1.2,h=.1,$fn=20);cylinder(d=.85,h=.2,$fn=16);}
+  for(x=controller_transistor_lead_x)translate([x,0,-.1])difference(){cylinder(d=1.2,h=.1,$fn=20);cylinder(d=.85,h=.2,$fn=16);}
 }}
 module system_foot_metal(){
  for(x=[-225,225],y=[-170,170])translate([x,y,-3])specimen_foot_insert();
@@ -382,7 +401,7 @@ module keyboard_controller_solder(){keyboard_controller_pose(){
  for(p=concat(controller_pcb_resistor_pads,controller_pcb_bridge_pads,controller_pcb_ceramic_pads))controller_solder_eye(p[0],p[1],p[2],min(p[3],p[4]));
  for(p=controller_pcb_dip_pads)controller_solder_eye(p[0],p[1],p[2]);
  for(p=controller_transistors)translate([p[0],p[1],0])rotate([0,0,p[2]])
-  for(x=[-1.27,0,1.27])controller_solder_eye(x,0,.85,1.2);
+  for(x=controller_transistor_lead_x)controller_solder_eye(x,0,.85,1.2);
  for(p=concat(controller_connector_tails,controller_legacy_resistor_tails))controller_solder_eye(p[0],p[1],.85,1.7);
  for(p=controller_end_holes)translate([p[0],p[1],-.15])difference(){cylinder(d=3.8,h=.15,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=16);}
 }}
