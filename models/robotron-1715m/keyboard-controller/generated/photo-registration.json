@@ -1299,6 +1299,398 @@
       ],
       "ref": "R10.2",
       "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
+      "maxResidualMm": 4.487174490370758e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            -61.235864,
+            1.312999
+          ],
+          "pcbPixel": [
+            1463.999994056029,
+            1430.9999983877801
+          ],
+          "photoModel": [
+            -61.235863873863636,
+            1.3129994306239274
+          ],
+          "photoPixel": [
+            1464,
+            1431
+          ],
+          "pin": "1",
+          "residualMm": 4.487174490370758e-07
+        },
+        {
+          "pcbModel": [
+            -73.396727,
+            1.421624
+          ],
+          "pcbPixel": [
+            1457.99999423184,
+            1269.0000014976958
+          ],
+          "photoModel": [
+            -73.39672710717883,
+            1.4216244277615027
+          ],
+          "photoPixel": [
+            1458,
+            1269
+          ],
+          "pin": "2",
+          "residualMm": 4.409843600038569e-07
+        }
+      ],
+      "ref": "R9.3",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
+      "maxResidualMm": 3.6196091655379023e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            -61.456888,
+            8.220908
+          ],
+          "pcbPixel": [
+            1557.9999950685667,
+            1427.000000104384
+          ],
+          "photoModel": [
+            -61.45688800367156,
+            8.220908361942294
+          ],
+          "photoPixel": [
+            1558,
+            1427
+          ],
+          "pin": "1",
+          "residualMm": 3.6196091655379023e-07
+        },
+        {
+          "pcbModel": [
+            -73.541558,
+            8.098402
+          ],
+          "pcbPixel": [
+            1549.0000010379163,
+            1265.9999957527286
+          ],
+          "photoModel": [
+            -73.54155768268673,
+            8.098401909821542
+          ],
+          "photoPixel": [
+            1549,
+            1266
+          ],
+          "pin": "2",
+          "residualMm": 3.2987855765173965e-07
+        }
+      ],
+      "ref": "R9.5",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
+      "maxResidualMm": 4.5325938201437246e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            -61.493108,
+            11.596691
+          ],
+          "pcbPixel": [
+            1603.9999999371046,
+            1425.99999638887
+          ],
+          "photoModel": [
+            -61.493107728792864,
+            11.596690992650549
+          ],
+          "photoPixel": [
+            1604,
+            1426
+          ],
+          "pin": "1",
+          "residualMm": 2.71306698198083e-07
+        },
+        {
+          "pcbModel": [
+            -73.499374,
+            11.613456
+          ],
+          "pcbPixel": [
+            1597.0000055865903,
+            1265.999997566452
+          ],
+          "photoModel": [
+            -73.49937382260057,
+            11.61345558289868
+          ],
+          "photoPixel": [
+            1597,
+            1266
+          ],
+          "pin": "2",
+          "residualMm": 4.5325938201437246e-07
+        }
+      ],
+      "ref": "R9.6",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
+      "maxResidualMm": 5.564715755249206e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            -61.529317,
+            14.971528
+          ],
+          "pcbPixel": [
+            1649.999993911683,
+            1425.0000042374265
+          ],
+          "photoModel": [
+            -61.52931731299075,
+            14.971528460105862
+          ],
+          "photoPixel": [
+            1650,
+            1425
+          ],
+          "pin": "1",
+          "residualMm": 5.564715755249206e-07
+        },
+        {
+          "pcbModel": [
+            -73.605251,
+            15.280498
+          ],
+          "pcbPixel": [
+            1647.0000054704517,
+            1263.99999775649
+          ],
+          "photoModel": [
+            -73.60525083676444,
+            15.280497592213603
+          ],
+          "photoPixel": [
+            1647,
+            1264
+          ],
+          "pin": "2",
+          "residualMm": 4.392443416372233e-07
+        }
+      ],
+      "ref": "R9.7",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
+      "maxResidualMm": 3.9422445652866673e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            -61.713112,
+            18.571732
+          ],
+          "pcbPixel": [
+            1698.999995043309,
+            1421.9999977987554
+          ],
+          "photoModel": [
+            -61.713111830575,
+            18.5717323559608
+          ],
+          "photoPixel": [
+            1699,
+            1422
+          ],
+          "pin": "1",
+          "residualMm": 3.9422445652866673e-07
+        },
+        {
+          "pcbModel": [
+            -73.865268,
+            18.587004
+          ],
+          "pcbPixel": [
+            1691.9999959333038,
+            1260.0000009667135
+          ],
+          "photoModel": [
+            -73.86526806881872,
+            18.587004300735657
+          ],
+          "photoPixel": [
+            1692,
+            1260
+          ],
+          "pin": "2",
+          "residualMm": 3.085092408625527e-07
+        }
+      ],
+      "ref": "R9.8",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
+      "maxResidualMm": 4.862209605468064e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            -61.346393,
+            4.767473
+          ],
+          "pcbPixel": [
+            1511.0000019694205,
+            1428.9999938886308
+          ],
+          "photoModel": [
+            -61.346392542631335,
+            4.767472835000825
+          ],
+          "photoPixel": [
+            1511,
+            1429
+          ],
+          "pin": "1",
+          "residualMm": 4.862209605468064e-07
+        },
+        {
+          "pcbModel": [
+            -73.277857,
+            5.081764
+          ],
+          "pcbPixel": [
+            1508.000003125558,
+            1270.000001575692
+          ],
+          "photoModel": [
+            -73.27785712082382,
+            5.081763776310992
+          ],
+          "photoPixel": [
+            1508,
+            1270
+          ],
+          "pin": "2",
+          "residualMm": 2.5423447731915244e-07
+        }
+      ],
+      "ref": "R9.4",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
+      "maxResidualMm": 5.105114901258188e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            -61.199592,
+            -2.065711
+          ],
+          "pcbPixel": [
+            1418.000006548429,
+            1432.0000019207323
+          ],
+          "photoModel": [
+            -61.199592149844136,
+            -2.065711474008175
+          ],
+          "photoPixel": [
+            1418,
+            1432
+          ],
+          "pin": "1",
+          "residualMm": 4.971287703016365e-07
+        },
+        {
+          "pcbModel": [
+            -73.214038,
+            -2.106556
+          ],
+          "pcbPixel": [
+            1409.999995290791,
+            1272.0000048603843
+          ],
+          "photoModel": [
+            -73.21403836019967,
+            -2.1065556382291004
+          ],
+          "photoPixel": [
+            1410,
+            1272
+          ],
+          "pin": "2",
+          "residualMm": 5.105114901258188e-07
+        }
+      ],
+      "ref": "R9.2",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
+      "maxResidualMm": 5.142373062307632e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            -61.238455,
+            -5.44193
+          ],
+          "pcbPixel": [
+            1372.000003451599,
+            1431.9999951605919
+          ],
+          "photoModel": [
+            -61.23845463926473,
+            -5.441930270009568
+          ],
+          "photoPixel": [
+            1372,
+            1432
+          ],
+          "pin": "1",
+          "residualMm": 4.505941658816674e-07
+        },
+        {
+          "pcbModel": [
+            -73.255329,
+            -5.552235
+          ],
+          "pcbPixel": [
+            1363.0000053060646,
+            1271.9999956915865
+          ],
+          "photoModel": [
+            -73.25532868165924,
+            -5.552235403855374
+          ],
+          "photoPixel": [
+            1363,
+            1272
+          ],
+          "pin": "2",
+          "residualMm": 5.142373062307632e-07
+        }
+      ],
+      "ref": "R9.1",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
     }
   ],
   "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",

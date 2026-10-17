@@ -29,8 +29,8 @@ module controller_transistor_pose(p){translate([p[0],p[1],1.6])rotate([0,0,p[2]]
 controller_connector_tails=[for(i=[0:12],side=[-1,1])[-25+i*2.54,3+side*7]];
 // Photo projected resistor positions; three ROM/CPU-end placements adjusted
 // within the approximate photo registration to clear nominal package bodies.
-controller_legacy_resistors=[[-66.651, -5.884, -0.756, 10.08], [-66.609, -2.273, -0.739, 10.078], [-66.569, 1.172, -0.722, 10.077], [-66.526, 4.781, -0.699, 10.076], [-66.487, 8.226, -0.683, 10.074], [-66.444, 11.833, -0.66, 10.073], [-66.401, 15.439, -0.637, 10.072], [-66.364, 18.716, -0.626, 10.07], [-111.706, 14.889, 87.58, 11.581], [-108.544, 14.75, 87.586, 11.585], [-104.882, 14.589, 87.592, 11.59], [-86.028, 13.759, 87.631, 11.611], [-82.182, 13.59, 87.642, 11.616], [-78.334, 13.421, 87.647, 11.62], [68.794, -5.2, 84.875, 8.317], [80.052, -4, 1.38, 9.676], [128, -8.522, 86.55, 9.355]];
-// Placed R10 pull-ups inherit pad centres and lead spacing from native KiCad.
+controller_legacy_resistors=[[-111.706, 14.889, 87.58, 11.581], [-108.544, 14.75, 87.586, 11.585], [-104.882, 14.589, 87.592, 11.59], [-86.028, 13.759, 87.631, 11.611], [-82.182, 13.59, 87.642, 11.616], [-78.334, 13.421, 87.647, 11.62], [68.794, -5.2, 84.875, 8.317], [80.052, -4, 1.38, 9.676], [128, -8.522, 86.55, 9.355]];
+// Placed sensing resistors and output pull-ups inherit native pad geometry.
 controller_resistors=concat(controller_legacy_resistors,controller_pcb_resistors);
 function resistor_end(p,s)=[p[0]+s*p[3]/2*cos(p[2]),p[1]+s*p[3]/2*sin(p[2])];
 controller_legacy_resistor_tails=[for(p=controller_legacy_resistors,s=[-1,1])resistor_end(p,s)];
@@ -420,7 +420,7 @@ module keyboard_controller_resistors(){keyboard_controller_pose()
  for(p=controller_resistors)translate([p[0],p[1],3.2])rotate([0,0,p[2]])rotate([0,90,0])cylinder(d=2.3,h=5.2,center=true,$fn=24);
 }
 module keyboard_controller_resistor_bands(){keyboard_controller_pose()
- for(p=controller_resistors,s=[-1,1])translate([p[0],p[1],3.2])rotate([0,0,p[2]])translate([s*2.1,0,0])rotate([0,90,0])
+ for(p=controller_resistors,s=len(p)>5 && p[5]!=0 ? [p[5]] : [-1,1])translate([p[0],p[1],3.2])rotate([0,0,p[2]])translate([s*2.1,0,0])rotate([0,90,0])
   difference(){cylinder(d=2.34,h=.55,center=true,$fn=24);cylinder(d=2.28,h=.8,center=true,$fn=24);}
 }
 

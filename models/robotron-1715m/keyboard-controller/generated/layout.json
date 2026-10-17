@@ -3188,6 +3188,382 @@
       "type": "560"
     },
     {
+      "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/ROW7",
+          "pin": "1",
+          "position": [
+            -61.238455,
+            -5.44193
+          ],
+          "ref": "R9.1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/BASE7",
+          "pin": "2",
+          "position": [
+            -73.255329,
+            -5.552235
+          ],
+          "ref": "R9.1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -67.246892,
+        -5.497083
+      ],
+      "ref": "R9.1",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "3k9"
+    },
+    {
+      "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/ROW6",
+          "pin": "1",
+          "position": [
+            -61.199592,
+            -2.065711
+          ],
+          "ref": "R9.2",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/BASE6",
+          "pin": "2",
+          "position": [
+            -73.214038,
+            -2.106556
+          ],
+          "ref": "R9.2",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -67.206815,
+        -2.086134
+      ],
+      "ref": "R9.2",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "3k9"
+    },
+    {
+      "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/ROW0",
+          "pin": "1",
+          "position": [
+            -61.235864,
+            1.312999
+          ],
+          "ref": "R9.3",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/BASE0",
+          "pin": "2",
+          "position": [
+            -73.396727,
+            1.421624
+          ],
+          "ref": "R9.3",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -67.316295,
+        1.367312
+      ],
+      "ref": "R9.3",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "3k9"
+    },
+    {
+      "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/ROW5",
+          "pin": "1",
+          "position": [
+            -61.346393,
+            4.767473
+          ],
+          "ref": "R9.4",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/BASE5",
+          "pin": "2",
+          "position": [
+            -73.277857,
+            5.081764
+          ],
+          "ref": "R9.4",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -67.312125,
+        4.924618
+      ],
+      "ref": "R9.4",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "3k9"
+    },
+    {
+      "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/ROW1",
+          "pin": "1",
+          "position": [
+            -61.456888,
+            8.220908
+          ],
+          "ref": "R9.5",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/BASE1",
+          "pin": "2",
+          "position": [
+            -73.541558,
+            8.098402
+          ],
+          "ref": "R9.5",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -67.499223,
+        8.159655
+      ],
+      "ref": "R9.5",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "3k9"
+    },
+    {
+      "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/ROW2",
+          "pin": "1",
+          "position": [
+            -61.493108,
+            11.596691
+          ],
+          "ref": "R9.6",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/BASE2",
+          "pin": "2",
+          "position": [
+            -73.499374,
+            11.613456
+          ],
+          "ref": "R9.6",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -67.496241,
+        11.605073
+      ],
+      "ref": "R9.6",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "3k9"
+    },
+    {
+      "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/ROW3",
+          "pin": "1",
+          "position": [
+            -61.529317,
+            14.971528
+          ],
+          "ref": "R9.7",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/BASE3",
+          "pin": "2",
+          "position": [
+            -73.605251,
+            15.280498
+          ],
+          "ref": "R9.7",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -67.567284,
+        15.126013
+      ],
+      "ref": "R9.7",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "3k9"
+    },
+    {
+      "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/ROW4",
+          "pin": "1",
+          "position": [
+            -61.713112,
+            18.571732
+          ],
+          "ref": "R9.8",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/BASE4",
+          "pin": "2",
+          "position": [
+            -73.865268,
+            18.587004
+          ],
+          "ref": "R9.8",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -67.78919,
+        18.579368
+      ],
+      "ref": "R9.8",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "3k9"
+    },
+    {
       "evidence": "inherited-photo-estimate",
       "pads": [
         {
@@ -5984,382 +6360,6 @@
       "rotation": 0.0,
       "side": "top",
       "type": "47k"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/ROW7",
-          "pin": "1",
-          "position": [
-            -82.0,
-            -125.0
-          ],
-          "ref": "R9.1",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/BASE7",
-          "pin": "2",
-          "position": [
-            -79.46,
-            -125.0
-          ],
-          "ref": "R9.1",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -82.0,
-        -125.0
-      ],
-      "ref": "R9.1",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "3k9"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/ROW6",
-          "pin": "1",
-          "position": [
-            -58.0,
-            -125.0
-          ],
-          "ref": "R9.2",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/BASE6",
-          "pin": "2",
-          "position": [
-            -55.46,
-            -125.0
-          ],
-          "ref": "R9.2",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -58.0,
-        -125.0
-      ],
-      "ref": "R9.2",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "3k9"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/ROW0",
-          "pin": "1",
-          "position": [
-            -34.0,
-            -125.0
-          ],
-          "ref": "R9.3",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/BASE0",
-          "pin": "2",
-          "position": [
-            -31.46,
-            -125.0
-          ],
-          "ref": "R9.3",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -34.0,
-        -125.0
-      ],
-      "ref": "R9.3",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "3k9"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/ROW5",
-          "pin": "1",
-          "position": [
-            -10.0,
-            -125.0
-          ],
-          "ref": "R9.4",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/BASE5",
-          "pin": "2",
-          "position": [
-            -7.46,
-            -125.0
-          ],
-          "ref": "R9.4",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -10.0,
-        -125.0
-      ],
-      "ref": "R9.4",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "3k9"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/ROW1",
-          "pin": "1",
-          "position": [
-            14.0,
-            -125.0
-          ],
-          "ref": "R9.5",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/BASE1",
-          "pin": "2",
-          "position": [
-            16.54,
-            -125.0
-          ],
-          "ref": "R9.5",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        14.0,
-        -125.0
-      ],
-      "ref": "R9.5",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "3k9"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/ROW2",
-          "pin": "1",
-          "position": [
-            38.0,
-            -125.0
-          ],
-          "ref": "R9.6",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/BASE2",
-          "pin": "2",
-          "position": [
-            40.54,
-            -125.0
-          ],
-          "ref": "R9.6",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        38.0,
-        -125.0
-      ],
-      "ref": "R9.6",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "3k9"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/ROW3",
-          "pin": "1",
-          "position": [
-            62.0,
-            -125.0
-          ],
-          "ref": "R9.7",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/BASE3",
-          "pin": "2",
-          "position": [
-            64.54,
-            -125.0
-          ],
-          "ref": "R9.7",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        62.0,
-        -125.0
-      ],
-      "ref": "R9.7",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "3k9"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/ROW4",
-          "pin": "1",
-          "position": [
-            86.0,
-            -125.0
-          ],
-          "ref": "R9.8",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/BASE4",
-          "pin": "2",
-          "position": [
-            88.54,
-            -125.0
-          ],
-          "ref": "R9.8",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        86.0,
-        -125.0
-      ],
-      "ref": "R9.8",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "3k9"
     },
     {
       "evidence": "unplaced",

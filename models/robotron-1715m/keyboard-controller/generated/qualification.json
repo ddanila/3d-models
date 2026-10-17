@@ -31,7 +31,7 @@
     "Digital reference circuit; discrete pin numbering, specimen substitutions and analog timing remain unqualified; reset topology and bridge boundaries reviewed against Zander."
   ],
   "padNetMismatches": [],
-  "placed": 17,
-  "unplaced": 57,
+  "placed": 25,
+  "unplaced": 49,
   "unresolvedPhotoSegments": 294
 }

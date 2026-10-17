@@ -96,10 +96,24 @@ class ControllerExportTests(unittest.TestCase):
    self.assertGreater(pads['1']['position'][0],pads['2']['position'][0])
    self.assertNotIn(ref,[c['ref']for c in layout['unplaced']])
   report=json.loads((R/'generated/photo-registration.json').read_text())
-  self.assertEqual({r['ref']for r in report['discretes']},{'R10.1','R10.2'})
+  self.assertTrue({'R10.1','R10.2'} <= {r['ref']for r in report['discretes']})
   for row in report['discretes']:
    self.assertFalse(row['independentValidation']);self.assertLess(row['maxResidualMm'],.00001)
   self.assertIn('controller_pcb_resistors=',(R/'generated/controller.scad').read_text())
+ def test_sensing_bank_native_order_and_photo_finish(self):
+  layout=json.loads((R/'generated/layout.json').read_text());placed={c['ref']:c for c in layout['components']}
+  refs=['R9.'+str(i)for i in range(1,9)];rows=[7,6,0,5,1,2,3,4]
+  self.assertEqual([placed[r]['position'][1]for r in refs],sorted(placed[r]['position'][1]for r in refs))
+  for ref,row in zip(refs,rows):
+   pads={p['pin']:p for p in placed[ref]['pads']}
+   self.assertEqual(pads['1']['net'],'/ROW'+str(row));self.assertEqual(pads['2']['net'],'/BASE'+str(row))
+   self.assertGreater(pads['1']['position'][0],pads['2']['position'][0])
+  evidence=json.loads((R/'component-evidence.json').read_text())
+  self.assertEqual([evidence[r]['blueCollarPin']for r in refs],['2']*6+['1','2'])
+  text=(R/'generated/controller.scad').read_text();line=next(s for s in text.splitlines()if s.startswith('controller_pcb_resistors='))
+  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),10)
+  self.assertEqual(next(r[5]for r in exported if r[4]=='R9.7'),-1)
+  self.assertEqual(next(r[5]for r in exported if r[4]=='R9.8'),1)
  def test_partial_a1_route_keeps_endpoint_unresolved(self):
   from route_evidence import annotate
   layout=json.loads((R/'generated/layout.json').read_text())

@@ -282,3 +282,16 @@ existing body/lead model with those centres, angles and spacings; the two former
 independent resistor estimates were removed. The photo report and overlay include
 these lead endpoints separately from DIP fitting, with `independentValidation`
 false: direct placement is not a held-out alignment test.
+
+### Sensing resistor bank
+
+R9.1–R9.8 follow the factory drawing's order across the bank. Original top-photo
+lead endpoints now place all eight native footprints. Pad 1 is assigned to the
+matrix-facing lower lead and pad 2 to the transistor-facing upper lead; these
+row/base assignments are reference-derived, with hidden continuity unverified.
+The eight independent legacy body placements were removed. Native pad geometry
+now positions their bodies, leads, holes and lands through the same exporter as
+the output pull-ups. The photographed blue collar is at the upper end except on
+R9.7; the output pull-ups have it at the lower end. These ten native parts now
+show one collar at the observed end, not two symmetric blue bands. Collar position
+is appearance evidence, not polarity or a resistance measurement.
