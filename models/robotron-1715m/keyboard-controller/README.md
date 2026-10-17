@@ -244,3 +244,14 @@ same fit toward a tentative terminal near A6 misses by more than 2 mm.
 bounds flags; the overlay marks local check pins orange and candidates magenta.
 No copper or via was added by this audit, and board-wide registration remains
 unqualified. A local fit must not silently replace the failing global audit.
+
+### Factory placement drawing recovered
+
+The manufacturer service drawing set supplies the populated placement drawing
+63-330-4103-2 (PDF page 10, printed drawing 8) and schematic 56-330-4103-7 (PDF
+page 11, printed drawing 9). `evidence.json` pins the source hash and records
+BR1/BR2 photo location candidates and the differing A2 location labels. This is
+a new usable reference; the previously rejected Zander placement sheet remains
+unusable. Native bridge footprints are still unplaced: identifying a visible
+link does not establish which terminal maps to the source or CPU net. Factory
+label correspondence is provisional and does not rename KiCad or HDL references.

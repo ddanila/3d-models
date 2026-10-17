@@ -479,14 +479,14 @@
     "referenceType": "BRIDGE",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-terminal-order; physical numbering unresolved",
-    "note": "Closed bridge in Zander drawing; specimen state and placement unverified.",
+    "note": "Factory placement drawing supports a photo location candidate in evidence.json serviceInterfaces. Native footprint remains unplaced until source/CPU terminal order and pad correspondence are reviewed; no electrical continuity claim.",
     "placementAuthority": "controller.kicad_pcb"
   },
   "BR2": {
     "referenceType": "BRIDGE",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-terminal-order; physical numbering unresolved",
-    "note": "Closed bridge in Zander drawing; specimen state and placement unverified.",
+    "note": "Factory placement drawing supports a photo location candidate in evidence.json serviceInterfaces. Native footprint remains unplaced until source/CPU terminal order and pad correspondence are reviewed; no electrical continuity claim.",
     "placementAuthority": "controller.kicad_pcb"
   }
 }
