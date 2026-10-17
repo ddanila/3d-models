@@ -632,3 +632,17 @@ coordinates are not used to place the primary board. No copper was added.
 This places 24 resistors and leaves 30 schematic parts unplaced. Pad/drill and
 body dimensions remain nominal. Blue collars preserve the observed end, not
 polarity. The standalone `assembly-review.scad` inherits these changes.
+
+## BR2 trace review from comparison photographs (2026-10-17)
+
+`evidence.json` records `br2-terminal-order-review`: unnumbered top/underside
+endpoint observations and a partial board-edge trace in the comparison specimen.
+The path has not been followed continuously to A5:26 or V4.9:C. The absence of a
+visible underside branch at CPU pin 26 does not mean the pin is disconnected;
+its top-side attachment remains to be reviewed. Parallel traces and copper
+visible through the board must not be silently joined across photographs.
+
+These observations neither place BR2 nor assign a net, route or via. The museum
+shows the review for BR2, CPU and reset-transistor selections. Endpoint order is
+geometric, not electrical. Primary specimen correspondence and source/CPU side
+identification remain open; closed-bridge continuity alone cannot resolve them.
