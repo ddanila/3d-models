@@ -6,7 +6,7 @@ The reference circuit is Zander drawing 56-330-4103-7. The photographed specimen
 is marked 05-330-4102-8 1c and has an unidentified replacement EPROM. Do not treat
 the reference firmware or every reference component as identified specimen parts.
 
-`evidence.json` records source hashes, uses and unresolved claims. The published
+`evidence.json` records source hashes, uses and unresolved claims. The Zander
 placement PDF is an unfinished layout with components outside the board and an
 unrelated template title. It is not evidence for physical placement. The owner
 top and underside photos are the placement and copper evidence.
@@ -295,3 +295,23 @@ the output pull-ups. The photographed blue collar is at the upper end except on
 R9.7; the output pull-ups have it at the lower end. These ten native parts now
 show one collar at the observed end, not two symmetric blue bands. Collar position
 is appearance evidence, not polarity or a resistance measurement.
+
+### Reset resistor placement candidates
+
+Factory drawing 63-330-4103-2 (PDF page 10) identifies R3, R4.1, R5,
+R6.1, R4.2, R7 and R8 in that order along the reset edge. The top photograph
+shows all seven bodies and fourteen lead ends. `component-evidence.json` retains
+the original pixel pairs as `placementCandidate.photoEndpoints`, ordered left
+to right in the photograph, deliberately separate from numbered `photoPins`.
+The visible 22K, 10K, 1K0 and 47K markings agree with the corresponding reference
+values; neither these markings nor the blue collars establish measured resistance
+or electrical polarity. Unreadable markings are recorded as null.
+
+The legacy geometry contains only six resistor estimates in this area. Migrating
+this group must therefore replace those six estimates with seven native parts,
+not reuse their order as evidence. Before assigning pad numbers, review the
+physical supply/reset terminals: the reference circuit puts R3/R4.1/R5/R6.1 on
++5V and R4.2/R7/R8 on GND at one end. Adjacency is insufficient evidence that
+all seven terminals share a rail. Underside registration remains unqualified.
+These candidates leave the 49 unplaced components and electrical routing counts
+unchanged; they provide observations for the next placement review.

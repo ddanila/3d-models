@@ -456,49 +456,196 @@
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-numbered",
     "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "placementCandidate": {
+      "status": "identity-and-lead-locations-reviewed-terminal-order-unresolved",
+      "source": "robotron-factory-drawings",
+      "locator": "PDF page 10, drawing 63-330-4103-2",
+      "photoSource": "photo-top",
+      "pixelUncertainty": 8,
+      "photoEndpoints": [
+        [
+          1513,
+          757
+        ],
+        [
+          1677,
+          753
+        ]
+      ],
+      "endpointOrder": "left, right in the original upright photograph; not schematic pin numbers",
+      "blueCollarEndpoint": "left",
+      "legibleBodyMarking": "22K",
+      "limitation": "Factory drawing supports designator order. Top photo supports lead positions and collar end. Physical-to-schematic terminal assignment and continuity remain unverified; these candidates do not place or connect native pads."
+    }
   },
   "R4.1": {
     "referenceType": "220",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-numbered",
     "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "placementCandidate": {
+      "status": "identity-and-lead-locations-reviewed-terminal-order-unresolved",
+      "source": "robotron-factory-drawings",
+      "locator": "PDF page 10, drawing 63-330-4103-2",
+      "photoSource": "photo-top",
+      "pixelUncertainty": 8,
+      "photoEndpoints": [
+        [
+          1517,
+          803
+        ],
+        [
+          1680,
+          800
+        ]
+      ],
+      "endpointOrder": "left, right in the original upright photograph; not schematic pin numbers",
+      "blueCollarEndpoint": "right",
+      "legibleBodyMarking": null,
+      "limitation": "Factory drawing supports designator order. Top photo supports lead positions and collar end. Physical-to-schematic terminal assignment and continuity remain unverified; these candidates do not place or connect native pads."
+    }
   },
   "R5": {
     "referenceType": "10k",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-numbered",
     "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "placementCandidate": {
+      "status": "identity-and-lead-locations-reviewed-terminal-order-unresolved",
+      "source": "robotron-factory-drawings",
+      "locator": "PDF page 10, drawing 63-330-4103-2",
+      "photoSource": "photo-top",
+      "pixelUncertainty": 8,
+      "photoEndpoints": [
+        [
+          1523,
+          852
+        ],
+        [
+          1681,
+          847
+        ]
+      ],
+      "endpointOrder": "left, right in the original upright photograph; not schematic pin numbers",
+      "blueCollarEndpoint": "left",
+      "legibleBodyMarking": "10K",
+      "limitation": "Factory drawing supports designator order. Top photo supports lead positions and collar end. Physical-to-schematic terminal assignment and continuity remain unverified; these candidates do not place or connect native pads."
+    }
   },
   "R6.1": {
     "referenceType": "1k",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-numbered",
     "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "placementCandidate": {
+      "status": "identity-and-lead-locations-reviewed-terminal-order-unresolved",
+      "source": "robotron-factory-drawings",
+      "locator": "PDF page 10, drawing 63-330-4103-2",
+      "photoSource": "photo-top",
+      "pixelUncertainty": 8,
+      "photoEndpoints": [
+        [
+          1527,
+          1060
+        ],
+        [
+          1683,
+          1055
+        ]
+      ],
+      "endpointOrder": "left, right in the original upright photograph; not schematic pin numbers",
+      "blueCollarEndpoint": "left",
+      "legibleBodyMarking": "1K0",
+      "limitation": "Factory drawing supports designator order. Top photo supports lead positions and collar end. Physical-to-schematic terminal assignment and continuity remain unverified; these candidates do not place or connect native pads."
+    }
   },
   "R7": {
     "referenceType": "3k3",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-numbered",
     "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "placementCandidate": {
+      "status": "identity-and-lead-locations-reviewed-terminal-order-unresolved",
+      "source": "robotron-factory-drawings",
+      "locator": "PDF page 10, drawing 63-330-4103-2",
+      "photoSource": "photo-top",
+      "pixelUncertainty": 8,
+      "photoEndpoints": [
+        [
+          1529,
+          1154
+        ],
+        [
+          1687,
+          1151
+        ]
+      ],
+      "endpointOrder": "left, right in the original upright photograph; not schematic pin numbers",
+      "blueCollarEndpoint": "right",
+      "legibleBodyMarking": null,
+      "limitation": "Factory drawing supports designator order. Top photo supports lead positions and collar end. Physical-to-schematic terminal assignment and continuity remain unverified; these candidates do not place or connect native pads."
+    }
   },
   "R8": {
     "referenceType": "47k",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-numbered",
     "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "placementCandidate": {
+      "status": "identity-and-lead-locations-reviewed-terminal-order-unresolved",
+      "source": "robotron-factory-drawings",
+      "locator": "PDF page 10, drawing 63-330-4103-2",
+      "photoSource": "photo-top",
+      "pixelUncertainty": 8,
+      "photoEndpoints": [
+        [
+          1531,
+          1206
+        ],
+        [
+          1687,
+          1200
+        ]
+      ],
+      "endpointOrder": "left, right in the original upright photograph; not schematic pin numbers",
+      "blueCollarEndpoint": "right",
+      "legibleBodyMarking": "47K",
+      "limitation": "Factory drawing supports designator order. Top photo supports lead positions and collar end. Physical-to-schematic terminal assignment and continuity remain unverified; these candidates do not place or connect native pads."
+    }
   },
   "R4.2": {
     "referenceType": "220",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-numbered",
     "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "placementCandidate": {
+      "status": "identity-and-lead-locations-reviewed-terminal-order-unresolved",
+      "source": "robotron-factory-drawings",
+      "locator": "PDF page 10, drawing 63-330-4103-2",
+      "photoSource": "photo-top",
+      "pixelUncertainty": 8,
+      "photoEndpoints": [
+        [
+          1527,
+          1109
+        ],
+        [
+          1687,
+          1101
+        ]
+      ],
+      "endpointOrder": "left, right in the original upright photograph; not schematic pin numbers",
+      "blueCollarEndpoint": "left",
+      "legibleBodyMarking": null,
+      "limitation": "Factory drawing supports designator order. Top photo supports lead positions and collar end. Physical-to-schematic terminal assignment and continuity remain unverified; these candidates do not place or connect native pads."
+    }
   },
   "R4.3": {
     "referenceType": "220",
