@@ -1085,6 +1085,256 @@
       "source": "Photos-1-001 (5).zip: owner keyboard mounting and formed bezel close-ups",
       "original_sha256": "09c9e512de5663fbafe5b375838b2ac4669206edfdf5d693cd3aa2e90c5afb95",
       "sha256": "736f4e4966f2e354670441797adc22bd618a7a25f74b76ab2400354c8f2e32de"
+    },
+    {
+      "file": "PXL_20261017_080342577.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "da0bdd992d53121305943df1ee8250a188cfe95de6778e11b4cbb764803d6f59",
+      "sha256": "aa18874b9fba8db44216f8531ad9caab9125839a07838616bf1237f02a6b15fa",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080345436.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "10d4eea7b4ab3a509f49e375df90523a628b3bc1cc3ed2e2dca456e470db87b5",
+      "sha256": "50578d303632c7a6175cfe4aac7d110662d2b4543f1b74dbf4fc18bbc9152ee7",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080347973.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "88af34709a76a5fa0f3355ccd2cc7933e0b100ead465869f4adf01f7abb68cc1",
+      "sha256": "49fcb131dd12e00eb81fec610128390b9ef9d6c425031ed56967ecb6d18d67b1",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080351042.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "525d39529f046b6922aae687cacbcbeb3011f368344942c65a00ef1ba646c60b",
+      "sha256": "e41032fe1b669f0c5646e6d5f787cdadc43c840beddd171d29b3c6b050249730",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080358998.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "59573cf33e6cface7e3c62549d5307ae84f0c0dc7ca00ff5f609d2a0cf0a5363",
+      "sha256": "4cfa869e4d0d24bc3aaf06e751bda8a862d76fd85c4b36dd6a777b20ca0b42a0",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080401625.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "c9d09e5b980758dc64ffac6273d47200c0de1abfc2403268ad2d0e3c0d3bd8e4",
+      "sha256": "453ed0484dc3761b740089680619f202731d8e6547558e2e3df79084d2722144",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080404036.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "56cbb030d86c81fd3b4eb29d24110a277f02e81a0cf73a08ee41bbff222691d0",
+      "sha256": "831c6f9289a5b8504f7a436968a394606f34725e6a5e341a816f19564a5c8100",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080406304.jpg",
+      "width": 3072,
+      "height": 4080,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "2f118dc01cbdf68679eb470a670aa7d969452bd2033c74f7a0856188f4ecbfe8",
+      "sha256": "c899c7aba12b0f1085f5b71da44e524611aedf37e3e28567c602cb3b746e6fa2",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080411074.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "ab7e8cfbcdbaf99051a57366e87babbb27a99c448ab2f6cc751fd18bb20d345a",
+      "sha256": "364c56674f14a3361849dbe29b722a00145bb39c6afd45a048099906ceb960ae",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080415534.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "5a2be1cba4b65e52b02f9d173081875a0602540f223e6f77839d9e95cf5f08b5",
+      "sha256": "602404556009fe24083bc919b7d495c4876b0e4d8a7546d70a6f9b71ea6f2f22",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080425658.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "a4c078c1b0b9f79331fba8fa92317b837224b6caa43f87d11f82d2ad65dda42c",
+      "sha256": "b29b18514cb9106957612003977a77b438d983614bc84c49864593de51add1cf",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080429077.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "04242fa1a644e4c6270dc06ea3dd3246f519751d0bf3b6da4ae7b1a4d68ca159",
+      "sha256": "e8ece4b1f9686881f5447617c32616400c81c37a5461e1756bd691313a1d29b3",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080431329.MP.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "f267922723c73730bde0e2390ef66defbe660d2e3790691168b908a639b01f06",
+      "sha256": "54d3cb6e3f5e2df6f53f06f78f1a45ca28d848315c96c0d4150416434db28536",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080432863.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "4c41a7e89a46894596b35ce0e6046475c7d40201328cbc5f952f40f5f50e410a",
+      "sha256": "ebe0ff33b2d11770d6948d10dcf84f8a3a5416a8d12d41d337bbe0d05a704a0c",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080434345.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "dc0387079ed3492c36b96125c6a95ddeb75f496d3148b9822c521bf5c7e0404d",
+      "sha256": "8fb3cb9414003e6f1c260c1e893a484c6ee52ce3e8179cbfc0def01acc628006",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080436438.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "c84407413814cb88cce02c7cebda6eed462edda9552d5f659e72d5584fc9a975",
+      "sha256": "d3d6ee29e20d58e21156c561b141148f88b2e7b252162756b94c253f599618bb",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080438171.MP.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "4996483eba47c9aec51cc7198cc49531d674dcf6c55e0e2333cf34db27fc0f00",
+      "sha256": "d85723854530119266bdd1cc70cf4955327aabe9c10b8a528c51c14dab072c2f",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080443226.MP.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "ededa56fb54f299cd591031d07b68d3550c4ca618a3b6bc4f561a707139beaed",
+      "sha256": "c4cdfd7f8d2e9ca052b777d7d805b3ecb5cf7c31e06dee8f38ada0dd03b55166",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080444909.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "b9d19490f9dff37546a783547c249ebc82071cfc7b13f4fb5f4e423a357639c0",
+      "sha256": "8d7043ab28cb3a59db6bbc1a188a52d53012ba3928a8c4fd5921c50e8b99ce63",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080450163.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "611aa504c5f033a743443b10e43e3ce5c0162f21d1ac9564c7b01ed693ffaf1a",
+      "sha256": "98d1133ba1c314ff7fbae3782d979e1ada17062db9e6c3f76672f7a2e3c00bdd",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080502586.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "1bc3cfd134f2187ff7a1cde5f9c43f49fd33a78230ca0e2e22fa1771ccfb3f43",
+      "sha256": "fcbc9854efa8de2b1f7bd828d9fc3928f6d7f95ff95dd7f56daafae87e704acf",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080511382.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "1267a376b86c594d3f2c61008cbbe2f2199179633e444939e685743c9cb3dc01",
+      "sha256": "322b586dea2c9e37d470252f96c79f8d5510af592013fcc7be1f009aa365fd12",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080528765.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "650df0460247a8641b37056d613f96042845442de8e736aa2884153646f79f5a",
+      "sha256": "ce3746bd7dacfb08ffb48356448de095509e38c8406ffcc94e89ffc34064f6ed",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080531967.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "a343b4dd4eaf0de67d800e6cfbad8c520c1acdfc314eb9afb12e1d0dc29bc575",
+      "sha256": "72893ddcbebd510ea4be4c2fa195ca6f138e734e4c8962529fe3dbf159e079e3",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261017_080541857.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (13).zip",
+      "original_sha256": "150c7aad78ae8377f45147529050e8a3e2a4cd21e68d462ca2067c5e857954f3",
+      "sha256": "83089746f85cc44ca278db65cbdafbd66a0534c4a8bfd8286dbec908f0d80a04",
+      "specimenId": "comparison-20261017",
+      "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
     }
   ]
 }

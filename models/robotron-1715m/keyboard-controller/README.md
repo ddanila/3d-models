@@ -19,6 +19,37 @@ until connected to numbered pins and checked against the circuit.
 Digital behavior, electrical connectivity and historical geometry are separate
 qualification results. Unresolved routes and analog timing remain explicit.
 
+## Second specimen photographs
+
+The 25 photographs supplied on 2026-10-17 are explicitly a **different specimen**.
+Their hashes, image-specific uses and specimen ID are in `evidence.json`; the
+original ZIP hash and identity statement are in `comparisonSpecimens`. The photo
+inventory retains original and metadata-stripped hashes. JPEG pixels were checked
+identical during import. The comparison board carries the same visible
+`05-330-4102` / `-8 B 1c` markings, but its EPROM label reads **S642**. No dump is
+available, so that label neither identifies its contents nor qualifies the S600
+reference firmware for either specimen.
+
+| New photograph suffix | Useful observation | Remaining work |
+| --- | --- | --- |
+| 080342577, 080345436, 080347973, 080351042 | Four overlapping underside views expose solder joints and copper | Count pins independently, register each image, compare corresponding primary-board features |
+| 080429077, 080434345 | CPU and DS8282D region with visible round terminals and raised resistor leads | Revisit the withdrawn CLK terminal interpretation; no replacement net assignment yet |
+| 080431329.MP, 080502586 | Bridge at BR1's reference location, its attachments, adjacent resistor/capacitor and board marking | Trace both sides; construction appearance does not prove a factory opening procedure |
+| 080411074, 080415534 | Keyboard connector mating face and bent leads | Map numbered contacts to board pads |
+| 080406304, 080511382 | Cable entry, bracket and nearby components | Follow individual wires and filter connections |
+| 080528765, 080531967, 080541857 | Transistor package faces, three-lead arrangement and lead entry | Identify each reference and verify package terminal mapping before placement |
+
+All filenames begin `PXL_20261017_` and end `.jpg`. Sources with reference lists
+are search aids for the depicted region; they do not assert that every candidate
+reference has been identified. Original image coordinates must not be passed
+through the first specimen's photo transforms. Matching board marks are evidence
+of the family, not proof that all routing or fitted components are identical.
+
+This evidence reopens physical review. The withdrawn CLK assignment remains
+withdrawn pending pin/junction reconciliation; no native geometry or pin map is
+changed by the photo import. Existing 25 assigned sections, 229 airwires and 37
+unplaced schematic components remain the reconstruction's actual coverage.
+
 ## Native KiCad authorities
 
 Open `controller.kicad_pro` in KiCad 10. The schematic is now the editable
