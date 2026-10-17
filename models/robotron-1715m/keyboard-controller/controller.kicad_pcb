@@ -994,7 +994,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "139c3643-66e1-45d0-85b4-4c200d0ee6cd")
-		(at 284 175)
+		(at 99.098155 49.961222)
 		(property "Reference" "R10.1"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -1038,7 +1038,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory placement + photo-estimated lead ends; supply side photo-supported, signal net reference-derived; see component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1076,7 +1076,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at 5.762762 -0.107023)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1085,7 +1085,7 @@
 			(uuid "5860259c-4f4c-4bb8-8dd9-bb1ee9c91f04")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at -5.762761 0.107022)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -5424,7 +5424,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "7c596ef6-cd0f-4620-9c97-36d85075f62c")
-		(at 20 200)
+		(at 99.063354 46.322805)
 		(property "Reference" "R10.2"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -5468,7 +5468,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory placement + photo-estimated lead ends; supply side photo-supported, signal net reference-derived; see component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5506,7 +5506,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at 5.836734 -0.068903)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -5515,7 +5515,7 @@
 			(uuid "7f8b0c3a-4832-4950-9f9a-7b3ad31055db")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at -5.836734 0.068903)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")

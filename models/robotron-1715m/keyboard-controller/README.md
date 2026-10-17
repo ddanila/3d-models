@@ -266,3 +266,19 @@ landmarks are corrected together. Pin numbers, schematic connectivity, HDL and
 runtime behavior remain unchanged. `evidence.json` retains the former location
 labels and the independent factory gate review. This corrects the reconstruction;
 it does not establish a different historical circuit variant.
+
+### Output pull-up resistor placement
+
+R10.1 and R10.2 are placed from the original top-photo lead ends recorded in
+`component-evidence.json`, using the factory drawing for identity. Pad 1 is the
+shared supply-side lead (lower in the original photo); pad 2 is the signal-side
+lead. The underside photo shows the supply connection toward A1:14. The paths
+from the signal leads enter the obscured A1 region, so those nets remain
+reference-derived, not continuity measurements. The 560-ohm values, hole/pad
+sizes and body dimensions are reference/estimated values.
+
+The native pad pairs now generate `controller_pcb_resistors`. OpenSCAD reuses the
+existing body/lead model with those centres, angles and spacings; the two former
+independent resistor estimates were removed. The photo report and overlay include
+these lead endpoints separately from DIP fitting, with `independentValidation`
+false: direct placement is not a held-out alignment test.

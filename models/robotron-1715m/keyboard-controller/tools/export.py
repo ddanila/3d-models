@@ -86,6 +86,12 @@ def main():
  scad=['// Generated from controller.kicad_pcb. Model-local mm; no independent placement edits.', 'controller_pcb_outline='+json.dumps(outline)+';', 'controller_pcb_edges='+json.dumps(edges)+';', 'controller_pcb_holes='+json.dumps(holes)+';', 'controller_pcb_pads='+json.dumps([[*p['position'],*p['size'],p['net'],p['drill'][0]] for p in pads if p['pin']])+';']
  scad+=['controller_pcb_dip_pads='+json.dumps([[*p['position'],p['drill'][0],p['ref'],p['pin']]for p in pads if p['ref'].startswith('A')])+';']
  scad+=['controller_pcb_dips='+json.dumps([[*c['position'],len(c['pads']),15.24 if len(c['pads']) in (24,40) else 7.62,c['ref'],c['rotation']] for c in placed if c['ref'].startswith('A')])+';']
+ resistors=[]
+ for c in placed:
+  if c['ref'].startswith('R') and len(c['pads'])==2:
+   a,b=[p['position']for p in c['pads']];resistors.append([(a[0]+b[0])/2,(a[1]+b[1])/2,math.degrees(math.atan2(b[1]-a[1],b[0]-a[0])),math.dist(a,b),c['ref']])
+ scad+=['controller_pcb_resistors='+json.dumps(resistors)+';']
+ scad+=['controller_pcb_resistor_pads='+json.dumps([[*p['position'],p['drill'][0],*p['size']]for p in pads if p['ref'].startswith('R')])+';']
  for side in ['top','bottom']:
   scad+=['controller_pcb_'+side+'_art='+json.dumps([[a['points'],a['width']] for a in art if a['side']==side])+';', 'controller_pcb_'+side+'_copper='+json.dumps([[a['points'],a['width']] for a in routes if a['side']==side])+';']
  write('controller.scad','\n'.join(scad).replace('null','undef')+'\n')

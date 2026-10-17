@@ -88,6 +88,18 @@ class ControllerExportTests(unittest.TestCase):
   self.assertLess(placed['A2.2']['position'][1],0)
   self.assertGreater(placed['A2.3']['position'][0],0)
   self.assertGreater(placed['A2.3']['position'][1],0)
+ def test_native_output_pullups_replace_unplaced_estimates(self):
+  layout=json.loads((R/'generated/layout.json').read_text());placed={c['ref']:c for c in layout['components']}
+  for ref,signal in [('R10.1','/TA_TAKT'),('R10.2','/TA_DATEN')]:
+   pads={p['pin']:p for p in placed[ref]['pads']}
+   self.assertEqual(pads['1']['net'],'/+5V');self.assertEqual(pads['2']['net'],signal)
+   self.assertGreater(pads['1']['position'][0],pads['2']['position'][0])
+   self.assertNotIn(ref,[c['ref']for c in layout['unplaced']])
+  report=json.loads((R/'generated/photo-registration.json').read_text())
+  self.assertEqual({r['ref']for r in report['discretes']},{'R10.1','R10.2'})
+  for row in report['discretes']:
+   self.assertFalse(row['independentValidation']);self.assertLess(row['maxResidualMm'],.00001)
+  self.assertIn('controller_pcb_resistors=',(R/'generated/controller.scad').read_text())
  def test_partial_a1_route_keeps_endpoint_unresolved(self):
   from route_evidence import annotate
   layout=json.loads((R/'generated/layout.json').read_text())

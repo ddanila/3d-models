@@ -1201,6 +1201,106 @@
       "status": "photo-estimated"
     }
   ],
+  "discretes": [
+    {
+      "checkPins": [],
+      "independentValidation": false,
+      "maxResidualMm": 3.4023423024224726e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            -45.139083,
+            0.145801
+          ],
+          "pcbPixel": [
+            1458.0000045631346,
+            1644.999999375322
+          ],
+          "photoModel": [
+            -45.13908295657243,
+            0.14580066254870325
+          ],
+          "photoPixel": [
+            1458,
+            1645
+          ],
+          "pin": "1",
+          "residualMm": 3.4023423024224726e-07
+        },
+        {
+          "pcbModel": [
+            -56.664606,
+            -0.068244
+          ],
+          "pcbPixel": [
+            1447.9999978526694,
+            1492.0000031286204
+          ],
+          "photoModel": [
+            -56.664606233466195,
+            -0.06824383173382528
+          ],
+          "photoPixel": [
+            1448,
+            1492
+          ],
+          "pin": "2",
+          "residualMm": 2.877845897412243e-07
+        }
+      ],
+      "ref": "R10.1",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
+      "maxResidualMm": 5.2342814106825e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            -45.099912,
+            3.746098
+          ],
+          "pcbPixel": [
+            1507.000006779625,
+            1645.0000023682803
+          ],
+          "photoModel": [
+            -45.09991218386819,
+            3.7460975099290783
+          ],
+          "photoPixel": [
+            1507,
+            1645
+          ],
+          "pin": "1",
+          "residualMm": 5.2342814106825e-07
+        },
+        {
+          "pcbModel": [
+            -56.77338,
+            3.608292
+          ],
+          "pcbPixel": [
+            1498.000006709447,
+            1490.0000012186883
+          ],
+          "photoModel": [
+            -56.77338009720512,
+            3.60829151174382
+          ],
+          "photoPixel": [
+            1498,
+            1490
+          ],
+          "pin": "2",
+          "residualMm": 4.978382588571283e-07
+        }
+      ],
+      "ref": "R10.2",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    }
+  ],
   "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
   "schema": 1,
   "scope": "Manual top-photo lead/pad landmarks. Nominal board envelope, not dimensional metrology or electrical continuity. Lead feet and A8 socket obscure hole centres. Replacement ROM identity and discrete references remain unresolved.",

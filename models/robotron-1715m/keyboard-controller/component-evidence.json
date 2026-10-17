@@ -78,17 +78,41 @@
   },
   "R10.1": {
     "referenceType": "560",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
+    "pinEvidence": "Pin 1 assigned to shared supply-side lower lead; pin 2 signal assignment follows factory schematic. Hidden output continuity not verified.",
+    "note": "Nominal planar photo placement. Body shape, 0.85 mm hole and 1.7 mm pad diameters are estimates. Lower terminals share a visible supply trace toward A1:14 in the underside photo; upper signal paths are obscured by A1. Reference value 560 ohms is not a specimen measurement.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1458,
+        1645
+      ],
+      "2": [
+        1448,
+        1492
+      ]
+    },
+    "pixelUncertainty": 8
   },
   "R10.2": {
     "referenceType": "560",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
+    "pinEvidence": "Pin 1 assigned to shared supply-side lower lead; pin 2 signal assignment follows factory schematic. Hidden output continuity not verified.",
+    "note": "Nominal planar photo placement. Body shape, 0.85 mm hole and 1.7 mm pad diameters are estimates. Lower terminals share a visible supply trace toward A1:14 in the underside photo; upper signal paths are obscured by A1. Reference value 560 ohms is not a specimen measurement.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1507,
+        1645
+      ],
+      "2": [
+        1498,
+        1490
+      ]
+    },
+    "pixelUncertainty": 8
   },
   "R10.3": {
     "referenceType": "560",

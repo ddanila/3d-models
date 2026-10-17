@@ -4,7 +4,7 @@
 module keyboard_controller_pose() {
     translate([keyboard_controller_x,keyboard_y+keyboard_controller_y,keyboard_controller_z]) children();
 }
-// Native PCB owns DIP placement, pads, outline and digitized controller artwork.
+// Native PCB owns DIP and placed resistor geometry, pads, outline and artwork.
 // Unplaced/discrete reconstruction remains explicitly photo-estimated below.
 include <keyboard-controller/generated/controller.scad>
 function controller_dip(ref)=[for(p=controller_pcb_dips)if(p[4]==ref)p][0];
@@ -29,17 +29,20 @@ module controller_transistor_pose(p){translate([p[0],p[1],1.6])rotate([0,0,p[2]]
 controller_connector_tails=[for(i=[0:12],side=[-1,1])[-25+i*2.54,3+side*7]];
 // Photo projected resistor positions; three ROM/CPU-end placements adjusted
 // within the approximate photo registration to clear nominal package bodies.
-controller_resistors=[[-66.651, -5.884, -0.756, 10.08], [-66.609, -2.273, -0.739, 10.078], [-66.569, 1.172, -0.722, 10.077], [-66.526, 4.781, -0.699, 10.076], [-66.487, 8.226, -0.683, 10.074], [-66.444, 11.833, -0.66, 10.073], [-66.401, 15.439, -0.637, 10.072], [-66.364, 18.716, -0.626, 10.07], [-111.706, 14.889, 87.58, 11.581], [-108.544, 14.75, 87.586, 11.585], [-104.882, 14.589, 87.592, 11.59], [-86.028, 13.759, 87.631, 11.611], [-82.182, 13.59, 87.642, 11.616], [-78.334, 13.421, 87.647, 11.62], [-49.675, -0.001, 0.156, 10.28], [-49.636, 3.615, 0.271, 9.941], [68.794, -5.2, 84.875, 8.317], [80.052, -4, 1.38, 9.676], [128, -8.522, 86.55, 9.355]];
+controller_legacy_resistors=[[-66.651, -5.884, -0.756, 10.08], [-66.609, -2.273, -0.739, 10.078], [-66.569, 1.172, -0.722, 10.077], [-66.526, 4.781, -0.699, 10.076], [-66.487, 8.226, -0.683, 10.074], [-66.444, 11.833, -0.66, 10.073], [-66.401, 15.439, -0.637, 10.072], [-66.364, 18.716, -0.626, 10.07], [-111.706, 14.889, 87.58, 11.581], [-108.544, 14.75, 87.586, 11.585], [-104.882, 14.589, 87.592, 11.59], [-86.028, 13.759, 87.631, 11.611], [-82.182, 13.59, 87.642, 11.616], [-78.334, 13.421, 87.647, 11.62], [68.794, -5.2, 84.875, 8.317], [80.052, -4, 1.38, 9.676], [128, -8.522, 86.55, 9.355]];
+// Placed R10 pull-ups inherit pad centres and lead spacing from native KiCad.
+controller_resistors=concat(controller_legacy_resistors,controller_pcb_resistors);
 function resistor_end(p,s)=[p[0]+s*p[3]/2*cos(p[2]),p[1]+s*p[3]/2*sin(p[2])];
-controller_resistor_tails=[for(p=controller_resistors,s=[-1,1])resistor_end(p,s)];
+controller_legacy_resistor_tails=[for(p=controller_legacy_resistors,s=[-1,1])resistor_end(p,s)];
+controller_resistor_tails=concat(controller_legacy_resistor_tails,[for(p=controller_pcb_resistor_pads)[p[0],p[1]]]);
 // Paired end holes in detached photo 123622947; installed retainers are separate.
 controller_end_holes=[for(x=[-133,133],y=[10,17.5])[x,y]];
 module keyboard_controller_board(){keyboard_controller_pose()difference(){
  linear_extrude(1.6)polygon(controller_pcb_outline);
  for(p=controller_end_holes)translate(concat(p,[-1]))cylinder(d=3.2,h=4,$fn=24);
- for(p=concat(controller_connector_tails,controller_resistor_tails))translate([p[0],p[1],-1])cylinder(d=.85,h=4,$fn=16);
+ for(p=concat(controller_connector_tails,controller_legacy_resistor_tails))translate([p[0],p[1],-1])cylinder(d=.85,h=4,$fn=16);
  for(p=controller_transistors)controller_transistor_pose(p)for(x=[-1.27,0,1.27])translate([x,0,-2])cylinder(d=.85,h=4,$fn=12);
- for(p=controller_pcb_dip_pads)translate([p[0],p[1],-1])cylinder(d=p[2],h=4,$fn=16);
+ for(p=concat(controller_pcb_dip_pads,controller_pcb_resistor_pads))translate([p[0],p[1],-1])cylinder(d=p[2],h=4,$fn=16);
 }}
 module keyboard_controller_chips(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_body(p);
@@ -138,7 +141,8 @@ module keyboard_controller_traces(){keyboard_controller_pose(){
  for(a=controller_pcb_top_copper)translate([0,0,1.62])board_trace(a[0],a[1],.08);
  for(a=controller_pcb_bottom_copper)translate([0,0,-.10])board_trace(a[0],a[1],.10);
  for(p=controller_pcb_dip_pads)translate([p[0],p[1],1.62])difference(){cylinder(d=1.7,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
- for(p=controller_resistor_tails)translate([p[0],p[1],1.62])difference(){cylinder(d=1.9,h=.1,$fn=16);cylinder(d=.85,h=.2,$fn=12);}
+ for(p=controller_legacy_resistor_tails)translate([p[0],p[1],1.62])difference(){cylinder(d=1.9,h=.1,$fn=16);cylinder(d=.85,h=.2,$fn=12);}
+ for(p=controller_pcb_resistor_pads)translate([p[0],p[1],1.62])difference(){scale([p[3],p[4],1])cylinder(d=1,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
  // Staggered transistor-stage routes and plated eyes (no invented values).
  for(p=controller_transistors)controller_transistor_pose(p)
   for(x=[-1.27,0,1.27])translate([x,0,-.1])difference(){cylinder(d=1.2,h=.1,$fn=20);cylinder(d=.85,h=.2,$fn=16);}
@@ -374,7 +378,7 @@ module keyboard_controller_solder(){keyboard_controller_pose(){
  for(p=controller_pcb_dip_pads)controller_solder_eye(p[0],p[1],p[2]);
  for(p=controller_transistors)translate([p[0],p[1],0])rotate([0,0,p[2]])
   for(x=[-1.27,0,1.27])controller_solder_eye(x,0,.85,1.2);
- for(p=concat(controller_connector_tails,controller_resistor_tails))controller_solder_eye(p[0],p[1],.85,1.7);
+ for(p=concat(controller_connector_tails,controller_legacy_resistor_tails))controller_solder_eye(p[0],p[1],.85,1.7);
  for(p=controller_end_holes)translate([p[0],p[1],-.15])difference(){cylinder(d=3.8,h=.15,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=16);}
 }}
 
