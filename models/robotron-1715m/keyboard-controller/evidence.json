@@ -387,6 +387,22 @@
         "V4.9"
       ],
       "use": "Transistor bank and lead entry views; individual reference mapping not established. Separate specimen; comparison evidence only, not primary-specimen placement or continuity."
+    },
+    {
+      "id": "sc236-package-datasheet",
+      "url": "https://hjs.lima-city.de/DDR/index.php?pdf=SC236",
+      "sha256": "c5c52b6df912f167f14b70feb2963a08ce9fc933b3edad8bff8b4073eb43bb94",
+      "title": "SC236 / SC237 / SC238 / SC239",
+      "use": "PDF page 1 package drawing, L3/12 (TGL 11811). Reference terminal arrangement and nominal dimensions; not specimen placement or measured continuity. PDF not redistributed.",
+      "credit": "Scanned bilingual device data sheet, printed pages 13\u201314 on PDF page 1; issuing publication not identified in excerpt."
+    },
+    {
+      "id": "sc307-package-datasheet",
+      "url": "https://hjs.lima-city.de/DDR/index.php?pdf=SC307",
+      "sha256": "93414938485c6273f58339e867e557b2ebb333a6f02a57d1a8ef305246be694a",
+      "title": "Si-pnp-Transistoren SC307 bis SC309",
+      "use": "PDF page 1 package drawing, L3/12 (TGL 11811). Reference terminal arrangement and nominal dimensions; not specimen placement or measured continuity. PDF not redistributed.",
+      "credit": "Manufacturer communication from VEB Mikroelektronik Anna Seghers Neuhaus, identified on PDF page 1."
     }
   ],
   "specimen": {
@@ -1112,6 +1128,64 @@
         "comparison-photo-080531967",
         "comparison-photo-080541857"
       ]
+    }
+  ],
+  "packageReferences": [
+    {
+      "id": "sc308-l3-12",
+      "types": [
+        "SC308C"
+      ],
+      "source": "sc307-package-datasheet",
+      "locator": "PDF page 1, Bild 1, end-view drawing",
+      "case": "L3/12, TGL 11811",
+      "polarity": "PNP",
+      "drawingView": "End view with the flat edge on the left and the rounded corners on the right; read the terminals from top to bottom. This is not an installed-board left-to-right pin order.",
+      "terminalOrderInDrawing": [
+        "B",
+        "E",
+        "C"
+      ],
+      "centreTerminal": "E",
+      "bodyDimensionsMm": {
+        "width": 4.2,
+        "height": 4.2,
+        "depth": 2.5
+      },
+      "outerLeadSpanMm": 2.5,
+      "leadSectionMm": [
+        0.4,
+        0.3
+      ],
+      "scope": "Reference package convention. Comparison photos show 308/C markings consistent with this family; primary specimen markings, individual body orientation, lead bends and PCB pad correspondence remain unqualified."
+    },
+    {
+      "id": "sc236-l3-12",
+      "types": [
+        "SC236D"
+      ],
+      "source": "sc236-package-datasheet",
+      "locator": "PDF page 1, dimensions drawing",
+      "case": "L3/12, TGL 11811",
+      "polarity": "NPN",
+      "drawingView": "Lead labels in the side drawing read E, B, C from top to bottom; the adjacent end view shows a flat left edge and rounded right corners. This is not an installed-board left-to-right pin order.",
+      "terminalOrderInDrawing": [
+        "E",
+        "B",
+        "C"
+      ],
+      "centreTerminal": "B",
+      "bodyDimensionsMm": {
+        "width": 4.2,
+        "height": 4.2,
+        "depth": 2.5
+      },
+      "outerLeadSpanMm": 2.5,
+      "leadSectionMm": [
+        0.4,
+        0.3
+      ],
+      "scope": "Reference package convention. Comparison photos show C36/D markings consistent with this family; primary specimen markings, individual body orientation, lead bends and PCB pad correspondence remain unqualified."
     }
   ]
 }

@@ -539,79 +539,90 @@
   "V4.3": {
     "referenceType": "SC308C",
     "placementEvidence": "unplaced",
-    "pinEvidence": "connector-label-or-semantic-terminal",
+    "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "packageReference": "sc308-l3-12"
   },
   "V4.4": {
     "referenceType": "SC308C",
     "placementEvidence": "unplaced",
-    "pinEvidence": "connector-label-or-semantic-terminal",
+    "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "packageReference": "sc308-l3-12"
   },
   "V4.8": {
     "referenceType": "SC308C",
     "placementEvidence": "unplaced",
-    "pinEvidence": "connector-label-or-semantic-terminal",
+    "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "packageReference": "sc308-l3-12"
   },
   "V4.7": {
     "referenceType": "SC308C",
     "placementEvidence": "unplaced",
-    "pinEvidence": "connector-label-or-semantic-terminal",
+    "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "packageReference": "sc308-l3-12"
   },
   "V4.1": {
     "referenceType": "SC308C",
     "placementEvidence": "unplaced",
-    "pinEvidence": "connector-label-or-semantic-terminal",
+    "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "packageReference": "sc308-l3-12"
   },
   "V4.6": {
     "referenceType": "SC308C",
     "placementEvidence": "unplaced",
-    "pinEvidence": "connector-label-or-semantic-terminal",
+    "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "packageReference": "sc308-l3-12"
   },
   "V4.2": {
     "referenceType": "SC308C",
     "placementEvidence": "unplaced",
-    "pinEvidence": "connector-label-or-semantic-terminal",
+    "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "packageReference": "sc308-l3-12"
   },
   "V4.5": {
     "referenceType": "SC308C",
     "placementEvidence": "unplaced",
-    "pinEvidence": "connector-label-or-semantic-terminal",
+    "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Semantic E/B/C pins only; physical package pin numbering unresolved",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "packageReference": "sc308-l3-12"
   },
   "V3.1": {
     "referenceType": "SC236D",
     "placementEvidence": "unplaced",
-    "pinEvidence": "connector-label-or-semantic-terminal",
+    "pinEvidence": "Reference L3/12 drawing: E-B-C with centre base for SC236. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "packageReference": "sc236-l3-12"
   },
   "V3.2": {
     "referenceType": "SC236D",
     "placementEvidence": "unplaced",
-    "pinEvidence": "connector-label-or-semantic-terminal",
+    "pinEvidence": "Reference L3/12 drawing: E-B-C with centre base for SC236. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "packageReference": "sc236-l3-12"
   },
   "V4.9": {
     "referenceType": "SC308C",
     "placementEvidence": "unplaced",
-    "pinEvidence": "connector-label-or-semantic-terminal",
+    "pinEvidence": "Reference L3/12 drawing: B-E-C with centre emitter for SC308. Installed-board outer-terminal orientation and pad mapping remain unresolved; do not substitute a generic TO-92 pin order.",
     "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "packageReference": "sc308-l3-12"
   },
   "R3": {
     "referenceType": "22k",

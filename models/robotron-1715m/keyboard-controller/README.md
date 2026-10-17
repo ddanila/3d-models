@@ -659,3 +659,26 @@ crossings of leads and adjacent tracks do not establish soldered connections.
 Both parts remain unplaced until board-entry points and supply/signal terminal
 order can be resolved. The museum candidate view exposes the uncertainty without
 creating native pad highlights. No geometry or electrical connectivity changes.
+
+## Transistor package reference (2026-10-17)
+
+Two scanned device sheets now supply distinct L3/12 reference conventions:
+[SC307–SC309 manufacturer communication](https://hjs.lima-city.de/DDR/index.php?pdf=SC307)
+shows **B–E–C**, with a centre emitter; the
+[SC236–SC239 sheet](https://hjs.lima-city.de/DDR/index.php?pdf=SC236)
+shows **E–B–C**, with a centre base. These are drawing orders, not a board-view
+left-to-right order. Both give a nominal 4.2 × 4.2 × 2.5 mm body and 2.5 mm
+outer-lead span. Source hashes, views and reference dimensions are recorded in
+`evidence.json.packageReferences`. The PDFs are linked, not redistributed.
+
+Comparison side photos 080528765, 080531967 and 080541857 visibly show 308/C and
+C36/D family markings. They support reference-family consistency on that
+specimen, not identification of every primary device. V4.1–V4.9 reference the
+SC308 convention; V3.1/V3.2 reference SC236. All remain physically unplaced.
+
+The current museum transistor bodies still reuse generic TO-92 visual geometry.
+That is a known approximation, not a qualified L3/12 body or physical pin map.
+The next geometry migration must use the documented package shape, review every
+body orientation and lead entry, and keep board stand-off separate from the
+untrimmed lead length in the drawing. Reference package dimensions alone do not
+qualify specimen pad positions or lead continuity.
