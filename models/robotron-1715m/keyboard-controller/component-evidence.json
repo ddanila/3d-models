@@ -205,15 +205,61 @@
     "referenceType": "1k",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "note": "Factory placement identifies R6.4 nearer A4. Primary-photo visible lead endpoints are unnumbered candidates; raised bends obscure the board-entry locations. Native footprint remains unplaced.",
+    "placementAuthority": "controller.kicad_pcb",
+    "placementCandidate": {
+      "status": "factory-identity-visible-lead-ends-hole-centres-and-terminal-order-unresolved",
+      "source": "robotron-factory-drawings",
+      "locator": "PDF page 10, drawing 63-330-4103-2",
+      "photoSource": "photo-top",
+      "pixelUncertainty": 12,
+      "photoEndpoints": [
+        [
+          1328,
+          3170
+        ],
+        [
+          1485,
+          3165
+        ]
+      ],
+      "endpointOrder": "left, right visible lead ends in the primary top photo; not schematic pin numbers or qualified hole centres",
+      "blueCollarEndpoint": "right",
+      "limitation": "Raised lead bends overlap apparent pads and nearby tracks. Comparison close-up 080434345 corroborates bent construction and different body-to-hole offsets, but comes from another specimen. Factory identities do not resolve terminal order. No native placement or electrical continuity claim.",
+      "supportingSources": [
+        "comparison-photo-080434345"
+      ]
+    }
   },
   "R6.5": {
     "referenceType": "1k",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "note": "Factory placement identifies R6.5 nearer A6. Primary-photo visible lead endpoints are unnumbered candidates; raised bends obscure the board-entry locations. Native footprint remains unplaced.",
+    "placementAuthority": "controller.kicad_pcb",
+    "placementCandidate": {
+      "status": "factory-identity-visible-lead-ends-hole-centres-and-terminal-order-unresolved",
+      "source": "robotron-factory-drawings",
+      "locator": "PDF page 10, drawing 63-330-4103-2",
+      "photoSource": "photo-top",
+      "pixelUncertainty": 12,
+      "photoEndpoints": [
+        [
+          1335,
+          3217
+        ],
+        [
+          1485,
+          3210
+        ]
+      ],
+      "endpointOrder": "left, right visible lead ends in the primary top photo; not schematic pin numbers or qualified hole centres",
+      "blueCollarEndpoint": "left",
+      "limitation": "Raised lead bends overlap apparent pads and nearby tracks. Comparison close-up 080434345 corroborates bent construction and different body-to-hole offsets, but comes from another specimen. Factory identities do not resolve terminal order. No native placement or electrical continuity claim.",
+      "supportingSources": [
+        "comparison-photo-080434345"
+      ]
+    }
   },
   "R6.6": {
     "referenceType": "1k",

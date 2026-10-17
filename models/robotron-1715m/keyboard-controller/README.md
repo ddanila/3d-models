@@ -646,3 +646,16 @@ These observations neither place BR2 nor assign a net, route or via. The museum
 shows the review for BR2, CPU and reset-transistor selections. Endpoint order is
 geometric, not electrical. Primary specimen correspondence and source/CPU side
 identification remain open; closed-bridge continuity alone cannot resolve them.
+
+## CPU pull-up lead observations (2026-10-17)
+
+Factory placement identifies R6.4 nearer A4 and R6.5 nearer A6. The primary top
+photo now records their visible lead ends as unnumbered candidates, with the
+observed blue-collar end. These points are not qualified PCB holes. Comparison
+photo 080434345 shows raised bends and body-to-hole offsets clearly; it is a
+different specimen and supplies no primary-board coordinates. The apparent
+crossings of leads and adjacent tracks do not establish soldered connections.
+
+Both parts remain unplaced until board-entry points and supply/signal terminal
+order can be resolved. The museum candidate view exposes the uncertainty without
+creating native pad highlights. No geometry or electrical connectivity changes.
