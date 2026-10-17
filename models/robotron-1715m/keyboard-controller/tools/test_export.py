@@ -22,8 +22,9 @@ class ControllerExportTests(unittest.TestCase):
   self.assertAlmostEqual(transform([1,1])[0],3);self.assertAlmostEqual(transform([1,1])[1],4)
   report=json.loads((R/'generated/photo-registration.json').read_text())
   for c in report['components']:
-   if c['ref']!='A4':self.assertLessEqual(c['maxResidualMm'],report['toleranceMm'],c['ref'])
-  self.assertFalse(report['withinPhotoTolerance']) # A4 still requires review.
+   self.assertLessEqual(c['maxResidualMm'],report['toleranceMm'],c['ref'])
+  self.assertTrue(report['withinPhotoTolerance'])
+  self.assertEqual(len(next(c for c in report['components']if c['ref']=='A4')['checkPins']),4)
  def test_fit_rejects_held_out_error_and_unknown_refs(self):
   from unittest.mock import patch
   evidence={'photoCorners':[[0,0],[2,0],[2,2],[0,2]],'modelCorners':[[0,0],[2,0],[2,2],[0,2]],'scope':'test','photo':'unused','maxResidualMm':1.25,'components':{'A1':{'pins':{'1':[0,0],'2':[1,0],'3':[0,1]},'checkPins':{'4':[1,4]}}}}

@@ -107,10 +107,11 @@ CC-BY-SA 3.0 attribution is retained there and it is not redistributed here.
 ## Photo landmark alignment and model migration
 
 `photo-landmarks.json` records raw image pixels for eight packages, including
-held-out lead landmarks on seven. `generated/photo-registration.json` reports
+held-out lead landmarks on all eight. `generated/photo-registration.json` reports
 residuals against the nominal board plane; the companion SVG overlays observed
-points (green) and PCB pads (red) on the original photo. Seven rigid fits pass the
-1.25 mm review tolerance. A4 does not, and its inherited placement is retained.
+points (green) and PCB pads (red) on the original photo. All eight rigid fits pass the
+1.25 mm review tolerance. A4 was corrected after re-reading the last leads and
+adding four held-out intermediate leads; its maximum residual is 0.554 mm.
 This loose photo tolerance does not establish fabrication dimensions or continuity.
 A8 and discrete lead numbering remain outside this qualification.
 

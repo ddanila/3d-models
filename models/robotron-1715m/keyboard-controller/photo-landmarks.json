@@ -164,24 +164,43 @@
     "A4": {
       "pins": {
         "1": [
-          1342,
-          2815
+          1341,
+          2817
         ],
         "10": [
-          1350,
-          3090
+          1354,
+          3104
         ],
         "11": [
           1450,
-          3080
+          3102
         ],
         "20": [
-          1438,
-          2808
+          1439,
+          2812
         ]
       },
       "orientationEvidence": "Visible notch or pin-one mark at cable-facing end; reference package pin order.",
-      "placementStatus": "photo-estimated"
+      "placementStatus": "photo-estimated",
+      "checkPins": {
+        "5": [
+          1349,
+          2944
+        ],
+        "16": [
+          1446,
+          2940
+        ],
+        "8": [
+          1353,
+          3040
+        ],
+        "13": [
+          1449,
+          3038
+        ]
+      },
+      "reviewNote": "2026-10-17: re-read all ten leads per side in the original photo. Previous final-lead landmarks at y3090/3080 were above the last leads. Added four held-out intermediate leads; centers remain photo estimates."
     },
     "A5": {
       "pins": {
