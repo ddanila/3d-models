@@ -829,7 +829,153 @@
           ],
           "observation": "The likely matching terminal has a narrow trace running between A4 leads 12 and 13 toward the package underside. A distinct neighbouring trace comes from lead 13. The package obscures the continuation. Terminal correspondence remains provisional; no through-board or hidden connection is asserted."
         },
-        "conclusion": "The sharper comparison photos weaken the prior apparent D6-conflict interpretation. They do not justify substituting a D6 route or restoring the primary CLK route without checking terminal correspondence and the primary image. Preserve the withdrawn geometry until that review is complete."
+        "conclusion": "The sharper comparison photos weaken the prior apparent D6-conflict interpretation. They do not justify substituting a D6 route or restoring the primary CLK route without checking terminal correspondence and the primary image. Preserve the withdrawn geometry until that review is complete.",
+        "correspondenceFit": {
+          "method": "tools/photo_registration.py homography and project; four CPU corner anchors, independent intermediate pin checks. Coordinates are original image pixels.",
+          "bottomSource": "comparison-photo-080342577",
+          "topSource": "comparison-photo-080429077",
+          "anchors": [
+            {
+              "pin": "1",
+              "bottomPixel": [
+                1433,
+                3693
+              ],
+              "topPixel": [
+                3433,
+                1113
+              ]
+            },
+            {
+              "pin": "20",
+              "bottomPixel": [
+                1473,
+                2080
+              ],
+              "topPixel": [
+                675,
+                1050
+              ]
+            },
+            {
+              "pin": "21",
+              "bottomPixel": [
+                1963,
+                2093
+              ],
+              "topPixel": [
+                608,
+                1947
+              ]
+            },
+            {
+              "pin": "40",
+              "bottomPixel": [
+                1940,
+                3693
+              ],
+              "topPixel": [
+                3417,
+                1983
+              ]
+            }
+          ],
+          "bottomToTop": [
+            -0.21884158527551018,
+            1.8556327790831095,
+            -2859.3579798512915,
+            1.732015879366304,
+            0.12873616437656188,
+            -1764.3568747175382,
+            -5.414509918723469e-05,
+            4.048409118599488e-05,
+            1
+          ],
+          "checks": [
+            {
+              "pin": "6",
+              "bottomPixel": [
+                1440,
+                3265
+              ],
+              "topPixel": [
+                2708,
+                1085
+              ],
+              "projectedTopPixel": [
+                2735.837018217642,
+                1090.928568811604
+              ],
+              "residualPixels": 28.461333619548558
+            },
+            {
+              "pin": "10",
+              "bottomPixel": [
+                1447,
+                2923
+              ],
+              "topPixel": [
+                2117,
+                1060
+              ],
+              "projectedTopPixel": [
+                2161.558532005791,
+                1075.172928293897
+              ],
+              "residualPixels": 47.07101579021704
+            },
+            {
+              "pin": "14",
+              "bottomPixel": [
+                1453,
+                2584
+              ],
+              "topPixel": [
+                1533,
+                1060
+              ],
+              "projectedTopPixel": [
+                1576.7231541673914,
+                1057.4872756949294
+              ],
+              "residualPixels": 43.79529648008753
+            },
+            {
+              "pin": "30",
+              "bottomPixel": [
+                1952,
+                2839
+              ],
+              "topPixel": [
+                1942,
+                1950
+              ],
+              "projectedTopPixel": [
+                1963.45628028264,
+                1963.8678629450988
+              ],
+              "residualPixels": 25.54779024164801
+            }
+          ],
+          "maxCheckResidualPixels": 47.07101579021704,
+          "terminal": {
+            "bottomPixel": [
+              1323,
+              2880
+            ],
+            "topCandidatePixel": [
+              2050,
+              900
+            ],
+            "projectedTopPixel": [
+              2100.8809447030817,
+              859.2291582062123
+            ],
+            "residualPixels": 65.20070608860091
+          },
+          "qualifiedForCopper": false,
+          "limitations": "CPU top lead feet and the package obscure true hole centres. The terminal is outside the CPU corner hull, so this is extrapolation. The fit supports further review of the candidate but does not establish a through-board connection or primary-specimen geometry. No physical dimensional tolerance is claimed."
+        }
       }
     }
   ],

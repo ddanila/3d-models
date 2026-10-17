@@ -53,6 +53,11 @@ separate from the neighbouring lead-13 trace. This weakens the earlier apparent
 D6-conflict interpretation. The coordinate record includes the pin-count basis,
 four CPU corner joints, both observed polylines and pixel uncertainty. The
 cross-side terminal match remains provisional; the hidden continuation is unknown.
+The direct CPU-corner fit and four independent intermediate-pin checks are also
+recorded there. The maximum check residual is 47.07 pixels; the proposed terminal
+is 65.20 pixels from its projection. The terminal lies outside the CPU anchor hull,
+and top lead feet obscure hole centres. This extrapolation is explicitly
+unqualified for copper assignment and does not supply measured dimensions.
 No primary-specimen CLK route is restored until correspondence is reconciled.
 
 The user confirms that the primary museum ROM was replaced and may locate the
