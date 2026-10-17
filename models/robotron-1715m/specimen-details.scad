@@ -375,6 +375,7 @@ module controller_solder_eye(x,y,hole=1.05,outer=2.1){translate([x,y,-.55])diffe
  translate([0,0,-.1])cylinder(d=hole,h=2.4,$fn=16);
 }}
 module keyboard_controller_solder(){keyboard_controller_pose(){
+ for(p=controller_pcb_resistor_pads)controller_solder_eye(p[0],p[1],p[2],min(p[3],p[4]));
  for(p=controller_pcb_dip_pads)controller_solder_eye(p[0],p[1],p[2]);
  for(p=controller_transistors)translate([p[0],p[1],0])rotate([0,0,p[2]])
   for(x=[-1.27,0,1.27])controller_solder_eye(x,0,.85,1.2);

@@ -455,3 +455,26 @@ It is a separate physical island on the same reference +5V net as the reset
 supply tree; net selection may highlight both without implying a traced join.
 Current totals: 20 native resistors, 39 unplaced components, 24 assigned copper
 sections (17 observed, 7 inferred), 230 airwires, one existing A1 dangling endpoint.
+
+### Native lead and solder export correction
+
+A review after the resistor migrations found two omissions: native resistor pads
+were missing from the underside solder generator, and the controller freshness
+guard omitted the separate lead, resistor-body and resistor-band meshes. Rebuilding
+the earlier nine-part set could therefore update the common source stamp while
+leaving these meshes stale. Existing geometry checks did not detect that gap.
+
+The solder generator now consumes every native resistor pad (currently 40), using
+its hole and pad dimensions. All twelve affected mesh consumers now carry
+individual `keyboardControllerMeshes` receipts binding mesh hashes to the three
+controller source hashes. A partial export updates receipts only for meshes it
+actually rebuilds; metadata validation requires every receipt to match current
+sources and mesh content. Regression tests cover omitted lead/body/band/solder
+meshes, mesh replacement, and missing legacy receipts.
+
+When controller geometry changes, rebuild all names in
+`tools/controller_mesh_contract.py:PARTS`, including `keyboard-controller-leads`,
+`keyboard-controller-resistors` and `keyboard-controller-resistor-bands`. The old
+common source stamp is retained for compatibility, but is no longer sufficient
+to qualify the mesh set. Geometry remains photo-estimated, not measured solder
+or lead dimensions.

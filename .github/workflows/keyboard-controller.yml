@@ -12,4 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_export.py
+      - run: python3 models/robotron-1715m/tools/test_controller_mesh_contract.py
       - run: python3 models/robotron-1715m/tools/check-metadata.py

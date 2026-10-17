@@ -260,10 +260,13 @@ for patch in patches:
     path=out/'textures'/f"{patch['name']}.jpg";crop.save(path,quality=92)
     patch['texture']=str(path.relative_to(out));patch['textureSha256']=hashlib.sha256(path.read_bytes()).hexdigest()
     patch['textureUv']=[[(u*w-left)/(right-left),(v*h-top)/(bottom-top)] for u,v in uv]
-# A partial export may not bless stale controller meshes with new source hashes.
-controller_parts={'keyboard-controller-'+n for n in ['board','chips','metal','ink','traces','solder','ceramic','rom-cover','rom-ink']}
+# Each native geometry consumer keeps its own source-bound export receipt.
+from controller_mesh_contract import PARTS as controller_parts, SOURCES as controller_sources, receipts
+previous=json.loads((out/'model.json').read_text()) if (out/'model.json').exists() else {}
+source_hashes={name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in controller_sources}
+manifest['keyboardControllerMeshes']=receipts(previous.get('keyboardControllerMeshes',{}),manifest['parts'],args.parts,source_hashes)
 if args.parts is None or controller_parts.issubset(set(args.parts)):
-    manifest['keyboardControllerSource']={name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in ['specimen-details.scad','keyboard-controller/generated/controller.scad','controller-package-data.scad']}
-elif (out/'model.json').exists():
-    manifest['keyboardControllerSource']=json.loads((out/'model.json').read_text()).get('keyboardControllerSource',{})
+    manifest['keyboardControllerSource']=source_hashes
+else:
+    manifest['keyboardControllerSource']=previous.get('keyboardControllerSource',{})
 (out/'model.json').write_text(json.dumps(manifest,indent=2)+'\n')

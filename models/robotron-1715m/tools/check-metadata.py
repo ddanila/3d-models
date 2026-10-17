@@ -5,6 +5,8 @@ from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 def read(p):return json.loads((root/p).read_text())
 pcb=read('pcb-components.json');model=read('browser/model.json')
+from controller_mesh_contract import SOURCES, validate
+validate(model,{name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in SOURCES})
 for name in ['specimen-details.scad','keyboard-controller/generated/controller.scad','controller-package-data.scad']:
  assert model.get('keyboardControllerSource',{}).get(name)==hashlib.sha256((root/name).read_bytes()).hexdigest(),'stale controller browser meshes: '+name
 counts={'packages':len(pcb['instances']),'leadHoles':len(pcb['footprints'])}
