@@ -493,31 +493,23 @@
   },
   "R5": {
     "referenceType": "10k",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
+    "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
+    "pinEvidence": "Pin 1 is the right lead, joined by visible top copper to the R3/R4.1 supply strip. Pin 2 RESET_BIAS assignment follows the reference schematic; specimen continuity is not measured.",
+    "note": "The 10K body marking agrees with the reference value; resistance is not measured. Nominal planar photo placement with estimated body, pad and drill dimensions. Lead and solder obscure the precise hole centre. Blue collar at the left end is appearance evidence, not polarity.",
     "placementAuthority": "controller.kicad_pcb",
-    "placementCandidate": {
-      "status": "identity-and-lead-locations-reviewed-terminal-order-unresolved",
-      "source": "robotron-factory-drawings",
-      "locator": "PDF page 10, drawing 63-330-4103-2",
-      "photoSource": "photo-top",
-      "pixelUncertainty": 8,
-      "photoEndpoints": [
-        [
-          1523,
-          852
-        ],
-        [
-          1681,
-          847
-        ]
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1681,
+        847
       ],
-      "endpointOrder": "left, right in the original upright photograph; not schematic pin numbers",
-      "blueCollarEndpoint": "left",
-      "legibleBodyMarking": "10K",
-      "limitation": "Factory drawing supports designator order. Top photo supports lead positions and collar end. Physical-to-schematic terminal assignment and continuity remain unverified; these candidates do not place or connect native pads."
-    }
+      "2": [
+        1523,
+        852
+      ]
+    },
+    "pixelUncertainty": 8,
+    "blueCollarPin": "2"
   },
   "R6.1": {
     "referenceType": "1k",

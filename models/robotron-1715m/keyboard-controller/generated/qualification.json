@@ -1,12 +1,12 @@
 {
   "components": 70,
   "drc": {
-    "unconnectedItems": 233,
+    "unconnectedItems": 232,
     "violations": {
       "track_dangling": 1
     }
   },
-  "electricalCopperSegments": 13,
+  "electricalCopperSegments": 16,
   "erc": [
     {
       "description": "Label connected to only one pin",
@@ -31,7 +31,7 @@
     "Digital reference circuit; discrete pin numbering, specimen substitutions and analog timing remain unqualified; reset topology and bridge boundaries reviewed against Zander."
   ],
   "padNetMismatches": [],
-  "placed": 27,
-  "unplaced": 47,
+  "placed": 28,
+  "unplaced": 46,
   "unresolvedPhotoSegments": 294
 }

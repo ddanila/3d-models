@@ -8875,7 +8875,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "f9da35ab-c273-47e4-9c0b-50d19bffd117")
-		(at 164 150)
+		(at 45.398073 36.649369)
 		(property "Reference" "R5"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -8919,7 +8919,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory placement + top-photo lead ends; visible supply strip extends from R3/R4.1 to right lead; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8957,7 +8957,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at -0.109885 -5.774603)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -8966,7 +8966,7 @@
 			(uuid "fa073385-cda8-402b-bd0b-1349256eb6c5")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at 0.109886 5.774603)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -12371,12 +12371,36 @@
 		(uuid "1240fe26-e0fc-412e-b233-fd3811e4d447")
 	)
 	(segment
+		(start 45.297843 30.145209)
+		(end 45.288188 30.874766)
+		(width 1)
+		(layer "F.Cu")
+		(net "/+5V")
+		(uuid "1c4c573b-a236-4679-b93f-75699423fd0a")
+	)
+	(segment
 		(start 38.228045 30.056603)
 		(end 38.169471 28.886973)
 		(width 1)
 		(layer "F.Cu")
 		(net "/+5V")
 		(uuid "49b7261f-c582-42e0-ad01-ab98b4c6b8d8")
+	)
+	(segment
+		(start 44.944022 28.743032)
+		(end 45.297843 30.145209)
+		(width 1)
+		(layer "F.Cu")
+		(net "/+5V")
+		(uuid "836c74eb-7a4d-4dad-b3bc-fe45528bfcd3")
+	)
+	(segment
+		(start 41.592846 28.816639)
+		(end 44.944022 28.743032)
+		(width 1)
+		(layer "F.Cu")
+		(net "/+5V")
+		(uuid "9aa496ee-1c04-4d03-9092-6868659fd264")
 	)
 	(segment
 		(start 41.800395 29.993116)

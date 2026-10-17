@@ -346,3 +346,20 @@ does not establish its feed or further continuation. There are now 13 assigned
 segments (10 observed, 3 inferred), 233 airwires and the same single dangling
 A1:1 track endpoint. The 294 legacy artwork segments remain unassigned graphics;
 their appearance is not evidence of extra electrical connectivity.
+
+### R5 supply extension
+
+A closer review of the top photograph shows the same supply strip continuing to
+R5's right lead above C4. R5 now has native placement, with right lead pin 1 on
++5V and left lead pin 2 on reference RESET_BIAS. Its 10K marking agrees with the
+reference value. The left blue collar, pad positions and lead spacing now come
+from the shared native geometry; its legacy placement was removed.
+
+Two observed track segments extend the supply junction to R5, followed by one
+inferred pad attachment. Each has pinned original-photo coordinates and a
+geometry-bound evidence record. The connection behind C4 remains unresolved.
+This brings the current totals to 13 native resistors, 46 unplaced components,
+16 assigned copper sections (12 observed, 4 inferred), and 232 airwires. The
+original A1:1 dangling endpoint and 294 unassigned artwork segments remain.
+A graph check verifies that the local supply tree connects exactly the three
+reviewed supply pads, without disconnected islands.
