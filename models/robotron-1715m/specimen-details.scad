@@ -50,9 +50,11 @@ module keyboard_controller_chips(){keyboard_controller_pose(){
  for(ref=["A5","A8"])let(p=controller_dip(ref),length=ref=="A5"?54:34)translate([p[0],p[1],1.6])rotate([0,0,p[5]])difference(){slab(length,19,1.2,.6);slab(length-4,15,2,.4);}
  for(p=controller_transistors)controller_transistor_pose(p)import("components/kicad/meshes/TO-92_Inline-body.stl");
 }}
+// C5.4 overhangs A7 in the top photo; nominal stand-off avoids body intersection.
+function controller_ceramic_z(c)=c[3]=="C5.4"?8.1:4.4;
 module keyboard_controller_ceramic(){keyboard_controller_pose(){
  // C5 bodies use native footprint origins; pad coordinates independently drive bent leads.
- for(c=controller_pcb_ceramics)translate([c[0][0],c[0][1],4.4])rotate([0,0,atan2(c[2][1]-c[1][1],c[2][0]-c[1][0])])rotate([90,0,0])cylinder(d=5.2,h=1.2,center=true,$fn=32);
+ for(c=controller_pcb_ceramics)translate([c[0][0],c[0][1],controller_ceramic_z(c)])rotate([0,0,atan2(c[2][1]-c[1][1],c[2][0]-c[1][0])])rotate([90,0,0])cylinder(d=5.2,h=1.2,center=true,$fn=32);
  controller_rom_pose(2.8)slab(32,13.5,3.5,.7);
  // Small ceramic discs beside the logic; axial resistors have their own finish.
  for(p=[[105,-3]])
@@ -388,7 +390,7 @@ module keyboard_controller_solder(){keyboard_controller_pose(){
 // Bent connector tails and axial leads visible in 123622947. Nominal diameters.
 module keyboard_controller_leads(){keyboard_controller_pose(){
  for(c=controller_pcb_ceramics)let(angle=atan2(c[2][1]-c[1][1],c[2][0]-c[1][0]))
-  for(i=[1,2])let(p=c[i],sign=i==1?-1:1)wire_run([[p[0],p[1],-.5],[p[0],p[1],2.1],[c[0][0]+sign*1.5*cos(angle),c[0][1]+sign*1.5*sin(angle),2.7]],.25);
+  for(i=[1,2])let(p=c[i],sign=i==1?-1:1)wire_run([[p[0],p[1],-.5],[p[0],p[1],2.1],[c[0][0]+sign*1.5*cos(angle),c[0][1]+sign*1.5*sin(angle),controller_ceramic_z(c)-1.7]],.25);
  // Nominal closed wire-link shape; pad endpoints come from native KiCad.
  for(b=controller_pcb_bridges)let(a=b[0],c=b[1])wire_run([[a[0],a[1],-.5],[a[0],a[1],2.4],[c[0],c[1],2.4],[c[0],c[1],-.5]],.25);
  for(i=[0:12],side=[-1,1])wire_run([[-25+i*2.54,3+side*2.54,4],[-25+i*2.54,3+side*7,2.2],[-25+i*2.54,3+side*7,-.5]],.28);

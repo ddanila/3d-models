@@ -603,3 +603,9 @@ remain untraced and no copper is assigned by placing these parts. Component
 evidence records the distinction. Their body centres remain independent of the
 pads, with nominal disc and bent-lead geometry. C5.5 is not placed because the
 primary photograph obscures a lead entry beside the electrolytic capacitor.
+
+C5.4 uses a separate nominal 8.1 mm centre height because its photographed
+projection overhangs A7. The initial shared 4.4 mm height intersected the nominal
+DIP body in the close-up render; this clearance estimate removes the intersection
+without moving native pads or the photo-derived body centre. Specimen stand-off
+and tilt remain unmeasured.
