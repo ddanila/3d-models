@@ -77,7 +77,9 @@ discretes and mechanical details remain photo estimates. Generic procedural fano
 were removed rather than presented as historical copper.
 
 `python3 tools/test_export.py` checks source/output hashes, asymmetric CPU/ROM
-and pad-number landmarks, closed outline area and stale-file rejection. These
+and pad-number landmarks, closed outline area and stale-file rejection. The optional native
+`tools/test_kicad.py` also exports an isolated board twice and compares every
+generated file byte-for-byte, including the manifest, to check repeatability. These
 checks run in CI without KiCad. The initial SCAD export rendered successfully
 with the Manifold backend. The Edge.Cuts loop is reconstructed by endpoint
 connectivity, not by file order; unsupported open or branched outlines fail.

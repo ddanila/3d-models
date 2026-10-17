@@ -7,6 +7,19 @@ from route_evidence import geometry_sha
 from geometry import arc_points
 R=Path(__file__).resolve().parents[1]
 class KiCadExportTests(unittest.TestCase):
+ def test_repeated_native_export_is_byte_identical(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   r=Path(tmp)/'board';shutil.copytree(R,r,ignore=shutil.ignore_patterns('__pycache__'))
+   for source in json.loads((R/'evidence.json').read_text())['sources']:
+    if not source.get('path'):continue
+    photo=source['path'];(r/photo).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/photo,r/photo)
+   def outputs():return {p.name:p.read_bytes()for p in (r/'generated').iterdir()if p.is_file()}
+   subprocess.run([sys.executable,r/'tools/export.py'],check=True,stdout=subprocess.DEVNULL)
+   first=outputs()
+   subprocess.run([sys.executable,r/'tools/export.py'],check=True,stdout=subprocess.DEVNULL)
+   second=outputs()
+   self.assertEqual(set(first),set(second))
+   for name in first:self.assertEqual(first[name],second[name],name+' changed on unchanged native regeneration')
  def test_routes_via_and_pin_mismatch(self):
   with tempfile.TemporaryDirectory() as tmp:
    r=Path(tmp)/'board';shutil.copytree(R,r,ignore=shutil.ignore_patterns('__pycache__'))
