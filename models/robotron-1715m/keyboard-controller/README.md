@@ -89,8 +89,10 @@ python3 tools/photo_registration.py
 `photo_registration.py --apply --refs A1 ...` applies explicitly selected fits
 only after independent landmarks pass. Regenerate exports after applying fits.
 The native test checks repeatability, curved tracks, through vias and pad/net
-mismatch rejection. Standard-Python freshness checks run in CI; native KiCad
-integration is a separate local check. Unsupported zones, blind vias, internal
+mismatch rejection. CI runs standard-Python freshness checks and a separate native
+job using the [KiCad 10 stable Ubuntu packages](https://www.kicad.org/download/ubuntu/).
+The native job records tool versions and regenerates only temporary copies; it
+does not replace the committed exports. Unsupported zones, blind vias, internal
 tracks and invalid outlines fail explicitly. ERC's RD_N and SHIELD exceptions
 are recorded individually; outstanding DRC findings remain failures.
 

@@ -14,3 +14,25 @@ jobs:
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_export.py
       - run: python3 models/robotron-1715m/tools/test_controller_mesh_contract.py
       - run: python3 models/robotron-1715m/tools/check-metadata.py
+  native:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      KICAD_CLI: kicad-cli
+      KICAD10_FOOTPRINT_DIR: /usr/share/kicad/footprints
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install KiCad 10 native tools
+        # Official stable-series packages: https://www.kicad.org/download/ubuntu/
+        run: |
+          sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends kicad kicad-footprints xvfb xauth
+      - name: Record native tool versions
+        run: |
+          kicad-cli version
+          /usr/bin/python3 -c 'import pcbnew; print(pcbnew.GetBuildVersion())'
+      - name: Check native regeneration and mismatch rejection
+        run: xvfb-run -a /usr/bin/python3 models/robotron-1715m/keyboard-controller/tools/test_kicad.py
+      - name: Verify source checkout was not modified
+        run: git diff --exit-code
