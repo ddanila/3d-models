@@ -111,13 +111,13 @@ class ControllerExportTests(unittest.TestCase):
   evidence=json.loads((R/'component-evidence.json').read_text())
   self.assertEqual([evidence[r]['blueCollarPin']for r in refs],['2']*6+['1','2'])
   text=(R/'generated/controller.scad').read_text();line=next(s for s in text.splitlines()if s.startswith('controller_pcb_resistors='))
-  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),13)
+  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),14)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.7'),-1)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.8'),1)
  def test_partial_a1_route_keeps_endpoint_unresolved(self):
   from route_evidence import annotate
   layout=json.loads((R/'generated/layout.json').read_text())
-  routes=layout['routes'];self.assertEqual(len(routes),16)
+  routes=layout['routes'];self.assertEqual(len(routes),21)
   annotate(routes,layout['vias'],json.loads((R/'route-evidence.json').read_text()),json.loads((R/'evidence.json').read_text()))
   routes=[r for r in routes if r['net']=='/WR_N'];self.assertEqual(len(routes),8)
   self.assertEqual({r['net']for r in routes},{'/WR_N'})
@@ -139,23 +139,23 @@ class ControllerExportTests(unittest.TestCase):
   pads=[tuple(p['position'])for c in layout['components']if c['ref']in ['R3','R4.1']for p in c['pads']if p['pin']=='1']
   self.assertEqual(set(p for p,n in ends.items()if n==1),set(pads))
   self.assertTrue(all(n in [1,2]for n in ends.values()))
-  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['unconnectedItems'],232)
- def test_reset_supply_tree_reaches_three_resistors(self):
+  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['unconnectedItems'],231)
+ def test_reset_supply_tree_reaches_four_resistors(self):
   layout=json.loads((R/'generated/layout.json').read_text())
   routes=[r for r in layout['routes']if r['net']=='/+5V']
-  self.assertEqual(len(routes),8)
+  self.assertEqual(len(routes),13)
   from collections import Counter,defaultdict
   ends=Counter();edges=defaultdict(set)
   for r in routes:
    a,b=map(tuple,r['points']);ends.update([a,b]);edges[a].add(b);edges[b].add(a)
-  pads=[tuple(p['position'])for c in layout['components']if c['ref']in ['R3','R4.1','R5']for p in c['pads']if p['pin']=='1']
+  pads=[tuple(p['position'])for c in layout['components']if c['ref']in ['R3','R4.1','R5','R6.1']for p in c['pads']if p['pin']=='1']
   self.assertEqual(set(p for p,n in ends.items()if n==1),set(pads))
   seen=set();pending=[pads[0]]
   while pending:
    point=pending.pop()
    if point in seen:continue
    seen.add(point);pending.extend(edges[point]-seen)
-  self.assertEqual(seen,set(ends));self.assertEqual(sum(n==3 for n in ends.values()),1)
+  self.assertEqual(seen,set(ends));self.assertEqual(sum(n==3 for n in ends.values()),2)
   r5=next(c for c in layout['components']if c['ref']=='R5');pads={p['pin']:p for p in r5['pads']}
   self.assertEqual(pads['2']['net'],'/RESET_BIAS')
   self.assertGreater(pads['1']['position'][1],pads['2']['position'][1])

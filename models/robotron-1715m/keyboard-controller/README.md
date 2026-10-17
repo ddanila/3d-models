@@ -363,3 +363,22 @@ This brings the current totals to 13 native resistors, 46 unplaced components,
 original A1:1 dangling endpoint and 294 unassigned artwork segments remain.
 A graph check verifies that the local supply tree connects exactly the three
 reviewed supply pads, without disconnected islands.
+
+### R6.1 and the visible supply strip beside C4
+
+The top photograph shows the supply strip continuing beside C4 to R6.1's right
+lead. R6.1 is now a native component: pin 1 joins this supply strip and pin 2
+follows reference RESET_BASE. The 1K0 marking supports the reference value; no
+resistance or continuity measurement is claimed. Four observed track sections
+and one inferred pad attachment extend the reviewed supply tree. Hidden branches
+remain unassigned; the photograph establishes this visible strip only.
+
+R6.1 was the omitted resistor in the legacy model. Its projected centre is
+(-89.09, 12.89) nominal mm; the three remaining legacy reset estimates lie near
+x=-86, -82 and -78, corresponding to R4.2, R7 and R8. Adding R6.1 therefore
+increases the physical body count by one and removes no legacy entry. It uses
+native pad positions, body/lead geometry and its observed left blue collar.
+
+Current totals are 14 native resistors, 45 unplaced components, 21 assigned
+copper sections (16 observed, 5 inferred), and 231 airwires. The supply graph
+connects exactly the four reviewed supply pads. R4.2/R7/R8 remain candidates.
