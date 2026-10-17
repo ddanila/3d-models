@@ -23,11 +23,13 @@
     "fp-lib-table": "f6503b3e185475d8be43527f0ee177079a36e60001ae5ad21a1ababaed9f28bd",
     "kbd.kicad_sym": "a9f4644c44fc6a06746ee9187881c8c4e1e4c1ad4246b95f673bdf53d570e8e1",
     "photo-landmarks.json": "bca0d2f458923f982f1a3447036a07e3803cf111a8ea9ae6b3b781d370e8215a",
+    "route-evidence.json": "309a52f61e7b7ee4b19bd728e376fcd2cfe9757a7485dbed8d6141d95b715714",
     "sym-lib-table": "27194f2ba44182e9ce1b0fd5db14f03003a7cefcf53a287c7cb9d8b8e361a841",
     "tools/bottom_registration.py": "36f1cf8ac971be978d2da9af9da346b56117eaceb4c1ef9d7d1c57edd06d854b",
-    "tools/export.py": "2199d7485422847d6af6eb4e39ed94098b7905c7b38733bc7e5481213ad09794",
+    "tools/export.py": "ac917e6ffacad3b03dd54afafa16c497fce5c6dd929065f211281ae15b118a6e",
     "tools/geometry.py": "be71777d095f87f7f53643239e274989006de4ead1ad7181478d502e05351780",
-    "tools/photo_registration.py": "b0159daa27e717778f506c0d52f1f352ac1462a710c804952582f77eb2d30597"
+    "tools/photo_registration.py": "b0159daa27e717778f506c0d52f1f352ac1462a710c804952582f77eb2d30597",
+    "tools/route_evidence.py": "3e8e9902a95bfa7af60f321d475b2cba713939322ee76f4e3dedbbcbb5ae16ba"
   },
   "tools": {
     "kicad": "10.0.6",

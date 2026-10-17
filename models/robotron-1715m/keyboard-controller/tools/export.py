@@ -5,6 +5,7 @@
 import argparse,hashlib,json,math,os,shutil,subprocess,tempfile,collections,xml.etree.ElementTree as ET
 from pathlib import Path
 from geometry import arc_points, outline_polygon
+from route_evidence import annotate as annotate_routes
 from photo_registration import review as photo_review, svg as photo_svg
 from bottom_registration import review as bottom_review, svg as bottom_svg
 ROOT=Path(__file__).resolve().parents[1]
@@ -72,6 +73,7 @@ def main():
   if d.GetLayer() not in (pcb.F_Cu,pcb.B_Cu):raise SystemExit('Internal-layer tracks are unsupported')
   points=arc_points(xy(d.GetStart()),xy(d.GetMid()),xy(d.GetEnd())) if isinstance(d,pcb.PCB_ARC) else [xy(d.GetStart()),xy(d.GetEnd())]
   routes.append({'id':d.m_Uuid.AsString(),'points':points,'width':d.GetWidth()/1e6,'net':d.GetNetname(),'side':'top' if d.GetLayer()==pcb.F_Cu else 'bottom','evidence':'KiCad route; historical provenance requires review'})
+ annotate_routes(routes,vias,json.loads((ROOT/'route-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()))
  outline=outline_polygon(edges)
  layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline,'components':placed,'unplaced':unplaced,'routes':routes,'vias':vias,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
@@ -100,7 +102,7 @@ def main():
    x,y=c['position'];svg.append(f'<text x="{x}" y="{-y-4}" fill="white" font-size="2.8">{c["ref"]}</text>')
   svg.append('</g>')
  write('review.svg',''.join(svg)+'</svg>\n')
- inputs=['controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
+ inputs=['controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/route_evidence.py','route-evidence.json','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
  outputs=sorted(p for p in (ROOT/'generated').iterdir() if p.name!='manifest.json')
  write('manifest.json',{'schema':1,'tools':{'kicad':subprocess.check_output([cli,'version'],text=True).strip(),'pcbnew':pcb.GetBuildVersion()},'sources':{p:digest(ROOT/p) for p in inputs},'outputs':{str(p.relative_to(ROOT)):digest(p) for p in outputs}})
  print('Exported',len(components),'components;',len(unplaced),'unplaced;',len(art),'unresolved photo segments')

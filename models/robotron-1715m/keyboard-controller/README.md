@@ -198,3 +198,27 @@ Top leads/socket surfaces can obscure hole centres, so this comparison still doe
 not establish a measured board plane or authorize copper assignment. The original
 1.25 mm tolerance remains unchanged. Obtain physical dimensions and review more
 shared pads before promoting a global registration.
+
+### Copper evidence contract
+
+`route-evidence.json` assigns a review to every native track, arc and through-via
+UUID. The exporter refuses missing or orphaned records. Each record contains
+`status` (`observed`, `inferred`, or `unresolved`), a review `detail`, source
+citations (`id`, pinned `sha256`, and a pixel-region/page `locator`), and
+`geometrySha256`, calculated by `tools/route_evidence.py:geometry_sha` from the
+exported geometry. Moving, resizing, flipping or changing a route's net invalidates
+its review. The annotated record survives in `generated/layout.json` and the
+museum sidecar. Native KiCad copper remains the geometry authority.
+
+An observed track requires a citation to its side's photo; an observed through-via
+requires both sides. This checks provenance completeness, not truth: review must
+still establish the visible route and distinguish geometric observation from
+measured electrical continuity. Inferred and unresolved records also require
+sources and an explanation. Unassigned photo artwork remains outside this ledger
+and cannot become electrical copper merely by receiving an annotation.
+
+The ledger is currently empty because no electrical copper has been assigned.
+Review of top-photo original pixels x=1190–1510, y=1400–1760 shows a track leaving
+A1 pin 1 toward the board edge, but does not establish its entire endpoint-to-endpoint
+continuity. A1 pins 2 and 4 do not provide an unambiguous visible output route in
+that crop. Do not use the schematic net names as proof of those hidden routes.

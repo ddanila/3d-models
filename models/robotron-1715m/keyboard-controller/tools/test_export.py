@@ -61,6 +61,25 @@ class ControllerExportTests(unittest.TestCase):
   c=json.loads((R/'generated/connectivity.json').read_text())['components']
   for choke,signal,cable,pin in [('L1.1','/TA_TAKT','/CABLE_TAKT','B2'),('L1.2','/GND','/CABLE_GND','A3'),('L1.3','/+5V','/CABLE_5V','B4'),('L1.4','/TA_DATEN','/CABLE_DATEN','A1')]:
    self.assertEqual(c[choke]['pins'],{'1':signal,'2':cable});self.assertEqual(c['XT1']['pins'][pin],cable)
+ def test_route_evidence_rejects_stale_or_unsupported_claims(self):
+  from route_evidence import annotate,geometry_sha
+  from copy import deepcopy
+  route={'id':'track-1','points':[[0,0],[1,0]],'width':.3,'side':'top','net':'/TA_TAKT'}
+  sources={'sources':[{'id':'photo-top','sha256':'abc'},{'id':'schematic','sha256':'def'}]}
+  record={'status':'observed','geometrySha256':geometry_sha(route),'detail':'Visible section, hidden continuation unresolved.','sources':[{'id':'photo-top','sha256':'abc','locator':'original pixels: (10,20) to (30,40)'}]}
+  ledger={'schema':1,'items':{'track-1':record}}
+  routes=[deepcopy(route)];annotate(routes,[],ledger,sources)
+  self.assertEqual(routes[0]['evidence'],record)
+  for field,value in [('net','/D0'),('side','bottom'),('width',.4),('points',[[0,0],[2,0]])]:
+   changed=dict(route,**{field:value})
+   with self.assertRaisesRegex(ValueError,'geometry changed'):annotate([changed],[],ledger,sources)
+  with self.assertRaisesRegex(ValueError,'exactly'):annotate([],[],ledger,sources)
+  for change,message in [({'status':'verified'},'status'),({'detail':''},'explanation'),({'sources':[]},'source references'),({'sources':[{'id':'photo-top','sha256':'old','locator':'p1'}]},'stale'),({'sources':[{'id':'schematic','sha256':'def','locator':'p1'}]},'photographs')]:
+   bad=deepcopy(ledger);bad['items']['track-1'].update(change)
+   with self.assertRaisesRegex(ValueError,message):annotate([deepcopy(route)],[],bad,sources)
+  via={'id':'via-1','position':[0,0],'diameter':1,'drill':.5,'net':'/TA_TAKT'}
+  vrecord=dict(record,geometrySha256=geometry_sha(via))
+  with self.assertRaisesRegex(ValueError,'board sides'):annotate([],[via],{'schema':1,'items':{'via-1':vrecord}},sources)
  def test_pinned_sources(self):subprocess.run([sys.executable,R/'tools/export.py','--check'],check=True)
  def test_asymmetric_landmarks(self):
   layout=json.loads((R/'generated/layout.json').read_text());cs={c['ref']:c for c in layout['components']}
