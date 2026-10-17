@@ -114,6 +114,14 @@ agreement with a reference is not identification of the photographed specimen.
 
 ## Generated geometry review
 
+Open `assembly-review.scad` for the current detailed museum controller alone,
+including native resistor and C5.1–C5.4 bodies, pads and bent leads. Press F5 and
+Home to preview and fit the board. Set `side="bottom"` for the underside;
+`show_mounts` and `show_shield` optionally restore surrounding hardware. This
+entry point reuses the full model's geometry and colors, with the board centered
+at the origin. Photo estimates and unresolved artwork retain the qualifications
+in this document; the assembly view does not establish electrical continuity.
+
 Open `review.scad` for a standalone reconstruction view. It consumes only
 KiCad-derived arrays for the outline, holes, pads, package positions and artwork.
 Cyan lines are unresolved photo graphics; assigned copper uses a separate layer.
