@@ -80,7 +80,7 @@
     {
       "id": "package-pinmap",
       "status": "unresolved",
-      "detail": "Reviewed DIP placements and sixteen native resistor placements are recorded in component-evidence.json. R4.2/R7/R8 still have unnumbered photo endpoint candidates; their underside correspondence and ground-side terminal assignment remain unresolved. Transistor, diode, capacitor and remaining discrete package terminal mappings require review."
+      "detail": "Reviewed DIP placements and eighteen native resistor placements are recorded in component-evidence.json. R4.2/R7/R8 still have unnumbered photo endpoint candidates; their underside correspondence and ground-side terminal assignment remain unresolved. Transistor, diode, capacitor and remaining discrete package terminal mappings require review."
     },
     {
       "id": "clock-source-disagreement",

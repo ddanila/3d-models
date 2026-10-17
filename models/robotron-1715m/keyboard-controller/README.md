@@ -423,3 +423,18 @@ every local evidence source in the freshness manifest and refuses regeneration
 if a local source's content no longer matches its evidence hash. The perspective
 close-up supports identification; the original top photo remains the planar
 placement authority.
+
+### LED series resistors beside X1
+
+R11.1 and R11.2 now have native placements from their top-photo lead endpoints.
+Factory placement identifies the cable-facing and CPU-facing parts respectively.
+Their inner leads align with adjacent connector rows, consistent with schematic
+X1:A5/A6: inner leads are assigned pin 2 (LED connector side), outer leads pin 1
+(flip-flop output side). These assignments remain reference-derived; exact X1
+pin registration and end-to-end continuity are not independently verified.
+
+Both bodies were absent from the legacy model. No existing estimate was removed.
+Native pads drive their bodies, leads, holes, lands and lower-end blue collars.
+The 130-ohm reference value and estimated dimensions are not measurements.
+Eighteen resistors are now native, with 41 components unplaced. No copper was
+added; the 21 assigned sections and 231 airwires remain unchanged.

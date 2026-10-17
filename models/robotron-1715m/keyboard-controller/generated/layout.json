@@ -3188,6 +3188,100 @@
       "type": "560"
     },
     {
+      "evidence": "Factory placement + photo-top lead ends; LED terminal order reference-derived; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/LED_SISO_N",
+          "pin": "1",
+          "position": [
+            -28.94491,
+            18.251549
+          ],
+          "ref": "R11.1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/LED_SISO",
+          "pin": "2",
+          "position": [
+            -17.142146,
+            18.255478
+          ],
+          "ref": "R11.1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -23.043528,
+        18.253514
+      ],
+      "ref": "R11.1",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "130"
+    },
+    {
+      "evidence": "Factory placement + photo-top lead ends; LED terminal order reference-derived; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/LED_CAPS_N",
+          "pin": "1",
+          "position": [
+            -2.730104,
+            18.3689
+          ],
+          "ref": "R11.2",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/LED_CAPS",
+          "pin": "2",
+          "position": [
+            -14.716672,
+            18.371391
+          ],
+          "ref": "R11.2",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -8.723388,
+        18.370146
+      ],
+      "ref": "R11.2",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "130"
+    },
+    {
       "evidence": "Factory placement + top-photo lead ends; shared right-side connection supports supply orientation; component-evidence.json",
       "pads": [
         {
@@ -6390,100 +6484,6 @@
       "rotation": 0.0,
       "side": "top",
       "type": "560"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/LED_SISO_N",
-          "pin": "1",
-          "position": [
-            -82.0,
-            -150.0
-          ],
-          "ref": "R11.1",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/LED_SISO",
-          "pin": "2",
-          "position": [
-            -79.46,
-            -150.0
-          ],
-          "ref": "R11.1",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -82.0,
-        -150.0
-      ],
-      "ref": "R11.1",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "130"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/LED_CAPS_N",
-          "pin": "1",
-          "position": [
-            -58.0,
-            -150.0
-          ],
-          "ref": "R11.2",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/LED_CAPS",
-          "pin": "2",
-          "position": [
-            -55.46,
-            -150.0
-          ],
-          "ref": "R11.2",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -58.0,
-        -150.0
-      ],
-      "ref": "R11.2",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "130"
     },
     {
       "evidence": "unplaced",

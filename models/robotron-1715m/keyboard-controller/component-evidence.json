@@ -178,17 +178,51 @@
   },
   "R11.1": {
     "referenceType": "130",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends beside X1",
+    "pinEvidence": "Reference-derived: the inner lead facing the other resistor is assigned pin 2, connector side; the outer lead is pin 1, flip-flop side. Inner leads align with adjacent X1 rows consistent with schematic A5/A6. Exact connector pin registration and end-to-end continuity are not verified.",
+    "note": "Factory placement identifies R11.1 toward the cable and R11.2 toward the CPU. Both bodies were absent from legacy geometry. Nominal planar photo placement; hole centres and body/pad/drill dimensions are estimated. Reference value 130 ohms is not measured. Blue collar at the lower end in the original photo is appearance evidence, not polarity.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1714,
+        1857
+      ],
+      "2": [
+        1721,
+        2013
+      ]
+    },
+    "pixelUncertainty": 8,
+    "blueCollarPin": "2",
+    "supportingSources": [
+      "robotron-factory-drawings",
+      "photo-top"
+    ]
   },
   "R11.2": {
     "referenceType": "130",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends beside X1",
+    "pinEvidence": "Reference-derived: the inner lead facing the other resistor is assigned pin 2, connector side; the outer lead is pin 1, flip-flop side. Inner leads align with adjacent X1 rows consistent with schematic A5/A6. Exact connector pin registration and end-to-end continuity are not verified.",
+    "note": "Factory placement identifies R11.1 toward the cable and R11.2 toward the CPU. Both bodies were absent from legacy geometry. Nominal planar photo placement; hole centres and body/pad/drill dimensions are estimated. Reference value 130 ohms is not measured. Blue collar at the lower end in the original photo is appearance evidence, not polarity.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1731,
+        2203
+      ],
+      "2": [
+        1724,
+        2045
+      ]
+    },
+    "pixelUncertainty": 8,
+    "blueCollarPin": "1",
+    "supportingSources": [
+      "robotron-factory-drawings",
+      "photo-top"
+    ]
   },
   "L1.1": {
     "referenceType": "CHOKE",

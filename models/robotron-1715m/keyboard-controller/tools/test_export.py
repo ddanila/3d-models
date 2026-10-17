@@ -111,9 +111,17 @@ class ControllerExportTests(unittest.TestCase):
   evidence=json.loads((R/'component-evidence.json').read_text())
   self.assertEqual([evidence[r]['blueCollarPin']for r in refs],['2']*6+['1','2'])
   text=(R/'generated/controller.scad').read_text();line=next(s for s in text.splitlines()if s.startswith('controller_pcb_resistors='))
-  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),16)
+  exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),18)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.7'),-1)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.8'),1)
+ def test_led_resistor_inner_leads_face_adjacent_connector_rows(self):
+  layout=json.loads((R/'generated/layout.json').read_text());placed={c['ref']:c for c in layout['components']}
+  a,b=[{p['pin']:p for p in placed[r]['pads']}for r in ['R11.1','R11.2']]
+  self.assertLess(a['1']['position'][0],a['2']['position'][0])
+  self.assertLess(a['2']['position'][0],b['2']['position'][0])
+  self.assertLess(b['2']['position'][0],b['1']['position'][0])
+  for pads,name in [(a,'SISO'),(b,'CAPS')]:
+   self.assertEqual(pads['1']['net'],'/LED_'+name+'_N');self.assertEqual(pads['2']['net'],'/LED_'+name)
  def test_partial_a1_route_keeps_endpoint_unresolved(self):
   from route_evidence import annotate
   layout=json.loads((R/'generated/layout.json').read_text())

@@ -194,7 +194,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "02f7d006-73f7-435b-93ea-76a7101104b6")
-		(at 68 200)
+		(at 126.956472 31.746486)
 		(property "Reference" "R11.1"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -238,7 +238,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory placement + photo-top lead ends; LED terminal order reference-derived; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -276,7 +276,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at -5.901382 0.001965)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -285,7 +285,7 @@
 			(uuid "40e7dcec-c831-40a8-b264-89be16dd1e42")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at 5.901382 -0.001964)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -786,7 +786,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "126fce31-0228-4e45-a6a8-355295ae894a")
-		(at 92 200)
+		(at 141.276612 31.629854)
 		(property "Reference" "R11.2"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -830,7 +830,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory placement + photo-top lead ends; LED terminal order reference-derived; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -868,7 +868,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at 5.993284 0.001246)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -877,7 +877,7 @@
 			(uuid "b75d1aef-2947-46e2-b640-5cc89880f2cf")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at -5.993284 -0.001245)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
