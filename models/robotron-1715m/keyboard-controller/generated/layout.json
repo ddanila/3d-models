@@ -3021,6 +3021,53 @@
       "type": "BRIDGE"
     },
     {
+      "evidence": "Factory C5.1 location; primary top lead ends and visible supply rails; comparison close-up corroborates construction; component-evidence.json",
+      "pads": [
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/+5V",
+          "pin": "1",
+          "position": [
+            -47.177068,
+            6.778246
+          ],
+          "ref": "C5.1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": "/GND",
+          "pin": "2",
+          "position": [
+            -42.880204,
+            6.807469
+          ],
+          "ref": "C5.1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        }
+      ],
+      "position": [
+        -44.660902,
+        9.458414
+      ],
+      "ref": "C5.1",
+      "rotation": 0.0,
+      "side": "top",
+      "type": "47n"
+    },
+    {
       "evidence": "photo-estimated-hole",
       "pads": [
         {
@@ -6138,53 +6185,6 @@
       "rotation": 0.0,
       "side": "top",
       "type": "10u"
-    },
-    {
-      "evidence": "unplaced",
-      "pads": [
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/+5V",
-          "pin": "1",
-          "position": [
-            -82.0,
-            -75.0
-          ],
-          "ref": "C5.1",
-          "size": [
-            1.7,
-            1.7
-          ]
-        },
-        {
-          "drill": [
-            0.85,
-            0.85
-          ],
-          "net": "/GND",
-          "pin": "2",
-          "position": [
-            -79.46,
-            -75.0
-          ],
-          "ref": "C5.1",
-          "size": [
-            1.7,
-            1.7
-          ]
-        }
-      ],
-      "position": [
-        -82.0,
-        -75.0
-      ],
-      "ref": "C5.1",
-      "rotation": 0.0,
-      "side": "top",
-      "type": "47n"
     },
     {
       "evidence": "unplaced",

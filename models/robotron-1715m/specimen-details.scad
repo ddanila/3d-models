@@ -42,7 +42,7 @@ module keyboard_controller_board(){keyboard_controller_pose()difference(){
  for(p=controller_end_holes)translate(concat(p,[-1]))cylinder(d=3.2,h=4,$fn=24);
  for(p=concat(controller_connector_tails,controller_legacy_resistor_tails))translate([p[0],p[1],-1])cylinder(d=.85,h=4,$fn=16);
  for(p=controller_transistors)controller_transistor_pose(p)for(x=[-1.27,0,1.27])translate([x,0,-2])cylinder(d=.85,h=4,$fn=12);
- for(p=concat(controller_pcb_dip_pads,controller_pcb_resistor_pads,controller_pcb_bridge_pads))translate([p[0],p[1],-1])cylinder(d=p[2],h=4,$fn=16);
+ for(p=concat(controller_pcb_dip_pads,controller_pcb_resistor_pads,controller_pcb_bridge_pads,controller_pcb_ceramic_pads))translate([p[0],p[1],-1])cylinder(d=p[2],h=4,$fn=16);
 }}
 module keyboard_controller_chips(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_body(p);
@@ -51,9 +51,11 @@ module keyboard_controller_chips(){keyboard_controller_pose(){
  for(p=controller_transistors)controller_transistor_pose(p)import("components/kicad/meshes/TO-92_Inline-body.stl");
 }}
 module keyboard_controller_ceramic(){keyboard_controller_pose(){
+ // C5 bodies use native footprint origins; pad coordinates independently drive bent leads.
+ for(c=controller_pcb_ceramics)translate([c[0][0],c[0][1],4.4])rotate([0,0,atan2(c[2][1]-c[1][1],c[2][0]-c[1][0])])rotate([90,0,0])cylinder(d=5.2,h=1.2,center=true,$fn=32);
  controller_rom_pose(2.8)slab(32,13.5,3.5,.7);
  // Small ceramic discs beside the logic; axial resistors have their own finish.
- for(p=[[-40,-4],[13,-5],[38,-6],[78,-3],[105,-3]])
+ for(p=[[13,-5],[38,-6],[78,-3],[105,-3]])
   translate([p[0],p[1],3])rotate([90,0,0])cylinder(d=3.8,h=1.2,$fn=24);
 }}
 module keyboard_controller_rom_cover(){keyboard_controller_pose()controller_rom_pose(6.35)translate([-2,0,0])slab(18,13,.15,.2);}
@@ -142,7 +144,7 @@ module keyboard_controller_traces(){keyboard_controller_pose(){
  for(a=controller_pcb_bottom_copper)translate([0,0,-.10])board_trace(a[0],a[1],.10);
  for(p=controller_pcb_dip_pads)translate([p[0],p[1],1.62])difference(){cylinder(d=1.7,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
  for(p=controller_legacy_resistor_tails)translate([p[0],p[1],1.62])difference(){cylinder(d=1.9,h=.1,$fn=16);cylinder(d=.85,h=.2,$fn=12);}
- for(p=concat(controller_pcb_resistor_pads,controller_pcb_bridge_pads))translate([p[0],p[1],1.62])difference(){scale([p[3],p[4],1])cylinder(d=1,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
+ for(p=concat(controller_pcb_resistor_pads,controller_pcb_bridge_pads,controller_pcb_ceramic_pads))translate([p[0],p[1],1.62])difference(){scale([p[3],p[4],1])cylinder(d=1,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
  // Staggered transistor-stage routes and plated eyes (no invented values).
  for(p=controller_transistors)controller_transistor_pose(p)
   for(x=[-1.27,0,1.27])translate([x,0,-.1])difference(){cylinder(d=1.2,h=.1,$fn=20);cylinder(d=.85,h=.2,$fn=16);}
@@ -375,7 +377,7 @@ module controller_solder_eye(x,y,hole=1.05,outer=2.1){translate([x,y,-.55])diffe
  translate([0,0,-.1])cylinder(d=hole,h=2.4,$fn=16);
 }}
 module keyboard_controller_solder(){keyboard_controller_pose(){
- for(p=concat(controller_pcb_resistor_pads,controller_pcb_bridge_pads))controller_solder_eye(p[0],p[1],p[2],min(p[3],p[4]));
+ for(p=concat(controller_pcb_resistor_pads,controller_pcb_bridge_pads,controller_pcb_ceramic_pads))controller_solder_eye(p[0],p[1],p[2],min(p[3],p[4]));
  for(p=controller_pcb_dip_pads)controller_solder_eye(p[0],p[1],p[2]);
  for(p=controller_transistors)translate([p[0],p[1],0])rotate([0,0,p[2]])
   for(x=[-1.27,0,1.27])controller_solder_eye(x,0,.85,1.2);
@@ -385,6 +387,8 @@ module keyboard_controller_solder(){keyboard_controller_pose(){
 
 // Bent connector tails and axial leads visible in 123622947. Nominal diameters.
 module keyboard_controller_leads(){keyboard_controller_pose(){
+ for(c=controller_pcb_ceramics)let(angle=atan2(c[2][1]-c[1][1],c[2][0]-c[1][0]))
+  for(i=[1,2])let(p=c[i],sign=i==1?-1:1)wire_run([[p[0],p[1],-.5],[p[0],p[1],2.1],[c[0][0]+sign*1.5*cos(angle),c[0][1]+sign*1.5*sin(angle),2.7]],.25);
  // Nominal closed wire-link shape; pad endpoints come from native KiCad.
  for(b=controller_pcb_bridges)let(a=b[0],c=b[1])wire_run([[a[0],a[1],-.5],[a[0],a[1],2.4],[c[0],c[1],2.4],[c[0],c[1],-.5]],.25);
  for(i=[0:12],side=[-1,1])wire_run([[-25+i*2.54,3+side*2.54,4],[-25+i*2.54,3+side*7,2.2],[-25+i*2.54,3+side*7,-.5]],.28);

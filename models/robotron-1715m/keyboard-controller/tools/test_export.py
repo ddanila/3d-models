@@ -6,6 +6,18 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_ceramic_body_and_bent_lead_endpoints_remain_distinct(self):
+  layout=json.loads((R/'generated/layout.json').read_text())
+  c=next(c for c in layout['components']if c['ref']=='C5.1')
+  self.assertEqual({p['pin']:p['net']for p in c['pads']},{'1':'/+5V','2':'/GND'})
+  self.assertNotIn('C5.1',[c['ref']for c in layout['unplaced']])
+  # The photographed disc is offset from the lead-entry line; centering it on
+  # the pads would erase the bent-lead geometry this migration must preserve.
+  midpoint=[sum(p['position'][i]for p in c['pads'])/2 for i in range(2)]
+  self.assertGreater(c['position'][1]-midpoint[1],2.5)
+  scad=(R/'generated/controller.scad').read_text()
+  ceramics=json.loads(scad.split('controller_pcb_ceramics=')[1].split(';')[0])
+  self.assertEqual(ceramics,[[c['position'],c['pads'][0]['position'],c['pads'][1]['position'],'C5.1']])
  def test_curves_and_outline_errors(self):
   points=arc_points([10,0],[0,10],[-10,0])
   self.assertEqual(points[0],[10,0]);self.assertEqual(points[-1],[-10,0])

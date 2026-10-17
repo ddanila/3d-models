@@ -4147,7 +4147,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "56c006ec-00ba-4e09-a6a6-263f4ea13dc0")
-		(at 68 125)
+		(at 105.339098 40.541586)
 		(property "Reference" "C5.1"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -4191,7 +4191,7 @@
 				)
 			)
 		)
-		(property "Evidence" "unplaced"
+		(property "Evidence" "Factory C5.1 location; primary top lead ends and visible supply rails; comparison close-up corroborates construction; component-evidence.json"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4229,7 +4229,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at -2.516166 2.680168)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -4238,7 +4238,7 @@
 			(uuid "155b1030-955d-4a32-a088-38e88d5c6f6e")
 		)
 		(pad "2" thru_hole circle
-			(at 2.54 0)
+			(at 1.780698 2.650945)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")

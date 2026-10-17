@@ -807,10 +807,26 @@
   },
   "C5.1": {
     "referenceType": "47n",
-    "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementEvidence": "Factory drawing 63-330-4103-2 identifies C5.1 between A1 and A2.1; primary photo-top lead entries and body centre.",
+    "pinEvidence": "Nonpolar capacitor; reconstruction pin 1 is the upper primary-photo lead on the supply island shared with R10.1/R10.2. Pin 2 is the lower lead on the broad return rail toward A1:7 and A2.1:7. Visible reference rail assignment; no measured continuity.",
+    "note": "Primary specimen photo-estimated pad and body position. Comparison specimen close-up corroborates separate body and bent leads, not primary coordinates. Reference 47 nF is not a measured value. Hole 0.85 mm, pad 1.7 mm, disc diameter 5.2 mm, thickness 1.2 mm and centre height 4.4 mm are nominal.",
+    "placementAuthority": "controller.kicad_pcb",
+    "photoSource": "photo-top",
+    "photoPins": {
+      "1": [
+        1547,
+        1617
+      ],
+      "2": [
+        1550,
+        1674
+      ]
+    },
+    "photoBodyCentre": [
+      1585,
+      1650
+    ],
+    "pixelUncertainty": 8
   },
   "C5.2": {
     "referenceType": "47n",

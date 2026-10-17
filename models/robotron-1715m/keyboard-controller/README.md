@@ -62,7 +62,7 @@ No primary-specimen CLK route is restored until correspondence is reconciled.
 
 The user confirms that the primary museum ROM was replaced and may locate the
 original later. ROM identity is a separate firmware question and is not a reason
-to reject otherwise matching PCB evidence. No native geometry or pin map changed. Existing 25 assigned sections, 229 airwires and 37
+to reject otherwise matching PCB evidence. No native geometry or pin map changed. Existing 25 assigned sections, 229 airwires and 36
 unplaced schematic components remain the reconstruction's actual coverage.
 
 ## Native KiCad authorities
@@ -580,3 +580,19 @@ remain available for further review without qualifying any disputed net.
 Current totals: 25 assigned sections (17 observed, 8 inferred), 37 unplaced parts,
 229 airwires and one unfinished A1 route endpoint. The BR1/R10.3 local connection
 is unchanged. Schematic connectivity and digital qualification are unchanged.
+
+## First native ceramic capacitor
+
+C5.1 is placed from the primary photo: pin 1 at (1547, 1617), pin 2 at
+(1550, 1674), and disc centre at (1585, 1650), with 8-pixel observation
+uncertainty. Factory placement identifies the part between A1 and A2.1. Its
+upper lead shares the R10 supply island; the lower lead is on the broad return
+rail toward the two packages' pin 7. These are reference rail assignments, not
+continuity measurements. The separate-specimen close-ups corroborate construction.
+
+The native footprint origin records the body centre independently from its pads.
+Generated SCAD now exports ceramic bodies and pads; board drilling, copper lands,
+solder joints and bent leads use the same native endpoints. The former C5.1 body
+placeholder is removed. Disc diameter 5.2 mm, thickness 1.2 mm, centre height
+4.4 mm and lead/joint dimensions are nominal. The remaining four disc bodies
+retain legacy estimates. No copper route is added by this placement.

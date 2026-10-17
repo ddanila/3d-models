@@ -95,6 +95,8 @@ def main():
  scad+=['controller_pcb_resistor_pads='+json.dumps([[*p['position'],p['drill'][0],*p['size']]for p in pads if p['ref'].startswith('R')])+';']
  scad+=['controller_pcb_bridges='+json.dumps([[c['pads'][0]['position'],c['pads'][1]['position'],c['ref']]for c in placed if c['ref'].startswith('BR')])+';']
  scad+=['controller_pcb_bridge_pads='+json.dumps([[*p['position'],p['drill'][0],*p['size']]for p in pads if p['ref'].startswith('BR')])+';']
+ scad+=['controller_pcb_ceramics='+json.dumps([[c['position'],c['pads'][0]['position'],c['pads'][1]['position'],c['ref']]for c in placed if c['ref'].startswith('C5.')])+';']
+ scad+=['controller_pcb_ceramic_pads='+json.dumps([[*p['position'],p['drill'][0],*p['size']]for p in pads if p['ref'].startswith('C5.')])+';']
  for side in ['top','bottom']:
   scad+=['controller_pcb_'+side+'_art='+json.dumps([[a['points'],a['width']] for a in art if a['side']==side])+';', 'controller_pcb_'+side+'_copper='+json.dumps([[a['points'],a['width']] for a in routes if a['side']==side])+';']
  write('controller.scad','\n'.join(scad).replace('null','undef')+'\n')

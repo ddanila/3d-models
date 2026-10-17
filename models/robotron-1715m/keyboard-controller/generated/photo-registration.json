@@ -2234,6 +2234,55 @@
     {
       "checkPins": [],
       "independentValidation": false,
+      "maxResidualMm": 6.08571911451717e-07,
+      "pins": [
+        {
+          "pcbModel": [
+            -47.177068,
+            6.778246
+          ],
+          "pcbPixel": [
+            1547.0000063576374,
+            1617.0000010611673
+          ],
+          "photoModel": [
+            -47.17706808503502,
+            6.77824553669871
+          ],
+          "photoPixel": [
+            1547,
+            1617
+          ],
+          "pin": "1",
+          "residualMm": 4.7104037997801295e-07
+        },
+        {
+          "pcbModel": [
+            -42.880204,
+            6.807469
+          ],
+          "pcbPixel": [
+            1549.999993739412,
+            1674.0000050807187
+          ],
+          "photoModel": [
+            -42.88020437798282,
+            6.807469476957816
+          ],
+          "photoPixel": [
+            1550,
+            1674
+          ],
+          "pin": "2",
+          "residualMm": 6.08571911451717e-07
+        }
+      ],
+      "ref": "C5.1",
+      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+    },
+    {
+      "checkPins": [],
+      "independentValidation": false,
       "maxResidualMm": 5.261885349500468e-07,
       "pins": [
         {

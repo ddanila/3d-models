@@ -274,7 +274,8 @@
       "side": "top",
       "refs": [
         "A1",
-        "BR2"
+        "BR2",
+        "C5.1"
       ],
       "use": "Cable-side logic and discrete region. Separate specimen; comparison evidence only, not primary-specimen placement or continuity."
     },
@@ -286,7 +287,8 @@
       "side": "top",
       "refs": [
         "A2.1",
-        "BR2"
+        "BR2",
+        "C5.1"
       ],
       "use": "Cable-side DL003D and adjacent resistors. Separate specimen; comparison evidence only, not primary-specimen placement or continuity."
     },
@@ -413,7 +415,7 @@
     {
       "id": "package-pinmap",
       "status": "unresolved",
-      "detail": "Reviewed DIP placements and twenty-one native resistor placements and BR1 are recorded in component-evidence.json. R4.2/R7/R8 still have unnumbered photo endpoint candidates; their underside correspondence and ground-side terminal assignment remain unresolved. Transistor, diode, capacitor and remaining discrete package terminal mappings require review."
+      "detail": "Reviewed DIP placements and twenty-one native resistor placements and BR1 are recorded in component-evidence.json. R4.2/R7/R8 still have unnumbered photo endpoint candidates; their underside correspondence and ground-side terminal assignment remain unresolved. Transistor, diode, capacitor and remaining discrete package terminal mappings require review. C5.1 now has primary-photo pad/body placement and reference supply-rail pin assignment; the other capacitors remain unplaced."
     },
     {
       "id": "clock-source-disagreement",
