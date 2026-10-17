@@ -24,6 +24,45 @@ def local_reviews(e,top_pins,metric):
   regions.append({'id':region['id'],'scope':region['scope'],'bottomToTop':h,'anchors':anchors,'checks':checked,'maxCheckResidualMm':maximum,'withinPhotoTolerance':maximum<=e['toleranceMm'],'copperAssignmentQualified':False,'candidates':[candidate(p)for p in region['candidates']],'extrapolationChecks':[candidate(p)for p in region.get('extrapolationChecks',[])]})
  return regions
 
+def inside_hull(point,hull):
+ # Anchors must be supplied in convex boundary order; no bounding-box extrapolation.
+ crosses=[(b[0]-a[0])*(point[1]-a[1])-(b[1]-a[1])*(point[0]-a[0])for a,b in zip(hull,hull[1:]+hull[:1])]
+ return all(v>=-1e-8 for v in crosses)or all(v<=1e-8 for v in crosses)
+
+def pcb_regions(e,pads):
+ regions=[]
+ for region in e.get('pcbRegions',[]):
+  anchors,checks=region['anchors'],region['checks'];keys=[(p['ref'],p['pin'])for p in anchors+checks]
+  if len(anchors)!=4 or len(checks)<4 or len(keys)!=len(set(keys)):
+   raise ValueError('PCB region requires four unique anchors and at least four independent checks')
+  hull=[p['photoPixel']for p in anchors]
+  # Each corner must be on the same side of all non-adjacent edges.
+  turns=[(hull[(i+1)%4][0]-hull[i][0])*(hull[(i+2)%4][1]-hull[(i+1)%4][1])-(hull[(i+1)%4][1]-hull[i][1])*(hull[(i+2)%4][0]-hull[(i+1)%4][0])for i in range(4)]
+  if not(all(v>0 for v in turns)or all(v<0 for v in turns)):raise ValueError('PCB region anchors must form a convex boundary')
+  h=homography(hull,[pads[p['ref'],p['pin']]for p in anchors]);rows=[]
+  for p in checks:
+   predicted=project(h,p['photoPixel']);target=pads[p['ref'],p['pin']]
+   rows.append(dict(p,photoModel=predicted,pcbModel=target,residualMm=math.dist(predicted,target),insideAnchorHull=inside_hull(p['photoPixel'],hull)))
+  maximum=max(p['residualMm']for p in rows)
+  # Check pads just outside the hull remain useful validation, never extend its scope.
+  regions.append(dict(id=region['id'],scope=region['scope'],anchors=anchors,checks=rows,anchorHull=hull,photoToModel=h,maxCheckResidualMm=maximum,toleranceMm=e['toleranceMm'],copperAssignmentQualified=region.get('reviewedForCopper',False)and maximum<=e['toleranceMm']))
+ return regions
+
+def validate_registered_routes(routes,report,landmark_sha):
+ regions={r['id']:r for r in report.get('pcbRegions',[])}
+ for route in routes:
+  record=route['evidence'];registration=record.get('registration')
+  if not registration:continue
+  region=regions.get(registration['region'])
+  if registration['landmarksSha256']!=landmark_sha:raise ValueError('Stale route registration evidence')
+  if not region or not region['copperAssignmentQualified']:raise ValueError('Route registration is not locally qualified')
+  photo=next((s for s in record['sources']if s['id']=='photo-bottom'),None)
+  points=photo['locator'].get('pixelSegment',[])if photo else []
+  if route['side']!='bottom' or len(points)!=len(route['points']):raise ValueError('Registered route needs underside pixel correspondence')
+  if not all(inside_hull(p,region['anchorHull'])for p in points):raise ValueError('Route exceeds local registration hull')
+  if record['status']=='observed' and any(math.dist(project(region['photoToModel'],p),q)>0.000002 for p,q in zip(points,route['points'])):
+   raise ValueError('Observed route geometry differs from local photo projection')
+
 def review(layout):
  e=json.loads((ROOT/'bottom-landmarks.json').read_text())
  pads={(c['ref'],p['pin']):p['position']for c in layout['components']for p in c['pads']}
@@ -48,8 +87,8 @@ def review(layout):
   cross_checks.append(dict(ref=p['ref'],pin=p['pin'],topObservedPixel=observed,bottomProjectedTopPixel=projected,residualPixels=math.dist(observed,projected),nominalResidualMm=math.dist(project(metric,observed),project(metric,projected))))
  cross={'scope':'Direct original-photo correspondence with the same four anchors; top lead/socket surfaces may differ from underside hole centers. Nominal mm uses the top board-envelope calibration, not metrology. No PCB edits or copper assignment.', 'topPhotoSha256':hashlib.sha256((ROOT/top['photo']).read_bytes()).hexdigest(),'bottomToTop':cross_h,'checks':cross_checks,'maxCheckResidualMm':max(p['nominalResidualMm']for p in cross_checks)}
  maximum=max(p['residualMm']for p in rows if p['heldOut'])
- return {'schema':1,'scope':e['scope'],'photoSha256':hashlib.sha256((ROOT/e['photo']).read_bytes()).hexdigest(),'toleranceMm':e['toleranceMm'],'photoToModel':h,'modelToPhoto':inverse,'pins':rows,'maxCheckResidualMm':maximum,'withinPhotoTolerance':maximum<=e['toleranceMm'],'copperAssignmentQualified':False,'crossPhoto':cross,'localRegions':local_reviews(e,top_pins,metric)}
-def svg(report):
+ return {'schema':1,'scope':e['scope'],'photoSha256':hashlib.sha256((ROOT/e['photo']).read_bytes()).hexdigest(),'toleranceMm':e['toleranceMm'],'photoToModel':h,'modelToPhoto':inverse,'pins':rows,'maxCheckResidualMm':maximum,'withinPhotoTolerance':maximum<=e['toleranceMm'],'copperAssignmentQualified':False,'crossPhoto':cross,'localRegions':local_reviews(e,top_pins,metric),'pcbRegions':pcb_regions(e,pads)}
+def svg(report,layout=None):
  e=json.loads((ROOT/'bottom-landmarks.json').read_text());w,h=e['imageSize'];out=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}">',f'<image href="../{e["photo"]}" width="{w}" height="{h}"/>']
  for p in report['pins']:
   x,y=p['photoPixel'];a,b=p['pcbPixel'];color='lime' if p['heldOut']else 'cyan';label=p['ref']+':'+p['pin']
@@ -59,4 +98,15 @@ def svg(report):
    x,y=p['bottomPixel'];out.append(f'<circle cx="{x}" cy="{y}" r="8" fill="none" stroke="orange" stroke-width="3"/><text x="{x+12}" y="{y}" fill="white" font-size="14">Local {p["ref"]}:{p["pin"]}</text>')
   for p in region['candidates']:
    x,y=p['bottomPixel'];out.append(f'<circle cx="{x}" cy="{y}" r="10" fill="none" stroke="magenta" stroke-width="3"/><text x="{x+12}" y="{y}" fill="white" font-size="14">{p["id"]}?</text>')
+ for region in report.get('pcbRegions',[]):
+  points=' '.join(f'{x},{y}'for x,y in region['anchorHull'])
+  out.append(f'<polygon points="{points}" fill="none" stroke="cyan" stroke-width="3" stroke-dasharray="12 8"/>')
+  for p in region['checks']:
+   x,y=p['photoPixel'];out.append(f'<circle cx="{x}" cy="{y}" r="8" fill="none" stroke="orange" stroke-width="3"/>')
+ if layout:
+  for route in layout['routes']:
+   if not route['evidence'].get('registration'):continue
+   photo=next(s for s in route['evidence']['sources']if s['id']=='photo-bottom')
+   points=' '.join(f'{x},{y}'for x,y in photo['locator']['pixelSegment'])
+   out.append(f'<polyline points="{points}" fill="none" stroke="magenta" stroke-width="2"/>')
  return '\n'.join(out+['</svg>'])+'\n'

@@ -7,7 +7,7 @@ from pathlib import Path
 from geometry import arc_points, outline_polygon
 from route_evidence import annotate as annotate_routes
 from photo_registration import review as photo_review, svg as photo_svg
-from bottom_registration import review as bottom_review, svg as bottom_svg
+from bottom_registration import review as bottom_review, svg as bottom_svg, validate_registered_routes
 ROOT=Path(__file__).resolve().parents[1]
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(name,value):
@@ -76,10 +76,11 @@ def main():
  annotate_routes(routes,vias,json.loads((ROOT/'route-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()))
  outline=outline_polygon(edges)
  layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline,'components':placed,'unplaced':unplaced,'routes':routes,'vias':vias,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
+ bottom=bottom_review(layout);validate_registered_routes(routes,bottom,digest(ROOT/'bottom-landmarks.json'))
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
  write('layout.json',layout)
  photo=photo_review(layout);write('photo-registration.json',photo);write('photo-registration.svg',photo_svg(photo,layout))
- bottom=bottom_review(layout);write('bottom-registration.json',bottom);write('bottom-registration.svg',bottom_svg(bottom))
+ write('bottom-registration.json',bottom);write('bottom-registration.svg',bottom_svg(bottom,layout))
  # Semantic symbols preserve source numbered pins. ERC does not validate analog models.
  erc_summary=[{'type':v['type'],'severity':v['severity'],'description':v['description'],'items':[i['description'] for i in v['items']]} for v in violations]
  write('qualification.json',{'components':len(components),'placed':len(placed),'unplaced':len(unplaced),'padNetMismatches':mismatches,'electricalCopperSegments':len(routes),'unresolvedPhotoSegments':len(art),'erc':erc_summary,'drc':{'violations':dict(collections.Counter(v['type'] for v in drc_data['violations'])),'unconnectedItems':len(drc_data['unconnected_items'])},'limitations':['Signal pin directions are typed; power/passive terminals and analog behavior require separate review. Two isolated-label ERC warnings are RD_N (unused CPU output) and SHIELD (external cable shield).','Unrouted PCB, not fabrication ready. Photo graphics are not electrical copper.','Digital reference circuit; discrete pin numbering, specimen substitutions and analog timing remain unqualified; reset topology and bridge boundaries reviewed against Zander.']})

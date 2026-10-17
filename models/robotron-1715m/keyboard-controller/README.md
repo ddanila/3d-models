@@ -501,3 +501,31 @@ Current totals: 21 native resistors and one bridge, 37 unplaced components,
 dangling endpoint. Schematic connectivity and digital qualification are unchanged.
 Validation: 21 export checks, native KiCad integration and four mesh-contract
 checks pass. All twelve controller meshes are rebuilt together.
+
+### CPU-side partial clock trace and local underside projection
+
+A separate CPU/A4 region now maps the underside into native PCB coordinates.
+Its four anchors are A5:40, A4:1, A4:10 and A5:21, in convex boundary order.
+Six independent checks (A5:1/20/6/14 and A4:20/11) have maximum residual 0.661 mm
+against the existing photo-estimated pads, within the existing 1.25 mm tolerance.
+This is a reviewed local nominal projection, not measured board geometry or a
+qualification of the failing global underside registration. Its scope ends at
+the anchor hull; nearby external points cannot inherit the result.
+
+A5:6 now has four observed bottom CLK sections, plus one inferred attachment
+between the native pad and the observed joint. The visible track ends at a round
+terminal near original bottom pixel (1354, 2811). Its top-side correspondence,
+through-board construction and continuation toward BR1 are unresolved; no via
+or complete clock path is asserted. Width remains an estimated 0.35 mm.
+
+Each route binds the registration landmark hash and original photo segment.
+Export rejects stale calibration, unqualified regions, points outside the convex
+hull and observed geometry inconsistent with the projection. Regression checks
+exercise these rejection paths and a failing independent pad check. The bottom
+SVG shows the local hull, independent checks and original trace observations.
+
+Current totals: 30 assigned sections (21 observed, 9 inferred), 37 unplaced parts,
+229 airwires and two intentionally unfinished route endpoints (A1 and A5 CLK).
+The new path remains physically separate from the BR1/R10.3 clock island. Previous
+placements and routes are unchanged. Twenty-two export checks and native KiCad
+integration pass; schematic connectivity and digital qualification are unchanged.

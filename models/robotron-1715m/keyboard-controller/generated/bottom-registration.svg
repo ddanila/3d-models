@@ -16,4 +16,16 @@
 <circle cx="1426" cy="2796" r="8" fill="none" stroke="orange" stroke-width="3"/><text x="1438" y="2796" fill="white" font-size="14">Local A4:13</text>
 <circle cx="1619" cy="2715" r="10" fill="none" stroke="magenta" stroke-width="3"/><text x="1631" y="2715" fill="white" font-size="14">a1-track-terminal?</text>
 <circle cx="1620" cy="2745" r="10" fill="none" stroke="magenta" stroke-width="3"/><text x="1632" y="2745" fill="white" font-size="14">adjacent-terminal?</text>
+<polygon points="1116,2519 1514,2578 1519,2857 1125,3112" fill="none" stroke="cyan" stroke-width="3" stroke-dasharray="12 8"/>
+<circle cx="1303" cy="2519" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1312" cy="3107" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1424" cy="2581" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1426" cy="2859" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1306" cy="2678" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1309" cy="2927" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<polyline points="1306,2678 1306,2678" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1306,2678 1328,2678" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1328,2678 1360,2706" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1360,2706 1362,2798" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1362,2798 1354,2811" fill="none" stroke="magenta" stroke-width="2"/>
 </svg>

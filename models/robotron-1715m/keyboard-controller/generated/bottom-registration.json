@@ -303,6 +303,188 @@
     -1.7371481935679935e-05,
     1
   ],
+  "pcbRegions": [
+    {
+      "anchorHull": [
+        [
+          1116,
+          2519
+        ],
+        [
+          1514,
+          2578
+        ],
+        [
+          1519,
+          2857
+        ],
+        [
+          1125,
+          3112
+        ]
+      ],
+      "anchors": [
+        {
+          "photoPixel": [
+            1116,
+            2519
+          ],
+          "pin": "40",
+          "ref": "A5"
+        },
+        {
+          "photoPixel": [
+            1514,
+            2578
+          ],
+          "pin": "1",
+          "ref": "A4"
+        },
+        {
+          "photoPixel": [
+            1519,
+            2857
+          ],
+          "pin": "10",
+          "ref": "A4"
+        },
+        {
+          "photoPixel": [
+            1125,
+            3112
+          ],
+          "pin": "21",
+          "ref": "A5"
+        }
+      ],
+      "checks": [
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            37.859172,
+            4.217817
+          ],
+          "photoModel": [
+            38.187332260349585,
+            4.328166671675126
+          ],
+          "photoPixel": [
+            1303,
+            2519
+          ],
+          "pin": "1",
+          "ref": "A5",
+          "residualMm": 0.346216993389283
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            86.119074,
+            4.120733
+          ],
+          "photoModel": [
+            86.1615122993484,
+            4.2892163000303105
+          ],
+          "photoPixel": [
+            1312,
+            3107
+          ],
+          "pin": "20",
+          "ref": "A5",
+          "residualMm": 0.17374588237045582
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            43.383592,
+            -5.138428
+          ],
+          "photoModel": [
+            43.46490871729797,
+            -5.425002457520585
+          ],
+          "photoPixel": [
+            1424,
+            2581
+          ],
+          "pin": "20",
+          "ref": "A4",
+          "residualMm": 0.29788811358517814
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            66.24355,
+            -5.182088
+          ],
+          "photoModel": [
+            66.20880295954294,
+            -5.240950377023942
+          ],
+          "photoPixel": [
+            1426,
+            2859
+          ],
+          "pin": "11",
+          "ref": "A4",
+          "residualMm": 0.06835302662964814
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            50.559146,
+            4.192269
+          ],
+          "photoModel": [
+            51.2009001284816,
+            4.271717997159794
+          ],
+          "photoPixel": [
+            1306,
+            2678
+          ],
+          "pin": "6",
+          "ref": "A5",
+          "residualMm": 0.6466533109579479
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            70.879105,
+            4.151392
+          ],
+          "photoModel": [
+            71.5179816134099,
+            4.320911063176741
+          ],
+          "photoPixel": [
+            1309,
+            2927
+          ],
+          "pin": "14",
+          "ref": "A5",
+          "residualMm": 0.6609841450007934
+        }
+      ],
+      "copperAssignmentQualified": true,
+      "id": "cpu-a4",
+      "maxCheckResidualMm": 0.6609841450007934,
+      "photoToModel": [
+        0.0010793605058732362,
+        0.08227369450660345,
+        -170.42834421444337,
+        -0.08125144529442324,
+        0.0012081969962539035,
+        107.15967748795136,
+        -1.3543231394518928e-05,
+        7.402259194184552e-06,
+        1
+      ],
+      "scope": "Local nominal PCB projection spanning the CPU and A4, reviewed only inside the four-anchor convex hull. Independent checks include CPU CLK pin 6. This does not qualify the global underside fit, board dimensions or hidden continuity.",
+      "toleranceMm": 1.25
+    }
+  ],
   "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
   "photoToModel": [
     0.00028420502751475593,
@@ -538,7 +720,7 @@
     }
   ],
   "schema": 1,
-  "scope": "Underside solder-joint centers matched by DIP pin order, with horizontal reflection relative to top. Registration is relative to photo-estimated KiCad placements, not metrology. No copper assigned or artwork transformed by this review.",
+  "scope": "Underside solder-joint centers matched by DIP pin order, with horizontal reflection relative to top. Registration is relative to photo-estimated KiCad placements, not metrology. Global fit remains unqualified; separately reviewed PCB regions are limited to their anchor hulls.",
   "toleranceMm": 1.25,
   "withinPhotoTolerance": false
 }

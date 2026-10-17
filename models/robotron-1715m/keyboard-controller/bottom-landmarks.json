@@ -5,7 +5,7 @@
     3072,
     4080
   ],
-  "scope": "Underside solder-joint centers matched by DIP pin order, with horizontal reflection relative to top. Registration is relative to photo-estimated KiCad placements, not metrology. No copper assigned or artwork transformed by this review.",
+  "scope": "Underside solder-joint centers matched by DIP pin order, with horizontal reflection relative to top. Registration is relative to photo-estimated KiCad placements, not metrology. Global fit remains unqualified; separately reviewed PCB regions are limited to their anchor hulls.",
   "toleranceMm": 1.25,
   "pixelUncertainty": 8,
   "anchors": [
@@ -242,6 +242,97 @@
             3350
           ],
           "detail": "Tentative counterpart near A6; tests the danger of extending the A4 fit along the board. Not a qualified correspondence."
+        }
+      ]
+    }
+  ],
+  "pcbRegions": [
+    {
+      "id": "cpu-a4",
+      "scope": "Local nominal PCB projection spanning the CPU and A4, reviewed only inside the four-anchor convex hull. Independent checks include CPU CLK pin 6. This does not qualify the global underside fit, board dimensions or hidden continuity.",
+      "reviewedForCopper": true,
+      "anchors": [
+        {
+          "ref": "A5",
+          "pin": "40",
+          "photoPixel": [
+            1116,
+            2519
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "1",
+          "photoPixel": [
+            1514,
+            2578
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "10",
+          "photoPixel": [
+            1519,
+            2857
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "21",
+          "photoPixel": [
+            1125,
+            3112
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "A5",
+          "pin": "1",
+          "photoPixel": [
+            1303,
+            2519
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "20",
+          "photoPixel": [
+            1312,
+            3107
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "20",
+          "photoPixel": [
+            1424,
+            2581
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "11",
+          "photoPixel": [
+            1426,
+            2859
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "6",
+          "photoPixel": [
+            1306,
+            2678
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "14",
+          "photoPixel": [
+            1309,
+            2927
+          ]
         }
       ]
     }

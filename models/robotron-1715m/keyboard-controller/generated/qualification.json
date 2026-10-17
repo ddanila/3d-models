@@ -3,10 +3,10 @@
   "drc": {
     "unconnectedItems": 229,
     "violations": {
-      "track_dangling": 1
+      "track_dangling": 2
     }
   },
-  "electricalCopperSegments": 25,
+  "electricalCopperSegments": 30,
   "erc": [
     {
       "description": "Label connected to only one pin",
