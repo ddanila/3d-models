@@ -176,8 +176,9 @@ Zander's terminal labels; verify connector orientation before physical probing.
 in the original underside photograph. `generated/bottom-registration.svg` shows
 anchors in cyan, check observations in green and projected PCB pads in red.
 The reflected homography uses the current KiCad placements as its target, so it
-checks relative registration rather than measured board dimensions. Two A1 check
-pads fail the unchanged 1.25 mm tolerance; CPU corner checks are about 1.0–1.1 mm.
+checks relative registration rather than measured board dimensions. After recounting the CPU rows, all six PCB-relative checks fail the unchanged
+1.25 mm tolerance, at about 1.41–1.70 mm. Earlier lower CPU checks selected features
+below the twenty-pin rows; the superseded observations remain in the evidence.
 `generated/bottom-registration.json` retains residuals and both transform matrices.
 This audit does not move the PCB, warp artwork or authorize net assignments.
 
@@ -186,3 +187,14 @@ photo-estimated placement uses four corner leads and four held-out right-side
 leads; the maximum residual is about 1.11 mm. The socket obscures board holes and
 the replacement EPROM identity remains unread. Orientation is now photo-supported,
 while exact package-to-board alignment and firmware identity remain open.
+
+
+The `crossPhoto` report independently maps the underside photograph to the original
+top-photo observations using the same four anchors. It does not target the rigid
+PCB footprint positions. A1 checks agree within 0.41 nominal mm; corrected CPU
+checks span 0.89–1.28 mm. This distinguishes direct image correspondence from the
+additional discrepancy introduced by nominal calibration and rigid package fitting.
+Top leads/socket surfaces can obscure hole centres, so this comparison still does
+not establish a measured board plane or authorize copper assignment. The original
+1.25 mm tolerance remains unchanged. Obtain physical dimensions and review more
+shared pads before promoting a global registration.

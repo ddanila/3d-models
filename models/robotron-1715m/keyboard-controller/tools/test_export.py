@@ -32,6 +32,10 @@ class ControllerExportTests(unittest.TestCase):
   self.assertEqual(sum(p['heldOut']for p in report['pins']),6)
   self.assertFalse(report['withinPhotoTolerance']);self.assertFalse(report['copperAssignmentQualified'])
   self.assertGreater(report['maxCheckResidualMm'],report['toleranceMm'])
+  self.assertEqual(len(report['crossPhoto']['checks']),6)
+  cross={p['ref']+':'+p['pin']:p for p in report['crossPhoto']['checks']}
+  self.assertLess(cross['A1:7']['nominalResidualMm'],.5)
+  self.assertGreater(report['crossPhoto']['maxCheckResidualMm'],report['toleranceMm'])
   e=json.loads((R/'bottom-landmarks.json').read_text());e['checks'][0]=e['anchors'][0]
   with patch('bottom_registration.Path.read_text',return_value=json.dumps(e)):
    with self.assertRaisesRegex(ValueError,'unique'):bottom_review(layout)

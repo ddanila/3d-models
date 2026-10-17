@@ -1,7 +1,7 @@
 {
   "outputs": {
-    "generated/bottom-registration.json": "87c7a3f96579868cf0e5d7769767f78903e5cea934fd614df6320fe58b7e3de8",
-    "generated/bottom-registration.svg": "6b972a15f66aec10a53280ce19ec1c5cb11df9a6bed9c06df14029eb47422a33",
+    "generated/bottom-registration.json": "a5416affcd15cdb217407483567bafa355c51c31cd5bf96a8a4b904f5dadfb22",
+    "generated/bottom-registration.svg": "02831ce524eae916f25f856ce833cb5c1c9643626b9aa724987318faffcf2840",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
     "generated/controller.scad": "00a572f5041503601ed2bb0a4394fac3d0bef7e2bf70a8115f213e9778b54ffa",
     "generated/layout.json": "d48cfbf865587975bd4fbac761f71f43585bf69e7323cfa817b9352706a4b780",
@@ -14,17 +14,17 @@
   "sources": {
     "../reference/photos/PXL_20261012_123622947.jpg": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
     "../reference/photos/PXL_20261012_123648677.jpg": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
-    "bottom-landmarks.json": "416432441050f9f291d0396a51a2c691c1edc2aaa9687b7371f518e045edeb18",
+    "bottom-landmarks.json": "252f7f096542374e595d7c209d5d2063bfeb9135d04695cab08a56fdb9fa22ed",
     "component-evidence.json": "0333844537065bbe7e7d573291be87ff636ee17583eb3a76fb0cbdd89e54dbc6",
     "controller.kicad_pcb": "02e6c87856f059be7cd8018571353bfd9d4ef623954e00a83bd031f7ee5de12a",
     "controller.kicad_pro": "6583dcdffccee3fd6c5e10ab0e3e900b75a7054cc98669379d044c91cda33356",
     "controller.kicad_sch": "48333fb758f58072685591a6323867efc31e6a390c673e7dd1967048f0935b29",
-    "evidence.json": "8076e5193e15004d631131ca57c15b440f56d35279a30c190d5000f59b3b3748",
+    "evidence.json": "60754d60709ccda477b356591723cfb9cf310adee5a2d2ab417cf520ef27aabe",
     "fp-lib-table": "f6503b3e185475d8be43527f0ee177079a36e60001ae5ad21a1ababaed9f28bd",
     "kbd.kicad_sym": "a9f4644c44fc6a06746ee9187881c8c4e1e4c1ad4246b95f673bdf53d570e8e1",
     "photo-landmarks.json": "bca0d2f458923f982f1a3447036a07e3803cf111a8ea9ae6b3b781d370e8215a",
     "sym-lib-table": "27194f2ba44182e9ce1b0fd5db14f03003a7cefcf53a287c7cb9d8b8e361a841",
-    "tools/bottom_registration.py": "1fe76e3c8e7021849928e57b3536a4fc811edd59a92e82fe629b8cc19134a700",
+    "tools/bottom_registration.py": "36f1cf8ac971be978d2da9af9da346b56117eaceb4c1ef9d7d1c57edd06d854b",
     "tools/export.py": "2199d7485422847d6af6eb4e39ed94098b7905c7b38733bc7e5481213ad09794",
     "tools/geometry.py": "be71777d095f87f7f53643239e274989006de4ead1ad7181478d502e05351780",
     "tools/photo_registration.py": "b0159daa27e717778f506c0d52f1f352ac1462a710c804952582f77eb2d30597"

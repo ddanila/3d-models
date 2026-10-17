@@ -47,24 +47,24 @@
       "ref": "A5",
       "pin": "1",
       "photoPixel": [
-        1300,
-        2525
+        1303,
+        2519
       ]
     },
     {
       "ref": "A5",
       "pin": "40",
       "photoPixel": [
-        1115,
-        2525
+        1116,
+        2519
       ]
     },
     {
       "ref": "A5",
       "pin": "20",
       "photoPixel": [
-        1310,
-        3138
+        1312,
+        3107
       ]
     },
     {
@@ -72,7 +72,7 @@
       "pin": "21",
       "photoPixel": [
         1125,
-        3138
+        3112
       ]
     },
     {
@@ -89,6 +89,46 @@
       "photoPixel": [
         1400,
         1505
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "date": "2026-10-17",
+      "finding": "Recounted twenty CPU solder joints per row. Former lower-corner checks at y3138 selected features below the CPU rows. Refined all four CPU corners at joint centers, retaining the same four fitting anchors.",
+      "supersededChecks": [
+        {
+          "ref": "A5",
+          "pin": "1",
+          "photoPixel": [
+            1300,
+            2525
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "40",
+          "photoPixel": [
+            1115,
+            2525
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "20",
+          "photoPixel": [
+            1310,
+            3138
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "21",
+          "photoPixel": [
+            1125,
+            3138
+          ]
+        }
       ]
     }
   ]

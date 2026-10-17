@@ -58,7 +58,7 @@
     {
       "id": "dimensions",
       "status": "estimated",
-      "detail": "Nominal 270 by 46 by 1.6 mm envelope. Nine DIP placements fitted to numbered top-photo landmarks with held-out checks; A8 socket obscures board hole centers. Independent underside review fails tolerance at two A1 check pads; no artwork warp or copper assignment promoted. See generated/photo-registration.json and bottom-registration.json."
+      "detail": "Nominal 270 by 46 by 1.6 mm envelope. Nine DIP placements fitted to top-photo landmarks; A8 socket obscures board hole centers. Recounted underside CPU rows: six PCB-relative checks fail (1.41\u20131.70 mm). Direct photo-to-photo checks range 0.17\u20131.28 nominal mm, separating image correspondence from rigid placement/calibration discrepancy. No artwork warp or copper assignment promoted."
     },
     {
       "id": "specimen-timing",
