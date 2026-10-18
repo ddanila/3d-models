@@ -1005,15 +1005,55 @@
     "referenceType": "8x4k7",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "note": "Inner upright bank on the opposite side of the sensing-transistor region; body identity follows factory placement and primary photo context. Native placement and numbered lead mapping remain unresolved; reference resistance is not a measured specimen value.",
+    "placementAuthority": "controller.kicad_pcb",
+    "bodyIdentification": {
+      "photoSource": "photo-top",
+      "pixelBox": [
+        1420,
+        870,
+        1480,
+        1220
+      ],
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Body-region locator only. Not pad centres, dimensional calibration or terminal numbering."
+    }
   },
   "R1": {
     "referenceType": "8x910",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "note": "Edge-side upright bank beside the sensing-transistor row; body identity follows factory placement and primary photo context. Native placement and numbered lead mapping remain unresolved; reference resistance is not a measured specimen value.",
+    "placementAuthority": "controller.kicad_pcb",
+    "bodyIdentification": {
+      "photoSource": "photo-top",
+      "pixelBox": [
+        1200,
+        960,
+        1260,
+        1340
+      ],
+      "identitySource": "robotron-factory-drawings",
+      "identityLocator": "PDF page 10, drawing 63-330-4103-2",
+      "scope": "Body-region locator only. Not pad centres, dimensional calibration or terminal numbering."
+    },
+    "specimenMarkings": [
+      {
+        "specimen": "comparison-20261017",
+        "photoSource": "comparison-photo-080450163",
+        "marking": "3894",
+        "additionalMarking": "V D and logo",
+        "pixelBox": [
+          1450,
+          1250,
+          3100,
+          1930
+        ],
+        "readingRotationDegrees": 180,
+        "scope": "Separate specimen. Marking meaning unresolved; no resistance value, date code or primary-board marking inferred."
+      }
+    ]
   },
   "V4.3": {
     "referenceType": "SC308C",

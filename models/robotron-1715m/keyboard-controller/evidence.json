@@ -302,9 +302,9 @@
       "specimenId": "comparison-20261017",
       "side": "oblique",
       "refs": [
-        "A1"
+        "R1"
       ],
-      "use": "White logic package marking and lead profile. Separate specimen; comparison evidence only, not primary-specimen placement or continuity."
+      "use": "Oblique face and lead view of the edge-side upright resistor bank, identified as R1 by its position beside the sensing-transistor row in factory placement drawing 63-330-4103-2. Not an A1 logic-package close-up. Separate specimen; marking and geometry do not establish primary pin order or resistance."
     },
     {
       "id": "comparison-photo-080502586",
@@ -706,6 +706,19 @@
       ],
       "finding": "No keyboard solder-side copper drawing identified in this 50-page source. The contents list keyboard layout, populated placement and schematic. This is a scoped search result, not proof that no copper drawing exists elsewhere.",
       "remainingUse": "Placement identities and schematic connectivity can be reviewed against these sheets; precise specimen routing still needs photo or continuity evidence."
+    },
+    {
+      "source": "comparison-photo-080450163",
+      "reviewDate": "2026-10-18",
+      "method": "Read the face after rotating the comparison photograph 180 degrees; compare its board-edge and transistor-row context with factory placement PDF page 10 and the primary top photograph.",
+      "finding": "The upright white bank corresponds to R1, not A1. The visible face reads 3894 and V D beside a logo; the meaning of those markings is unresolved.",
+      "identityBasis": {
+        "source": "robotron-factory-drawings",
+        "pdfPage": 10,
+        "drawing": "63-330-4103-2",
+        "detail": "R1 lies between the sensing-transistor row and the long board edge; R2 lies on the other side of the sensing-transistor region. This identifies bodies, not numbered terminals."
+      },
+      "remainingUse": "Package appearance and lead construction. Reference terminal order, common terminal, resistance and primary board entries require separate evidence."
     }
   ],
   "routeReviews": [
