@@ -408,6 +408,208 @@
           ]
         }
       ]
+    },
+    {
+      "id": "matrix-col11",
+      "scope": "Local underside fit from the A1/A2.1 penultimate joint row to A2.2/A2.3. Reviewed only inside the anchor hull for X1:B8 to A2.1:6 COL11; endpoint adjustments remain inferred. Nominal scale, not measured continuity or dimensions.",
+      "reviewedForCopper": true,
+      "anchors": [
+        {
+          "ref": "A2.1",
+          "pin": "9",
+          "photoPixel": [
+            1103,
+            1476
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "6",
+          "photoPixel": [
+            1495,
+            1475
+          ]
+        },
+        {
+          "ref": "A2.2",
+          "pin": "1",
+          "photoPixel": [
+            1420,
+            2252
+          ]
+        },
+        {
+          "ref": "A2.3",
+          "pin": "14",
+          "photoPixel": [
+            1112,
+            2254
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "A2.1",
+          "pin": "6",
+          "photoPixel": [
+            1194,
+            1477
+          ]
+        },
+        {
+          "ref": "A2.1",
+          "pin": "8",
+          "photoPixel": [
+            1104,
+            1507
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "7",
+          "photoPixel": [
+            1495,
+            1505
+          ]
+        },
+        {
+          "ref": "A2.1",
+          "pin": "7",
+          "photoPixel": [
+            1194,
+            1507
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "8",
+          "photoPixel": [
+            1400,
+            1505
+          ]
+        },
+        {
+          "ref": "A2.2",
+          "pin": "14",
+          "photoPixel": [
+            1329,
+            2252
+          ]
+        },
+        {
+          "ref": "A2.3",
+          "pin": "1",
+          "photoPixel": [
+            1205,
+            2254
+          ]
+        }
+      ]
+    },
+    {
+      "id": "matrix-upper-expanded",
+      "scope": "Rejected wider fit: uppermost A1/A2.1 joints to A2.2/A2.3. Independent A2.1:8 residual exceeds the existing tolerance. Retained for comparison; not qualified for copper or connector placement.",
+      "reviewedForCopper": false,
+      "anchors": [
+        {
+          "ref": "A2.1",
+          "pin": "14",
+          "photoPixel": [
+            1098,
+            1325
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "1",
+          "photoPixel": [
+            1492,
+            1327
+          ]
+        },
+        {
+          "ref": "A2.2",
+          "pin": "1",
+          "photoPixel": [
+            1420,
+            2252
+          ]
+        },
+        {
+          "ref": "A2.3",
+          "pin": "14",
+          "photoPixel": [
+            1112,
+            2254
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "A2.1",
+          "pin": "1",
+          "photoPixel": [
+            1190,
+            1327
+          ]
+        },
+        {
+          "ref": "A2.1",
+          "pin": "6",
+          "photoPixel": [
+            1194,
+            1477
+          ]
+        },
+        {
+          "ref": "A2.1",
+          "pin": "8",
+          "photoPixel": [
+            1104,
+            1507
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "7",
+          "photoPixel": [
+            1495,
+            1505
+          ]
+        },
+        {
+          "ref": "A2.1",
+          "pin": "7",
+          "photoPixel": [
+            1194,
+            1507
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "8",
+          "photoPixel": [
+            1400,
+            1505
+          ]
+        },
+        {
+          "ref": "A2.2",
+          "pin": "14",
+          "photoPixel": [
+            1329,
+            2252
+          ]
+        },
+        {
+          "ref": "A2.3",
+          "pin": "1",
+          "photoPixel": [
+            1205,
+            2254
+          ]
+        }
+      ]
     }
   ]
 }

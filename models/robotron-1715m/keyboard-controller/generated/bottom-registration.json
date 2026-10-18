@@ -627,6 +627,420 @@
       ],
       "scope": "Local underside projection between the surrounding A1/A2 packages; connector observations lie inside the anchor hull. DIP joints provide independent checks. Nominal geometry only; no X1 terminal mapping or copper assignment.",
       "toleranceMm": 1.25
+    },
+    {
+      "anchorHull": [
+        [
+          1103,
+          1476
+        ],
+        [
+          1495,
+          1475
+        ],
+        [
+          1420,
+          2252
+        ],
+        [
+          1112,
+          2254
+        ]
+      ],
+      "anchors": [
+        {
+          "photoPixel": [
+            1103,
+            1476
+          ],
+          "pin": "9",
+          "ref": "A2.1"
+        },
+        {
+          "photoPixel": [
+            1495,
+            1475
+          ],
+          "pin": "6",
+          "ref": "A1"
+        },
+        {
+          "photoPixel": [
+            1420,
+            2252
+          ],
+          "pin": "1",
+          "ref": "A2.2"
+        },
+        {
+          "photoPixel": [
+            1112,
+            2254
+          ],
+          "pin": "14",
+          "ref": "A2.3"
+        }
+      ],
+      "checks": [
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -45.198682,
+            13.047886
+          ],
+          "photoModel": [
+            -45.18681041976664,
+            13.18531410164856
+          ],
+          "photoPixel": [
+            1194,
+            1477
+          ],
+          "pin": "6",
+          "ref": "A2.1",
+          "residualMm": 0.13793990553847707
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -43.019438,
+            20.778791
+          ],
+          "photoModel": [
+            -43.00698481331672,
+            20.508270522832564
+          ],
+          "photoPixel": [
+            1104,
+            1507
+          ],
+          "pin": "8",
+          "ref": "A2.1",
+          "residualMm": 0.27080696155280937
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            -41.855264,
+            -11.647483
+          ],
+          "photoModel": [
+            -41.911706576758746,
+            -11.729351558067243
+          ],
+          "photoPixel": [
+            1495,
+            1505
+          ],
+          "pin": "7",
+          "ref": "A1",
+          "residualMm": 0.09943955586775749
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -42.661486,
+            13.167203
+          ],
+          "photoModel": [
+            -42.71866930574885,
+            13.133851269131881
+          ],
+          "photoPixel": [
+            1194,
+            1507
+          ],
+          "pin": "7",
+          "ref": "A2.1",
+          "residualMm": 0.066198703977238
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -42.104946,
+            -4.031575
+          ],
+          "photoModel": [
+            -42.21953086743126,
+            -3.847648345789859
+          ],
+          "photoPixel": [
+            1400,
+            1505
+          ],
+          "pin": "8",
+          "ref": "A1",
+          "residualMm": 0.2166995753876243
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            16.105095,
+            1.830645
+          ],
+          "photoModel": [
+            15.951674291653017,
+            1.3632973101306478
+          ],
+          "photoPixel": [
+            1329,
+            2252
+          ],
+          "pin": "14",
+          "ref": "A2.2",
+          "residualMm": 0.4918859389898331
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            15.297968,
+            10.685617
+          ],
+          "photoModel": [
+            15.579390018586674,
+            11.061083460245175
+          ],
+          "photoPixel": [
+            1205,
+            2254
+          ],
+          "pin": "1",
+          "ref": "A2.3",
+          "residualMm": 0.4692264009137166
+        }
+      ],
+      "copperAssignmentQualified": true,
+      "id": "matrix-col11",
+      "maxCheckResidualMm": 0.4918859389898331,
+      "photoToModel": [
+        0.0044536665788049755,
+        0.0861324321471277,
+        -181.64836154575454,
+        -0.08970662276162254,
+        -0.000853746121623263,
+        122.70167343093165,
+        -2.242457137827032e-05,
+        7.695646216619655e-05,
+        1
+      ],
+      "scope": "Local underside fit from the A1/A2.1 penultimate joint row to A2.2/A2.3. Reviewed only inside the anchor hull for X1:B8 to A2.1:6 COL11; endpoint adjustments remain inferred. Nominal scale, not measured continuity or dimensions.",
+      "toleranceMm": 1.25
+    },
+    {
+      "anchorHull": [
+        [
+          1098,
+          1325
+        ],
+        [
+          1492,
+          1327
+        ],
+        [
+          1420,
+          2252
+        ],
+        [
+          1112,
+          2254
+        ]
+      ],
+      "anchors": [
+        {
+          "photoPixel": [
+            1098,
+            1325
+          ],
+          "pin": "14",
+          "ref": "A2.1"
+        },
+        {
+          "photoPixel": [
+            1492,
+            1327
+          ],
+          "pin": "1",
+          "ref": "A1"
+        },
+        {
+          "photoPixel": [
+            1420,
+            2252
+          ],
+          "pin": "1",
+          "ref": "A2.2"
+        },
+        {
+          "photoPixel": [
+            1112,
+            2254
+          ],
+          "pin": "14",
+          "ref": "A2.3"
+        }
+      ],
+      "checks": [
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -57.884662,
+            12.451299
+          ],
+          "photoModel": [
+            -57.84824160717082,
+            12.598812323978951
+          ],
+          "photoPixel": [
+            1190,
+            1327
+          ],
+          "pin": "1",
+          "ref": "A2.1",
+          "residualMm": 0.15194283716302803
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -45.198682,
+            13.047886
+          ],
+          "photoModel": [
+            -45.53529328748507,
+            12.215425921034111
+          ],
+          "photoPixel": [
+            1194,
+            1477
+          ],
+          "pin": "6",
+          "ref": "A2.1",
+          "residualMm": 0.897940388853431
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -43.019438,
+            20.778791
+          ],
+          "photoModel": [
+            -43.35167805626891,
+            19.44515593132728
+          ],
+          "photoPixel": [
+            1104,
+            1507
+          ],
+          "pin": "8",
+          "ref": "A2.1",
+          "residualMm": 1.3743965771869664
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            -41.855264,
+            -11.647483
+          ],
+          "photoModel": [
+            -42.393082877866476,
+            -12.257836041700845
+          ],
+          "photoPixel": [
+            1495,
+            1505
+          ],
+          "pin": "7",
+          "ref": "A1",
+          "residualMm": 0.8134986053479326
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -42.661486,
+            13.167203
+          ],
+          "photoModel": [
+            -43.0953411509025,
+            12.20389749616645
+          ],
+          "photoPixel": [
+            1194,
+            1507
+          ],
+          "pin": "7",
+          "ref": "A2.1",
+          "residualMm": 1.0564978872106867
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -42.104946,
+            -4.031575
+          ],
+          "photoModel": [
+            -42.667432611101134,
+            -4.496523676166767
+          ],
+          "photoPixel": [
+            1400,
+            1505
+          ],
+          "pin": "8",
+          "ref": "A1",
+          "residualMm": 0.7297728818867341
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            16.105095,
+            1.830645
+          ],
+          "photoModel": [
+            15.950231629844112,
+            1.3702400214594177
+          ],
+          "photoPixel": [
+            1329,
+            2252
+          ],
+          "pin": "14",
+          "ref": "A2.2",
+          "residualMm": 0.48575241397340824
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            15.297968,
+            10.685617
+          ],
+          "photoModel": [
+            15.58010525896847,
+            11.069347968711268
+          ],
+          "photoPixel": [
+            1205,
+            2254
+          ],
+          "pin": "1",
+          "ref": "A2.3",
+          "residualMm": 0.4762886616814739
+        }
+      ],
+      "copperAssignmentQualified": false,
+      "id": "matrix-upper-expanded",
+      "maxCheckResidualMm": 1.3743965771869664,
+      "photoToModel": [
+        0.004112782555027319,
+        0.08250254396500224,
+        -174.12864545999798,
+        -0.08431690012346903,
+        0.0001925646812347805,
+        113.09535052052013,
+        -2.6439725411860567e-05,
+        4.8530325133104946e-05,
+        1
+      ],
+      "scope": "Rejected wider fit: uppermost A1/A2.1 joints to A2.2/A2.3. Independent A2.1:8 residual exceeds the existing tolerance. Retained for comparison; not qualified for copper or connector placement.",
+      "toleranceMm": 1.25
     }
   ],
   "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",

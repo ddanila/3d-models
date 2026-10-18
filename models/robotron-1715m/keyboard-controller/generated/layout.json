@@ -1505,7 +1505,7 @@
           "pin": "17",
           "position": [
             78.49909,
-            4.136071
+            4.136072
           ],
           "ref": "A5",
           "size": [
@@ -1879,7 +1879,7 @@
           "pin": "37",
           "position": [
             45.509814,
-            19.442449
+            19.442448
           ],
           "ref": "A5",
           "size": [
@@ -5766,6 +5766,390 @@
       ],
       "side": "top",
       "width": 1.0
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside COL11 trace between X1:B8 and A2.1:6, projected inside the qualified local anchor hull. Width is an illustrative 0.35 mm; reference numbering and photo continuity are not measured continuity. The intermediate solder eye does not establish an unseen top-side continuation.",
+        "geometrySha256": "67b61efaebcb81d2961c2a6cc3cfae6d576c9473cc07741bf03f92a8183e8f44",
+        "group": "x1-b8-col11-bottom",
+        "registration": {
+          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "region": "matrix-col11"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1212,
+                  1526
+                ],
+                [
+                  1212,
+                  1493
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "29273a1f-ce06-4b43-b079-5d458e4c4641",
+      "net": "/COL11",
+      "points": [
+        [
+          -41.102627,
+          11.625177
+        ],
+        [
+          -43.811743,
+          11.67822
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside COL11 trace between X1:B8 and A2.1:6, projected inside the qualified local anchor hull. Width is an illustrative 0.35 mm; reference numbering and photo continuity are not measured continuity. The intermediate solder eye does not establish an unseen top-side continuation.",
+        "geometrySha256": "c991966aed6ae96f4802dfa2b468bed756c8cbfaa62ea569954d0a0bf8802ffd",
+        "group": "x1-b8-col11-bottom",
+        "registration": {
+          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "region": "matrix-col11"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1198,
+                  1892
+                ],
+                [
+                  1195,
+                  1552
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "386c4fbe-1f57-49ea-a48f-33ee32e52463",
+      "net": "/COL11",
+      "points": [
+        [
+          -11.933374,
+          12.172523
+        ],
+        [
+          -39.032739,
+          12.975232
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside COL11 trace between X1:B8 and A2.1:6, projected inside the qualified local anchor hull. Width is an illustrative 0.35 mm; reference numbering and photo continuity are not measured continuity. The intermediate solder eye does not establish an unseen top-side continuation.",
+        "geometrySha256": "53e809bd655428cd254d85211eac76286dc1911c83a12eeb6a3ee5a9648a688f",
+        "group": "x1-b8-col11-bottom",
+        "registration": {
+          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "region": "matrix-col11"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1210,
+                  1537
+                ],
+                [
+                  1212,
+                  1526
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "43ab43a6-6b86-460e-9484-bf8e57b355a3",
+      "net": "/COL11",
+      "points": [
+        [
+          -40.208902,
+          11.771499
+        ],
+        [
+          -41.102627,
+          11.625177
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside COL11 trace between X1:B8 and A2.1:6, projected inside the qualified local anchor hull. Width is an illustrative 0.35 mm; reference numbering and photo continuity are not measured continuity. The intermediate solder eye does not establish an unseen top-side continuation.",
+        "geometrySha256": "4a939fd2e35e05fb64e4b477693fab0b17e820fbd0858a47ab927ca9772245ce",
+        "group": "x1-b8-col11-bottom",
+        "registration": {
+          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "region": "matrix-col11"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1233,
+                  1925
+                ],
+                [
+                  1198,
+                  1892
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "93ac8d07-5a1b-49aa-a302-1645e9ee4d67",
+      "net": "/COL11",
+      "points": [
+        [
+          -9.238854,
+          9.326215
+        ],
+        [
+          -11.933374,
+          12.172523
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Estimated attachment between registered photo joint and native reference pad. Width is an illustrative 0.35 mm; reference numbering and photo continuity are not measured continuity. The intermediate solder eye does not establish an unseen top-side continuation.",
+        "geometrySha256": "a5709f1f05569202e18acb392e8dd82c0ef84b327fe7be2eeb90c0fb1b4bc965",
+        "group": "x1-b8-col11-bottom",
+        "registration": {
+          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "region": "matrix-col11"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1233,
+                  1925
+                ],
+                [
+                  1233,
+                  1925
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "inferred"
+      },
+      "id": "aec6e549-e6ca-47b9-abb8-e21a60071713",
+      "net": "/COL11",
+      "points": [
+        [
+          -9.148487,
+          9.407662
+        ],
+        [
+          -9.238854,
+          9.326215
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Estimated attachment between registered photo joint and native reference pad. Width is an illustrative 0.35 mm; reference numbering and photo continuity are not measured continuity. The intermediate solder eye does not establish an unseen top-side continuation.",
+        "geometrySha256": "9475f631cbb40c1678587d74b8f1548571de484eca9213971ea75daa6ac9fc0b",
+        "group": "x1-b8-col11-bottom",
+        "registration": {
+          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "region": "matrix-col11"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1194,
+                  1477
+                ],
+                [
+                  1194,
+                  1477
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "inferred"
+      },
+      "id": "c2716302-f12c-44e3-bbc8-d3f90c6e00cb",
+      "net": "/COL11",
+      "points": [
+        [
+          -45.18681,
+          13.185314
+        ],
+        [
+          -45.198682,
+          13.047886
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside COL11 trace between X1:B8 and A2.1:6, projected inside the qualified local anchor hull. Width is an illustrative 0.35 mm; reference numbering and photo continuity are not measured continuity. The intermediate solder eye does not establish an unseen top-side continuation.",
+        "geometrySha256": "1a9f26e98331293a9a2ff4f8e700b2a07b0afdaf44827420e8778ae2c1ff2530",
+        "group": "x1-b8-col11-bottom",
+        "registration": {
+          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "region": "matrix-col11"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1195,
+                  1552
+                ],
+                [
+                  1210,
+                  1537
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "c8676d4e-0ec7-4f8b-8311-3ffeb9fb96cb",
+      "net": "/COL11",
+      "points": [
+        [
+          -39.032739,
+          12.975232
+        ],
+        [
+          -40.208902,
+          11.771499
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside COL11 trace between X1:B8 and A2.1:6, projected inside the qualified local anchor hull. Width is an illustrative 0.35 mm; reference numbering and photo continuity are not measured continuity. The intermediate solder eye does not establish an unseen top-side continuation.",
+        "geometrySha256": "4bf4728c9140321d470f76049ba2bf538be98d8cc688f35e43ed86e728efc637",
+        "group": "x1-b8-col11-bottom",
+        "registration": {
+          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "region": "matrix-col11"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1212,
+                  1493
+                ],
+                [
+                  1194,
+                  1477
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "f81ba08c-6324-4c7c-8355-1405c8745354",
+      "net": "/COL11",
+      "points": [
+        [
+          -43.811743,
+          11.67822
+        ],
+        [
+          -45.18681,
+          13.185314
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
     },
     {
       "evidence": {
