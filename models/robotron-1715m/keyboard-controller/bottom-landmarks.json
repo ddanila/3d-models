@@ -335,6 +335,79 @@
           ]
         }
       ]
+    },
+    {
+      "id": "matrix-connector",
+      "scope": "Local underside projection between the surrounding A1/A2 packages; connector observations lie inside the anchor hull. DIP joints provide independent checks. Nominal geometry only; no X1 terminal mapping or copper assignment.",
+      "reviewedForCopper": false,
+      "anchors": [
+        {
+          "ref": "A2.1",
+          "pin": "8",
+          "photoPixel": [
+            1104,
+            1507
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "7",
+          "photoPixel": [
+            1495,
+            1505
+          ]
+        },
+        {
+          "ref": "A2.2",
+          "pin": "1",
+          "photoPixel": [
+            1420,
+            2252
+          ]
+        },
+        {
+          "ref": "A2.3",
+          "pin": "14",
+          "photoPixel": [
+            1112,
+            2254
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "A2.1",
+          "pin": "7",
+          "photoPixel": [
+            1194,
+            1507
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "8",
+          "photoPixel": [
+            1400,
+            1505
+          ]
+        },
+        {
+          "ref": "A2.2",
+          "pin": "14",
+          "photoPixel": [
+            1329,
+            2252
+          ]
+        },
+        {
+          "ref": "A2.3",
+          "pin": "1",
+          "photoPixel": [
+            1205,
+            2254
+          ]
+        }
+      ]
     }
   ]
 }

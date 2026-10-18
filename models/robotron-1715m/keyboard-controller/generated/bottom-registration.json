@@ -483,6 +483,150 @@
       ],
       "scope": "Local nominal PCB projection spanning the CPU and A4, reviewed only inside the four-anchor convex hull. Independent checks include CPU CLK pin 6. This does not qualify the global underside fit, board dimensions or hidden continuity.",
       "toleranceMm": 1.25
+    },
+    {
+      "anchorHull": [
+        [
+          1104,
+          1507
+        ],
+        [
+          1495,
+          1505
+        ],
+        [
+          1420,
+          2252
+        ],
+        [
+          1112,
+          2254
+        ]
+      ],
+      "anchors": [
+        {
+          "photoPixel": [
+            1104,
+            1507
+          ],
+          "pin": "8",
+          "ref": "A2.1"
+        },
+        {
+          "photoPixel": [
+            1495,
+            1505
+          ],
+          "pin": "7",
+          "ref": "A1"
+        },
+        {
+          "photoPixel": [
+            1420,
+            2252
+          ],
+          "pin": "1",
+          "ref": "A2.2"
+        },
+        {
+          "photoPixel": [
+            1112,
+            2254
+          ],
+          "pin": "14",
+          "ref": "A2.3"
+        }
+      ],
+      "checks": [
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -42.661486,
+            13.167203
+          ],
+          "photoModel": [
+            -42.714927722535094,
+            13.355208344190563
+          ],
+          "photoPixel": [
+            1194,
+            1507
+          ],
+          "pin": "7",
+          "ref": "A2.1",
+          "residualMm": 0.19545338869339238
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            -42.104946,
+            -4.031575
+          ],
+          "photoModel": [
+            -42.179926052565555,
+            -3.7257059961930836
+          ],
+          "photoPixel": [
+            1400,
+            1505
+          ],
+          "pin": "8",
+          "ref": "A1",
+          "residualMm": 0.31492515900221313
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            16.105095,
+            1.830645
+          ],
+          "photoModel": [
+            15.952147338755838,
+            1.359419178115273
+          ],
+          "photoPixel": [
+            1329,
+            2252
+          ],
+          "pin": "14",
+          "ref": "A2.2",
+          "residualMm": 0.4954258393453002
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            15.297968,
+            10.685617
+          ],
+          "photoModel": [
+            15.579308436458778,
+            11.056896330273597
+          ],
+          "photoPixel": [
+            1205,
+            2254
+          ],
+          "pin": "1",
+          "ref": "A2.3",
+          "residualMm": 0.4658334276060771
+        }
+      ],
+      "copperAssignmentQualified": false,
+      "id": "matrix-connector",
+      "maxCheckResidualMm": 0.4954258393453002,
+      "photoToModel": [
+        0.004605892253866429,
+        0.08780067776238547,
+        -185.16507786225745,
+        -0.09184792191979228,
+        -0.0010909804149429685,
+        126.11493846000666,
+        -1.988169125113542e-05,
+        8.775779741645097e-05,
+        1
+      ],
+      "scope": "Local underside projection between the surrounding A1/A2 packages; connector observations lie inside the anchor hull. DIP joints provide independent checks. Nominal geometry only; no X1 terminal mapping or copper assignment.",
+      "toleranceMm": 1.25
     }
   ],
   "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",

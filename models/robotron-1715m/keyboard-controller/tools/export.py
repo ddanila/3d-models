@@ -102,7 +102,7 @@ def main():
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
  layout['visualBridges']=visual_bridges(json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),unplaced)
  write('layout.json',layout)
- write('connector-review.json',connector_review(layout,json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text())))
+ write('connector-review.json',connector_review(layout,json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),bottom))
  photo=photo_review(layout);write('photo-registration.json',photo);write('photo-registration.svg',photo_svg(photo,layout))
  write('bottom-registration.json',bottom);write('bottom-registration.svg',bottom_svg(bottom,layout))
  # Semantic symbols preserve source numbered pins. ERC does not validate analog models.

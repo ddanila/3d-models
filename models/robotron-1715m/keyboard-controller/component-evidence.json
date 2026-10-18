@@ -190,7 +190,125 @@
         "comparison-photo-080415534"
       ],
       "comparisonObservation": "Separate-specimen oblique views corroborate two stacked contact rows and bent tails exiting one housing side. Handwritten A/B and end markings are visible but do not independently establish primary-specimen terminal numbering.",
-      "limits": "No contact-to-net mapping or replacement native pad placement is inferred. Contact pitch, hole centres, A8 treatment and exact housing dimensions remain for review."
+      "limits": "No contact-to-net mapping or replacement native pad placement is inferred. Contact pitch, hole centres, A8 treatment and exact housing dimensions remain for review.",
+      "underside": {
+        "photoSource": "photo-bottom",
+        "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+        "pixelUncertainty": 8,
+        "registrationRegion": "matrix-connector",
+        "jointRowsPixels": {
+          "housingFar": [
+            [
+              1170.0,
+              1713.333
+            ],
+            [
+              1170.0,
+              1743.333
+            ],
+            [
+              1170.0,
+              1773.333
+            ],
+            [
+              1171.0,
+              1803.333
+            ],
+            [
+              1172.333,
+              1833.333
+            ],
+            [
+              1173.0,
+              1863.333
+            ],
+            [
+              1173.667,
+              1893.333
+            ],
+            [
+              1174.333,
+              1923.333
+            ],
+            [
+              1175.0,
+              1953.333
+            ],
+            [
+              1176.0,
+              1983.333
+            ],
+            [
+              1176.667,
+              2013.333
+            ],
+            [
+              1177.667,
+              2043.333
+            ],
+            [
+              1178.333,
+              2073.333
+            ]
+          ],
+          "housingNear": [
+            [
+              1230.0,
+              1716.667
+            ],
+            [
+              1230.0,
+              1746.667
+            ],
+            [
+              1230.0,
+              1773.333
+            ],
+            [
+              1231.333,
+              1803.333
+            ],
+            [
+              1231.667,
+              1833.333
+            ],
+            [
+              1232.0,
+              1863.333
+            ],
+            [
+              1232.0,
+              1893.333
+            ],
+            [
+              1233.0,
+              1925.0
+            ],
+            [
+              1234.333,
+              1955.0
+            ],
+            [
+              1235.0,
+              1983.333
+            ],
+            [
+              1236.333,
+              2013.333
+            ],
+            [
+              1237.333,
+              2043.333
+            ],
+            [
+              1238.0,
+              2075.0
+            ]
+          ]
+        },
+        "order": "Cable-facing end to ROM-facing end; near/far geometric correspondence across the board, not numbered pins.",
+        "observation": "Two rows of solder joints are visible. All are inside the local surrounding-IC anchor hull. Top/bottom row correspondence uses side and longitudinal order; individual pin names and nets are not assigned."
+      }
     }
   },
   "XT1": {

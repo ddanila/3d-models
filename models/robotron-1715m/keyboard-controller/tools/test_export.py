@@ -14,9 +14,16 @@ class ControllerExportTests(unittest.TestCase):
   sources=json.loads((R/'evidence.json').read_text())
   landmarks=json.loads((R/'photo-landmarks.json').read_text())
   before=copy.deepcopy(layout)
-  result=connector_review(layout,components,sources,landmarks)
+  bottom=json.loads((R/'generated/bottom-registration.json').read_text())
+  result=connector_review(layout,components,sources,landmarks,bottom)
   self.assertEqual(result,json.loads((R/'generated/connector-review.json').read_text()))
   self.assertFalse(result['qualifiedForPadPlacement'])
+  self.assertTrue(result['underside']['allJointsInsideAnchorHull'])
+  self.assertTrue(result['underside']['registrationWithinTolerance'])
+  self.assertFalse(result['underside']['terminalMappingQualified'])
+  badbottom=copy.deepcopy(bottom);badbottom['photoSha256']='changed'
+  with self.assertRaisesRegex(ValueError,'photograph differs'):
+   connector_review(layout,components,sources,landmarks,badbottom)
   self.assertEqual(set(result['projectedLeadEndRowsMm']),{'housingNear','housingFar'})
   self.assertEqual(layout,before)
   bad=copy.deepcopy(components);bad['X1']['physicalReview']['photoSha256']='changed'

@@ -23,4 +23,9 @@
 <circle cx="1426" cy="2859" r="8" fill="none" stroke="orange" stroke-width="3"/>
 <circle cx="1306" cy="2678" r="8" fill="none" stroke="orange" stroke-width="3"/>
 <circle cx="1309" cy="2927" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<polygon points="1104,1507 1495,1505 1420,2252 1112,2254" fill="none" stroke="cyan" stroke-width="3" stroke-dasharray="12 8"/>
+<circle cx="1194" cy="1507" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1400" cy="1505" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1329" cy="2252" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1205" cy="2254" r="8" fill="none" stroke="orange" stroke-width="3"/>
 </svg>
