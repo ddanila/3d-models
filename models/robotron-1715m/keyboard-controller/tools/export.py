@@ -102,8 +102,12 @@ def main():
  bottom=bottom_review(layout);validate_registered_routes(routes,bottom,digest(ROOT/'bottom-landmarks.json'))
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
  layout['visualBridges']=visual_bridges(json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),unplaced)
+ connector=connector_review(layout,json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),bottom)
+ joints=connector['underside']
+ if not joints['allJointsInsideAnchorHull'] or not joints['registrationWithinTolerance']:raise ValueError('Connector visual geometry requires bounded registration')
+ layout['visualConnectors']=[{'ref':'X1','status':'unassigned-contact-geometry','rows':joints['projectedJointRowsMm'],'photoSource':joints['photoSource'],'photoSha256':joints['photoSha256'],'scope':'Solder-joint locations only; no numbered contacts or net assignments. Housing dimensions, contact heights, lead section and hole diameters remain illustrative. Native electrical footprint remains provisional.'}]
  write('layout.json',layout)
- write('connector-review.json',connector_review(layout,json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),bottom))
+ write('connector-review.json',connector)
  write('connector-terminals.json',connector_terminals(json.loads((ROOT/'component-evidence.json').read_text())['X1'],{'components':components}))
  photo=photo_review(layout);write('photo-registration.json',photo);write('photo-registration.svg',photo_svg(photo,layout))
  write('bottom-registration.json',bottom);write('bottom-registration.svg',bottom_svg(bottom,layout))
@@ -111,6 +115,7 @@ def main():
  erc_summary=[{'type':v['type'],'severity':v['severity'],'description':v['description'],'items':[i['description'] for i in v['items']]} for v in violations]
  write('qualification.json',{'components':len(components),'placed':len(placed),'unplaced':len(unplaced),'padNetMismatches':mismatches,'electricalCopperSegments':len(routes),'unresolvedPhotoSegments':len(art),'erc':erc_summary,'drc':{'violations':dict(collections.Counter(v['type'] for v in drc_data['violations'])),'unconnectedItems':len(drc_data['unconnected_items'])},'limitations':['Signal pin directions are typed; power/passive terminals and analog behavior require separate review. Two isolated-label ERC warnings are RD_N (unused CPU output) and SHIELD (external cable shield).','Unrouted PCB, not fabrication ready. Photo graphics are not electrical copper.','Digital reference circuit; discrete pin numbering, specimen substitutions and analog timing remain unqualified; reset topology and bridge boundaries reviewed against Zander.']})
  scad=['// Generated from controller.kicad_pcb and package evidence. Model-local mm; no independent placement edits.', 'controller_pcb_outline='+json.dumps(outline)+';', 'controller_pcb_edges='+json.dumps(edges)+';', 'controller_pcb_holes='+json.dumps(holes)+';', 'controller_pcb_pads='+json.dumps([[*p['position'],*p['size'],p['net'],p['drill'][0]] for p in pads if p['pin']])+';']
+ scad+=['controller_visual_connector_contacts='+json.dumps([[*point,row]for row,name in enumerate(['housingFar','housingNear'])for point in layout['visualConnectors'][0]['rows'][name]])+';']
  scad+=['controller_pcb_dip_pads='+json.dumps([[*p['position'],p['drill'][0],p['ref'],p['pin']]for p in pads if p['ref'].startswith('A')])+';']
  scad+=['controller_pcb_dips='+json.dumps([[*c['position'],len(c['pads']),15.24 if len(c['pads']) in (24,40) else 7.62,c['ref'],c['rotation']] for c in placed if c['ref'].startswith('A')])+';']
  # Package dimensions are reference evidence, separate from native placements.

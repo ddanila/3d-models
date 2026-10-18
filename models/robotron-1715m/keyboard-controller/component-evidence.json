@@ -66,7 +66,7 @@
     "referenceType": "MATRIX_CONNECTOR",
     "placementEvidence": "inherited-photo-estimate",
     "pinEvidence": "connector-label-or-semantic-terminal",
-    "note": "Inherited footprint and schematic terminal names remain provisional. Physical review identifies a same-side lead arrangement inconsistent with the inherited visual geometry; see physicalReview and generated/connector-review.json. No measured continuity or numbered-pad placement is established.",
+    "note": "The native electrical footprint remains provisional. Museum geometry uses separately exported unnumbered solder-joint observations and same-side bent leads; this does not assign reference nets or resolve the near-row numbering. Housing dimensions and lead profiles remain estimates. See physicalReview and generated/connector-review.json.",
     "placementAuthority": "controller.kicad_pcb",
     "physicalReview": {
       "status": "inherited-geometry-conflicts-with-visible-lead-arrangement",

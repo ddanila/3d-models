@@ -45,7 +45,10 @@ module controller_miniplast_leads(){
 }
 
 // Shared tail locations keep board apertures, joints and lead endpoints aligned.
-controller_connector_tails=[for(i=[0:12],side=[-1,1])[-25+i*2.54,3+side*7]];
+// Unnumbered solder-joint observations; native X1 numbering remains provisional.
+controller_connector_tails=[for(p=controller_visual_connector_contacts)[p[0],p[1]]];
+controller_connector_x=(controller_connector_tails[0][0]+controller_connector_tails[12][0])/2;
+controller_connector_y=3; // Retained housing offset estimate, independent of terminal identity.
 // Photo projected resistor positions; three ROM/CPU-end placements adjusted
 // within the approximate photo registration to clear nominal package bodies.
 controller_legacy_resistors=[ [68.794, -5.2, 84.875, 8.317], [80.052, -4, 1.38, 9.676]];
@@ -83,10 +86,11 @@ module keyboard_controller_rom_cover(){keyboard_controller_pose()controller_rom_
 module keyboard_controller_connectors(){keyboard_controller_pose(){
  // Owner 123622947: pale closed bridge with moulded divisions and end ears.
  // Contact entry is on the side; the top is not an open rectangular trough.
- translate([-10,3,1.6])difference(){
+ translate([controller_connector_x,controller_connector_y,1.6])difference(){
   union(){slab(38,10,6,.5);slab(46,6,2,.5);}
   for(i=[0:11])translate([-13.7+i*2.54,0,5.7])cube([.18,10.2,.7],center=true);
-  for(i=[0:12],side=[-1,1])translate([-15+i*2.54,side*4.7,2.6])cube([1,1.4,1.2],center=true);
+  for(i=[0:12],z=[2.6,4.4])translate([controller_connector_tails[i][0]-controller_connector_x,-4.7,z])cube([1,1.4,1.2],center=true);
+  for(p=controller_visual_connector_contacts)translate([p[0]-controller_connector_x,4.7,p[2]==0?4.4:2.6])cube([.85,1.4,.85],center=true);
  }
 }}
 module keyboard_controller_caps(){keyboard_controller_pose(){
@@ -96,7 +100,6 @@ module keyboard_controller_metal(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_pins(p);
  for(p=controller_transistors)controller_transistor_pose(p)controller_miniplast_leads();
  owner_dip_pins(controller_rom);
- for(i=[0:12],s=[-1,1])translate([-25+i*2.54,3+s*2.54,2])cylinder(d=.65,h=4,$fn=8);
  for(p=[[-114.695, 3.019], [-106.445, -2.752], [-101.335, 18.111], [132, -4.5]])translate([p[0],p[1],10.65])cylinder(d=4.5,h=.2,$fn=24);
  // Cable shield clamp, folded over the incoming lead.
  // Thin saddle, open below, with separate mounting ears (owner photo).
@@ -414,7 +417,9 @@ module keyboard_controller_leads(){keyboard_controller_pose(){
  for(b=controller_pcb_bridges)let(a=b[0],c=b[1])wire_run([[a[0],a[1],-.5],[a[0],a[1],2.4],[c[0],c[1],2.4],[c[0],c[1],-.5]],.25);
  // Observed BR wire body only: no invented through-board leads or pad assignment.
  for(b=controller_visual_bridges)let(a=b[0],c=b[1])wire_run([[a[0],a[1],1.9],[a[0],a[1],2.4],[c[0],c[1],2.4],[c[0],c[1],1.9]],.25);
- for(i=[0:12],side=[-1,1])wire_run([[-25+i*2.54,3+side*2.54,4],[-25+i*2.54,3+side*7,2.2],[-25+i*2.54,3+side*7,-.5]],.28);
+ // Both rows exit the same housing side. Heights and bends remain estimates.
+ for(p=controller_visual_connector_contacts)let(z=p[2]==0?6:4.2)
+ wire_run([[p[0],controller_connector_y+4.7,z],[p[0],p[1],2.2],[p[0],p[1],-.5]],.28);
  for(p=controller_resistors,s=[-1,1])let(end=resistor_end(p,s))
   wire_run([[p[0]+s*2.6*cos(p[2]),p[1]+s*2.6*sin(p[2]),3.2],[end[0],end[1],3.2],[end[0],end[1],-.5]],.25);
 }}

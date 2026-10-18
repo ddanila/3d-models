@@ -3,7 +3,7 @@ from copy import deepcopy
 
 PARTS = frozenset('keyboard-controller-' + suffix for suffix in (
     'board', 'chips', 'metal', 'ink', 'traces', 'solder', 'ceramic',
-    'rom-cover', 'rom-ink', 'leads', 'resistors', 'resistor-bands'))
+    'rom-cover', 'rom-ink', 'leads', 'resistors', 'resistor-bands', 'connectors'))
 SOURCES = ('specimen-details.scad', 'keyboard-controller/generated/controller.scad',
            'controller-package-data.scad')
 
