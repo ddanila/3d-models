@@ -1,0 +1,421 @@
+{
+  "candidates": [
+    {
+      "checks": [
+        {
+          "candidatePin": "A5",
+          "matches": true,
+          "observation": "x1-led-siso-attachment",
+          "referenceNet": "/LED_SISO"
+        },
+        {
+          "candidatePin": "A6",
+          "matches": true,
+          "observation": "x1-led-caps-attachment",
+          "referenceNet": "/LED_CAPS"
+        }
+      ],
+      "consistent": true,
+      "rows": {
+        "housingFar": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "A10",
+          "A11",
+          "A12",
+          "A13"
+        ],
+        "housingNear": [
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5",
+          "B6",
+          "B7",
+          "B8",
+          "B9",
+          "B10",
+          "B11",
+          "B12",
+          "B13"
+        ]
+      }
+    },
+    {
+      "checks": [
+        {
+          "candidatePin": "A5",
+          "matches": true,
+          "observation": "x1-led-siso-attachment",
+          "referenceNet": "/LED_SISO"
+        },
+        {
+          "candidatePin": "A6",
+          "matches": true,
+          "observation": "x1-led-caps-attachment",
+          "referenceNet": "/LED_CAPS"
+        }
+      ],
+      "consistent": true,
+      "rows": {
+        "housingFar": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "A10",
+          "A11",
+          "A12",
+          "A13"
+        ],
+        "housingNear": [
+          "B13",
+          "B12",
+          "B11",
+          "B10",
+          "B9",
+          "B8",
+          "B7",
+          "B6",
+          "B5",
+          "B4",
+          "B3",
+          "B2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "checks": [
+        {
+          "candidatePin": "A9",
+          "matches": false,
+          "observation": "x1-led-siso-attachment",
+          "referenceNet": "/LED_SISO"
+        },
+        {
+          "candidatePin": "A8",
+          "matches": false,
+          "observation": "x1-led-caps-attachment",
+          "referenceNet": "/LED_CAPS"
+        }
+      ],
+      "consistent": false,
+      "rows": {
+        "housingFar": [
+          "A13",
+          "A12",
+          "A11",
+          "A10",
+          "A9",
+          "A8",
+          "A7",
+          "A6",
+          "A5",
+          "A4",
+          "A3",
+          "A2",
+          "A1"
+        ],
+        "housingNear": [
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5",
+          "B6",
+          "B7",
+          "B8",
+          "B9",
+          "B10",
+          "B11",
+          "B12",
+          "B13"
+        ]
+      }
+    },
+    {
+      "checks": [
+        {
+          "candidatePin": "A9",
+          "matches": false,
+          "observation": "x1-led-siso-attachment",
+          "referenceNet": "/LED_SISO"
+        },
+        {
+          "candidatePin": "A8",
+          "matches": false,
+          "observation": "x1-led-caps-attachment",
+          "referenceNet": "/LED_CAPS"
+        }
+      ],
+      "consistent": false,
+      "rows": {
+        "housingFar": [
+          "A13",
+          "A12",
+          "A11",
+          "A10",
+          "A9",
+          "A8",
+          "A7",
+          "A6",
+          "A5",
+          "A4",
+          "A3",
+          "A2",
+          "A1"
+        ],
+        "housingNear": [
+          "B13",
+          "B12",
+          "B11",
+          "B10",
+          "B9",
+          "B8",
+          "B7",
+          "B6",
+          "B5",
+          "B4",
+          "B3",
+          "B2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "checks": [
+        {
+          "candidatePin": "B5",
+          "matches": false,
+          "observation": "x1-led-siso-attachment",
+          "referenceNet": "/LED_SISO"
+        },
+        {
+          "candidatePin": "B6",
+          "matches": false,
+          "observation": "x1-led-caps-attachment",
+          "referenceNet": "/LED_CAPS"
+        }
+      ],
+      "consistent": false,
+      "rows": {
+        "housingFar": [
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5",
+          "B6",
+          "B7",
+          "B8",
+          "B9",
+          "B10",
+          "B11",
+          "B12",
+          "B13"
+        ],
+        "housingNear": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "A10",
+          "A11",
+          "A12",
+          "A13"
+        ]
+      }
+    },
+    {
+      "checks": [
+        {
+          "candidatePin": "B5",
+          "matches": false,
+          "observation": "x1-led-siso-attachment",
+          "referenceNet": "/LED_SISO"
+        },
+        {
+          "candidatePin": "B6",
+          "matches": false,
+          "observation": "x1-led-caps-attachment",
+          "referenceNet": "/LED_CAPS"
+        }
+      ],
+      "consistent": false,
+      "rows": {
+        "housingFar": [
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5",
+          "B6",
+          "B7",
+          "B8",
+          "B9",
+          "B10",
+          "B11",
+          "B12",
+          "B13"
+        ],
+        "housingNear": [
+          "A13",
+          "A12",
+          "A11",
+          "A10",
+          "A9",
+          "A8",
+          "A7",
+          "A6",
+          "A5",
+          "A4",
+          "A3",
+          "A2",
+          "A1"
+        ]
+      }
+    },
+    {
+      "checks": [
+        {
+          "candidatePin": "B9",
+          "matches": false,
+          "observation": "x1-led-siso-attachment",
+          "referenceNet": "/LED_SISO"
+        },
+        {
+          "candidatePin": "B8",
+          "matches": false,
+          "observation": "x1-led-caps-attachment",
+          "referenceNet": "/LED_CAPS"
+        }
+      ],
+      "consistent": false,
+      "rows": {
+        "housingFar": [
+          "B13",
+          "B12",
+          "B11",
+          "B10",
+          "B9",
+          "B8",
+          "B7",
+          "B6",
+          "B5",
+          "B4",
+          "B3",
+          "B2",
+          "B1"
+        ],
+        "housingNear": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "A10",
+          "A11",
+          "A12",
+          "A13"
+        ]
+      }
+    },
+    {
+      "checks": [
+        {
+          "candidatePin": "B9",
+          "matches": false,
+          "observation": "x1-led-siso-attachment",
+          "referenceNet": "/LED_SISO"
+        },
+        {
+          "candidatePin": "B8",
+          "matches": false,
+          "observation": "x1-led-caps-attachment",
+          "referenceNet": "/LED_CAPS"
+        }
+      ],
+      "consistent": false,
+      "rows": {
+        "housingFar": [
+          "B13",
+          "B12",
+          "B11",
+          "B10",
+          "B9",
+          "B8",
+          "B7",
+          "B6",
+          "B5",
+          "B4",
+          "B3",
+          "B2",
+          "B1"
+        ],
+        "housingNear": [
+          "A13",
+          "A12",
+          "A11",
+          "A10",
+          "A9",
+          "A8",
+          "A7",
+          "A6",
+          "A5",
+          "A4",
+          "A3",
+          "A2",
+          "A1"
+        ]
+      }
+    }
+  ],
+  "completeTerminalOrderResolved": false,
+  "referenceAbsentPins": [
+    "A8"
+  ],
+  "resolvedRows": {
+    "housingFar": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10",
+      "A11",
+      "A12",
+      "A13"
+    ]
+  },
+  "scope": "Conditional on photographed attachments and the reference schematic. Logical elimination is not a continuity measurement. Row directions are independent hypotheses.",
+  "unresolvedRows": [
+    "housingNear"
+  ]
+}

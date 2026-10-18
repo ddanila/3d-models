@@ -190,7 +190,7 @@
         "comparison-photo-080415534"
       ],
       "comparisonObservation": "Separate-specimen oblique views corroborate two stacked contact rows and bent tails exiting one housing side. Handwritten A/B and end markings are visible but do not independently establish primary-specimen terminal numbering.",
-      "limits": "No contact-to-net mapping or replacement native pad placement is inferred. Contact pitch, hole centres, A8 treatment and exact housing dimensions remain for review.",
+      "limits": "Local underside registration constrains solder-joint geometry. Far-row identity is constrained by the R11.1/R11.2 attachments and reference schematic. Near-row direction and the schematic-omitted A8 contact remain unresolved; dimensions are not metrology.",
       "underside": {
         "photoSource": "photo-bottom",
         "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
@@ -308,7 +308,58 @@
         },
         "order": "Cable-facing end to ROM-facing end; near/far geometric correspondence across the board, not numbered pins.",
         "observation": "Two rows of solder joints are visible. All are inside the local surrounding-IC anchor hull. Top/bottom row correspondence uses side and longitudinal order; individual pin names and nets are not assigned."
-      }
+      },
+      "terminalConstraints": [
+        {
+          "id": "x1-led-siso-attachment",
+          "photoSource": "photo-top",
+          "row": "housingFar",
+          "indexFromCable": 4,
+          "referenceEndpoint": {
+            "ref": "R11.1",
+            "pin": "2"
+          },
+          "pixelPolyline": [
+            [
+              1721,
+              2013
+            ],
+            [
+              1664,
+              2015
+            ]
+          ],
+          "pixelUncertainty": 8,
+          "basis": "Visible short top-side trace between the resistor inner lead and fifth far-row contact. R11.1 identity follows the factory placement; the reference schematic connects its connector-side terminal to X1:A5."
+        },
+        {
+          "id": "x1-led-caps-attachment",
+          "photoSource": "photo-top",
+          "row": "housingFar",
+          "indexFromCable": 5,
+          "referenceEndpoint": {
+            "ref": "R11.2",
+            "pin": "2"
+          },
+          "pixelPolyline": [
+            [
+              1724,
+              2045
+            ],
+            [
+              1665.5,
+              2047.5
+            ]
+          ],
+          "pixelUncertainty": 8,
+          "basis": "Visible short top-side trace between the resistor inner lead and sixth far-row contact. R11.2 identity follows the factory placement; the reference schematic connects its connector-side terminal to X1:A6."
+        }
+      ],
+      "terminalConstraintSources": [
+        "photo-top",
+        "robotron-factory-drawings",
+        "schematic"
+      ]
     }
   },
   "XT1": {

@@ -6,6 +6,22 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_connector_terminal_constraints_do_not_assume_matching_row_direction(self):
+  import copy
+  from connector_terminals import review as terminal_review
+  component=json.loads((R/'component-evidence.json').read_text())['X1']
+  connectivity=json.loads((R/'generated/connectivity.json').read_text())
+  result=terminal_review(component,connectivity)
+  self.assertEqual(result,json.loads((R/'generated/connector-terminals.json').read_text()))
+  self.assertEqual(result['resolvedRows']['housingFar'],['A'+str(i) for i in range(1,14)])
+  self.assertEqual(result['unresolvedRows'],['housingNear'])
+  self.assertFalse(result['completeTerminalOrderResolved'])
+  self.assertEqual(result['referenceAbsentPins'],['A8'])
+  wrong=copy.deepcopy(component)
+  wrong['physicalReview']['terminalConstraints'][1]['indexFromCable']=4
+  rejected=terminal_review(wrong,connectivity)
+  self.assertEqual(rejected['resolvedRows'],{})
+  self.assertFalse(any(c['consistent'] for c in rejected['candidates']))
  def test_connector_review_keeps_observations_unnumbered(self):
   import copy
   from connector_review import review as connector_review

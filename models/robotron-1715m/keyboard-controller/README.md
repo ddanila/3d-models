@@ -74,7 +74,9 @@ Unassigned photo artwork is not electrical copper.
 `generated/connector-review.json` compares unnumbered X1 lead observations with
 its inherited footprint. Raised lead ends are not qualified hole centres; resolve
 that correspondence and terminal order before replacing the footprint or its
-legacy OpenSCAD geometry.
+legacy OpenSCAD geometry. `generated/connector-terminals.json` retains the numbering
+alternatives constrained by visible resistor attachments; do not infer the second
+row's direction from the first.
 
 ## Regenerate and check
 
