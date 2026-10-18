@@ -71,6 +71,11 @@ the review. Observed tracks require their side's photo; observed vias require bo
 sides. This enforces provenance completeness, not the truth of an interpretation.
 Unassigned photo artwork is not electrical copper.
 
+`generated/connector-review.json` compares unnumbered X1 lead observations with
+its inherited footprint. Raised lead ends are not qualified hole centres; resolve
+that correspondence and terminal order before replacing the footprint or its
+legacy OpenSCAD geometry.
+
 ## Regenerate and check
 
 From this directory, use Python with KiCad's `pcbnew` module for native export

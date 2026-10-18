@@ -66,8 +66,132 @@
     "referenceType": "MATRIX_CONNECTOR",
     "placementEvidence": "inherited-photo-estimate",
     "pinEvidence": "connector-label-or-semantic-terminal",
-    "note": "Reference schematic; specimen identity/placement requires review",
-    "placementAuthority": "controller.kicad_pcb"
+    "note": "Inherited footprint and schematic terminal names remain provisional. Physical review identifies a same-side lead arrangement inconsistent with the inherited visual geometry; see physicalReview and generated/connector-review.json. No measured continuity or numbered-pad placement is established.",
+    "placementAuthority": "controller.kicad_pcb",
+    "physicalReview": {
+      "status": "inherited-geometry-conflicts-with-visible-lead-arrangement",
+      "photoSource": "photo-top",
+      "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "pixelUncertainty": 10,
+      "leadEndRowsPixels": {
+        "housingNear": [
+          [
+            1595.0,
+            1897.5
+          ],
+          [
+            1597.5,
+            1929.0
+          ],
+          [
+            1599.0,
+            1960.0
+          ],
+          [
+            1599.0,
+            1990.0
+          ],
+          [
+            1601.5,
+            2021.0
+          ],
+          [
+            1602.5,
+            2052.5
+          ],
+          [
+            1602.0,
+            2085.0
+          ],
+          [
+            1604.0,
+            2115.0
+          ],
+          [
+            1605.0,
+            2149.0
+          ],
+          [
+            1606.5,
+            2178.0
+          ],
+          [
+            1607.0,
+            2210.0
+          ],
+          [
+            1608.5,
+            2242.5
+          ],
+          [
+            1610.0,
+            2272.5
+          ]
+        ],
+        "housingFar": [
+          [
+            1655.0,
+            1890.0
+          ],
+          [
+            1659.0,
+            1922.5
+          ],
+          [
+            1659.0,
+            1953.5
+          ],
+          [
+            1661.5,
+            1985.0
+          ],
+          [
+            1664.0,
+            2015.0
+          ],
+          [
+            1665.5,
+            2047.5
+          ],
+          [
+            1667.5,
+            2077.5
+          ],
+          [
+            1668.5,
+            2110.0
+          ],
+          [
+            1669.0,
+            2142.5
+          ],
+          [
+            1670.5,
+            2172.5
+          ],
+          [
+            1672.0,
+            2204.5
+          ],
+          [
+            1673.5,
+            2236.0
+          ],
+          [
+            1675.0,
+            2267.5
+          ]
+        ]
+      },
+      "order": "Cable-facing end to ROM-facing end; geometric sequence only, not terminal numbers.",
+      "observation": "Both lead rows emerge from the same side of the connector housing. The near-row annotations may be elevated lead bends rather than hole centres. The inherited opposite-side lead model and pad-row separation are not supported by these observations.",
+      "comparisonSources": [
+        "comparison-photo-080411074",
+        "comparison-photo-080415534"
+      ],
+      "comparisonObservation": "Separate-specimen oblique views corroborate two stacked contact rows and bent tails exiting one housing side. Handwritten A/B and end markings are visible but do not independently establish primary-specimen terminal numbering.",
+      "limits": "No contact-to-net mapping or replacement native pad placement is inferred. Contact pitch, hole centres, A8 treatment and exact housing dimensions remain for review."
+    }
   },
   "XT1": {
     "referenceType": "KEYBOARD_CABLE",

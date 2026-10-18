@@ -6,6 +6,25 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_connector_review_keeps_observations_unnumbered(self):
+  import copy
+  from connector_review import review as connector_review
+  layout=json.loads((R/'generated/layout.json').read_text())
+  components=json.loads((R/'component-evidence.json').read_text())
+  sources=json.loads((R/'evidence.json').read_text())
+  landmarks=json.loads((R/'photo-landmarks.json').read_text())
+  before=copy.deepcopy(layout)
+  result=connector_review(layout,components,sources,landmarks)
+  self.assertEqual(result,json.loads((R/'generated/connector-review.json').read_text()))
+  self.assertFalse(result['qualifiedForPadPlacement'])
+  self.assertEqual(set(result['projectedLeadEndRowsMm']),{'housingNear','housingFar'})
+  self.assertEqual(layout,before)
+  bad=copy.deepcopy(components);bad['X1']['physicalReview']['photoSha256']='changed'
+  with self.assertRaisesRegex(ValueError,'photograph differs'):
+   connector_review(layout,bad,sources,landmarks)
+  bad=copy.deepcopy(components);bad['X1']['physicalReview']['leadEndRowsPixels']['housingNear'].pop()
+  with self.assertRaisesRegex(ValueError,'Unpaired'):
+   connector_review(layout,bad,sources,landmarks)
  def test_visual_bridge_does_not_assign_pads_or_duplicate_native_placement(self):
   from export import visual_bridges
   import copy
