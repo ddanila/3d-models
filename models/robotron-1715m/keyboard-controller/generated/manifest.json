@@ -3,12 +3,12 @@
     "generated/bottom-registration.json": "7a21028fac1397c17b55724550453024d005fc56c5ccda54a2911e5719220449",
     "generated/bottom-registration.svg": "aec892698094f13691d30a6c989f43d0563e341d861a7559ec226015d17589d2",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
-    "generated/controller.scad": "ce1a4b5a44305a7c689d9cddec0438a7b17695f8f31221261a5bcc3cb1fa4a6c",
-    "generated/layout.json": "c013e975d698983f4817529a2ea365a2010d67399d4a2e514f5fa1011c7fbb1d",
+    "generated/controller.scad": "0eaf98e26aa710234a89aa0d8846ddad74e27ee329cc013e31fb694641d30529",
+    "generated/layout.json": "acafdadfd539614d38f84f47c1ceccc3835ff2e4efb0a61afc2be12432ad9fc4",
     "generated/photo-registration.json": "099a56a6947ed1cf56e20240eaee1ee0c3e73ea59cca05c2ca3c61b71ab2e84c",
     "generated/photo-registration.svg": "e23e2c822c660cd7328f43b3002ccbc5037697649f2b3d0a8d478357d631ec08",
     "generated/qualification.json": "1cdbcc68cf6e0293225d71672bfc20152985c3b3cd31f0cb67874c06183cc57f",
-    "generated/review.svg": "8ca9557e4eb3cc02d104b5313ea6cbeb9cf12f0ed95d41b57526bbc9093df9b1"
+    "generated/review.svg": "e4a41ae8c3c3a825ffce7af64bb8ce247a34b5ef0a6783133c3dc9242de87e79"
   },
   "schema": 1,
   "sources": {
@@ -41,7 +41,7 @@
     "../reference/photos/PXL_20261017_080531967.jpg": "72893ddcbebd510ea4be4c2fa195ca6f138e734e4c8962529fe3dbf159e079e3",
     "../reference/photos/PXL_20261017_080541857.jpg": "83089746f85cc44ca278db65cbdafbd66a0534c4a8bfd8286dbec908f0d80a04",
     "bottom-landmarks.json": "44a49333a0dcf80b638fcbc7eaf67033341416941877097c9c5807e3445c0fcc",
-    "component-evidence.json": "3bc4ba6c64bd4a72a55ef6f0268d05526bbbdcb1554731bceafbfb36f0490d47",
+    "component-evidence.json": "e47f23cacc8bf2a029e04de63e687a107fbeed4332df9c8619272d9e962dec38",
     "controller.kicad_pcb": "246d669fb34bf11f85598f33c1b9285e666723a91207d3e8680f27bdb6c6b97b",
     "controller.kicad_pro": "6583dcdffccee3fd6c5e10ab0e3e900b75a7054cc98669379d044c91cda33356",
     "controller.kicad_sch": "48333fb758f58072685591a6323867efc31e6a390c673e7dd1967048f0935b29",
@@ -52,7 +52,7 @@
     "route-evidence.json": "0b9f3f90870ccb0332fdc9118246c17f42992603d6806c09631876e0ffdc72cf",
     "sym-lib-table": "27194f2ba44182e9ce1b0fd5db14f03003a7cefcf53a287c7cb9d8b8e361a841",
     "tools/bottom_registration.py": "8d20f6a71f79941500f16a3e70f9fa90e8d7591c4702a0abaa5cca511d808bb5",
-    "tools/export.py": "ee4a918012b8857f3bddb6aff5ed07402af50e353f7b25ac818fad02b1cf3992",
+    "tools/export.py": "1c6ec4d572675cf944cc5821867208eb1ab26d0ffd0c313951b421dfe41c9ded",
     "tools/geometry.py": "be71777d095f87f7f53643239e274989006de4ead1ad7181478d502e05351780",
     "tools/photo_registration.py": "a086a468e910aabda6043d9e80d6eb687aa86e6c2840737af0ebe9eed066901f",
     "tools/route_evidence.py": "3e8e9902a95bfa7af60f321d475b2cba713939322ee76f4e3dedbbcbb5ae16ba"

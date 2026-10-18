@@ -412,6 +412,8 @@ module keyboard_controller_leads(){keyboard_controller_pose(){
   for(i=[1,2])let(p=c[i],sign=i==1?-1:1)wire_run([[p[0],p[1],-.5],[p[0],p[1],2.1],[c[0][0]+sign*1.5*cos(angle),c[0][1]+sign*1.5*sin(angle),controller_ceramic_z(c)-1.7]],.25);
  // Nominal closed wire-link shape; pad endpoints come from native KiCad.
  for(b=controller_pcb_bridges)let(a=b[0],c=b[1])wire_run([[a[0],a[1],-.5],[a[0],a[1],2.4],[c[0],c[1],2.4],[c[0],c[1],-.5]],.25);
+ // Observed BR wire body only: no invented through-board leads or pad assignment.
+ for(b=controller_visual_bridges)let(a=b[0],c=b[1])wire_run([[a[0],a[1],1.9],[a[0],a[1],2.4],[c[0],c[1],2.4],[c[0],c[1],1.9]],.25);
  for(i=[0:12],side=[-1,1])wire_run([[-25+i*2.54,3+side*2.54,4],[-25+i*2.54,3+side*7,2.2],[-25+i*2.54,3+side*7,-.5]],.28);
  for(p=controller_resistors,s=[-1,1])let(end=resistor_end(p,s))
   wire_run([[p[0]+s*2.6*cos(p[2]),p[1]+s*2.6*sin(p[2]),3.2],[end[0],end[1],3.2],[end[0],end[1],-.5]],.25);

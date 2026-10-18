@@ -19,6 +19,27 @@ def check():
    p=ROOT/name
    if not p.is_file() or digest(p)!=sha:raise SystemExit('Stale or missing '+name+'; regenerate with tools/export.py')
  print('Controller sources and generated outputs match pinned hashes')
+def visual_bridges(evidence,landmarks,unplaced):
+ """Project observed wire endpoints without inventing numbered electrical pads."""
+ from photo_registration import homography,project
+ transform=homography(landmarks['photoCorners'],landmarks['modelCorners'])
+ sources={source['id']:source for source in evidence['sources']}
+ refs={c['ref'] for c in unplaced};result=[]
+ for bridge in evidence['serviceInterfaces']['bridges']:
+  observation=bridge.get('physicalEvidence',{})
+  if bridge['ref'] not in refs or observation.get('status')!='photo-location-candidate':continue
+  if observation['photoSource']!='photo-top':raise ValueError('Unsupported bridge photograph')
+  source=sources[observation['photoSource']]
+  if source['path']!=landmarks['photo']:raise ValueError('Bridge photograph differs from registration')
+  ends=observation['photoEndpoints']
+  if len(ends)!=2 or any(len(p)!=2 or any(not math.isfinite(v) for v in p) for p in ends):raise ValueError('Invalid bridge endpoints')
+  points=[[round(v,6) for v in project(transform,p)]for p in ends]
+  if math.dist(*points)<1e-6:raise ValueError('Degenerate bridge observation')
+  result.append({'ref':bridge['ref'],'points':points,'side':'top',
+   'status':'unassigned-wire-photo-estimate','photoSource':observation['photoSource'],
+   'photoSha256':source['sha256'],'pixelUncertainty':observation['photoPixelUncertainty'],
+   'scope':'Geometric endpoint order only; no numbered pads, holes, nets or continuity claim. Height and diameter are illustrative.'})
+ return result
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');args=parser.parse_args()
  if args.check:return check()
@@ -78,6 +99,7 @@ def main():
  layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline,'components':placed,'unplaced':unplaced,'routes':routes,'vias':vias,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
  bottom=bottom_review(layout);validate_registered_routes(routes,bottom,digest(ROOT/'bottom-landmarks.json'))
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
+ layout['visualBridges']=visual_bridges(json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),unplaced)
  write('layout.json',layout)
  photo=photo_review(layout);write('photo-registration.json',photo);write('photo-registration.svg',photo_svg(photo,layout))
  write('bottom-registration.json',bottom);write('bottom-registration.svg',bottom_svg(bottom,layout))
@@ -118,6 +140,7 @@ def main():
  scad+=['controller_pcb_resistors='+json.dumps(resistors)+';']
  scad+=['controller_pcb_resistor_pads='+json.dumps([[*p['position'],p['drill'][0],*p['size']]for p in pads if p['ref'].startswith('R')])+';']
  scad+=['controller_pcb_bridges='+json.dumps([[c['pads'][0]['position'],c['pads'][1]['position'],c['ref']]for c in placed if c['ref'].startswith('BR')])+';']
+ scad+=['controller_visual_bridges='+json.dumps([[*b['points'],b['ref']]for b in layout['visualBridges']])+';']
  scad+=['controller_pcb_bridge_pads='+json.dumps([[*p['position'],p['drill'][0],*p['size']]for p in pads if p['ref'].startswith('BR')])+';']
  scad+=['controller_pcb_ceramics='+json.dumps([[c['position'],c['pads'][0]['position'],c['pads'][1]['position'],c['ref']]for c in placed if c['ref'].startswith('C5.')])+';']
  scad+=['controller_pcb_ceramic_pads='+json.dumps([[*p['position'],p['drill'][0],*p['size']]for p in pads if p['ref'].startswith('C5.')])+';']
@@ -135,6 +158,10 @@ def main():
    if a['side']==side:
     title=html.escape(a['net']+' '+a['evidence']['status']+' '+a['id'])
     svg.append('<polyline fill="none" stroke="#ffc969" stroke-width="'+str(a['width'])+'" points="'+' '.join(f'{x},{-y}'for x,y in a['points'])+'"><title>'+title+'</title></polyline>')
+  for bridge in layout['visualBridges']:
+   if bridge['side']==side:
+    points=' '.join(f'{x},{-y}' for x,y in bridge['points'])
+    svg.append('<polyline fill="none" stroke="#50b5c8" stroke-width=".5" points="'+points+'"><title>'+html.escape(bridge['ref']+' unassigned wire; terminal identity unresolved')+'</title></polyline>')
   for c in placed:
    for p in c['pads']:
     x,y=p['position'];svg.append(f'<circle cx="{x}" cy="{-y}" r=".65" fill="#ffc969"><title>{html.escape(c["ref"]+":"+p["pin"]+" "+str(p["net"]))}</title></circle>')

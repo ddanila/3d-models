@@ -18,6 +18,7 @@ rotate(side=="bottom"?[180,0,0]:[0,0,0]){
  }
  // Cyan review graphics have no assigned net and are NOT verified copper.
  if(show_unresolved_artwork)color("#50b5c8"){
+  for(b=controller_visual_bridges)translate([0,0,2.4])route([[b[0],b[1]],.5],.1);
   translate([0,0,1.7])for(a=controller_pcb_top_art)route(a,.03);
   translate([0,0,-.15])for(a=controller_pcb_bottom_art)route(a,.03);
  }

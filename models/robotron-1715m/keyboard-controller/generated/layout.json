@@ -13022,5 +13022,26 @@
       "width": 0.35
     }
   ],
-  "vias": []
+  "vias": [],
+  "visualBridges": [
+    {
+      "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "photoSource": "photo-top",
+      "pixelUncertainty": 8,
+      "points": [
+        [
+          -69.701536,
+          -9.605272
+        ],
+        [
+          -65.942459,
+          -9.264913
+        ]
+      ],
+      "ref": "BR2",
+      "scope": "Geometric endpoint order only; no numbered pads, holes, nets or continuity claim. Height and diameter are illustrative.",
+      "side": "top",
+      "status": "unassigned-wire-photo-estimate"
+    }
+  ]
 }

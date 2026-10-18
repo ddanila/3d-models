@@ -59,7 +59,9 @@ installed orientation. Preserve component asset credits during migration.
 BR1 separates oscillator and CPU clock; BR2 separates reset source and CPU reset.
 Their terminal numbers are reconstruction identifiers. Observed bridge geometry
 can be represented as unassigned artwork before source/CPU terminal order is
-resolved; do not attach guessed pads or nets to make it look complete. Virtual bridge isolation
+resolved; do not attach guessed pads or nets to make it look complete. Generated
+`layout.json:visualBridges` preserves these wire observations independently of
+native footprints; review views show them in cyan. Virtual bridge isolation
 is tested digitally, but the reviewed sources do not prescribe physical bridge
 opening. Closed-link continuity alone cannot establish source-side terminal order.
 

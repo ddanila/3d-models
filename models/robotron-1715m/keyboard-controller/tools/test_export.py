@@ -6,6 +6,24 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_visual_bridge_does_not_assign_pads_or_duplicate_native_placement(self):
+  from export import visual_bridges
+  import copy
+  evidence=json.loads((R/'evidence.json').read_text())
+  landmarks=json.loads((R/'photo-landmarks.json').read_text())
+  layout=json.loads((R/'generated/layout.json').read_text())
+  bridges=visual_bridges(evidence,landmarks,layout['unplaced'])
+  self.assertEqual(bridges,layout['visualBridges'])
+  self.assertEqual([b['ref'] for b in bridges],['BR2'])
+  self.assertFalse(any(p['ref']=='BR2' for c in layout['components'] for p in c['pads']))
+  self.assertNotIn('net',bridges[0]);self.assertNotIn('pads',bridges[0])
+  self.assertEqual(visual_bridges(evidence,landmarks,[]),[])
+  changed=copy.deepcopy(evidence)
+  br=next(b for b in changed['serviceInterfaces']['bridges']if b['ref']=='BR2')
+  br['physicalEvidence']['photoEndpoints'][1]=br['physicalEvidence']['photoEndpoints'][0]
+  with self.assertRaisesRegex(ValueError,'Degenerate'):visual_bridges(changed,landmarks,layout['unplaced'])
+  changed=copy.deepcopy(landmarks);changed['photo']='another-specimen.jpg'
+  with self.assertRaisesRegex(ValueError,'differs'):visual_bridges(evidence,changed,layout['unplaced'])
  def test_ceramic_body_and_bent_lead_endpoints_remain_distinct(self):
   layout=json.loads((R/'generated/layout.json').read_text())
   c=next(c for c in layout['components']if c['ref']=='C5.1')

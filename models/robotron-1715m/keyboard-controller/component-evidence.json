@@ -1290,7 +1290,7 @@
     "referenceType": "BRIDGE",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-terminal-order; physical numbering unresolved",
-    "note": "Factory placement drawing supports a photo location candidate in evidence.json serviceInterfaces. Native footprint remains unplaced until source/CPU terminal order and pad correspondence are reviewed; no electrical continuity claim.",
+    "note": "Factory placement and primary-photo endpoints support an unassigned visual wire in generated layout/SCAD. Native footprint stays unplaced until source/CPU terminal order and pad correspondence are resolved; no electrical continuity claim.",
     "placementAuthority": "controller.kicad_pcb"
   }
 }
