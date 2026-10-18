@@ -10,6 +10,7 @@ def volume(path):
         total+=a[0]*(bv[1]*c[2]-bv[2]*c[1])+a[1]*(bv[2]*c[0]-bv[0]*c[2])+a[2]*(bv[0]*c[1]-bv[1]*c[0])
     return abs(total/6)
 checks={
+ 'controller-raised-axial-leads-vs-chip-bodies': ('keyboard_controller_pose()controller_visual_axial_leads();','keyboard_controller_chips();'),
  'controller-networks-vs-components': ('keyboard_controller_networks();','union(){keyboard_controller_board();keyboard_controller_chips();keyboard_controller_caps();keyboard_controller_connectors();keyboard_controller_resistors();}'),
  'keyboard-case-supports-vs-matrix': ('keyboard_pcb_supports();','keyboard_pcb();'),
  'keyboard-case-supports-vs-controller': ('keyboard_pcb_supports();','keyboard_controller_board();'),
@@ -27,7 +28,7 @@ checks={
  'motherboard-ribbon-plug-vs-chip-bodies': ('logic_ribbon_plug();','logic_chips();'),
  'motherboard-ribbon-plug-vs-socket': ('logic_ribbon_plug();','logic_connectors();'),
  'keyboard-discrete-leads-vs-board': ('keyboard_controller_leads();','keyboard_controller_board();'),
- 'keyboard-imported-leads-vs-board': ('keyboard_controller_pose()for(p=concat(controller_dips,[[114,8,24,15.24]]))owner_dip_pins(p);','keyboard_controller_board();'),
+ 'keyboard-imported-leads-vs-board': ('keyboard_controller_pose()for(p=controller_pcb_dips)owner_dip_pins(p);','keyboard_controller_board();'),
  'keyboard-cable-vs-chip-bodies': ('keyboard_internal_cable();','keyboard_controller_chips();'),
  'keyboard-chips-vs-caps': ('keyboard_controller_chips();','keyboard_controller_caps();'),
  'keyboard-transistor-lead-holes': ('keyboard_controller_pose()for(p=controller_transistors)controller_transistor_pose(p)for(x=[-1.27,0,1.27])translate([x,0,-1.6])cylinder(d=.6,h=1.6,$fn=12);','keyboard_controller_board();'),

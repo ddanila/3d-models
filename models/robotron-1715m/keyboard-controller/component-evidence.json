@@ -684,6 +684,24 @@
       "supportingSources": [
         "comparison-photo-080434345"
       ]
+    },
+    "visualAxialCandidate": {
+      "status": "body-and-raised-leads-only",
+      "photoSource": "photo-top",
+      "photoBodyAxis": [
+        [
+          1371,
+          3172
+        ],
+        [
+          1447,
+          3168
+        ]
+      ],
+      "bodyDiameterMm": 2.3,
+      "bodyCentreHeightMm": 3.2,
+      "leadRadiusMm": 0.25,
+      "scope": "Body axis and unnumbered visible lead ends from primary photograph. Diameter, height and lead curve are nominal visual estimates. Hidden lead entries are unresolved: no generated holes, solder joints, numbered pads or nets."
     }
   },
   "R6.5": {
@@ -714,6 +732,29 @@
       "supportingSources": [
         "comparison-photo-080434345"
       ]
+    },
+    "visualAxialCandidate": {
+      "status": "body-and-raised-leads-only",
+      "photoSource": "photo-top",
+      "photoBodyAxis": [
+        [
+          1370,
+          3226
+        ],
+        [
+          1447,
+          3220
+        ]
+      ],
+      "bodyDiameterMm": 2.3,
+      "bodyCentreHeightMm": 6.6,
+      "leadRadiusMm": 0.25,
+      "scope": "Body axis and unnumbered visible lead ends from primary photograph. Diameter, height and lead curve are nominal visual estimates. Hidden lead entries are unresolved: no generated holes, solder joints, numbered pads or nets.",
+      "heightEvidence": {
+        "photoSource": "photo-cpu-oscillator-closeup",
+        "finding": "Primary oblique view shows the resistor raised over the cable-side edge of A6. Centre height 6.6 mm is a nominal reconstruction giving clearance above the imported A6 package, not a measured height.",
+        "scope": "Do not move photo-derived in-plane body placement merely to clear A6; raised construction and hidden lead-entry uncertainty are separate."
+      }
     }
   },
   "R6.6": {

@@ -13938,6 +13938,82 @@
     }
   ],
   "vias": [],
+  "visualAxials": [
+    {
+      "axis": [
+        [
+          71.195869,
+          -11.577044
+        ],
+        [
+          70.923178,
+          -5.912259
+        ]
+      ],
+      "blueCollarEnd": "right",
+      "centre": [
+        71.0595235,
+        -8.7446515
+      ],
+      "centreHeight": 3.2,
+      "diameter": 2.3,
+      "leadRadius": 0.25,
+      "length": 5.6713445916912875,
+      "observedLeads": [
+        [
+          71.021515,
+          -14.768237
+        ],
+        [
+          70.709824,
+          -3.077472
+        ]
+      ],
+      "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "photoSource": "photo-top",
+      "ref": "R6.4",
+      "rotation": 92.75597252846347,
+      "scope": "Body axis and unnumbered visible lead ends from primary photograph. Diameter, height and lead curve are nominal visual estimates. Hidden lead entries are unresolved: no generated holes, solder joints, numbered pads or nets.",
+      "status": "body-and-raised-leads-only"
+    },
+    {
+      "axis": [
+        [
+          75.360087,
+          -11.842066
+        ],
+        [
+          74.932431,
+          -6.093591
+        ]
+      ],
+      "blueCollarEnd": "left",
+      "centre": [
+        75.14625899999999,
+        -8.9678285
+      ],
+      "centreHeight": 6.6,
+      "diameter": 2.3,
+      "leadRadius": 0.25,
+      "length": 5.764360717370228,
+      "observedLeads": [
+        [
+          74.649689,
+          -14.414385
+        ],
+        [
+          74.178656,
+          -3.23342
+        ]
+      ],
+      "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "photoSource": "photo-top",
+      "ref": "R6.5",
+      "rotation": 94.25466390648039,
+      "scope": "Body axis and unnumbered visible lead ends from primary photograph. Diameter, height and lead curve are nominal visual estimates. Hidden lead entries are unresolved: no generated holes, solder joints, numbered pads or nets.",
+      "status": "body-and-raised-leads-only"
+    }
+  ],
   "visualBridges": [
     {
       "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",

@@ -3,6 +3,11 @@
   "toleranceMm3": 0.001,
   "results": [
     {
+      "interface": "controller-raised-axial-leads-vs-chip-bodies",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
       "interface": "controller-networks-vs-components",
       "intersectionMm3": 0,
       "passed": true
@@ -24,8 +29,8 @@
     },
     {
       "interface": "controller-resistors-vs-components",
-      "intersectionMm3": 0.591264,
-      "passed": false
+      "intersectionMm3": 0,
+      "passed": true
     },
     {
       "interface": "plug-springs-vs-housing",
@@ -89,8 +94,8 @@
     },
     {
       "interface": "keyboard-imported-leads-vs-board",
-      "intersectionMm3": 4.108579,
-      "passed": false
+      "intersectionMm3": 0.0,
+      "passed": true
     },
     {
       "interface": "keyboard-cable-vs-chip-bodies",
@@ -278,5 +283,5 @@
       "passed": true
     }
   ],
-  "passed": false
+  "passed": true
 }

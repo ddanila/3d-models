@@ -49,20 +49,16 @@ module controller_miniplast_leads(){
 controller_connector_tails=[for(p=controller_visual_connector_contacts)[p[0],p[1]]];
 controller_connector_x=(controller_connector_tails[0][0]+controller_connector_tails[12][0])/2;
 controller_connector_y=3; // Retained housing offset estimate, independent of terminal identity.
-// Photo projected resistor positions; three ROM/CPU-end placements adjusted
-// within the approximate photo registration to clear nominal package bodies.
-controller_legacy_resistors=[ [68.794, -5.2, 84.875, 8.317], [80.052, -4, 1.38, 9.676]];
-// Placed sensing resistors and output pull-ups inherit native pad geometry.
-controller_resistors=concat(controller_legacy_resistors,controller_pcb_resistors);
+// Native axial geometry and unplaced visual bodies remain separate authorities.
+controller_resistors=controller_pcb_resistors;
 function resistor_end(p,s)=[p[0]+s*p[3]/2*cos(p[2]),p[1]+s*p[3]/2*sin(p[2])];
-controller_legacy_resistor_tails=[for(p=controller_legacy_resistors,s=[-1,1])resistor_end(p,s)];
-controller_resistor_tails=concat(controller_legacy_resistor_tails,[for(p=controller_pcb_resistor_pads)[p[0],p[1]]]);
+controller_resistor_tails=[for(p=controller_pcb_resistor_pads)[p[0],p[1]]];
 // Paired end holes in detached photo 123622947; installed retainers are separate.
 controller_end_holes=[for(x=[-133,133],y=[10,17.5])[x,y]];
 module keyboard_controller_board(){keyboard_controller_pose()difference(){
  linear_extrude(1.6)polygon(controller_pcb_outline);
  for(p=controller_end_holes)translate(concat(p,[-1]))cylinder(d=3.2,h=4,$fn=24);
- for(p=concat(controller_connector_tails,controller_legacy_resistor_tails))translate([p[0],p[1],-1])cylinder(d=.85,h=4,$fn=16);
+ for(p=controller_connector_tails)translate([p[0],p[1],-1])cylinder(d=.85,h=4,$fn=16);
  for(p=controller_transistors)controller_transistor_pose(p)for(x=controller_transistor_lead_x)translate([x,0,-2])cylinder(d=.85,h=4,$fn=12);
  for(p=concat(controller_pcb_dip_pads,controller_pcb_resistor_pads,controller_pcb_bridge_pads,controller_pcb_ceramic_pads))translate([p[0],p[1],-1])cylinder(d=p[2],h=4,$fn=16);
 }}
@@ -171,7 +167,6 @@ module keyboard_controller_traces(){keyboard_controller_pose(){
  for(a=controller_pcb_top_copper)translate([0,0,1.62])board_trace(a[0],a[1],.08);
  for(a=controller_pcb_bottom_copper)translate([0,0,-.10])board_trace(a[0],a[1],.10);
  for(p=controller_pcb_dip_pads)translate([p[0],p[1],1.62])difference(){cylinder(d=1.7,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
- for(p=controller_legacy_resistor_tails)translate([p[0],p[1],1.62])difference(){cylinder(d=1.9,h=.1,$fn=16);cylinder(d=.85,h=.2,$fn=12);}
  for(p=concat(controller_pcb_resistor_pads,controller_pcb_bridge_pads,controller_pcb_ceramic_pads))translate([p[0],p[1],1.62])difference(){scale([p[3],p[4],1])cylinder(d=1,h=.1,$fn=20);cylinder(d=p[2],h=.2,$fn=16);}
  // Staggered transistor-stage routes and plated eyes (no invented values).
  for(p=controller_transistors)controller_transistor_pose(p)
@@ -410,11 +405,16 @@ module keyboard_controller_solder(){keyboard_controller_pose(){
  for(p=controller_pcb_dip_pads)controller_solder_eye(p[0],p[1],p[2]);
  for(p=controller_transistors)translate([p[0],p[1],0])rotate([0,0,p[2]])
   for(x=controller_transistor_lead_x)controller_solder_eye(x,0,.85,1.2);
- for(p=concat(controller_connector_tails,controller_legacy_resistor_tails))controller_solder_eye(p[0],p[1],.85,1.7);
+ for(p=controller_connector_tails)controller_solder_eye(p[0],p[1],.85,1.7);
  for(p=controller_end_holes)translate([p[0],p[1],-.15])difference(){cylinder(d=3.8,h=.15,$fn=24);translate([0,0,-.1])cylinder(d=3.2,h=.6,$fn=16);}
 }}
 
 // Bent connector tails and axial leads visible in 123622947. Nominal diameters.
+module controller_visual_axial_leads(){
+ // Raised axial observations do not generate guessed through-board tails.
+ for(n=controller_visual_axials,i=[0:1])let(s=i==0?-1:1,p=n[5][i])
+ wire_run([[n[0][0]+s*n[2]/2*cos(n[1]),n[0][1]+s*n[2]/2*sin(n[1]),n[4]],[p[0],p[1],1.6+n[6]+.05]],n[6]);
+}
 module keyboard_controller_leads(){keyboard_controller_pose(){
  for(c=controller_pcb_ceramics)let(angle=atan2(c[2][1]-c[1][1],c[2][0]-c[1][0]))
   for(i=[1,2])let(p=c[i],sign=i==1?-1:1)wire_run([[p[0],p[1],-.5],[p[0],p[1],2.1],[c[0][0]+sign*1.5*cos(angle),c[0][1]+sign*1.5*sin(angle),controller_ceramic_z(c)-1.7]],.25);
@@ -428,6 +428,7 @@ module keyboard_controller_leads(){keyboard_controller_pose(){
  // Unnumbered raised leads end above the laminate; hidden entry remains unresolved.
  for(n=controller_visual_networks,p=n[6])let(u=[cos(n[1]),sin(n[1])],d=(p[0]-n[0][0])*u[0]+(p[1]-n[0][1])*u[1])
  wire_run([[n[0][0]+d*u[0],n[0][1]+d*u[1],n[5]+.3],[p[0],p[1],1.6+n[7]+.05]],n[7]);
+ controller_visual_axial_leads();
  for(p=controller_resistors,s=[-1,1])let(end=resistor_end(p,s))
   wire_run([[p[0]+s*2.6*cos(p[2]),p[1]+s*2.6*sin(p[2]),3.2],[end[0],end[1],3.2],[end[0],end[1],-.5]],.25);
 }}
@@ -459,13 +460,15 @@ module keyboard_matrix_contacts(){keyboard_matrix_pose(){
 
 // Owner 123622947: grey axial resistor bodies and blue end bands, separate from
 // the brown ceramic EPROM. Values are deliberately not inferred from colours.
-module keyboard_controller_resistors(){keyboard_controller_pose()
+module keyboard_controller_resistors(){keyboard_controller_pose(){
+ for(n=controller_visual_axials)translate([n[0][0],n[0][1],n[4]])rotate([0,0,n[1]])rotate([0,90,0])cylinder(d=n[3],h=n[2],center=true,$fn=24);
  for(p=controller_resistors)translate([p[0],p[1],3.2])rotate([0,0,p[2]])rotate([0,90,0])cylinder(d=2.3,h=5.2,center=true,$fn=24);
-}
-module keyboard_controller_resistor_bands(){keyboard_controller_pose()
+}}
+module keyboard_controller_resistor_bands(){keyboard_controller_pose(){
+ for(n=controller_visual_axials)translate([n[0][0],n[0][1],n[4]])rotate([0,0,n[1]])translate([n[7]*(n[2]/2-.5),0,0])rotate([0,90,0])cylinder(d=n[3]+.02,h=.65,center=true,$fn=24);
  for(p=controller_resistors,s=len(p)>5 && p[5]!=0 ? [p[5]] : [-1,1])translate([p[0],p[1],3.2])rotate([0,0,p[2]])translate([s*2.1,0,0])rotate([0,90,0])
   difference(){cylinder(d=2.34,h=.55,center=true,$fn=24);cylinder(d=2.28,h=.8,center=true,$fn=24);}
-}
+}}
 
 // Installed photo 123907435: one retained screw in each paired end-hole group.
 // Visible straps only; unseen threads and chassis attachment remain unmeasured.

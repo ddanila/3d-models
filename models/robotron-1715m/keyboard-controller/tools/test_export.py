@@ -29,6 +29,28 @@ class ControllerExportTests(unittest.TestCase):
   wrong['R1']['visualNetworkCandidate']['photoBodyAxis']=[[1,1],[1,1]]
   with self.assertRaisesRegex(ValueError,'Degenerate'):visual_networks(wrong,evidence,landmarks,layout['unplaced'])
 
+ def test_visual_axials_keep_photo_bodies_separate_from_holes(self):
+  import copy
+  from export import visual_axials
+  components=json.loads((R/'component-evidence.json').read_text())
+  evidence=json.loads((R/'evidence.json').read_text())
+  landmarks=json.loads((R/'photo-landmarks.json').read_text())
+  layout=json.loads((R/'generated/layout.json').read_text())
+  result=visual_axials(components,evidence,landmarks,layout['unplaced'])
+  self.assert_report_equal(result,layout['visualAxials'])
+  self.assertEqual({n['ref']for n in result},{'R6.4','R6.5'})
+  for n in result:
+   self.assertNotIn('pads',n);self.assertNotIn('net',n)
+   self.assertEqual(len(n['observedLeads']),2)
+   self.assertFalse(any(c['ref']==n['ref']for c in layout['components']))
+  self.assertEqual(visual_axials(components,evidence,landmarks,[]),[])
+  wrong=copy.deepcopy(components)
+  wrong['R6.4']['placementCandidate']['photoSource']='comparison-photo-080434345'
+  with self.assertRaisesRegex(ValueError,'primary registered photo'):visual_axials(wrong,evidence,landmarks,layout['unplaced'])
+  wrong=copy.deepcopy(components)
+  wrong['R6.5']['visualAxialCandidate']['bodyCentreHeightMm']=1
+  with self.assertRaisesRegex(ValueError,'above the board'):visual_axials(wrong,evidence,landmarks,layout['unplaced'])
+
  def assert_report_equal(self,actual,expected,path='report'):
   # Python/libm versions can differ by an ULP in distance calculations.
   # Preserve exact structure and labels; this tolerance is far below native nanometre rounding.

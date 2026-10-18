@@ -69,6 +69,29 @@ def visual_networks(component_evidence,evidence,landmarks,unplaced):
    'observedLeads':[[round(v,6)for v in project(transform,p)]for p in leads],
    'photoSource':candidate['photoSource'],'photoSha256':source['sha256'],'scope':candidate['scope']})
  return result
+def visual_axials(component_evidence,evidence,landmarks,unplaced):
+ """Project raised resistor bodies independently of their unresolved hole entries."""
+ from photo_registration import homography,project
+ transform=homography(landmarks['photoCorners'],landmarks['modelCorners'])
+ sources={s['id']:s for s in evidence['sources']};result=[]
+ for c in unplaced:
+  record=component_evidence.get(c['ref'],{});candidate=record.get('visualAxialCandidate')
+  if not candidate:continue
+  source=sources[candidate['photoSource']];leads=record['placementCandidate']
+  if candidate['status']!='body-and-raised-leads-only' or source.get('specimenId') or source['path']!=landmarks['photo'] or leads['photoSource']!=candidate['photoSource']:raise ValueError('Axial observations require primary registered photo')
+  axis=candidate['photoBodyAxis'];ends=leads['photoEndpoints']
+  if len(axis)!=2 or len(ends)!=2 or any(len(p)!=2 or any(not math.isfinite(v)for v in p)for p in axis+ends):raise ValueError('Invalid axial observations')
+  a,b=[[round(v,6)for v in project(transform,p)]for p in axis]
+  length=math.dist(a,b)
+  if length<1e-6:raise ValueError('Degenerate axial body axis')
+  diameter,height,radius=[candidate[k]for k in ['bodyDiameterMm','bodyCentreHeightMm','leadRadiusMm']]
+  if any(not math.isfinite(v)or v<=0 for v in [diameter,height,radius]) or height-diameter/2<=1.6:raise ValueError('Axial body must stand above the board')
+  result.append({'ref':c['ref'],'status':candidate['status'],'axis':[a,b],
+   'centre':[(a[i]+b[i])/2 for i in range(2)],'length':length,'rotation':math.degrees(math.atan2(b[1]-a[1],b[0]-a[0])),
+   'diameter':diameter,'centreHeight':height,'leadRadius':radius,
+   'observedLeads':[[round(v,6)for v in project(transform,p)]for p in ends],
+   'blueCollarEnd':leads['blueCollarEndpoint'],'photoSource':candidate['photoSource'],'photoSha256':source['sha256'],'scope':candidate['scope']})
+ return result
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');args=parser.parse_args()
  if args.check:return check()
@@ -139,6 +162,7 @@ def main():
  connector['nativePlacement']=placement_review(layout,connector,terminals)
  layout['visualConnectors']=[{'ref':'X1','status':'photo-placed-reference-terminal-order','unclassifiedContacts':connector['nativePlacement']['unclassifiedContacts'],'rows':joints['projectedJointRowsMm'],'photoSource':joints['photoSource'],'photoSha256':joints['photoSha256'],'scope':'Observed joint rows are retained independently of native reference pads. Only contacts absent from the reference schematic remain unassigned. Housing dimensions, contact heights, lead section and hole diameters remain illustrative.'}]
  layout['visualNetworks']=visual_networks(json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),unplaced)
+ layout['visualAxials']=visual_axials(json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),unplaced)
  write('layout.json',layout)
  write('connector-review.json',connector)
  write('connector-terminals.json',terminals)
@@ -177,6 +201,7 @@ def main():
    visual_transistors.append([*[round(v,6)for v in project(body_projection,candidate['photoBodyCentre'])],round(angle,6),c['ref']])
  scad+=['controller_visual_transistors='+json.dumps(visual_transistors)+';']
  scad+=['controller_visual_networks='+json.dumps([[n['centre'],n['rotation'],n['length'],n['thickness'],n['height'],n['baseHeight'],n['observedLeads'],n['leadRadius'],n['ref']]for n in layout['visualNetworks']])+';']
+ scad+=['controller_visual_axials='+json.dumps([[n['centre'],n['rotation'],n['length'],n['diameter'],n['centreHeight'],n['observedLeads'],n['leadRadius'],1 if n['blueCollarEnd']=='right' else -1,n['ref']]for n in layout['visualAxials']])+';']
  resistor_evidence=json.loads((ROOT/'component-evidence.json').read_text());resistors=[]
  for c in placed:
   if c['ref'].startswith('R') and len(c['pads'])==2:
