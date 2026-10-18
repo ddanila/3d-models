@@ -33,7 +33,7 @@ class ControllerExportTests(unittest.TestCase):
   self.assertFalse(any(c['consistent'] for c in rejected['candidates']))
  def test_connector_review_keeps_observations_unnumbered(self):
   import copy
-  from connector_review import review as connector_review
+  from connector_review import review as connector_review, placement_review
   layout=json.loads((R/'generated/layout.json').read_text())
   components=json.loads((R/'component-evidence.json').read_text())
   sources=json.loads((R/'evidence.json').read_text())
@@ -41,11 +41,17 @@ class ControllerExportTests(unittest.TestCase):
   before=copy.deepcopy(layout)
   bottom=json.loads((R/'generated/bottom-registration.json').read_text())
   result=connector_review(layout,components,sources,landmarks,bottom)
+  terminals=json.loads((R/'generated/connector-terminals.json').read_text())
+  result['nativePlacement']=placement_review(layout,result,terminals)
   self.assertEqual(result,json.loads((R/'generated/connector-review.json').read_text()))
+  self.assertEqual(result['nativePlacement']['unclassifiedContacts'],['A8'])
+  shifted=copy.deepcopy(layout)
+  next(c for c in shifted['components'] if c['ref']=='X1')['pads'][0]['position'][0]+=.2
+  with self.assertRaisesRegex(ValueError,'native pads differ'):placement_review(shifted,result,terminals)
   self.assertFalse(result['qualifiedForPadPlacement'])
   visual=next(c for c in layout['visualConnectors'] if c['ref']=='X1')
   self.assertEqual(visual['rows'],result['underside']['projectedJointRowsMm'])
-  self.assertEqual(visual['status'],'unassigned-contact-geometry')
+  self.assertEqual(visual['status'],'photo-placed-reference-terminal-order')
   self.assertNotIn('nets',visual)
   self.assertNotIn('pins',visual)
   self.assertTrue(result['underside']['allJointsInsideAnchorHull'])

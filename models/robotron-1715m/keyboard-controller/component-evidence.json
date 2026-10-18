@@ -64,12 +64,12 @@
   },
   "X1": {
     "referenceType": "MATRIX_CONNECTOR",
-    "placementEvidence": "inherited-photo-estimate",
+    "placementEvidence": "photo-placed-reference-terminal-order",
     "pinEvidence": "connector-label-or-semantic-terminal",
-    "note": "The native electrical footprint remains provisional. Museum geometry uses separately exported unnumbered solder-joint observations and same-side bent leads. Reference-derived row numbering is constrained by photographed attachments; this is not measured continuity. Housing dimensions and lead profiles remain estimates. See physicalReview and generated/connector-terminals.json.",
+    "note": "Native reference pads follow locally registered underside joints with row numbering constrained by photographed attachments. This is not measured continuity or metrology. The schematic-omitted A8 contact remains unclassified visual geometry; no electrical pad or net is invented for it. Housing dimensions and lead profiles remain estimates. See generated/connector-review.json and generated/connector-terminals.json.",
     "placementAuthority": "controller.kicad_pcb",
     "physicalReview": {
-      "status": "inherited-geometry-conflicts-with-visible-lead-arrangement",
+      "status": "registered-joints-reference-terminal-order",
       "photoSource": "photo-top",
       "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
       "pixelUncertainty": 10,

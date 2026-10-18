@@ -1246,7 +1246,7 @@
 				)
 			)
 		)
-		(property "Evidence" "inherited-photo-estimate"
+		(property "Evidence" "photo-placed-reference-terminal-order"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1284,7 +1284,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "A1" thru_hole circle
-			(at -15.24 -7)
+			(at -16.035374 -11.891053)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1293,7 +1293,7 @@
 			(uuid "86168d05-4f7d-4b83-9d60-8c9345eadfdf")
 		)
 		(pad "A2" thru_hole circle
-			(at -12.7 -7)
+			(at -13.643151 -11.827379)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1302,7 +1302,7 @@
 			(uuid "4d0cec67-eec1-4475-ab32-dadb4fb5a741")
 		)
 		(pad "A3" thru_hole circle
-			(at -10.16 -7)
+			(at -11.262052 -11.764002)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1311,7 +1311,7 @@
 			(uuid "fb7b707f-7683-47ad-bb31-46443c2b3950")
 		)
 		(pad "A4" thru_hole circle
-			(at -7.62 -7)
+			(at -8.888272 -11.620251)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1320,7 +1320,7 @@
 			(uuid "db265413-1f30-4075-a3ed-4480f9dbf189")
 		)
 		(pad "A5" thru_hole circle
-			(at -5.08 -7)
+			(at -6.524145 -11.450359)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1329,7 +1329,7 @@
 			(uuid "c713d232-dc72-4842-9103-45e220ef5f5a")
 		)
 		(pad "A6" thru_hole circle
-			(at -2.54 -7)
+			(at -4.173351 -11.334726)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1338,7 +1338,7 @@
 			(uuid "5265c9fa-2a88-4285-ac28-0c0e1572cce3")
 		)
 		(pad "A7" thru_hole circle
-			(at 0 -7)
+			(at -1.833334 -11.219624)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1347,7 +1347,7 @@
 			(uuid "9dc6666c-91c7-419d-b65e-82cc6c69d1e0")
 		)
 		(pad "A9" thru_hole circle
-			(at 5.08 -7)
+			(at 2.814662 -10.991075)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1356,7 +1356,7 @@
 			(uuid "a4a695e6-386c-494d-87fd-f7b7b9406278")
 		)
 		(pad "A10" thru_hole circle
-			(at 7.62 -7)
+			(at 5.124096 -10.85104)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1365,7 +1365,7 @@
 			(uuid "059b9a7c-1a85-4451-8427-e6447744be11")
 		)
 		(pad "A11" thru_hole circle
-			(at 10.16 -7)
+			(at 7.42175 -10.738081)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1374,7 +1374,7 @@
 			(uuid "40b6d29b-d7ed-4845-8670-a83e0f0a9096")
 		)
 		(pad "A12" thru_hole circle
-			(at 12.7 -7)
+			(at 9.710315 -10.599252)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1383,7 +1383,7 @@
 			(uuid "0e24cb48-ad3a-4bbb-9961-1dfb336591d1")
 		)
 		(pad "A13" thru_hole circle
-			(at 15.24 -7)
+			(at 11.987218 -10.487452)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1392,7 +1392,7 @@
 			(uuid "c0ba941d-caed-4f05-b87c-c7bb9970df59")
 		)
 		(pad "B1" thru_hole circle
-			(at -15.24 7)
+			(at -15.550875 -7.006376)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1401,7 +1401,7 @@
 			(uuid "6e2b04a8-d897-4794-8fba-dcc7643195cc")
 		)
 		(pad "B2" thru_hole circle
-			(at -12.7 7)
+			(at -13.157874 -6.954044)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1410,7 +1410,7 @@
 			(uuid "59cb2d29-108d-4bf4-b588-efd36fecf519")
 		)
 		(pad "B3" thru_hole circle
-			(at -10.16 7)
+			(at -11.040167 -6.907732)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1419,7 +1419,7 @@
 			(uuid "d25853fe-79d4-49f5-8d96-e1c8a8a62122")
 		)
 		(pad "B4" thru_hole circle
-			(at -7.62 7)
+			(at -8.663157 -6.748102)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1428,7 +1428,7 @@
 			(uuid "52da855d-4b97-4a5f-a7d9-6e553716ce1c")
 		)
 		(pad "B5" thru_hole circle
-			(at -5.08 7)
+			(at -6.300815 -6.66978)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1437,7 +1437,7 @@
 			(uuid "37b1ab32-3f37-4ee7-ae68-97c09fa00af0")
 		)
 		(pad "B6" thru_hole circle
-			(at -2.54 7)
+			(at -3.949369 -6.591899)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1446,7 +1446,7 @@
 			(uuid "fabea71a-02c8-429f-b0ed-9d05b8502eff")
 		)
 		(pad "B7" thru_hole circle
-			(at 0 7)
+			(at -1.610017 -6.541111)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1455,7 +1455,7 @@
 			(uuid "f1f0bd3b-c4db-41e5-ac84-fb70c925ea07")
 		)
 		(pad "B8" thru_hole circle
-			(at 2.54 7)
+			(at 0.851513 -6.407662)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1464,7 +1464,7 @@
 			(uuid "aa828c55-6f2c-4265-bbaf-62053e7ffd32")
 		)
 		(pad "B9" thru_hole circle
-			(at 5.08 7)
+			(at 3.174044 -6.251013)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1473,7 +1473,7 @@
 			(uuid "f4683d33-a039-4e7e-a88d-616deacc976f")
 		)
 		(pad "B10" thru_hole circle
-			(at 7.62 7)
+			(at 5.355525 -6.150923)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1482,7 +1482,7 @@
 			(uuid "d65f975b-32c9-4f12-aa78-76fd32f00f3e")
 		)
 		(pad "B11" thru_hole circle
-			(at 10.16 7)
+			(at 7.657628 -5.995545)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1491,7 +1491,7 @@
 			(uuid "ebf4fec1-c0d4-4192-b27b-67eeac1785f7")
 		)
 		(pad "B12" thru_hole circle
-			(at 12.7 7)
+			(at 9.948011 -5.867305)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -1500,7 +1500,7 @@
 			(uuid "24e95703-73ef-4d2a-ac29-88ac8864ddd0")
 		)
 		(pad "B13" thru_hole circle
-			(at 15.24 7)
+			(at 12.352882 -5.763342)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -5966,7 +5966,7 @@
 			(uuid "689376da-1366-4d4c-9f92-f657d6d24b2a")
 		)
 		(pad "17" thru_hole circle
-			(at 16.51 7.619993 359.8847389)
+			(at 16.51 7.619992 359.8847389)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -6146,7 +6146,7 @@
 			(uuid "3c351904-502d-44b5-94d1-595427a6aa52")
 		)
 		(pad "37" thru_hole circle
-			(at -16.51 -7.619993 359.8847389)
+			(at -16.51 -7.619992 359.8847389)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")

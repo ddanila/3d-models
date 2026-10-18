@@ -71,13 +71,13 @@ the review. Observed tracks require their side's photo; observed vias require bo
 sides. This enforces provenance completeness, not the truth of an interpretation.
 Unassigned photo artwork is not electrical copper.
 
-`generated/connector-review.json` compares unnumbered X1 lead observations with
-its inherited footprint. Raised lead ends are not qualified hole centres; resolve
-terminal order before replacing the electrical footprint. The assembly uses
-separate unnumbered joint observations for its holes and bent leads; lead heights,
-housing dimensions and hole diameters remain estimates. `generated/connector-terminals.json` retains the numbering
-alternatives constrained by visible resistor attachments; do not infer the second
-row's direction from the first.
+`generated/connector-review.json` checks X1's native reference pads against
+locally registered underside joints. `generated/connector-terminals.json` retains
+row-order alternatives constrained by resistor and COL11 attachments; the two
+row directions are tested independently. Assembly leads consume native positions
+for mapped contacts. A8 remains unclassified visual geometry because it is absent
+from the reference schematic. Raised top-side bends are not hole centres; housing
+dimensions, lead heights and hole diameters remain estimates.
 
 ## Regenerate and check
 

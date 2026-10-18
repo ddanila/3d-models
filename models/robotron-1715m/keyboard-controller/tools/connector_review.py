@@ -25,8 +25,8 @@ def review(layout, components, sources, landmarks, bottom=None):
             'scope': 'Unnumbered visible lead ends, not qualified hole centres. Projection uses the nominal board envelope; dimensions are estimates. Near/far rows are not assigned to A/B or schematic nets.',
             'projectedLeadEndRowsMm': projected,
             'projectedRowSeparationMm': {'minimum': min(separations), 'maximum': max(separations)},
-            'inheritedPadRowSeparationMm': {'minimum': min(native), 'maximum': max(native)},
-            'nextEvidence': 'Resolve lead-to-hole positions and numbered terminal order before replacing the inherited native footprint. Both visible lead rows emerge from the same housing side.'}
+            'nativePadRowSeparationMm': {'minimum': min(native), 'maximum': max(native)},
+            'nextEvidence': 'Reconcile native pad geometry against the independent underside observations and terminal constraints. Actual dimensions and continuity remain unmeasured.'}
 
     if bottom is not None and observation.get('underside'):
         from bottom_registration import inside_hull
@@ -53,3 +53,23 @@ def review(layout, components, sources, landmarks, bottom=None):
             'terminalMappingQualified': False,
             'scope': 'Solder-joint geometry from local nominal registration, not metrology. Top lead ends can be raised bends; cross-side residuals do not prove electrical identity.'}
     return result
+
+
+def placement_review(layout, observation, terminals):
+    """Check native positions without deriving or moving them during export."""
+    joints = observation['underside']
+    if not terminals['completeTerminalOrderResolved'] or not joints['allJointsInsideAnchorHull'] or not joints['registrationWithinTolerance']:
+        raise ValueError('Connector placement requires bounded registration and terminal order')
+    expected = {pin: point for row, pins in terminals['resolvedRows'].items()
+                for pin, point in zip(pins, joints['projectedJointRowsMm'][row])}
+    native = next(c for c in layout['components'] if c['ref'] == 'X1')
+    errors = {p['pin']: math.dist(p['position'], expected[p['pin']]) for p in native['pads']}
+    missing = sorted(set(expected) - set(errors))
+    if missing != terminals['referenceAbsentPins']:
+        raise ValueError('Connector native pad inventory differs from supported terminals')
+    # Native coordinates are integer nanometres; this checks transcription, not photo accuracy.
+    if max(errors.values()) > .000002:
+        raise ValueError('Connector native pads differ from registered joint positions')
+    return {'status': 'photo-placed-reference-terminal-order', 'padResidualsMm': errors,
+            'unclassifiedContacts': missing,
+            'scope': 'Native reference pads match locally registered joints. Numbering is reference-derived; dimensions, hole diameters and continuity are not measured. Unclassified contacts remain visual geometry only.'}
