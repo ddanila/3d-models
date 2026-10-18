@@ -403,6 +403,27 @@
       "title": "Si-pnp-Transistoren SC307 bis SC309",
       "use": "PDF page 1 package drawing, L3/12 (TGL 11811). Reference terminal arrangement and nominal dimensions; not specimen placement or measured continuity. PDF not redistributed.",
       "credit": "Manufacturer communication from VEB Mikroelektronik Anna Seghers Neuhaus, identified on PDF page 1."
+    },
+    {
+      "id": "kwh-network-standard-types",
+      "url": "https://www.ycdtotv.de/robotron/kwh_r-nw.pdf",
+      "sha256": "107e10d5de6cbb371addbbfdd53adf075642db9df7551f742fc461aa35f804b6",
+      "locator": "PDF page 3, Stromteiler table, code 3894 and footnote 1",
+      "use": "Manufacturer standard network types; 3894 value, topology and explicit unused pin 10. Original PDF linked, not redistributed."
+    },
+    {
+      "id": "kwh-network-catalog",
+      "url": "https://www.ycdtotv.de/robotron/kwh_r-nw2.pdf",
+      "sha256": "5e67e56213ebe0bcbd521c56379ec4714d5a40ab061b0d6ae379420f2e9789d7",
+      "locator": "PDF page 7 / printed page 18, Stromteiler",
+      "use": "Manufacturer detailed catalog; cross-check 3894 and identify 3845 as an unconfirmed R2 candidate. Original PDF linked, not redistributed."
+    },
+    {
+      "id": "kwh-network-technical",
+      "url": "https://www.ycdtotv.de/robotron/kwh_r-nw3.pdf",
+      "sha256": "07b0c6e0de87cc10aa309f5218355f0ec5f4aeda5c6e972eca075781208ecb81",
+      "locator": "PDF page 3 / printed page 8 marking convention; PDF page 4 / printed page 9 package forms",
+      "use": "Manufacturer code/date convention and B1 lead pitch/package dimensions. Original PDF linked, not redistributed."
     }
   ],
   "specimen": {
@@ -758,6 +779,17 @@
       ],
       "finding": "Primary R1 and R2 each expose ten raised lead exits. Comparison R1 oblique independently shows ten. The native nine-terminal reference symbols cannot be used directly as complete physical package maps. Factory R2 third branch is labelled 10 versus 8 in Zander.",
       "scope": "Lead observations and drawing labels only; no inferred common duplication, unused terminal, installed numbering or net reassignment. Photo pixels and interpretation limits are in component-evidence.json terminalReview."
+    },
+    {
+      "date": "2026-10-18",
+      "sources": [
+        "kwh-network-standard-types",
+        "kwh-network-catalog",
+        "kwh-network-technical",
+        "comparison-photo-080450163"
+      ],
+      "finding": "KWH 3894 is eight 910-ohm resistors with common terminal 1, branches 2 through 9 and unused terminal 10. This identifies the comparison R1 marking and explains its ten visible leads without an extra resistor. B1 nominal pitch is 2.5 mm, not 2.54 mm.",
+      "scope": "Package-reference identification only. Primary R1 and installed pin-one orientation require separate evidence. The catalog 3845 is nine 4.7-kOhm resistors and remains only a candidate for R2; no unseen marking inferred."
     }
   ],
   "routeReviews": [
@@ -1423,6 +1455,45 @@
       "scope": "Reference package convention. Comparison photos show C36/D markings consistent with this family; primary specimen markings, individual body orientation, lead bends and PCB pad correspondence remain unqualified.",
       "flatFaceToLeadPlaneMm": 1,
       "backCornerRadiusMm": 1
+    },
+    {
+      "id": "kwh-3894",
+      "types": [
+        "3894"
+      ],
+      "source": "kwh-network-standard-types",
+      "locator": "PDF page 3, Stromteiler: 0.910 kOhm row, figure 2, footnote 1",
+      "corroboratingSource": "kwh-network-catalog",
+      "corroboratingLocator": "PDF page 7 / printed page 18, 4538.8-9446.76 row",
+      "manufacturer": "VEB Keramische Werke Hermsdorf",
+      "productNumber": "4538.8-9446.76",
+      "case": "B1-11/3.0/10",
+      "resistanceOhms": 910,
+      "resistorCount": 8,
+      "tolerancePercent": 2,
+      "powerPerResistorMilliwatts": 25,
+      "temperatureCoefficientPpmPerK": 200,
+      "commonTerminal": "1",
+      "resistorTerminals": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "unusedTerminals": [
+        "10"
+      ],
+      "leadCount": 10,
+      "leadPitchMm": 2.5,
+      "packageSource": "kwh-network-technical",
+      "packageLocator": "PDF page 4 / printed page 9, Form B; B1 pitch and height-code table",
+      "bodyHeightMaximumMm": 11,
+      "bodyThicknessMaximumMm": 3,
+      "scope": "Catalog topology identifies the comparison R1 marked 3894. Nominal package dimensions are not specimen measurements. Primary R1 marking and installed terminal orientation remain unconfirmed; no native pads assigned."
     }
   ]
 }

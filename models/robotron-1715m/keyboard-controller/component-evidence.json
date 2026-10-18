@@ -1068,7 +1068,29 @@
       "order": "Cable end toward CPU end in the original top photo; array indices are observations, not pin numbers.",
       "scope": "Ten visible raised lead exits beside the body. Not hole centres or projected pad coordinates. Do not assign the additional lead to common, unused or duplicated functions without evidence.",
       "nextEvidence": "Follow each lead to a registered joint and compare both sides; check package documentation for common or unused terminals.",
-      "drawingDiscrepancy": "Factory PDF page 11 labels the third branch from the left 10; Zander reference labels it 8. Both connect that branch to V4.8 base. Supply-terminal numbering is not shown there; current reference pin 1 does not establish physical common position."
+      "drawingDiscrepancy": "Factory PDF page 11 labels the third branch from the left 10; Zander reference labels it 8. Both connect that branch to V4.8 base. Supply-terminal numbering is not shown there; current reference pin 1 does not establish physical common position.",
+      "packageCandidate": {
+        "source": "kwh-network-catalog",
+        "locator": "PDF page 7 / printed page 18, code 3845",
+        "code": "3845",
+        "resistanceOhms": 4700,
+        "resistorCount": 9,
+        "commonTerminal": "1",
+        "resistorTerminals": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "case": "B1-9/3.0/10",
+        "status": "unconfirmed-no-legible-package-marking",
+        "scope": "A nine-branch package with one branch unused by the board could explain ten leads and factory pin 10, but neither identity nor the unused board branch is proven. Do not replace the eight-branch reference model from this hypothesis."
+      }
     }
   },
   "R1": {
@@ -1102,7 +1124,8 @@
           1930
         ],
         "readingRotationDegrees": 180,
-        "scope": "Separate specimen. Marking meaning unresolved; no resistance value, date code or primary-board marking inferred."
+        "scope": "Separate specimen. KWH catalog identifies 3894 as eight 910-ohm resistors, common pin 1, branches 2–9, unused pin 10. Primary-board marking and installed pin orientation remain unconfirmed; V D date-code interpretation is not needed for pin mapping.",
+        "packageReference": "kwh-3894"
       }
     ],
     "terminalReview": {
@@ -1152,10 +1175,11 @@
       ],
       "pixelUncertainty": 8,
       "order": "Cable end toward CPU end in the original top photo; array indices are observations, not pin numbers.",
-      "scope": "Ten visible raised lead exits beside the body. Not hole centres or projected pad coordinates. Do not assign the additional lead to common, unused or duplicated functions without evidence.",
-      "nextEvidence": "Follow each lead to a registered joint and compare both sides; check package documentation for common or unused terminals.",
+      "scope": "Ten visible raised lead exits beside the primary body, not hole centres or projected pad coordinates. Comparison 3894 package pin 10 is documented unused; do not transfer that identity or orientation to the primary without corroboration.",
+      "nextEvidence": "Confirm primary package marking and match the catalog common/unused ends to registered joints and visible copper; use B1 2.5 mm pitch only if identity is supported.",
       "comparisonSource": "comparison-photo-080450163",
-      "comparisonFinding": "Separate-specimen oblique view independently shows ten leads. Small end mark is not yet accepted as pin-one evidence."
+      "comparisonFinding": "Separate-specimen oblique shows ten leads and code 3894. KWH catalog explicitly leaves terminal 10 unused; this resolves the comparison package lead-count question. Small end mark and primary installed numbering remain unqualified.",
+      "packageReference": "kwh-3894"
     }
   },
   "V4.3": {
