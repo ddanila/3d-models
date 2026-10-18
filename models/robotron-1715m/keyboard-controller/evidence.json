@@ -36,7 +36,7 @@
       "id": "robotron-service-1985",
       "url": "https://www.tiffe.de/Robotron/PC1715/PC-1715-Servicemanual.pdf",
       "sha256": "e810e4722d889a7e357e192486da3a8004b1fd08aca1c0dcef4f3bbc5b66021d",
-      "use": "Manufacturer service handbook, 1985, printed pp. 89\u201392 (PDF pages 91\u201394): WR serial synchronization, matrix sensing, LED latches, reset and nominal clock. Oscillator designators, pin usage and capacitor differ from Zander; not specimen-identical. PDF not redistributed."
+      "use": "Manufacturer service handbook, 1985, printed pp. 89–92 (PDF pages 91–94): WR serial synchronization, matrix sensing, LED latches, reset and nominal clock. Oscillator designators, pin usage and capacitor differ from Zander; not specimen-identical. PDF not redistributed."
     },
     {
       "id": "robotron-factory-drawings",
@@ -394,7 +394,7 @@
       "sha256": "c5c52b6df912f167f14b70feb2963a08ce9fc933b3edad8bff8b4073eb43bb94",
       "title": "SC236 / SC237 / SC238 / SC239",
       "use": "PDF page 1 package drawing, L3/12 (TGL 11811). Reference terminal arrangement and nominal dimensions; not specimen placement or measured continuity. PDF not redistributed.",
-      "credit": "Scanned bilingual device data sheet, printed pages 13\u201314 on PDF page 1; issuing publication not identified in excerpt."
+      "credit": "Scanned bilingual device data sheet, printed pages 13–14 on PDF page 1; issuing publication not identified in excerpt."
     },
     {
       "id": "sc307-package-datasheet",
@@ -439,7 +439,7 @@
     {
       "id": "clock-source-disagreement",
       "status": "unresolved",
-      "detail": "Zander connects WR to the output inverter; kbdbabel connects RD and leaves WR unused. Resolve by following specimen copper/continuity. The current HDL explicitly models the Zander reference. Robotron service handbook pp. 89\u201390 explicitly supports WR. Specimen continuity remains unverified."
+      "detail": "Zander connects WR to the output inverter; kbdbabel connects RD and leaves WR unused. Resolve by following specimen copper/continuity. The current HDL explicitly models the Zander reference. Robotron service handbook pp. 89–90 explicitly supports WR. Specimen continuity remains unverified."
     }
   ],
   "serviceInterfaces": {
@@ -674,6 +674,34 @@
         ]
       },
       "schematicLocator": "PDF page 11, drawing 56-330-4103-7: address inverter bank and the two A2.2 enable gates beside A4."
+    },
+    {
+      "source": "robotron-factory-drawings",
+      "locator": "PDF page 11, drawing 56-330-4103-7, R2 branch labels left to right",
+      "ref": "R2",
+      "factoryBranchLabels": [
+        "3",
+        "4",
+        "10",
+        "9",
+        "5",
+        "7",
+        "2",
+        "6"
+      ],
+      "comparisonSource": "schematic",
+      "comparisonBranchLabels": [
+        "3",
+        "4",
+        "8",
+        "9",
+        "5",
+        "7",
+        "2",
+        "6"
+      ],
+      "scope": "Third branch goes to V4.8 base in both drawings. This is a source numbering disagreement, not proven board revision or circuit-topology difference. Native reference connectivity remains the Zander transcription. Neither drawing supplies a complete ten-lead package map.",
+      "status": "physical-pinout-unresolved"
     }
   ],
   "sourceReviews": [
@@ -719,6 +747,17 @@
         "detail": "R1 lies between the sensing-transistor row and the long board edge; R2 lies on the other side of the sensing-transistor region. This identifies bodies, not numbered terminals."
       },
       "remainingUse": "Package appearance and lead construction. Reference terminal order, common terminal, resistance and primary board entries require separate evidence."
+    },
+    {
+      "date": "2026-10-18",
+      "sources": [
+        "photo-top",
+        "comparison-photo-080450163",
+        "robotron-factory-drawings",
+        "schematic"
+      ],
+      "finding": "Primary R1 and R2 each expose ten raised lead exits. Comparison R1 oblique independently shows ten. The native nine-terminal reference symbols cannot be used directly as complete physical package maps. Factory R2 third branch is labelled 10 versus 8 in Zander.",
+      "scope": "Lead observations and drawing labels only; no inferred common duplication, unused terminal, installed numbering or net reassignment. Photo pixels and interpretation limits are in component-evidence.json terminalReview."
     }
   ],
   "routeReviews": [

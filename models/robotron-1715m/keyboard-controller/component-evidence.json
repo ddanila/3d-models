@@ -59,13 +59,13 @@
     "referenceType": "DL000",
     "placementEvidence": "photo-landmarks.json: A7",
     "pinEvidence": "schematic-numbered",
-    "note": "Reference schematic specifies DL000; primary photo reads \u041a555\u041b\u04103, while the comparison specimen reads D100D. Keep device identities and analog evidence separate despite shared NAND pin functions. Photo placement remains estimated; see generated/photo-registration.json.",
+    "note": "Reference schematic specifies DL000; primary photo reads К555ЛА3, while the comparison specimen reads D100D. Keep device identities and analog evidence separate despite shared NAND pin functions. Photo placement remains estimated; see generated/photo-registration.json.",
     "placementAuthority": "controller.kicad_pcb",
     "specimenMarkings": [
       {
         "specimen": "museum-primary",
         "photoSource": "photo-top",
-        "marking": "\u041a555\u041b\u04103",
+        "marking": "К555ЛА3",
         "additionalMarking": "8607",
         "pixelBox": [
           1315,
@@ -853,7 +853,7 @@
     "referenceType": "3k9",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
     "pinEvidence": "Reference-derived: pin 1 matrix-facing lower lead, pin 2 transistor-facing upper lead. Hidden row/base continuity not verified.",
-    "note": "Factory placement establishes the R9.1\u2013R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
+    "note": "Factory placement establishes the R9.1–R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -873,7 +873,7 @@
     "referenceType": "3k9",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
     "pinEvidence": "Reference-derived: pin 1 matrix-facing lower lead, pin 2 transistor-facing upper lead. Hidden row/base continuity not verified.",
-    "note": "Factory placement establishes the R9.1\u2013R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
+    "note": "Factory placement establishes the R9.1–R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -893,7 +893,7 @@
     "referenceType": "3k9",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
     "pinEvidence": "Reference-derived: pin 1 matrix-facing lower lead, pin 2 transistor-facing upper lead. Hidden row/base continuity not verified.",
-    "note": "Factory placement establishes the R9.1\u2013R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
+    "note": "Factory placement establishes the R9.1–R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -913,7 +913,7 @@
     "referenceType": "3k9",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
     "pinEvidence": "Reference-derived: pin 1 matrix-facing lower lead, pin 2 transistor-facing upper lead. Hidden row/base continuity not verified.",
-    "note": "Factory placement establishes the R9.1\u2013R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
+    "note": "Factory placement establishes the R9.1–R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -965,7 +965,7 @@
     "referenceType": "3k9",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
     "pinEvidence": "Reference-derived: pin 1 matrix-facing lower lead, pin 2 transistor-facing upper lead. Hidden row/base continuity not verified.",
-    "note": "Factory placement establishes the R9.1\u2013R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
+    "note": "Factory placement establishes the R9.1–R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -985,7 +985,7 @@
     "referenceType": "3k9",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
     "pinEvidence": "Reference-derived: pin 1 matrix-facing lower lead, pin 2 transistor-facing upper lead. Hidden row/base continuity not verified.",
-    "note": "Factory placement establishes the R9.1\u2013R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
+    "note": "Factory placement establishes the R9.1–R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -1004,7 +1004,7 @@
   "R2": {
     "referenceType": "8x4k7",
     "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
+    "pinEvidence": "Reference-schematic terminal identifiers only; not a complete physical package pinout. Primary photo shows ten lead exits; reference symbol has nine electrical terminals. Installed correspondence unresolved.",
     "note": "Inner upright bank on the opposite side of the sensing-transistor region; body identity follows factory placement and primary photo context. Native placement and numbered lead mapping remain unresolved; reference resistance is not a measured specimen value.",
     "placementAuthority": "controller.kicad_pcb",
     "bodyIdentification": {
@@ -1018,12 +1018,63 @@
       "identitySource": "robotron-factory-drawings",
       "identityLocator": "PDF page 10, drawing 63-330-4103-2",
       "scope": "Body-region locator only. Not pad centres, dimensional calibration or terminal numbering."
+    },
+    "terminalReview": {
+      "status": "physical-reference-correspondence-unresolved",
+      "photoSource": "photo-top",
+      "observedLeadPixels": [
+        [
+          1460,
+          917
+        ],
+        [
+          1462,
+          950
+        ],
+        [
+          1464,
+          983
+        ],
+        [
+          1466,
+          1017
+        ],
+        [
+          1467,
+          1050
+        ],
+        [
+          1468,
+          1080
+        ],
+        [
+          1470,
+          1113
+        ],
+        [
+          1472,
+          1143
+        ],
+        [
+          1473,
+          1175
+        ],
+        [
+          1475,
+          1208
+        ]
+      ],
+      "pixelUncertainty": 8,
+      "order": "Cable end toward CPU end in the original top photo; array indices are observations, not pin numbers.",
+      "scope": "Ten visible raised lead exits beside the body. Not hole centres or projected pad coordinates. Do not assign the additional lead to common, unused or duplicated functions without evidence.",
+      "nextEvidence": "Follow each lead to a registered joint and compare both sides; check package documentation for common or unused terminals.",
+      "drawingDiscrepancy": "Factory PDF page 11 labels the third branch from the left 10; Zander reference labels it 8. Both connect that branch to V4.8 base. Supply-terminal numbering is not shown there; current reference pin 1 does not establish physical common position."
     }
   },
   "R1": {
     "referenceType": "8x910",
     "placementEvidence": "unplaced",
-    "pinEvidence": "schematic-numbered",
+    "pinEvidence": "Reference-schematic terminal identifiers only; not a complete physical package pinout. Primary photo shows ten lead exits; reference symbol has nine electrical terminals. Installed correspondence unresolved.",
     "note": "Edge-side upright bank beside the sensing-transistor row; body identity follows factory placement and primary photo context. Native placement and numbered lead mapping remain unresolved; reference resistance is not a measured specimen value.",
     "placementAuthority": "controller.kicad_pcb",
     "bodyIdentification": {
@@ -1053,7 +1104,59 @@
         "readingRotationDegrees": 180,
         "scope": "Separate specimen. Marking meaning unresolved; no resistance value, date code or primary-board marking inferred."
       }
-    ]
+    ],
+    "terminalReview": {
+      "status": "physical-reference-correspondence-unresolved",
+      "photoSource": "photo-top",
+      "observedLeadPixels": [
+        [
+          1245,
+          1022
+        ],
+        [
+          1247,
+          1053
+        ],
+        [
+          1247,
+          1085
+        ],
+        [
+          1248,
+          1119
+        ],
+        [
+          1250,
+          1152
+        ],
+        [
+          1250,
+          1182
+        ],
+        [
+          1253,
+          1216
+        ],
+        [
+          1255,
+          1247
+        ],
+        [
+          1255,
+          1278
+        ],
+        [
+          1256,
+          1311
+        ]
+      ],
+      "pixelUncertainty": 8,
+      "order": "Cable end toward CPU end in the original top photo; array indices are observations, not pin numbers.",
+      "scope": "Ten visible raised lead exits beside the body. Not hole centres or projected pad coordinates. Do not assign the additional lead to common, unused or duplicated functions without evidence.",
+      "nextEvidence": "Follow each lead to a registered joint and compare both sides; check package documentation for common or unused terminals.",
+      "comparisonSource": "comparison-photo-080450163",
+      "comparisonFinding": "Separate-specimen oblique view independently shows ten leads. Small end mark is not yet accepted as pin-one evidence."
+    }
   },
   "V4.3": {
     "referenceType": "SC308C",
