@@ -246,14 +246,15 @@ class ControllerExportTests(unittest.TestCase):
    touches=any(tuple(p) in endpoints for p in r['points'])
    self.assertEqual(r['evidence']['status'],'inferred' if touches else 'observed')
  def test_output_branches_remain_partial_and_have_no_invented_vias(self):
-  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':3})
+  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':4,'clearance':1})
   from bottom_registration import review as bottom_review,validate_registered_routes
   import hashlib,collections
   layout=json.loads((R/'generated/layout.json').read_text());report=bottom_review(layout)
   self.assertTrue(next(r for r in report['pcbRegions'] if r['id']=='output-pullups')['copperAssignmentQualified'])
   pads={(c['ref'],p['pin']):tuple(p['position'])for c in layout['components']for p in c['pads']}
   for ref,net,cpu in [('R10.1','/TA_TAKT','2'),('R10.2','/TA_DATEN','4')]:
-   routes=[r for r in layout['routes'] if r['net']==net];self.assertTrue(routes)
+   routes=[r for r in layout['routes'] if r['evidence']['group']==ref.lower().replace('.','')+'-output-bottom-partial'];self.assertTrue(routes)
+   self.assertTrue(all(r['net']==net for r in routes))
    self.assertTrue(all(r['side']=='bottom' for r in routes))
    validate_registered_routes(routes,report,hashlib.sha256((R/'bottom-landmarks.json').read_bytes()).hexdigest())
    degree=collections.Counter(tuple(p)for r in routes for p in r['points'])
@@ -305,6 +306,29 @@ class ControllerExportTests(unittest.TestCase):
   exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),24)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.7'),-1)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.8'),1)
+ def test_top_route_registration_is_local_and_side_specific(self):
+  from copy import deepcopy
+  from top_registration import review
+  from bottom_registration import validate_registered_routes
+  import hashlib
+  layout=json.loads((R/'generated/layout.json').read_text());report=review(layout)
+  self.assert_report_equal(report,json.loads((R/'generated/top-registration.json').read_text()))
+  region=report['pcbRegions'][0]
+  self.assertTrue(region['copperAssignmentQualified'])
+  self.assertGreater(max(p['residualMm']for p in region['extrapolationChecks']),region['toleranceMm'])
+  routes=[r for r in layout['routes']if r['evidence']['group']=='r101-output-top-local']
+  self.assertEqual(len(routes),3)
+  self.assertTrue(all(r['net']=='/TA_TAKT' and r['side']=='top'for r in routes))
+  sha=hashlib.sha256((R/'top-copper-landmarks.json').read_bytes()).hexdigest()
+  validate_registered_routes(routes,report,sha,side='top')
+  for failure in ['outside','wrong-side','stale','moved','unknown-side']:
+   bad=deepcopy(routes)
+   if failure=='outside':bad[-1]['evidence']['sources'][0]['locator']['pixelSegment'][-1]=[1285,1495]
+   elif failure=='wrong-side':bad[0]['side']='bottom'
+   elif failure=='stale':bad[0]['evidence']['registration']['landmarksSha256']='stale'
+   elif failure=='moved':bad[-1]['points'][-1][0]+=.01
+   else:bad[0]['evidence']['registration']['side']='inner'
+   with self.assertRaises(ValueError):validate_registered_routes(bad,report,sha,side='top')
  def test_underside_resistor_pads_require_supported_registration(self):
   import copy
   from bottom_registration import validate_pad_placements

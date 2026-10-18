@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "photo": "../reference/photos/PXL_20261012_123622947.jpg",
+  "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+  "toleranceMm": 1.25,
+  "scope": "Local top board-plane registration; A1 inner-row lead entry observations differ from raised lead knees in photo-landmarks.json. No global registration or dimensional metrology claim. Tolerance follows the existing underside registration review budget.",
+  "pcbRegions": [
+    {
+      "id": "a1-output-inner",
+      "scope": "Only the convex hull between A1 inner-row lead entries and R10.2; no extrapolation under A1 or to the outer row. Hole-entry pixels are photo estimates, not measured hole centres.",
+      "reviewedForCopper": true,
+      "anchors": [
+        {
+          "ref": "A1",
+          "pin": "14",
+          "photoPixel": [
+            1390,
+            1495
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "8",
+          "photoPixel": [
+            1401,
+            1694
+          ]
+        },
+        {
+          "ref": "R10.2",
+          "pin": "1",
+          "photoPixel": [
+            1507,
+            1645
+          ]
+        },
+        {
+          "ref": "R10.2",
+          "pin": "2",
+          "photoPixel": [
+            1498,
+            1490
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "A1",
+          "pin": "13",
+          "photoPixel": [
+            1392,
+            1528
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "11",
+          "photoPixel": [
+            1395,
+            1594
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "9",
+          "photoPixel": [
+            1398,
+            1661
+          ]
+        },
+        {
+          "ref": "R10.1",
+          "pin": "2",
+          "photoPixel": [
+            1448,
+            1492
+          ]
+        },
+        {
+          "ref": "R10.1",
+          "pin": "1",
+          "photoPixel": [
+            1458,
+            1645
+          ]
+        }
+      ],
+      "extrapolationChecks": [
+        {
+          "ref": "A1",
+          "pin": "1",
+          "photoPixel": [
+            1285,
+            1495
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "4",
+          "photoPixel": [
+            1292,
+            1590
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "7",
+          "photoPixel": [
+            1300,
+            1690
+          ]
+        }
+      ]
+    }
+  ]
+}

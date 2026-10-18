@@ -1262,7 +1262,13 @@
         ]
       },
       "copperAssignmentQualified": false,
-      "nextEvidence": "Reconcile board-plane copper with A1 hole positions using local cross-side registration and independently held-out joints. Raised lead surfaces are not hole centres. Trace the hidden continuation independently before assigning an A1 endpoint."
+      "nextEvidence": "Resolve the hidden continuation independently before assigning an A1 endpoint. The local fit does not extend to the outer row; retain the estimated-pad clearance failure.",
+      "localRegistration": {
+        "source": "top-copper-landmarks.json",
+        "nativeGroup": "r101-output-top-local",
+        "scope": "Board-level inner-row lead-entry observations, independent nearby checks and explicit failed outer-row extrapolation. Only the visible segment inside the local hull is assigned. The rejected global projection is retained; no hidden A1 pin attachment is promoted."
+      },
+      "summary": "The global top projection was rejected. A bounded local fit supports the visible R10.1 branch beside A1; the under-package attachment remains unresolved."
     }
   ],
   "comparisonSpecimens": [

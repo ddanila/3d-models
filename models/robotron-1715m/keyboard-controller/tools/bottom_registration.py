@@ -48,17 +48,20 @@ def pcb_regions(e,pads):
   regions.append(dict(id=region['id'],scope=region['scope'],anchors=anchors,checks=rows,anchorHull=hull,photoToModel=h,maxCheckResidualMm=maximum,toleranceMm=e['toleranceMm'],copperAssignmentQualified=region.get('reviewedForCopper',False)and maximum<=e['toleranceMm']))
  return regions
 
-def validate_registered_routes(routes,report,landmark_sha):
+def validate_registered_routes(routes,report,landmark_sha,side='bottom'):
  regions={r['id']:r for r in report.get('pcbRegions',[])}
  for route in routes:
   record=route['evidence'];registration=record.get('registration')
   if not registration:continue
+  registered_side=registration.get('side','bottom')
+  if registered_side not in ('top','bottom'):raise ValueError('Unsupported registration side')
+  if registered_side!=side:continue
   region=regions.get(registration['region'])
   if registration['landmarksSha256']!=landmark_sha:raise ValueError('Stale route registration evidence')
   if not region or not region['copperAssignmentQualified']:raise ValueError('Route registration is not locally qualified')
-  photo=next((s for s in record['sources']if s['id']=='photo-bottom'),None)
+  photo=next((s for s in record['sources']if s['id']=='photo-'+side),None)
   points=photo['locator'].get('pixelSegment',[])if photo else []
-  if route['side']!='bottom' or len(points)!=len(route['points']):raise ValueError('Registered route needs underside pixel correspondence')
+  if route['side']!=side or len(points)!=len(route['points']):raise ValueError('Registered route needs same-side pixel correspondence')
   if not all(inside_hull(p,region['anchorHull'])for p in points):raise ValueError('Route exceeds local registration hull')
   model_hull=[project(region['photoToModel'],p)for p in region['anchorHull']]
   if not all(inside_hull(p,model_hull)for p in route['points']):raise ValueError('Native route exceeds local registration hull')
@@ -126,7 +129,7 @@ def svg(report,layout=None):
    x,y=p['photoPixel'];out.append(f'<circle cx="{x}" cy="{y}" r="8" fill="none" stroke="orange" stroke-width="3"/>')
  if layout:
   for route in layout['routes']:
-   if not route['evidence'].get('registration'):continue
+   if not route['evidence'].get('registration') or route['side']!='bottom':continue
    photo=next(s for s in route['evidence']['sources']if s['id']=='photo-bottom')
    points=' '.join(f'{x},{y}'for x,y in photo['locator']['pixelSegment'])
    out.append(f'<polyline points="{points}" fill="none" stroke="magenta" stroke-width="2"/>')

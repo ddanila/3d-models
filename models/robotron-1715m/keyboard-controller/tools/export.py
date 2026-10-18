@@ -6,6 +6,7 @@ import argparse,hashlib,json,math,os,shutil,subprocess,tempfile,collections,xml.
 from pathlib import Path
 from geometry import arc_points, outline_polygon
 from connector_review import review as connector_review, placement_review
+from top_registration import review as top_review
 from connector_terminals import review as connector_terminals
 from route_evidence import annotate as annotate_routes
 from photo_registration import review as photo_review, svg as photo_svg
@@ -100,6 +101,8 @@ def main():
  outline=outline_polygon(edges)
  layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline,'components':placed,'unplaced':unplaced,'routes':routes,'vias':vias,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
  bottom=bottom_review(layout);validate_registered_routes(routes,bottom,digest(ROOT/'bottom-landmarks.json'))
+ top=top_review(layout);validate_registered_routes(routes,top,digest(ROOT/'top-copper-landmarks.json'),side='top')
+ write('top-registration.json',top)
  bottom['padPlacements']=validate_pad_placements(layout,bottom,json.loads((ROOT/'component-evidence.json').read_text()))
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
  layout['visualBridges']=visual_bridges(json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),unplaced)
@@ -181,7 +184,7 @@ def main():
    x,y=c['position'];svg.append(f'<text x="{x}" y="{-y-4}" fill="white" font-size="2.8">{c["ref"]}</text>')
   svg.append('</g>')
  write('review.svg',''.join(svg)+'</svg>\n')
- inputs=['controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/connector_review.py','tools/connector_terminals.py','tools/route_evidence.py','route-evidence.json','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
+ inputs=['top-copper-landmarks.json','tools/top_registration.py','controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/connector_review.py','tools/connector_terminals.py','tools/route_evidence.py','route-evidence.json','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
  outputs=sorted(p for p in (ROOT/'generated').iterdir() if p.name!='manifest.json')
  for source in json.loads((ROOT/'evidence.json').read_text())['sources']:
   if not source.get('path'):continue

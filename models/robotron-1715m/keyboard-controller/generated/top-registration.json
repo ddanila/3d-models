@@ -1,0 +1,226 @@
+{
+  "copperAssignmentQualified": false,
+  "pcbRegions": [
+    {
+      "anchorHull": [
+        [
+          1390,
+          1495
+        ],
+        [
+          1401,
+          1694
+        ],
+        [
+          1507,
+          1645
+        ],
+        [
+          1498,
+          1490
+        ]
+      ],
+      "anchors": [
+        {
+          "photoPixel": [
+            1390,
+            1495
+          ],
+          "pin": "14",
+          "ref": "A1"
+        },
+        {
+          "photoPixel": [
+            1401,
+            1694
+          ],
+          "pin": "8",
+          "ref": "A1"
+        },
+        {
+          "photoPixel": [
+            1507,
+            1645
+          ],
+          "pin": "1",
+          "ref": "R10.2"
+        },
+        {
+          "photoPixel": [
+            1498,
+            1490
+          ],
+          "pin": "2",
+          "ref": "R10.2"
+        }
+      ],
+      "checks": [
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -54.798126,
+            -4.447712
+          ],
+          "photoModel": [
+            -54.712747454214,
+            -4.431485047878489
+          ],
+          "photoPixel": [
+            1392,
+            1528
+          ],
+          "pin": "13",
+          "ref": "A1",
+          "residualMm": 0.08690690453402362
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            -49.720854,
+            -4.281257
+          ],
+          "photoModel": [
+            -49.59031629432969,
+            -4.312505056569873
+          ],
+          "photoPixel": [
+            1395,
+            1594
+          ],
+          "pin": "11",
+          "ref": "A1",
+          "residualMm": 0.13422568174929644
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            -44.643582,
+            -4.114802
+          ],
+          "photoModel": [
+            -44.54365452211767,
+            -4.198656425011369
+          ],
+          "photoPixel": [
+            1398,
+            1661
+          ],
+          "pin": "9",
+          "ref": "A1",
+          "residualMm": 0.13044947462489545
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            -56.664606,
+            -0.068244
+          ],
+          "photoModel": [
+            -57.05533524137192,
+            -0.10760168874306368
+          ],
+          "photoPixel": [
+            1448,
+            1492
+          ],
+          "pin": "2",
+          "ref": "R10.1",
+          "residualMm": 0.3927064650935524
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -45.139083,
+            0.145801
+          ],
+          "photoModel": [
+            -45.379543306213534,
+            0.23715912553205337
+          ],
+          "photoPixel": [
+            1458,
+            1645
+          ],
+          "pin": "1",
+          "ref": "R10.1",
+          "residualMm": 0.25723037527678855
+        }
+      ],
+      "copperAssignmentQualified": true,
+      "extrapolationChecks": [
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            -57.08708,
+            -12.146847
+          ],
+          "photoModel": [
+            -58.31091973508356,
+            -12.857647291403385
+          ],
+          "photoPixel": [
+            1285,
+            1495
+          ],
+          "pin": "1",
+          "ref": "A1",
+          "residualMm": 1.4152811563179
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            -49.471172,
+            -11.897165
+          ],
+          "photoModel": [
+            -50.63776008014254,
+            -12.283699950269302
+          ],
+          "photoPixel": [
+            1292,
+            1590
+          ],
+          "pin": "4",
+          "ref": "A1",
+          "residualMm": 1.2289576951670658
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            -41.855264,
+            -11.647483
+          ],
+          "photoModel": [
+            -42.92316746149391,
+            -11.657990588109254
+          ],
+          "photoPixel": [
+            1300,
+            1690
+          ],
+          "pin": "7",
+          "ref": "A1",
+          "residualMm": 1.0679551547132278
+        }
+      ],
+      "id": "a1-output-inner",
+      "maxCheckResidualMm": 0.3927064650935524,
+      "photoToModel": [
+        -0.015981337798053174,
+        0.20481488398921438,
+        -459.1313763778717,
+        0.23247149954999038,
+        -0.008045965723273776,
+        -324.94737061521516,
+        0.0007600977548839422,
+        0.000667675045012139,
+        1
+      ],
+      "scope": "Only the convex hull between A1 inner-row lead entries and R10.2; no extrapolation under A1 or to the outer row. Hole-entry pixels are photo estimates, not measured hole centres.",
+      "toleranceMm": 1.25
+    }
+  ],
+  "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+  "schema": 1,
+  "scope": "Local top board-plane registration; A1 inner-row lead entry observations differ from raised lead knees in photo-landmarks.json. No global registration or dimensional metrology claim. Tolerance follows the existing underside registration review budget."
+}

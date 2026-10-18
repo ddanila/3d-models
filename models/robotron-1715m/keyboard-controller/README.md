@@ -45,7 +45,9 @@ emulator. Factory placement drawings establish reference identities where visibl
 The matrix and lamps beyond X1 are external to the controller reconstruction.
 
 Top-photo fits and bounded local underside fits support placement review. Global
-underside registration remains unqualified. Raised leads and sockets can hide hole
+underside registration remains unqualified. `top-copper-landmarks.json` and
+`generated/top-registration.json` bound top copper independently of raised lead
+observations; failed extrapolation checks remain visible. Raised leads and sockets can hide hole
 centres; a successful local fit cannot establish copper attachment or board scale.
 Superseded CPU clock and BR2 interpretations remain in `evidence.json:routeReviews`.
 No withdrawn CLK assignment is restored merely because nearby traces align.

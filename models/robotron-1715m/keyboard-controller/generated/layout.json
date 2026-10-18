@@ -6297,7 +6297,7 @@
     },
     {
       "evidence": {
-        "detail": "The underside photo shows a local straight connection between the R10.3 and BR1 joint pair. Native geometry is inferred between top-photo-placed pads; the global underside registration is not qualified. Width 0.35 mm is estimated. CLK follows the reference common net; continuation to the CPU and measured continuity remain unresolved.",
+        "detail": "The underside photo shows a local straight connection between the R10.3 and BR1 joint pair. Native geometry is inferred between top-photo-placed pads; the global underside registration is not qualified. Width 0.35 mm is estimated. The local projection removes the prior A1:13 short but leaves a small A1:14 clearance failure with estimated pad dimensions; do not move observed copper or change pad sizes to conceal it. CLK follows the reference common net; continuation to the CPU and measured continuity remain unresolved.",
         "geometrySha256": "e03bd5668a6cf1507253aa3a3be64192bbf0a87fcba8c23f078c1ccfc0bb231a",
         "group": "br1-r103-local-clock",
         "sources": [
@@ -6946,6 +6946,153 @@
         [
           -30.425354,
           -8.104423
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Inferred attachment from native resistor pad; photo locator is within the lead-end uncertainty, not an exact hole measurement. The trace is clipped at the inner-row registration boundary before the package hides its continuation; no A1 pin attachment or under-package route is asserted. Width 0.35 mm is estimated. The local projection removes the prior A1:13 short but leaves a small A1:14 clearance failure with estimated pad dimensions; do not move observed copper or change pad sizes to conceal it.",
+        "geometrySha256": "c48f7a59f8a6e10588954d022c0b1f276358e4e993dc955e11402cf620dd04d1",
+        "group": "r101-output-top-local",
+        "registration": {
+          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
+          "region": "a1-output-inner",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1448,
+                  1495
+                ],
+                [
+                  1445,
+                  1501
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred"
+      },
+      "id": "972fa540-a1fb-44d7-8a87-f27f933573f6",
+      "net": "/TA_TAKT",
+      "points": [
+        [
+          -56.664606,
+          -0.068244
+        ],
+        [
+          -56.376732,
+          -0.355762
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible top branch within the qualified local anchor hull. The trace is clipped at the inner-row registration boundary before the package hides its continuation; no A1 pin attachment or under-package route is asserted. Width 0.35 mm is estimated. The local projection removes the prior A1:13 short but leaves a small A1:14 clearance failure with estimated pad dimensions; do not move observed copper or change pad sizes to conceal it.",
+        "geometrySha256": "50dcdea61a61bb220495974d50b436de7342b6ceafeeeeb0700b8e0f6d77516b",
+        "group": "r101-output-top-local",
+        "registration": {
+          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
+          "region": "a1-output-inner",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1445,
+                  1501
+                ],
+                [
+                  1436,
+                  1510
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "5fff7738-a179-4a73-b774-2bb1ac614436",
+      "net": "/TA_TAKT",
+      "points": [
+        [
+          -56.376732,
+          -0.355762
+        ],
+        [
+          -55.750775,
+          -1.054204
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible top branch within the qualified local anchor hull. The trace is clipped at the inner-row registration boundary before the package hides its continuation; no A1 pin attachment or under-package route is asserted. Width 0.35 mm is estimated. The local projection removes the prior A1:13 short but leaves a small A1:14 clearance failure with estimated pad dimensions; do not move observed copper or change pad sizes to conceal it.",
+        "geometrySha256": "c997f5bad16ed3433a68cd84f042ddec7eda31702cbc00e988533c4f26068cdc",
+        "group": "r101-output-top-local",
+        "registration": {
+          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
+          "region": "a1-output-inner",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1436,
+                  1510
+                ],
+                [
+                  1392,
+                  1510
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "9d0484b0-c3e2-4f88-94be-13af10d77ac2",
+      "net": "/TA_TAKT",
+      "points": [
+        [
+          -55.750775,
+          -1.054204
+        ],
+        [
+          -56.129534,
+          -4.401621
         ]
       ],
       "side": "top",
