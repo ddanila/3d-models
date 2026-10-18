@@ -1505,7 +1505,7 @@
           "pin": "17",
           "position": [
             78.49909,
-            4.136073
+            4.136074
           ],
           "ref": "A5",
           "size": [
@@ -1879,7 +1879,7 @@
           "pin": "37",
           "position": [
             45.509814,
-            19.442447
+            19.442446
           ],
           "ref": "A5",
           "size": [
@@ -4128,7 +4128,7 @@
       "type": "3k9"
     },
     {
-      "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
+      "evidence": "component-evidence.json: registered underside pad 1; top-estimated pad 2; reference-derived terminal identity",
       "pads": [
         {
           "drill": [
@@ -4138,8 +4138,8 @@
           "net": "/ROW0",
           "pin": "1",
           "position": [
-            -61.235864,
-            1.312999
+            -62.427316,
+            1.852653
           ],
           "ref": "R9.3",
           "size": [
@@ -4175,7 +4175,7 @@
       "type": "3k9"
     },
     {
-      "evidence": "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json",
+      "evidence": "component-evidence.json: registered underside pad 1; top-estimated pad 2; reference-derived terminal identity",
       "pads": [
         {
           "drill": [
@@ -4185,8 +4185,8 @@
           "net": "/ROW5",
           "pin": "1",
           "position": [
-            -61.346393,
-            4.767473
+            -62.546565,
+            5.584378
           ],
           "ref": "R9.4",
           "size": [
@@ -5769,7 +5769,7 @@
     },
     {
       "evidence": {
-        "detail": "Estimated native pad attachment. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "detail": "Estimated native pad attachment. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Adjacent R9.3/R9.4 matrix-facing pads use registered underside joints; pad dimensions and track widths remain estimates.",
         "geometrySha256": "f186dbf4ed34ed88380a50ceac59febe3d0f771b914b87607a5c9c0fc902b726",
         "group": "r101-output-bottom-partial",
         "registration": {
@@ -5817,7 +5817,7 @@
     },
     {
       "evidence": {
-        "detail": "Visible underside signal branch from R10.1:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "detail": "Visible underside signal branch from R10.1:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Adjacent R9.3/R9.4 matrix-facing pads use registered underside joints; pad dimensions and track widths remain estimates.",
         "geometrySha256": "6145c776496268a44586e366c41c4c4ed7fe13f4a92eb2b48e9d8f86a623eb1e",
         "group": "r101-output-bottom-partial",
         "registration": {
@@ -5865,7 +5865,7 @@
     },
     {
       "evidence": {
-        "detail": "Visible underside signal branch from R10.1:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "detail": "Visible underside signal branch from R10.1:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Adjacent R9.3/R9.4 matrix-facing pads use registered underside joints; pad dimensions and track widths remain estimates.",
         "geometrySha256": "9fc616139bfab2928f7e2eb05b42268fd4ead82eae30c2787690015221e3da59",
         "group": "r101-output-bottom-partial",
         "registration": {
@@ -6361,7 +6361,7 @@
     },
     {
       "evidence": {
-        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Adjacent R9.3/R9.4 matrix-facing pads use registered underside joints; pad dimensions and track widths remain estimates.",
         "geometrySha256": "6b997b296d7eae39733a6a05ed79c803b7738efc1d5a32fdc6373f73d8f22402",
         "group": "r102-output-bottom-partial",
         "registration": {
@@ -6409,7 +6409,7 @@
     },
     {
       "evidence": {
-        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Adjacent R9.3/R9.4 matrix-facing pads use registered underside joints; pad dimensions and track widths remain estimates.",
         "geometrySha256": "10e0af72d89a5b2bd1cd5d2c4178454a80742e079db28853fa26454a072347c0",
         "group": "r102-output-bottom-partial",
         "registration": {
@@ -6457,7 +6457,7 @@
     },
     {
       "evidence": {
-        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Adjacent R9.3/R9.4 matrix-facing pads use registered underside joints; pad dimensions and track widths remain estimates.",
         "geometrySha256": "6e380529dc701bc8c31aade3e4627c91bca96d2db0949a4450c90573be817acb",
         "group": "r102-output-bottom-partial",
         "registration": {
@@ -6505,7 +6505,7 @@
     },
     {
       "evidence": {
-        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Adjacent R9.3/R9.4 matrix-facing pads use registered underside joints; pad dimensions and track widths remain estimates.",
         "geometrySha256": "3ce2583d5b09a91291f47ada16c3a3f4031b13199505d882b7b94c16a84f905e",
         "group": "r102-output-bottom-partial",
         "registration": {
@@ -6553,7 +6553,7 @@
     },
     {
       "evidence": {
-        "detail": "Estimated native pad attachment. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "detail": "Estimated native pad attachment. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Adjacent R9.3/R9.4 matrix-facing pads use registered underside joints; pad dimensions and track widths remain estimates.",
         "geometrySha256": "df2845eb28945242eac8447f710fb88db8f9849b1e30e33ae50c9d5ec0e669d4",
         "group": "r102-output-bottom-partial",
         "registration": {

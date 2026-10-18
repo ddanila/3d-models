@@ -303,6 +303,44 @@
     -1.7371481935679935e-05,
     1
   ],
+  "padPlacements": [
+    {
+      "pcbModel": [
+        -62.427316,
+        1.852653
+      ],
+      "photoModel": [
+        -62.42731618576022,
+        1.8526533715637534
+      ],
+      "photoPixel": [
+        1321,
+        1267
+      ],
+      "pin": "1",
+      "ref": "R9.3",
+      "region": "output-pullups",
+      "residualMm": 4.154112211370193e-07
+    },
+    {
+      "pcbModel": [
+        -62.546565,
+        5.584378
+      ],
+      "photoModel": [
+        -62.54656466839196,
+        5.584377971394612
+      ],
+      "photoPixel": [
+        1275,
+        1267
+      ],
+      "pin": "1",
+      "ref": "R9.4",
+      "region": "output-pullups",
+      "residualMm": 3.3283954391820816e-07
+    }
+  ],
   "pcbRegions": [
     {
       "anchorHull": [

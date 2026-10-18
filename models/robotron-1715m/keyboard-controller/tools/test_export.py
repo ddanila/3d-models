@@ -246,7 +246,7 @@ class ControllerExportTests(unittest.TestCase):
    touches=any(tuple(p) in endpoints for p in r['points'])
    self.assertEqual(r['evidence']['status'],'inferred' if touches else 'observed')
  def test_output_branches_remain_partial_and_have_no_invented_vias(self):
-  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':3,'clearance':2})
+  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':3})
   from bottom_registration import review as bottom_review,validate_registered_routes
   import hashlib,collections
   layout=json.loads((R/'generated/layout.json').read_text());report=bottom_review(layout)
@@ -262,7 +262,6 @@ class ControllerExportTests(unittest.TestCase):
    self.assertNotIn(pads['A1',cpu],degree)
    self.assertEqual(sum(r['evidence']['status']=='inferred'for r in routes),1)
    self.assertFalse(any(v['net']==net for v in layout['vias']))
-   self.assertTrue(all('clearance conflicts' in r['evidence']['detail']for r in routes))
  def test_a2_factory_identity_and_placement(self):
   components=json.loads((R/'generated/connectivity.json').read_text())['components']
   review=json.loads((R/'evidence.json').read_text())['referenceVariants'][0]
@@ -289,7 +288,8 @@ class ControllerExportTests(unittest.TestCase):
   report=json.loads((R/'generated/photo-registration.json').read_text())
   self.assertTrue({'R10.1','R10.2'} <= {r['ref']for r in report['discretes']})
   for row in report['discretes']:
-   self.assertFalse(row['independentValidation']);self.assertLess(row['maxResidualMm'],.00001)
+   self.assertFalse(row['independentValidation'])
+   if row['ref'] not in ['R9.3','R9.4']:self.assertLess(row['maxResidualMm'],.00001)
   self.assertIn('controller_pcb_resistors=',(R/'generated/controller.scad').read_text())
  def test_sensing_bank_native_order_and_photo_finish(self):
   layout=json.loads((R/'generated/layout.json').read_text());placed={c['ref']:c for c in layout['components']}
@@ -305,6 +305,18 @@ class ControllerExportTests(unittest.TestCase):
   exported=json.loads(line.split('=',1)[1].rstrip(';'));self.assertEqual(len(exported),24)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.7'),-1)
   self.assertEqual(next(r[5]for r in exported if r[4]=='R9.8'),1)
+ def test_underside_resistor_pads_require_supported_registration(self):
+  import copy
+  from bottom_registration import validate_pad_placements
+  layout=json.loads((R/'generated/layout.json').read_text());report=json.loads((R/'generated/bottom-registration.json').read_text());evidence=json.loads((R/'component-evidence.json').read_text())
+  rows=validate_pad_placements(layout,report,evidence)
+  self.assertEqual({(r['ref'],r['pin'])for r in rows},{('R9.3','1'),('R9.4','1')})
+  for kind in ['outside','moved','unqualified']:
+   l,r,e=copy.deepcopy(layout),copy.deepcopy(report),copy.deepcopy(evidence)
+   if kind=='outside':e['R9.3']['bottomPadPlacement']['pins']['1']=[0,0]
+   elif kind=='moved':next(c for c in l['components']if c['ref']=='R9.3')['pads'][0]['position'][0]+=1
+   else:next(x for x in r['pcbRegions']if x['id']=='output-pullups')['copperAssignmentQualified']=False
+   with self.assertRaises(ValueError):validate_pad_placements(l,r,e)
  def test_reset_resistor_common_strip_terminal_order(self):
   layout=json.loads((R/'generated/layout.json').read_text());placed={c['ref']:c for c in layout['components']}
   evidence=json.loads((R/'component-evidence.json').read_text());nets=[]

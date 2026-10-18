@@ -768,7 +768,7 @@
     "referenceType": "3k9",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
     "pinEvidence": "Reference-derived: pin 1 matrix-facing lower lead, pin 2 transistor-facing upper lead. Hidden row/base continuity not verified.",
-    "note": "Factory placement establishes the R9.1\u2013R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
+    "note": "Matrix-facing pad 1 follows a locally registered underside solder joint; photoPins retain the superseded top-side lead estimate for comparison. Transistor-facing pad 2, body, hole and pad dimensions remain estimated. Reference resistance is not measured; blue collar is appearance evidence, not polarity.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -782,7 +782,19 @@
       ]
     },
     "pixelUncertainty": 8,
-    "blueCollarPin": "2"
+    "blueCollarPin": "2",
+    "bottomPadPlacement": {
+      "region": "output-pullups",
+      "photoSource": "photo-bottom",
+      "pins": {
+        "1": [
+          1321,
+          1267
+        ]
+      },
+      "pixelUncertainty": 5,
+      "identityBasis": "Factory resistor-bank order, mirrored across the original top and underside photographs. Matrix-facing row is below the output branches; only pad 1 is reassigned geometrically. Reference net identity is not continuity-tested."
+    }
   },
   "R9.5": {
     "referenceType": "3k9",
@@ -868,7 +880,7 @@
     "referenceType": "3k9",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
     "pinEvidence": "Reference-derived: pin 1 matrix-facing lower lead, pin 2 transistor-facing upper lead. Hidden row/base continuity not verified.",
-    "note": "Factory placement establishes the R9.1\u2013R9.8 order across the sensing bank. Nominal planar photo placement; body, hole and pad dimensions estimated. Reference value 3k9 is not a specimen measurement. Blue collar end observed in the top photo; it does not identify electrical polarity.",
+    "note": "Matrix-facing pad 1 follows a locally registered underside solder joint; photoPins retain the superseded top-side lead estimate for comparison. Transistor-facing pad 2, body, hole and pad dimensions remain estimated. Reference resistance is not measured; blue collar is appearance evidence, not polarity.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -882,7 +894,19 @@
       ]
     },
     "pixelUncertainty": 8,
-    "blueCollarPin": "2"
+    "blueCollarPin": "2",
+    "bottomPadPlacement": {
+      "region": "output-pullups",
+      "photoSource": "photo-bottom",
+      "pins": {
+        "1": [
+          1275,
+          1267
+        ]
+      },
+      "pixelUncertainty": 5,
+      "identityBasis": "Factory resistor-bank order, mirrored across the original top and underside photographs. Matrix-facing row is below the output branches; only pad 1 is reassigned geometrically. Reference net identity is not continuity-tested."
+    }
   },
   "R9.2": {
     "referenceType": "3k9",

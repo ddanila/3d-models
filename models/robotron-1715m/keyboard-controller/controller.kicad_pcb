@@ -1661,7 +1661,7 @@
 				)
 			)
 		)
-		(property "Evidence" "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json"
+		(property "Evidence" "component-evidence.json: registered underside pad 1; top-estimated pad 2; reference-derived terminal identity"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1699,7 +1699,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 5.965732 0.157145)
+			(at 4.76556 -0.65976)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -5260,7 +5260,7 @@
 				)
 			)
 		)
-		(property "Evidence" "Factory placement + photo-estimated lead ends; terminal nets reference-derived, not continuity tested; component-evidence.json"
+		(property "Evidence" "component-evidence.json: registered underside pad 1; top-estimated pad 2; reference-derived terminal identity"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5298,7 +5298,7 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
-			(at 6.080431 0.054313)
+			(at 4.888979 -0.485341)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -5966,7 +5966,7 @@
 			(uuid "689376da-1366-4d4c-9f92-f657d6d24b2a")
 		)
 		(pad "17" thru_hole circle
-			(at 16.51 7.61999 359.8847389)
+			(at 16.51 7.619989 359.8847389)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")
@@ -6146,7 +6146,7 @@
 			(uuid "3c351904-502d-44b5-94d1-595427a6aa52")
 		)
 		(pad "37" thru_hole circle
-			(at -16.51 -7.61999 359.8847389)
+			(at -16.51 -7.619989 359.8847389)
 			(size 1.7 1.7)
 			(drill 0.85)
 			(layers "*.Cu" "*.Mask")

@@ -9,7 +9,7 @@ from connector_review import review as connector_review, placement_review
 from connector_terminals import review as connector_terminals
 from route_evidence import annotate as annotate_routes
 from photo_registration import review as photo_review, svg as photo_svg
-from bottom_registration import review as bottom_review, svg as bottom_svg, validate_registered_routes
+from bottom_registration import review as bottom_review, svg as bottom_svg, validate_registered_routes, validate_pad_placements
 ROOT=Path(__file__).resolve().parents[1]
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(name,value):
@@ -100,6 +100,7 @@ def main():
  outline=outline_polygon(edges)
  layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline,'components':placed,'unplaced':unplaced,'routes':routes,'vias':vias,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
  bottom=bottom_review(layout);validate_registered_routes(routes,bottom,digest(ROOT/'bottom-landmarks.json'))
+ bottom['padPlacements']=validate_pad_placements(layout,bottom,json.loads((ROOT/'component-evidence.json').read_text()))
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})
  layout['visualBridges']=visual_bridges(json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),unplaced)
  connector=connector_review(layout,json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),bottom)

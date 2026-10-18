@@ -1597,16 +1597,16 @@
     {
       "checkPins": [],
       "independentValidation": false,
-      "maxResidualMm": 4.487174490370758e-07,
+      "maxResidualMm": 1.3079694735792546,
       "pins": [
         {
           "pcbModel": [
-            -61.235864,
-            1.312999
+            -62.427316,
+            1.852653
           ],
           "pcbPixel": [
-            1463.999994056029,
-            1430.9999983877801
+            1470.6205417962615,
+            1415.0634612560023
           ],
           "photoModel": [
             -61.235863873863636,
@@ -1617,7 +1617,7 @@
             1431
           ],
           "pin": "1",
-          "residualMm": 4.487174490370758e-07
+          "residualMm": 1.3079694735792546
         },
         {
           "pcbModel": [
@@ -1641,7 +1641,7 @@
         }
       ],
       "ref": "R9.3",
-      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+      "scope": "Top lead observations compared with underside pad placement; residuals are cross-side disagreement, not measured continuity."
     },
     {
       "checkPins": [],
@@ -1842,16 +1842,16 @@
     {
       "checkPins": [],
       "independentValidation": false,
-      "maxResidualMm": 4.862209605468064e-07,
+      "maxResidualMm": 1.451808519064643,
       "pins": [
         {
           "pcbModel": [
-            -61.346393,
-            4.767473
+            -62.546565,
+            5.584378
           ],
           "pcbPixel": [
-            1511.0000019694205,
-            1428.9999938886308
+            1521.4013649452318,
+            1412.9020414394615
           ],
           "photoModel": [
             -61.346392542631335,
@@ -1862,7 +1862,7 @@
             1429
           ],
           "pin": "1",
-          "residualMm": 4.862209605468064e-07
+          "residualMm": 1.451808519064643
         },
         {
           "pcbModel": [
@@ -1886,7 +1886,7 @@
         }
       ],
       "ref": "R9.4",
-      "scope": "Direct photo placement, not a held-out fit check or measured continuity."
+      "scope": "Top lead observations compared with underside pad placement; residuals are cross-side disagreement, not measured continuity."
     },
     {
       "checkPins": [],

@@ -67,6 +67,23 @@ def validate_registered_routes(routes,report,landmark_sha):
   if record['status']=='observed' and any(math.dist(project(region['photoToModel'],p),q)>0.000002 for p,q in zip(points,route['points'])):
    raise ValueError('Observed route geometry differs from local photo projection')
 
+def validate_pad_placements(layout,report,evidence):
+ regions={r['id']:r for r in report['pcbRegions']}
+ pads={(c['ref'],p['pin']):p['position']for c in layout['components']for p in c['pads']}
+ rows=[]
+ for ref,record in evidence.items():
+  placement=record.get('bottomPadPlacement')
+  if not placement:continue
+  region=regions.get(placement['region'])
+  if placement['photoSource']!='photo-bottom' or not region or not region['copperAssignmentQualified']:
+   raise ValueError('Unqualified underside pad registration')
+  for pin,pixel in placement['pins'].items():
+   if not inside_hull(pixel,region['anchorHull']):raise ValueError('Pad exceeds local registration hull')
+   target=project(region['photoToModel'],pixel);actual=pads[ref,pin];error=math.dist(target,actual)
+   if error>0.000002:raise ValueError('Native pad differs from registered underside joint')
+   rows.append(dict(ref=ref,pin=pin,photoPixel=pixel,photoModel=target,pcbModel=actual,residualMm=error,region=region['id']))
+ return rows
+
 def review(layout):
  e=json.loads((ROOT/'bottom-landmarks.json').read_text())
  pads={(c['ref'],p['pin']):p['position']for c in layout['components']for p in c['pads']}

@@ -46,7 +46,7 @@ def review(layout):
   pads={p['pin']:p['position']for p in placed[ref]['pads']};pins=[]
   for pin,p in record['photoPins'].items():
    target=project(h,p);pins.append({'pin':pin,'photoPixel':p,'photoModel':target,'pcbModel':pads[pin],'pcbPixel':project(inverse,pads[pin]),'residualMm':math.dist(target,pads[pin])})
-  discretes.append({'ref':ref,'pins':pins,'checkPins':[],'maxResidualMm':max(p['residualMm']for p in pins),'independentValidation':False,'scope':'Direct photo placement, not a held-out fit check or measured continuity.'})
+  discretes.append({'ref':ref,'pins':pins,'checkPins':[],'maxResidualMm':max(p['residualMm']for p in pins),'independentValidation':False,'scope':('Top lead observations compared with underside pad placement; residuals are cross-side disagreement, not measured continuity.' if record.get('bottomPadPlacement') else 'Direct photo placement, not a held-out fit check or measured continuity.')})
  return {'schema':1,'scope':evidence['scope'],'photoSha256':hashlib.sha256((ROOT/evidence['photo']).read_bytes()).hexdigest(),'toleranceMm':evidence['maxResidualMm'],'components':rows,'discretes':discretes,'withinPhotoTolerance':all(c['maxResidualMm']<=evidence['maxResidualMm']for c in rows)}
 
 def svg(report,layout=None):
