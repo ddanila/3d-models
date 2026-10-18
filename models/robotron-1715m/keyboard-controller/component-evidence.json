@@ -59,8 +59,35 @@
     "referenceType": "DL000",
     "placementEvidence": "photo-landmarks.json: A7",
     "pinEvidence": "schematic-numbered",
-    "note": "Photo-estimated lead landmarks; see generated/photo-registration.json for residuals. Not dimensional metrology or electrical continuity.",
-    "placementAuthority": "controller.kicad_pcb"
+    "note": "Reference schematic specifies DL000; primary photo reads \u041a555\u041b\u04103, while the comparison specimen reads D100D. Keep device identities and analog evidence separate despite shared NAND pin functions. Photo placement remains estimated; see generated/photo-registration.json.",
+    "placementAuthority": "controller.kicad_pcb",
+    "specimenMarkings": [
+      {
+        "specimen": "museum-primary",
+        "photoSource": "photo-top",
+        "marking": "\u041a555\u041b\u04103",
+        "additionalMarking": "8607",
+        "pixelBox": [
+          1315,
+          3542,
+          1472,
+          3790
+        ],
+        "scope": "Photographed installed device; not a claim of original factory population or measured parameters."
+      },
+      {
+        "specimen": "comparison-20261017",
+        "photoSource": "comparison-photo-080431329.MP",
+        "marking": "D100D",
+        "scope": "Separate specimen. Do not substitute its device characteristics for the primary board or DL000 schematic reference."
+      }
+    ],
+    "deviceReference": {
+      "url": "https://www.kontest.ru/datasheet/unkn0wn/k555la3.pdf",
+      "sha256": "34c4f456b0916f3156506d7d018a1b5e1742f22e2a5b063f06bea24bbbcb1814",
+      "locator": "Device passport page 1 pin functions; page 2 selected electrical limits. Detailed switching fixture is absent.",
+      "scope": "Primary device documentation; no measured specimen calibration or internal transistor parameters."
+    }
   },
   "X1": {
     "referenceType": "MATRIX_CONNECTOR",
