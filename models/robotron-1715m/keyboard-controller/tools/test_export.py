@@ -6,6 +6,29 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_visual_networks_do_not_create_electrical_pads(self):
+  import copy
+  from export import visual_networks
+  components=json.loads((R/'component-evidence.json').read_text())
+  evidence=json.loads((R/'evidence.json').read_text())
+  landmarks=json.loads((R/'photo-landmarks.json').read_text())
+  layout=json.loads((R/'generated/layout.json').read_text())
+  result=visual_networks(components,evidence,landmarks,layout['unplaced'])
+  self.assert_report_equal(result,layout['visualNetworks'])
+  self.assertEqual({n['ref']for n in result},{'R1','R2'})
+  for n in result:
+   self.assertNotIn('pads',n);self.assertNotIn('net',n)
+   self.assertEqual(len(n['observedLeads']),10)
+   self.assertTrue(20<n['length']<30)
+   self.assertFalse(any(c['ref']==n['ref']for c in layout['components']))
+  self.assertEqual(visual_networks(components,evidence,landmarks,[]),[])
+  wrong=copy.deepcopy(components)
+  wrong['R1']['visualNetworkCandidate']['photoSource']='comparison-photo-080450163'
+  with self.assertRaisesRegex(ValueError,'primary registered photo'):visual_networks(wrong,evidence,landmarks,layout['unplaced'])
+  wrong=copy.deepcopy(components)
+  wrong['R1']['visualNetworkCandidate']['photoBodyAxis']=[[1,1],[1,1]]
+  with self.assertRaisesRegex(ValueError,'Degenerate'):visual_networks(wrong,evidence,landmarks,layout['unplaced'])
+
  def assert_report_equal(self,actual,expected,path='report'):
   # Python/libm versions can differ by an ULP in distance calculations.
   # Preserve exact structure and labels; this tolerance is far below native nanometre rounding.

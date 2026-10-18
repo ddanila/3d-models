@@ -74,6 +74,10 @@ module keyboard_controller_chips(){keyboard_controller_pose(){
 }}
 // C5.4 overhangs A7 in the top photo; nominal stand-off avoids body intersection.
 function controller_ceramic_z(c)=c[3]=="C5.4"?8.1:4.4;
+// Photo-supported bank bodies; no inferred electrical footprint or hole geometry.
+module keyboard_controller_networks(){keyboard_controller_pose()
+ for(n=controller_visual_networks)translate([n[0][0],n[0][1],n[5]])rotate([0,0,n[1]])slab(n[2],n[3],n[4],.6);
+}
 module keyboard_controller_ceramic(){keyboard_controller_pose(){
  // C5 bodies use native footprint origins; pad coordinates independently drive bent leads.
  for(c=controller_pcb_ceramics)translate([c[0][0],c[0][1],controller_ceramic_z(c)])rotate([0,0,atan2(c[2][1]-c[1][1],c[2][0]-c[1][0])])rotate([90,0,0])cylinder(d=5.2,h=1.2,center=true,$fn=32);
@@ -304,6 +308,7 @@ module rear_nameplate_ink(){
  translate([p[0],case_d/2-1.65,p[1]])rotate([90,0,180])linear_extrude(.06)text(p[2],size=p[3],halign="center",font="Liberation Sans");
 }
 module specimen_shape(p){
+ if(p=="keyboard-controller-networks")keyboard_controller_networks();
  if(p=="rear-recesses")rear_recesses();
  if(p=="rear-socket-inserts")rear_socket_inserts();
  if(p=="rear-fasteners")rear_fasteners();
@@ -420,6 +425,9 @@ module keyboard_controller_leads(){keyboard_controller_pose(){
  // Both rows exit the same housing side. Heights and bends remain estimates.
  for(p=controller_visual_connector_contacts)let(z=p[2]==0?6:4.2)
  wire_run([[p[0],controller_connector_y+4.7,z],[p[0],p[1],2.2],[p[0],p[1],-.5]],.28);
+ // Unnumbered raised leads end above the laminate; hidden entry remains unresolved.
+ for(n=controller_visual_networks,p=n[6])let(u=[cos(n[1]),sin(n[1])],d=(p[0]-n[0][0])*u[0]+(p[1]-n[0][1])*u[1])
+ wire_run([[n[0][0]+d*u[0],n[0][1]+d*u[1],n[5]+.3],[p[0],p[1],1.6+n[7]+.05]],n[7]);
  for(p=controller_resistors,s=[-1,1])let(end=resistor_end(p,s))
   wire_run([[p[0]+s*2.6*cos(p[2]),p[1]+s*2.6*sin(p[2]),3.2],[end[0],end[1],3.2],[end[0],end[1],-.5]],.25);
 }}

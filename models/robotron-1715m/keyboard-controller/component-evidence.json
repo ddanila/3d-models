@@ -1091,6 +1091,25 @@
         "status": "unconfirmed-no-legible-package-marking",
         "scope": "A nine-branch package with one branch unused by the board could explain ten leads and factory pin 10, but neither identity nor the unused board branch is proven. Do not replace the eight-branch reference model from this hypothesis."
       }
+    },
+    "visualNetworkCandidate": {
+      "status": "body-and-raised-leads-only",
+      "photoSource": "photo-top",
+      "photoBodyAxis": [
+        [
+          1435,
+          889
+        ],
+        [
+          1461,
+          1204
+        ]
+      ],
+      "bodyThicknessMm": 1.8,
+      "bodyHeightMm": 7.5,
+      "bodyBaseHeightMm": 2.3,
+      "leadRadiusMm": 0.22,
+      "scope": "Body axis projected from primary photograph; height, thickness and lead curves are visual estimates, not catalog identity or hole locations. Visible leads stop above the board without pads, holes, numbers or nets."
     }
   },
   "R1": {
@@ -1180,6 +1199,25 @@
       "comparisonSource": "comparison-photo-080450163",
       "comparisonFinding": "Separate-specimen oblique shows ten leads and code 3894. KWH catalog explicitly leaves terminal 10 unused; this resolves the comparison package lead-count question. Small end mark and primary installed numbering remain unqualified.",
       "packageReference": "kwh-3894"
+    },
+    "visualNetworkCandidate": {
+      "status": "body-and-raised-leads-only",
+      "photoSource": "photo-top",
+      "photoBodyAxis": [
+        [
+          1223,
+          984
+        ],
+        [
+          1246,
+          1310
+        ]
+      ],
+      "bodyThicknessMm": 1.8,
+      "bodyHeightMm": 7.5,
+      "bodyBaseHeightMm": 2.3,
+      "leadRadiusMm": 0.22,
+      "scope": "Body axis projected from primary photograph; height, thickness and lead curves are visual estimates, not catalog identity or hole locations. Visible leads stop above the board without pads, holes, numbers or nets."
     }
   },
   "V4.3": {

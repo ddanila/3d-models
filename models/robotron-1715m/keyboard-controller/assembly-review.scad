@@ -13,7 +13,7 @@ $fn=24;
 controller_parts=[
     "keyboard-controller-board", "keyboard-controller-chips",
     "keyboard-controller-ceramic", "keyboard-controller-rom-cover",
-    "keyboard-controller-connectors", "keyboard-controller-caps",
+    "keyboard-controller-connectors", "keyboard-controller-networks", "keyboard-controller-caps",
     "keyboard-controller-metal", "keyboard-controller-ink",
     "keyboard-controller-traces", "keyboard-controller-solder",
     "keyboard-controller-leads", "keyboard-controller-resistors",

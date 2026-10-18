@@ -14080,5 +14080,145 @@
         "A8"
       ]
     }
+  ],
+  "visualNetworks": [
+    {
+      "axis": [
+        [
+          -94.932933,
+          -14.812121
+        ],
+        [
+          -70.50757,
+          -14.266858
+        ]
+      ],
+      "baseHeight": 2.3,
+      "centre": [
+        -82.7202515,
+        -14.539489499999998
+      ],
+      "height": 7.5,
+      "leadRadius": 0.22,
+      "length": 24.431448369282943,
+      "observedLeads": [
+        [
+          -92.07362,
+          -13.333767
+        ],
+        [
+          -89.754869,
+          -13.295396
+        ],
+        [
+          -87.362143,
+          -13.407034
+        ],
+        [
+          -84.817736,
+          -13.45242
+        ],
+        [
+          -82.346041,
+          -13.42103
+        ],
+        [
+          -80.099669,
+          -13.525792
+        ],
+        [
+          -77.549919,
+          -13.424561
+        ],
+        [
+          -75.224731,
+          -13.386157
+        ],
+        [
+          -72.900274,
+          -13.494477
+        ],
+        [
+          -70.423823,
+          -13.53645
+        ]
+      ],
+      "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "photoSource": "photo-top",
+      "ref": "R1",
+      "rotation": 1.2788379248939827,
+      "scope": "Body axis projected from primary photograph; height, thickness and lead curves are visual estimates, not catalog identity or hole locations. Visible leads stop above the board without pads, holes, numbers or nets.",
+      "status": "body-and-raised-leads-only",
+      "thickness": 1.8
+    },
+    {
+      "axis": [
+        [
+          -101.819856,
+          1.02311
+        ],
+        [
+          -78.263297,
+          1.861203
+        ]
+      ],
+      "baseHeight": 2.3,
+      "centre": [
+        -90.04157649999999,
+        1.4421564999999998
+      ],
+      "height": 7.5,
+      "leadRadius": 0.22,
+      "length": 23.57146308138573,
+      "observedLeads": [
+        [
+          -99.708567,
+          2.755859
+        ],
+        [
+          -97.245508,
+          2.790985
+        ],
+        [
+          -94.781293,
+          2.826128
+        ],
+        [
+          -92.241251,
+          2.85792
+        ],
+        [
+          -89.775611,
+          2.819937
+        ],
+        [
+          -87.533019,
+          2.792044
+        ],
+        [
+          -85.06423,
+          2.827219
+        ],
+        [
+          -82.818705,
+          2.872521
+        ],
+        [
+          -80.423442,
+          2.837879
+        ],
+        [
+          -77.951306,
+          2.873089
+        ]
+      ],
+      "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "photoSource": "photo-top",
+      "ref": "R2",
+      "rotation": 2.037604321545303,
+      "scope": "Body axis projected from primary photograph; height, thickness and lead curves are visual estimates, not catalog identity or hole locations. Visible leads stop above the board without pads, holes, numbers or nets.",
+      "status": "body-and-raised-leads-only",
+      "thickness": 1.8
+    }
   ]
 }

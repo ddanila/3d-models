@@ -211,7 +211,7 @@ for r in records:
         r['section']='interior';m='plastic' if n.endswith('socket') else 'solder'
     # Clean material families; no oxidation, wear or panel-photo lighting.
     if n=='drive-adapter-boards':m='phenolic'
-    if n in ['keyboard-controller-ceramic','logic-ceramics']:m='ceramic'
+    if n in ['keyboard-controller-ceramic','keyboard-controller-networks','logic-ceramics']:m='ceramic'
     if n=='keyboard-controller-chips':m='ic-moulding'
     if n in ['keyboard-controller-metal','keyboard-controller-leads','keyboard-matrix-contacts','logic-passive-leads','logic-connector-contacts']:m='tinned-lead'
     if n in ['keyboard-controller-traces','keyboard-pcb-metal']:m='tinned-lead'

@@ -3,6 +3,11 @@
   "toleranceMm3": 0.001,
   "results": [
     {
+      "interface": "controller-networks-vs-components",
+      "intersectionMm3": 0,
+      "passed": true
+    },
+    {
       "interface": "keyboard-case-supports-vs-matrix",
       "intersectionMm3": 0,
       "passed": true
@@ -19,8 +24,8 @@
     },
     {
       "interface": "controller-resistors-vs-components",
-      "intersectionMm3": 0,
-      "passed": true
+      "intersectionMm3": 0.591264,
+      "passed": false
     },
     {
       "interface": "plug-springs-vs-housing",
@@ -84,8 +89,8 @@
     },
     {
       "interface": "keyboard-imported-leads-vs-board",
-      "intersectionMm3": 0,
-      "passed": true
+      "intersectionMm3": 4.108579,
+      "passed": false
     },
     {
       "interface": "keyboard-cable-vs-chip-bodies",
@@ -273,5 +278,5 @@
       "passed": true
     }
   ],
-  "passed": true
+  "passed": false
 }

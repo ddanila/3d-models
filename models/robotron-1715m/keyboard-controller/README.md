@@ -54,7 +54,10 @@ No withdrawn CLK assignment is restored merely because nearby traces align.
 
 Body-only photo observations and package dimensions are recorded in
 `component-evidence.json`, with device drawing sources in `packageReferences`.
-They support visual estimates without assigning electrical pads. Raised lead ends
+They support visual estimates without assigning electrical pads.
+`generated/layout.json:visualNetworks` exports resistor-bank bodies and raised
+lead observations separately; their leads stop above the board without invented
+holes, solder joints or terminal numbering. Raised lead ends
 do not establish hidden holes, and drawing-view pin order does not establish
 installed orientation. Preserve component asset credits during migration.
 
