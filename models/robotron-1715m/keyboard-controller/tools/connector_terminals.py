@@ -16,7 +16,7 @@ def review(component, connectivity):
     for item in constraints:
         if item['row'] not in names or not 0 <= item['indexFromCable'] < count:
             raise ValueError('Connector contact outside observed row')
-        if item['photoSource'] != physical['photoSource']:
+        if item['photoSource'] not in {physical['photoSource'], physical['underside']['photoSource']}:
             raise ValueError('Terminal attachment requires primary photograph')
     candidates = []
     for letters in [('A', 'B'), ('B', 'A')]:

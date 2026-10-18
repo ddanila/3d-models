@@ -66,7 +66,7 @@
     "referenceType": "MATRIX_CONNECTOR",
     "placementEvidence": "inherited-photo-estimate",
     "pinEvidence": "connector-label-or-semantic-terminal",
-    "note": "The native electrical footprint remains provisional. Museum geometry uses separately exported unnumbered solder-joint observations and same-side bent leads; this does not assign reference nets or resolve the near-row numbering. Housing dimensions and lead profiles remain estimates. See physicalReview and generated/connector-review.json.",
+    "note": "The native electrical footprint remains provisional. Museum geometry uses separately exported unnumbered solder-joint observations and same-side bent leads. Reference-derived row numbering is constrained by photographed attachments; this is not measured continuity. Housing dimensions and lead profiles remain estimates. See physicalReview and generated/connector-terminals.json.",
     "placementAuthority": "controller.kicad_pcb",
     "physicalReview": {
       "status": "inherited-geometry-conflicts-with-visible-lead-arrangement",
@@ -190,7 +190,7 @@
         "comparison-photo-080415534"
       ],
       "comparisonObservation": "Separate-specimen oblique views corroborate two stacked contact rows and bent tails exiting one housing side. Handwritten A/B and end markings are visible but do not independently establish primary-specimen terminal numbering.",
-      "limits": "Local underside registration constrains solder-joint geometry. Far-row identity is constrained by the R11.1/R11.2 attachments and reference schematic. Near-row direction and the schematic-omitted A8 contact remain unresolved; dimensions are not metrology.",
+      "limits": "Local underside registration constrains solder-joint geometry. Far-row identity follows the R11.1/R11.2 attachments; near-row direction follows the eighth contact to A2.1:6 underside trace. Numbering is conditional on reference component identity and visible attachments, not measured continuity. The schematic-omitted A8 contact remains electrically unclassified; dimensions are not metrology.",
       "underside": {
         "photoSource": "photo-bottom",
         "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
@@ -353,12 +353,59 @@
           ],
           "pixelUncertainty": 8,
           "basis": "Visible short top-side trace between the resistor inner lead and sixth far-row contact. R11.2 identity follows the factory placement; the reference schematic connects its connector-side terminal to X1:A6."
+        },
+        {
+          "id": "x1-col11-underside-attachment",
+          "photoSource": "photo-bottom",
+          "row": "housingNear",
+          "indexFromCable": 7,
+          "referenceEndpoint": {
+            "ref": "A2.1",
+            "pin": "6"
+          },
+          "pixelPolyline": [
+            [
+              1233,
+              1925
+            ],
+            [
+              1198,
+              1892
+            ],
+            [
+              1195,
+              1552
+            ],
+            [
+              1210,
+              1537
+            ],
+            [
+              1212,
+              1526
+            ],
+            [
+              1212,
+              1493
+            ],
+            [
+              1194,
+              1477
+            ]
+          ],
+          "pixelUncertainty": 8,
+          "basis": "Visible underside trace from the eighth near-row solder joint, through the intermediate solder eye, to A2.1:6. A2.1 identity and orientation follow the factory placement and surrounding registered pins. The reference schematic connects this COL11 output to X1:B8; reversed row order would identify the observed joint as B6 (ROW0).",
+          "corroboratingSources": [
+            "comparison-photo-080347973"
+          ],
+          "comparisonScope": "The separate specimen makes the same trace easier to inspect; its geometry is not transferred to the primary board."
         }
       ],
       "terminalConstraintSources": [
         "photo-top",
         "robotron-factory-drawings",
-        "schematic"
+        "schematic",
+        "photo-bottom"
       ]
     }
   },

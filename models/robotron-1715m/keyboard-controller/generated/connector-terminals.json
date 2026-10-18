@@ -13,6 +13,12 @@
           "matches": true,
           "observation": "x1-led-caps-attachment",
           "referenceNet": "/LED_CAPS"
+        },
+        {
+          "candidatePin": "B8",
+          "matches": true,
+          "observation": "x1-col11-underside-attachment",
+          "referenceNet": "/COL11"
         }
       ],
       "consistent": true,
@@ -62,9 +68,15 @@
           "matches": true,
           "observation": "x1-led-caps-attachment",
           "referenceNet": "/LED_CAPS"
+        },
+        {
+          "candidatePin": "B6",
+          "matches": false,
+          "observation": "x1-col11-underside-attachment",
+          "referenceNet": "/COL11"
         }
       ],
-      "consistent": true,
+      "consistent": false,
       "rows": {
         "housingFar": [
           "A1",
@@ -111,6 +123,12 @@
           "matches": false,
           "observation": "x1-led-caps-attachment",
           "referenceNet": "/LED_CAPS"
+        },
+        {
+          "candidatePin": "B8",
+          "matches": true,
+          "observation": "x1-col11-underside-attachment",
+          "referenceNet": "/COL11"
         }
       ],
       "consistent": false,
@@ -160,6 +178,12 @@
           "matches": false,
           "observation": "x1-led-caps-attachment",
           "referenceNet": "/LED_CAPS"
+        },
+        {
+          "candidatePin": "B6",
+          "matches": false,
+          "observation": "x1-col11-underside-attachment",
+          "referenceNet": "/COL11"
         }
       ],
       "consistent": false,
@@ -209,6 +233,12 @@
           "matches": false,
           "observation": "x1-led-caps-attachment",
           "referenceNet": "/LED_CAPS"
+        },
+        {
+          "candidatePin": "A8",
+          "matches": false,
+          "observation": "x1-col11-underside-attachment",
+          "referenceNet": "/COL11"
         }
       ],
       "consistent": false,
@@ -258,6 +288,12 @@
           "matches": false,
           "observation": "x1-led-caps-attachment",
           "referenceNet": "/LED_CAPS"
+        },
+        {
+          "candidatePin": "A6",
+          "matches": false,
+          "observation": "x1-col11-underside-attachment",
+          "referenceNet": "/COL11"
         }
       ],
       "consistent": false,
@@ -307,6 +343,12 @@
           "matches": false,
           "observation": "x1-led-caps-attachment",
           "referenceNet": "/LED_CAPS"
+        },
+        {
+          "candidatePin": "A8",
+          "matches": false,
+          "observation": "x1-col11-underside-attachment",
+          "referenceNet": "/COL11"
         }
       ],
       "consistent": false,
@@ -356,6 +398,12 @@
           "matches": false,
           "observation": "x1-led-caps-attachment",
           "referenceNet": "/LED_CAPS"
+        },
+        {
+          "candidatePin": "A6",
+          "matches": false,
+          "observation": "x1-col11-underside-attachment",
+          "referenceNet": "/COL11"
         }
       ],
       "consistent": false,
@@ -393,7 +441,7 @@
       }
     }
   ],
-  "completeTerminalOrderResolved": false,
+  "completeTerminalOrderResolved": true,
   "referenceAbsentPins": [
     "A8"
   ],
@@ -412,10 +460,23 @@
       "A11",
       "A12",
       "A13"
+    ],
+    "housingNear": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7",
+      "B8",
+      "B9",
+      "B10",
+      "B11",
+      "B12",
+      "B13"
     ]
   },
   "scope": "Conditional on photographed attachments and the reference schematic. Logical elimination is not a continuity measurement. Row directions are independent hypotheses.",
-  "unresolvedRows": [
-    "housingNear"
-  ]
+  "unresolvedRows": []
 }

@@ -14,8 +14,17 @@ class ControllerExportTests(unittest.TestCase):
   result=terminal_review(component,connectivity)
   self.assertEqual(result,json.loads((R/'generated/connector-terminals.json').read_text()))
   self.assertEqual(result['resolvedRows']['housingFar'],['A'+str(i) for i in range(1,14)])
-  self.assertEqual(result['unresolvedRows'],['housingNear'])
-  self.assertFalse(result['completeTerminalOrderResolved'])
+  self.assertEqual(result['resolvedRows']['housingNear'],['B'+str(i) for i in range(1,14)])
+  self.assertEqual(result['unresolvedRows'],[])
+  self.assertTrue(result['completeTerminalOrderResolved'])
+  incomplete=copy.deepcopy(component)
+  incomplete['physicalReview']['terminalConstraints']=[c for c in incomplete['physicalReview']['terminalConstraints'] if c['photoSource']=='photo-top']
+  unresolved=terminal_review(incomplete,connectivity)
+  self.assertEqual(unresolved['unresolvedRows'],['housingNear'])
+  self.assertFalse(unresolved['completeTerminalOrderResolved'])
+  comparison=copy.deepcopy(component)
+  comparison['physicalReview']['terminalConstraints'][-1]['photoSource']='comparison-photo-080347973'
+  with self.assertRaisesRegex(ValueError,'primary photograph'):terminal_review(comparison,connectivity)
   self.assertEqual(result['referenceAbsentPins'],['A8'])
   wrong=copy.deepcopy(component)
   wrong['physicalReview']['terminalConstraints'][1]['indexFromCable']=4
