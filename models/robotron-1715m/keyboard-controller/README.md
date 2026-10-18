@@ -12,8 +12,8 @@ surrounding hardware. `review.scad` shows the native electrical geometry separat
 Cyan artwork is unassigned and makes no connectivity claim.
 
 Open `controller.kicad_pro` in KiCad 10 to edit the electrical reconstruction.
-Unplaced components are parked outside the outline. The nominal board size is
-270 × 46 mm; this is not a specimen measurement. Board exports use millimetres
+Unplaced components are parked outside the outline. Board dimensions remain
+estimates, not specimen measurements. Exports use millimetres
 and a common top-view frame; transforms and conventions are in `generated/layout.json`.
 
 ## Authorities
@@ -50,20 +50,16 @@ centres; a successful local fit cannot establish copper attachment or board scal
 Superseded CPU clock and BR2 interpretations remain in `evidence.json:routeReviews`.
 No withdrawn CLK assignment is restored merely because nearby traces align.
 
-Transistor body observations in `component-evidence.json:visualBodyCandidate`
-produce `controller_visual_transistors` only while the corresponding native parts
-are unplaced. These named photo estimates replace the anonymous visual list.
-Their body axes are projected from primary-photo observations; height, flat-face
-polarity, illustrative holes and leads do not assign electrical pads. Native placement still requires individual lead identification.
-
-The L3/12 body dimensions come from pinned SC236/SC308 device drawings in
-`packageReferences`. SC308 has a centre emitter; SC236 has a centre base.
-Drawing-view terminal order does not establish installed orientation. Imported
-TO-92 assets retain their original credits even though these bodies no longer
-use them. R6.4/R6.5 lead-end candidates likewise do not establish hidden holes.
+Body-only photo observations and package dimensions are recorded in
+`component-evidence.json`, with device drawing sources in `packageReferences`.
+They support visual estimates without assigning electrical pads. Raised lead ends
+do not establish hidden holes, and drawing-view pin order does not establish
+installed orientation. Preserve component asset credits during migration.
 
 BR1 separates oscillator and CPU clock; BR2 separates reset source and CPU reset.
-Their terminal numbers are reconstruction identifiers. Virtual bridge isolation
+Their terminal numbers are reconstruction identifiers. Observed bridge geometry
+can be represented as unassigned artwork before source/CPU terminal order is
+resolved; do not attach guessed pads or nets to make it look complete. Virtual bridge isolation
 is tested digitally, but the reviewed sources do not prescribe physical bridge
 opening. Closed-link continuity alone cannot establish source-side terminal order.
 
@@ -88,8 +84,7 @@ python3 tools/photo_registration.py
 
 `photo_registration.py --apply --refs A1 ...` applies explicitly selected fits
 only after independent landmarks pass. Regenerate exports after applying fits.
-The native test checks repeatability, curved tracks, through vias and pad/net
-mismatch rejection. CI runs standard-Python freshness checks and a separate native
+CI runs standard-Python freshness checks and a separate native
 job using the [KiCad 10 stable Ubuntu packages](https://www.kicad.org/download/ubuntu/).
 The native job records tool versions and regenerates only temporary copies; it
 does not replace the committed exports. Unsupported zones, blind vias, internal
@@ -104,6 +99,6 @@ Commit CAD before running the museum sync scripts; they reject dirty or stale
 sources. Compatible revisions belong in the museum source manifests.
 
 Digital comparisons and specimen evidence collection are documented in the
-museum's `docs/robotron/keyboard-controller-progress.md` and
-`keyboard-controller-verification.md`. Logical reference agreement does not
+museum's [status guide](https://github.com/ddanila/dac/blob/main/docs/robotron/keyboard-controller-progress.md)
+and [verification guide](https://github.com/ddanila/dac/blob/main/docs/robotron/keyboard-controller-verification.md). Logical reference agreement does not
 qualify analog behavior, exact CPU cycle timing or specimen firmware.
