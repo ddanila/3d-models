@@ -1,7 +1,7 @@
 # Robotron keycap spring winding mandrel
 
 Printable hand-winding **trial mandrel** (Russian: оправка) for the spring
-documented in the [keyboard measurements](../README.md#keycap-spring-measurements-2026-10-10).
+documented in the [keyboard measurements](../key-switch/README.md).
 [Editable model](model.scad) · [Printable STL](keycap-spring-mandrel.stl) · [Preview](preview.png)
 
 > Superseded measurement: on October 12 the owner confirmed **0.4 mm wire**,

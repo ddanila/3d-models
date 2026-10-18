@@ -35,11 +35,9 @@ python3 render.py --view front      # check front fascia and deck joint
 python3 render.py                   # all six review views
 ```
 
-This uses the installed OpenSCAD build with the Manifold backend. On the current
-Mac, all six previews take only a few seconds. It does not regenerate STLs,
-rebuild the complete computer, sync DAC, or run browser/emulator CI. Review shape,
-spacing, colors and internals here first; then export only the affected canonical
-parts and sync the museum once the change is ready.
+Rendering uses OpenSCAD's Manifold backend. Review shape, spacing, colours and
+internals here, then export affected canonical parts and synchronize the museum.
+Preview rendering does not regenerate museum assets.
 
 Edit shared mechanical dimensions in the parent SCAD files and `../keycap/` or
 `../key-switch/`; edit key positions in `../tools/configure.py`, which generates both
@@ -54,97 +52,42 @@ Preview transparency is not a simulation of glass, metal reflection or rubber.
 The assembled keyboard is a visual reference, not one printable part. Existing
 photo-derived dimensions and hidden construction remain provisional.
 
-The deck aperture is clipped behind the 1 mm front wall. Without this limit,
-its tilted cutter removed the front fascia and exposed the PCB edge. The low
-front preview checks that the shell closes beneath the deck.
+## Construction and evidence
 
-Caps and SI/SO indicator lenses are included in the assembled and exploded views,
-attached to their fixed deck carriers. `caps_led_on` and `siso_led_on` select static
-lit colors; OpenSCAD does not simulate emitted light or emulator state. Both lenses
-remain visible when off. Their positions and provisional 4 mm spherical shape
-match the existing browser model; they were previously browser-only additions.
-The shared full-machine SCAD assembly includes them too. Browser export still
-leaves these separate lenses to the runtime, avoiding duplicate geometry.
+Caps and SI/SO indicator lenses attach to fixed deck carriers. `caps_led_on` and
+`siso_led_on` select static preview colours; they do not simulate emitted light or
+emulator state. The browser creates these lenses at runtime.
 
-The underside cable opening has two black rubber strips on its long edges,
-as shown in owner photos `123247922` and `123319025`. A separate round grooved
-bush holds the incoming lead in a folded support on the short edge toward the
-controller. The controller overlaps the rear edge of the matrix PCB; its cable
-end faces the opening. The brown bottom-cover insulating sheet is also modeled.
-This v43 correction supersedes the earlier bare-edge and mirrored placement
-interpretation. Exact mating depth remains estimated.
+Owner photos `123247922` and `123319025` show rubber strips along the cable
+opening and a grooved cable bush in a folded support. The controller overlaps the
+matrix PCB's rear edge, with its cable end toward the opening. Docking depth and
+hidden connector engagement remain unverified; no unseen inter-board cable is
+inferred.
 
-The light shell now ends at a straight, open lower rim above the separate bottom
-lid, with six individual screw tabs. Inside photos `PXL_20261012_123048886.jpg`
-and `PXL_20261012_123907435.jpg` establish this construction. The previous
-spherical rounding rolled the shell underneath and is removed. Plan corner
-bend radius is approximately 5 mm, while the top-to-wall bend is approximately
-1 mm per owner feedback; tab dimensions and the 0.2 mm lid seam remain modeling estimates.
-The light shell walls, sloped skin, rear ledge and lid tabs use the owner’s
-approximately 1 mm sheet thickness. The separate bottom lid is also 1 mm thick, per owner confirmation.
-The shell rim and mounting tabs sit at 1.2 mm, preserving the estimated 0.2 mm seam.
+Inside photos `PXL_20261012_123048886.jpg` and `PXL_20261012_123907435.jpg`
+establish the light shell's open lower rim, separate lid and individual tabs.
+The owner specified approximately 1 mm sheet for the shell and lid. Tab geometry,
+seams and local bends remain estimates. The black deck is an open folded 1 mm
+sheet with an owner-specified 8 mm skirt and 1 mm gap above the base. Its planes
+follow the keyboard tilt. The black deck's rounded perimeter remains a visual
+estimate, separate from the light shell's bends.
 
-The black deck has a rolled top perimeter rather than a sharp extruded edge:
-5 mm outer plan corners and a 5 mm outer top-edge radius, requested by the
-owner as a visual trial after comparing photos `PXL_20261012_123006039.jpg` and `PXL_20261009_132919894.jpg`.
-These black-deck radii are estimates, separate from the light sheet-metal shell’s
-5 mm corner bends and approximately 1 mm top bend / sheet thickness.
+The owner specified a base profile rising from 15 mm at the front to 29 mm at the
+black panel's rear edge, then remaining level to the back. The rear shelf and
+pencil trough are horizontal; the trough is pressed, not a through-hole. Other
+profile details use `PXL_20261013_084425145.jpg` and remain photo estimates.
+Editable geometry and derived dimensions live in the shared SCAD sources.
 
-Owner correction: the black deck is an open folded **1 mm sheet**, with a
-uniform **8 mm** skirt height and a **1 mm** gap above the light base. Its top
-and bottom planes are parallel (both follow the keyboard tilt); it is not a
-wedge. The deck top and key mechanism datum stay in place while the skirt
-extends downward. The light base is trimmed to the parallel seating plane.
-The outer 5 mm / inner 4 mm bends preserve 1 mm material thickness.
+Danila accepted the exterior at commit `cf7e113` as broadly correct. Preserve
+that visual baseline while refining internals; acceptance does not establish
+manufacturing fit or approve hidden construction.
 
-The October 13 side photo `PXL_20261013_084425145.jpg` corrects the rear shelf:
-the light base has one continuous sloping top plane, including behind the black
-panel. The earlier raised rear ledge incorrectly intersected the black skirt.
-The 1 mm separation now continues along the full panel; `--view side` checks it.
+Owner `123103225` supplies the matrix connector's molded 2У0 marking. Supports,
+fasteners, insulating sheet and board artwork are reviewed through the
+[parent reference guide](../reference-guide.md) and evidence manifests. The
+[controller guide](../keyboard-controller/README.md) owns controller placement
+and pad interpretation; nominal support heights remain estimated.
 
-The same side photo shows a small round top-to-wall bend in the light base.
-A 1 mm rounded offset of the inner wedge models this separately from the
-5 mm corners in plan; the lower rim remains flat and open for the separate lid.
-
-Owner profile correction: the light base rises from **15 mm at the front** to
-**29 mm at the black panel’s rear edge**, then stays level at **29 mm** to the
-back. `dimensions.scad` derives the panel tilt from those heights and the current
-photo-fitted panel footprint. Keys and internal switch parts share the updated
-height datum and tilt. The rear shelf and its pencil trough are horizontal.
-
-The pencil groove is a closed pressed trough, not a through-hole. Its floor and
-walls are 1 mm thick; the 2 mm recess depth remains a photo estimate.
-
-## Accepted exterior baseline — 2026-10-13
-
-Danila accepted the keyboard exterior at commit `cf7e113` as looking broadly
-correct, including the black overlay’s 5 mm outer radii. Preserve this exterior
-as the review baseline while refining internals. Internal board/mechanism detail
-and provisional hidden dimensions still need further work; this is not approval
-of the internals or a manufacturing-ready assembly.
-
-The board/exploded presets include PCB supports, fasteners, short contact routes
-and the underside socket on the stepped PCB tongue. The narrow controller keeps
-its own pale laminate colour and separate grey/blue axial resistors. The socket
-outline follows owner photos; its docking with the detached controller remains
-unverified. No unobserved cable is added between them.
-
-## Internal review — 2026-10-15
-
-Owner 123622947 shows paired open holes at each narrow controller-board end.
-The model now leaves them open instead of adding four unsupported screws. Hole
-centres and diameters remain photo estimates; the visible cable clamp remains.
-Owner 123103225 supplies the matrix connector's molded 2У0 marking. The broad
-PCB and connector tongue have small rounded outside corners. These changes do
-not alter the approved exterior. Existing support heights remain estimated.
-
-The photos reviewed here show the underside, not bare switch contact faces.
-The two isolated comb electrodes and their short routes therefore remain a
-functional illustration, not a photo-traced contact pattern. No new hidden
-controller-to-matrix connection or support is inferred from these photographs.
-
-The v44 interior adds the installed controller fasteners, pressed bottom-lid
-recesses and edge slots, clean cable shielding, aligned end solder rings and
-photo-registered board artwork. See the parent README and `keyboard-artwork.json`
-for photo references and limits. The matrix and controller have distinct
-nominal colours; DAC additionally models slight matrix-laminate transmission.
+The underside photographs do not expose bare switch contact faces. Comb
+electrodes and short matrix routes are functional illustrations, not photo-traced
+contact patterns. Preserve that distinction when reviewing the board preset.
