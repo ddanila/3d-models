@@ -420,7 +420,7 @@
     "referenceType": "560",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
     "pinEvidence": "Pin 1 assigned to shared supply-side lower lead; pin 2 signal assignment follows factory schematic. Hidden output continuity not verified.",
-    "note": "Nominal photo placement; body, pad and drill sizes are estimates. The signal-side underside branch to a separate solder eye is visible. Connection onward to A1 or the cable is unresolved; reference resistance is not measured.",
+    "note": "Underside branch to a separate solder eye is native copper. A visible top branch toward the A1 package gap remains a photo observation: global projection conflicts with estimated A1 pads, so no native top copper is assigned. Hidden A1 attachment and cable continuation remain unresolved; dimensions and reference resistance are unmeasured.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -461,6 +461,31 @@
         1342,
         1325
       ]
+    },
+    "topSignalBranchObservation": {
+      "photoSource": "photo-top",
+      "pixelPolyline": [
+        [
+          1448,
+          1492
+        ],
+        [
+          1445,
+          1501
+        ],
+        [
+          1436,
+          1510
+        ],
+        [
+          1387,
+          1510
+        ]
+      ],
+      "pixelUncertainty": 8,
+      "scope": "Visible copper toward A1 package edge; obscured continuation is not assigned to a pin.",
+      "status": "projection-rejected-pending-local-registration",
+      "review": "evidence.json:routeReviews:r101-top-package-entry"
     }
   },
   "R10.2": {

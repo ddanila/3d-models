@@ -1088,6 +1088,181 @@
       ],
       "copperAssignmentQualified": false,
       "nextEvidence": "Follow a continuous path from an individually identified bridge endpoint to A5:26 or V4.9:C, including any layer transition, then check correspondence on the primary specimen. A closed bridge connects both ends, so a continuity beep across it cannot determine terminal order. No bridge opening is requested or implied by this review."
+    },
+    {
+      "id": "r101-top-package-entry",
+      "status": "projection-rejected-pending-local-registration",
+      "refs": [
+        "R10.1",
+        "A1"
+      ],
+      "photoSource": "photo-top",
+      "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "pixelPolyline": [
+        [
+          1448,
+          1492
+        ],
+        [
+          1445,
+          1501
+        ],
+        [
+          1436,
+          1510
+        ],
+        [
+          1387,
+          1510
+        ]
+      ],
+      "pixelUncertainty": 8,
+      "observation": "Visible signal-side branch turns toward A1 and enters the gap between its cable-end inner-row leads. The package hides onward attachment. Cable-facing notch confirms the existing primary A1 orientation; the opposite round mould mark is not used to reverse pin order.",
+      "comparison": {
+        "source": "comparison-photo-080443226.MP",
+        "sha256": "c4cdfd7f8d2e9ca052b777d7d805b3ecb5cf7c31e06dee8f38ada0dd03b55166",
+        "scope": "Separate specimen shows a corresponding resistor-to-package-gap path. Supports topology investigation only; no primary coordinates transferred."
+      },
+      "rejectedProjection": {
+        "method": "Global top photo board-envelope homography, nominal 0.35 mm width, existing native pads",
+        "result": "Projected candidate intersects A1:13 /A4 while assigned from R10.1:2 /TA_TAKT. Do not interpret this model conflict as measured shorting or change the schematic to fit it.",
+        "candidateSegments": [
+          {
+            "status": "observed",
+            "geometrySha256": "3c8d6a52db0e31d8515f8b58dc4dbfeceee4e6fb83012db82f063d410c40615f",
+            "group": "r101-output-top-partial",
+            "detail": "Visible top copper toward the A1 package edge. R10.1 signal identity follows the reference schematic. The path disappears beside the package; no A1 pin attachment, under-package continuation, via or cable path is asserted. Nominal planar projection and 0.35 mm width remain estimates.",
+            "sources": [
+              {
+                "id": "photo-top",
+                "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+                "locator": {
+                  "pixelSegment": [
+                    [
+                      1436,
+                      1510
+                    ],
+                    [
+                      1387,
+                      1510
+                    ]
+                  ],
+                  "imageSize": [
+                    3072,
+                    4080
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "status": "inferred",
+            "geometrySha256": "53ad71ff399b4314b1dcadda7f60ede8b16521fe7dd09a3e8113c73465ad3517",
+            "group": "r101-output-top-partial",
+            "detail": "Estimated native-pad attachment to visible top copper. R10.1 signal identity follows the reference schematic. The path disappears beside the package; no A1 pin attachment, under-package continuation, via or cable path is asserted. Nominal planar projection and 0.35 mm width remain estimates.",
+            "sources": [
+              {
+                "id": "photo-top",
+                "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+                "locator": {
+                  "pixelSegment": [
+                    [
+                      1448,
+                      1492
+                    ],
+                    [
+                      1445,
+                      1501
+                    ]
+                  ],
+                  "imageSize": [
+                    3072,
+                    4080
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "status": "observed",
+            "geometrySha256": "54be91a58e11e50b969a34eafb27407f90079a3293b38be71de5df40234f05c2",
+            "group": "r101-output-top-partial",
+            "detail": "Visible top copper toward the A1 package edge. R10.1 signal identity follows the reference schematic. The path disappears beside the package; no A1 pin attachment, under-package continuation, via or cable path is asserted. Nominal planar projection and 0.35 mm width remain estimates.",
+            "sources": [
+              {
+                "id": "photo-top",
+                "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+                "locator": {
+                  "pixelSegment": [
+                    [
+                      1445,
+                      1501
+                    ],
+                    [
+                      1436,
+                      1510
+                    ]
+                  ],
+                  "imageSize": [
+                    3072,
+                    4080
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "drcViolations": [
+          {
+            "description": "Items shorting two nets (nets /A4 and /TA_TAKT)",
+            "items": [
+              {
+                "description": "PTH pad 13 [/A4] of A1",
+                "pos": {
+                  "x": 95.201874,
+                  "y": 54.447712
+                },
+                "uuid": "3ef24e56-b008-458c-a6fe-bf8b32d3c825"
+              },
+              {
+                "description": "Track [/TA_TAKT] on F.Cu, length 3.5984 mm",
+                "pos": {
+                  "x": 94.679121,
+                  "y": 51.010483
+                },
+                "uuid": "ccaa4be8-c5da-48f4-baaf-433022315030"
+              }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+          },
+          {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+              {
+                "description": "Track [/TA_TAKT] on F.Cu, length 3.5984 mm",
+                "pos": {
+                  "x": 94.679121,
+                  "y": 51.010483
+                },
+                "uuid": "ccaa4be8-c5da-48f4-baaf-433022315030"
+              },
+              {
+                "description": "PTH pad 13 [/A4] of A1",
+                "pos": {
+                  "x": 95.201874,
+                  "y": 54.447712
+                },
+                "uuid": "3ef24e56-b008-458c-a6fe-bf8b32d3c825"
+              }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+          }
+        ]
+      },
+      "copperAssignmentQualified": false,
+      "nextEvidence": "Reconcile board-plane copper with A1 hole positions using local cross-side registration and independently held-out joints. Raised lead surfaces are not hole centres. Trace the hidden continuation independently before assigning an A1 endpoint."
     }
   ],
   "comparisonSpecimens": [
