@@ -1505,7 +1505,7 @@
           "pin": "17",
           "position": [
             78.49909,
-            4.136072
+            4.136073
           ],
           "ref": "A5",
           "size": [
@@ -1879,7 +1879,7 @@
           "pin": "37",
           "position": [
             45.509814,
-            19.442448
+            19.442447
           ],
           "ref": "A5",
           "size": [
@@ -5769,11 +5769,155 @@
     },
     {
       "evidence": {
+        "detail": "Estimated native pad attachment. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "geometrySha256": "f186dbf4ed34ed88380a50ceac59febe3d0f771b914b87607a5c9c0fc902b726",
+        "group": "r101-output-bottom-partial",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1342,
+                  1325
+                ],
+                [
+                  1342,
+                  1325
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "inferred"
+      },
+      "id": "01e7c786-12a0-4bf7-9e08-6eb814deef93",
+      "net": "/TA_TAKT",
+      "points": [
+        [
+          -56.664606,
+          -0.068244
+        ],
+        [
+          -57.642787,
+          0.312276
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside signal branch from R10.1:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "geometrySha256": "6145c776496268a44586e366c41c4c4ed7fe13f4a92eb2b48e9d8f86a623eb1e",
+        "group": "r101-output-bottom-partial",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1344,
+                  1205
+                ],
+                [
+                  1245,
+                  1205
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "1c269ce3-7f65-4437-b409-e2d78c371c60",
+      "net": "/TA_TAKT",
+      "points": [
+        [
+          -67.330025,
+          -0.193655
+        ],
+        [
+          -67.563169,
+          7.759122
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside signal branch from R10.1:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "geometrySha256": "9fc616139bfab2928f7e2eb05b42268fd4ead82eae30c2787690015221e3da59",
+        "group": "r101-output-bottom-partial",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1342,
+                  1325
+                ],
+                [
+                  1344,
+                  1205
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "3a55b456-6926-40e2-a586-99bffde5877c",
+      "net": "/TA_TAKT",
+      "points": [
+        [
+          -57.642787,
+          0.312276
+        ],
+        [
+          -67.330025,
+          -0.193655
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
         "detail": "Visible underside COL11 trace between X1:B8 and A2.1:6, projected inside the qualified local anchor hull. Width is an illustrative 0.35 mm; reference numbering and photo continuity are not measured continuity. The intermediate solder eye does not establish an unseen top-side continuation.",
         "geometrySha256": "67b61efaebcb81d2961c2a6cc3cfae6d576c9473cc07741bf03f92a8183e8f44",
         "group": "x1-b8-col11-bottom",
         "registration": {
-          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
           "region": "matrix-col11"
         },
         "sources": [
@@ -5821,7 +5965,7 @@
         "geometrySha256": "c991966aed6ae96f4802dfa2b468bed756c8cbfaa62ea569954d0a0bf8802ffd",
         "group": "x1-b8-col11-bottom",
         "registration": {
-          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
           "region": "matrix-col11"
         },
         "sources": [
@@ -5869,7 +6013,7 @@
         "geometrySha256": "53e809bd655428cd254d85211eac76286dc1911c83a12eeb6a3ee5a9648a688f",
         "group": "x1-b8-col11-bottom",
         "registration": {
-          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
           "region": "matrix-col11"
         },
         "sources": [
@@ -5917,7 +6061,7 @@
         "geometrySha256": "4a939fd2e35e05fb64e4b477693fab0b17e820fbd0858a47ab927ca9772245ce",
         "group": "x1-b8-col11-bottom",
         "registration": {
-          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
           "region": "matrix-col11"
         },
         "sources": [
@@ -5965,7 +6109,7 @@
         "geometrySha256": "a5709f1f05569202e18acb392e8dd82c0ef84b327fe7be2eeb90c0fb1b4bc965",
         "group": "x1-b8-col11-bottom",
         "registration": {
-          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
           "region": "matrix-col11"
         },
         "sources": [
@@ -6013,7 +6157,7 @@
         "geometrySha256": "9475f631cbb40c1678587d74b8f1548571de484eca9213971ea75daa6ac9fc0b",
         "group": "x1-b8-col11-bottom",
         "registration": {
-          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
           "region": "matrix-col11"
         },
         "sources": [
@@ -6061,7 +6205,7 @@
         "geometrySha256": "1a9f26e98331293a9a2ff4f8e700b2a07b0afdaf44827420e8778ae2c1ff2530",
         "group": "x1-b8-col11-bottom",
         "registration": {
-          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
           "region": "matrix-col11"
         },
         "sources": [
@@ -6109,7 +6253,7 @@
         "geometrySha256": "4bf4728c9140321d470f76049ba2bf538be98d8cc688f35e43ed86e728efc637",
         "group": "x1-b8-col11-bottom",
         "registration": {
-          "landmarksSha256": "736ed610fbb908858377b30279450d6d3c2de86b5b2039273387c6f2b6f95f5a",
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
           "region": "matrix-col11"
         },
         "sources": [
@@ -6210,6 +6354,246 @@
         [
           130.740243,
           -14.676546
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "geometrySha256": "6b997b296d7eae39733a6a05ed79c803b7738efc1d5a32fdc6373f73d8f22402",
+        "group": "r102-output-bottom-partial",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1214,
+                  1233
+                ],
+                [
+                  1162,
+                  1185
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "21f7cb41-586c-431c-942e-8f66b2f16d86",
+      "net": "/TA_DATEN",
+      "points": [
+        [
+          -65.420237,
+          10.358947
+        ],
+        [
+          -69.32413,
+          14.27503
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "geometrySha256": "10e0af72d89a5b2bd1cd5d2c4178454a80742e079db28853fa26454a072347c0",
+        "group": "r102-output-bottom-partial",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1297,
+                  1325
+                ],
+                [
+                  1300,
+                  1236
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "5c17decc-0cf0-492e-8fec-1433f71ff7f0",
+      "net": "/TA_DATEN",
+      "points": [
+        [
+          -57.770005,
+          4.002791
+        ],
+        [
+          -64.969792,
+          3.453163
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "geometrySha256": "6e380529dc701bc8c31aade3e4627c91bca96d2db0949a4450c90573be817acb",
+        "group": "r102-output-bottom-partial",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1300,
+                  1236
+                ],
+                [
+                  1214,
+                  1233
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "76315e54-3742-414f-9183-6c6e8b0663e4",
+      "net": "/TA_DATEN",
+      "points": [
+        [
+          -64.969792,
+          3.453163
+        ],
+        [
+          -65.420237,
+          10.358947
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible underside signal branch from R10.2:2 to a separate solder eye. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "geometrySha256": "3ce2583d5b09a91291f47ada16c3a3f4031b13199505d882b7b94c16a84f905e",
+        "group": "r102-output-bottom-partial",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1162,
+                  1185
+                ],
+                [
+                  1163,
+                  1013
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "bd742c84-fca4-4ad3-ba4d-ad94d2261cf8",
+      "net": "/TA_DATEN",
+      "points": [
+        [
+          -69.32413,
+          14.27503
+        ],
+        [
+          -82.411959,
+          13.362757
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad attachment. Reference-net assignment; width estimated at 0.35 mm. No top-side continuation, via, complete A1/cable path or measured continuity is asserted. Native clearance conflicts with estimated R9 pads remain unresolved; photo routing must not be displaced to conceal them.",
+        "geometrySha256": "df2845eb28945242eac8447f710fb88db8f9849b1e30e33ae50c9d5ec0e669d4",
+        "group": "r102-output-bottom-partial",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1297,
+                  1325
+                ],
+                [
+                  1297,
+                  1325
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "inferred"
+      },
+      "id": "e4f04027-f60b-47ed-8a77-ea623b17e734",
+      "net": "/TA_DATEN",
+      "points": [
+        [
+          -56.77338,
+          3.608292
+        ],
+        [
+          -57.770005,
+          4.002791
         ]
       ],
       "side": "bottom",

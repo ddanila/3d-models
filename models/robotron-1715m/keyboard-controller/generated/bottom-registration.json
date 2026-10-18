@@ -1041,6 +1041,258 @@
       ],
       "scope": "Rejected wider fit: uppermost A1/A2.1 joints to A2.2/A2.3. Independent A2.1:8 residual exceeds the existing tolerance. Retained for comparison; not qualified for copper or connector placement.",
       "toleranceMm": 1.25
+    },
+    {
+      "anchorHull": [
+        [
+          1090,
+          969
+        ],
+        [
+          1243,
+          972
+        ],
+        [
+          1492,
+          1357
+        ],
+        [
+          1100,
+          1357
+        ]
+      ],
+      "anchors": [
+        {
+          "photoPixel": [
+            1090,
+            969
+          ],
+          "pin": "1",
+          "ref": "R4.2"
+        },
+        {
+          "photoPixel": [
+            1243,
+            972
+          ],
+          "pin": "2",
+          "ref": "R4.2"
+        },
+        {
+          "photoPixel": [
+            1492,
+            1357
+          ],
+          "pin": "2",
+          "ref": "A1"
+        },
+        {
+          "photoPixel": [
+            1100,
+            1357
+          ],
+          "pin": "13",
+          "ref": "A2.1"
+        }
+      ],
+      "checks": [
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -82.026106,
+            18.576046
+          ],
+          "photoModel": [
+            -82.5275779805104,
+            18.750715715534604
+          ],
+          "photoPixel": [
+            1093,
+            1013
+          ],
+          "pin": "1",
+          "ref": "R7",
+          "residualMm": 0.5310213336222603
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -81.944318,
+            7.007847
+          ],
+          "photoModel": [
+            -82.2756665600312,
+            7.011388202572876
+          ],
+          "photoPixel": [
+            1245,
+            1013
+          ],
+          "pin": "2",
+          "ref": "R7",
+          "residualMm": 0.3313674823370773
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -78.361053,
+            18.41656
+          ],
+          "photoModel": [
+            -79.17524353050769,
+            18.845744580895403
+          ],
+          "photoPixel": [
+            1095,
+            1058
+          ],
+          "pin": "1",
+          "ref": "R8",
+          "residualMm": 0.9203834116533999
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -78.051119,
+            6.980555
+          ],
+          "photoModel": [
+            -78.9793993448051,
+            7.178914593545003
+          ],
+          "photoPixel": [
+            1245,
+            1057
+          ],
+          "pin": "2",
+          "ref": "R8",
+          "residualMm": 0.94923702356304
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -57.336762,
+            -4.530939
+          ],
+          "photoModel": [
+            -57.571968404615404,
+            -4.13776029328534
+          ],
+          "photoPixel": [
+            1396,
+            1324
+          ],
+          "pin": "14",
+          "ref": "A1",
+          "residualMm": 0.4581610504898007
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -57.884662,
+            12.451299
+          ],
+          "photoModel": [
+            -57.90707822760445,
+            12.72987348274613
+          ],
+          "photoPixel": [
+            1190,
+            1327
+          ],
+          "pin": "1",
+          "ref": "A2.1",
+          "residualMm": 0.2794749178321528
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -56.664606,
+            -0.068244
+          ],
+          "photoModel": [
+            -57.6427873719184,
+            0.3122756471534062
+          ],
+          "photoPixel": [
+            1342,
+            1325
+          ],
+          "pin": "2",
+          "ref": "R10.1",
+          "residualMm": 1.0495875371963606
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            -56.77338,
+            3.608292
+          ],
+          "photoModel": [
+            -57.77000506530988,
+            4.002791322422845
+          ],
+          "photoPixel": [
+            1297,
+            1325
+          ],
+          "pin": "2",
+          "ref": "R10.2",
+          "residualMm": 1.0718634410203582
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            -57.08708,
+            -12.146847
+          ],
+          "photoModel": [
+            -57.04922393708644,
+            -12.092932285528452
+          ],
+          "photoPixel": [
+            1492,
+            1327
+          ],
+          "pin": "1",
+          "ref": "A1",
+          "residualMm": 0.06587774993018554
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            -58.242614,
+            20.062887
+          ],
+          "photoModel": [
+            -58.32665937580335,
+            20.151028283934398
+          ],
+          "photoPixel": [
+            1098,
+            1325
+          ],
+          "pin": "14",
+          "ref": "A2.1",
+          "residualMm": 0.12178879721686366
+        }
+      ],
+      "copperAssignmentQualified": true,
+      "id": "output-pullups",
+      "maxCheckResidualMm": 1.0718634410203582,
+      "photoToModel": [
+        0.0042189133469729655,
+        0.07208852269000464,
+        -146.63914738418848,
+        -0.06481630266344894,
+        0.0022687807023528935,
+        84.22362041418299,
+        -3.443565971765139e-05,
+        -0.00012463079495377715,
+        1
+      ],
+      "scope": "Local underside fit for the R10 signal branches; limited to the resistor/A1/A2.1 anchor hull. Far-end solder eyes do not establish top-side continuations or winding identity.",
+      "toleranceMm": 1.25
     }
   ],
   "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",

@@ -610,6 +610,127 @@
           ]
         }
       ]
+    },
+    {
+      "id": "output-pullups",
+      "scope": "Local underside fit for the R10 signal branches; limited to the resistor/A1/A2.1 anchor hull. Far-end solder eyes do not establish top-side continuations or winding identity.",
+      "reviewedForCopper": true,
+      "anchors": [
+        {
+          "ref": "R4.2",
+          "pin": "1",
+          "photoPixel": [
+            1090,
+            969
+          ]
+        },
+        {
+          "ref": "R4.2",
+          "pin": "2",
+          "photoPixel": [
+            1243,
+            972
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "2",
+          "photoPixel": [
+            1492,
+            1357
+          ]
+        },
+        {
+          "ref": "A2.1",
+          "pin": "13",
+          "photoPixel": [
+            1100,
+            1357
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "R7",
+          "pin": "1",
+          "photoPixel": [
+            1093,
+            1013
+          ]
+        },
+        {
+          "ref": "R7",
+          "pin": "2",
+          "photoPixel": [
+            1245,
+            1013
+          ]
+        },
+        {
+          "ref": "R8",
+          "pin": "1",
+          "photoPixel": [
+            1095,
+            1058
+          ]
+        },
+        {
+          "ref": "R8",
+          "pin": "2",
+          "photoPixel": [
+            1245,
+            1057
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "14",
+          "photoPixel": [
+            1396,
+            1324
+          ]
+        },
+        {
+          "ref": "A2.1",
+          "pin": "1",
+          "photoPixel": [
+            1190,
+            1327
+          ]
+        },
+        {
+          "ref": "R10.1",
+          "pin": "2",
+          "photoPixel": [
+            1342,
+            1325
+          ]
+        },
+        {
+          "ref": "R10.2",
+          "pin": "2",
+          "photoPixel": [
+            1297,
+            1325
+          ]
+        },
+        {
+          "ref": "A1",
+          "pin": "1",
+          "photoPixel": [
+            1492,
+            1327
+          ]
+        },
+        {
+          "ref": "A2.1",
+          "pin": "14",
+          "photoPixel": [
+            1098,
+            1325
+          ]
+        }
+      ]
     }
   ]
 }

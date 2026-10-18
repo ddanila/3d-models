@@ -420,7 +420,7 @@
     "referenceType": "560",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
     "pinEvidence": "Pin 1 assigned to shared supply-side lower lead; pin 2 signal assignment follows factory schematic. Hidden output continuity not verified.",
-    "note": "Nominal planar photo placement. Body shape, 0.85 mm hole and 1.7 mm pad diameters are estimates. Lower terminals share a visible supply trace toward A1:14 in the underside photo; upper signal paths are obscured by A1. Reference value 560 ohms is not a specimen measurement.",
+    "note": "Nominal photo placement; body, pad and drill sizes are estimates. The signal-side underside branch to a separate solder eye is visible. Connection onward to A1 or the cable is unresolved; reference resistance is not measured.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -434,13 +434,40 @@
       ]
     },
     "pixelUncertainty": 8,
-    "blueCollarPin": "1"
+    "blueCollarPin": "1",
+    "signalBranchObservation": {
+      "photoSource": "photo-bottom",
+      "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+      "pixelPolyline": [
+        [
+          1342,
+          1325
+        ],
+        [
+          1344,
+          1205
+        ],
+        [
+          1245,
+          1205
+        ]
+      ],
+      "pixelUncertainty": 8,
+      "scope": "Signal-side branch to a solder eye only. Native pad attachment is inferred; no top-side continuation, via or complete A1/cable connection is established."
+    },
+    "bottomPhotoSource": "photo-bottom",
+    "bottomPhotoPins": {
+      "2": [
+        1342,
+        1325
+      ]
+    }
   },
   "R10.2": {
     "referenceType": "560",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top original lead ends",
     "pinEvidence": "Pin 1 assigned to shared supply-side lower lead; pin 2 signal assignment follows factory schematic. Hidden output continuity not verified.",
-    "note": "Nominal planar photo placement. Body shape, 0.85 mm hole and 1.7 mm pad diameters are estimates. Lower terminals share a visible supply trace toward A1:14 in the underside photo; upper signal paths are obscured by A1. Reference value 560 ohms is not a specimen measurement.",
+    "note": "Nominal photo placement; body, pad and drill sizes are estimates. The signal-side underside branch to a separate solder eye is visible. Connection onward to A1 or the cable is unresolved; reference resistance is not measured.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -454,7 +481,42 @@
       ]
     },
     "pixelUncertainty": 8,
-    "blueCollarPin": "1"
+    "blueCollarPin": "1",
+    "signalBranchObservation": {
+      "photoSource": "photo-bottom",
+      "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+      "pixelPolyline": [
+        [
+          1297,
+          1325
+        ],
+        [
+          1300,
+          1236
+        ],
+        [
+          1214,
+          1233
+        ],
+        [
+          1162,
+          1185
+        ],
+        [
+          1163,
+          1013
+        ]
+      ],
+      "pixelUncertainty": 8,
+      "scope": "Signal-side branch to a solder eye only. Native pad attachment is inferred; no top-side continuation, via or complete A1/cable connection is established."
+    },
+    "bottomPhotoSource": "photo-bottom",
+    "bottomPhotoPins": {
+      "2": [
+        1297,
+        1325
+      ]
+    }
   },
   "R10.3": {
     "referenceType": "560",

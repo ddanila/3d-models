@@ -45,6 +45,20 @@
 <circle cx="1400" cy="1505" r="8" fill="none" stroke="orange" stroke-width="3"/>
 <circle cx="1329" cy="2252" r="8" fill="none" stroke="orange" stroke-width="3"/>
 <circle cx="1205" cy="2254" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<polygon points="1090,969 1243,972 1492,1357 1100,1357" fill="none" stroke="cyan" stroke-width="3" stroke-dasharray="12 8"/>
+<circle cx="1093" cy="1013" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1245" cy="1013" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1095" cy="1058" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1245" cy="1057" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1396" cy="1324" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1190" cy="1327" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1342" cy="1325" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1297" cy="1325" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1492" cy="1327" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1098" cy="1325" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<polyline points="1342,1325 1342,1325" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1344,1205 1245,1205" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1342,1325 1344,1205" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1212,1526 1212,1493" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1198,1892 1195,1552" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1210,1537 1212,1526" fill="none" stroke="magenta" stroke-width="2"/>
@@ -53,4 +67,9 @@
 <polyline points="1194,1477 1194,1477" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1195,1552 1210,1537" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1212,1493 1194,1477" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1214,1233 1162,1185" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1297,1325 1300,1236" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1300,1236 1214,1233" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1162,1185 1163,1013" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1297,1325 1297,1325" fill="none" stroke="magenta" stroke-width="2"/>
 </svg>

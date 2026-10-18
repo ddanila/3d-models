@@ -245,6 +245,24 @@ class ControllerExportTests(unittest.TestCase):
   for r in routes:
    touches=any(tuple(p) in endpoints for p in r['points'])
    self.assertEqual(r['evidence']['status'],'inferred' if touches else 'observed')
+ def test_output_branches_remain_partial_and_have_no_invented_vias(self):
+  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':3,'clearance':2})
+  from bottom_registration import review as bottom_review,validate_registered_routes
+  import hashlib,collections
+  layout=json.loads((R/'generated/layout.json').read_text());report=bottom_review(layout)
+  self.assertTrue(next(r for r in report['pcbRegions'] if r['id']=='output-pullups')['copperAssignmentQualified'])
+  pads={(c['ref'],p['pin']):tuple(p['position'])for c in layout['components']for p in c['pads']}
+  for ref,net,cpu in [('R10.1','/TA_TAKT','2'),('R10.2','/TA_DATEN','4')]:
+   routes=[r for r in layout['routes'] if r['net']==net];self.assertTrue(routes)
+   self.assertTrue(all(r['side']=='bottom' for r in routes))
+   validate_registered_routes(routes,report,hashlib.sha256((R/'bottom-landmarks.json').read_bytes()).hexdigest())
+   degree=collections.Counter(tuple(p)for r in routes for p in r['points'])
+   ends={p for p,n in degree.items() if n==1}
+   self.assertEqual(len(ends),2);self.assertIn(pads[ref,'2'],ends)
+   self.assertNotIn(pads['A1',cpu],degree)
+   self.assertEqual(sum(r['evidence']['status']=='inferred'for r in routes),1)
+   self.assertFalse(any(v['net']==net for v in layout['vias']))
+   self.assertTrue(all('clearance conflicts' in r['evidence']['detail']for r in routes))
  def test_a2_factory_identity_and_placement(self):
   components=json.loads((R/'generated/connectivity.json').read_text())['components']
   review=json.loads((R/'evidence.json').read_text())['referenceVariants'][0]
@@ -315,7 +333,6 @@ class ControllerExportTests(unittest.TestCase):
   self.assertEqual(sum(r['evidence']['status']=='observed'for r in routes),7)
   self.assertEqual(sum(r['evidence']['status']=='inferred'for r in routes),1)
   self.assertFalse(layout['vias'])
-  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':1})
   self.assertIn('magenta',(R/'generated/photo-registration.svg').read_text())
  def test_reset_pair_supply_route_connects_only_reviewed_pads(self):
   layout=json.loads((R/'generated/layout.json').read_text())
