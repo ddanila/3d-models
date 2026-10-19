@@ -195,5 +195,11 @@
     ],
     "basis": "Vertical heatsink between R9/R10 and Tr3, next to the V11\u2013V14 rectifier bank and C13\u2013C15 group. The same landmarks locate the absent part in PSU002.",
     "remaining": "No complete pin-to-net trace or continuity measurement; factory population and BU126 replacement qualification remain unknown."
+  },
+  "identification": {
+    "shield_number": "043024",
+    "pcb_serial_stamp": "none observed",
+    "evidence": "owner report",
+    "reported_on": "2026-10-19"
   }
 }
