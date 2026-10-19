@@ -201,5 +201,15 @@
     "pcb_serial_stamp": "none observed",
     "evidence": "owner report",
     "reported_on": "2026-10-19"
+  },
+  "completeness": {
+    "observation": "Additional vertically mounted PCB absent",
+    "evidence": "owner report",
+    "reported_on": "2026-10-19",
+    "board_identification": "Exact assembly/revision not established"
+  },
+  "disposition": {
+    "owner_intent": "Retain for parts or possible custom PSU installation reusing enclosure and contacts",
+    "status": "Not the current restoration focus; custom conversion is an option, not an implemented design"
   }
 }

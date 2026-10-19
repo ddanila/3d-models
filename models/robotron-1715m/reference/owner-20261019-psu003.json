@@ -1,0 +1,18 @@
+{
+  "owner": "Danila",
+  "date": "2026-10-19",
+  "specimen": "PSU003",
+  "identification": {
+    "metal_shield_serial_number": "010438",
+    "evidence": "owner report",
+    "reported_on": "2026-10-19"
+  },
+  "disposition": {
+    "owner_intent": "Concentrate restoration work on PSU003"
+  },
+  "limits": [
+    "Shield serial number is not a PCB serial number.",
+    "Assembly completeness, electrical condition and schematic revision match have not been established."
+  ],
+  "photos": []
+}
