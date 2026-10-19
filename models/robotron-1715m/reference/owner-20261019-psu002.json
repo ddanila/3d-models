@@ -27,8 +27,8 @@
   ],
   "limits": [
     "PSU002 is a separate specimen; owner comparison does not transfer PSU001 repair history or identify the installed museum supply.",
-    "Missing BU126 has no assigned schematic designator. Reference drawing transistor types remain unchanged pending trace and placement correlation.",
-    "Photographs support placement, markings and visible copper inspection; hidden connections and electrical condition are not established."
+    "Photographs support placement, markings and visible copper inspection; hidden connections and electrical condition are not established.",
+    "V15 identification is based on placement correlation, not a complete pin-to-net trace or continuity test."
   ],
   "photos": [
     {
@@ -172,5 +172,28 @@
       "bytes": 3759316
     }
   ],
-  "comparison_source": "owner-20261019-psu001.json"
+  "comparison_source": "owner-20261019-psu001.json",
+  "layout_correlation": {
+    "reference": "V15",
+    "status": "placement-correlated; not continuity-tested",
+    "fitted_PSU001": "BU126",
+    "PSU002": "unpopulated",
+    "reference_type": "SU169",
+    "reference_role": "Primary switch for the Tr3 / 12PM flyback section",
+    "placement_drawing": {
+      "number": "63-330-2760-4",
+      "pdf_page": 18
+    },
+    "schematic": {
+      "number": "56-330-2770-5",
+      "pdf_page": 20
+    },
+    "photos": [
+      "PXL_20261019_091009588.jpg",
+      "PXL_20261019_091012624.jpg",
+      "PXL_20261019_085748827.jpg"
+    ],
+    "basis": "Vertical heatsink between R9/R10 and Tr3, next to the V11\u2013V14 rectifier bank and C13\u2013C15 group. The same landmarks locate the absent part in PSU002.",
+    "remaining": "No complete pin-to-net trace or continuity measurement; factory population and BU126 replacement qualification remain unknown."
+  }
 }
