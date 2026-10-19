@@ -1,0 +1,53 @@
+{
+  "owner": "Danila",
+  "date": "2026-10-19",
+  "specimen": "PSU001",
+  "archive": "Photos-1-001 (15).zip",
+  "archive_sha256": "8772ba983c508342b103ee36a6e6fee067568cb8d0a7775ba4f2465273e82627",
+  "owner_observations": [
+    "These PSU001 photographs show the BU126 missing from PSU002."
+  ],
+  "visible_observations": [
+    {
+      "photo": "PXL_20261019_091009588.jpg",
+      "observation": "Transistor marked BU126 and 04 87 on a vertical plate heatsink."
+    },
+    {
+      "photo": "PXL_20261019_091015286.jpg",
+      "observation": "PSU001 inventory label and surrounding assembly visible."
+    },
+    {
+      "photos": [
+        "PXL_20261019_091012624.jpg",
+        "PXL_20261019_085748827.jpg"
+      ],
+      "observation": "BU126 heatsink position in PSU001 corresponds visually to the empty heatsink position in PSU002, using the adjacent magnetic component, capacitor group and resistor pair as landmarks."
+    }
+  ],
+  "limits": [
+    "Photo comparison establishes the populated and empty mounting positions, not a schematic designator or electrical equivalence.",
+    "The fitted BU126 does not establish factory population, repair history or qualification as a replacement for the reference drawing transistor."
+  ],
+  "photos": [
+    {
+      "file": "PXL_20261019_091009588.jpg",
+      "sha256": "a37cac14ea1a55fb8f93ce093ac79b5892b0a942078fbdeeaaef46f343855a6a",
+      "bytes": 1659609
+    },
+    {
+      "file": "PXL_20261019_091012624.jpg",
+      "sha256": "76dd91bff44e63632640c1bee7c7dd7791f50cd00590b445ee4f920718297555",
+      "bytes": 1570610
+    },
+    {
+      "file": "PXL_20261019_091015286.jpg",
+      "sha256": "c7fe307fc7ccbbb981ee4d44467d5f47dcab554470001f48ce9e180f1b3f2971",
+      "bytes": 2123740
+    },
+    {
+      "file": "PXL_20261019_091018707.jpg",
+      "sha256": "54935b827f9a22c94d0323c50d2548fe7c82d614eb2f8917716e927a8758914d",
+      "bytes": 1616652
+    }
+  ]
+}

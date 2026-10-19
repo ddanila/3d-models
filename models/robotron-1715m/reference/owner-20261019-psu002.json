@@ -16,6 +16,13 @@
     {
       "photo": "PXL_20261019_085940666.MP.jpg",
       "observation": "Connector board marked 105-330-2757-7; rail labels 5N, 12N, 12P, 5P and 0V."
+    },
+    {
+      "photos": [
+        "PXL_20261019_091012624.jpg",
+        "PXL_20261019_085748827.jpg"
+      ],
+      "observation": "BU126 heatsink position in PSU001 corresponds visually to the empty heatsink position in PSU002, using the adjacent magnetic component, capacitor group and resistor pair as landmarks."
     }
   ],
   "limits": [
@@ -164,5 +171,6 @@
       "sha256": "492b00c3debe720bdae94b38fe823ce56e72a561e8647d5db4054da62daf8a29",
       "bytes": 3759316
     }
-  ]
+  ],
+  "comparison_source": "owner-20261019-psu001.json"
 }
