@@ -1,0 +1,168 @@
+{
+  "owner": "Danila",
+  "date": "2026-10-19",
+  "specimen": "PSU002",
+  "archive": "Photos-1-001 (14).zip",
+  "archive_sha256": "aa23a4f25dff773a212d2f17fbf243c8f5a83d5320dc37ba0d47977e388a9d4e",
+  "owner_observations": [
+    "PSU002 is otherwise identical to PSU001.",
+    "One transistor, BU126, is missing."
+  ],
+  "visible_observations": [
+    {
+      "photo": "PXL_20261019_085745986.jpg",
+      "observation": "PSU002 inventory label on component side."
+    },
+    {
+      "photo": "PXL_20261019_085940666.MP.jpg",
+      "observation": "Connector board marked 105-330-2757-7; rail labels 5N, 12N, 12P, 5P and 0V."
+    }
+  ],
+  "limits": [
+    "PSU002 is a separate specimen; owner comparison does not transfer PSU001 repair history or identify the installed museum supply.",
+    "Missing BU126 has no assigned schematic designator. Reference drawing transistor types remain unchanged pending trace and placement correlation.",
+    "Photographs support placement, markings and visible copper inspection; hidden connections and electrical condition are not established."
+  ],
+  "photos": [
+    {
+      "file": "PXL_20261018_205457185.MP.jpg",
+      "sha256": "0115dd8bf8cf445d662cdbcd83a1d09ebc0edf5e72fe7a0db87ff663336620db",
+      "bytes": 6628250
+    },
+    {
+      "file": "PXL_20261019_085745986.jpg",
+      "sha256": "1a3fe0aeed830e4462bb31ba623633248ae6d5d00417c9f1f423bc22f91f5ea1",
+      "bytes": 1934641
+    },
+    {
+      "file": "PXL_20261019_085748827.jpg",
+      "sha256": "f0b6822b76a2ed1c501a3631ab72b267485c8eed50c44b6c57dc8675b673c42d",
+      "bytes": 2162704
+    },
+    {
+      "file": "PXL_20261019_085755034.jpg",
+      "sha256": "2d05ddcdab2274545630e5352c70a53bb388f9ec9e854bf504eb8fd9f3a8a369",
+      "bytes": 1937507
+    },
+    {
+      "file": "PXL_20261019_085759596.jpg",
+      "sha256": "cbfe661ef8418e3bd68f11c3f194afc1d7009a9fc03a4055882c95a459663392",
+      "bytes": 1698982
+    },
+    {
+      "file": "PXL_20261019_085803683.jpg",
+      "sha256": "c8d947b7c5b91062d922be22934458308958c9f39248eb335a0fb006a7b74750",
+      "bytes": 1644482
+    },
+    {
+      "file": "PXL_20261019_085807178.MP.jpg",
+      "sha256": "7f9266edac4dcc34b676c6f09bc76919937ac538ff614ed048e0b71321553413",
+      "bytes": 4303245
+    },
+    {
+      "file": "PXL_20261019_085810314.jpg",
+      "sha256": "532bfad7d60f0eca89352e177b240c33c55fcd0d686ea641b322bfc50837ad0f",
+      "bytes": 1626280
+    },
+    {
+      "file": "PXL_20261019_085812289.MP.jpg",
+      "sha256": "3a2adbee446bd1b3a4caf2a456909116299183aa62abe9743b96e6d3e5c38ddf",
+      "bytes": 3622637
+    },
+    {
+      "file": "PXL_20261019_085816436.jpg",
+      "sha256": "db2f099a05d7b6c9c2b2f216a367b6855d6d4a8fac7b3f664cea5ea8f72976d1",
+      "bytes": 1438713
+    },
+    {
+      "file": "PXL_20261019_085819565.jpg",
+      "sha256": "5c8c078f18376e579ce2f81516285ff91c6b33480f64c606356b9d809bb1b7ba",
+      "bytes": 1761804
+    },
+    {
+      "file": "PXL_20261019_085821173.MP.jpg",
+      "sha256": "13260ea82c515c37065f0fb043689a8a96a9200227503138d92ad5531bef0701",
+      "bytes": 3128732
+    },
+    {
+      "file": "PXL_20261019_085840379.jpg",
+      "sha256": "78b789bc5143833ca55d42a18086bc19298af74a0710b166423fcf6c9748df40",
+      "bytes": 1397932
+    },
+    {
+      "file": "PXL_20261019_085843877.jpg",
+      "sha256": "b95bf436e4fa4dac74e95096cf9c692a9f6a4020e5150bccd00be6fb2d16bb24",
+      "bytes": 1639531
+    },
+    {
+      "file": "PXL_20261019_085845444.jpg",
+      "sha256": "8292d639ad46a0ec48ded79e947a721ce48d7d71b2e928410bd1d0a0944a7483",
+      "bytes": 1760683
+    },
+    {
+      "file": "PXL_20261019_085846850.jpg",
+      "sha256": "d8f3e3d68edf519ac0f7d1660ed556813fe9883fbf4c93af4a3a7a3eda60eff3",
+      "bytes": 1620336
+    },
+    {
+      "file": "PXL_20261019_085848154.jpg",
+      "sha256": "8a69c4ac60709dd8b9471e6a83f15f318599b9d387f0d127e8dbe27f9d53d499",
+      "bytes": 1566791
+    },
+    {
+      "file": "PXL_20261019_085901723.MP.jpg",
+      "sha256": "9827a0415fa755a214c3b160579a39802d1396e5e16ce51ef2d8b1b5fe7338d5",
+      "bytes": 3900325
+    },
+    {
+      "file": "PXL_20261019_085903438.jpg",
+      "sha256": "29017b761210b36d2002aba54769c0e49a852319d0c30d0262346d30cf8e5cca",
+      "bytes": 1925672
+    },
+    {
+      "file": "PXL_20261019_085908341.jpg",
+      "sha256": "e19103c7f308beaed334ab06933c5d73ca3716e4933cdf4a91f38e170d1a42d0",
+      "bytes": 1783525
+    },
+    {
+      "file": "PXL_20261019_085910475.jpg",
+      "sha256": "cedc6e874a528ec67fe1ffbebcc933b2258aad92f1153acc6688468b652b90d7",
+      "bytes": 2013015
+    },
+    {
+      "file": "PXL_20261019_085912286.jpg",
+      "sha256": "dade734d88861644fd64fa01a1c94965b7e4bc1a2c9266dddf00f1e7896af06c",
+      "bytes": 1882102
+    },
+    {
+      "file": "PXL_20261019_085913777.jpg",
+      "sha256": "1e8cc7c26968bef70c966f71312e23fe4955b9227194900b3b6f111e0d858182",
+      "bytes": 1539485
+    },
+    {
+      "file": "PXL_20261019_085919157.jpg",
+      "sha256": "a1f966ce935a0f0f355d00efa593e0da6af8deb55c7e6c6dad830870aa26574e",
+      "bytes": 1739348
+    },
+    {
+      "file": "PXL_20261019_085925570.jpg",
+      "sha256": "ffd86e649baab6a7e1c637113ae2b5b33ba8a4b16b4ed6f3acba403f7b8f118f",
+      "bytes": 1884655
+    },
+    {
+      "file": "PXL_20261019_085931163.MP.jpg",
+      "sha256": "75734a3d3f2ef9dbfee4ec23108eb6a06667fc51dd235309c020a576179b2c96",
+      "bytes": 4730373
+    },
+    {
+      "file": "PXL_20261019_085936823.jpg",
+      "sha256": "8d634be165ec7c9f9fd27297d7c5428a027c4861470dadc6a5017d6db39fdc8d",
+      "bytes": 1630945
+    },
+    {
+      "file": "PXL_20261019_085940666.MP.jpg",
+      "sha256": "492b00c3debe720bdae94b38fe823ce56e72a561e8647d5db4054da62daf8a29",
+      "bytes": 3759316
+    }
+  ]
+}
