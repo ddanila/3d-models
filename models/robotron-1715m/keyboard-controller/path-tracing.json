@@ -1,0 +1,244 @@
+{
+  "schema": 1,
+  "host-data": {
+    "scope": "Local R7 search and exposed copper only. Resistor bodies hide the layer transition and intervening joins; no filter or A1 attachment is assigned.",
+    "registration": {
+      "anchors": [
+        "R4.2:1",
+        "R4.2:2",
+        "R8:2",
+        "R8:1"
+      ],
+      "checks": [
+        "R7:1",
+        "R7:2"
+      ],
+      "allowancePixels": 8
+    },
+    "topSpans": [
+      {
+        "id": "data-between-r7-r42",
+        "points": [
+          [
+            1606,
+            1127
+          ],
+          [
+            1606,
+            1115
+          ]
+        ],
+        "status": "observed",
+        "scope": "Short exposed track between R7 and R4.2; both ends stop at body occlusion. No resistor pin attachment."
+      },
+      {
+        "id": "data-above-r42",
+        "points": [
+          [
+            1614,
+            1084
+          ],
+          [
+            1645,
+            1053
+          ]
+        ],
+        "status": "observed",
+        "scope": "Exposed diagonal between R4.2 and R6.1. Hidden joins at either end remain unresolved."
+      }
+    ],
+    "comparison": {
+      "source": "comparison-photo-080406304",
+      "imageSize": [
+        3072,
+        4080
+      ],
+      "pins": {
+        "R8:1": [
+          659,
+          1234
+        ],
+        "R8:2": [
+          1078,
+          1245
+        ],
+        "R7:1": [
+          661,
+          1387
+        ],
+        "R7:2": [
+          1074,
+          1393
+        ],
+        "R4.2:1": [
+          666,
+          1538
+        ],
+        "R4.2:2": [
+          1084,
+          1534
+        ]
+      },
+      "allowancePixels": 20,
+      "scope": "Comparison specimen only. Lead observations, not hole centres. The local fit locates the same resistor corridor; it cannot transfer continuity to the primary board. The visible vertical span still disappears beneath R7 and R4.2.",
+      "spans": [
+        {
+          "id": "comparison-r7-r42",
+          "points": [
+            [
+              898,
+              1434
+            ],
+            [
+              899,
+              1497
+            ]
+          ],
+          "status": "observed",
+          "scope": "Exposed comparison-specimen track; both ends obscured by resistor bodies. No primary copper or net assignment."
+        }
+      ]
+    },
+    "openJoins": [
+      {
+        "id": "under-r7",
+        "scope": "R10.2 underside stop projects beneath R7. The partly visible feature below the body is not a confirmed matching hole."
+      },
+      {
+        "id": "under-r42",
+        "scope": "R4.2 hides the join between the two recorded top spans."
+      },
+      {
+        "id": "beyond-r61",
+        "scope": "The diagonal disappears at R6.1; onward routing to the filter and A1 remains unproven."
+      }
+    ]
+  },
+  "clock-strobe": {
+    "scope": "Observed underside lane and top entry beside A6. The A4 and A6 terminal correspondences are extrapolated candidates, not qualified layer transitions. WR and RD remain unresolved.",
+    "a6Registration": {
+      "bottomPins": {
+        "A6:1": [
+          1550,
+          3008
+        ],
+        "A6:14": [
+          1463,
+          3011
+        ],
+        "A6:8": [
+          1463,
+          3199
+        ],
+        "A6:7": [
+          1552,
+          3196
+        ],
+        "A6:4": [
+          1550,
+          3102
+        ],
+        "A6:11": [
+          1463,
+          3105
+        ]
+      },
+      "additionalTopPins": {
+        "A6:11": [
+          1432,
+          3356
+        ]
+      },
+      "anchors": [
+        "A6:1",
+        "A6:14",
+        "A6:8",
+        "A6:7"
+      ],
+      "checks": [
+        "A6:4",
+        "A6:11"
+      ],
+      "allowancePixels": 8,
+      "scope": "Independent local A6 lead/joint fit. The terminal lies outside the pin-column hull; a small residual does not qualify its layer transition. Top lead feet are not bare hole centres."
+    },
+    "bottomSpan": {
+      "id": "strobe-a4-a6-lane",
+      "points": [
+        [
+          1619,
+          2715
+        ],
+        [
+          1588,
+          2745
+        ],
+        [
+          1588,
+          2824
+        ],
+        [
+          1606,
+          2842
+        ],
+        [
+          1610,
+          3085
+        ]
+      ],
+      "status": "observed",
+      "scope": "Visible primary underside lane between two anonymous terminal candidates. No A1, A6 or CPU pin identity is assigned."
+    },
+    "topSpan": {
+      "id": "strobe-a6-body-entry",
+      "points": [
+        [
+          1272,
+          3350
+        ],
+        [
+          1325,
+          3347
+        ]
+      ],
+      "status": "observed",
+      "scope": "Visible top track from the eye toward the A6 body. Stop before the obscured entry; proximity to A6:4 does not establish attachment to that pin."
+    },
+    "cpuCandidates": [
+      {
+        "point": [
+          1125,
+          3112
+        ],
+        "label": "A5:21 RD, identified by counted DIP row; no complete route to A1 established"
+      },
+      {
+        "point": [
+          1125,
+          3081
+        ],
+        "label": "A5:22 WR, adjacent counted joint; no complete route to A1 established"
+      }
+    ],
+    "comparisonSources": [
+      "comparison-photo-080342577",
+      "comparison-photo-080432863",
+      "comparison-photo-080429077"
+    ],
+    "comparisonScope": "The comparison underside corroborates the long outer lane; the oblique A6/CPU views still obscure the under-package route. Neither specimen supplies a visible complete path to WR or RD.",
+    "openJoins": [
+      {
+        "id": "a4-transition",
+        "scope": "Match the A1 track end across the board outside the A4 anchor hull; the two adjacent terminals must remain distinct."
+      },
+      {
+        "id": "a6-transition",
+        "scope": "Match the underside lane end to the top eye outside the A6 pin-column hull. The local fit supports a candidate, not confirmed through-board continuity."
+      },
+      {
+        "id": "under-a6-cpu",
+        "scope": "The top track enters beneath A6. No exposed chain connects it to either counted CPU WR/RD joint; do not infer A6:4 or choose the reference net."
+      }
+    ]
+  }
+}

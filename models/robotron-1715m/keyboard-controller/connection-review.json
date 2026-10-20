@@ -27,9 +27,9 @@
       "routeGroups": ["r102-output-bottom-partial"],
       "reviews": [],
       "supportingSources": ["photo-top", "comparison-photo-080443226.MP", "comparison-photo-080347973", "comparison-photo-080406304", "comparison-photo-080511382"],
-      "finding": "The native underside branch reaches a solder eye toward the cable end. Its unseen continuation to A1 and the filter remains unassigned. Cross-side search fits localize the underside stop beneath R7; this is an occluded search region, not an identified top-side joint.",
+      "finding": "The R10.2 underside branch stops beneath R7. A local R4.2/R8 fit checked against R7 narrows the search; exposed top spans lie between R7/R4.2 and R4.2/R6.1. Bodies still hide the joins, so the spans remain unassigned.",
       "alternatives": ["The solder eye continues to the reference A1:4/L1.4:1 network.", "A nearby top-side eye or winding lead is being mistaken for the counterpart; preserve the open span until independently matched."],
-      "nextDeskWork": "Register comparison close-ups around R7 using surrounding joints and held-out checks. Follow the exposed lane on both sides of the body and match any downstream eye independently before continuing toward L1/XT1.",
+      "nextDeskWork": "Resolve the R7 layer transition and hidden joins under R4.2 and R6.1 in path-tracing.json. The registered comparison corridor confirms visibility limits, not primary continuity; continue toward L1 only from a supported downstream eye.",
       "decisiveObservation": "Identify the actual winding input and output joints, then establish the R10.2:2–A1:4–L1.4:1 and L1.4:2–XT1:A1 spans independently.",
       "doNotInfer": "Cable wire colour and spatial proximity do not establish a terminal number or which ferrite winding is L1.4."
     },
@@ -42,9 +42,9 @@
       "routeGroups": ["a1-pin1-top-partial"],
       "reviews": [],
       "supportingSources": ["photo-bottom", "comparison-photo-080401625", "comparison-photo-080429077"],
-      "finding": "The reference circuit and manufacturer service description support WR. A published comparison uses RD. The observed A1:1 track stops at a terminal near A4 and does not yet establish either CPU attachment.",
+      "finding": "The reference supports WR, while a published comparison uses RD. An observed underside lane links terminal candidates near A4 and A6; the corresponding top track enters beneath A6. Local A6 registration supports a candidate outside the anchor hull. Neither CPU attachment is established.",
       "alternatives": ["A1:1 connects to A5:22 (WR), as in the reference.", "A1:1 connects to A5:21 (RD), as in the published comparison.", "The terminal correspondence is still wrong or incomplete; neither candidate is established."],
-      "nextDeskWork": "Follow the far end of the existing top route through an independently matched underside joint, then trace toward the two adjacent CPU candidates without using the reference net name to choose the lane.",
+      "nextDeskWork": "Resolve the A4 and A6 layer transitions and the route beneath A6 toward the counted CPU WR/RD joints. Keep the A6 body entry separate from its adjacent numbered lead; do not extend the A4 fit to A6.",
       "decisiveObservation": "A complete photographed route or distinguishable unpowered resistance readings from A1:1 to A5:21 and A5:22, with probe locations recorded.",
       "doNotInfer": "A successful S600 simulation of the WR reference does not determine the specimen's physical attachment."
     },

@@ -99,6 +99,37 @@ class ControllerExportTests(unittest.TestCase):
   self.assertTrue(all('bottomPixel' not in p for p in c['upperCorridor']['unmatchedTopFeatures']))
   self.assertEqual(next(s for s in spans if s['id']=='upper-corridor-middle')['points'][-1],[1440,810])
 
+ def test_data_and_strobe_tracing_preserves_unresolved_joins(self):
+  from connection_review import build
+  cases={c['id']:c for c in build()['cases']}
+  data,strobe=[cases[name]['traceReview'] for name in ['host-data','clock-strobe']]
+  self.assertTrue(data['stop']['insideAnchorHull'])
+  self.assertLess(data['registrations'][0]['maxCheckResidualPixels'],3)
+  self.assertTrue(data['registrations'][1]['photoAlignmentAccepted'])
+  self.assertTrue(data['figures'][1]['source']['specimenId'])
+  self.assertFalse(strobe['a6Candidate']['insideAnchorHull'])
+  self.assertFalse(strobe['a6Candidate']['layerTransitionQualified'])
+  self.assertLess(strobe['a6Candidate']['residualPixels'],8)
+  self.assertTrue(strobe['a4Candidate']['outsideAnchorBounds'])
+  for review in [data,strobe]:
+   self.assertFalse(review['electricalPathComplete'])
+   self.assertEqual(review['newNativeRoutes'],[])
+   self.assertEqual(review['assignedReferenceTerminals'],{})
+   self.assertTrue(all(s['net'] is None for f in review['figures'] for s in f['segments']))
+
+ def test_path_tracing_rejects_broken_endpoint_and_reused_check(self):
+  from copy import deepcopy
+  from connection_review import INPUTS
+  from path_tracing import build
+  data={name:json.loads((R/name).read_text()) for name in INPUTS}
+  source=lambda sid:next(s for s in data['evidence.json']['sources'] if s['id']==sid)
+  bad=deepcopy(data);bad['path-tracing.json']['clock-strobe']['bottomSpan']['points'][-1]=[1620,3110]
+  with self.assertRaisesRegex(ValueError,'canonical terminal'):build(bad,source)
+  bad=deepcopy(data);bad['path-tracing.json']['host-data']['registration']['checks'][0]='R8:1'
+  with self.assertRaisesRegex(ValueError,'independent fit checks'):build(bad,source)
+  bad=deepcopy(data);bad['path-tracing.json']['host-data']['comparison']['source']='photo-top'
+  with self.assertRaisesRegex(ValueError,'specimen identity'):build(bad,source)
+
  def test_output_assembly_is_visual_and_preserves_reference_pads(self):
   import copy
   from output_assembly import build

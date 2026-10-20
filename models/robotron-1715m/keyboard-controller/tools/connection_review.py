@@ -9,15 +9,16 @@ from pathlib import Path
 from photo_registration import homography, project
 from bottom_registration import inside_hull
 from clock_continuation import build as clock_continuation
+from path_tracing import build as path_tracing
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = ['connection-review.json', 'evidence.json', 'component-evidence.json',
           'route-evidence.json', 'generated/connectivity.json', 'generated/layout.json',
           'generated/connector-terminals.json', 'generated/top-registration.json',
           'generated/bottom-registration.json', 'photo-landmarks.json',
-          'bottom-landmarks.json', 'clock-continuation.json', 'cable-copper.json', 'supply-review.json', 'output-assembly.json']
+          'bottom-landmarks.json', 'clock-continuation.json', 'cable-copper.json', 'supply-review.json', 'output-assembly.json', 'path-tracing.json']
 CODE_INPUTS = ['tools/connection_review.py', 'tools/photo_registration.py',
-               'tools/bottom_registration.py', 'tools/clock_continuation.py']
+               'tools/bottom_registration.py', 'tools/clock_continuation.py', 'tools/path_tracing.py']
 
 
 def stable_numbers(value):
@@ -99,6 +100,7 @@ def build(root=ROOT):
         return {**item, 'href': '../' + item['path'],
                 'specimen': item.get('specimenId', 'primary museum specimen')}
 
+    traces = path_tracing(data, source)
     cases = []
     for case in data['connection-review.json']['cases']:
         result = dict(case)
@@ -176,6 +178,8 @@ def build(root=ROOT):
                 'kind': 'search', 'label': 'Projected search region beneath ' + stop['occludingBody'] + '; not an observed joint'})
         if case['id'] == 'host-clock':
             result['continuation'] = clock_continuation(data, source)
+        if case['id'] in traces:
+            result['traceReview'] = traces[case['id']]
         result['figures'] = list(figures.values())
         result['supportingPhotos'] = [source(sid) for sid in case['supportingSources']]
         cases.append(result)
@@ -221,6 +225,11 @@ def render(report):
         series = ''.join(f'<p>{esc(ref)} separates the two reference nets through a winding; this is not a copper short. Physical winding identity remains unresolved.</p>' for ref in case['series'])
         alternatives = ''.join(f'<li>{esc(text)}</li>' for text in case['alternatives'])
         photos = ''.join(f'<li><a href="{esc(s["href"])}">{esc(s["id"])}</a> — {esc(s["specimen"])}</li>' for s in case['supportingPhotos'])
+        trace = case.get('traceReview')
+        trace_html = ''
+        if trace:
+            fits = ' '.join(r['id'] + ': ' + str(round(r['maxCheckResidualPixels'], 1)) + ' px; alignment accepted: ' + str(r['photoAlignmentAccepted']) + '.' for r in trace['registrations'])
+            trace_html = '<details><summary>Local path tracing — unresolved joins</summary><p>' + esc(trace['scope']) + '</p><p>' + esc(fits) + '</p><div class="photos">' + ''.join(photo(f) for f in trace['figures']) + '</div><ul>' + ''.join('<li>' + esc(g['scope']) + '</li>' for g in trace['openJoins']) + '</ul><p>' + esc(trace['comparisonScope']) + '</p></details>'
         continuation = ''
         if case.get('continuation'):
             c = case['continuation']
@@ -238,7 +247,7 @@ def render(report):
 <p>{esc(case['finding'])}</p><h3>Reference endpoints — not measured continuity</h3>
 <ul>{nets or '<li>No reference net assigned.</li>'}</ul>{series}{rows}
 <div class="photos">{''.join(photo(f) for f in case['figures'])}</div>
-{search_text}{continuation}
+{search_text}{continuation}{trace_html}
 <h3>Alternatives to distinguish</h3><ul>{alternatives}</ul>
 <dl><dt>Next desk work</dt><dd>{esc(case['nextDeskWork'])}</dd>
 <dt>Evidence that closes the span</dt><dd>{esc(case['decisiveObservation'])}</dd>
