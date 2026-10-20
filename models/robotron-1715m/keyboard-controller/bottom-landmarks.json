@@ -731,6 +731,208 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cpu-rom",
+      "scope": "Rejected full CPU/ROM fit: the independent ROM pin 1 check exceeds the existing 1.25 mm tolerance. Retained as a limit on extending the narrower data-bus region; not qualified for copper.",
+      "reviewedForCopper": false,
+      "anchors": [
+        {
+          "ref": "A5",
+          "pin": "40",
+          "photoPixel": [
+            1116,
+            2519
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "1",
+          "photoPixel": [
+            1303,
+            2519
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "12",
+          "photoPixel": [
+            1348,
+            3556
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "13",
+          "photoPixel": [
+            1165,
+            3554
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "A5",
+          "pin": "20",
+          "photoPixel": [
+            1312,
+            3107
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "21",
+          "photoPixel": [
+            1125,
+            3112
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "6",
+          "photoPixel": [
+            1306,
+            2678
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "14",
+          "photoPixel": [
+            1309,
+            2927
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "1",
+          "photoPixel": [
+            1337,
+            3204
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "24",
+          "photoPixel": [
+            1151,
+            3211
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "6",
+          "photoPixel": [
+            1342,
+            3362
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "19",
+          "photoPixel": [
+            1161,
+            3370
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cpu-rom-data",
+      "scope": "CPU/A4-to-ROM data-bus region, bounded by CPU A5:30, A4:10 and ROM A8:12/13. Independent CPU and ROM joint checks qualify only nominal geometry inside this hull, not metrology or hidden continuity.",
+      "reviewedForCopper": true,
+      "anchors": [
+        {
+          "ref": "A5",
+          "pin": "30",
+          "photoPixel": [
+            1122,
+            2834
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "10",
+          "photoPixel": [
+            1519,
+            2857
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "12",
+          "photoPixel": [
+            1348,
+            3556
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "13",
+          "photoPixel": [
+            1165,
+            3554
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "A5",
+          "pin": "20",
+          "photoPixel": [
+            1312,
+            3107
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "21",
+          "photoPixel": [
+            1125,
+            3112
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "14",
+          "photoPixel": [
+            1309,
+            2927
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "1",
+          "photoPixel": [
+            1337,
+            3204
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "24",
+          "photoPixel": [
+            1151,
+            3211
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "6",
+          "photoPixel": [
+            1342,
+            3362
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "19",
+          "photoPixel": [
+            1161,
+            3370
+          ]
+        }
+      ]
     }
   ]
 }

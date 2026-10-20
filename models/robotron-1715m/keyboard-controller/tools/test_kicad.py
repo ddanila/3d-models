@@ -45,6 +45,12 @@ class KiCadExportTests(unittest.TestCase):
    for pins in pairs:
     self.assertTrue(any(set(pins)<=set(g['terminals']) for g in islands))
    self.assertFalse(any({pairs[0][0],pairs[1][0]}<=set(g['terminals']) for g in islands))
+  for net,pins in [('/D0',{'A5:14','A8:9'}),('/D2',{'A5:12','A8:11'})]:
+   islands=next(n for n in actual['nets'] if n['net']==net)['islands']
+   self.assertTrue(any(pins==set(g['terminals']) for g in islands))
+  d1=next(n for n in actual['nets'] if n['net']=='/D1')
+  self.assertFalse(any({'A5:15','A8:10'}<=set(g['terminals']) for g in d1['islands']))
+  self.assertFalse(any(v['evidence'].get('group')=='cpu-rom-d1' for v in layout['routes']))
 
  def test_routes_via_and_pin_mismatch(self):
   with tempfile.TemporaryDirectory() as tmp:

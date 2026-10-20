@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "scope": "Photo paths deferred from native copper. Reference net identity is a review target, not an assigned electrical route. Resolve footprint/registration conflicts before promotion.",
+  "paths": [
+    {
+      "id": "cpu-rom-d1",
+      "referenceNet": "/D1",
+      "terminals": [
+        "A5:15",
+        "A8:10"
+      ],
+      "source": "photo-bottom",
+      "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+      "registration": "cpu-rom-data",
+      "nativeCopper": false,
+      "reason": "The projected D1 lane shorts nominal CPU pad 16 (CPU_PULLUP); solder-mask proximity also reaches pads 17\u201320. Reconcile CPU hole positions with this local fit before assigning native copper. Do not displace the observed lane to hide the conflict.",
+      "segments": [
+        {
+          "id": "d1-0",
+          "status": "inferred",
+          "points": [
+            [
+              1309,
+              2958
+            ],
+            [
+              1322,
+              2977
+            ]
+          ]
+        },
+        {
+          "id": "d1-1",
+          "status": "observed",
+          "points": [
+            [
+              1322,
+              2977
+            ],
+            [
+              1326,
+              3138
+            ]
+          ]
+        },
+        {
+          "id": "d1-2",
+          "status": "observed",
+          "points": [
+            [
+              1326,
+              3138
+            ],
+            [
+              1305,
+              3163
+            ]
+          ]
+        },
+        {
+          "id": "d1-3",
+          "status": "observed",
+          "points": [
+            [
+              1305,
+              3163
+            ],
+            [
+              1308,
+              3300
+            ]
+          ]
+        },
+        {
+          "id": "d1-4",
+          "status": "observed",
+          "points": [
+            [
+              1308,
+              3300
+            ],
+            [
+              1311,
+              3450
+            ]
+          ]
+        },
+        {
+          "id": "d1-5",
+          "status": "observed",
+          "points": [
+            [
+              1311,
+              3450
+            ],
+            [
+              1330,
+              3470
+            ]
+          ]
+        },
+        {
+          "id": "d1-6",
+          "status": "inferred",
+          "points": [
+            [
+              1330,
+              3470
+            ],
+            [
+              1346,
+              3490
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
