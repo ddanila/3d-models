@@ -35,6 +35,16 @@ class KiCadExportTests(unittest.TestCase):
   self.assertEqual(actual['summary']['floatingCopperGroups'],expected['summary']['floatingCopperGroups']+1)
   ground=next(n for n in actual['nets'] if n['net']=='/GND')
   self.assertTrue(any(set(g['terminals'])=={'R4.2:2','R7:2','R8:2'} for g in ground['islands']))
+  # Local supply bridges must merge their intended pads without joining
+  # the separate IC groups merely because they share a schematic net.
+  for net,pairs in {
+   '/+5V': [('A1:14','A2.1:14'),('A2.2:14','A2.3:14')],
+   '/GND': [('A1:7','A2.1:7','C5.1:2'),('A2.2:7','A2.3:7','C5.2:2')]
+  }.items():
+   islands=next(n for n in actual['nets'] if n['net']==net)['islands']
+   for pins in pairs:
+    self.assertTrue(any(set(pins)<=set(g['terminals']) for g in islands))
+   self.assertFalse(any({pairs[0][0],pairs[1][0]}<=set(g['terminals']) for g in islands))
 
  def test_routes_via_and_pin_mismatch(self):
   with tempfile.TemporaryDirectory() as tmp:
