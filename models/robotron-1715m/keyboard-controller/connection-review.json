@@ -12,9 +12,9 @@
       "routeGroups": ["r101-output-top-local", "r101-output-bottom-partial"],
       "reviews": ["r101-top-package-entry"],
       "supportingSources": ["comparison-photo-080443226.MP", "comparison-photo-080347973", "comparison-photo-080406304", "comparison-photo-080511382"],
-      "finding": "The local top branch stops at the A1 package boundary. The underside branch stops at a solder eye. Neither stop proves a layer transition or an A1/filter attachment. Cross-side search fits localize the underside stop beneath R9.5; this is an occluded search region, not an identified top-side joint.",
+      "finding": "The R10.1 branch reaches a solder eye beneath R9.5. A local resistor-bank fit supports a downstream eye correspondence beside R9.7, and an observed outer underside lane continues from there toward an eye near R4.1. Resistor bodies hide the intervening top spans; the new observations remain electrically unassigned. A1, winding and host-cable attachments are not closed.",
       "alternatives": ["Reference path reaches A1:2 and L1.1:1 through hidden copper.", "The apparent top/bottom stop correspondence is wrong; the visible branch requires a different continuation. This is a geometric alternative, not a replacement net assignment."],
-      "nextDeskWork": "Register comparison close-ups around R9.5 using surrounding joints and held-out checks. Follow the exposed lane on both sides of the body and match any downstream eye independently before continuing toward L1/XT1.",
+      "nextDeskWork": "Resolve the hidden bank spans and the upper-eye continuation near R4.1 before assigning the outer lane to clock. Independently match that continuation to a filter joint; do not extend the local filter fit outside its boundary.",
       "decisiveObservation": "An uninterrupted path, including any confirmed layer transition, from R10.1:2 to A1:2 and the identified L1.1 input. Separately identify both winding ends and the cable-side connection to XT1:B2.",
       "doNotInfer": "The former A1:13 conflict came from a rejected projection. It is not a measured short, and the surviving local segment does not identify the hidden A1 pin."
     },

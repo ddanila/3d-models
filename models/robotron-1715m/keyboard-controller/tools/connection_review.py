@@ -8,15 +8,16 @@ import math
 from pathlib import Path
 from photo_registration import homography, project
 from bottom_registration import inside_hull
+from clock_continuation import build as clock_continuation
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = ['connection-review.json', 'evidence.json', 'component-evidence.json',
           'route-evidence.json', 'generated/connectivity.json', 'generated/layout.json',
           'generated/connector-terminals.json', 'generated/top-registration.json',
           'generated/bottom-registration.json', 'photo-landmarks.json',
-          'bottom-landmarks.json']
+          'bottom-landmarks.json', 'clock-continuation.json', 'cable-copper.json', 'supply-review.json']
 CODE_INPUTS = ['tools/connection_review.py', 'tools/photo_registration.py',
-               'tools/bottom_registration.py']
+               'tools/bottom_registration.py', 'tools/clock_continuation.py']
 
 
 def stable_numbers(value):
@@ -120,7 +121,7 @@ def build(root=ROOT):
         groups = set(case['routeGroups'])
         found = set()
         for uuid, route in routes.items():
-            if route['group'] not in groups:
+            if route.get('group') not in groups:
                 continue
             if uuid not in native or native[uuid]['evidence'] != route:
                 raise ValueError('Native route review mismatch: ' + uuid)
@@ -173,6 +174,8 @@ def build(root=ROOT):
             figure('photo-top')['markers'].append({
                 'point': search['centerTopPixel'], 'radius': search['searchRadiusPixels'],
                 'kind': 'search', 'label': 'Projected search region beneath ' + stop['occludingBody'] + '; not an observed joint'})
+        if case['id'] == 'host-clock':
+            result['continuation'] = clock_continuation(data, source)
         result['figures'] = list(figures.values())
         result['supportingPhotos'] = [source(sid) for sid in case['supportingSources']]
         cases.append(result)
@@ -218,6 +221,11 @@ def render(report):
         series = ''.join(f'<p>{esc(ref)} separates the two reference nets through a winding; this is not a copper short. Physical winding identity remains unresolved.</p>' for ref in case['series'])
         alternatives = ''.join(f'<li>{esc(text)}</li>' for text in case['alternatives'])
         photos = ''.join(f'<li><a href="{esc(s["href"])}">{esc(s["id"])}</a> — {esc(s["specimen"])}</li>' for s in case['supportingPhotos'])
+        continuation = ''
+        if case.get('continuation'):
+            c = case['continuation']
+            gaps = ''.join('<li>' + esc(g['scope']) + '</li>' for g in c['openJoins'])
+            continuation = '<details><summary>Candidate clock continuation — unassigned copper</summary><p>' + esc(c['scope']) + '</p><div class="photos">' + ''.join(photo(f) for f in c['figures']) + '</div><ul>' + gaps + '</ul></details>'
         rows = ''
         search_text = ''
         if case.get('crossSideSearch'):
@@ -230,7 +238,7 @@ def render(report):
 <p>{esc(case['finding'])}</p><h3>Reference endpoints — not measured continuity</h3>
 <ul>{nets or '<li>No reference net assigned.</li>'}</ul>{series}{rows}
 <div class="photos">{''.join(photo(f) for f in case['figures'])}</div>
-{search_text}
+{search_text}{continuation}
 <h3>Alternatives to distinguish</h3><ul>{alternatives}</ul>
 <dl><dt>Next desk work</dt><dd>{esc(case['nextDeskWork'])}</dd>
 <dt>Evidence that closes the span</dt><dd>{esc(case['decisiveObservation'])}</dd>

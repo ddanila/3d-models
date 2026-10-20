@@ -1,0 +1,187 @@
+{
+  "schema": 1,
+  "scope": "Candidate clock continuation across the resistor bank and along the outer underside lane. New copper observations are electrically unassigned. Hidden resistor-body spans and cross-side continuity are not observed; this does not close A1\u2013L1.1\u2013XT1.",
+  "bankRegistration": {
+    "scope": "Local primary underside-to-top fit using the outer R9 resistor lead pairs, checked against intermediate resistors. Lead/solder centres are photo estimates. This local fit does not extend to the filter.",
+    "anchors": [
+      "R9.1:2",
+      "R9.8:2",
+      "R9.8:1",
+      "R9.1:1"
+    ],
+    "checks": [
+      "R9.3:2",
+      "R9.3:1",
+      "R9.5:2",
+      "R9.5:1",
+      "R9.7:2",
+      "R9.7:1"
+    ],
+    "bottomPins": {
+      "R9.1:2": [
+        1409,
+        1121
+      ],
+      "R9.8:2": [
+        1095,
+        1117
+      ],
+      "R9.8:1": [
+        1097,
+        1267
+      ],
+      "R9.1:1": [
+        1411,
+        1269
+      ],
+      "R9.3:2": [
+        1319,
+        1121
+      ],
+      "R9.3:1": [
+        1321,
+        1269
+      ],
+      "R9.5:2": [
+        1231,
+        1120
+      ],
+      "R9.5:1": [
+        1233,
+        1269
+      ],
+      "R9.7:2": [
+        1140,
+        1118
+      ],
+      "R9.7:1": [
+        1142,
+        1268
+      ]
+    },
+    "observationAllowancePixels": 8
+  },
+  "eyes": {
+    "bankReturn": {
+      "bottomPixel": [
+        1126,
+        1206
+      ],
+      "topPixel": [
+        1667,
+        1357
+      ],
+      "scope": "Visible top eye beside the lower end of the R9.7 body; independently compared with the resistor-bank fit."
+    },
+    "upperStop": {
+      "bottomPixel": [
+        1115,
+        708
+      ],
+      "scope": "Outer-lane solder eye near the upper reset resistors. Top location remains a search region; no component terminal is assigned."
+    }
+  },
+  "topSpans": [
+    {
+      "id": "bank-lane-r95-r96",
+      "points": [
+        [
+          1565,
+          1362
+        ],
+        [
+          1585,
+          1361
+        ]
+      ],
+      "status": "observed"
+    },
+    {
+      "id": "bank-lane-r96-r97",
+      "points": [
+        [
+          1612,
+          1360
+        ],
+        [
+          1630,
+          1360
+        ]
+      ],
+      "status": "observed"
+    },
+    {
+      "id": "bank-lane-return-eye",
+      "points": [
+        [
+          1658,
+          1358
+        ],
+        [
+          1667,
+          1357
+        ]
+      ],
+      "status": "observed"
+    }
+  ],
+  "bottomReturn": {
+    "id": "outer-lane-to-upper-eye",
+    "points": [
+      [
+        1126,
+        1206
+      ],
+      [
+        1093,
+        1206
+      ],
+      [
+        1049,
+        1163
+      ],
+      [
+        1043,
+        714
+      ],
+      [
+        1106,
+        716
+      ],
+      [
+        1115,
+        708
+      ]
+    ],
+    "status": "observed",
+    "scope": "Visible outermost lane, separate from the neighbouring inner lane. Pixel centreline and bends are estimates; endpoints are anonymous eyes, not numbered pads."
+  },
+  "openJoins": [
+    {
+      "id": "clock-stop-to-bank-lane",
+      "scope": "The R10.1 underside stop projects beneath R9.5. Its top entry and the span to the first exposed lane fragment remain obscured."
+    },
+    {
+      "id": "under-r96",
+      "scope": "R9.6 hides the continuation between the first and second exposed top spans."
+    },
+    {
+      "id": "under-r97",
+      "scope": "R9.7 hides the continuation from the second exposed span toward the return eye."
+    },
+    {
+      "id": "return-eye-transition",
+      "scope": "The independent local fit supports geometric correspondence at the return eye; it does not measure or prove cross-side electrical continuity."
+    },
+    {
+      "id": "upper-eye-to-filter",
+      "scope": "The outer underside lane ends at an eye near R4.1. Its top continuation and connection to a filter joint remain unresolved."
+    }
+  ],
+  "comparisonSources": [
+    "comparison-photo-080443226.MP",
+    "comparison-photo-080351042",
+    "comparison-photo-080406304"
+  ],
+  "comparisonScope": "Different specimen: exposed copper corroborates the bank lane arrangement and separates the outer return lane from its neighbour. No coordinates, net assignments or winding identities are transferred."
+}

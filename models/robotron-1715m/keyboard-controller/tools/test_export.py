@@ -74,6 +74,24 @@ class ControllerExportTests(unittest.TestCase):
   bad=deepcopy(config);bad['topPhotoSource']='comparison-photo-080406304'
   with self.assertRaisesRegex(ValueError,'primary top'):filter_registration(bad,graph,assembly,components,source)
 
+ def test_clock_continuation_does_not_bridge_occluded_spans(self):
+  from connection_review import build
+  c=next(c for c in build()['cases']if c['id']=='host-clock')['continuation']
+  self.assertTrue(c['bankRegistration']['photoAlignmentAccepted'])
+  self.assertLess(c['bankRegistration']['maxCheckResidualPixels'],3)
+  self.assertTrue(c['bankReturn']['geometricCorrespondenceAccepted'])
+  self.assertLess(c['bankReturn']['residualPixels'],3)
+  self.assertTrue(c['clockStop']['insideAnchorHull'])
+  self.assertTrue(c['upperStop']['insideAnchorHull'])
+  self.assertFalse(c['electricalPathComplete'])
+  self.assertEqual(c['assignedReferenceTerminals'],{})
+  self.assertEqual(c['newNativeRoutes'],[])
+  spans=[s for f in c['figures']for s in f['segments']]
+  self.assertTrue(all(s['net'] is None for s in spans))
+  self.assertEqual(len([s for s in spans if s['id']=='outer-lane-to-upper-eye']),1)
+  self.assertEqual({g['id']for g in c['openJoins']},{'clock-stop-to-bank-lane','under-r96','under-r97','return-eye-transition','upper-eye-to-filter'})
+  self.assertTrue(all(s['specimenId'] for s in c['comparisonSources']))
+
  def test_output_assembly_is_visual_and_preserves_reference_pads(self):
   import copy
   from output_assembly import build
