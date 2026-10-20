@@ -89,8 +89,15 @@ class ControllerExportTests(unittest.TestCase):
   spans=[s for f in c['figures']for s in f['segments']]
   self.assertTrue(all(s['net'] is None for s in spans))
   self.assertEqual(len([s for s in spans if s['id']=='outer-lane-to-upper-eye']),1)
-  self.assertEqual({g['id']for g in c['openJoins']},{'clock-stop-to-bank-lane','under-r96','under-r97','return-eye-transition','upper-eye-to-filter'})
+  self.assertEqual({g['id']for g in c['openJoins']},{'clock-stop-to-bank-lane','under-r96','under-r97','return-eye-transition','upper-eye-to-filter','upper-eye-to-corridor','under-capacitor'})
   self.assertTrue(all(s['specimenId'] for s in c['comparisonSources']))
+  trial=c['upperCorridor']['registration']
+  self.assertFalse(trial['photoAlignmentAccepted'])
+  self.assertGreater(trial['maxCheckResidualPixels'],18)
+  self.assertTrue(any(p['residualPixels']>p['allowancePixels'] for p in trial['checks']))
+  self.assertEqual(c['upperCorridor']['assignedFilterTerminals'],{})
+  self.assertTrue(all('bottomPixel' not in p for p in c['upperCorridor']['unmatchedTopFeatures']))
+  self.assertEqual(next(s for s in spans if s['id']=='upper-corridor-middle')['points'][-1],[1428,804])
 
  def test_output_assembly_is_visual_and_preserves_reference_pads(self):
   import copy

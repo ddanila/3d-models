@@ -15,7 +15,7 @@ INPUTS = ['connection-review.json', 'evidence.json', 'component-evidence.json',
           'route-evidence.json', 'generated/connectivity.json', 'generated/layout.json',
           'generated/connector-terminals.json', 'generated/top-registration.json',
           'generated/bottom-registration.json', 'photo-landmarks.json',
-          'bottom-landmarks.json', 'clock-continuation.json', 'cable-copper.json', 'supply-review.json']
+          'bottom-landmarks.json', 'clock-continuation.json', 'cable-copper.json', 'supply-review.json', 'output-assembly.json']
 CODE_INPUTS = ['tools/connection_review.py', 'tools/photo_registration.py',
                'tools/bottom_registration.py', 'tools/clock_continuation.py']
 
@@ -225,7 +225,7 @@ def render(report):
         if case.get('continuation'):
             c = case['continuation']
             gaps = ''.join('<li>' + esc(g['scope']) + '</li>' for g in c['openJoins'])
-            continuation = '<details><summary>Candidate clock continuation — unassigned copper</summary><p>' + esc(c['scope']) + '</p><div class="photos">' + ''.join(photo(f) for f in c['figures']) + '</div><ul>' + gaps + '</ul></details>'
+            continuation = '<details><summary>Candidate clock continuation — unassigned copper</summary><p>' + esc(c['scope']) + '</p><p>' + esc(c['upperCorridor']['scope']) + ' Wider fit maximum held-out residual: ' + str(round(c['upperCorridor']['registration']['maxCheckResidualPixels'], 1)) + ' px; accepted: ' + str(c['upperCorridor']['registration']['photoAlignmentAccepted']) + '.</p><div class="photos">' + ''.join(photo(f) for f in c['figures']) + '</div><ul>' + gaps + '</ul></details>'
         rows = ''
         search_text = ''
         if case.get('crossSideSearch'):
