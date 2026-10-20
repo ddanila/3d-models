@@ -37,6 +37,9 @@ class ControllerExportTests(unittest.TestCase):
    bad=copy.deepcopy(original);bad['crossSide']['checkTerminals']=['A5:1']
    (r/'bus-review.json').write_text(json.dumps(bad))
    with self.assertRaisesRegex(ValueError,'independent checks'):build(r)
+   bad=copy.deepcopy(original);bad['latchPaths'][0]['reverseReview']['continuityEstablished']=True
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'correspondence is not established'):build(r)
    bad=copy.deepcopy(original);bad['paths'][0]['observedEnds'][0]['point']=[1400,2700]
    (r/'bus-review.json').write_text(json.dumps(bad))
    self.assertFalse(build(r)['paths'][0]['crossSideSearch']['insideCpuBodyWithSearchMargin'])

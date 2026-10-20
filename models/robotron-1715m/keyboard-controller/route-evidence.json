@@ -1242,7 +1242,7 @@
       "registration": {
         "side": "top",
         "region": "a1-output-inner",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       },
       "sources": [
         {
@@ -1275,7 +1275,7 @@
       "registration": {
         "side": "top",
         "region": "a1-output-inner",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       },
       "sources": [
         {
@@ -1308,7 +1308,7 @@
       "registration": {
         "side": "top",
         "region": "a1-output-inner",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       },
       "sources": [
         {
@@ -4027,7 +4027,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "262240df-fc71-4050-a938-6fc2bdec2ec3": {
@@ -4064,7 +4064,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "d357c40a-8fcf-4860-8b9f-d4c6555c9cbd": {
@@ -4101,7 +4101,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "b026ccf5-ac6f-4109-a875-01e927eb65b2": {
@@ -4138,7 +4138,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "ddfcc1ee-dd44-44db-81bd-7ca5d1466dab": {
@@ -4175,7 +4175,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "d5594d72-7a01-4a47-80f0-920e6824378e": {
@@ -4212,7 +4212,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "fd3e3339-3b71-4d7a-a926-c3b5b3e7da11": {
@@ -4249,7 +4249,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "f548df4e-38fd-427e-aadf-a52897f78163": {
@@ -4286,7 +4286,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "d8ef09a7-24da-4cc4-b01d-61bb563aae5e": {
@@ -4323,7 +4323,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "405fa200-88ab-401b-a9ea-26c2b208456f": {
@@ -4360,7 +4360,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "4ec8eeff-4eb9-466f-9ec6-cd50a4dbdf35": {
@@ -4397,7 +4397,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "273e2cea-27be-467b-bae4-1b2272147cf6": {
@@ -4434,7 +4434,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "72b9ba41-c33d-4ae8-86cd-cc2a68cd46ef": {
@@ -4471,7 +4471,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "2fd6d587-153b-4929-aaae-377015141aa3": {
@@ -4508,7 +4508,7 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     },
     "31fe8340-b3a5-4e3a-a9c9-ac7df926743d": {
@@ -4545,7 +4545,192 @@
       "registration": {
         "side": "top",
         "region": "cpu-latch-data",
-        "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd"
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
+      }
+    },
+    "bdf55836-8594-4e7f-bf3d-c67227287ed8": {
+      "status": "inferred",
+      "geometrySha256": "7bbe2c8ba3044512c38f1d6071532e99383bd532fd57ae80d8696ff2812979f7",
+      "group": "cpu-latch-d3",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D3 lane. Primary specimen supplies exposed copper and lead observations; numbered terminal identity follows the reference schematic, with pad attachments explicitly inferred. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+      "terminals": [
+        "A4:16",
+        "A5:8"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1446,
+                2940
+              ],
+              [
+                1463,
+                2938
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "top",
+        "region": "cpu-latch-upper",
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
+      }
+    },
+    "37494292-f74e-43d4-9a1d-0ff16e1f819e": {
+      "status": "observed",
+      "geometrySha256": "ed2cd4c462b4428b2bd8e792050b3d03917ae6d4a71f86692e3dbcb84a46c22b",
+      "group": "cpu-latch-d3",
+      "detail": "Observed exposed copper centreline. Visible latch-to-CPU D3 lane. Primary specimen supplies exposed copper and lead observations; numbered terminal identity follows the reference schematic, with pad attachments explicitly inferred. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+      "terminals": [
+        "A4:16",
+        "A5:8"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1463,
+                2938
+              ],
+              [
+                1494,
+                2938
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "top",
+        "region": "cpu-latch-upper",
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
+      }
+    },
+    "d4acd8c8-25ab-4471-b0b8-26c8fa1b828e": {
+      "status": "observed",
+      "geometrySha256": "0b81e013ef966c6c3bfbdd179acf33575ab095cab11618f4b07f60f91fb727af",
+      "group": "cpu-latch-d3",
+      "detail": "Observed exposed copper centreline. Visible latch-to-CPU D3 lane. Primary specimen supplies exposed copper and lead observations; numbered terminal identity follows the reference schematic, with pad attachments explicitly inferred. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+      "terminals": [
+        "A4:16",
+        "A5:8"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1494,
+                2938
+              ],
+              [
+                1520,
+                2967
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "top",
+        "region": "cpu-latch-upper",
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
+      }
+    },
+    "25864981-5c7c-454b-a22c-373608a1d2a6": {
+      "status": "observed",
+      "geometrySha256": "149b6743dc205b76fdde4648e35435f2c06ea99b12e9d2df65ed30cbfac9a260",
+      "group": "cpu-latch-d3",
+      "detail": "Observed exposed copper centreline. Visible latch-to-CPU D3 lane. Primary specimen supplies exposed copper and lead observations; numbered terminal identity follows the reference schematic, with pad attachments explicitly inferred. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+      "terminals": [
+        "A4:16",
+        "A5:8"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1520,
+                2967
+              ],
+              [
+                1555,
+                2967
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "top",
+        "region": "cpu-latch-upper",
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
+      }
+    },
+    "6c84eb95-17f9-49bd-b2bb-1d014ef4ba3d": {
+      "status": "inferred",
+      "geometrySha256": "d981e3bcd84232579d2efce3d416a24be30785b1ed70bb95ec99126f13d7732c",
+      "group": "cpu-latch-d3",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D3 lane. Primary specimen supplies exposed copper and lead observations; numbered terminal identity follows the reference schematic, with pad attachments explicitly inferred. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+      "terminals": [
+        "A4:16",
+        "A5:8"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1555,
+                2967
+              ],
+              [
+                1584,
+                2976
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "top",
+        "region": "cpu-latch-upper",
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
     }
   }

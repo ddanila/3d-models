@@ -216,6 +216,127 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cpu-latch-upper",
+      "scope": "Local top lead correspondence for exposed A4/CPU copper. Raised leads obscure hole entries; pad attachments are inferred. No assignment of hidden paths or anonymous solder eyes.",
+      "reviewedForCopper": true,
+      "anchors": [
+        {
+          "ref": "A4",
+          "pin": "20",
+          "photoPixel": [
+            1439,
+            2812
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "3",
+          "photoPixel": [
+            1578,
+            2813
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "10",
+          "photoPixel": [
+            1587,
+            3040
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "13",
+          "photoPixel": [
+            1449,
+            3038
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "A4",
+          "pin": "19",
+          "photoPixel": [
+            1440,
+            2844
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "18",
+          "photoPixel": [
+            1442,
+            2876
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "17",
+          "photoPixel": [
+            1444,
+            2908
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "16",
+          "photoPixel": [
+            1446,
+            2940
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "15",
+          "photoPixel": [
+            1447,
+            2972
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "14",
+          "photoPixel": [
+            1448,
+            3006
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "5",
+          "photoPixel": [
+            1580,
+            2877
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "7",
+          "photoPixel": [
+            1582,
+            2943
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "8",
+          "photoPixel": [
+            1584,
+            2976
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "9",
+          "photoPixel": [
+            1585,
+            3008
+          ]
+        }
+      ]
     }
   ]
 }

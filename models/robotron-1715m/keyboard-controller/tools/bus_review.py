@@ -11,7 +11,15 @@ def build(root=ROOT):
     sources = {s['id']: s for s in read('evidence.json')['sources']}
     top, bottom = read('photo-landmarks.json'), read('bottom-landmarks.json')
     cross = result['crossSide']
-    for record in [cross, cross['comparison'], *result['paths']]:
+    latch_paths = result.get('latchPaths', [])
+    for path in latch_paths:
+        if path['nativeCopper'] is not False or path['continuityEstablished'] is not False:
+            raise ValueError('Latch candidates cannot assign copper or continuity')
+        if path.get('reverseReview', {}).get('continuityEstablished', False) is not False:
+            raise ValueError('Latch eye correspondence is not established')
+    records = [cross, cross['comparison'], *result['paths'], *latch_paths,
+               *[p['reverseReview'] for p in latch_paths if 'reverseReview' in p]]
+    for record in records:
         source = sources[record['source']]
         if (record['sourceSha256'] != source['sha256'] or
                 hashlib.sha256((root / source['path']).read_bytes()).hexdigest() != source['sha256']):

@@ -338,5 +338,243 @@
       ],
       "observation": "The CPU body also covers the inter-row board area on this different specimen. This view cannot identify the underside solder eyes or transfer electrical continuity."
     }
-  }
+  },
+  "latchPaths": [
+    {
+      "id": "latch-review-d0",
+      "referenceNet": "/D0",
+      "terminals": [
+        "A4:19",
+        "A5:14"
+      ],
+      "source": "photo-top",
+      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "reason": "The top lead/eye area is partly obscured by solder and glare. The reverse-side eye is a correspondence candidate only; the complete latch-to-CPU path is not established.",
+      "segments": [
+        {
+          "id": "d0-latch-0",
+          "status": "inferred",
+          "points": [
+            [
+              1440,
+              2844
+            ],
+            [
+              1470,
+              2845
+            ]
+          ]
+        },
+        {
+          "id": "d0-latch-1",
+          "status": "inferred",
+          "points": [
+            [
+              1470,
+              2845
+            ],
+            [
+              1501,
+              2847
+            ]
+          ]
+        }
+      ],
+      "reverseReview": {
+        "source": "photo-bottom",
+        "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+        "point": [
+          1365,
+          2618
+        ],
+        "radiusPixels": 18,
+        "status": "candidate-correspondence-only",
+        "continuityEstablished": false,
+        "reason": "Possible reverse-side eye, not a verified through-board match. No native via or route is assigned."
+      }
+    },
+    {
+      "id": "latch-review-d1",
+      "referenceNet": "/D1",
+      "terminals": [
+        "A4:18",
+        "A5:15"
+      ],
+      "source": "photo-top",
+      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "reason": "The adjacent eye and lead attachment need disambiguation. A nearby reverse-side eye does not establish identity or the continuation to CPU pin 15.",
+      "segments": [
+        {
+          "id": "d1-latch-0",
+          "status": "inferred",
+          "points": [
+            [
+              1442,
+              2876
+            ],
+            [
+              1470,
+              2873
+            ]
+          ]
+        }
+      ],
+      "reverseReview": {
+        "source": "photo-bottom",
+        "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+        "point": [
+          1390,
+          2645
+        ],
+        "radiusPixels": 18,
+        "status": "candidate-correspondence-only",
+        "continuityEstablished": false,
+        "reason": "Possible reverse-side eye, not a verified through-board match. No native via or route is assigned."
+      }
+    },
+    {
+      "id": "latch-review-d2",
+      "referenceNet": "/D2",
+      "terminals": [
+        "A4:17",
+        "A5:12"
+      ],
+      "source": "photo-top",
+      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "reason": "Exposed top copper reaches a solder eye. Its reverse-side correspondence and eye-to-CPU continuation remain unresolved.",
+      "segments": [
+        {
+          "id": "d2-latch-0",
+          "status": "inferred",
+          "points": [
+            [
+              1444,
+              2908
+            ],
+            [
+              1464,
+              2918
+            ]
+          ]
+        },
+        {
+          "id": "d2-latch-1",
+          "status": "observed",
+          "points": [
+            [
+              1464,
+              2918
+            ],
+            [
+              1508,
+              2915
+            ]
+          ]
+        },
+        {
+          "id": "d2-latch-2",
+          "status": "inferred",
+          "points": [
+            [
+              1508,
+              2915
+            ],
+            [
+              1532,
+              2936
+            ]
+          ]
+        }
+      ],
+      "reverseReview": {
+        "source": "photo-bottom",
+        "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+        "point": [
+          1335,
+          2708
+        ],
+        "radiusPixels": 18,
+        "status": "candidate-correspondence-only",
+        "continuityEstablished": false,
+        "reason": "Possible reverse-side eye, not a verified through-board match. No native via or route is assigned."
+      }
+    },
+    {
+      "id": "latch-review-d4",
+      "referenceNet": "/D4",
+      "terminals": [
+        "A4:15",
+        "A5:7"
+      ],
+      "source": "photo-top",
+      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "reason": "The visible track disappears at the CPU edge. Proximity to a raised lead does not identify the covered continuation to CPU pin 7.",
+      "segments": [
+        {
+          "id": "d4-latch-0",
+          "status": "inferred",
+          "points": [
+            [
+              1447,
+              2972
+            ],
+            [
+              1463,
+              2971
+            ]
+          ]
+        },
+        {
+          "id": "d4-latch-1",
+          "status": "observed",
+          "points": [
+            [
+              1463,
+              2971
+            ],
+            [
+              1490,
+              2971
+            ]
+          ]
+        },
+        {
+          "id": "d4-latch-2",
+          "status": "observed",
+          "points": [
+            [
+              1490,
+              2971
+            ],
+            [
+              1508,
+              2985
+            ]
+          ]
+        },
+        {
+          "id": "d4-latch-3",
+          "status": "observed",
+          "points": [
+            [
+              1508,
+              2985
+            ],
+            [
+              1555,
+              2983
+            ]
+          ]
+        }
+      ]
+    }
+  ]
 }

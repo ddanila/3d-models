@@ -2524,29 +2524,26 @@
       ]
     },
     {
-      "drcUnconnectedItems": 1,
+      "drcUnconnectedItems": 0,
       "floatingCopperGroups": 0,
       "islands": [
-        {
-          "copperIds": [],
-          "evidenceGroups": [],
-          "evidenceStatuses": [],
-          "terminals": [
-            "A4:16"
-          ],
-          "unplacedTerminals": []
-        },
         {
           "copperIds": [
             "0c1e8733-d461-4eb9-8efc-11b91f3816cc",
             "13e9635c-688b-43c8-81df-f1d4d9b08384",
+            "25864981-5c7c-454b-a22c-373608a1d2a6",
             "280fe822-8392-4cb3-8690-35c78e15c391",
+            "37494292-f74e-43d4-9a1d-0ff16e1f819e",
             "5982c647-53a1-4fb0-abf6-bd639e59f111",
+            "6c84eb95-17f9-49bd-b2bb-1d014ef4ba3d",
             "72749136-6b8d-4831-b656-0f1ce7832a38",
             "793b59d1-cafd-40ad-bcd0-ae403dd78051",
-            "800915d4-ae76-42d1-acf1-4f58558b9fe7"
+            "800915d4-ae76-42d1-acf1-4f58558b9fe7",
+            "bdf55836-8594-4e7f-bf3d-c67227287ed8",
+            "d4acd8c8-25ab-4471-b0b8-26c8fa1b828e"
           ],
           "evidenceGroups": [
+            "cpu-latch-d3",
             "cpu-rom-d3"
           ],
           "evidenceStatuses": [
@@ -2554,6 +2551,7 @@
             "observed"
           ],
           "terminals": [
+            "A4:16",
             "A5:8",
             "A8:13"
           ],
@@ -2562,10 +2560,10 @@
       ],
       "minimumLinks": 2,
       "multiTerminal": true,
-      "nativePadsConnected": false,
+      "nativePadsConnected": true,
       "net": "/D3",
-      "padGroups": 2,
-      "remainingPadGroupLinks": 1,
+      "padGroups": 1,
+      "remainingPadGroupLinks": 0,
       "terminals": [
         "A4:16",
         "A5:8",
@@ -4892,12 +4890,12 @@
   "scope": "Native KiCad same-net connectivity, including off-board placeholder pads. Connected does not mean historically verified or fabrication-ready. DRC gaps may include floating copper; pad-group links count only disconnected terminal groups. Cross-net clearance/short findings remain in qualification.json.",
   "summary": {
     "assignedPins": 330,
-    "drcUnconnectedItems": 208,
+    "drcUnconnectedItems": 207,
     "floatingCopperGroups": 0,
-    "fullyConnectedMultiTerminalNets": 1,
+    "fullyConnectedMultiTerminalNets": 2,
     "minimumLinks": 234,
     "multiTerminalNets": 94,
     "nets": 96,
-    "remainingPadGroupLinks": 208
+    "remainingPadGroupLinks": 207
   }
 }

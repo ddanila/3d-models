@@ -435,6 +435,259 @@
       ],
       "scope": "Local top lead correspondence between A4 and A5. Raised leads obscure hole entries; short pad attachments are inferred separately. Only exposed copper inside the anchor hull is projected. Nominal geometry, not metrology or measured continuity.",
       "toleranceMm": 1.25
+    },
+    {
+      "anchorHull": [
+        [
+          1439,
+          2812
+        ],
+        [
+          1578,
+          2813
+        ],
+        [
+          1587,
+          3040
+        ],
+        [
+          1449,
+          3038
+        ]
+      ],
+      "anchors": [
+        {
+          "photoPixel": [
+            1439,
+            2812
+          ],
+          "pin": "20",
+          "ref": "A4"
+        },
+        {
+          "photoPixel": [
+            1578,
+            2813
+          ],
+          "pin": "3",
+          "ref": "A5"
+        },
+        {
+          "photoPixel": [
+            1587,
+            3040
+          ],
+          "pin": "10",
+          "ref": "A5"
+        },
+        {
+          "photoPixel": [
+            1449,
+            3038
+          ],
+          "pin": "13",
+          "ref": "A4"
+        }
+      ],
+      "checks": [
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            45.923587,
+            -5.143279
+          ],
+          "photoModel": [
+            45.88694614749641,
+            -5.171336806060701
+          ],
+          "photoPixel": [
+            1440,
+            2844
+          ],
+          "pin": "19",
+          "ref": "A4",
+          "residualMm": 0.04614967554739268
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            48.463582,
+            -5.14813
+          ],
+          "photoModel": [
+            48.39160039711937,
+            -5.136610513744523
+          ],
+          "photoPixel": [
+            1442,
+            2876
+          ],
+          "pin": "18",
+          "ref": "A4",
+          "residualMm": 0.07289752888030814
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            51.003578,
+            -5.152981
+          ],
+          "photoModel": [
+            50.901345124183244,
+            -5.101813643460265
+          ],
+          "photoPixel": [
+            1444,
+            2908
+          ],
+          "pin": "17",
+          "ref": "A4",
+          "residualMm": 0.11432261050653125
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            53.543573,
+            -5.157832
+          ],
+          "photoModel": [
+            53.41619586335931,
+            -5.0669459798243075
+          ],
+          "photoPixel": [
+            1446,
+            2940
+          ],
+          "pin": "16",
+          "ref": "A4",
+          "residualMm": 0.15647748592739197
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            56.083568,
+            -5.162684
+          ],
+          "photoModel": [
+            55.94037370398202,
+            -5.099914776560276
+          ],
+          "photoPixel": [
+            1447,
+            2972
+          ],
+          "pin": "15",
+          "ref": "A4",
+          "residualMm": 0.15634763133258903
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            58.623564,
+            -5.167535
+          ],
+          "photoModel": [
+            58.62840179870501,
+            -5.1392693274200445
+          ],
+          "photoPixel": [
+            1448,
+            3006
+          ],
+          "pin": "14",
+          "ref": "A4",
+          "residualMm": 0.028676689884075887
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            48.019151,
+            4.197379
+          ],
+          "photoModel": [
+            47.92770565708367,
+            4.161505908410519
+          ],
+          "photoPixel": [
+            1580,
+            2877
+          ],
+          "pin": "5",
+          "ref": "A5",
+          "residualMm": 0.0982299823947479
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            53.099141,
+            4.187159
+          ],
+          "photoModel": [
+            53.0942453676546,
+            4.109568794836423
+          ],
+          "photoPixel": [
+            1582,
+            2943
+          ],
+          "pin": "7",
+          "ref": "A5",
+          "residualMm": 0.0777444991841056
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            55.639136,
+            4.18205
+          ],
+          "photoModel": [
+            55.6817080171908,
+            4.150831890997449
+          ],
+          "photoPixel": [
+            1584,
+            2976
+          ],
+          "pin": "8",
+          "ref": "A5",
+          "residualMm": 0.052791542669152036
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            58.179131,
+            4.17694
+          ],
+          "photoModel": [
+            58.19995230257442,
+            4.127628222061782
+          ],
+          "photoPixel": [
+            1585,
+            3008
+          ],
+          "pin": "9",
+          "ref": "A5",
+          "residualMm": 0.053527358278955176
+        }
+      ],
+      "copperAssignmentQualified": true,
+      "extrapolationChecks": [],
+      "id": "cpu-latch-upper",
+      "maxCheckResidualMm": 0.15647748592739197,
+      "photoToModel": [
+        -0.0022529464036895406,
+        0.07329682429339318,
+        -161.4662231718729,
+        0.064317421228649,
+        -0.0028300883193796396,
+        -89.49833970717198,
+        3.110523362499217e-05,
+        -3.21571730717978e-05,
+        1
+      ],
+      "scope": "Local top lead correspondence for exposed A4/CPU copper. Raised leads obscure hole entries; pad attachments are inferred. No assignment of hidden paths or anonymous solder eyes.",
+      "toleranceMm": 1.25
     }
   ],
   "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",

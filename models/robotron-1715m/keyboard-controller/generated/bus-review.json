@@ -57,6 +57,244 @@
     "source": "photo-top",
     "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
   },
+  "latchPaths": [
+    {
+      "continuityEstablished": false,
+      "id": "latch-review-d0",
+      "nativeCopper": false,
+      "reason": "The top lead/eye area is partly obscured by solder and glare. The reverse-side eye is a correspondence candidate only; the complete latch-to-CPU path is not established.",
+      "referenceNet": "/D0",
+      "reverseReview": {
+        "continuityEstablished": false,
+        "point": [
+          1365,
+          2618
+        ],
+        "radiusPixels": 18,
+        "reason": "Possible reverse-side eye, not a verified through-board match. No native via or route is assigned.",
+        "source": "photo-bottom",
+        "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+        "status": "candidate-correspondence-only"
+      },
+      "segments": [
+        {
+          "id": "d0-latch-0",
+          "points": [
+            [
+              1440,
+              2844
+            ],
+            [
+              1470,
+              2845
+            ]
+          ],
+          "status": "inferred"
+        },
+        {
+          "id": "d0-latch-1",
+          "points": [
+            [
+              1470,
+              2845
+            ],
+            [
+              1501,
+              2847
+            ]
+          ],
+          "status": "inferred"
+        }
+      ],
+      "source": "photo-top",
+      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "terminals": [
+        "A4:19",
+        "A5:14"
+      ]
+    },
+    {
+      "continuityEstablished": false,
+      "id": "latch-review-d1",
+      "nativeCopper": false,
+      "reason": "The adjacent eye and lead attachment need disambiguation. A nearby reverse-side eye does not establish identity or the continuation to CPU pin 15.",
+      "referenceNet": "/D1",
+      "reverseReview": {
+        "continuityEstablished": false,
+        "point": [
+          1390,
+          2645
+        ],
+        "radiusPixels": 18,
+        "reason": "Possible reverse-side eye, not a verified through-board match. No native via or route is assigned.",
+        "source": "photo-bottom",
+        "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+        "status": "candidate-correspondence-only"
+      },
+      "segments": [
+        {
+          "id": "d1-latch-0",
+          "points": [
+            [
+              1442,
+              2876
+            ],
+            [
+              1470,
+              2873
+            ]
+          ],
+          "status": "inferred"
+        }
+      ],
+      "source": "photo-top",
+      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "terminals": [
+        "A4:18",
+        "A5:15"
+      ]
+    },
+    {
+      "continuityEstablished": false,
+      "id": "latch-review-d2",
+      "nativeCopper": false,
+      "reason": "Exposed top copper reaches a solder eye. Its reverse-side correspondence and eye-to-CPU continuation remain unresolved.",
+      "referenceNet": "/D2",
+      "reverseReview": {
+        "continuityEstablished": false,
+        "point": [
+          1335,
+          2708
+        ],
+        "radiusPixels": 18,
+        "reason": "Possible reverse-side eye, not a verified through-board match. No native via or route is assigned.",
+        "source": "photo-bottom",
+        "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+        "status": "candidate-correspondence-only"
+      },
+      "segments": [
+        {
+          "id": "d2-latch-0",
+          "points": [
+            [
+              1444,
+              2908
+            ],
+            [
+              1464,
+              2918
+            ]
+          ],
+          "status": "inferred"
+        },
+        {
+          "id": "d2-latch-1",
+          "points": [
+            [
+              1464,
+              2918
+            ],
+            [
+              1508,
+              2915
+            ]
+          ],
+          "status": "observed"
+        },
+        {
+          "id": "d2-latch-2",
+          "points": [
+            [
+              1508,
+              2915
+            ],
+            [
+              1532,
+              2936
+            ]
+          ],
+          "status": "inferred"
+        }
+      ],
+      "source": "photo-top",
+      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "terminals": [
+        "A4:17",
+        "A5:12"
+      ]
+    },
+    {
+      "continuityEstablished": false,
+      "id": "latch-review-d4",
+      "nativeCopper": false,
+      "reason": "The visible track disappears at the CPU edge. Proximity to a raised lead does not identify the covered continuation to CPU pin 7.",
+      "referenceNet": "/D4",
+      "segments": [
+        {
+          "id": "d4-latch-0",
+          "points": [
+            [
+              1447,
+              2972
+            ],
+            [
+              1463,
+              2971
+            ]
+          ],
+          "status": "inferred"
+        },
+        {
+          "id": "d4-latch-1",
+          "points": [
+            [
+              1463,
+              2971
+            ],
+            [
+              1490,
+              2971
+            ]
+          ],
+          "status": "observed"
+        },
+        {
+          "id": "d4-latch-2",
+          "points": [
+            [
+              1490,
+              2971
+            ],
+            [
+              1508,
+              2985
+            ]
+          ],
+          "status": "observed"
+        },
+        {
+          "id": "d4-latch-3",
+          "points": [
+            [
+              1508,
+              2985
+            ],
+            [
+              1555,
+              2983
+            ]
+          ],
+          "status": "observed"
+        }
+      ],
+      "source": "photo-top",
+      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "terminals": [
+        "A4:15",
+        "A5:7"
+      ]
+    }
+  ],
   "paths": [
     {
       "crossSideSearch": {
