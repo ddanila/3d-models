@@ -47,6 +47,33 @@ class ControllerExportTests(unittest.TestCase):
    self.assertEqual(span['photoPixels'],route['sources'][0]['locator']['pixelSegment'])
    self.assertEqual(span['status'],route['status'])
 
+ def test_filter_correspondence_is_bounded_and_cannot_assign_nets(self):
+  from copy import deepcopy
+  from cable_copper import build,filter_registration
+  report=build();fit=report['filterRegistration']
+  self.assertTrue(fit['photoAlignmentAccepted'])
+  self.assertLessEqual(fit['maxCheckResidualPixels'],fit['tolerancePixels'])
+  self.assertTrue(all(c['insideAnchorHull'] for c in fit['checks']))
+  self.assertTrue(all(not c['insideAnchorHull'] for c in fit['extrapolationChecks']))
+  self.assertFalse(fit['copperAssignmentQualified'])
+  self.assertEqual(fit['assignedReferenceTerminals'],{})
+  self.assertEqual({s['id'] for s in fit['boundedUndersideSpans']},{'cf1-stub','cf2-stub','cf3-stub','cf4-stub'})
+  self.assertTrue(all(s['net'] is None and s['status']=='projected-underside-observation' for s in fit['boundedUndersideSpans']))
+  read=lambda name:json.loads((R/name).read_text())
+  config,graph,assembly,components=[read(name)for name in ['filter-registration.json','cable-copper.json','output-assembly.json','component-evidence.json']]
+  source=lambda sid:next(s for s in read('evidence.json')['sources']if s['id']==sid)
+  bad=deepcopy(assembly);bad['filter']['jointRowsPixels']['cableFacing'][1][1]+=30
+  rejected=filter_registration(config,graph,bad,components,source)
+  self.assertFalse(rejected['photoAlignmentAccepted'])
+  self.assertEqual(rejected['boundedUndersideSpans'],[])
+  self.assertTrue(any(s['reason']=='fit-rejected'for s in rejected['excludedSpans']))
+  bad=deepcopy(config);bad['checks'][0]=bad['anchors'][0]
+  with self.assertRaisesRegex(ValueError,'held out'):filter_registration(bad,graph,assembly,components,source)
+  bad=deepcopy(config);bad['anchors'][2],bad['anchors'][3]=bad['anchors'][3],bad['anchors'][2]
+  with self.assertRaisesRegex(ValueError,'convex boundary'):filter_registration(bad,graph,assembly,components,source)
+  bad=deepcopy(config);bad['topPhotoSource']='comparison-photo-080406304'
+  with self.assertRaisesRegex(ValueError,'primary top'):filter_registration(bad,graph,assembly,components,source)
+
  def test_output_assembly_is_visual_and_preserves_reference_pads(self):
   import copy
   from output_assembly import build

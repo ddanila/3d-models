@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "scope": "Primary-specimen filter joint-array correspondence. Cable-facing and logic-facing rows are distinguished by the cable and driver positions; the component-side left-to-right order reverses on the underside. Top observations are lead/solder entry estimates, not measured hole centres. This matches anonymous photo features, not L1 pin numbers or winding continuity.",
+  "topPhotoSource": "photo-top",
+  "correspondences": {
+    "CF1": {
+      "row": "cableFacing",
+      "index": 0
+    },
+    "CF2": {
+      "row": "cableFacing",
+      "index": 1
+    },
+    "CF3": {
+      "row": "cableFacing",
+      "index": 2
+    },
+    "CF4": {
+      "row": "cableFacing",
+      "index": 3
+    },
+    "LF1": {
+      "row": "logicFacing",
+      "index": 0
+    },
+    "LF2": {
+      "row": "logicFacing",
+      "index": 1
+    },
+    "LF3": {
+      "row": "logicFacing",
+      "index": 2
+    },
+    "LF4": {
+      "row": "logicFacing",
+      "index": 3
+    }
+  },
+  "anchors": [
+    "CF1",
+    "CF4",
+    "LF4",
+    "LF1"
+  ],
+  "checks": [
+    "CF2",
+    "CF3",
+    "LF2",
+    "LF3"
+  ],
+  "extrapolationChecks": [
+    "R3:1",
+    "R3:2",
+    "R4.1:1",
+    "R4.1:2",
+    "R5:1",
+    "R5:2"
+  ],
+  "acceptance": "Held-out joint residuals must fit the canonical top jointPixelUncertainty and lie inside the anchor hull. This is a visual correspondence allowance, not a statistical confidence interval or PCB dimensional tolerance.",
+  "limits": "The fit is bounded by the outer filter joints. Projected underside stubs remain underside observations, not top copper. Supply rails, nearby discrete joints, cable lands and hidden winding paths outside the hull remain unresolved. Comparison-specimen photos corroborate the two-row layout only; they provide no primary-specimen electrical assignment."
+}

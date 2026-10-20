@@ -33,6 +33,9 @@ electrical routes while registration and terminal identities remain unresolved.
 `supply-review.json` selects canonical supply observations and held-out resistor
 checks for that report. Filter predictions are outside the fits’ anchor hulls;
 local fit agreement does not identify a winding or connect the shield to ground.
+`filter-registration.json` matches the primary filter joint rows using held-out
+inner joints. The generated local fit is bounded by the outer joints; projected
+underside spans are not top copper or native electrical routes.
 
 ## Authorities
 

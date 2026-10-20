@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 INPUTS = ['cable-copper.json', 'evidence.json', 'component-evidence.json',
           'photo-landmarks.json', 'generated/connectivity.json',
           'tools/cable_copper.py', 'tools/photo_registration.py', 'tools/bottom_registration.py',
-          'supply-review.json', 'route-evidence.json']
+          'supply-review.json', 'route-evidence.json', 'filter-registration.json', 'output-assembly.json']
 
 
 def stable(value):
@@ -65,6 +65,8 @@ def supply_review(data, graph, components, connectivity, routes, source):
     for definition in data['fits']:
         anchors = [terminal(t) for t in definition['anchors']]
         hull = [t['bottomPixel'] for t in anchors]
+        if not all(inside_hull(p, hull) for p in hull):
+            raise ValueError('Supply anchors must follow the convex boundary')
         h = homography(hull, [t['topPixel'] for t in anchors])
         def check(name):
             t = terminal(name)
@@ -81,7 +83,7 @@ def supply_review(data, graph, components, connectivity, routes, source):
     spans = []
     found = set()
     for uid, route in routes['items'].items():
-        if route['group'] not in data['supplyRouteGroups']:
+        if route.get('group') not in data['supplyRouteGroups']:
             continue
         found.add(route['group'])
         photo = next(s for s in route['sources'] if s['id'] == data['topPhotoSource'])
@@ -100,6 +102,57 @@ def supply_review(data, graph, components, connectivity, routes, source):
                                                   for n in fits[0]['filterPredictions']),
                 assignedFilterTerminals={}, rejectedWindingPairings=[],
                 conclusion='Neither supply continuity nor cross-side registration identifies a filter terminal. Winding alternatives remain unconstrained.')
+
+
+def filter_registration(config, graph, assembly, components, source):
+    top_source = source(config['topPhotoSource'])
+    if top_source.get('specimenId') or assembly['photoSource'] != top_source['id']:
+        raise ValueError('Filter correspondence requires the primary top photograph')
+    rows = assembly['filter']['jointRowsPixels']
+    pairs = {}
+    for name, locator in config['correspondences'].items():
+        pairs[name] = dict(node=name, topPixel=rows[locator['row']][locator['index']],
+                           bottomPixel=graph['nodes'][name]['pixel'])
+    if set(config['anchors']) & set(config['checks']):
+        raise ValueError('Filter checks must be held out')
+    if set(config['anchors'] + config['checks']) != set(pairs) or len(config['anchors']) != 4 or not config['checks']:
+        raise ValueError('Every filter correspondence needs an anchor or check role')
+    anchors = [pairs[n] for n in config['anchors']]
+    hull = [a['bottomPixel'] for a in anchors]
+    if not all(inside_hull(p, hull) for p in hull):
+        raise ValueError('Filter anchors must follow the convex boundary')
+    h = homography(hull, [a['topPixel'] for a in anchors])
+    def checked(pair):
+        prediction = project(h, pair['bottomPixel'])
+        return dict(pair, projectedTopPixel=prediction, residualPixels=math.dist(prediction, pair['topPixel']),
+                    insideAnchorHull=inside_hull(pair['bottomPixel'], hull))
+    checks = [checked(pairs[n]) for n in config['checks']]
+    tolerance = assembly['filter']['jointPixelUncertainty']
+    accepted = all(c['insideAnchorHull'] and c['residualPixels'] <= tolerance for c in checks)
+    external = {p['terminal']: p['bottomPixel'] for p in graph['registration']['checks']}
+    extrapolation = []
+    for terminal in config['extrapolationChecks']:
+        ref, pin = terminal.split(':')
+        extrapolation.append(checked(dict(terminal=terminal, bottomPixel=external[terminal],
+                                          topPixel=components[ref]['photoPins'][pin])))
+    spans, excluded = [], []
+    for edge in graph['edges']:
+        a, b = edge['ends']
+        pixels = [graph['nodes'][a]['pixel'], *edge['via'], graph['nodes'][b]['pixel']]
+        bounded = all(inside_hull(p, hull) for p in pixels)
+        if accepted and bounded:
+            spans.append(dict(id=edge['id'], ends=edge['ends'], bottomPixels=pixels,
+                              projectedTopPixels=[project(h, p) for p in pixels],
+                              status='projected-underside-observation', net=None))
+        else:
+            excluded.append(dict(id=edge['id'], reason='outside-anchor-hull' if not bounded else 'fit-rejected'))
+    return dict(scope=config['scope'], limits=config['limits'], acceptance=config['acceptance'],
+                topSource=top_source, anchors=anchors, checks=checks, extrapolationChecks=extrapolation,
+                correspondences=[dict(pairs[n], role='anchor' if n in config['anchors'] else 'held-out') for n in pairs],
+                bottomToTop=h, bottomAnchorHull=hull, topAnchorHull=[a['topPixel'] for a in anchors],
+                tolerancePixels=tolerance, maxCheckResidualPixels=max(c['residualPixels'] for c in checks),
+                photoAlignmentAccepted=accepted, copperAssignmentQualified=False,
+                assignedReferenceTerminals={}, boundedUndersideSpans=spans, excludedSpans=excluded)
 
 
 def build(root=ROOT):
@@ -158,6 +211,7 @@ def build(root=ROOT):
         'schema': 1, 'scope': data['scope'], 'regionPixels': data['regionPixels'], 'source': primary, 'nodes': nodes, 'edges': edges,
         'connectedGroups': groups, 'unresolved': data['unresolved'],
         'referenceRoles': roles, 'assignedReferenceTerminals': {},
+        'filterRegistration': filter_registration(read('filter-registration.json'), data, read('output-assembly.json'), components, source),
         'supplyReview': supply_review(read('supply-review.json'), data, components, connectivity, read('route-evidence.json'), source),
         'windingPairingCandidates': [dict(zip(['CF1', 'CF2', 'CF3', 'CF4'], order))
                                      for order in itertools.permutations(['LF1', 'LF2', 'LF3', 'LF4'])],
