@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "scope": "Supply-to-filter review. Reference net labels do not establish a hidden copper continuation or winding identity. Photo fits locate search regions only.",
+  "topPhotoSource": "photo-top",
+  "supplyRouteGroups": [
+    "reset-pair-supply-top",
+    "reset-r5-supply-top",
+    "reset-r61-supply-top"
+  ],
+  "groundTerminals": [
+    "R4.2:2",
+    "R7:2",
+    "R8:2"
+  ],
+  "fits": [
+    {
+      "id": "upper-resistors",
+      "anchors": [
+        "R3:1",
+        "R3:2",
+        "R5:1",
+        "R5:2"
+      ],
+      "checks": [
+        "R4.1:1",
+        "R4.1:2"
+      ],
+      "extrapolationChecks": [
+        "R4.2:1",
+        "R4.2:2",
+        "R7:1",
+        "R7:2",
+        "R8:1",
+        "R8:2"
+      ]
+    },
+    {
+      "id": "extended-resistors",
+      "anchors": [
+        "R3:1",
+        "R3:2",
+        "R4.2:1",
+        "R4.2:2"
+      ],
+      "checks": [
+        "R4.1:1",
+        "R4.1:2",
+        "R5:1",
+        "R5:2"
+      ],
+      "extrapolationChecks": [
+        "R7:1",
+        "R7:2",
+        "R8:1",
+        "R8:2"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "id": "supply-feed",
+      "text": "The recorded +5 V strip joins the board-edge resistor leads. A continuous photo-resolved path from that strip to a particular filter joint is not established. Do not merge the large cable-side copper area with this strip across isolation boundaries or obscured sections."
+    },
+    {
+      "id": "ground-feed",
+      "text": "The inner R4.2/R7/R8 leads share an underside strip; /GND is their common reference net. Its continuation to the filter is not established. The cable shield and large top copper areas are not interchangeable with logic ground without a visible connection."
+    },
+    {
+      "id": "registration",
+      "text": "Both resistor fits extrapolate laterally toward the filter and share R3 anchors. Small residuals within the resistor bank do not qualify filter registration. Raised top leads, winding arcs and underside solder joints must not be equated by nearest distance."
+    },
+    {
+      "id": "winding-identity",
+      "text": "An underside joint without a recorded departure is not evidence of a power or ground winding. Preserve every winding pairing until a same-specimen terminal connection or winding path constrains it."
+    }
+  ]
+}

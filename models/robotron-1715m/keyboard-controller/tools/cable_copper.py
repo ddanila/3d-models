@@ -12,7 +12,8 @@ from bottom_registration import inside_hull
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = ['cable-copper.json', 'evidence.json', 'component-evidence.json',
           'photo-landmarks.json', 'generated/connectivity.json',
-          'tools/cable_copper.py', 'tools/photo_registration.py', 'tools/bottom_registration.py']
+          'tools/cable_copper.py', 'tools/photo_registration.py', 'tools/bottom_registration.py',
+          'supply-review.json', 'route-evidence.json']
 
 
 def stable(value):
@@ -47,6 +48,58 @@ def partition(nodes, edges):
         groups.append(sorted(group))
         remaining -= group
     return sorted(groups)
+
+
+def supply_review(data, graph, components, connectivity, routes, source):
+    def net(terminal):
+        ref, pin = terminal.split(':')
+        return connectivity['components'][ref]['pins'][pin]
+    bottom = {p['terminal']: p['bottomPixel'] for p in graph['registration']['checks']}
+    for ref, component in components.items():
+        for pin, pixel in component.get('bottomPhotoPins', {}).items():
+            bottom[ref + ':' + pin] = pixel
+    def terminal(name):
+        ref, pin = name.split(':')
+        return dict(terminal=name, topPixel=components[ref]['photoPins'][pin], bottomPixel=bottom[name], net=net(name))
+    fits = []
+    for definition in data['fits']:
+        anchors = [terminal(t) for t in definition['anchors']]
+        hull = [t['bottomPixel'] for t in anchors]
+        h = homography(hull, [t['topPixel'] for t in anchors])
+        def check(name):
+            t = terminal(name)
+            prediction = project(h, t['bottomPixel'])
+            return dict(t, projectedTopPixel=prediction, residualPixels=math.dist(prediction, t['topPixel']),
+                        insideAnchorHull=inside_hull(t['bottomPixel'], hull))
+        if set(definition['anchors']) & set(definition['checks'] + definition['extrapolationChecks']):
+            raise ValueError('Supply fit checks must be held out')
+        predictions = {name: dict(topPixel=project(h, n['pixel']), insideAnchorHull=inside_hull(n['pixel'], hull))
+                       for name, n in graph['nodes'].items() if name.startswith(('CF', 'LF'))}
+        fits.append(dict(id=definition['id'], anchors=anchors, checks=[check(t) for t in definition['checks']],
+                         extrapolationChecks=[check(t) for t in definition['extrapolationChecks']],
+                         bottomToTop=h, filterPredictions=predictions, copperAssignmentQualified=False))
+    spans = []
+    found = set()
+    for uid, route in routes['items'].items():
+        if route['group'] not in data['supplyRouteGroups']:
+            continue
+        found.add(route['group'])
+        photo = next(s for s in route['sources'] if s['id'] == data['topPhotoSource'])
+        if photo['sha256'] != source(data['topPhotoSource'])['sha256']:
+            raise ValueError('Stale supply route photograph')
+        spans.append(dict(routeId=uid, status=route['status'], photoPixels=photo['locator']['pixelSegment']))
+    if found != set(data['supplyRouteGroups']):
+        raise ValueError('Missing supply route group')
+    ground = [terminal(t) for t in data['groundTerminals']]
+    if {t['net'] for t in ground} != {'/GND'}:
+        raise ValueError('Ground review contradicts reference nets')
+    return dict(scope=data['scope'], topSource=source(data['topPhotoSource']), fits=fits,
+                supplySpans=spans, groundTerminals=ground, gaps=data['gaps'],
+                maxFilterFitDisagreementPixels=max(math.dist(fits[0]['filterPredictions'][n]['topPixel'],
+                                                            fits[1]['filterPredictions'][n]['topPixel'])
+                                                  for n in fits[0]['filterPredictions']),
+                assignedFilterTerminals={}, rejectedWindingPairings=[],
+                conclusion='Neither supply continuity nor cross-side registration identifies a filter terminal. Winding alternatives remain unconstrained.')
 
 
 def build(root=ROOT):
@@ -105,6 +158,7 @@ def build(root=ROOT):
         'schema': 1, 'scope': data['scope'], 'regionPixels': data['regionPixels'], 'source': primary, 'nodes': nodes, 'edges': edges,
         'connectedGroups': groups, 'unresolved': data['unresolved'],
         'referenceRoles': roles, 'assignedReferenceTerminals': {},
+        'supplyReview': supply_review(read('supply-review.json'), data, components, connectivity, read('route-evidence.json'), source),
         'windingPairingCandidates': [dict(zip(['CF1', 'CF2', 'CF3', 'CF4'], order))
                                      for order in itertools.permutations(['LF1', 'LF2', 'LF3', 'LF4'])],
         'projection': {'scope': reg['scope'], 'anchors': anchors, 'checks': checks,

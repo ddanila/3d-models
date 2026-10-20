@@ -26,6 +26,27 @@ class ControllerExportTests(unittest.TestCase):
   edges=copy.deepcopy(report['edges']);edges[0]['ends'][0]='missing'
   with self.assertRaisesRegex(ValueError,'Invalid graph edge'):partition(report['nodes'],edges)
 
+ def test_supply_fit_does_not_promote_extrapolation_to_identity(self):
+  from cable_copper import build
+  report=build();review=report['supplyReview']
+  upper,extended=review['fits']
+  self.assertLess(max(c['residualPixels'] for c in upper['checks']),5)
+  self.assertGreater(max(c['residualPixels'] for c in upper['extrapolationChecks']),90)
+  self.assertGreater(review['maxFilterFitDisagreementPixels'],30)
+  for fit in review['fits']:
+   self.assertFalse(fit['copperAssignmentQualified'])
+   self.assertTrue(all(not p['insideAnchorHull'] for p in fit['filterPredictions'].values()))
+   self.assertFalse({a['terminal'] for a in fit['anchors']} & {c['terminal'] for c in fit['checks']})
+  self.assertEqual(review['assignedFilterTerminals'],{})
+  self.assertEqual(review['rejectedWindingPairings'],[])
+  self.assertEqual(len(report['windingPairingCandidates']),24)
+  self.assertEqual({t['net'] for t in review['groundTerminals']},{'/GND'})
+  routes=json.loads((R/'route-evidence.json').read_text())['items']
+  for span in review['supplySpans']:
+   route=routes[span['routeId']]
+   self.assertEqual(span['photoPixels'],route['sources'][0]['locator']['pixelSegment'])
+   self.assertEqual(span['status'],route['status'])
+
  def test_output_assembly_is_visual_and_preserves_reference_pads(self):
   import copy
   from output_assembly import build

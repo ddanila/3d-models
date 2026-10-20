@@ -30,6 +30,9 @@ XT1's inherited native coordinates remain reference placeholders.
 retains connected groups, winding-pairing alternatives and registration checks.
 Its board projection is illustrative and must not become numbered pads or native
 electrical routes while registration and terminal identities remain unresolved.
+`supply-review.json` selects canonical supply observations and held-out resistor
+checks for that report. Filter predictions are outside the fits’ anchor hulls;
+local fit agreement does not identify a winding or connect the shield to ground.
 
 ## Authorities
 
