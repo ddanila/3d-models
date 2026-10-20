@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v7
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_export.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/connection_review.py --check
+      - run: python3 models/robotron-1715m/keyboard-controller/tools/cable_copper.py --check
       - run: python3 models/robotron-1715m/tools/test_controller_mesh_contract.py
       - run: python3 models/robotron-1715m/tools/check-metadata.py
   native:

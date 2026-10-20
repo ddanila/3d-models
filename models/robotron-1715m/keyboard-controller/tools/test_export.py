@@ -6,6 +6,26 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_cable_graph_does_not_join_windings_or_assign_terminals(self):
+  import copy
+  from cable_copper import build,partition
+  report=build()
+  self.assertEqual(report,json.loads((R/'generated/cable-copper.json').read_text()))
+  group=next(g for g in report['connectedGroups'] if 'CF2' in g)
+  self.assertEqual(group,['C1','CF2','E2'])
+  self.assertFalse(any(n.startswith('LF') for n in group))
+  self.assertIn(['LF3'],report['connectedGroups'])
+  self.assertFalse(report['projection']['copperAssignmentQualified'])
+  self.assertFalse(report['comparison']['electricalIdentityTransferred'])
+  self.assertEqual(report['assignedReferenceTerminals'],{})
+  self.assertTrue(all(n['net'] is None for n in report['nodes'].values()))
+  # Reversing the winding row must survive as a hypothesis, not a copper edge.
+  self.assertIn({'CF1':'LF4','CF2':'LF3','CF3':'LF2','CF4':'LF1'},report['windingPairingCandidates'])
+  edges=copy.deepcopy(report['edges']);edges[0]['status']='inferred'
+  with self.assertRaisesRegex(ValueError,'Uncertain joins'):partition(report['nodes'],edges)
+  edges=copy.deepcopy(report['edges']);edges[0]['ends'][0]='missing'
+  with self.assertRaisesRegex(ValueError,'Invalid graph edge'):partition(report['nodes'],edges)
+
  def test_output_assembly_is_visual_and_preserves_reference_pads(self):
   import copy
   from output_assembly import build

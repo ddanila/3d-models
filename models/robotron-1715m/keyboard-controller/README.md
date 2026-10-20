@@ -26,6 +26,10 @@ occlusions and do not establish joints, layer transitions or connectivity.
 `output-assembly.json` records the primary filter envelope, visible joint rows and
 raised wire arcs. Its generated visual assembly has no electrical pin assignments;
 XT1's inherited native coordinates remain reference placeholders.
+`cable-copper.json` records an anonymous underside graph; the generated report
+retains connected groups, winding-pairing alternatives and registration checks.
+Its board projection is illustrative and must not become numbered pads or native
+electrical routes while registration and terminal identities remain unresolved.
 
 ## Authorities
 

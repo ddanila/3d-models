@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "photoSource": "photo-bottom",
+  "scope": "Anonymous cable-end underside copper graph. An edge records a visible same-face span, not a winding, top-side transition or measured continuity. Geometric joint IDs are not L1/XT1 pin numbers. Absence of an edge means no continuation recorded, not an open circuit.",
+  "regionPixels": [1300,520,1520,820],
+  "nodes": {
+    "CF1": {"pixel":[1503,603],"kind":"solder-joint"},
+    "CF2": {"pixel":[1473,610],"kind":"solder-joint"},
+    "CF3": {"pixel":[1444,610],"kind":"solder-joint"},
+    "CF4": {"pixel":[1416,610],"kind":"solder-joint"},
+    "LF1": {"pixel":[1505,699],"kind":"solder-joint"},
+    "LF2": {"pixel":[1478,698],"kind":"solder-joint"},
+    "LF3": {"pixel":[1449,698],"kind":"solder-joint"},
+    "LF4": {"pixel":[1418,698],"kind":"solder-joint"},
+    "E1": {"pixel":[1502,639],"kind":"copper-end","scope":"Rounded end below the solder joint; no separate hole is established."},
+    "E2": {"pixel":[1475,641],"kind":"copper-end"},
+    "E3": {"pixel":[1445,640],"kind":"copper-end"},
+    "E4": {"pixel":[1417,639],"kind":"copper-end"},
+    "S1": {"pixel":[1498,578],"kind":"occlusion-boundary","scope":"Track enters a reworked solder region. The extent and cable attachment remain unclassified."},
+    "C1": {"pixel":[1425,563],"kind":"solder-joint","scope":"Cable-region land, not an XT1 terminal assignment."},
+    "C2": {"pixel":[1353,566],"kind":"solder-joint","scope":"Cable-region land, not an XT1 terminal assignment."},
+    "D1": {"pixel":[1505,755],"kind":"solder-joint"},
+    "D2": {"pixel":[1478,725],"kind":"trace-stop","scope":"Stop before the ambiguous bend and neighbouring joint."},
+    "D4": {"pixel":[1448,757],"kind":"solder-joint"},
+    "D5": {"pixel":[1490,814],"kind":"solder-joint"},
+    "N1": {"pixel":[1353,608],"kind":"solder-joint"},
+    "N2": {"pixel":[1353,740],"kind":"solder-joint"}
+  },
+  "edges": [
+    {"id":"cf1-stub","ends":["CF1","E1"],"via":[],"status":"observed"},
+    {"id":"cf2-stub","ends":["CF2","E2"],"via":[],"status":"observed"},
+    {"id":"cf3-stub","ends":["CF3","E3"],"via":[],"status":"observed"},
+    {"id":"cf4-stub","ends":["CF4","E4"],"via":[],"status":"observed"},
+    {"id":"cf1-solder-boundary","ends":["CF1","S1"],"via":[[1500,590]],"status":"observed"},
+    {"id":"cf2-cable-land","ends":["CF2","C1"],"via":[[1455,594],[1430,572]],"status":"observed"},
+    {"id":"cf3-cable-land","ends":["CF3","C2"],"via":[[1444,596],[1418,571]],"status":"observed"},
+    {"id":"lf1-driver-joint","ends":["LF1","D1"],"via":[],"status":"observed"},
+    {"id":"lf2-bend-stop","ends":["LF2","D2"],"via":[],"status":"observed"},
+    {"id":"lf4-driver-joint","ends":["LF4","D4"],"via":[[1418,725],[1448,745]],"status":"observed"},
+    {"id":"driver-side-span","ends":["D1","D5"],"via":[[1505,785],[1490,800]],"status":"observed"},
+    {"id":"neighbour-stepped-span","ends":["N1","N2"],"via":[[1353,624],[1381,635],[1381,740]],"status":"observed"}
+  ],
+  "registration": {
+    "scope":"Nominal bottom-to-top search fit, then existing top-photo board projection. Mounting-axis observation and raised top leads can bias the fit. Not qualified for numbered pads, native electrical routes or layer transitions; projected artwork remains illustrative.",
+    "anchors":[
+      {"id":"bare-mount-hole","bottomPixel":[1076,414],"topPixel":[1654,501]},
+      {"id":"mounting-axis","bottomPixel":[1491,410],"topPixel":[1195,500]},
+      {"terminal":"A1:1","bottomPixel":[1492,1327]},
+      {"terminal":"R4.2:1","bottomPixel":[1090,969]}
+    ],
+    "checks":[
+      {"terminal":"R3:1","bottomPixel":[1086,647]},
+      {"terminal":"R3:2","bottomPixel":[1238,643]},
+      {"terminal":"R4.1:1","bottomPixel":[1086,691]},
+      {"terminal":"R4.1:2","bottomPixel":[1240,694]},
+      {"terminal":"R5:1","bottomPixel":[1089,737]},
+      {"terminal":"R5:2","bottomPixel":[1242,741]},
+      {"terminal":"R4.2:2","bottomPixel":[1243,972]}
+    ]
+  },
+  "comparison": {
+    "photoSource":"comparison-photo-080351042",
+    "scope":"Different specimen. Same-face joint-row correspondence is a geometric hypothesis; this fit does not transfer nets or reworked solder connections. Cable lands lie beyond the four filter-row anchors and remain extrapolated.",
+    "anchors":[
+      {"node":"CF1","pixel":[817,2870]},
+      {"node":"CF4","pixel":[1072,2870]},
+      {"node":"LF4","pixel":[1076,2610]},
+      {"node":"LF1","pixel":[819,2610]}
+    ],
+    "checks":[
+      {"node":"CF2","pixel":[905,2870]},
+      {"node":"CF3","pixel":[985,2870]},
+      {"node":"LF2","pixel":[909,2610]},
+      {"node":"LF3","pixel":[989,2610]}
+    ]
+  },
+  "unresolved": [
+    {"id":"winding-pairing","nodes":["CF1","CF2","CF3","CF4","LF1","LF2","LF3","LF4"],"question":"Which cable-facing joint pairs with which logic-facing joint through a winding?","alternatives":"All one-to-one row pairings remain possible; row adjacency is not winding continuity.","needed":"Trace individual insulated conductors through the core or obtain a joint-to-joint resistance map."},
+    {"id":"no-readable-departure","nodes":["CF4","LF3"],"question":"Where do these joints continue beyond the visible stub or isolated pad?","needed":"A separately registered top-side attachment; underside appearance cannot establish disconnection."},
+    {"id":"cable-terminal-identity","nodes":["S1","C1","C2"],"question":"Which XT1 terminals reach these lands?","needed":"Follow identifiable cable conductors to labelled connector terminals; colour alone is insufficient."},
+    {"id":"logic-side-identity","nodes":["D1","D2","D4","D5","N1","N2"],"question":"Which driver, rail or layer-transition terminals correspond to these joints?","needed":"Independently matched top joints and complete copper paths to known pins; proximity does not assign a net."}
+  ]
+}
