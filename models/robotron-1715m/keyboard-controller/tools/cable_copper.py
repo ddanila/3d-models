@@ -76,6 +76,8 @@ def build(root=ROOT):
     board = homography(landmarks['photoCorners'], landmarks['modelCorners'])
     checks = [dict(p, topPixel=top(p), projectedTopPixel=project(h, p['bottomPixel']),
                    residualPixels=math.dist(top(p), project(h, p['bottomPixel']))) for p in reg['checks']]
+    if set(data['nodes']) & set(connectivity['components']):
+        raise ValueError('Anonymous node IDs must not shadow reference component names')
     nodes = {}
     for name, n in data['nodes'].items():
         if len(n['pixel']) != 2 or not all(math.isfinite(v) for v in n['pixel']):

@@ -110,19 +110,19 @@
   },
   "connectedGroups": [
     [
-      "C1",
-      "CF2",
-      "E2"
-    ],
-    [
-      "C2",
-      "CF3",
-      "E3"
-    ],
-    [
       "CF1",
       "E1",
       "S1"
+    ],
+    [
+      "CF2",
+      "CL1",
+      "E2"
+    ],
+    [
+      "CF3",
+      "CL2",
+      "E3"
     ],
     [
       "CF4",
@@ -316,7 +316,7 @@
     {
       "ends": [
         "CF2",
-        "C1"
+        "CL1"
       ],
       "id": "cf2-cable-land",
       "modelPoints": [
@@ -371,7 +371,7 @@
     {
       "ends": [
         "CF3",
-        "C2"
+        "CL2"
       ],
       "id": "cf3-cable-land",
       "modelPoints": [
@@ -662,44 +662,16 @@
     }
   ],
   "inputSha256": {
-    "cable-copper.json": "f185e3e1bcc0f62565ecc0137ef365bcb088ab3878bd6efd87ff713ad6c01546",
+    "cable-copper.json": "e0adfff02c8749ae4826eea433ee0236235af3898c9093a7ec01f624debd6fe3",
     "component-evidence.json": "a72ba37c6e404cd699d6d6010aa4c448c22cc5ac7459562af68685c76b256ff8",
     "evidence.json": "261fe27e0acb73f701ebf3e5577b0f390d2001602c86ab7f53c922206e83f888",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
     "photo-landmarks.json": "f76f424013b762666e16ba3c28ddb322c8b65d6d88dd47584add2e1c427270b6",
     "tools/bottom_registration.py": "cc7cad09ee54bc63359ff8c4331c598b984a877cd942435d0ba5521a03edfad8",
-    "tools/cable_copper.py": "1ac8b95f2e52b3d840fda4715eb87a7bd511e48a6251630ca666281cd92edff0",
+    "tools/cable_copper.py": "aecd5d7a7c711b9ff8cb1b56ccb997ee3618ad659419097f3b7127d0cf2081be",
     "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068"
   },
   "nodes": {
-    "C1": {
-      "insideAnchorHull": true,
-      "kind": "solder-joint",
-      "modelPosition": [
-        -118.373494,
-        -9.256599768
-      ],
-      "net": null,
-      "pixel": [
-        1425,
-        563
-      ],
-      "scope": "Cable-region land, not an XT1 terminal assignment."
-    },
-    "C2": {
-      "insideAnchorHull": true,
-      "kind": "solder-joint",
-      "modelPosition": [
-        -118.1231177,
-        -3.419009303
-      ],
-      "net": null,
-      "pixel": [
-        1353,
-        566
-      ],
-      "scope": "Cable-region land, not an XT1 terminal assignment."
-    },
     "CF1": {
       "insideAnchorHull": false,
       "kind": "solder-joint",
@@ -752,6 +724,34 @@
         610
       ]
     },
+    "CL1": {
+      "insideAnchorHull": true,
+      "kind": "solder-joint",
+      "modelPosition": [
+        -118.373494,
+        -9.256599768
+      ],
+      "net": null,
+      "pixel": [
+        1425,
+        563
+      ],
+      "scope": "Cable-region land, not an XT1 terminal assignment."
+    },
+    "CL2": {
+      "insideAnchorHull": true,
+      "kind": "solder-joint",
+      "modelPosition": [
+        -118.1231177,
+        -3.419009303
+      ],
+      "net": null,
+      "pixel": [
+        1353,
+        566
+      ],
+      "scope": "Cable-region land, not an XT1 terminal assignment."
+    },
     "D1": {
       "insideAnchorHull": false,
       "kind": "solder-joint",
@@ -794,7 +794,7 @@
     },
     "D5": {
       "insideAnchorHull": true,
-      "kind": "solder-joint",
+      "kind": "trace-stop",
       "modelPosition": [
         -97.86787625,
         -13.6635064
@@ -803,7 +803,8 @@
       "pixel": [
         1490,
         814
-      ]
+      ],
+      "scope": "The lane continues beyond the review region; no solder joint or layer transition is identified at this stop."
     },
     "E1": {
       "insideAnchorHull": false,
@@ -1208,8 +1209,8 @@
       "needed": "Follow identifiable cable conductors to labelled connector terminals; colour alone is insufficient.",
       "nodes": [
         "S1",
-        "C1",
-        "C2"
+        "CL1",
+        "CL2"
       ],
       "question": "Which XT1 terminals reach these lands?"
     },
@@ -1224,7 +1225,7 @@
         "N1",
         "N2"
       ],
-      "question": "Which driver, rail or layer-transition terminals correspond to these joints?"
+      "question": "Which driver, rail or layer-transition terminals correspond to these features?"
     }
   ],
   "windingPairingCandidates": [

@@ -17,12 +17,12 @@
     "E3": {"pixel":[1445,640],"kind":"copper-end"},
     "E4": {"pixel":[1417,639],"kind":"copper-end"},
     "S1": {"pixel":[1498,578],"kind":"occlusion-boundary","scope":"Track enters a reworked solder region. The extent and cable attachment remain unclassified."},
-    "C1": {"pixel":[1425,563],"kind":"solder-joint","scope":"Cable-region land, not an XT1 terminal assignment."},
-    "C2": {"pixel":[1353,566],"kind":"solder-joint","scope":"Cable-region land, not an XT1 terminal assignment."},
+    "CL1": {"pixel":[1425,563],"kind":"solder-joint","scope":"Cable-region land, not an XT1 terminal assignment."},
+    "CL2": {"pixel":[1353,566],"kind":"solder-joint","scope":"Cable-region land, not an XT1 terminal assignment."},
     "D1": {"pixel":[1505,755],"kind":"solder-joint"},
     "D2": {"pixel":[1478,725],"kind":"trace-stop","scope":"Stop before the ambiguous bend and neighbouring joint."},
     "D4": {"pixel":[1448,757],"kind":"solder-joint"},
-    "D5": {"pixel":[1490,814],"kind":"solder-joint"},
+    "D5": {"pixel":[1490,814],"kind":"trace-stop","scope":"The lane continues beyond the review region; no solder joint or layer transition is identified at this stop."},
     "N1": {"pixel":[1353,608],"kind":"solder-joint"},
     "N2": {"pixel":[1353,740],"kind":"solder-joint"}
   },
@@ -32,8 +32,8 @@
     {"id":"cf3-stub","ends":["CF3","E3"],"via":[],"status":"observed"},
     {"id":"cf4-stub","ends":["CF4","E4"],"via":[],"status":"observed"},
     {"id":"cf1-solder-boundary","ends":["CF1","S1"],"via":[[1500,590]],"status":"observed"},
-    {"id":"cf2-cable-land","ends":["CF2","C1"],"via":[[1455,594],[1430,572]],"status":"observed"},
-    {"id":"cf3-cable-land","ends":["CF3","C2"],"via":[[1444,596],[1418,571]],"status":"observed"},
+    {"id":"cf2-cable-land","ends":["CF2","CL1"],"via":[[1455,594],[1430,572]],"status":"observed"},
+    {"id":"cf3-cable-land","ends":["CF3","CL2"],"via":[[1444,596],[1418,571]],"status":"observed"},
     {"id":"lf1-driver-joint","ends":["LF1","D1"],"via":[],"status":"observed"},
     {"id":"lf2-bend-stop","ends":["LF2","D2"],"via":[],"status":"observed"},
     {"id":"lf4-driver-joint","ends":["LF4","D4"],"via":[[1418,725],[1448,745]],"status":"observed"},
@@ -77,7 +77,7 @@
   "unresolved": [
     {"id":"winding-pairing","nodes":["CF1","CF2","CF3","CF4","LF1","LF2","LF3","LF4"],"question":"Which cable-facing joint pairs with which logic-facing joint through a winding?","alternatives":"All one-to-one row pairings remain possible; row adjacency is not winding continuity.","needed":"Trace individual insulated conductors through the core or obtain a joint-to-joint resistance map."},
     {"id":"no-readable-departure","nodes":["CF4","LF3"],"question":"Where do these joints continue beyond the visible stub or isolated pad?","needed":"A separately registered top-side attachment; underside appearance cannot establish disconnection."},
-    {"id":"cable-terminal-identity","nodes":["S1","C1","C2"],"question":"Which XT1 terminals reach these lands?","needed":"Follow identifiable cable conductors to labelled connector terminals; colour alone is insufficient."},
-    {"id":"logic-side-identity","nodes":["D1","D2","D4","D5","N1","N2"],"question":"Which driver, rail or layer-transition terminals correspond to these joints?","needed":"Independently matched top joints and complete copper paths to known pins; proximity does not assign a net."}
+    {"id":"cable-terminal-identity","nodes":["S1","CL1","CL2"],"question":"Which XT1 terminals reach these lands?","needed":"Follow identifiable cable conductors to labelled connector terminals; colour alone is insufficient."},
+    {"id":"logic-side-identity","nodes":["D1","D2","D4","D5","N1","N2"],"question":"Which driver, rail or layer-transition terminals correspond to these features?","needed":"Independently matched top joints and complete copper paths to known pins; proximity does not assign a net."}
   ]
 }

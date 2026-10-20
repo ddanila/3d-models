@@ -12,7 +12,7 @@ class ControllerExportTests(unittest.TestCase):
   report=build()
   self.assertEqual(report,json.loads((R/'generated/cable-copper.json').read_text()))
   group=next(g for g in report['connectedGroups'] if 'CF2' in g)
-  self.assertEqual(group,['C1','CF2','E2'])
+  self.assertEqual(group,['CF2','CL1','E2'])
   self.assertFalse(any(n.startswith('LF') for n in group))
   self.assertIn(['LF3'],report['connectedGroups'])
   self.assertFalse(report['projection']['copperAssignmentQualified'])
