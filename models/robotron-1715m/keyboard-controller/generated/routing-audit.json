@@ -2622,23 +2622,25 @@
       ]
     },
     {
-      "drcUnconnectedItems": 2,
+      "drcUnconnectedItems": 1,
       "floatingCopperGroups": 0,
       "islands": [
         {
-          "copperIds": [],
-          "evidenceGroups": [],
-          "evidenceStatuses": [],
-          "terminals": [
-            "A4:14"
+          "copperIds": [
+            "262240df-fc71-4050-a938-6fc2bdec2ec3",
+            "b026ccf5-ac6f-4109-a875-01e927eb65b2",
+            "d357c40a-8fcf-4860-8b9f-d4c6555c9cbd",
+            "e4a3daa0-1608-43ca-8a06-622e27aed30b"
           ],
-          "unplacedTerminals": []
-        },
-        {
-          "copperIds": [],
-          "evidenceGroups": [],
-          "evidenceStatuses": [],
+          "evidenceGroups": [
+            "cpu-latch-d5"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
           "terminals": [
+            "A4:14",
             "A5:9"
           ],
           "unplacedTerminals": []
@@ -2657,8 +2659,8 @@
       "multiTerminal": true,
       "nativePadsConnected": false,
       "net": "/D5",
-      "padGroups": 3,
-      "remainingPadGroupLinks": 2,
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
       "terminals": [
         "A4:14",
         "A5:9",
@@ -2666,23 +2668,26 @@
       ]
     },
     {
-      "drcUnconnectedItems": 2,
+      "drcUnconnectedItems": 1,
       "floatingCopperGroups": 0,
       "islands": [
         {
-          "copperIds": [],
-          "evidenceGroups": [],
-          "evidenceStatuses": [],
-          "terminals": [
-            "A4:13"
+          "copperIds": [
+            "d5594d72-7a01-4a47-80f0-920e6824378e",
+            "d8ef09a7-24da-4cc4-b01d-61bb563aae5e",
+            "ddfcc1ee-dd44-44db-81bd-7ca5d1466dab",
+            "f548df4e-38fd-427e-aadf-a52897f78163",
+            "fd3e3339-3b71-4d7a-a926-c3b5b3e7da11"
           ],
-          "unplacedTerminals": []
-        },
-        {
-          "copperIds": [],
-          "evidenceGroups": [],
-          "evidenceStatuses": [],
+          "evidenceGroups": [
+            "cpu-latch-d6"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
           "terminals": [
+            "A4:13",
             "A5:10"
           ],
           "unplacedTerminals": []
@@ -2701,8 +2706,8 @@
       "multiTerminal": true,
       "nativePadsConnected": false,
       "net": "/D6",
-      "padGroups": 3,
-      "remainingPadGroupLinks": 2,
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
       "terminals": [
         "A4:13",
         "A5:10",
@@ -2710,23 +2715,27 @@
       ]
     },
     {
-      "drcUnconnectedItems": 2,
+      "drcUnconnectedItems": 1,
       "floatingCopperGroups": 0,
       "islands": [
         {
-          "copperIds": [],
-          "evidenceGroups": [],
-          "evidenceStatuses": [],
-          "terminals": [
-            "A4:12"
+          "copperIds": [
+            "273e2cea-27be-467b-bae4-1b2272147cf6",
+            "2fd6d587-153b-4929-aaae-377015141aa3",
+            "31fe8340-b3a5-4e3a-a9c9-ac7df926743d",
+            "405fa200-88ab-401b-a9ea-26c2b208456f",
+            "4ec8eeff-4eb9-466f-9ec6-cd50a4dbdf35",
+            "72b9ba41-c33d-4ae8-86cd-cc2a68cd46ef"
           ],
-          "unplacedTerminals": []
-        },
-        {
-          "copperIds": [],
-          "evidenceGroups": [],
-          "evidenceStatuses": [],
+          "evidenceGroups": [
+            "cpu-latch-d7"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
           "terminals": [
+            "A4:12",
             "A5:13"
           ],
           "unplacedTerminals": []
@@ -2745,8 +2754,8 @@
       "multiTerminal": true,
       "nativePadsConnected": false,
       "net": "/D7",
-      "padGroups": 3,
-      "remainingPadGroupLinks": 2,
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
       "terminals": [
         "A4:12",
         "A5:13",
@@ -4883,12 +4892,12 @@
   "scope": "Native KiCad same-net connectivity, including off-board placeholder pads. Connected does not mean historically verified or fabrication-ready. DRC gaps may include floating copper; pad-group links count only disconnected terminal groups. Cross-net clearance/short findings remain in qualification.json.",
   "summary": {
     "assignedPins": 330,
-    "drcUnconnectedItems": 211,
+    "drcUnconnectedItems": 208,
     "floatingCopperGroups": 0,
     "fullyConnectedMultiTerminalNets": 1,
     "minimumLinks": 234,
     "multiTerminalNets": 94,
     "nets": 96,
-    "remainingPadGroupLinks": 211
+    "remainingPadGroupLinks": 208
   }
 }

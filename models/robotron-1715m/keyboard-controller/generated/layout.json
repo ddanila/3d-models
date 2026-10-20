@@ -7861,7 +7861,7 @@
         "geometrySha256": "50dcdea61a61bb220495974d50b436de7342b6ceafeeeeb0700b8e0f6d77516b",
         "group": "r101-output-top-local",
         "registration": {
-          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
           "region": "a1-output-inner",
           "side": "top"
         },
@@ -7910,7 +7910,7 @@
         "geometrySha256": "c48f7a59f8a6e10588954d022c0b1f276358e4e993dc955e11402cf620dd04d1",
         "group": "r101-output-top-local",
         "registration": {
-          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
           "region": "a1-output-inner",
           "side": "top"
         },
@@ -7959,7 +7959,7 @@
         "geometrySha256": "c997f5bad16ed3433a68cd84f042ddec7eda31702cbc00e988533c4f26068cdc",
         "group": "r101-output-top-local",
         "registration": {
-          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
           "region": "a1-output-inner",
           "side": "top"
         },
@@ -9564,6 +9564,483 @@
     },
     {
       "evidence": {
+        "detail": "Observed exposed copper centreline. Visible latch-to-CPU D5 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "2c2b158a2a8eb2b15d76ef81c8d1e040e62f6de216034e05cfd03a9274a2db2f",
+        "group": "cpu-latch-d5",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1463,
+                  3004
+                ],
+                [
+                  1510,
+                  3001
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:14",
+          "A5:9"
+        ]
+      },
+      "id": "262240df-fc71-4050-a938-6fc2bdec2ec3",
+      "net": "/D5",
+      "points": [
+        [
+          58.583116,
+          -4.151243
+        ],
+        [
+          58.096737,
+          -1.00167
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D5 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "797934b26ffea91e76bab9fa837b3c002ec20499cc9eecbefac7695dba3974c1",
+        "group": "cpu-latch-d5",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1556,
+                  2997
+                ],
+                [
+                  1585,
+                  3008
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "A4:14",
+          "A5:9"
+        ]
+      },
+      "id": "b026ccf5-ac6f-4109-a875-01e927eb65b2",
+      "net": "/D5",
+      "points": [
+        [
+          57.523451,
+          2.153856
+        ],
+        [
+          58.179131,
+          4.17694
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible latch-to-CPU D5 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "69053e8eab0fab838ed2138525077e85d7c09950957a231c8abea3a17a857b0f",
+        "group": "cpu-latch-d5",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1510,
+                  3001
+                ],
+                [
+                  1556,
+                  2997
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:14",
+          "A5:9"
+        ]
+      },
+      "id": "d357c40a-8fcf-4860-8b9f-d4c6555c9cbd",
+      "net": "/D5",
+      "points": [
+        [
+          58.096737,
+          -1.00167
+        ],
+        [
+          57.523451,
+          2.153856
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D5 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "440db2ae729f9a4e0874e3408cdcf518941439eb09683f7992385a4de7a3003b",
+        "group": "cpu-latch-d5",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1448,
+                  3006
+                ],
+                [
+                  1463,
+                  3004
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "A4:14",
+          "A5:9"
+        ]
+      },
+      "id": "e4a3daa0-1608-43ca-8a06-622e27aed30b",
+      "net": "/D5",
+      "points": [
+        [
+          58.623564,
+          -5.167535
+        ],
+        [
+          58.583116,
+          -4.151243
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible latch-to-CPU D6 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "8f9923155450167ff74c07b7ea1d45de57992115e05cccb0b81d469a39caa3df",
+        "group": "cpu-latch-d6",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1464,
+                  3020
+                ],
+                [
+                  1527,
+                  3017
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:13",
+          "A5:10"
+        ]
+      },
+      "id": "d5594d72-7a01-4a47-80f0-920e6824378e",
+      "net": "/D6",
+      "points": [
+        [
+          59.843382,
+          -4.117136
+        ],
+        [
+          59.291868,
+          0.104704
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D6 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "8a64bc07dd47e99296de1953d5a2de8e98c855ded3d39f1adfbeffaf11a72c75",
+        "group": "cpu-latch-d6",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1558,
+                  3030
+                ],
+                [
+                  1587,
+                  3040
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "A4:13",
+          "A5:10"
+        ]
+      },
+      "id": "d8ef09a7-24da-4cc4-b01d-61bb563aae5e",
+      "net": "/D6",
+      "points": [
+        [
+          60.179876,
+          2.179168
+        ],
+        [
+          60.719126,
+          4.17183
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D6 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "1225f7b80d4407b786a2db68edb5fb3d809cdba4ec93fd5edee8a5e2f91cf28e",
+        "group": "cpu-latch-d6",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1449,
+                  3038
+                ],
+                [
+                  1464,
+                  3020
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "A4:13",
+          "A5:10"
+        ]
+      },
+      "id": "ddfcc1ee-dd44-44db-81bd-7ca5d1466dab",
+      "net": "/D6",
+      "points": [
+        [
+          61.163559,
+          -5.172386
+        ],
+        [
+          59.843382,
+          -4.117136
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible latch-to-CPU D6 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "72afd65a7c92482bdfcec14f1698335a8df9907d332b5a724e84983b13f26a0b",
+        "group": "cpu-latch-d6",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1545,
+                  3031
+                ],
+                [
+                  1558,
+                  3030
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:13",
+          "A5:10"
+        ]
+      },
+      "id": "f548df4e-38fd-427e-aadf-a52897f78163",
+      "net": "/D6",
+      "points": [
+        [
+          60.323244,
+          1.286476
+        ],
+        [
+          60.179876,
+          2.179168
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible latch-to-CPU D6 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "ed5338b4787a2056a2c0814f9544d389eff015aee67d321e5a2c9c42ddd94478",
+        "group": "cpu-latch-d6",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1527,
+                  3017
+                ],
+                [
+                  1545,
+                  3031
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:13",
+          "A5:10"
+        ]
+      },
+      "id": "fd3e3339-3b71-4d7a-a926-c3b5b3e7da11",
+      "net": "/D6",
+      "points": [
+        [
+          59.291868,
+          0.104704
+        ],
+        [
+          60.323244,
+          1.286476
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
         "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D2 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
         "geometrySha256": "873b10ad25c25e2b3515e99b65638cc05ce557bba7dabf7176a3d46fb1e563e6",
         "group": "cpu-rom-d2",
@@ -9924,6 +10401,324 @@
         ]
       ],
       "side": "bottom",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "00e4507421cae46f4bcb97a6300ff231eada9f48eee3bebae0893a17a2899331",
+        "group": "cpu-latch-d7",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1507,
+                  3122
+                ],
+                [
+                  1539,
+                  3121
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:12",
+          "A5:13"
+        ]
+      },
+      "id": "273e2cea-27be-467b-bae4-1b2272147cf6",
+      "net": "/D7",
+      "points": [
+        [
+          67.579934,
+          -1.516922
+        ],
+        [
+          67.402695,
+          0.603969
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "67d19d7d1bde4e1f10d110789d2a241ac0fced0518a7340a2bc2f20cc3b9b0d1",
+        "group": "cpu-latch-d7",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1552,
+                  3126
+                ],
+                [
+                  1563,
+                  3126
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:12",
+          "A5:13"
+        ]
+      },
+      "id": "2fd6d587-153b-4929-aaae-377015141aa3",
+      "net": "/D7",
+      "points": [
+        [
+          67.746251,
+          1.457277
+        ],
+        [
+          67.711988,
+          2.195836
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "c5f76d249d3a33d01e53f6c02f140c0a55ca95436994e5a99eeee5d0bda2a006",
+        "group": "cpu-latch-d7",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1563,
+                  3126
+                ],
+                [
+                  1591,
+                  3138
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "A4:12",
+          "A5:13"
+        ]
+      },
+      "id": "31fe8340-b3a5-4e3a-a9c9-ac7df926743d",
+      "net": "/D7",
+      "points": [
+        [
+          67.711988,
+          2.195836
+        ],
+        [
+          68.33911,
+          4.156501
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "652756835e445ce5013ef2ad94b58f711ee6861c140aecfc554a0397c22280c0",
+        "group": "cpu-latch-d7",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1450,
+                  3071
+                ],
+                [
+                  1462,
+                  3080
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "A4:12",
+          "A5:13"
+        ]
+      },
+      "id": "405fa200-88ab-401b-a9ea-26c2b208456f",
+      "net": "/D7",
+      "points": [
+        [
+          63.703555,
+          -5.177237
+        ],
+        [
+          64.520707,
+          -4.365507
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "46c3b1fff6380b492d65de5c0e2396aa41b496886c564cbc8585904af91ce9f0",
+        "group": "cpu-latch-d7",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1462,
+                  3080
+                ],
+                [
+                  1507,
+                  3122
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:12",
+          "A5:13"
+        ]
+      },
+      "id": "4ec8eeff-4eb9-466f-9ec6-cd50a4dbdf35",
+      "net": "/D7",
+      "points": [
+        [
+          64.520707,
+          -4.365507
+        ],
+        [
+          67.579934,
+          -1.516922
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
+        "geometrySha256": "ea937bf0ac17c5b2e1823042bf100cadcbf8f1c33cc9cf6149701c23b17779f8",
+        "group": "cpu-latch-d7",
+        "registration": {
+          "landmarksSha256": "15d811ce5a6b8feb48ef5048d4ecd69646e823a1b202746f216203f4ef2fd5dd",
+          "region": "cpu-latch-data",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1539,
+                  3121
+                ],
+                [
+                  1552,
+                  3126
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:12",
+          "A5:13"
+        ]
+      },
+      "id": "72b9ba41-c33d-4ae8-86cd-cc2a68cd46ef",
+      "net": "/D7",
+      "points": [
+        [
+          67.402695,
+          0.603969
+        ],
+        [
+          67.746251,
+          1.457277
+        ]
+      ],
+      "side": "top",
       "width": 0.25
     },
     {

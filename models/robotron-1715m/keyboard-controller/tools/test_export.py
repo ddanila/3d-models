@@ -6,6 +6,14 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_native_hull_rounding_does_not_allow_photo_extrapolation(self):
+  from bottom_registration import inside_hull
+  for size in [1,100]:
+   hull=[[0,0],[size,0],[size,size],[0,size]]
+   self.assertFalse(inside_hull([-0.000001,size/2],hull))
+   self.assertTrue(inside_hull([-0.000001,size/2],hull,0.000002))
+   self.assertFalse(inside_hull([-0.001,size/2],hull,0.000002))
+
  def test_bus_search_preserves_occlusion_without_assigning_continuity(self):
   from bus_review import build
   report=build()

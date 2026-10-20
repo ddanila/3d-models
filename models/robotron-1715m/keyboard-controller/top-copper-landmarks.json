@@ -111,6 +111,111 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cpu-latch-data",
+      "scope": "Local top lead correspondence between A4 and A5. Raised leads obscure hole entries; short pad attachments are inferred separately. Only exposed copper inside the anchor hull is projected. Nominal geometry, not metrology or measured continuity.",
+      "reviewedForCopper": true,
+      "anchors": [
+        {
+          "ref": "A4",
+          "pin": "16",
+          "photoPixel": [
+            1446,
+            2940
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "8",
+          "photoPixel": [
+            1584,
+            2976
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "15",
+          "photoPixel": [
+            1596,
+            3202
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "11",
+          "photoPixel": [
+            1450,
+            3102
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "A4",
+          "pin": "15",
+          "photoPixel": [
+            1447,
+            2972
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "14",
+          "photoPixel": [
+            1448,
+            3006
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "13",
+          "photoPixel": [
+            1449,
+            3038
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "12",
+          "photoPixel": [
+            1450,
+            3071
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "9",
+          "photoPixel": [
+            1585,
+            3008
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "10",
+          "photoPixel": [
+            1587,
+            3040
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "13",
+          "photoPixel": [
+            1591,
+            3138
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "14",
+          "photoPixel": [
+            1595,
+            3170
+          ]
+        }
+      ]
     }
   ]
 }

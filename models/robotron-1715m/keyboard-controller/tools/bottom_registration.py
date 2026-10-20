@@ -24,10 +24,11 @@ def local_reviews(e,top_pins,metric):
   regions.append({'id':region['id'],'scope':region['scope'],'bottomToTop':h,'anchors':anchors,'checks':checked,'maxCheckResidualMm':maximum,'withinPhotoTolerance':maximum<=e['toleranceMm'],'copperAssignmentQualified':False,'candidates':[candidate(p)for p in region['candidates']],'extrapolationChecks':[candidate(p)for p in region.get('extrapolationChecks',[])]})
  return regions
 
-def inside_hull(point,hull):
+def inside_hull(point,hull,distance_tolerance=0):
  # Anchors must be supplied in convex boundary order; no bounding-box extrapolation.
  crosses=[(b[0]-a[0])*(point[1]-a[1])-(b[1]-a[1])*(point[0]-a[0])for a,b in zip(hull,hull[1:]+hull[:1])]
- return all(v>=-1e-8 for v in crosses)or all(v<=1e-8 for v in crosses)
+ limits=[max(1e-8,distance_tolerance*math.dist(a,b))for a,b in zip(hull,hull[1:]+hull[:1])]
+ return all(v>=-limit for v,limit in zip(crosses,limits))or all(v<=limit for v,limit in zip(crosses,limits))
 
 def pcb_regions(e,pads):
  regions=[]
@@ -64,7 +65,10 @@ def validate_registered_routes(routes,report,landmark_sha,side='bottom'):
   if route['side']!=side or len(points)!=len(route['points']):raise ValueError('Registered route needs same-side pixel correspondence')
   if not all(inside_hull(p,region['anchorHull'])for p in points):raise ValueError('Route exceeds local registration hull')
   model_hull=[project(region['photoToModel'],p)for p in region['anchorHull']]
-  if not all(inside_hull(p,model_hull)for p in route['points']):raise ValueError('Native route exceeds local registration hull')
+  # Native coordinates are rounded to KiCad's nanometre grid. Collinear pad
+  # centres can fall just outside a fitted edge by rounding alone; use the same
+  # two-nanometre budget as the projection check, not the photo tolerance.
+  if not all(inside_hull(p,model_hull,0.000002)for p in route['points']):raise ValueError('Native route exceeds local registration hull')
   if record['status']=='inferred' and any(math.dist(project(region['photoToModel'],p),q)>region['toleranceMm']for p,q in zip(points,route['points'])):
    raise ValueError('Inferred attachment exceeds local registration tolerance')
   if record['status']=='observed' and any(math.dist(project(region['photoToModel'],p),q)>0.000002 for p,q in zip(points,route['points'])):

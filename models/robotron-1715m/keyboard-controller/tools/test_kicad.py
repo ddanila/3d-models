@@ -52,6 +52,9 @@ class KiCadExportTests(unittest.TestCase):
    net=next(n for n in actual['nets'] if n['net']==candidate['referenceNet'])
    self.assertFalse(any(set(candidate['terminals'])<=set(g['terminals']) for g in net['islands']))
    self.assertFalse(any(v['evidence'].get('group')==candidate['id'] for v in layout['routes']))
+  for net,pins in [('/D5',{'A4:14','A5:9'}),('/D6',{'A4:13','A5:10'}),('/D7',{'A4:12','A5:13'})]:
+   islands=next(n for n in actual['nets'] if n['net']==net)['islands']
+   self.assertTrue(any(pins==set(g['terminals']) for g in islands))
 
  def test_routes_via_and_pin_mismatch(self):
   with tempfile.TemporaryDirectory() as tmp:
