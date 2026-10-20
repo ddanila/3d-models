@@ -60,7 +60,7 @@
         0
       ],
       "fov": 31,
-      "include": "^keyboard-(controller-|entry-choke|entry-wires)",
+      "include": "^keyboard-(controller-|entry-(choke|wires|black|pink|blue))",
       "note": "Separate narrow controller; clean component construction and approximate placement, not an electrical reconstruction."
     },
     {
