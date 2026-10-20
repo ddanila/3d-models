@@ -13,7 +13,7 @@
     "generated/bottom-registration.json": "fe7e23ac9c7e96b0a75d08c5fedbf95ca1534dea364f82c47f221de3018a4c64",
     "photo-landmarks.json": "f76f424013b762666e16ba3c28ddb322c8b65d6d88dd47584add2e1c427270b6",
     "bottom-landmarks.json": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
-    "tools/connection_review.py": "b6da136c30d9487ca166110903fb71fa0f287cb4d9afeb4b55f0c1ca52de45ee",
+    "tools/connection_review.py": "1f524607ed7309992c374880045080a7248f802bae64d3a8602fcda80447a59a",
     "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068",
     "tools/bottom_registration.py": "cc7cad09ee54bc63359ff8c4331c598b984a877cd942435d0ba5521a03edfad8"
   },
@@ -159,7 +159,7 @@
                   1687,
                   1151
                 ],
-                "residualPixels": 5.259668553097439
+                "residualPixels": 5.259668553
               },
               {
                 "terminal": "R7:2",
@@ -171,7 +171,7 @@
                   1529,
                   1154
                 ],
-                "residualPixels": 3.002095315024153
+                "residualPixels": 3.002095315
               },
               {
                 "terminal": "R8:1",
@@ -183,7 +183,7 @@
                   1687,
                   1200
                 ],
-                "residualPixels": 8.59662944756314
+                "residualPixels": 8.596629448
               },
               {
                 "terminal": "R8:2",
@@ -195,7 +195,7 @@
                   1531,
                   1206
                 ],
-                "residualPixels": 9.335856674521967
+                "residualPixels": 9.335856675
               },
               {
                 "terminal": "A1:14",
@@ -207,7 +207,7 @@
                   1389,
                   1482
                 ],
-                "residualPixels": 11.337955361028714
+                "residualPixels": 11.33795536
               },
               {
                 "terminal": "A2.1:1",
@@ -219,7 +219,7 @@
                   1630,
                   1475
                 ],
-                "residualPixels": 18.328353270971633
+                "residualPixels": 18.32835327
               },
               {
                 "terminal": "A1:1",
@@ -231,7 +231,7 @@
                   1285,
                   1495
                 ],
-                "residualPixels": 7.4410409252587835
+                "residualPixels": 7.441040925
               },
               {
                 "terminal": "A2.1:14",
@@ -243,26 +243,26 @@
                   1710,
                   1468
                 ],
-                "residualPixels": 15.287509542640812
+                "residualPixels": 15.28750954
               }
             ],
             "bottomToTop": [
-              -0.932227158914986,
-              -0.11472964446905022,
-              2576.0286718654093,
-              0.004010881834842524,
-              0.7362362839758987,
-              227.70988947709645,
-              -2.147091754526591e-05,
-              -0.00012160654842664004,
+              -0.9322271589,
+              -0.1147296445,
+              2576.028672,
+              0.004010881835,
+              0.736236284,
+              227.7098895,
+              -2.147091755e-05,
+              -0.0001216065484,
               1
             ],
             "projectedTopPixel": [
-              1544.823927966628,
-              1354.570832066753
+              1544.823928,
+              1354.570832
             ],
             "insideAnchorHull": true,
-            "maxCheckResidualPixels": 18.328353270971633
+            "maxCheckResidualPixels": 18.32835327
           },
           {
             "anchors": [
@@ -322,7 +322,7 @@
                   1687,
                   1151
                 ],
-                "residualPixels": 5.093889029498301
+                "residualPixels": 5.093889029
               },
               {
                 "terminal": "R7:2",
@@ -334,7 +334,7 @@
                   1529,
                   1154
                 ],
-                "residualPixels": 2.7117449260940725
+                "residualPixels": 2.711744926
               },
               {
                 "terminal": "R8:1",
@@ -346,7 +346,7 @@
                   1687,
                   1200
                 ],
-                "residualPixels": 8.361188951733922
+                "residualPixels": 8.361188952
               },
               {
                 "terminal": "R8:2",
@@ -358,7 +358,7 @@
                   1531,
                   1206
                 ],
-                "residualPixels": 9.127763706344902
+                "residualPixels": 9.127763706
               },
               {
                 "terminal": "A1:14",
@@ -370,7 +370,7 @@
                   1389,
                   1482
                 ],
-                "residualPixels": 4.0317106190785985
+                "residualPixels": 4.031710619
               },
               {
                 "terminal": "A2.1:1",
@@ -382,7 +382,7 @@
                   1630,
                   1475
                 ],
-                "residualPixels": 16.731162473286638
+                "residualPixels": 16.73116247
               },
               {
                 "terminal": "R10.1:2",
@@ -394,7 +394,7 @@
                   1448,
                   1492
                 ],
-                "residualPixels": 8.99915805978471
+                "residualPixels": 8.99915806
               },
               {
                 "terminal": "R10.2:2",
@@ -406,33 +406,33 @@
                   1498,
                   1490
                 ],
-                "residualPixels": 9.667221526842319
+                "residualPixels": 9.667221527
               }
             ],
             "bottomToTop": [
-              -1.0456583038434846,
-              0.030367751821377346,
-              2622.3426485535642,
-              -0.04869985414190157,
-              0.881241885370399,
-              185.94878142677743,
-              -7.00355677609344e-05,
-              -2.827121994336586e-05,
+              -1.045658304,
+              0.03036775182,
+              2622.342649,
+              -0.04869985414,
+              0.8812418854,
+              185.9487814,
+              -7.003556776e-05,
+              -2.827121994e-05,
               1
             ],
             "projectedTopPixel": [
-              1544.3622720450771,
-              1351.0428836716767
+              1544.362272,
+              1351.042884
             ],
             "insideAnchorHull": true,
-            "maxCheckResidualPixels": 16.731162473286638
+            "maxCheckResidualPixels": 16.73116247
           }
         ],
         "centerTopPixel": [
-          1544.5931000058526,
-          1352.8068578692148
+          1544.5931,
+          1352.806858
         ],
-        "fitSpreadPixels": 3.5580255856617886,
+        "fitSpreadPixels": 3.558025586,
         "searchRadiusPixels": 30,
         "radiusBasis": "Maximum held-out residual + fit spread + explicit search padding; heuristic search margin, not a confidence bound.",
         "copperAssignmentQualified": false
@@ -614,8 +614,8 @@
             },
             {
               "point": [
-                1544.5931000058526,
-                1352.8068578692148
+                1544.5931,
+                1352.806858
               ],
               "radius": 30,
               "kind": "search",
@@ -818,7 +818,7 @@
                   1687,
                   1151
                 ],
-                "residualPixels": 5.259668553097439
+                "residualPixels": 5.259668553
               },
               {
                 "terminal": "R7:2",
@@ -830,7 +830,7 @@
                   1529,
                   1154
                 ],
-                "residualPixels": 3.002095315024153
+                "residualPixels": 3.002095315
               },
               {
                 "terminal": "R8:1",
@@ -842,7 +842,7 @@
                   1687,
                   1200
                 ],
-                "residualPixels": 8.59662944756314
+                "residualPixels": 8.596629448
               },
               {
                 "terminal": "R8:2",
@@ -854,7 +854,7 @@
                   1531,
                   1206
                 ],
-                "residualPixels": 9.335856674521967
+                "residualPixels": 9.335856675
               },
               {
                 "terminal": "A1:14",
@@ -866,7 +866,7 @@
                   1389,
                   1482
                 ],
-                "residualPixels": 11.337955361028714
+                "residualPixels": 11.33795536
               },
               {
                 "terminal": "A2.1:1",
@@ -878,7 +878,7 @@
                   1630,
                   1475
                 ],
-                "residualPixels": 18.328353270971633
+                "residualPixels": 18.32835327
               },
               {
                 "terminal": "A1:1",
@@ -890,7 +890,7 @@
                   1285,
                   1495
                 ],
-                "residualPixels": 7.4410409252587835
+                "residualPixels": 7.441040925
               },
               {
                 "terminal": "A2.1:14",
@@ -902,26 +902,26 @@
                   1710,
                   1468
                 ],
-                "residualPixels": 15.287509542640812
+                "residualPixels": 15.28750954
               }
             ],
             "bottomToTop": [
-              -0.932227158914986,
-              -0.11472964446905022,
-              2576.0286718654093,
-              0.004010881834842524,
-              0.7362362839758987,
-              227.70988947709645,
-              -2.147091754526591e-05,
-              -0.00012160654842664004,
+              -0.9322271589,
+              -0.1147296445,
+              2576.028672,
+              0.004010881835,
+              0.736236284,
+              227.7098895,
+              -2.147091755e-05,
+              -0.0001216065484,
               1
             ],
             "projectedTopPixel": [
-              1614.8857826986016,
-              1148.3139218218287
+              1614.885783,
+              1148.313922
             ],
             "insideAnchorHull": true,
-            "maxCheckResidualPixels": 18.328353270971633
+            "maxCheckResidualPixels": 18.32835327
           },
           {
             "anchors": [
@@ -981,7 +981,7 @@
                   1687,
                   1151
                 ],
-                "residualPixels": 5.093889029498301
+                "residualPixels": 5.093889029
               },
               {
                 "terminal": "R7:2",
@@ -993,7 +993,7 @@
                   1529,
                   1154
                 ],
-                "residualPixels": 2.7117449260940725
+                "residualPixels": 2.711744926
               },
               {
                 "terminal": "R8:1",
@@ -1005,7 +1005,7 @@
                   1687,
                   1200
                 ],
-                "residualPixels": 8.361188951733922
+                "residualPixels": 8.361188952
               },
               {
                 "terminal": "R8:2",
@@ -1017,7 +1017,7 @@
                   1531,
                   1206
                 ],
-                "residualPixels": 9.127763706344902
+                "residualPixels": 9.127763706
               },
               {
                 "terminal": "A1:14",
@@ -1029,7 +1029,7 @@
                   1389,
                   1482
                 ],
-                "residualPixels": 4.0317106190785985
+                "residualPixels": 4.031710619
               },
               {
                 "terminal": "A2.1:1",
@@ -1041,7 +1041,7 @@
                   1630,
                   1475
                 ],
-                "residualPixels": 16.731162473286638
+                "residualPixels": 16.73116247
               },
               {
                 "terminal": "R10.1:2",
@@ -1053,7 +1053,7 @@
                   1448,
                   1492
                 ],
-                "residualPixels": 8.99915805978471
+                "residualPixels": 8.99915806
               },
               {
                 "terminal": "R10.2:2",
@@ -1065,33 +1065,33 @@
                   1498,
                   1490
                 ],
-                "residualPixels": 9.667221526842319
+                "residualPixels": 9.667221527
               }
             ],
             "bottomToTop": [
-              -1.0456583038434846,
-              0.030367751821377346,
-              2622.3426485535642,
-              -0.04869985414190157,
-              0.881241885370399,
-              185.94878142677743,
-              -7.00355677609344e-05,
-              -2.827121994336586e-05,
+              -1.045658304,
+              0.03036775182,
+              2622.342649,
+              -0.04869985414,
+              0.8812418854,
+              185.9487814,
+              -7.003556776e-05,
+              -2.827121994e-05,
               1
             ],
             "projectedTopPixel": [
-              1614.7753741322967,
-              1148.44086316775
+              1614.775374,
+              1148.440863
             ],
             "insideAnchorHull": true,
-            "maxCheckResidualPixels": 16.731162473286638
+            "maxCheckResidualPixels": 16.73116247
           }
         ],
         "centerTopPixel": [
-          1614.830578415449,
-          1148.3773924947893
+          1614.830578,
+          1148.377392
         ],
-        "fitSpreadPixels": 0.1682383928174555,
+        "fitSpreadPixels": 0.1682383928,
         "searchRadiusPixels": 27,
         "radiusBasis": "Maximum held-out residual + fit spread + explicit search padding; heuristic search margin, not a confidence bound.",
         "copperAssignmentQualified": false
@@ -1238,8 +1238,8 @@
           "markers": [
             {
               "point": [
-                1614.830578415449,
-                1148.3773924947893
+                1614.830578,
+                1148.377392
               ],
               "radius": 27,
               "kind": "search",

@@ -19,6 +19,17 @@ CODE_INPUTS = ['tools/connection_review.py', 'tools/photo_registration.py',
                'tools/bottom_registration.py']
 
 
+def stable_numbers(value):
+    """Discard sub-pixel numerical noise in portable review artifacts."""
+    if isinstance(value, float):
+        return float(format(value, '.10g'))
+    if isinstance(value, dict):
+        return {key: stable_numbers(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [stable_numbers(item) for item in value]
+    return value
+
+
 def cross_side_search(data, stop):
     """Localize an occluded stop; never qualify a track or layer transition."""
     config = data['connection-review.json']['crossSideSearch']
@@ -165,9 +176,9 @@ def build(root=ROOT):
         result['figures'] = list(figures.values())
         result['supportingPhotos'] = [source(sid) for sid in case['supportingSources']]
         cases.append(result)
-    return {'schema': 1, 'scope': data['connection-review.json']['scope'],
+    return stable_numbers({'schema': 1, 'scope': data['connection-review.json']['scope'],
             'inputSha256': {name: hashlib.sha256((root / name).read_bytes()).hexdigest() for name in INPUTS + CODE_INPUTS},
-            'cases': cases}
+            'cases': cases})
 
 
 def render(report):
