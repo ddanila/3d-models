@@ -5,6 +5,7 @@
 import argparse,hashlib,json,math,os,shutil,subprocess,tempfile,collections,xml.etree.ElementTree as ET
 from pathlib import Path
 from geometry import arc_points, outline_polygon
+from routing_audit import build as routing_audit
 from output_assembly import build as output_assembly
 from cable_copper import build as cable_copper
 from connector_review import review as connector_review, placement_review
@@ -167,6 +168,7 @@ def main():
  layout['visualAxials']=visual_axials(json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),unplaced)
  layout['visualOutputAssembly']=output_assembly(json.loads((ROOT/'output-assembly.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()))
  write('layout.json',layout)
+ write('routing-audit.json',routing_audit(board,components,layout,drc_data))
  write('cable-copper.json',cable_copper(ROOT))
  write('connector-review.json',connector)
  write('connector-terminals.json',terminals)
@@ -243,7 +245,7 @@ def main():
    x,y=c['position'];svg.append(f'<text x="{x}" y="{-y-4}" fill="white" font-size="2.8">{c["ref"]}</text>')
   svg.append('</g>')
  write('review.svg',''.join(svg)+'</svg>\n')
- inputs=['filter-registration.json','supply-review.json','cable-copper.json','tools/cable_copper.py','output-assembly.json','tools/output_assembly.py','top-copper-landmarks.json','tools/top_registration.py','controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/connector_review.py','tools/connector_terminals.py','tools/route_evidence.py','route-evidence.json','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
+ inputs=['tools/routing_audit.py','filter-registration.json','supply-review.json','cable-copper.json','tools/cable_copper.py','output-assembly.json','tools/output_assembly.py','top-copper-landmarks.json','tools/top_registration.py','controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/connector_review.py','tools/connector_terminals.py','tools/route_evidence.py','route-evidence.json','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
  outputs=sorted(p for p in (ROOT/'generated').iterdir() if p.name!='manifest.json')
  for source in json.loads((ROOT/'evidence.json').read_text())['sources']:
   if not source.get('path'):continue

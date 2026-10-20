@@ -1505,7 +1505,7 @@
           "pin": "17",
           "position": [
             78.49909,
-            4.136074
+            4.136075
           ],
           "ref": "A5",
           "size": [
@@ -1879,7 +1879,7 @@
           "pin": "37",
           "position": [
             45.509814,
-            19.442446
+            19.442445
           ],
           "ref": "A5",
           "size": [
@@ -5109,6 +5109,54 @@
     },
     {
       "evidence": {
+        "detail": "Observed exposed copper centreline. Visible supply land between the lower R6.6 lead and A7 pin 14. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "7149f5c303413b228d6c0e6a671a6c4d0a879330956f4d45488aff417fe90e89",
+        "group": "ff-pullup-supply-a7",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1498,
+                  3577
+                ],
+                [
+                  1470,
+                  3579
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "R6.6:1",
+          "A7:14"
+        ]
+      },
+      "id": "1ab55816-2127-40fc-82d4-52bfe63b3c4c",
+      "net": "/+5V",
+      "points": [
+        [
+          102.560355,
+          -3.540069
+        ],
+        [
+          102.704846,
+          -5.634405
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
         "detail": "Estimated attachment from visible copper to photo-positioned R5:1; solder obscures the precise pad boundary. Net +5V follows the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. Further continuation behind C4 remains unresolved.",
         "geometrySha256": "86ef501847230aface91ef861ed1edec0c291b82a92ae7c3a7f7ea11b608c88a",
         "group": "reset-r5-supply-top",
@@ -5197,6 +5245,54 @@
     },
     {
       "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible supply island from the R10.2 lower lead toward the upper C5.1 lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "2329243b2d8ad53d8dd9de6c4032cb2ea14a12d40a9c33ff6393b59b78af0c21",
+        "group": "c51-supply-link",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1507,
+                  1645
+                ],
+                [
+                  1515,
+                  1648
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R10.2:1",
+          "C5.1:1"
+        ]
+      },
+      "id": "2c8b3ce9-47b3-414e-9bcd-9bf5425a7c9f",
+      "net": "/+5V",
+      "points": [
+        [
+          -45.099912,
+          3.746098
+        ],
+        [
+          -44.867469,
+          4.32369
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
         "detail": "Estimated attachment from visible copper to photo-positioned R6.1:1; solder obscures the precise pad boundary. Net +5V follows the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. Only this visible strip is assigned; hidden branches remain unresolved.",
         "geometrySha256": "85bdee36d571a04e9eee3cec506176713a32c60542032f809655fec80fdedc23",
         "group": "reset-r61-supply-top",
@@ -5241,6 +5337,54 @@
     },
     {
       "evidence": {
+        "detail": "Observed exposed copper centreline. Visible common supply island between the lower R10 leads. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "4bc314995110d43696670b191b2e12ac105461fd75727d82c9666fe26f1fd4be",
+        "group": "output-pullup-supply-link",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1465,
+                  1651
+                ],
+                [
+                  1490,
+                  1651
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "R10.1:1",
+          "R10.2:1"
+        ]
+      },
+      "id": "44336a0f-32ff-4fb9-a4da-45dc1035cf96",
+      "net": "/+5V",
+      "points": [
+        [
+          -44.681315,
+          0.639798
+        ],
+        [
+          -44.661361,
+          2.47682
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
         "detail": "Visible top copper joining the right leads of R3 and R4.1. The common net is +5V in the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. This local connection does not establish its supply feed or hidden continuation.",
         "geometrySha256": "fadf3ad3c630632d0fba6f676da91dcab84cb0310189b2359564aca154d8ab69",
         "group": "reset-pair-supply-top",
@@ -5282,6 +5426,54 @@
       ],
       "side": "top",
       "width": 1.0
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible supply land between the lower R6.6 lead and A7 pin 14. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "ce23ac333c3ad072ddf7b784b482dda9f86464c24b334b009215a681818625b0",
+        "group": "ff-pullup-supply-a7",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1448,
+                  3568
+                ],
+                [
+                  1436,
+                  3572
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R6.6:1",
+          "A7:14"
+        ]
+      },
+      "id": "77aae6fd-fbda-46a0-bc37-25c871639c01",
+      "net": "/+5V",
+      "points": [
+        [
+          101.843647,
+          -7.236161
+        ],
+        [
+          101.836397,
+          -7.928173
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
     },
     {
       "evidence": {
@@ -5461,6 +5653,54 @@
     },
     {
       "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible supply land between the lower R6.6 lead and A7 pin 14. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "eed6f2eaed6be4df71199b144bb7ef06d8507d15e0a8e7fea0b0a5cb6dbf212f",
+        "group": "ff-pullup-supply-a7",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1499,
+                  3550
+                ],
+                [
+                  1498,
+                  3577
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R6.6:1",
+          "A7:14"
+        ]
+      },
+      "id": "a318d46b-d0e7-430e-b931-7e18be559e47",
+      "net": "/+5V",
+      "points": [
+        [
+          100.467883,
+          -3.371648
+        ],
+        [
+          102.560355,
+          -3.540069
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
         "detail": "Estimated attachment from photo-positioned resistor pad to visible shared copper; lead/solder obscures the precise hole and copper boundary. The common net is +5V in the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. This local connection does not establish its supply feed or hidden continuation.",
         "geometrySha256": "734d2dc07f3d31214eea684115a36e3a0444b5d904863293ceb14186d4426d6d",
         "group": "reset-pair-supply-top",
@@ -5502,6 +5742,54 @@
       ],
       "side": "top",
       "width": 1.0
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible supply land between the lower R6.6 lead and A7 pin 14. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "b367d1b0ac47a243789afa0cf74fd1695175be471ce6ff60b50a2d489a5dc5f3",
+        "group": "ff-pullup-supply-a7",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1470,
+                  3579
+                ],
+                [
+                  1448,
+                  3568
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "R6.6:1",
+          "A7:14"
+        ]
+      },
+      "id": "a978a2f9-2889-4caa-a3ff-e2e997cac165",
+      "net": "/+5V",
+      "points": [
+        [
+          102.704846,
+          -5.634405
+        ],
+        [
+          101.843647,
+          -7.236161
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
     },
     {
       "evidence": {
@@ -5681,6 +5969,102 @@
     },
     {
       "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible supply island from the R10.2 lower lead toward the upper C5.1 lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "b2f270670685d67d636b11b5e9303219f81e3753e54020609ac1a5a38c837f72",
+        "group": "c51-supply-link",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1545,
+                  1637
+                ],
+                [
+                  1547,
+                  1617
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R10.2:1",
+          "C5.1:1"
+        ]
+      },
+      "id": "d063eaac-0092-45bd-9ce0-0465cc73a651",
+      "net": "/+5V",
+      "points": [
+        [
+          -45.672241,
+          6.5643
+        ],
+        [
+          -47.177068,
+          6.778246
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible supply island from the R10.2 lower lead toward the upper C5.1 lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "219c75e107fb84f253862aaac6525a8ed83ff4820d52211078fbfcfa1ddb9a52",
+        "group": "c51-supply-link",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1536,
+                  1648
+                ],
+                [
+                  1545,
+                  1637
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "R10.2:1",
+          "C5.1:1"
+        ]
+      },
+      "id": "d0c9c16c-7718-4ee5-a469-28cbc62dbff6",
+      "net": "/+5V",
+      "points": [
+        [
+          -44.850699,
+          5.866326
+        ],
+        [
+          -45.672241,
+          6.5643
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
         "detail": "Estimated attachment from photo-positioned resistor pad to visible shared copper; lead/solder obscures the precise hole and copper boundary. The common net is +5V in the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. This local connection does not establish its supply feed or hidden continuation.",
         "geometrySha256": "3d63bfcbb7741871b3213525e010753f6176d9802ef7035c577e4e44d65dbe35",
         "group": "reset-pair-supply-top",
@@ -5725,6 +6109,150 @@
     },
     {
       "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible common supply island between the lower R10 leads. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "2a5d72b0c73666c53a6efba658329c7f2357e192aec5bb8d846f1d41255d5b63",
+        "group": "output-pullup-supply-link",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1490,
+                  1651
+                ],
+                [
+                  1507,
+                  1645
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R10.1:1",
+          "R10.2:1"
+        ]
+      },
+      "id": "e58f8b66-7f69-4db3-8322-5f594b6ab7a9",
+      "net": "/+5V",
+      "points": [
+        [
+          -44.661361,
+          2.47682
+        ],
+        [
+          -45.099912,
+          3.746098
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible common supply island between the lower R10 leads. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "74a1bd1c243b1895f1066006447c9abd38325f17915a2c5bc94238dc895320fb",
+        "group": "output-pullup-supply-link",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1458,
+                  1645
+                ],
+                [
+                  1465,
+                  1651
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R10.1:1",
+          "R10.2:1"
+        ]
+      },
+      "id": "e5a15015-1089-4e27-96ce-e7285d18563c",
+      "net": "/+5V",
+      "points": [
+        [
+          -45.139083,
+          0.145801
+        ],
+        [
+          -44.681315,
+          0.639798
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible supply island from the R10.2 lower lead toward the upper C5.1 lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "b4eddd9823f062dfd55f3370c3f0fe1d33ff76e2c50f97a0ea6d1b75dabe5987",
+        "group": "c51-supply-link",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1515,
+                  1648
+                ],
+                [
+                  1536,
+                  1648
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "R10.2:1",
+          "C5.1:1"
+        ]
+      },
+      "id": "f252c687-0a7c-4ac3-8d5f-278c8f3b1487",
+      "net": "/+5V",
+      "points": [
+        [
+          -44.867469,
+          4.32369
+        ],
+        [
+          -44.850699,
+          5.866326
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
         "detail": "Visible top copper joining the right leads of R3 and R4.1. The common net is +5V in the reference schematic. Nominal planar projection and 1.0 mm width are estimates, not metrology or measured continuity. This local connection does not establish its supply feed or hidden continuation.",
         "geometrySha256": "dae174afa0ac0124f64980c0b5d95d79e6e956acef6763e3b4ae9ecdfe7f27fd",
         "group": "reset-pair-supply-top",
@@ -5766,6 +6294,993 @@
       ],
       "side": "top",
       "width": 1.0
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible short track from the upper R6.6 lead to A6 pin 10; reference FF_PULLUP identity. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "b51a54db407133b4a6cddffe33c5c582db1f5eafbd39d93a8df9b49a26fbba68",
+        "group": "ff-pullup-a6",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1447,
+                  3387
+                ],
+                [
+                  1432,
+                  3386
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R6.6:2",
+          "A6:10"
+        ]
+      },
+      "id": "51ebff89-555d-4b11-a831-1a59e9514889",
+      "net": "/FF_PULLUP",
+      "points": [
+        [
+          87.829208,
+          -6.676889
+        ],
+        [
+          88.060495,
+          -7.296518
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible short track from the upper R6.6 lead to A6 pin 10; reference FF_PULLUP identity. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "cc8f96197d09ddc1499503af54cb034eefb1b1d88949f90ec3b408224f070ef0",
+        "group": "ff-pullup-a6",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1500,
+                  3385
+                ],
+                [
+                  1483,
+                  3385
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R6.6:2",
+          "A6:10"
+        ]
+      },
+      "id": "b852f072-75d8-4a26-883f-3f2b9424251d",
+      "net": "/FF_PULLUP",
+      "points": [
+        [
+          87.696874,
+          -2.724327
+        ],
+        [
+          87.689719,
+          -3.989753
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible short track from the upper R6.6 lead to A6 pin 10; reference FF_PULLUP identity. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "f160981162ae567d090d6b5f0888c736f27d735ceaf64fe669198e3f1977876e",
+        "group": "ff-pullup-a6",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1483,
+                  3385
+                ],
+                [
+                  1447,
+                  3387
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "R6.6:2",
+          "A6:10"
+        ]
+      },
+      "id": "bd95e912-2b86-4560-b9de-cf7347b59136",
+      "net": "/FF_PULLUP",
+      "points": [
+        [
+          87.689719,
+          -3.989753
+        ],
+        [
+          87.829208,
+          -6.676889
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible broad return rail from C5.1 below A1 to its ground lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "f414a50fd4734d44a3877ac819c1d7566b7faa3865b9025104d11a3e85aa4a47",
+        "group": "c51-ground-a1",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1303,
+                  1701
+                ],
+                [
+                  1300,
+                  1690
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "C5.1:2",
+          "A1:7"
+        ]
+      },
+      "id": "09a1154e-f345-4040-bffb-50f178c0c8d5",
+      "net": "/GND",
+      "points": [
+        [
+          -41.039322,
+          -11.444991
+        ],
+        [
+          -41.855264,
+          -11.647483
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible return rail from C5.2 toward A2.3 ground; final lead attachment is estimated. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "815f3d983817e4688b2b741eab7c7118efde382912d02cf1f7d56dc0f32e35a1",
+        "group": "c52-ground-a23",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1595,
+                  2642
+                ],
+                [
+                  1602,
+                  2650
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "C5.2:2",
+          "A2.3:7"
+        ]
+      },
+      "id": "117435a4-b304-44b8-87ae-181c1020e8f5",
+      "net": "/GND",
+      "points": [
+        [
+          30.62744,
+          6.867474
+        ],
+        [
+          31.243095,
+          7.35832
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible return rail from C5.2 toward A2.3 ground; final lead attachment is estimated. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "abceafbc7c1a0ef2b9ca94f3065c9f2f243895cda0d6ed3614b85c2b23f66334",
+        "group": "c52-ground-a23",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1640,
+                  2650
+                ],
+                [
+                  1655,
+                  2635
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "C5.2:2",
+          "A2.3:7"
+        ]
+      },
+      "id": "1570fcd8-faf5-4a86-8df3-97a28b9dbb50",
+      "net": "/GND",
+      "points": [
+        [
+          31.265237,
+          10.169189
+        ],
+        [
+          30.536452,
+          10.900609
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible return rail from C5.2 toward A2.3 ground; final lead attachment is estimated. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "4fffe1d8558c6ccc0fca2e53c9a40764d8e0fcae6d09ecc335d4fe41bcd62529",
+        "group": "c52-ground-a23",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1602,
+                  2650
+                ],
+                [
+                  1640,
+                  2650
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "C5.2:2",
+          "A2.3:7"
+        ]
+      },
+      "id": "669dac59-f9b2-48d4-98a2-0149b3d28031",
+      "net": "/GND",
+      "points": [
+        [
+          31.243095,
+          7.35832
+        ],
+        [
+          31.265237,
+          10.169189
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible broad return rail from C5.1 below A1 to its ground lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "ad0d05d65cf31163d67902ac208d69f96a90a1cb2eed40d833ae28c2f682b131",
+        "group": "c51-ground-a1",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1547,
+                  1686
+                ],
+                [
+                  1513,
+                  1724
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "C5.1:2",
+          "A1:7"
+        ]
+      },
+      "id": "c651cd4b-821e-436e-856d-4b8ec9ef022c",
+      "net": "/GND",
+      "points": [
+        [
+          -41.978025,
+          6.546814
+        ],
+        [
+          -39.139142,
+          3.920309
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible broad return rail from C5.1 below A1 to its ground lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "ed050fa1fb03d32dd6c0e52997b002657cd7d6e209d32ae34baed2a1d4b313cd",
+        "group": "c51-ground-a1",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1340,
+                  1728
+                ],
+                [
+                  1303,
+                  1701
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "C5.1:2",
+          "A1:7"
+        ]
+      },
+      "id": "cfb584cc-1fb1-48bd-9ef9-71ed78f637ce",
+      "net": "/GND",
+      "points": [
+        [
+          -38.972684,
+          -8.816438
+        ],
+        [
+          -41.039322,
+          -11.444991
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible broad return rail from C5.1 below A1 to its ground lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "bc4a7575dd9cc2887722616f44afc9b0d8e5dfdd2a9edb40d9a067065a830269",
+        "group": "c51-ground-a1",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1513,
+                  1724
+                ],
+                [
+                  1340,
+                  1728
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "C5.1:2",
+          "A1:7"
+        ]
+      },
+      "id": "d133bff2-f1aa-4c1a-aad6-11f89a68e6d6",
+      "net": "/GND",
+      "points": [
+        [
+          -39.139142,
+          3.920309
+        ],
+        [
+          -38.972684,
+          -8.816438
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible broad return rail from C5.1 below A1 to its ground lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "ac261b2f1bae11c1ad5abdae0caed40bc1a8d05a443dfa275f35692a3c1981ee",
+        "group": "c51-ground-a1",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1550,
+                  1674
+                ],
+                [
+                  1547,
+                  1686
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "C5.1:2",
+          "A1:7"
+        ]
+      },
+      "id": "e437b7ee-ad43-4c1f-9582-63adcfd1059e",
+      "net": "/GND",
+      "points": [
+        [
+          -42.880204,
+          6.807469
+        ],
+        [
+          -41.978025,
+          6.546814
+        ]
+      ],
+      "side": "top",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible underside ground strip; terminal identity follows the independently reviewed common reference rail. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "0331db440c906637bc62b148a56c43b7fd3cc8598990047d2b47032fb68ef726",
+        "group": "discrete-ground-r42-r7",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1243,
+                  972
+                ],
+                [
+                  1244,
+                  985
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R4.2:2",
+          "R7:2"
+        ]
+      },
+      "id": "07eecba2-1bcd-4d4e-ad5a-90e31f2db705",
+      "net": "/GND",
+      "points": [
+        [
+          -85.311331,
+          7.01175
+        ],
+        [
+          -84.352307,
+          6.983322
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible underside ground strip; terminal identity follows the independently reviewed common reference rail. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "32f76cba6263b675575d0258069194fee851a0e234bf9033cd34ded0d7f1f499",
+        "group": "discrete-ground-r42-r7",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1245,
+                  1001
+                ],
+                [
+                  1245,
+                  1013
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R4.2:2",
+          "R7:2"
+        ]
+      },
+      "id": "184eea34-b1aa-4fc9-b78c-c42ab80756c3",
+      "net": "/GND",
+      "points": [
+        [
+          -83.167111,
+          6.966082
+        ],
+        [
+          -81.944318,
+          7.007847
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible underside ground strip; terminal identity follows the independently reviewed common reference rail. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "51ca48f65bd4c4e4a82aa62178924c9075b5823fdedf1a7fb6adc90da72cdb3c",
+        "group": "discrete-ground-r42-r7",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1244,
+                  985
+                ],
+                [
+                  1245,
+                  1001
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "R4.2:2",
+          "R7:2"
+        ]
+      },
+      "id": "29463875-9300-4512-8459-88ae86fca4f2",
+      "net": "/GND",
+      "points": [
+        [
+          -84.352307,
+          6.983322
+        ],
+        [
+          -83.167111,
+          6.966082
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Observed exposed copper centreline. Visible continuation of the same underside ground strip. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "ae81b6bab7ee2b8f5350038d0ab989bcd644c5cf7f48ff31e37aba5407ad4de1",
+        "group": "discrete-ground-r7-r8",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1245,
+                  1026
+                ],
+                [
+                  1245,
+                  1044
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "R7:2",
+          "R8:2"
+        ]
+      },
+      "id": "6d9a16cb-c7e6-4109-9449-2958fd9df66e",
+      "net": "/GND",
+      "points": [
+        [
+          -81.306307,
+          7.060654
+        ],
+        [
+          -79.957846,
+          7.129187
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible continuation of the same underside ground strip. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "d0b85f87a4b07409a860119e8a3dba08df2e1171f53b08efaadfe6522dffdcee",
+        "group": "discrete-ground-r7-r8",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1245,
+                  1013
+                ],
+                [
+                  1245,
+                  1026
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R7:2",
+          "R8:2"
+        ]
+      },
+      "id": "aa95fd93-607f-49e2-93a7-5ef48d912cfb",
+      "net": "/GND",
+      "points": [
+        [
+          -81.944318,
+          7.007847
+        ],
+        [
+          -81.306307,
+          7.060654
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Estimated native pad-to-visible-copper attachment. Visible continuation of the same underside ground strip. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+        "geometrySha256": "82c07f1749216daf8175a961324d03fe028f280070af5917ca9917ad8d61ace3",
+        "group": "discrete-ground-r7-r8",
+        "registration": {
+          "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+          "region": "output-pullups"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1245,
+                  1044
+                ],
+                [
+                  1245,
+                  1057
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "R7:2",
+          "R8:2"
+        ]
+      },
+      "id": "dbb785ac-d450-4075-a5b0-d97bff7e58a6",
+      "net": "/GND",
+      "points": [
+        [
+          -79.957846,
+          7.129187
+        ],
+        [
+          -78.051119,
+          6.980555
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.6
+    },
+    {
+      "evidence": {
+        "detail": "Visible top branch within the qualified local anchor hull. The trace is clipped at the inner-row registration boundary before the package hides its continuation; no A1 pin attachment or under-package route is asserted. Width 0.35 mm is estimated. The local projection removes the prior A1:13 short but leaves a small A1:14 clearance failure with estimated pad dimensions; do not move observed copper or change pad sizes to conceal it.",
+        "geometrySha256": "50dcdea61a61bb220495974d50b436de7342b6ceafeeeeb0700b8e0f6d77516b",
+        "group": "r101-output-top-local",
+        "registration": {
+          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
+          "region": "a1-output-inner",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1445,
+                  1501
+                ],
+                [
+                  1436,
+                  1510
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "5fff7738-a179-4a73-b774-2bb1ac614436",
+      "net": "/TA_TAKT",
+      "points": [
+        [
+          -56.376732,
+          -0.355762
+        ],
+        [
+          -55.750775,
+          -1.054204
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Inferred attachment from native resistor pad; photo locator is within the lead-end uncertainty, not an exact hole measurement. The trace is clipped at the inner-row registration boundary before the package hides its continuation; no A1 pin attachment or under-package route is asserted. Width 0.35 mm is estimated. The local projection removes the prior A1:13 short but leaves a small A1:14 clearance failure with estimated pad dimensions; do not move observed copper or change pad sizes to conceal it.",
+        "geometrySha256": "c48f7a59f8a6e10588954d022c0b1f276358e4e993dc955e11402cf620dd04d1",
+        "group": "r101-output-top-local",
+        "registration": {
+          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
+          "region": "a1-output-inner",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1448,
+                  1495
+                ],
+                [
+                  1445,
+                  1501
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred"
+      },
+      "id": "972fa540-a1fb-44d7-8a87-f27f933573f6",
+      "net": "/TA_TAKT",
+      "points": [
+        [
+          -56.664606,
+          -0.068244
+        ],
+        [
+          -56.376732,
+          -0.355762
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
+    },
+    {
+      "evidence": {
+        "detail": "Visible top branch within the qualified local anchor hull. The trace is clipped at the inner-row registration boundary before the package hides its continuation; no A1 pin attachment or under-package route is asserted. Width 0.35 mm is estimated. The local projection removes the prior A1:13 short but leaves a small A1:14 clearance failure with estimated pad dimensions; do not move observed copper or change pad sizes to conceal it.",
+        "geometrySha256": "c997f5bad16ed3433a68cd84f042ddec7eda31702cbc00e988533c4f26068cdc",
+        "group": "r101-output-top-local",
+        "registration": {
+          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
+          "region": "a1-output-inner",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1436,
+                  1510
+                ],
+                [
+                  1392,
+                  1510
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "observed"
+      },
+      "id": "9d0484b0-c3e2-4f88-94be-13af10d77ac2",
+      "net": "/TA_TAKT",
+      "points": [
+        [
+          -55.750775,
+          -1.054204
+        ],
+        [
+          -56.129534,
+          -4.401621
+        ]
+      ],
+      "side": "top",
+      "width": 0.35
     },
     {
       "evidence": {
@@ -6946,153 +8461,6 @@
         [
           -30.425354,
           -8.104423
-        ]
-      ],
-      "side": "top",
-      "width": 0.35
-    },
-    {
-      "evidence": {
-        "detail": "Inferred attachment from native resistor pad; photo locator is within the lead-end uncertainty, not an exact hole measurement. The trace is clipped at the inner-row registration boundary before the package hides its continuation; no A1 pin attachment or under-package route is asserted. Width 0.35 mm is estimated. The local projection removes the prior A1:13 short but leaves a small A1:14 clearance failure with estimated pad dimensions; do not move observed copper or change pad sizes to conceal it.",
-        "geometrySha256": "c48f7a59f8a6e10588954d022c0b1f276358e4e993dc955e11402cf620dd04d1",
-        "group": "r101-output-top-local",
-        "registration": {
-          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
-          "region": "a1-output-inner",
-          "side": "top"
-        },
-        "sources": [
-          {
-            "id": "photo-top",
-            "locator": {
-              "imageSize": [
-                3072,
-                4080
-              ],
-              "pixelSegment": [
-                [
-                  1448,
-                  1495
-                ],
-                [
-                  1445,
-                  1501
-                ]
-              ]
-            },
-            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
-          }
-        ],
-        "status": "inferred"
-      },
-      "id": "972fa540-a1fb-44d7-8a87-f27f933573f6",
-      "net": "/TA_TAKT",
-      "points": [
-        [
-          -56.664606,
-          -0.068244
-        ],
-        [
-          -56.376732,
-          -0.355762
-        ]
-      ],
-      "side": "top",
-      "width": 0.35
-    },
-    {
-      "evidence": {
-        "detail": "Visible top branch within the qualified local anchor hull. The trace is clipped at the inner-row registration boundary before the package hides its continuation; no A1 pin attachment or under-package route is asserted. Width 0.35 mm is estimated. The local projection removes the prior A1:13 short but leaves a small A1:14 clearance failure with estimated pad dimensions; do not move observed copper or change pad sizes to conceal it.",
-        "geometrySha256": "50dcdea61a61bb220495974d50b436de7342b6ceafeeeeb0700b8e0f6d77516b",
-        "group": "r101-output-top-local",
-        "registration": {
-          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
-          "region": "a1-output-inner",
-          "side": "top"
-        },
-        "sources": [
-          {
-            "id": "photo-top",
-            "locator": {
-              "imageSize": [
-                3072,
-                4080
-              ],
-              "pixelSegment": [
-                [
-                  1445,
-                  1501
-                ],
-                [
-                  1436,
-                  1510
-                ]
-              ]
-            },
-            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
-          }
-        ],
-        "status": "observed"
-      },
-      "id": "5fff7738-a179-4a73-b774-2bb1ac614436",
-      "net": "/TA_TAKT",
-      "points": [
-        [
-          -56.376732,
-          -0.355762
-        ],
-        [
-          -55.750775,
-          -1.054204
-        ]
-      ],
-      "side": "top",
-      "width": 0.35
-    },
-    {
-      "evidence": {
-        "detail": "Visible top branch within the qualified local anchor hull. The trace is clipped at the inner-row registration boundary before the package hides its continuation; no A1 pin attachment or under-package route is asserted. Width 0.35 mm is estimated. The local projection removes the prior A1:13 short but leaves a small A1:14 clearance failure with estimated pad dimensions; do not move observed copper or change pad sizes to conceal it.",
-        "geometrySha256": "c997f5bad16ed3433a68cd84f042ddec7eda31702cbc00e988533c4f26068cdc",
-        "group": "r101-output-top-local",
-        "registration": {
-          "landmarksSha256": "8922cc3fabfb3410ea6c76bae22f955a551aadd681ad7178ae7b709eae038610",
-          "region": "a1-output-inner",
-          "side": "top"
-        },
-        "sources": [
-          {
-            "id": "photo-top",
-            "locator": {
-              "imageSize": [
-                3072,
-                4080
-              ],
-              "pixelSegment": [
-                [
-                  1436,
-                  1510
-                ],
-                [
-                  1392,
-                  1510
-                ]
-              ]
-            },
-            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
-          }
-        ],
-        "status": "observed"
-      },
-      "id": "9d0484b0-c3e2-4f88-94be-13af10d77ac2",
-      "net": "/TA_TAKT",
-      "points": [
-        [
-          -55.750775,
-          -1.054204
-        ],
-        [
-          -56.129534,
-          -4.401621
         ]
       ],
       "side": "top",

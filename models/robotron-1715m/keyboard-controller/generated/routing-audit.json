@@ -1,0 +1,4872 @@
+{
+  "nets": [
+    {
+      "drcUnconnectedItems": 35,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A1:14"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:14"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:14"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:14"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:20"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:11"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A6:14"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [
+            "1ab55816-2127-40fc-82d4-52bfe63b3c4c",
+            "77aae6fd-fbda-46a0-bc37-25c871639c01",
+            "a318d46b-d0e7-430e-b931-7e18be559e47",
+            "a978a2f9-2889-4caa-a3ff-e2e997cac165"
+          ],
+          "evidenceGroups": [
+            "ff-pullup-supply-a7"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "A7:14",
+            "R6.6:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:21"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:24"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C3.1:1"
+          ],
+          "unplacedTerminals": [
+            "C3.1:1"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C3.2:1"
+          ],
+          "unplacedTerminals": [
+            "C3.2:1"
+          ]
+        },
+        {
+          "copperIds": [
+            "2c8b3ce9-47b3-414e-9bcd-9bf5425a7c9f",
+            "44336a0f-32ff-4fb9-a4da-45dc1035cf96",
+            "d063eaac-0092-45bd-9ce0-0465cc73a651",
+            "d0c9c16c-7718-4ee5-a469-28cbc62dbff6",
+            "e58f8b66-7f69-4db3-8322-5f594b6ab7a9",
+            "e5a15015-1089-4e27-96ce-e7285d18563c",
+            "f252c687-0a7c-4ac3-8d5f-278c8f3b1487"
+          ],
+          "evidenceGroups": [
+            "c51-supply-link",
+            "output-pullup-supply-link"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "C5.1:1",
+            "R10.1:1",
+            "R10.2:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C5.2:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C5.3:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C5.4:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C5.5:1"
+          ],
+          "unplacedTerminals": [
+            "C5.5:1"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "L1.3:1"
+          ],
+          "unplacedTerminals": [
+            "L1.3:1"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R10.3:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R2:1"
+          ],
+          "unplacedTerminals": [
+            "R2:1"
+          ]
+        },
+        {
+          "copperIds": [
+            "1240fe26-e0fc-412e-b233-fd3811e4d447",
+            "1c4c573b-a236-4679-b93f-75699423fd0a",
+            "36b621c7-9687-42af-8eb1-d4d680c032f4",
+            "49b7261f-c582-42e0-ad01-ab98b4c6b8d8",
+            "836c74eb-7a4d-4dad-b3bc-fe45528bfcd3",
+            "937e14a8-174d-4ad0-91f3-3c2d3fbfa7fd",
+            "9aa496ee-1c04-4d03-9092-6868659fd264",
+            "a7355e9c-6829-41cd-bb03-a9135945c564",
+            "b7de3b33-377c-42e6-898f-28876b5b0615",
+            "ba013c47-d828-4e50-a612-517b0f26cdb6",
+            "c41bb143-5a93-4a1d-8474-2612b00622fa",
+            "d2cc32a8-8b8a-4bad-979a-943f32536263",
+            "faca42a7-4620-40bf-aaf2-58b2512a6dbc"
+          ],
+          "evidenceGroups": [
+            "reset-pair-supply-top",
+            "reset-r5-supply-top",
+            "reset-r61-supply-top"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "R3:1",
+            "R4.1:1",
+            "R5:1",
+            "R6.1:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [
+            "2c41a84f-f51a-46a1-a93e-bb036ba69e0b",
+            "94416e88-6218-4e94-80d1-b46f72907660",
+            "ca4a8ba7-a1d9-4413-b3df-ecc6e5938928"
+          ],
+          "evidenceGroups": [
+            "a4-pullup-supply-top"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "R6.3:1",
+            "R9.9:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R6.4:1"
+          ],
+          "unplacedTerminals": [
+            "R6.4:1"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R6.5:1"
+          ],
+          "unplacedTerminals": [
+            "R6.5:1"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V2:A"
+          ],
+          "unplacedTerminals": [
+            "V2:A"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V3.1:C"
+          ],
+          "unplacedTerminals": [
+            "V3.1:C"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.1:E"
+          ],
+          "unplacedTerminals": [
+            "V4.1:E"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.2:E"
+          ],
+          "unplacedTerminals": [
+            "V4.2:E"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.3:E"
+          ],
+          "unplacedTerminals": [
+            "V4.3:E"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.4:E"
+          ],
+          "unplacedTerminals": [
+            "V4.4:E"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.5:E"
+          ],
+          "unplacedTerminals": [
+            "V4.5:E"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.6:E"
+          ],
+          "unplacedTerminals": [
+            "V4.6:E"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.7:E"
+          ],
+          "unplacedTerminals": [
+            "V4.7:E"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.8:E"
+          ],
+          "unplacedTerminals": [
+            "V4.8:E"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.9:E"
+          ],
+          "unplacedTerminals": [
+            "V4.9:E"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A7"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 42,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/+5V",
+      "padGroups": 36,
+      "remainingPadGroupLinks": 35,
+      "terminals": [
+        "A1:14",
+        "A2.1:14",
+        "A2.2:14",
+        "A2.3:14",
+        "A4:20",
+        "A5:11",
+        "A6:14",
+        "A7:14",
+        "A8:21",
+        "A8:24",
+        "C3.1:1",
+        "C3.2:1",
+        "C5.1:1",
+        "C5.2:1",
+        "C5.3:1",
+        "C5.4:1",
+        "C5.5:1",
+        "L1.3:1",
+        "R10.1:1",
+        "R10.2:1",
+        "R10.3:1",
+        "R2:1",
+        "R3:1",
+        "R4.1:1",
+        "R5:1",
+        "R6.1:1",
+        "R6.3:1",
+        "R6.4:1",
+        "R6.5:1",
+        "R6.6:1",
+        "R9.9:1",
+        "V2:A",
+        "V3.1:C",
+        "V4.1:E",
+        "V4.2:E",
+        "V4.3:E",
+        "V4.4:E",
+        "V4.5:E",
+        "V4.6:E",
+        "V4.7:E",
+        "V4.8:E",
+        "V4.9:E",
+        "X1:A7"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:10"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:9"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:30"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:8"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A0",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A2.3:10",
+        "A2.3:9",
+        "A5:30",
+        "A8:8"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A1:9"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:31"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:7"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A1",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A1:9",
+        "A5:31",
+        "A8:7"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:40"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:19"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A10",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A2.3:1",
+        "A2.3:2",
+        "A5:40",
+        "A8:19"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:4"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:5"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:1"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A11",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A2.1:4",
+        "A2.1:5",
+        "A5:1"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:12"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:13"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A12",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A2.2:12",
+        "A2.2:13",
+        "A5:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:3"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A6:12"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A13",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A5:3",
+        "A6:12"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:4"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A6:2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A14",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A5:4",
+        "A6:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:10"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:9"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:5"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A15",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A2.2:10",
+        "A2.2:9",
+        "A5:5"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:10"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:9"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:32"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:6"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A2",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A2.1:10",
+        "A2.1:9",
+        "A5:32",
+        "A8:6"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:33"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:5"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A3",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A2.1:1",
+        "A2.1:2",
+        "A5:33",
+        "A8:5"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A1:13"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:34"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:4"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A4",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A1:13",
+        "A5:34",
+        "A8:4"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:12"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:13"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:35"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:3"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A5",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A2.1:12",
+        "A2.1:13",
+        "A5:35",
+        "A8:3"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A1:11"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:36"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A6",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A1:11",
+        "A5:36",
+        "A8:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:37"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:1"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A7",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A2.2:1",
+        "A2.2:2",
+        "A5:37",
+        "A8:1"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:12"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:13"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:38"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:23"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A8",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A2.3:12",
+        "A2.3:13",
+        "A5:38",
+        "A8:23"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:4"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:5"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:39"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:22"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/A9",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A2.3:4",
+        "A2.3:5",
+        "A5:39",
+        "A8:22"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R2:3"
+          ],
+          "unplacedTerminals": [
+            "R2:3"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.3:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.3:B"
+          ],
+          "unplacedTerminals": [
+            "V4.3:B"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/BASE0",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "R2:3",
+        "R9.3:2",
+        "V4.3:B"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R2:4"
+          ],
+          "unplacedTerminals": [
+            "R2:4"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.5:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.4:B"
+          ],
+          "unplacedTerminals": [
+            "V4.4:B"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/BASE1",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "R2:4",
+        "R9.5:2",
+        "V4.4:B"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R2:8"
+          ],
+          "unplacedTerminals": [
+            "R2:8"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.6:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.8:B"
+          ],
+          "unplacedTerminals": [
+            "V4.8:B"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/BASE2",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "R2:8",
+        "R9.6:2",
+        "V4.8:B"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R2:9"
+          ],
+          "unplacedTerminals": [
+            "R2:9"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.7:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.7:B"
+          ],
+          "unplacedTerminals": [
+            "V4.7:B"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/BASE3",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "R2:9",
+        "R9.7:2",
+        "V4.7:B"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R2:5"
+          ],
+          "unplacedTerminals": [
+            "R2:5"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.8:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.1:B"
+          ],
+          "unplacedTerminals": [
+            "V4.1:B"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/BASE4",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "R2:5",
+        "R9.8:2",
+        "V4.1:B"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R2:7"
+          ],
+          "unplacedTerminals": [
+            "R2:7"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.4:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.6:B"
+          ],
+          "unplacedTerminals": [
+            "V4.6:B"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/BASE5",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "R2:7",
+        "R9.4:2",
+        "V4.6:B"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R2:2"
+          ],
+          "unplacedTerminals": [
+            "R2:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.2:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.2:B"
+          ],
+          "unplacedTerminals": [
+            "V4.2:B"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/BASE6",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "R2:2",
+        "R9.2:2",
+        "V4.2:B"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R2:6"
+          ],
+          "unplacedTerminals": [
+            "R2:6"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.1:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.5:B"
+          ],
+          "unplacedTerminals": [
+            "V4.5:B"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/BASE7",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "R2:6",
+        "R9.1:2",
+        "V4.5:B"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:25"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R6.5:2"
+          ],
+          "unplacedTerminals": [
+            "R6.5:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A9"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/BUSRQ_N",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A5:25",
+        "R6.5:2",
+        "X1:A9"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "L1.3:2"
+          ],
+          "unplacedTerminals": [
+            "L1.3:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "XT1:B4"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/CABLE_5V",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "L1.3:2",
+        "XT1:B4"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "L1.4:2"
+          ],
+          "unplacedTerminals": [
+            "L1.4:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "XT1:A1"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/CABLE_DATEN",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "L1.4:2",
+        "XT1:A1"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "L1.2:2"
+          ],
+          "unplacedTerminals": [
+            "L1.2:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "XT1:A3"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/CABLE_GND",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "L1.2:2",
+        "XT1:A3"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "L1.1:2"
+          ],
+          "unplacedTerminals": [
+            "L1.1:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "XT1:B2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/CABLE_TAKT",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "L1.1:2",
+        "XT1:B2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:6"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [
+            "5015c001-226a-4e3e-b7f3-48b31c2fb45e"
+          ],
+          "evidenceGroups": [
+            "br1-r103-local-clock"
+          ],
+          "evidenceStatuses": [
+            "inferred"
+          ],
+          "terminals": [
+            "BR1:2",
+            "R10.3:2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/CLK",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A5:6",
+        "BR1:2",
+        "R10.3:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:8"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A11"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL0",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A2.3:8",
+        "X1:A11"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A1:8"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A13"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL1",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A1:8",
+        "X1:A13"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:3"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A12"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL10",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A2.3:3",
+        "X1:A12"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 0,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [
+            "29273a1f-ce06-4b43-b079-5d458e4c4641",
+            "386c4fbe-1f57-49ea-a48f-33ee32e52463",
+            "43ab43a6-6b86-460e-9484-bf8e57b355a3",
+            "93ac8d07-5a1b-49aa-a302-1645e9ee4d67",
+            "aec6e549-e6ca-47b9-abb8-e21a60071713",
+            "c2716302-f12c-44e3-bbc8-d3f90c6e00cb",
+            "c8676d4e-0ec7-4f8b-8311-3ffeb9fb96cb",
+            "f81ba08c-6324-4c7c-8355-1405c8745354"
+          ],
+          "evidenceGroups": [
+            "x1-b8-col11-bottom"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "A2.1:6",
+            "X1:B8"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": true,
+      "net": "/COL11",
+      "padGroups": 1,
+      "remainingPadGroupLinks": 0,
+      "terminals": [
+        "A2.1:6",
+        "X1:B8"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:11"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B4"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL12",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A2.2:11",
+        "X1:B4"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:8"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B10"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL2",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A2.1:8",
+        "X1:B10"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:3"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B9"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL3",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A2.1:3",
+        "X1:B9"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A1:12"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B1"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL4",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A1:12",
+        "X1:B1"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:11"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL5",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A2.1:11",
+        "X1:A2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A1:10"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B3"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL6",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A1:10",
+        "X1:B3"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:3"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B12"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL7",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A2.2:3",
+        "X1:B12"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:11"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A3"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL8",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A2.3:11",
+        "X1:A3"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.3:6"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A10"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/COL9",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A2.3:6",
+        "X1:A10"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:16"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:17"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:24"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R6.4:2"
+          ],
+          "unplacedTerminals": [
+            "R6.4:2"
+          ]
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/CPU_PULLUP",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A5:16",
+        "A5:17",
+        "A5:24",
+        "R6.4:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A1:3"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:19"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:14"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:9"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/D0",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A1:3",
+        "A4:19",
+        "A5:14",
+        "A8:9"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:18"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:15"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:10"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/D1",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:18",
+        "A5:15",
+        "A8:10"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:17"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:12"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:11"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/D2",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:17",
+        "A5:12",
+        "A8:11"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:16"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:8"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:13"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/D3",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:16",
+        "A5:8",
+        "A8:13"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:15"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:7"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:14"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/D4",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:15",
+        "A5:7",
+        "A8:14"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:14"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:9"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:15"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/D5",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:14",
+        "A5:9",
+        "A8:15"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:13"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:10"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:16"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/D6",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:13",
+        "A5:10",
+        "A8:16"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:12"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:13"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:17"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/D7",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:12",
+        "A5:13",
+        "A8:17"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A6:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [
+            "51ebff89-555d-4b11-a831-1a59e9514889",
+            "b852f072-75d8-4a26-883f-3f2b9424251d",
+            "bd95e912-2b86-4560-b9de-cf7347b59136"
+          ],
+          "evidenceGroups": [
+            "ff-pullup-a6"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "A6:10",
+            "R6.6:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A6:13"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A6:4"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 4,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/FF_PULLUP",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A6:1",
+        "A6:10",
+        "A6:13",
+        "A6:4",
+        "R6.6:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 18,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [
+            "09a1154e-f345-4040-bffb-50f178c0c8d5",
+            "c651cd4b-821e-436e-856d-4b8ec9ef022c",
+            "cfb584cc-1fb1-48bd-9ef9-71ed78f637ce",
+            "d133bff2-f1aa-4c1a-aad6-11f89a68e6d6",
+            "e437b7ee-ad43-4c1f-9582-63adcfd1059e"
+          ],
+          "evidenceGroups": [
+            "c51-ground-a1"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "A1:7",
+            "C5.1:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.1:7"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:7"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [
+            "117435a4-b304-44b8-87ae-181c1020e8f5",
+            "1570fcd8-faf5-4a86-8df3-97a28b9dbb50",
+            "669dac59-f9b2-48d4-98a2-0149b3d28031"
+          ],
+          "evidenceGroups": [
+            "c52-ground-a23"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "A2.3:7",
+            "C5.2:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:10"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:29"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A6:7"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A7:7"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:12"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:18"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C3.1:2"
+          ],
+          "unplacedTerminals": [
+            "C3.1:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C3.2:2"
+          ],
+          "unplacedTerminals": [
+            "C3.2:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C4:2"
+          ],
+          "unplacedTerminals": [
+            "C4:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C5.3:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C5.4:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C5.5:2"
+          ],
+          "unplacedTerminals": [
+            "C5.5:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "L1.2:1"
+          ],
+          "unplacedTerminals": [
+            "L1.2:1"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R1:1"
+          ],
+          "unplacedTerminals": [
+            "R1:1"
+          ]
+        },
+        {
+          "copperIds": [
+            "07eecba2-1bcd-4d4e-ad5a-90e31f2db705",
+            "184eea34-b1aa-4fc9-b78c-c42ab80756c3",
+            "29463875-9300-4512-8459-88ae86fca4f2",
+            "6d9a16cb-c7e6-4109-9449-2958fd9df66e",
+            "aa95fd93-607f-49e2-93a7-5ef48d912cfb",
+            "dbb785ac-d450-4075-a5b0-d97bff7e58a6"
+          ],
+          "evidenceGroups": [
+            "discrete-ground-r42-r7",
+            "discrete-ground-r7-r8"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "R4.2:2",
+            "R7:2",
+            "R8:2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 22,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/GND",
+      "padGroups": 19,
+      "remainingPadGroupLinks": 18,
+      "terminals": [
+        "A1:7",
+        "A2.1:7",
+        "A2.2:7",
+        "A2.3:7",
+        "A4:10",
+        "A5:29",
+        "A6:7",
+        "A7:7",
+        "A8:12",
+        "A8:18",
+        "C3.1:2",
+        "C3.2:2",
+        "C4:2",
+        "C5.1:2",
+        "C5.2:2",
+        "C5.3:2",
+        "C5.4:2",
+        "C5.5:2",
+        "L1.2:1",
+        "R1:1",
+        "R4.2:2",
+        "R7:2",
+        "R8:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:4"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:5"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:20"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/IORQ_N",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A2.2:4",
+        "A2.2:5",
+        "A5:20"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 4,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:6"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:11"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A6:11"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A6:3"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.9:2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 4,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/IO_ACTIVE",
+      "padGroups": 5,
+      "remainingPadGroupLinks": 4,
+      "terminals": [
+        "A2.2:6",
+        "A4:11",
+        "A6:11",
+        "A6:3",
+        "R9.9:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A2.2:8"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:9"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R6.3:2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/LATCH_OE_N",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A2.2:8",
+        "A4:9",
+        "R6.3:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R11.2:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A6"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/LED_CAPS",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "R11.2:2",
+        "X1:A6"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A6:6"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R11.2:1"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/LED_CAPS_N",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A6:6",
+        "R11.2:1"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R11.1:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A5"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/LED_SISO",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "R11.1:2",
+        "X1:A5"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A6:8"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R11.1:1"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/LED_SISO_N",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A6:8",
+        "R11.1:1"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:19"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A8:20"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/MREQ_N",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A5:19",
+        "A8:20"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A7:11"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A7:4"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A7:5"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R4.3:1"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/OSC1",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A7:11",
+        "A7:4",
+        "A7:5",
+        "R4.3:1"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A7:10"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A7:6"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A7:9"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C6:2"
+          ],
+          "unplacedTerminals": [
+            "C6:2"
+          ]
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/OSC2",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A7:10",
+        "A7:6",
+        "A7:9",
+        "C6:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A7:8"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "BR1:1"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/OSC_OUT",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A7:8",
+        "BR1:1"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A7:12"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A7:13"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C6:1"
+          ],
+          "unplacedTerminals": [
+            "C6:1"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R4.3:2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/OSC_RC",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "A7:12",
+        "A7:13",
+        "C6:1",
+        "R4.3:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 0,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:21"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 0,
+      "multiTerminal": false,
+      "nativePadsConnected": true,
+      "net": "/RD_N",
+      "padGroups": 1,
+      "remainingPadGroupLinks": 0,
+      "terminals": [
+        "A5:21"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C1:1"
+          ],
+          "unplacedTerminals": [
+            "C1:1"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R6.1:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V3.2:C"
+          ],
+          "unplacedTerminals": [
+            "V3.2:C"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.9:B"
+          ],
+          "unplacedTerminals": [
+            "V4.9:B"
+          ]
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/RESET_BASE",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "C1:1",
+        "R6.1:2",
+        "V3.2:C",
+        "V4.9:B"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R5:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V1.1:A"
+          ],
+          "unplacedTerminals": [
+            "V1.1:A"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V3.2:B"
+          ],
+          "unplacedTerminals": [
+            "V3.2:B"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/RESET_BIAS",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "R5:2",
+        "V1.1:A",
+        "V3.2:B"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C2:1"
+          ],
+          "unplacedTerminals": [
+            "C2:1"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R3:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V1.1:K"
+          ],
+          "unplacedTerminals": [
+            "V1.1:K"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V1.2:A"
+          ],
+          "unplacedTerminals": [
+            "V1.2:A"
+          ]
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/RESET_BIAS_LOW",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "C2:1",
+        "R3:2",
+        "V1.1:K",
+        "V1.2:A"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R4.1:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V1.2:K"
+          ],
+          "unplacedTerminals": [
+            "V1.2:K"
+          ]
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/RESET_DIODE_TOP",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "R4.1:2",
+        "V1.2:K"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R7:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V3.1:E"
+          ],
+          "unplacedTerminals": [
+            "V3.1:E"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V3.2:E"
+          ],
+          "unplacedTerminals": [
+            "V3.2:E"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/RESET_EMITTERS",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "R7:1",
+        "V3.1:E",
+        "V3.2:E"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:26"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "BR2:2"
+          ],
+          "unplacedTerminals": [
+            "BR2:2"
+          ]
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/RESET_N",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A5:26",
+        "BR2:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 4,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "BR2:1"
+          ],
+          "unplacedTerminals": [
+            "BR2:1"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C1:2"
+          ],
+          "unplacedTerminals": [
+            "C1:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C2:2"
+          ],
+          "unplacedTerminals": [
+            "C2:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R4.2:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.9:C"
+          ],
+          "unplacedTerminals": [
+            "V4.9:C"
+          ]
+        }
+      ],
+      "minimumLinks": 4,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/RESET_OUT",
+      "padGroups": 5,
+      "remainingPadGroupLinks": 4,
+      "terminals": [
+        "BR2:1",
+        "C1:2",
+        "C2:2",
+        "R4.2:1",
+        "V4.9:C"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 3,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "C4:1"
+          ],
+          "unplacedTerminals": [
+            "C4:1"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R8:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V2:K"
+          ],
+          "unplacedTerminals": [
+            "V2:K"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V3.1:B"
+          ],
+          "unplacedTerminals": [
+            "V3.1:B"
+          ]
+        }
+      ],
+      "minimumLinks": 3,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/RESET_RC",
+      "padGroups": 4,
+      "remainingPadGroupLinks": 3,
+      "terminals": [
+        "C4:1",
+        "R8:1",
+        "V2:K",
+        "V3.1:B"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.3:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B6"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/ROW0",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "R9.3:1",
+        "X1:B6"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.5:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/ROW1",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "R9.5:1",
+        "X1:B2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.6:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B7"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/ROW2",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "R9.6:1",
+        "X1:B7"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.7:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A1"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/ROW3",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "R9.7:1",
+        "X1:A1"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.8:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:A4"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/ROW4",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "R9.8:1",
+        "X1:A4"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.4:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B5"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/ROW5",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "R9.4:1",
+        "X1:B5"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.2:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B11"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/ROW6",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "R9.2:1",
+        "X1:B11"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R9.1:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "X1:B13"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/ROW7",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "R9.1:1",
+        "X1:B13"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R1:9"
+          ],
+          "unplacedTerminals": [
+            "R1:9"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.3:C"
+          ],
+          "unplacedTerminals": [
+            "V4.3:C"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/SENSE0",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:1",
+        "R1:9",
+        "V4.3:C"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R1:8"
+          ],
+          "unplacedTerminals": [
+            "R1:8"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.4:C"
+          ],
+          "unplacedTerminals": [
+            "V4.4:C"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/SENSE1",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:2",
+        "R1:8",
+        "V4.4:C"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:3"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R1:7"
+          ],
+          "unplacedTerminals": [
+            "R1:7"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.8:C"
+          ],
+          "unplacedTerminals": [
+            "V4.8:C"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/SENSE2",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:3",
+        "R1:7",
+        "V4.8:C"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:4"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R1:6"
+          ],
+          "unplacedTerminals": [
+            "R1:6"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.7:C"
+          ],
+          "unplacedTerminals": [
+            "V4.7:C"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/SENSE3",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:4",
+        "R1:6",
+        "V4.7:C"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:5"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R1:5"
+          ],
+          "unplacedTerminals": [
+            "R1:5"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.1:C"
+          ],
+          "unplacedTerminals": [
+            "V4.1:C"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/SENSE4",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:5",
+        "R1:5",
+        "V4.1:C"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:6"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R1:4"
+          ],
+          "unplacedTerminals": [
+            "R1:4"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.6:C"
+          ],
+          "unplacedTerminals": [
+            "V4.6:C"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/SENSE5",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:6",
+        "R1:4",
+        "V4.6:C"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:7"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R1:3"
+          ],
+          "unplacedTerminals": [
+            "R1:3"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.2:C"
+          ],
+          "unplacedTerminals": [
+            "V4.2:C"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/SENSE6",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:7",
+        "R1:3",
+        "V4.2:C"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A4:8"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "R1:2"
+          ],
+          "unplacedTerminals": [
+            "R1:2"
+          ]
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "V4.5:C"
+          ],
+          "unplacedTerminals": [
+            "V4.5:C"
+          ]
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/SENSE7",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A4:8",
+        "R1:2",
+        "V4.5:C"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 0,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "XT1:A5"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 0,
+      "multiTerminal": false,
+      "nativePadsConnected": true,
+      "net": "/SHIELD",
+      "padGroups": 1,
+      "remainingPadGroupLinks": 0,
+      "terminals": [
+        "XT1:A5"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A1:4"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "L1.4:1"
+          ],
+          "unplacedTerminals": [
+            "L1.4:1"
+          ]
+        },
+        {
+          "copperIds": [
+            "21f7cb41-586c-431c-942e-8f66b2f16d86",
+            "5c17decc-0cf0-492e-8fec-1433f71ff7f0",
+            "76315e54-3742-414f-9183-6c6e8b0663e4",
+            "bd742c84-fca4-4ad3-ba4d-ad94d2261cf8",
+            "e4f04027-f60b-47ed-8a77-ea623b17e734"
+          ],
+          "evidenceGroups": [
+            "r102-output-bottom-partial"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "R10.2:2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/TA_DATEN",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A1:4",
+        "L1.4:1",
+        "R10.2:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 2,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A1:2"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "L1.1:1"
+          ],
+          "unplacedTerminals": [
+            "L1.1:1"
+          ]
+        },
+        {
+          "copperIds": [
+            "01e7c786-12a0-4bf7-9e08-6eb814deef93",
+            "1c269ce3-7f65-4437-b409-e2d78c371c60",
+            "3a55b456-6926-40e2-a586-99bffde5877c",
+            "5fff7738-a179-4a73-b774-2bb1ac614436",
+            "972fa540-a1fb-44d7-8a87-f27f933573f6",
+            "9d0484b0-c3e2-4f88-94be-13af10d77ac2"
+          ],
+          "evidenceGroups": [
+            "r101-output-bottom-partial",
+            "r101-output-top-local"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "R10.1:2"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 2,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/TA_TAKT",
+      "padGroups": 3,
+      "remainingPadGroupLinks": 2,
+      "terminals": [
+        "A1:2",
+        "L1.1:1",
+        "R10.1:2"
+      ]
+    },
+    {
+      "drcUnconnectedItems": 1,
+      "floatingCopperGroups": 0,
+      "islands": [
+        {
+          "copperIds": [
+            "0f8df276-6669-4080-a18a-7f1122ab625b",
+            "1abaa137-7ea6-4ab5-b28b-e7da28f1a974",
+            "36162e07-131c-45f3-b6a9-3ba40dfcd8f1",
+            "532bfdd8-dbf4-4011-b7f5-b6ee02046215",
+            "7fb987f5-c37e-4e47-9251-f09894e62e58",
+            "c74b9d8e-d470-4ae3-9205-e556c173103f",
+            "ec10f645-b9c0-4759-902b-49d63ff81d7d",
+            "f86a0269-51ef-4b9d-bb52-e8d6162773cb"
+          ],
+          "evidenceGroups": [
+            "a1-pin1-top-partial"
+          ],
+          "evidenceStatuses": [
+            "inferred",
+            "observed"
+          ],
+          "terminals": [
+            "A1:1"
+          ],
+          "unplacedTerminals": []
+        },
+        {
+          "copperIds": [],
+          "evidenceGroups": [],
+          "evidenceStatuses": [],
+          "terminals": [
+            "A5:22"
+          ],
+          "unplacedTerminals": []
+        }
+      ],
+      "minimumLinks": 1,
+      "multiTerminal": true,
+      "nativePadsConnected": false,
+      "net": "/WR_N",
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
+      "terminals": [
+        "A1:1",
+        "A5:22"
+      ]
+    }
+  ],
+  "schema": 1,
+  "scope": "Native KiCad same-net connectivity, including off-board placeholder pads. Connected does not mean historically verified or fabrication-ready. DRC gaps may include floating copper; pad-group links count only disconnected terminal groups. Cross-net clearance/short findings remain in qualification.json.",
+  "summary": {
+    "assignedPins": 330,
+    "drcUnconnectedItems": 220,
+    "floatingCopperGroups": 0,
+    "fullyConnectedMultiTerminalNets": 1,
+    "minimumLinks": 234,
+    "multiTerminalNets": 94,
+    "nets": 96,
+    "remainingPadGroupLinks": 220
+  }
+}

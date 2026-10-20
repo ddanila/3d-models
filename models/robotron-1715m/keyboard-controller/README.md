@@ -108,6 +108,14 @@ for mapped contacts. A8 remains unclassified visual geometry because it is absen
 from the reference schematic. Raised top-side bends are not hole centres; housing
 dimensions, lead heights and hole diameters remain estimates.
 
+## Native routing audit
+
+`generated/routing-audit.json` reports same-net copper islands, their terminals,
+route evidence groups and KiCad unconnected items. It includes off-board
+placeholder pads. Use remaining pad-group links and fully connected multi-pin
+nets to track native routing separately from photo reconstruction and simulation;
+floating track fragments do not count as connected pads.
+
 ## Regenerate and check
 
 From this directory, use Python with KiCad's `pcbnew` module for native export

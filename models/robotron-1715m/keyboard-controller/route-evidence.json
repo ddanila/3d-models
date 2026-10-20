@@ -1332,6 +1332,926 @@
           }
         }
       ]
+    },
+    "07eecba2-1bcd-4d4e-ad5a-90e31f2db705": {
+      "status": "inferred",
+      "geometrySha256": "0331db440c906637bc62b148a56c43b7fd3cc8598990047d2b47032fb68ef726",
+      "group": "discrete-ground-r42-r7",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible underside ground strip; terminal identity follows the independently reviewed common reference rail. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R4.2:2",
+        "R7:2"
+      ],
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1243,
+                972
+              ],
+              [
+                1244,
+                985
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "region": "output-pullups",
+        "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04"
+      }
+    },
+    "29463875-9300-4512-8459-88ae86fca4f2": {
+      "status": "observed",
+      "geometrySha256": "51ca48f65bd4c4e4a82aa62178924c9075b5823fdedf1a7fb6adc90da72cdb3c",
+      "group": "discrete-ground-r42-r7",
+      "detail": "Observed exposed copper centreline. Visible underside ground strip; terminal identity follows the independently reviewed common reference rail. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R4.2:2",
+        "R7:2"
+      ],
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1244,
+                985
+              ],
+              [
+                1245,
+                1001
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "region": "output-pullups",
+        "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04"
+      }
+    },
+    "184eea34-b1aa-4fc9-b78c-c42ab80756c3": {
+      "status": "inferred",
+      "geometrySha256": "32f76cba6263b675575d0258069194fee851a0e234bf9033cd34ded0d7f1f499",
+      "group": "discrete-ground-r42-r7",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible underside ground strip; terminal identity follows the independently reviewed common reference rail. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R4.2:2",
+        "R7:2"
+      ],
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1245,
+                1001
+              ],
+              [
+                1245,
+                1013
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "region": "output-pullups",
+        "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04"
+      }
+    },
+    "aa95fd93-607f-49e2-93a7-5ef48d912cfb": {
+      "status": "inferred",
+      "geometrySha256": "d0b85f87a4b07409a860119e8a3dba08df2e1171f53b08efaadfe6522dffdcee",
+      "group": "discrete-ground-r7-r8",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible continuation of the same underside ground strip. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R7:2",
+        "R8:2"
+      ],
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1245,
+                1013
+              ],
+              [
+                1245,
+                1026
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "region": "output-pullups",
+        "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04"
+      }
+    },
+    "6d9a16cb-c7e6-4109-9449-2958fd9df66e": {
+      "status": "observed",
+      "geometrySha256": "ae81b6bab7ee2b8f5350038d0ab989bcd644c5cf7f48ff31e37aba5407ad4de1",
+      "group": "discrete-ground-r7-r8",
+      "detail": "Observed exposed copper centreline. Visible continuation of the same underside ground strip. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R7:2",
+        "R8:2"
+      ],
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1245,
+                1026
+              ],
+              [
+                1245,
+                1044
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "region": "output-pullups",
+        "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04"
+      }
+    },
+    "dbb785ac-d450-4075-a5b0-d97bff7e58a6": {
+      "status": "inferred",
+      "geometrySha256": "82c07f1749216daf8175a961324d03fe028f280070af5917ca9917ad8d61ace3",
+      "group": "discrete-ground-r7-r8",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible continuation of the same underside ground strip. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R7:2",
+        "R8:2"
+      ],
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1245,
+                1044
+              ],
+              [
+                1245,
+                1057
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "region": "output-pullups",
+        "landmarksSha256": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04"
+      }
+    },
+    "e5a15015-1089-4e27-96ce-e7285d18563c": {
+      "status": "inferred",
+      "geometrySha256": "74a1bd1c243b1895f1066006447c9abd38325f17915a2c5bc94238dc895320fb",
+      "group": "output-pullup-supply-link",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible common supply island between the lower R10 leads. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R10.1:1",
+        "R10.2:1"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1458,
+                1645
+              ],
+              [
+                1465,
+                1651
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "44336a0f-32ff-4fb9-a4da-45dc1035cf96": {
+      "status": "observed",
+      "geometrySha256": "4bc314995110d43696670b191b2e12ac105461fd75727d82c9666fe26f1fd4be",
+      "group": "output-pullup-supply-link",
+      "detail": "Observed exposed copper centreline. Visible common supply island between the lower R10 leads. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R10.1:1",
+        "R10.2:1"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1465,
+                1651
+              ],
+              [
+                1490,
+                1651
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "e58f8b66-7f69-4db3-8322-5f594b6ab7a9": {
+      "status": "inferred",
+      "geometrySha256": "2a5d72b0c73666c53a6efba658329c7f2357e192aec5bb8d846f1d41255d5b63",
+      "group": "output-pullup-supply-link",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible common supply island between the lower R10 leads. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R10.1:1",
+        "R10.2:1"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1490,
+                1651
+              ],
+              [
+                1507,
+                1645
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "2c8b3ce9-47b3-414e-9bcd-9bf5425a7c9f": {
+      "status": "inferred",
+      "geometrySha256": "2329243b2d8ad53d8dd9de6c4032cb2ea14a12d40a9c33ff6393b59b78af0c21",
+      "group": "c51-supply-link",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible supply island from the R10.2 lower lead toward the upper C5.1 lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R10.2:1",
+        "C5.1:1"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1507,
+                1645
+              ],
+              [
+                1515,
+                1648
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "f252c687-0a7c-4ac3-8d5f-278c8f3b1487": {
+      "status": "observed",
+      "geometrySha256": "b4eddd9823f062dfd55f3370c3f0fe1d33ff76e2c50f97a0ea6d1b75dabe5987",
+      "group": "c51-supply-link",
+      "detail": "Observed exposed copper centreline. Visible supply island from the R10.2 lower lead toward the upper C5.1 lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R10.2:1",
+        "C5.1:1"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1515,
+                1648
+              ],
+              [
+                1536,
+                1648
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "d0c9c16c-7718-4ee5-a469-28cbc62dbff6": {
+      "status": "observed",
+      "geometrySha256": "219c75e107fb84f253862aaac6525a8ed83ff4820d52211078fbfcfa1ddb9a52",
+      "group": "c51-supply-link",
+      "detail": "Observed exposed copper centreline. Visible supply island from the R10.2 lower lead toward the upper C5.1 lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R10.2:1",
+        "C5.1:1"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1536,
+                1648
+              ],
+              [
+                1545,
+                1637
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "d063eaac-0092-45bd-9ce0-0465cc73a651": {
+      "status": "inferred",
+      "geometrySha256": "b2f270670685d67d636b11b5e9303219f81e3753e54020609ac1a5a38c837f72",
+      "group": "c51-supply-link",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible supply island from the R10.2 lower lead toward the upper C5.1 lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R10.2:1",
+        "C5.1:1"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1545,
+                1637
+              ],
+              [
+                1547,
+                1617
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "e437b7ee-ad43-4c1f-9582-63adcfd1059e": {
+      "status": "inferred",
+      "geometrySha256": "ac261b2f1bae11c1ad5abdae0caed40bc1a8d05a443dfa275f35692a3c1981ee",
+      "group": "c51-ground-a1",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible broad return rail from C5.1 below A1 to its ground lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "C5.1:2",
+        "A1:7"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1550,
+                1674
+              ],
+              [
+                1547,
+                1686
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "c651cd4b-821e-436e-856d-4b8ec9ef022c": {
+      "status": "observed",
+      "geometrySha256": "ad0d05d65cf31163d67902ac208d69f96a90a1cb2eed40d833ae28c2f682b131",
+      "group": "c51-ground-a1",
+      "detail": "Observed exposed copper centreline. Visible broad return rail from C5.1 below A1 to its ground lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "C5.1:2",
+        "A1:7"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1547,
+                1686
+              ],
+              [
+                1513,
+                1724
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "d133bff2-f1aa-4c1a-aad6-11f89a68e6d6": {
+      "status": "observed",
+      "geometrySha256": "bc4a7575dd9cc2887722616f44afc9b0d8e5dfdd2a9edb40d9a067065a830269",
+      "group": "c51-ground-a1",
+      "detail": "Observed exposed copper centreline. Visible broad return rail from C5.1 below A1 to its ground lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "C5.1:2",
+        "A1:7"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1513,
+                1724
+              ],
+              [
+                1340,
+                1728
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "cfb584cc-1fb1-48bd-9ef9-71ed78f637ce": {
+      "status": "observed",
+      "geometrySha256": "ed050fa1fb03d32dd6c0e52997b002657cd7d6e209d32ae34baed2a1d4b313cd",
+      "group": "c51-ground-a1",
+      "detail": "Observed exposed copper centreline. Visible broad return rail from C5.1 below A1 to its ground lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "C5.1:2",
+        "A1:7"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1340,
+                1728
+              ],
+              [
+                1303,
+                1701
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "09a1154e-f345-4040-bffb-50f178c0c8d5": {
+      "status": "inferred",
+      "geometrySha256": "f414a50fd4734d44a3877ac819c1d7566b7faa3865b9025104d11a3e85aa4a47",
+      "group": "c51-ground-a1",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible broad return rail from C5.1 below A1 to its ground lead. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "C5.1:2",
+        "A1:7"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1303,
+                1701
+              ],
+              [
+                1300,
+                1690
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "117435a4-b304-44b8-87ae-181c1020e8f5": {
+      "status": "inferred",
+      "geometrySha256": "815f3d983817e4688b2b741eab7c7118efde382912d02cf1f7d56dc0f32e35a1",
+      "group": "c52-ground-a23",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible return rail from C5.2 toward A2.3 ground; final lead attachment is estimated. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "C5.2:2",
+        "A2.3:7"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1595,
+                2642
+              ],
+              [
+                1602,
+                2650
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "669dac59-f9b2-48d4-98a2-0149b3d28031": {
+      "status": "observed",
+      "geometrySha256": "4fffe1d8558c6ccc0fca2e53c9a40764d8e0fcae6d09ecc335d4fe41bcd62529",
+      "group": "c52-ground-a23",
+      "detail": "Observed exposed copper centreline. Visible return rail from C5.2 toward A2.3 ground; final lead attachment is estimated. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "C5.2:2",
+        "A2.3:7"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1602,
+                2650
+              ],
+              [
+                1640,
+                2650
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "1570fcd8-faf5-4a86-8df3-97a28b9dbb50": {
+      "status": "inferred",
+      "geometrySha256": "abceafbc7c1a0ef2b9ca94f3065c9f2f243895cda0d6ed3614b85c2b23f66334",
+      "group": "c52-ground-a23",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible return rail from C5.2 toward A2.3 ground; final lead attachment is estimated. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "C5.2:2",
+        "A2.3:7"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1640,
+                2650
+              ],
+              [
+                1655,
+                2635
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "b852f072-75d8-4a26-883f-3f2b9424251d": {
+      "status": "inferred",
+      "geometrySha256": "cc8f96197d09ddc1499503af54cb034eefb1b1d88949f90ec3b408224f070ef0",
+      "group": "ff-pullup-a6",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible short track from the upper R6.6 lead to A6 pin 10; reference FF_PULLUP identity. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R6.6:2",
+        "A6:10"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1500,
+                3385
+              ],
+              [
+                1483,
+                3385
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "bd95e912-2b86-4560-b9de-cf7347b59136": {
+      "status": "observed",
+      "geometrySha256": "f160981162ae567d090d6b5f0888c736f27d735ceaf64fe669198e3f1977876e",
+      "group": "ff-pullup-a6",
+      "detail": "Observed exposed copper centreline. Visible short track from the upper R6.6 lead to A6 pin 10; reference FF_PULLUP identity. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R6.6:2",
+        "A6:10"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1483,
+                3385
+              ],
+              [
+                1447,
+                3387
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "51ebff89-555d-4b11-a831-1a59e9514889": {
+      "status": "inferred",
+      "geometrySha256": "b51a54db407133b4a6cddffe33c5c582db1f5eafbd39d93a8df9b49a26fbba68",
+      "group": "ff-pullup-a6",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible short track from the upper R6.6 lead to A6 pin 10; reference FF_PULLUP identity. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R6.6:2",
+        "A6:10"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1447,
+                3387
+              ],
+              [
+                1432,
+                3386
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "a318d46b-d0e7-430e-b931-7e18be559e47": {
+      "status": "inferred",
+      "geometrySha256": "eed6f2eaed6be4df71199b144bb7ef06d8507d15e0a8e7fea0b0a5cb6dbf212f",
+      "group": "ff-pullup-supply-a7",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible supply land between the lower R6.6 lead and A7 pin 14. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R6.6:1",
+        "A7:14"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1499,
+                3550
+              ],
+              [
+                1498,
+                3577
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "1ab55816-2127-40fc-82d4-52bfe63b3c4c": {
+      "status": "observed",
+      "geometrySha256": "7149f5c303413b228d6c0e6a671a6c4d0a879330956f4d45488aff417fe90e89",
+      "group": "ff-pullup-supply-a7",
+      "detail": "Observed exposed copper centreline. Visible supply land between the lower R6.6 lead and A7 pin 14. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R6.6:1",
+        "A7:14"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1498,
+                3577
+              ],
+              [
+                1470,
+                3579
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "a978a2f9-2889-4caa-a3ff-e2e997cac165": {
+      "status": "observed",
+      "geometrySha256": "b367d1b0ac47a243789afa0cf74fd1695175be471ce6ff60b50a2d489a5dc5f3",
+      "group": "ff-pullup-supply-a7",
+      "detail": "Observed exposed copper centreline. Visible supply land between the lower R6.6 lead and A7 pin 14. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R6.6:1",
+        "A7:14"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1470,
+                3579
+              ],
+              [
+                1448,
+                3568
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
+    },
+    "77aae6fd-fbda-46a0-bc37-25c871639c01": {
+      "status": "inferred",
+      "geometrySha256": "ce23ac333c3ad072ddf7b784b482dda9f86464c24b334b009215a681818625b0",
+      "group": "ff-pullup-supply-a7",
+      "detail": "Estimated native pad-to-visible-copper attachment. Visible supply land between the lower R6.6 lead and A7 pin 14. Nominal photo projection and track width; not measured dimensions or specimen continuity. Surrounding rail feeds remain incomplete.",
+      "terminals": [
+        "R6.6:1",
+        "A7:14"
+      ],
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1448,
+                3568
+              ],
+              [
+                1436,
+                3572
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ]
     }
   }
 }

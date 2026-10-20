@@ -56,6 +56,12 @@
 <circle cx="1297" cy="1325" r="8" fill="none" stroke="orange" stroke-width="3"/>
 <circle cx="1492" cy="1327" r="8" fill="none" stroke="orange" stroke-width="3"/>
 <circle cx="1098" cy="1325" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<polyline points="1243,972 1244,985" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1245,1001 1245,1013" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1244,985 1245,1001" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1245,1026 1245,1044" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1245,1013 1245,1026" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1245,1044 1245,1057" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1342,1325 1342,1325" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1344,1205 1245,1205" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1342,1325 1344,1205" fill="none" stroke="magenta" stroke-width="2"/>
