@@ -5,6 +5,7 @@
 import argparse,hashlib,json,math,os,shutil,subprocess,tempfile,collections,xml.etree.ElementTree as ET
 from pathlib import Path
 from geometry import arc_points, outline_polygon
+from output_assembly import build as output_assembly
 from connector_review import review as connector_review, placement_review
 from top_registration import review as top_review
 from connector_terminals import review as connector_terminals
@@ -163,6 +164,7 @@ def main():
  layout['visualConnectors']=[{'ref':'X1','status':'photo-placed-reference-terminal-order','unclassifiedContacts':connector['nativePlacement']['unclassifiedContacts'],'rows':joints['projectedJointRowsMm'],'photoSource':joints['photoSource'],'photoSha256':joints['photoSha256'],'scope':'Observed joint rows are retained independently of native reference pads. Only contacts absent from the reference schematic remain unassigned. Housing dimensions, contact heights, lead section and hole diameters remain illustrative.'}]
  layout['visualNetworks']=visual_networks(json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),unplaced)
  layout['visualAxials']=visual_axials(json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()),unplaced)
+ layout['visualOutputAssembly']=output_assembly(json.loads((ROOT/'output-assembly.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),json.loads((ROOT/'photo-landmarks.json').read_text()))
  write('layout.json',layout)
  write('connector-review.json',connector)
  write('connector-terminals.json',terminals)
@@ -202,6 +204,8 @@ def main():
  scad+=['controller_visual_transistors='+json.dumps(visual_transistors)+';']
  scad+=['controller_visual_networks='+json.dumps([[n['centre'],n['rotation'],n['length'],n['thickness'],n['height'],n['baseHeight'],n['observedLeads'],n['leadRadius'],n['ref']]for n in layout['visualNetworks']])+';']
  scad+=['controller_visual_axials='+json.dumps([[n['centre'],n['rotation'],n['length'],n['diameter'],n['centreHeight'],n['observedLeads'],n['leadRadius'],1 if n['blueCollarEnd']=='right' else -1,n['ref']]for n in layout['visualAxials']])+';']
+ output=layout['visualOutputAssembly'];f=output['filter'];c=output['cable']
+ scad+=['controller_output_core='+json.dumps([f['bodyPolygon'],f['baseHeight'],f['height']])+';', 'controller_output_wires='+json.dumps([[[*p,f['wireHeight']]for p in arc]for arc in f['raisedWireArcs']])+';', 'controller_output_wire_radius='+json.dumps(f['wireRadius'])+';', 'controller_entry_wires='+json.dumps([[[*p,c['wireHeight']]for p in arc['points']]for arc in c['raisedWireArcs']])+';', 'controller_entry_wire_radius='+json.dumps(c['wireRadius'])+';']
  resistor_evidence=json.loads((ROOT/'component-evidence.json').read_text());resistors=[]
  for c in placed:
   if c['ref'].startswith('R') and len(c['pads'])==2:
@@ -237,7 +241,7 @@ def main():
    x,y=c['position'];svg.append(f'<text x="{x}" y="{-y-4}" fill="white" font-size="2.8">{c["ref"]}</text>')
   svg.append('</g>')
  write('review.svg',''.join(svg)+'</svg>\n')
- inputs=['top-copper-landmarks.json','tools/top_registration.py','controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/connector_review.py','tools/connector_terminals.py','tools/route_evidence.py','route-evidence.json','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
+ inputs=['output-assembly.json','tools/output_assembly.py','top-copper-landmarks.json','tools/top_registration.py','controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/connector_review.py','tools/connector_terminals.py','tools/route_evidence.py','route-evidence.json','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
  outputs=sorted(p for p in (ROOT/'generated').iterdir() if p.name!='manifest.json')
  for source in json.loads((ROOT/'evidence.json').read_text())['sources']:
   if not source.get('path'):continue

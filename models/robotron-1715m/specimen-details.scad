@@ -386,7 +386,10 @@ module keyboard_pcb_fasteners(){keyboard_matrix_pose()
 // Short lead bundle and strain relief at the owner-photographed controller entry.
 // Routes are visual estimates; no undocumented electrical pinout is asserted.
 module keyboard_entry_wires(i=0){keyboard_controller_pose()
- wire_run([[-121,-2+i*1.5,4.5],[-119,-7+i*3,6],[-116,-7+i*3,3]],.55);
+ {
+ wire_run(controller_entry_wires[i],controller_entry_wire_radius);
+ if(i==0)for(arc=controller_output_wires)wire_run(arc,controller_output_wire_radius);
+ }
 }
 module keyboard_contact_routes(){
  translate([0,keyboard_y,28+keyboard_z_shift])rotate([keyboard_slope,0,0])
@@ -433,8 +436,8 @@ module keyboard_controller_leads(){keyboard_controller_pose(){
   wire_run([[p[0]+s*2.6*cos(p[2]),p[1]+s*2.6*sin(p[2]),3.2],[end[0],end[1],3.2],[end[0],end[1],-.5]],.25);
 }}
 module keyboard_entry_choke(){keyboard_controller_pose(){
- translate([-115,3,4])rotate([90,0,0])difference(){cylinder(d=7,h=4,$fn=32);translate([0,0,-1])cylinder(d=3.2,h=6,$fn=24);}
- for(i=[0:3])wire_run([[-118+i,4,4],[-118+i,3,8],[-118+i,-2,8],[-118+i,-3,3]],.3);
+ // Visible core envelope only; hidden opening and winding topology are unresolved.
+ translate([0,0,controller_output_core[1]])linear_extrude(controller_output_core[2])polygon(controller_output_core[0]);
 }}
 
 // Owner matrix-board socket: stepped pale body, mounting ears, recessed mouth

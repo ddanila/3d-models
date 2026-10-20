@@ -6,6 +6,24 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_output_assembly_is_visual_and_preserves_reference_pads(self):
+  import copy
+  from output_assembly import build
+  observation=json.loads((R/'output-assembly.json').read_text())
+  evidence=json.loads((R/'evidence.json').read_text())
+  landmarks=json.loads((R/'photo-landmarks.json').read_text())
+  layout=json.loads((R/'generated/layout.json').read_text())
+  result=build(observation,evidence,landmarks)
+  self.assertEqual(result,layout['visualOutputAssembly'])
+  self.assertNotIn('pads',result);self.assertNotIn('net',result)
+  self.assertTrue(all(ref in {c['ref'] for c in layout['unplaced']} for ref in observation['refs'] if ref!='XT1'))
+  for p in result['filter']['bodyPolygon']:
+   self.assertTrue(-135<p[0]<135 and -23<p[1]<23)
+  wrong=copy.deepcopy(observation);wrong['photoSource']='comparison-photo-080406304'
+  with self.assertRaisesRegex(ValueError,'primary registered'):build(wrong,evidence,landmarks)
+  wrong=copy.deepcopy(observation);wrong['filter']['wireHeightMm']=1.6
+  with self.assertRaisesRegex(ValueError,'above the board'):build(wrong,evidence,landmarks)
+
  def test_connection_review_uses_reference_nets_and_separate_connectors(self):
   from connection_review import build,render
   report=build();cases={c['id']:c for c in report['cases']}

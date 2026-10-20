@@ -14296,5 +14296,299 @@
       "status": "body-and-raised-leads-only",
       "thickness": 1.8
     }
-  ]
+  ],
+  "visualOutputAssembly": {
+    "cable": {
+      "raisedWireArcs": [
+        {
+          "colour": "white",
+          "points": [
+            [
+              -124.004637,
+              -4.759575
+            ],
+            [
+              -122.893015,
+              -4.956721
+            ],
+            [
+              -121.094461,
+              -3.871005
+            ],
+            [
+              -118.91087,
+              -1.853226
+            ]
+          ]
+        },
+        {
+          "colour": "black",
+          "points": [
+            [
+              -120.424838,
+              -14.568517
+            ],
+            [
+              -126.358506,
+              -13.705716
+            ],
+            [
+              -128.196343,
+              -12.37809
+            ],
+            [
+              -128.467311,
+              -10.539971
+            ],
+            [
+              -127.618201,
+              -8.243132
+            ],
+            [
+              -125.369368,
+              -6.740977
+            ],
+            [
+              -122.986593,
+              -6.339821
+            ]
+          ]
+        },
+        {
+          "colour": "pink",
+          "points": [
+            [
+              -120.519424,
+              -5.284995
+            ],
+            [
+              -120.847913,
+              -7.534134
+            ],
+            [
+              -122.439241,
+              -9.724877
+            ],
+            [
+              -123.066972,
+              -12.106429
+            ],
+            [
+              -122.414741,
+              -13.30596
+            ],
+            [
+              -121.374655,
+              -13.354644
+            ],
+            [
+              -120.532029,
+              -11.567116
+            ],
+            [
+              -119.972505,
+              -8.74352
+            ],
+            [
+              -118.989335,
+              -7.547007
+            ]
+          ]
+        },
+        {
+          "colour": "blue",
+          "points": [
+            [
+              -123.09847,
+              -3.706056
+            ],
+            [
+              -123.069984,
+              -1.663275
+            ],
+            [
+              -122.076371,
+              0.335293
+            ],
+            [
+              -120.886244,
+              0.427176
+            ],
+            [
+              -119.561392,
+              -0.509188
+            ]
+          ]
+        }
+      ],
+      "scope": "Visible coloured arcs stop at occlusion boundaries; colours do not identify XT1 terminals. Shield braid is visible near the clamp but its electrical attachment is unresolved.",
+      "wireHeight": 6,
+      "wireRadius": 0.65
+    },
+    "filter": {
+      "baseHeight": 3,
+      "bodyPolygon": [
+        [
+          -114.312327,
+          -13.758343
+        ],
+        [
+          -113.826211,
+          -5.373727
+        ],
+        [
+          -111.37095,
+          -5.486651
+        ],
+        [
+          -111.782021,
+          -13.876799
+        ]
+      ],
+      "height": 4,
+      "jointRows": {
+        "cableFacing": [
+          [
+            -116.034275,
+            -14.482041
+          ],
+          [
+            -116.293824,
+            -11.691635
+          ],
+          [
+            -116.558299,
+            -9.267198
+          ],
+          [
+            -116.300267,
+            -6.721324
+          ]
+        ],
+        "logicFacing": [
+          [
+            -109.171091,
+            -13.633205
+          ],
+          [
+            -109.067248,
+            -11.443325
+          ],
+          [
+            -109.032994,
+            -8.884879
+          ],
+          [
+            -109.152552,
+            -6.68547
+          ]
+        ]
+      },
+      "raisedWireArcs": [
+        [
+          [
+            -115.363818,
+            -14.440355
+          ],
+          [
+            -114.267724,
+            -15.954509
+          ],
+          [
+            -112.337648,
+            -16.411066
+          ],
+          [
+            -110.913274,
+            -15.74644
+          ],
+          [
+            -110.443906,
+            -14.085757
+          ]
+        ],
+        [
+          [
+            -115.19711,
+            -13.131954
+          ],
+          [
+            -113.951219,
+            -14.579723
+          ],
+          [
+            -111.946688,
+            -15.039482
+          ],
+          [
+            -110.671212,
+            -14.36774
+          ],
+          [
+            -110.280252,
+            -12.996087
+          ]
+        ],
+        [
+          [
+            -115.103805,
+            -11.747116
+          ],
+          [
+            -113.63473,
+            -13.205007
+          ],
+          [
+            -111.852514,
+            -13.580915
+          ],
+          [
+            -110.950332,
+            -12.96478
+          ]
+        ],
+        [
+          [
+            -113.692312,
+            -6.476188
+          ],
+          [
+            -112.781763,
+            -5.202495
+          ],
+          [
+            -111.143748,
+            -5.204697
+          ],
+          [
+            -110.264351,
+            -6.268649
+          ],
+          [
+            -110.359414,
+            -7.799712
+          ]
+        ]
+      ],
+      "scope": "Visible dark core envelope only; obscured core opening, underside and winding topology are not reconstructed.",
+      "wireHeight": 7.5,
+      "wireRadius": 0.4
+    },
+    "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+    "photoSource": "photo-top",
+    "refs": [
+      "L1.1",
+      "L1.2",
+      "L1.3",
+      "L1.4",
+      "XT1"
+    ],
+    "scope": "Primary specimen body and raised-wire observations. Board-plane projection of elevated objects is approximate. Heights and diameters are illustrative. Joint order is geometric only: no winding pairing, electrical terminal, hidden hole or continuity is assigned.",
+    "status": "visual-observations-only",
+    "unresolved": [
+      "Pair the filter's cable-facing and logic-facing joints independently before assigning L1.1\u2013L1.4.",
+      "Match cable conductor attachment joints to XT1 terminal labels; inherited native XT1 pad positions are reference placeholders, not photo-registered solder joints.",
+      "Trace logic-facing clock/data copper back toward the stops localized beneath R9.5 and R7."
+    ]
+  }
 }

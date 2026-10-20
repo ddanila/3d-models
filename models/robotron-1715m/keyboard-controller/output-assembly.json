@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "photoSource": "photo-top",
+  "refs": ["L1.1", "L1.2", "L1.3", "L1.4", "XT1"],
+  "status": "visual-observations-only",
+  "scope": "Primary specimen body and raised-wire observations. Board-plane projection of elevated objects is approximate. Heights and diameters are illustrative. Joint order is geometric only: no winding pairing, electrical terminal, hidden hole or continuity is assigned.",
+  "filter": {
+    "bodyPolygonPixels": [[1225,724],[1340,729],[1340,762],[1225,758]],
+    "bodyBaseHeightMm": 3,
+    "bodyHeightMm": 4,
+    "scope": "Visible dark core envelope only; obscured core opening, underside and winding topology are not reconstructed.",
+    "jointRowsPixels": {
+      "cableFacing": [[1214,701],[1252,697],[1285,693],[1320,696]],
+      "logicFacing": [[1230,793],[1260,794],[1295,794],[1325,792]]
+    },
+    "jointPixelUncertainty": 10,
+    "raisedWireArcsPixels": [
+      [[1215,710],[1195,725],[1190,751],[1200,770],[1223,776]],
+      [[1233,712],[1214,729],[1209,756],[1219,773],[1238,778]],
+      [[1252,713],[1233,733],[1229,757],[1238,769]],
+      [[1325,731],[1343,743],[1344,765],[1330,777],[1309,776]]
+    ],
+    "wireHeightMm": 7.5,
+    "wireRadiusMm": 0.4,
+    "pixelBox": [1175,690,1355,810]
+  },
+  "cable": {
+    "pixelBox": [1190,535,1480,685],
+    "scope": "Visible coloured arcs stop at occlusion boundaries; colours do not identify XT1 terminals. Shield braid is visible near the clamp but its electrical attachment is unresolved.",
+    "wireHeightMm": 6,
+    "wireRadiusMm": 0.65,
+    "raisedWireArcs": [
+      {"colour":"white","points":[[1342,592],[1340,607],[1356,631],[1385,660]]},
+      {"colour":"black","points":[[1210,642],[1218,562],[1235,537],[1260,533],[1292,544],[1314,574],[1321,606]]},
+      {"colour":"pink","points":[[1337,639],[1306,635],[1275,614],[1242,606],[1226,615],[1226,629],[1251,640],[1290,647],[1307,660]]},
+      {"colour":"blue","points":[[1357,604],[1385,604],[1413,617],[1415,633],[1403,651]]}
+    ]
+  },
+  "supportingSources": ["comparison-photo-080406304", "comparison-photo-080511382"],
+  "unresolved": [
+    "Pair the filter's cable-facing and logic-facing joints independently before assigning L1.1–L1.4.",
+    "Match cable conductor attachment joints to XT1 terminal labels; inherited native XT1 pad positions are reference placeholders, not photo-registered solder joints.",
+    "Trace logic-facing clock/data copper back toward the stops localized beneath R9.5 and R7."
+  ]
+}

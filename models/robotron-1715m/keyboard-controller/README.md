@@ -23,6 +23,9 @@ in `connection-review.json`, then run `python3 tools/connection_review.py`.
 The generator reads canonical route/pin evidence and does not modify the PCB.
 Projected search circles include held-out registration checks; they locate
 occlusions and do not establish joints, layer transitions or connectivity.
+`output-assembly.json` records the primary filter envelope, visible joint rows and
+raised wire arcs. Its generated visual assembly has no electrical pin assignments;
+XT1's inherited native coordinates remain reference placeholders.
 
 ## Authorities
 
