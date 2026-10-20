@@ -1,0 +1,380 @@
+{
+  "crossSide": {
+    "anchorTerminals": [
+      "A5:1",
+      "A5:20",
+      "A5:21",
+      "A5:40"
+    ],
+    "checkTerminals": [
+      "A5:14"
+    ],
+    "checks": [
+      {
+        "residualPixels": 2.527,
+        "terminal": "A5:14"
+      }
+    ],
+    "comparison": {
+      "electricalIdentityTransferred": false,
+      "imageSize": [
+        4080,
+        3072
+      ],
+      "observation": "The CPU body also covers the inter-row board area on this different specimen. This view cannot identify the underside solder eyes or transfer electrical continuity.",
+      "pixelBox": [
+        500,
+        1060,
+        3600,
+        1950
+      ],
+      "source": "comparison-photo-080429077",
+      "sourceSha256": "e8ece4b1f9686881f5447617c32616400c81c37a5461e1756bd691313a1d29b3"
+    },
+    "copperAssignmentQualified": false,
+    "occluder": {
+      "polygon": [
+        [
+          1590,
+          2730
+        ],
+        [
+          1756,
+          2720
+        ],
+        [
+          1782,
+          3378
+        ],
+        [
+          1610,
+          3388
+        ]
+      ],
+      "ref": "A5"
+    },
+    "scope": "Local underside-to-top search using corresponding CPU corner leads. Raised top leads are not board-hole centres; this fit locates an occluded area only and never qualifies copper or a via.",
+    "source": "photo-top",
+    "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+  },
+  "paths": [
+    {
+      "crossSideSearch": {
+        "continuityEstablished": false,
+        "insideCpuBodyWithSearchMargin": true,
+        "point": [
+          1636.284,
+          2941.752
+        ],
+        "radiusPixels": 19,
+        "status": "projected-search-only"
+      },
+      "id": "cpu-rom-d5",
+      "nativeCopper": false,
+      "observedEnds": [
+        {
+          "kind": "unassigned-eye",
+          "point": [
+            1252,
+            2708
+          ]
+        },
+        {
+          "point": [
+            1165,
+            3492
+          ],
+          "terminal": "A8:15"
+        }
+      ],
+      "reason": "The ROM-side trace reaches a solder eye whose local cross-side search projection falls beneath the CPU body. Both component-side specimens retain the CPU over this area. Eye-to-CPU continuity remains unresolved; a projected location is not an observed joint or a native via.",
+      "referenceNet": "/D5",
+      "segments": [
+        {
+          "id": "d5-0",
+          "points": [
+            [
+              1252,
+              2708
+            ],
+            [
+              1240,
+              2720
+            ]
+          ],
+          "status": "inferred"
+        },
+        {
+          "id": "d5-1",
+          "points": [
+            [
+              1240,
+              2720
+            ],
+            [
+              1242,
+              3100
+            ]
+          ],
+          "status": "observed"
+        },
+        {
+          "id": "d5-2",
+          "points": [
+            [
+              1242,
+              3100
+            ],
+            [
+              1249,
+              3396
+            ]
+          ],
+          "status": "observed"
+        },
+        {
+          "id": "d5-3",
+          "points": [
+            [
+              1249,
+              3396
+            ],
+            [
+              1166,
+              3483
+            ]
+          ],
+          "status": "observed"
+        },
+        {
+          "id": "d5-4",
+          "points": [
+            [
+              1166,
+              3483
+            ],
+            [
+              1165,
+              3492
+            ]
+          ],
+          "status": "inferred"
+        }
+      ],
+      "source": "photo-bottom",
+      "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+      "terminals": [
+        "A5:9",
+        "A8:15"
+      ]
+    },
+    {
+      "crossSideSearch": {
+        "continuityEstablished": false,
+        "insideCpuBodyWithSearchMargin": true,
+        "point": [
+          1635.547,
+          2910.624
+        ],
+        "radiusPixels": 19,
+        "status": "projected-search-only"
+      },
+      "id": "cpu-rom-d6",
+      "nativeCopper": false,
+      "observedEnds": [
+        {
+          "kind": "unassigned-eye",
+          "point": [
+            1251,
+            2678
+          ]
+        },
+        {
+          "point": [
+            1165,
+            3461
+          ],
+          "terminal": "A8:16"
+        }
+      ],
+      "reason": "The ROM-side trace reaches a solder eye whose local cross-side search projection falls beneath the CPU body. Both component-side specimens retain the CPU over this area. Eye-to-CPU continuity remains unresolved; a projected location is not an observed joint or a native via.",
+      "referenceNet": "/D6",
+      "segments": [
+        {
+          "id": "d6-0",
+          "points": [
+            [
+              1251,
+              2678
+            ],
+            [
+              1226,
+              2702
+            ]
+          ],
+          "status": "inferred"
+        },
+        {
+          "id": "d6-1",
+          "points": [
+            [
+              1226,
+              2702
+            ],
+            [
+              1228,
+              3100
+            ]
+          ],
+          "status": "observed"
+        },
+        {
+          "id": "d6-2",
+          "points": [
+            [
+              1228,
+              3100
+            ],
+            [
+              1234,
+              3378
+            ]
+          ],
+          "status": "observed"
+        },
+        {
+          "id": "d6-3",
+          "points": [
+            [
+              1234,
+              3378
+            ],
+            [
+              1166,
+              3450
+            ]
+          ],
+          "status": "observed"
+        },
+        {
+          "id": "d6-4",
+          "points": [
+            [
+              1166,
+              3450
+            ],
+            [
+              1165,
+              3461
+            ]
+          ],
+          "status": "inferred"
+        }
+      ],
+      "source": "photo-bottom",
+      "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+      "terminals": [
+        "A5:10",
+        "A8:16"
+      ]
+    },
+    {
+      "crossSideSearch": {
+        "continuityEstablished": false,
+        "insideCpuBodyWithSearchMargin": true,
+        "point": [
+          1689.583,
+          3134.723
+        ],
+        "radiusPixels": 19,
+        "status": "projected-search-only"
+      },
+      "id": "cpu-rom-d7",
+      "nativeCopper": false,
+      "observedEnds": [
+        {
+          "kind": "unassigned-eye",
+          "point": [
+            1209,
+            2896
+          ]
+        },
+        {
+          "point": [
+            1165,
+            3430
+          ],
+          "terminal": "A8:17"
+        }
+      ],
+      "reason": "The ROM-side trace reaches a solder eye whose local cross-side search projection falls beneath the CPU body. Both component-side specimens retain the CPU over this area. Eye-to-CPU continuity remains unresolved; a projected location is not an observed joint or a native via.",
+      "referenceNet": "/D7",
+      "segments": [
+        {
+          "id": "d7-0",
+          "points": [
+            [
+              1209,
+              2896
+            ],
+            [
+              1208,
+              3100
+            ]
+          ],
+          "status": "inferred"
+        },
+        {
+          "id": "d7-1",
+          "points": [
+            [
+              1208,
+              3100
+            ],
+            [
+              1216,
+              3364
+            ]
+          ],
+          "status": "observed"
+        },
+        {
+          "id": "d7-2",
+          "points": [
+            [
+              1216,
+              3364
+            ],
+            [
+              1165,
+              3418
+            ]
+          ],
+          "status": "observed"
+        },
+        {
+          "id": "d7-3",
+          "points": [
+            [
+              1165,
+              3418
+            ],
+            [
+              1165,
+              3430
+            ]
+          ],
+          "status": "inferred"
+        }
+      ],
+      "source": "photo-bottom",
+      "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+      "terminals": [
+        "A5:13",
+        "A8:17"
+      ]
+    }
+  ],
+  "schema": 1,
+  "scope": "Partial photo paths with unresolved cross-side continuations. Reference nets and terminal pairs are review targets, not complete paths or native copper assignments."
+}

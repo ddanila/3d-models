@@ -12,7 +12,7 @@
       "source": "photo-bottom",
       "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
       "nativeCopper": false,
-      "reason": "Only the ROM-side fan-out to a solder eye is recorded here. The eye-to-CPU continuation is unresolved; identify the same joint on the component side before claiming the complete path. No native route or via is assigned by this review.",
+      "reason": "The ROM-side trace reaches a solder eye whose local cross-side search projection falls beneath the CPU body. Both component-side specimens retain the CPU over this area. Eye-to-CPU continuity remains unresolved; a projected location is not an observed joint or a native via.",
       "observedEnds": [
         {
           "kind": "unassigned-eye",
@@ -112,7 +112,7 @@
       "source": "photo-bottom",
       "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
       "nativeCopper": false,
-      "reason": "Only the ROM-side fan-out to a solder eye is recorded here. The eye-to-CPU continuation is unresolved; identify the same joint on the component side before claiming the complete path. No native route or via is assigned by this review.",
+      "reason": "The ROM-side trace reaches a solder eye whose local cross-side search projection falls beneath the CPU body. Both component-side specimens retain the CPU over this area. Eye-to-CPU continuity remains unresolved; a projected location is not an observed joint or a native via.",
       "observedEnds": [
         {
           "kind": "unassigned-eye",
@@ -212,7 +212,7 @@
       "source": "photo-bottom",
       "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
       "nativeCopper": false,
-      "reason": "Only the ROM-side fan-out to a solder eye is recorded here. The eye-to-CPU continuation is unresolved; identify the same joint on the component side before claiming the complete path. No native route or via is assigned by this review.",
+      "reason": "The ROM-side trace reaches a solder eye whose local cross-side search projection falls beneath the CPU body. Both component-side specimens retain the CPU over this area. Eye-to-CPU continuity remains unresolved; a projected location is not an observed joint or a native via.",
       "observedEnds": [
         {
           "kind": "unassigned-eye",
@@ -288,5 +288,55 @@
         }
       ]
     }
-  ]
+  ],
+  "crossSide": {
+    "source": "photo-top",
+    "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+    "anchorTerminals": [
+      "A5:1",
+      "A5:20",
+      "A5:21",
+      "A5:40"
+    ],
+    "checkTerminals": [
+      "A5:14"
+    ],
+    "occluder": {
+      "ref": "A5",
+      "polygon": [
+        [
+          1590,
+          2730
+        ],
+        [
+          1756,
+          2720
+        ],
+        [
+          1782,
+          3378
+        ],
+        [
+          1610,
+          3388
+        ]
+      ]
+    },
+    "scope": "Local underside-to-top search using corresponding CPU corner leads. Raised top leads are not board-hole centres; this fit locates an occluded area only and never qualifies copper or a via.",
+    "comparison": {
+      "source": "comparison-photo-080429077",
+      "sourceSha256": "e8ece4b1f9686881f5447617c32616400c81c37a5461e1756bd691313a1d29b3",
+      "imageSize": [
+        4080,
+        3072
+      ],
+      "pixelBox": [
+        500,
+        1060,
+        3600,
+        1950
+      ],
+      "observation": "The CPU body also covers the inter-row board area on this different specimen. This view cannot identify the underside solder eyes or transfer electrical continuity."
+    }
+  }
 }

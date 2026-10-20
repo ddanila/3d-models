@@ -6,6 +6,33 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_bus_search_preserves_occlusion_without_assigning_continuity(self):
+  from bus_review import build
+  report=build()
+  self.assertEqual(report,json.loads((R/'generated/bus-review.json').read_text()))
+  self.assertFalse(report['crossSide']['copperAssignmentQualified'])
+  self.assertFalse(report['crossSide']['comparison']['electricalIdentityTransferred'])
+  for path in report['paths']:
+   self.assertTrue(path['crossSideSearch']['insideCpuBodyWithSearchMargin'])
+   self.assertFalse(path['crossSideSearch']['continuityEstablished'])
+   self.assertFalse(path['nativeCopper'])
+  with tempfile.TemporaryDirectory() as tmp:
+   r=Path(tmp)/'board';shutil.copytree(R,r,ignore=shutil.ignore_patterns('__pycache__'))
+   for source in json.loads((R/'evidence.json').read_text())['sources']:
+    if source.get('path'):
+     p=r/source['path'];p.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/source['path'],p)
+   original=json.loads((r/'bus-review.json').read_text())
+   import copy
+   bad=copy.deepcopy(original);bad['crossSide']['sourceSha256']='0'*64
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'source hash mismatch'):build(r)
+   bad=copy.deepcopy(original);bad['crossSide']['checkTerminals']=['A5:1']
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'independent checks'):build(r)
+   bad=copy.deepcopy(original);bad['paths'][0]['observedEnds'][0]['point']=[1400,2700]
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   self.assertFalse(build(r)['paths'][0]['crossSideSearch']['insideCpuBodyWithSearchMargin'])
+
  def test_cable_graph_does_not_join_windings_or_assign_terminals(self):
   import copy
   from cable_copper import build,partition

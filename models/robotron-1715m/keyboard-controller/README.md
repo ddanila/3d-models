@@ -102,7 +102,10 @@ Unassigned photo artwork is not electrical copper.
 
 `bus-review.json` retains partial bus paths with unresolved cross-side joins.
 Its reference nets and terminal pairs are review targets, not assigned copper
-or complete connections. Before promotion, verify the photographed centreline,
+or complete connections. `generated/bus-review.json` adds a local cross-side
+search overlay: the remaining eyes project beneath the installed CPU body.
+This locates the hidden area, not the joints or their continuity.
+Before promotion, verify the photographed centreline,
 pad positions and local registration independently; a model short alone does
 not identify which of those is wrong.
 
