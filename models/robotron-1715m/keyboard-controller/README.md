@@ -16,6 +16,12 @@ Unplaced components are parked outside the outline. Board dimensions remain
 estimates, not specimen measurements. Exports use millimetres
 and a common top-view frame; transforms and conventions are in `generated/layout.json`.
 
+Open [the connection-review sheet](review/connection-review.html) for annotated
+serial-output and X1 evidence, reference endpoints and distinguishing observations.
+X1 serves the key matrix and LEDs; XT1 is the host cable. Edit the review questions
+in `connection-review.json`, then run `python3 tools/connection_review.py`.
+The generator reads canonical route/pin evidence and does not modify the PCB.
+
 ## Authorities
 
 | Information | Editable source / generated review |

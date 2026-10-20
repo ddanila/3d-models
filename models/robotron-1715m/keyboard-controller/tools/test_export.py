@@ -6,6 +6,33 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_connection_review_uses_reference_nets_and_separate_connectors(self):
+  from connection_review import build,render
+  report=build();cases={c['id']:c for c in report['cases']}
+  self.assertEqual(cases['host-clock']['referenceNets'][1]['terminals'],['L1.1:2','XT1:B2'])
+  self.assertEqual(cases['host-data']['referenceNets'][1]['terminals'],['L1.4:2','XT1:A1'])
+  self.assertEqual(cases['clock-strobe']['candidateEndpoints'],[{'terminal':'A5:21','net':'/RD_N'}])
+  self.assertEqual(cases['x1-a8']['referenceNets'],[])
+  self.assertEqual({f['source']['id']for f in cases['x1-a8']['figures']},{'photo-top','photo-bottom'})
+  self.assertTrue(cases['x1-order']['terminalOrder']['completeTerminalOrderResolved'])
+  self.assertIn('not measured continuity',render(report))
+
+ def test_connection_review_rejects_changed_net_and_route_evidence(self):
+  from connection_review import build,INPUTS
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp)/'board';root.mkdir()
+   (root.parent/'reference').symlink_to(R.parent/'reference',target_is_directory=True)
+   for name in INPUTS+['tools/connection_review.py']:
+    target=root/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/name,target)
+   p=root/'generated/connectivity.json';original=p.read_text();data=json.loads(original)
+   data['components']['XT1']['pins']['B2']='/CABLE_DATEN';p.write_text(json.dumps(data))
+   with self.assertRaisesRegex(ValueError,'Reference endpoint net mismatch'):build(root)
+   p.write_text(original)
+   p=root/'route-evidence.json';data=json.loads(p.read_text())
+   item=next(v for v in data['items'].values()if v['group']=='r101-output-top-local')
+   item['status']='observed' if item['status']!='observed' else 'inferred';p.write_text(json.dumps(data))
+   with self.assertRaisesRegex(ValueError,'Native route review mismatch'):build(root)
+
  def test_visual_networks_do_not_create_electrical_pads(self):
   import copy
   from export import visual_networks
