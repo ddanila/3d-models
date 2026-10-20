@@ -85,7 +85,7 @@ def build(data, source):
         dict(point=upper_stop['bottomPixel'], label='Upper eye; top continuation to filter unresolved')]))
     figures.append(figure('photo-top', corridor['spans'], [
         dict(point=upper_stop['projectedTopPixel'], radius=math.ceil(upper['maxCheckResidualPixels']+allowance), kind='search', label='Upper-eye search near R4.1; no observed join to the corridor'),
-        dict(point=corridor['spans'][0]['points'][-1], label='Recorded corridor stop at capacitor occlusion; not a capacitor pin or LF assignment')]))
+        dict(point=corridor['spans'][0]['points'][-1], label='Recorded corridor stop before capacitor-side copper; not a capacitor pin or LF assignment')]))
     return dict(scope=raw['scope'], bankRegistration=registration, clockStop=clock_stop,
                 bankReturn=matched, upperRegistration=upper, upperStop=upper_stop,
                 figures=figures, upperCorridor=corridor_review, openJoins=raw['openJoins'], assignedReferenceTerminals={},

@@ -97,7 +97,7 @@ class ControllerExportTests(unittest.TestCase):
   self.assertTrue(any(p['residualPixels']>p['allowancePixels'] for p in trial['checks']))
   self.assertEqual(c['upperCorridor']['assignedFilterTerminals'],{})
   self.assertTrue(all('bottomPixel' not in p for p in c['upperCorridor']['unmatchedTopFeatures']))
-  self.assertEqual(next(s for s in spans if s['id']=='upper-corridor-middle')['points'][-1],[1428,804])
+  self.assertEqual(next(s for s in spans if s['id']=='upper-corridor-middle')['points'][-1],[1440,810])
 
  def test_output_assembly_is_visual_and_preserves_reference_pads(self):
   import copy

@@ -2,7 +2,7 @@
   "schema": 1,
   "scope": "Physical route review, not new connectivity evidence. X1 serves the matrix/LEDs; XT1 is the host cable. Reference endpoints are targets for tracing, not observed attachments.",
   "inputSha256": {
-    "connection-review.json": "54dcb8b464aac5eed87354d57a7ede24dc1164c15e8a9998c19d531136c519c9",
+    "connection-review.json": "75048eb0d8f2ed7069bb75829c62055cc7928a66fce4e96707165f910edba0e7",
     "evidence.json": "261fe27e0acb73f701ebf3e5577b0f390d2001602c86ab7f53c922206e83f888",
     "component-evidence.json": "a72ba37c6e404cd699d6d6010aa4c448c22cc5ac7459562af68685c76b256ff8",
     "route-evidence.json": "ab650188f8d3e826352205bd4596b83fe113c31da04714c8d82d5cd1fb4ab15a",
@@ -13,14 +13,14 @@
     "generated/bottom-registration.json": "fe7e23ac9c7e96b0a75d08c5fedbf95ca1534dea364f82c47f221de3018a4c64",
     "photo-landmarks.json": "f76f424013b762666e16ba3c28ddb322c8b65d6d88dd47584add2e1c427270b6",
     "bottom-landmarks.json": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
-    "clock-continuation.json": "06bd59ef8460d38b7ed543e870b394e60f9950b3b0468bc917470bd370d7ba06",
+    "clock-continuation.json": "df0e412e549ceb866b1e89b2099e121be7b76a2acdc3e0edcd32c936e8098f07",
     "cable-copper.json": "e0adfff02c8749ae4826eea433ee0236235af3898c9093a7ec01f624debd6fe3",
     "supply-review.json": "d5d6739317e7bd1ee1a5812fac81c0d34dccdc5916fe4b6e47ad7e20f922a622",
     "output-assembly.json": "b6c36551b5f3db84fb1dd775e2dd704064975ce95d5e0b4a26f9954c2494b370",
     "tools/connection_review.py": "82fbc3203fb81b2ba7377ffd2789b8a94759cf10ffd5685d393b4d37669d0a88",
     "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068",
     "tools/bottom_registration.py": "cc7cad09ee54bc63359ff8c4331c598b984a877cd942435d0ba5521a03edfad8",
-    "tools/clock_continuation.py": "09daac4ec7ddcd50dc5b41d00eec3f3d967bb5d09445d8a1dd3530f5e305cdd8"
+    "tools/clock_continuation.py": "7dfa75008966aaf544f0000b5ca5c75af2334a79ae5bc1b88211f8c01084880d"
   },
   "cases": [
     {
@@ -73,7 +73,7 @@
         "Reference path reaches A1:2 and L1.1:1 through hidden copper.",
         "The apparent top/bottom stop correspondence is wrong; the visible branch requires a different continuation. This is a geometric alternative, not a replacement net assignment."
       ],
-      "nextDeskWork": "Resolve the hidden bank spans and the upper-eye continuation near R4.1 before assigning the outer lane to clock. The exposed bent corridor stops at the capacitor beside the filter; resolve both its upper-eye join and its hidden capacitor-side continuation. The wider mixed fit fails held-out checks and must not assign an LF joint.",
+      "nextDeskWork": "Resolve the hidden bank spans and the upper-eye continuation near R4.1 before assigning the outer lane to clock. The exposed bent corridor stops before the capacitor-side copper; resolve both its upper-eye join and its hidden capacitor-side continuation. The wider mixed fit fails held-out checks and must not assign an LF joint.",
       "decisiveObservation": "An uninterrupted path, including any confirmed layer transition, from R10.1:2 to A1:2 and the identified L1.1 input. Separately identify both winding ends and the cable-side connection to XT1:B2.",
       "doNotInfer": "The former A1:13 conflict came from a rejected projection. It is not a measured short, and the surviving local segment does not identify the hidden A1 pin.",
       "referenceNets": [
@@ -921,30 +921,30 @@
                 "points": [
                   [
                     1540,
-                    833
+                    839
                   ],
                   [
                     1493,
-                    833
+                    839
                   ],
                   [
                     1457,
-                    804
+                    810
                   ],
                   [
-                    1428,
-                    804
+                    1440,
+                    810
                   ]
                 ],
                 "status": "observed",
-                "scope": "Exposed top track between the resistor area and the capacitor beside the filter. Stop before the capacitor body; no continuation under either body is asserted.",
+                "scope": "Exposed top track between the resistor area and the capacitor-side copper. Stop before the wider copper near the capacitor; no component attachment or hidden continuation is asserted.",
                 "group": "unassigned-clock-continuation",
                 "net": null,
                 "imageSize": [
                   3072,
                   4080
                 ],
-                "detail": "Exposed top track between the resistor area and the capacitor beside the filter. Stop before the capacitor body; no continuation under either body is asserted."
+                "detail": "Exposed top track between the resistor area and the capacitor-side copper. Stop before the wider copper near the capacitor; no component attachment or hidden continuation is asserted."
               }
             ],
             "markers": [
@@ -959,16 +959,16 @@
               },
               {
                 "point": [
-                  1428,
-                  804
+                  1440,
+                  810
                 ],
-                "label": "Recorded corridor stop at capacitor occlusion; not a capacitor pin or LF assignment"
+                "label": "Recorded corridor stop before capacitor-side copper; not a capacitor pin or LF assignment"
               }
             ]
           }
         ],
         "upperCorridor": {
-          "scope": "Primary top observation across the upper corridor. Its two ends stop at obscured regions; neither the upper eye nor a filter terminal is joined to it.",
+          "scope": "Primary top observation across the upper corridor. Both ends are review stops, not holes or measured breaks. Neither the upper eye nor a filter terminal is joined to this span.",
           "registration": {
             "anchors": [
               {
@@ -1244,7 +1244,7 @@
           },
           {
             "id": "under-capacitor",
-            "scope": "The bent corridor ends at the capacitor beside the filter. The capacitor body hides its continuation, and nearby lead ends have no independent underside matches."
+            "scope": "The capacitor obscures part of the surrounding routing. The recorded span stops before nearby copper; its continuation toward the filter and the underside matches of nearby lead ends remain unresolved."
           }
         ],
         "assignedReferenceTerminals": {},

@@ -183,7 +183,7 @@
     },
     {
       "id": "under-capacitor",
-      "scope": "The bent corridor ends at the capacitor beside the filter. The capacitor body hides its continuation, and nearby lead ends have no independent underside matches."
+      "scope": "The capacitor obscures part of the surrounding routing. The recorded span stops before nearby copper; its continuation toward the filter and the underside matches of nearby lead ends remain unresolved."
     }
   ],
   "comparisonSources": [
@@ -194,7 +194,7 @@
   ],
   "comparisonScope": "Different specimen: exposed copper corroborates the bank lane arrangement and separates the outer return lane from its neighbour. No coordinates, net assignments or winding identities are transferred.",
   "upperCorridor": {
-    "scope": "Primary top observation across the upper corridor. Its two ends stop at obscured regions; neither the upper eye nor a filter terminal is joined to it.",
+    "scope": "Primary top observation across the upper corridor. Both ends are review stops, not holes or measured breaks. Neither the upper eye nor a filter terminal is joined to this span.",
     "anchors": [
       "CF1",
       "R3:1",
@@ -220,23 +220,23 @@
         "points": [
           [
             1540,
-            833
+            839
           ],
           [
             1493,
-            833
+            839
           ],
           [
             1457,
-            804
+            810
           ],
           [
-            1428,
-            804
+            1440,
+            810
           ]
         ],
         "status": "observed",
-        "scope": "Exposed top track between the resistor area and the capacitor beside the filter. Stop before the capacitor body; no continuation under either body is asserted."
+        "scope": "Exposed top track between the resistor area and the capacitor-side copper. Stop before the wider copper near the capacitor; no component attachment or hidden continuation is asserted."
       }
     ],
     "unmatchedTopFeatures": [
