@@ -100,10 +100,11 @@ the review. Observed tracks require their side's photo; observed vias require bo
 sides. This enforces provenance completeness, not the truth of an interpretation.
 Unassigned photo artwork is not electrical copper.
 
-`bus-review.json` retains bus paths deferred by native placement conflicts.
-Its reference nets are review targets, not assigned copper. Reconcile the pad
-positions and local registration before promotion; moving a photographed lane
-to evade a model short would conceal the mismatch.
+`bus-review.json` retains partial bus paths with unresolved cross-side joins.
+Its reference nets and terminal pairs are review targets, not assigned copper
+or complete connections. Before promotion, verify the photographed centreline,
+pad positions and local registration independently; a model short alone does
+not identify which of those is wrong.
 
 `generated/connector-review.json` checks X1's native reference pads against
 locally registered underside joints. `generated/connector-terminals.json` retains

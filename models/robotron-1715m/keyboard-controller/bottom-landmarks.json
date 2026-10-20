@@ -933,6 +933,119 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cpu-rom-bus",
+      "scope": "CPU/A4-to-ROM data lanes bounded by A5:35, A4:4 and A8:12/13. Independent checks include CPU pins 7/8 and both ROM rows. Nominal geometry only inside the hull; solder obscures hole centres and dimensional metrology remains open.",
+      "reviewedForCopper": true,
+      "anchors": [
+        {
+          "ref": "A5",
+          "pin": "35",
+          "photoPixel": [
+            1119,
+            2678
+          ]
+        },
+        {
+          "ref": "A4",
+          "pin": "4",
+          "photoPixel": [
+            1515,
+            2671
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "12",
+          "photoPixel": [
+            1348,
+            3556
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "13",
+          "photoPixel": [
+            1165,
+            3554
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "ref": "A5",
+          "pin": "7",
+          "photoPixel": [
+            1307,
+            2706
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "8",
+          "photoPixel": [
+            1307,
+            2737
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "20",
+          "photoPixel": [
+            1312,
+            3107
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "21",
+          "photoPixel": [
+            1125,
+            3112
+          ]
+        },
+        {
+          "ref": "A5",
+          "pin": "14",
+          "photoPixel": [
+            1309,
+            2927
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "1",
+          "photoPixel": [
+            1337,
+            3204
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "24",
+          "photoPixel": [
+            1151,
+            3211
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "6",
+          "photoPixel": [
+            1342,
+            3362
+          ]
+        },
+        {
+          "ref": "A8",
+          "pin": "19",
+          "photoPixel": [
+            1161,
+            3370
+          ]
+        }
+      ]
     }
   ]
 }

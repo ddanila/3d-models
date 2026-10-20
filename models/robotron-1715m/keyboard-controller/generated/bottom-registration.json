@@ -1745,6 +1745,240 @@
       ],
       "scope": "CPU/A4-to-ROM data-bus region, bounded by CPU A5:30, A4:10 and ROM A8:12/13. Independent CPU and ROM joint checks qualify only nominal geometry inside this hull, not metrology or hidden continuity.",
       "toleranceMm": 1.25
+    },
+    {
+      "anchorHull": [
+        [
+          1119,
+          2678
+        ],
+        [
+          1515,
+          2671
+        ],
+        [
+          1348,
+          3556
+        ],
+        [
+          1165,
+          3554
+        ]
+      ],
+      "anchors": [
+        {
+          "photoPixel": [
+            1119,
+            2678
+          ],
+          "pin": "35",
+          "ref": "A5"
+        },
+        {
+          "photoPixel": [
+            1515,
+            2671
+          ],
+          "pin": "4",
+          "ref": "A4"
+        },
+        {
+          "photoPixel": [
+            1348,
+            3556
+          ],
+          "pin": "12",
+          "ref": "A8"
+        },
+        {
+          "photoPixel": [
+            1165,
+            3554
+          ],
+          "pin": "13",
+          "ref": "A8"
+        }
+      ],
+      "checks": [
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            53.099141,
+            4.187159
+          ],
+          "photoModel": [
+            53.26067346230246,
+            4.107727794100542
+          ],
+          "photoPixel": [
+            1307,
+            2706
+          ],
+          "pin": "7",
+          "ref": "A5",
+          "residualMm": 0.18000570226561055
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            55.639136,
+            4.18205
+          ],
+          "photoModel": [
+            55.71886173163607,
+            4.158619166109169
+          ],
+          "photoPixel": [
+            1307,
+            2737
+          ],
+          "pin": "8",
+          "ref": "A5",
+          "residualMm": 0.08309751056274745
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            86.119074,
+            4.120733
+          ],
+          "photoModel": [
+            85.33860932471215,
+            4.3608647697607825
+          ],
+          "photoPixel": [
+            1312,
+            3107
+          ],
+          "pin": "20",
+          "ref": "A5",
+          "residualMm": 0.8165711091023287
+        },
+        {
+          "insideAnchorHull": false,
+          "pcbModel": [
+            86.149732,
+            19.360703
+          ],
+          "photoModel": [
+            85.4630790128439,
+            19.8114166521571
+          ],
+          "photoPixel": [
+            1125,
+            3112
+          ],
+          "pin": "21",
+          "ref": "A5",
+          "residualMm": 0.8213617479595561
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            70.879105,
+            4.151392
+          ],
+          "photoModel": [
+            70.86576485475419,
+            4.3084854343012955
+          ],
+          "photoPixel": [
+            1309,
+            2927
+          ],
+          "pin": "14",
+          "ref": "A5",
+          "residualMm": 0.15765882967900816
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            94.040028,
+            1.653313
+          ],
+          "photoModel": [
+            93.21710534011132,
+            2.465262820835716
+          ],
+          "photoPixel": [
+            1337,
+            3204
+          ],
+          "pin": "1",
+          "ref": "A8",
+          "residualMm": 1.156055455293312
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            93.780926,
+            16.891111
+          ],
+          "photoModel": [
+            93.5470145626338,
+            17.85126344294221
+          ],
+          "photoPixel": [
+            1151,
+            3211
+          ],
+          "pin": "24",
+          "ref": "A8",
+          "residualMm": 0.98823442270476
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            106.738192,
+            1.869232
+          ],
+          "photoModel": [
+            106.06979601577564,
+            2.309528265778714
+          ],
+          "photoPixel": [
+            1342,
+            3362
+          ],
+          "pin": "6",
+          "ref": "A8",
+          "residualMm": 0.8003836538722741
+        },
+        {
+          "insideAnchorHull": true,
+          "pcbModel": [
+            106.479091,
+            17.107029
+          ],
+          "photoModel": [
+            106.55506085120004,
+            17.33469319744704
+          ],
+          "photoPixel": [
+            1161,
+            3370
+          ],
+          "pin": "19",
+          "ref": "A8",
+          "residualMm": 0.2400050105530337
+        }
+      ],
+      "copperAssignmentQualified": true,
+      "id": "cpu-rom-bus",
+      "maxCheckResidualMm": 1.156055455293312,
+      "photoToModel": [
+        0.0036715934041928583,
+        0.07596114100382902,
+        -158.4926197185829,
+        -0.07914656402415045,
+        0.0015054390863101794,
+        103.37031056589326,
+        2.6112594963156287e-05,
+        -2.235178722746239e-05,
+        1
+      ],
+      "scope": "CPU/A4-to-ROM data lanes bounded by A5:35, A4:4 and A8:12/13. Independent checks include CPU pins 7/8 and both ROM rows. Nominal geometry only inside the hull; solder obscures hole centres and dimensional metrology remains open.",
+      "toleranceMm": 1.25
     }
   ],
   "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",

@@ -73,6 +73,16 @@
 <circle cx="1151" cy="3211" r="8" fill="none" stroke="orange" stroke-width="3"/>
 <circle cx="1342" cy="3362" r="8" fill="none" stroke="orange" stroke-width="3"/>
 <circle cx="1161" cy="3370" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<polygon points="1119,2678 1515,2671 1348,3556 1165,3554" fill="none" stroke="cyan" stroke-width="3" stroke-dasharray="12 8"/>
+<circle cx="1307" cy="2706" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1307" cy="2737" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1312" cy="3107" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1125" cy="3112" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1309" cy="2927" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1337" cy="3204" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1151" cy="3211" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1342" cy="3362" r="8" fill="none" stroke="orange" stroke-width="3"/>
+<circle cx="1161" cy="3370" r="8" fill="none" stroke="orange" stroke-width="3"/>
 <polyline points="1243,972 1244,985" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1245,1001 1245,1013" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1244,985 1245,1001" fill="none" stroke="magenta" stroke-width="2"/>
@@ -95,6 +105,20 @@
 <polyline points="1300,1236 1214,1233" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1162,1185 1163,1013" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1297,1325 1297,1325" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1256,3100 1265,3411" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1185,3496 1166,3513" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1166,3513 1165,3522" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1297,2719 1251,2758" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1307,2706 1297,2719" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1251,2758 1256,3100" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1265,3411 1185,3496" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1280,3426 1185,3529" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1266,2775 1270,3100" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1166,3545 1165,3554" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1185,3529 1166,3545" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1295,2750 1266,2775" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1307,2737 1295,2750" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1270,3100 1280,3426" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1295,3465 1320,3493" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1295,2875 1285,2888" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1286,3200 1295,3465" fill="none" stroke="magenta" stroke-width="2"/>
@@ -109,4 +133,11 @@
 <polyline points="1343,2960 1340,3172" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1325,3330 1328,3432" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1340,3172 1318,3193" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1327,2977 1330,3138" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1309,2958 1327,2977" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1330,3470 1346,3490" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1330,3138 1305,3163" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1311,3450 1330,3470" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1305,3163 1308,3300" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1308,3300 1311,3450" fill="none" stroke="magenta" stroke-width="2"/>
 </svg>

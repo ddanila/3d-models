@@ -1,13 +1,13 @@
 {
   "components": 70,
   "drc": {
-    "unconnectedItems": 214,
+    "unconnectedItems": 211,
     "violations": {
       "clearance": 1,
       "track_dangling": 4
     }
   },
-  "electricalCopperSegments": 101,
+  "electricalCopperSegments": 122,
   "erc": [
     {
       "description": "Label connected to only one pin",

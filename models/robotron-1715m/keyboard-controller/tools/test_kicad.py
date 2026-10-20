@@ -45,12 +45,13 @@ class KiCadExportTests(unittest.TestCase):
    for pins in pairs:
     self.assertTrue(any(set(pins)<=set(g['terminals']) for g in islands))
    self.assertFalse(any({pairs[0][0],pairs[1][0]}<=set(g['terminals']) for g in islands))
-  for net,pins in [('/D0',{'A5:14','A8:9'}),('/D2',{'A5:12','A8:11'})]:
+  for net,pins in [('/D0',{'A5:14','A8:9'}),('/D1',{'A5:15','A8:10'}),('/D2',{'A5:12','A8:11'}),('/D3',{'A5:8','A8:13'}),('/D4',{'A5:7','A8:14'})]:
    islands=next(n for n in actual['nets'] if n['net']==net)['islands']
    self.assertTrue(any(pins==set(g['terminals']) for g in islands))
-  d1=next(n for n in actual['nets'] if n['net']=='/D1')
-  self.assertFalse(any({'A5:15','A8:10'}<=set(g['terminals']) for g in d1['islands']))
-  self.assertFalse(any(v['evidence'].get('group')=='cpu-rom-d1' for v in layout['routes']))
+  for candidate in json.loads((R/'bus-review.json').read_text())['paths']:
+   net=next(n for n in actual['nets'] if n['net']==candidate['referenceNet'])
+   self.assertFalse(any(set(candidate['terminals'])<=set(g['terminals']) for g in net['islands']))
+   self.assertFalse(any(v['evidence'].get('group')==candidate['id'] for v in layout['routes']))
 
  def test_routes_via_and_pin_mismatch(self):
   with tempfile.TemporaryDirectory() as tmp:

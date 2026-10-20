@@ -1,115 +1,288 @@
 {
   "schema": 1,
-  "scope": "Photo paths deferred from native copper. Reference net identity is a review target, not an assigned electrical route. Resolve footprint/registration conflicts before promotion.",
+  "scope": "Partial photo paths with unresolved cross-side continuations. Reference nets and terminal pairs are review targets, not complete paths or native copper assignments.",
   "paths": [
     {
-      "id": "cpu-rom-d1",
-      "referenceNet": "/D1",
+      "id": "cpu-rom-d5",
+      "referenceNet": "/D5",
       "terminals": [
-        "A5:15",
-        "A8:10"
+        "A5:9",
+        "A8:15"
       ],
       "source": "photo-bottom",
       "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
-      "registration": "cpu-rom-data",
       "nativeCopper": false,
-      "reason": "The projected D1 lane shorts nominal CPU pad 16 (CPU_PULLUP); solder-mask proximity also reaches pads 17\u201320. Reconcile CPU hole positions with this local fit before assigning native copper. Do not displace the observed lane to hide the conflict.",
+      "reason": "Only the ROM-side fan-out to a solder eye is recorded here. The eye-to-CPU continuation is unresolved; identify the same joint on the component side before claiming the complete path. No native route or via is assigned by this review.",
+      "observedEnds": [
+        {
+          "kind": "unassigned-eye",
+          "point": [
+            1252,
+            2708
+          ]
+        },
+        {
+          "terminal": "A8:15",
+          "point": [
+            1165,
+            3492
+          ]
+        }
+      ],
       "segments": [
         {
-          "id": "d1-0",
+          "id": "d5-0",
           "status": "inferred",
           "points": [
             [
-              1309,
-              2958
+              1252,
+              2708
             ],
             [
-              1322,
-              2977
+              1240,
+              2720
             ]
           ]
         },
         {
-          "id": "d1-1",
+          "id": "d5-1",
           "status": "observed",
           "points": [
             [
-              1322,
-              2977
+              1240,
+              2720
             ],
             [
-              1326,
-              3138
+              1242,
+              3100
             ]
           ]
         },
         {
-          "id": "d1-2",
+          "id": "d5-2",
           "status": "observed",
           "points": [
             [
-              1326,
-              3138
+              1242,
+              3100
             ],
             [
-              1305,
-              3163
+              1249,
+              3396
             ]
           ]
         },
         {
-          "id": "d1-3",
+          "id": "d5-3",
           "status": "observed",
           "points": [
             [
-              1305,
-              3163
+              1249,
+              3396
             ],
             [
-              1308,
-              3300
+              1166,
+              3483
             ]
           ]
         },
         {
-          "id": "d1-4",
+          "id": "d5-4",
+          "status": "inferred",
+          "points": [
+            [
+              1166,
+              3483
+            ],
+            [
+              1165,
+              3492
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cpu-rom-d6",
+      "referenceNet": "/D6",
+      "terminals": [
+        "A5:10",
+        "A8:16"
+      ],
+      "source": "photo-bottom",
+      "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+      "nativeCopper": false,
+      "reason": "Only the ROM-side fan-out to a solder eye is recorded here. The eye-to-CPU continuation is unresolved; identify the same joint on the component side before claiming the complete path. No native route or via is assigned by this review.",
+      "observedEnds": [
+        {
+          "kind": "unassigned-eye",
+          "point": [
+            1251,
+            2678
+          ]
+        },
+        {
+          "terminal": "A8:16",
+          "point": [
+            1165,
+            3461
+          ]
+        }
+      ],
+      "segments": [
+        {
+          "id": "d6-0",
+          "status": "inferred",
+          "points": [
+            [
+              1251,
+              2678
+            ],
+            [
+              1226,
+              2702
+            ]
+          ]
+        },
+        {
+          "id": "d6-1",
           "status": "observed",
           "points": [
             [
-              1308,
-              3300
+              1226,
+              2702
             ],
             [
-              1311,
+              1228,
+              3100
+            ]
+          ]
+        },
+        {
+          "id": "d6-2",
+          "status": "observed",
+          "points": [
+            [
+              1228,
+              3100
+            ],
+            [
+              1234,
+              3378
+            ]
+          ]
+        },
+        {
+          "id": "d6-3",
+          "status": "observed",
+          "points": [
+            [
+              1234,
+              3378
+            ],
+            [
+              1166,
               3450
             ]
           ]
         },
         {
-          "id": "d1-5",
-          "status": "observed",
+          "id": "d6-4",
+          "status": "inferred",
           "points": [
             [
-              1311,
+              1166,
               3450
             ],
             [
-              1330,
-              3470
+              1165,
+              3461
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cpu-rom-d7",
+      "referenceNet": "/D7",
+      "terminals": [
+        "A5:13",
+        "A8:17"
+      ],
+      "source": "photo-bottom",
+      "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+      "nativeCopper": false,
+      "reason": "Only the ROM-side fan-out to a solder eye is recorded here. The eye-to-CPU continuation is unresolved; identify the same joint on the component side before claiming the complete path. No native route or via is assigned by this review.",
+      "observedEnds": [
+        {
+          "kind": "unassigned-eye",
+          "point": [
+            1209,
+            2896
+          ]
+        },
+        {
+          "terminal": "A8:17",
+          "point": [
+            1165,
+            3430
+          ]
+        }
+      ],
+      "segments": [
+        {
+          "id": "d7-0",
+          "status": "inferred",
+          "points": [
+            [
+              1209,
+              2896
+            ],
+            [
+              1208,
+              3100
             ]
           ]
         },
         {
-          "id": "d1-6",
+          "id": "d7-1",
+          "status": "observed",
+          "points": [
+            [
+              1208,
+              3100
+            ],
+            [
+              1216,
+              3364
+            ]
+          ]
+        },
+        {
+          "id": "d7-2",
+          "status": "observed",
+          "points": [
+            [
+              1216,
+              3364
+            ],
+            [
+              1165,
+              3418
+            ]
+          ]
+        },
+        {
+          "id": "d7-3",
           "status": "inferred",
           "points": [
             [
-              1330,
-              3470
+              1165,
+              3418
             ],
             [
-              1346,
-              3490
+              1165,
+              3430
             ]
           ]
         }
