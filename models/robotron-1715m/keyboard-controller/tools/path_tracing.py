@@ -40,7 +40,7 @@ def build(data, source):
                     len(p) != 2 or not all(math.isfinite(v) and 0 <= v <= image_size[i]
                                           for i, v in enumerate(p)) for p in span['points']):
                 raise ValueError('Invalid observed path span')
-        return dict(source=photo, segments=[dict(s, group=s['id'], net=None,
+        return dict(source=photo, imageSize=list(image_size), segments=[dict(s, group=s['id'], net=None,
                     imageSize=list(image_size), detail=s['scope']) for s in spans], markers=markers)
 
     result = {}
@@ -83,9 +83,40 @@ def build(data, source):
                figure('photo-top', [d['topSpan']], [dict(point=match['projectedTopPixel'], radius=8,
                       kind='search', label='A6 local extrapolation; candidate eye outside anchor hull'),
                       dict(point=d['topSpan']['points'][-1], label='Stop before A6 body; not a pin assignment')]),
-               figure('photo-bottom', [], d['cpuCandidates'])]
+               ]
+    reverse = d['cpuReverse']
+    if {c['terminal'] for c in reverse['candidates']} != {'A5:21', 'A5:22'}:
+        raise ValueError('Reverse tracing must retain both CPU candidates')
+    for c in reverse['candidates']:
+        pin = c['terminal'].split(':')[1]
+        if data['generated/connectivity.json']['components']['A5']['pins'][pin] != '/'+c['signal']+'_N':
+            raise ValueError('CPU signal differs from the reference pin map')
+        recorded = next(m['point'] for m in d['cpuCandidates'] if m['label'].startswith(c['terminal']+' '))
+        if c['bottomPixel'] != recorded or (pin == '21' and c['topPixel'] != top('A5:21')):
+            raise ValueError('Reverse CPU markers differ from canonical pin observations')
+        if c['observedPathToA6'] or c['excluded']:
+            raise ValueError('Occluded CPU review cannot resolve or exclude a candidate')
+    reverse_figures = []
+    for specimen in ['primary', 'comparison']:
+        config = reverse[specimen]
+        for side in ['bottom', 'top']:
+            sid = config[side+'Source']
+            if bool(source(sid).get('specimenId')) != (specimen == 'comparison'):
+                raise ValueError('Reverse CPU photo specimen mismatch')
+            key = (('comparison'+side.title()) if specimen == 'comparison' else side)+'Pixel'
+            markers = [dict(point=c[key], label=c['terminal']+' '+c['signal']+'; covered exit, not a complete route') for c in reverse['candidates']]
+            spans = []
+            if side == 'bottom':
+                if config['span']['points'][0] != config['neighbourLand'] or any(c[key] == config['neighbourLand'] for c in reverse['candidates']):
+                    raise ValueError('Separate CPU-end land must not become a CPU pin')
+                markers.append(dict(point=config['neighbourLand'], label='Separate round land beyond the CPU row; not RD or WR pin'))
+                spans = [config['span']]
+            size = config.get(side+'ImageSize', config.get('imageSize'))
+            reverse_figures.append(figure(sid, spans, markers, size))
+    cpu_reverse = dict(reverse, figures=reverse_figures, assignedReferenceTerminals={},
+                       newNativeRoutes=[], electricalPathComplete=False)
     result['clock-strobe'] = dict(scope=d['scope'], registrations=[dict(id='a6-local', **reg)],
-           a4Candidate=a4_candidate, a6Candidate=match, figures=figures,
+           a4Candidate=a4_candidate, a6Candidate=match, figures=figures, cpuReverse=cpu_reverse,
            comparisonSources=[source(s) for s in d['comparisonSources']],
            comparisonScope=d['comparisonScope'], openJoins=d['openJoins'])
     for review in result.values():

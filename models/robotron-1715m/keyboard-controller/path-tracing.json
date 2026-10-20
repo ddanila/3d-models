@@ -239,6 +239,126 @@
         "id": "under-a6-cpu",
         "scope": "The top track enters beneath A6. No exposed chain connects it to either counted CPU WR/RD joint; do not infer A6:4 or choose the reference net."
       }
-    ]
+    ],
+    "cpuReverse": {
+      "scope": "Reverse review of both counted CPU candidates. Lead and solder coverage prevents following an outgoing track from either pin. No visible chain reaches the A6-side candidate; neither WR nor RD is excluded.",
+      "candidates": [
+        {
+          "terminal": "A5:21",
+          "signal": "RD",
+          "topPixel": [
+            1785,
+            3355
+          ],
+          "bottomPixel": [
+            1125,
+            3112
+          ],
+          "comparisonTopPixel": [
+            620,
+            1890
+          ],
+          "comparisonBottomPixel": [
+            1964,
+            2092
+          ],
+          "stopReason": "Package/lead coverage on top and solder coverage underneath. No exposed outgoing copper assigned.",
+          "observedPathToA6": false,
+          "excluded": false
+        },
+        {
+          "terminal": "A5:22",
+          "signal": "WR",
+          "topPixel": [
+            1784,
+            3324
+          ],
+          "bottomPixel": [
+            1125,
+            3081
+          ],
+          "comparisonTopPixel": [
+            776,
+            1895
+          ],
+          "comparisonBottomPixel": [
+            1961,
+            2177
+          ],
+          "stopReason": "Package/lead coverage on top and solder coverage underneath. No exposed outgoing copper assigned.",
+          "observedPathToA6": false,
+          "excluded": false
+        }
+      ],
+      "pinEvidence": "Counted from the ROM-facing end of the twenty-position CPU rows. Primary bottom A5:21 and A5:22 reuse cpuCandidates; top A5:21 reuses photo-landmarks.json. Top markers are lead observations, not visible hole centres. Comparison numbering is independently counted and is not transferred by a board-wide projection.",
+      "primary": {
+        "topSource": "photo-top",
+        "bottomSource": "photo-bottom",
+        "imageSize": [
+          3072,
+          4080
+        ],
+        "neighbourLand": [
+          1125,
+          3148
+        ],
+        "span": {
+          "id": "cpu-end-land-lane",
+          "points": [
+            [
+              1125,
+              3148
+            ],
+            [
+              1141,
+              3130
+            ],
+            [
+              1138,
+              3015
+            ]
+          ],
+          "status": "observed",
+          "scope": "Anonymous underside lane from the separate round land beyond the CPU row. The upper end is a review stop, not a hole or break. No RD/WR assignment or layer transition."
+        }
+      },
+      "comparison": {
+        "topSource": "comparison-photo-080429077",
+        "bottomSource": "comparison-photo-080342577",
+        "topImageSize": [
+          4080,
+          3072
+        ],
+        "bottomImageSize": [
+          3072,
+          4080
+        ],
+        "neighbourLand": [
+          1965,
+          2009
+        ],
+        "span": {
+          "id": "comparison-cpu-end-land-lane",
+          "points": [
+            [
+              1965,
+              2009
+            ],
+            [
+              1913,
+              2055
+            ],
+            [
+              1913,
+              2240
+            ]
+          ],
+          "status": "observed",
+          "scope": "Different specimen: separate land and adjacent underside lane beside the first CPU joints. Lower end is a review stop; no transfer of primary net identity."
+        }
+      },
+      "excludedShortcut": "The round land beyond the CPU row is a separate feature, not an extra CPU pin or either counted RD/WR joint. Its visible lane must not be attached to those pins by proximity. This does not exclude an unseen electrical connection elsewhere.",
+      "nextEvidence": "Resolve the outgoing copper beneath A5 at pins 21 and 22 and connect it across the obscured A5/A6 region. Current photos establish distinct pin locations and neighbouring copper, not which candidate reaches A1."
+    }
   }
 }

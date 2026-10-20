@@ -212,7 +212,7 @@ def render(report):
             labels.append(f'<li>{esc(marker["label"])} · original pixel {esc([round(v, 1) for v in marker["point"]])}</li>')
         return f'''<figure><a href="{esc(source['href'])}">Open original: {esc(source['id'])}</a>
 <svg role="img" aria-label="Annotated {esc(source['id'])}" viewBox="{x} {y} {w} {h}">
-<image href="{esc(source['href'])}" width="3072" height="4080"/>
+<image href="{esc(source['href'])}" width="{fig.get('imageSize', [3072, 4080])[0]}" height="{fig.get('imageSize', [3072, 4080])[1]}"/>
 <g class="overlay">{''.join(overlays)}</g></svg>
 <figcaption>{esc(source['specimen'])}; original photo coordinates, no cross-side warp.</figcaption>
 <ol>{''.join(labels)}</ol></figure>'''
@@ -230,6 +230,9 @@ def render(report):
         if trace:
             fits = ' '.join(r['id'] + ': ' + str(round(r['maxCheckResidualPixels'], 1)) + ' px; alignment accepted: ' + str(r['photoAlignmentAccepted']) + '.' for r in trace['registrations'])
             trace_html = '<details><summary>Local path tracing — unresolved joins</summary><p>' + esc(trace['scope']) + '</p><p>' + esc(fits) + '</p><div class="photos">' + ''.join(photo(f) for f in trace['figures']) + '</div><ul>' + ''.join('<li>' + esc(g['scope']) + '</li>' for g in trace['openJoins']) + '</ul><p>' + esc(trace['comparisonScope']) + '</p></details>'
+        if trace and trace.get('cpuReverse'):
+            reverse = trace['cpuReverse']
+            trace_html += '<details><summary>Reverse trace: CPU RD and WR</summary><p>' + esc(reverse['scope']) + '</p><div class="photos">' + ''.join(photo(f) for f in reverse['figures']) + '</div><p>' + esc(reverse['excludedShortcut']) + '</p><p>' + esc(reverse['nextEvidence']) + '</p></details>'
         continuation = ''
         if case.get('continuation'):
             c = case['continuation']

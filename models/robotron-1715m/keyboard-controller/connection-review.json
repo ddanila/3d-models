@@ -44,7 +44,7 @@
       "supportingSources": ["photo-bottom", "comparison-photo-080401625", "comparison-photo-080429077"],
       "finding": "The reference supports WR, while a published comparison uses RD. An observed underside lane links terminal candidates near A4 and A6; the corresponding top track enters beneath A6. Local A6 registration supports a candidate outside the anchor hull. Neither CPU attachment is established.",
       "alternatives": ["A1:1 connects to A5:22 (WR), as in the reference.", "A1:1 connects to A5:21 (RD), as in the published comparison.", "The terminal correspondence is still wrong or incomplete; neither candidate is established."],
-      "nextDeskWork": "Resolve the A4 and A6 layer transitions and the route beneath A6 toward the counted CPU WR/RD joints. Keep the A6 body entry separate from its adjacent numbered lead; do not extend the A4 fit to A6.",
+      "nextDeskWork": "Reverse inspection of both CPU candidates stops at covered pin exits. Resolve the A4/A6 layer transitions and the hidden A5/A6 route; the separate land beyond the CPU row is not either CPU joint. Neither WR nor RD is excluded by the current photos.",
       "decisiveObservation": "A complete photographed route or distinguishable unpowered resistance readings from A1:1 to A5:21 and A5:22, with probe locations recorded.",
       "doNotInfer": "A successful S600 simulation of the WR reference does not determine the specimen's physical attachment."
     },

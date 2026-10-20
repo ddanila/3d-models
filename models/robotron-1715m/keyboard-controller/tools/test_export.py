@@ -117,6 +117,20 @@ class ControllerExportTests(unittest.TestCase):
    self.assertEqual(review['assignedReferenceTerminals'],{})
    self.assertTrue(all(s['net'] is None for f in review['figures'] for s in f['segments']))
 
+ def test_cpu_reverse_keeps_both_candidates_and_neighbour_lane_unassigned(self):
+  from connection_review import build,render
+  report=build()
+  reverse=next(c for c in report['cases'] if c['id']=='clock-strobe')['traceReview']['cpuReverse']
+  self.assertEqual({c['terminal'] for c in reverse['candidates']},{'A5:21','A5:22'})
+  self.assertTrue(all(not c['excluded'] and not c['observedPathToA6'] for c in reverse['candidates']))
+  self.assertFalse(reverse['electricalPathComplete'])
+  self.assertEqual(reverse['newNativeRoutes'],[])
+  self.assertEqual(reverse['assignedReferenceTerminals'],{})
+  self.assertTrue(all(s['net'] is None for f in reverse['figures'] for s in f['segments']))
+  self.assertEqual(reverse['figures'][-1]['imageSize'],[4080,3072])
+  self.assertIn('width="4080" height="3072"',render(report))
+  self.assertNotIn(reverse['primary']['neighbourLand'],[c['bottomPixel'] for c in reverse['candidates']])
+
  def test_path_tracing_rejects_broken_endpoint_and_reused_check(self):
   from copy import deepcopy
   from connection_review import INPUTS
@@ -129,6 +143,11 @@ class ControllerExportTests(unittest.TestCase):
   with self.assertRaisesRegex(ValueError,'independent fit checks'):build(bad,source)
   bad=deepcopy(data);bad['path-tracing.json']['host-data']['comparison']['source']='photo-top'
   with self.assertRaisesRegex(ValueError,'specimen identity'):build(bad,source)
+  bad=deepcopy(data);bad['path-tracing.json']['clock-strobe']['cpuReverse']['candidates'][0]['excluded']=True
+  with self.assertRaisesRegex(ValueError,'cannot resolve or exclude'):build(bad,source)
+  bad=deepcopy(data);bad['path-tracing.json']['clock-strobe']['cpuReverse']['candidates'][0]['bottomPixel']=[1125,3148]
+  with self.assertRaisesRegex(ValueError,'canonical pin observations'):build(bad,source)
+
 
  def test_output_assembly_is_visual_and_preserves_reference_pads(self):
   import copy
