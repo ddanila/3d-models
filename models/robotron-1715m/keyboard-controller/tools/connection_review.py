@@ -4,13 +4,65 @@ import argparse
 import hashlib
 import html
 import json
+import math
 from pathlib import Path
+from photo_registration import homography, project
+from bottom_registration import inside_hull
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = ['connection-review.json', 'evidence.json', 'component-evidence.json',
           'route-evidence.json', 'generated/connectivity.json', 'generated/layout.json',
           'generated/connector-terminals.json', 'generated/top-registration.json',
-          'generated/bottom-registration.json']
+          'generated/bottom-registration.json', 'photo-landmarks.json',
+          'bottom-landmarks.json']
+CODE_INPUTS = ['tools/connection_review.py', 'tools/photo_registration.py',
+               'tools/bottom_registration.py']
+
+
+def cross_side_search(data, stop):
+    """Localize an occluded stop; never qualify a track or layer transition."""
+    config = data['connection-review.json']['crossSideSearch']
+    region = next(r for r in data['bottom-landmarks.json']['pcbRegions']
+                  if r['id'] == config['region'])
+    components = data['component-evidence.json']
+    top = data['photo-landmarks.json']['components']
+    pairs = {}
+    for item in region['anchors'] + region['checks']:
+        ref, pin = item['ref'], item['pin']
+        if 'photoPins' in components[ref]:
+            pixel = components[ref]['photoPins'].get(pin)
+        else:
+            pixel = top[ref]['pins'].get(pin, top[ref].get('checkPins', {}).get(pin))
+        if pixel:
+            pairs[ref + ':' + pin] = {'bottomPixel': item['photoPixel'], 'topPixel': pixel}
+    fits = []
+    for names in config['fits']:
+        if len(names) != 4 or len(set(names)) != 4:
+            raise ValueError('Cross-side search requires four distinct anchors')
+        anchors = [dict(terminal=n, **pairs[n]) for n in names]
+        hull = [p['bottomPixel'] for p in anchors]
+        # Sort into convex boundary order for a genuine hull test.
+        center = [sum(p[i] for p in hull)/4 for i in range(2)]
+        hull.sort(key=lambda p: math.atan2(p[1]-center[1], p[0]-center[0]))
+        if any(inside_hull(p, hull[:i]+hull[i+1:]) for i, p in enumerate(hull)):
+            raise ValueError('Cross-side anchors must form a convex quadrilateral')
+        h = homography([p['bottomPixel'] for p in anchors], [p['topPixel'] for p in anchors])
+        checks = [dict(terminal=n, **p, residualPixels=math.dist(project(h, p['bottomPixel']), p['topPixel']))
+                  for n, p in pairs.items() if n not in names]
+        if len(checks) < 4:
+            raise ValueError('Cross-side search requires held-out checks')
+        fits.append({'anchors': anchors, 'checks': checks, 'bottomToTop': h,
+                     'projectedTopPixel': project(h, stop['bottomPixel']),
+                     'insideAnchorHull': inside_hull(stop['bottomPixel'], hull),
+                     'maxCheckResidualPixels': max(p['residualPixels'] for p in checks)})
+    locations = [f['projectedTopPixel'] for f in fits]
+    center = [sum(p[i] for p in locations)/len(locations) for i in range(2)]
+    spread = max(math.dist(a, b) for a in locations for b in locations)
+    radius = math.ceil(max(f['maxCheckResidualPixels'] for f in fits) + spread + stop['searchPaddingPixels'])
+    return {'scope': config['scope'], 'fits': fits, 'centerTopPixel': center,
+            'fitSpreadPixels': spread, 'searchRadiusPixels': radius,
+            'radiusBasis': 'Maximum held-out residual + fit spread + explicit search padding; heuristic search margin, not a confidence bound.',
+            'copperAssignmentQualified': False}
 
 
 def build(root=ROOT):
@@ -101,11 +153,20 @@ def build(root=ROOT):
             for sid, point in [(x1['photoSource'], x1['leadEndRowsPixels'][row][index]),
                                (x1['underside']['photoSource'], x1['underside']['jointRowsPixels'][row][index])]:
                 figure(sid)['markers'].append({'point': point, 'label': 'X1:' + contact + ' — unclassified; top marker is a lead observation, not a hole centre'})
+        if case.get('crossSideStop'):
+            stop = case['crossSideStop']
+            if not any(stop['bottomPixel'] == marker['point'] for marker in figure('photo-bottom')['markers']):
+                raise ValueError('Cross-side stop is not a recorded route endpoint')
+            search = cross_side_search(data, stop)
+            result['crossSideSearch'] = search
+            figure('photo-top')['markers'].append({
+                'point': search['centerTopPixel'], 'radius': search['searchRadiusPixels'],
+                'kind': 'search', 'label': 'Projected search region beneath ' + stop['occludingBody'] + '; not an observed joint'})
         result['figures'] = list(figures.values())
         result['supportingPhotos'] = [source(sid) for sid in case['supportingSources']]
         cases.append(result)
     return {'schema': 1, 'scope': data['connection-review.json']['scope'],
-            'inputSha256': {name: hashlib.sha256((root / name).read_bytes()).hexdigest() for name in INPUTS + ['tools/connection_review.py']},
+            'inputSha256': {name: hashlib.sha256((root / name).read_bytes()).hexdigest() for name in INPUTS + CODE_INPUTS},
             'cases': cases}
 
 
@@ -129,8 +190,8 @@ def render(report):
         labels = []
         for i, marker in enumerate(fig['markers'], 1):
             px, py = marker['point']
-            overlays.append(f'<circle cx="{px}" cy="{py}" r="9"/><text x="{px+13}" y="{py-12}">{i}</text>')
-            labels.append(f'<li>{esc(marker["label"])} · original pixel {esc(marker["point"])}</li>')
+            overlays.append(f'<circle class="{esc(marker.get("kind", "endpoint"))}" cx="{px}" cy="{py}" r="{marker.get("radius", 9)}"/><text x="{px+13}" y="{py-12}">{i}</text>')
+            labels.append(f'<li>{esc(marker["label"])} · original pixel {esc([round(v, 1) for v in marker["point"]])}</li>')
         return f'''<figure><a href="{esc(source['href'])}">Open original: {esc(source['id'])}</a>
 <svg role="img" aria-label="Annotated {esc(source['id'])}" viewBox="{x} {y} {w} {h}">
 <image href="{esc(source['href'])}" width="3072" height="4080"/>
@@ -147,12 +208,18 @@ def render(report):
         alternatives = ''.join(f'<li>{esc(text)}</li>' for text in case['alternatives'])
         photos = ''.join(f'<li><a href="{esc(s["href"])}">{esc(s["id"])}</a> — {esc(s["specimen"])}</li>' for s in case['supportingPhotos'])
         rows = ''
+        search_text = ''
+        if case.get('crossSideSearch'):
+            search = case['crossSideSearch']
+            diagnostics = '; '.join(f'fit {i}: maximum held-out residual {f["maxCheckResidualPixels"]:.1f}px, stop {"inside" if f["insideAnchorHull"] else "outside"} anchor hull' for i, f in enumerate(search['fits'], 1))
+            search_text = f'<p>{esc(search["scope"])}</p><p>{esc(diagnostics)}. Fit spread {search["fitSpreadPixels"]:.1f}px; search radius {search["searchRadiusPixels"]}px. {esc(search["radiusBasis"])}</p>'
         if case.get('terminalOrder'):
             rows = '<p>' + ' · '.join(f'{esc(row)}: {esc(" → ".join(pins))}' for row,pins in case['terminalOrder']['resolvedRows'].items()) + '</p>'
         cards.append(f'''<section id="{esc(case['id'])}"><h2>{esc(case['title'])}</h2>
 <p>{esc(case['finding'])}</p><h3>Reference endpoints — not measured continuity</h3>
 <ul>{nets or '<li>No reference net assigned.</li>'}</ul>{series}{rows}
 <div class="photos">{''.join(photo(f) for f in case['figures'])}</div>
+{search_text}
 <h3>Alternatives to distinguish</h3><ul>{alternatives}</ul>
 <dl><dt>Next desk work</dt><dd>{esc(case['nextDeskWork'])}</dd>
 <dt>Evidence that closes the span</dt><dd>{esc(case['decisiveObservation'])}</dd>
@@ -165,7 +232,8 @@ def render(report):
 *{box-sizing:border-box}body{font:16px/1.5 system-ui,sans-serif;color:#16283a;background:#edf1f4;margin:0}main{max-width:1100px;margin:auto;padding:28px}h1{line-height:1.15}h2{margin-top:0}h3{font-size:1rem}section,header{background:white;padding:26px;margin:20px 0;border:1px solid #cbd4dd;border-radius:8px}nav{display:flex;gap:16px;flex-wrap:wrap}a{color:#075ca8}code{overflow-wrap:anywhere}.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}figure{margin:0;min-width:0}svg{display:block;width:100%;height:480px;background:#202a30;margin-top:10px}svg polyline{fill:none;stroke:#37f3d4;stroke-width:3;vector-effect:non-scaling-stroke}svg .inferred{stroke:#ffcf5b;stroke-dasharray:7 5}svg .constraint{stroke:#91c9ff}svg circle{fill:#d32967;stroke:white;stroke-width:1;vector-effect:non-scaling-stroke}svg text{font:bold 24px sans-serif;fill:white;paint-order:stroke;stroke:#182a3b;stroke-width:3}figcaption,figure ol{font-size:13px}dt{font-weight:700;margin-top:12px}dd{margin:0}details{margin-top:18px}#toggle{padding:8px 12px}body.hide-overlays .overlay{visibility:hidden}.legend span{padding:3px 8px;background:#19333f;color:white;display:inline-block}footer{font-size:13px}@media(max-width:600px){main{padding:10px}section,header{padding:16px}}@media print{body{background:white}main{padding:0}nav,#toggle{display:none}section{break-before:page;border:0;padding:0}svg{height:320px}details{display:block}details ul{display:block}footer{break-before:page}}
 </style><main><header><h1>Keyboard controller<br>Connection review</h1>
 <p>''' + esc(report['scope']) + '''</p><p class="legend"><span>Teal: observed segment</span> <span>Dashed amber: inferred attachment</span> <span>Blue: connector constraint</span> <span>Pink: recorded span end or unclassified contact</span></p>
-<p>Markers locate existing observations; they do not identify hidden vias. Photos remain in their own original orientation. Comparison photos belong to another specimen.</p>
+<style>svg circle.search{fill:none;stroke:#ffcf5b;stroke-width:2;stroke-dasharray:5 4}</style>
+<p>Dashed amber circles are projected search regions, not observed joints. Other markers locate existing observations; they do not identify hidden vias. Photos remain in their own original orientation. Comparison photos belong to another specimen.</p>
 <button id="toggle" type="button" aria-pressed="false">Hide overlays</button><nav>''' + navigation + '''</nav></header>''' + ''.join(cards) + '''<footer><p>Generated from canonical CAD evidence. No pad, net or track is changed by this review. If resistance observations are later needed, use a disconnected, unpowered board and record readings and probe locations; a buzzer alone does not establish copper continuity.</p><details><summary>Input hashes</summary><ul>''' + hashes + '''</ul></details></footer></main><script>
 document.querySelector('#toggle').onclick=function(){const hidden=document.body.classList.toggle('hide-overlays');this.textContent=hidden?'Show overlays':'Hide overlays';this.setAttribute('aria-pressed',String(hidden));};
 </script></html>

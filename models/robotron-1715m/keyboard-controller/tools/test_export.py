@@ -18,11 +18,11 @@ class ControllerExportTests(unittest.TestCase):
   self.assertIn('not measured continuity',render(report))
 
  def test_connection_review_rejects_changed_net_and_route_evidence(self):
-  from connection_review import build,INPUTS
+  from connection_review import build,INPUTS,CODE_INPUTS
   with tempfile.TemporaryDirectory() as tmp:
    root=Path(tmp)/'board';root.mkdir()
    (root.parent/'reference').symlink_to(R.parent/'reference',target_is_directory=True)
-   for name in INPUTS+['tools/connection_review.py']:
+   for name in INPUTS+CODE_INPUTS:
     target=root/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/name,target)
    p=root/'generated/connectivity.json';original=p.read_text();data=json.loads(original)
    data['components']['XT1']['pins']['B2']='/CABLE_DATEN';p.write_text(json.dumps(data))
@@ -32,6 +32,26 @@ class ControllerExportTests(unittest.TestCase):
    item=next(v for v in data['items'].values()if v['group']=='r101-output-top-local')
    item['status']='observed' if item['status']!='observed' else 'inferred';p.write_text(json.dumps(data))
    with self.assertRaisesRegex(ValueError,'Native route review mismatch'):build(root)
+
+ def test_cross_side_search_retains_occlusion_and_extrapolation(self):
+  from connection_review import build,cross_side_search,INPUTS
+  report=build()
+  for case in report['cases'][:2]:
+   search=case['crossSideSearch']
+   self.assertFalse(search['copperAssignmentQualified'])
+   self.assertLess(search['fitSpreadPixels'],4)
+   for fit in search['fits']:
+    self.assertTrue(fit['insideAnchorHull'])
+    self.assertTrue(set(a['terminal'] for a in fit['anchors']).isdisjoint(c['terminal'] for c in fit['checks']))
+   marker=next(m for f in case['figures'] for m in f['markers'] if m.get('kind')=='search')
+   self.assertIn(case['crossSideStop']['occludingBody'],marker['label'])
+  data={name:json.loads((R/name).read_text()) for name in INPUTS}
+  stop=dict(data['connection-review.json']['cases'][0]['crossSideStop'],bottomPixel=[0,0])
+  search=cross_side_search(data,stop)
+  self.assertTrue(all(not f['insideAnchorHull'] for f in search['fits']))
+  self.assertFalse(search['copperAssignmentQualified'])
+  data['connection-review.json']['crossSideSearch']['fits'][0]=['R4.2:1']*4
+  with self.assertRaisesRegex(ValueError,'distinct anchors'):cross_side_search(data,stop)
 
  def test_visual_networks_do_not_create_electrical_pads(self):
   import copy

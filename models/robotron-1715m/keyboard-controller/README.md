@@ -21,6 +21,8 @@ serial-output and X1 evidence, reference endpoints and distinguishing observatio
 X1 serves the key matrix and LEDs; XT1 is the host cable. Edit the review questions
 in `connection-review.json`, then run `python3 tools/connection_review.py`.
 The generator reads canonical route/pin evidence and does not modify the PCB.
+Projected search circles include held-out registration checks; they locate
+occlusions and do not establish joints, layer transitions or connectivity.
 
 ## Authorities
 

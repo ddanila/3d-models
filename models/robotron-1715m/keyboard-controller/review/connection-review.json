@@ -2,7 +2,7 @@
   "schema": 1,
   "scope": "Physical route review, not new connectivity evidence. X1 serves the matrix/LEDs; XT1 is the host cable. Reference endpoints are targets for tracing, not observed attachments.",
   "inputSha256": {
-    "connection-review.json": "0b593d79170cac96a29c4aca1ce0df93ea33ded9f04f5ea55930c566b0ee9b80",
+    "connection-review.json": "9fec4a245a2353d6dab54add89a36de8aa8642e631c68a8dfadb6abb42b04fd4",
     "evidence.json": "261fe27e0acb73f701ebf3e5577b0f390d2001602c86ab7f53c922206e83f888",
     "component-evidence.json": "a72ba37c6e404cd699d6d6010aa4c448c22cc5ac7459562af68685c76b256ff8",
     "route-evidence.json": "ab650188f8d3e826352205bd4596b83fe113c31da04714c8d82d5cd1fb4ab15a",
@@ -11,11 +11,25 @@
     "generated/connector-terminals.json": "72906a49da111b6e29996ab83df3600aab5c51f8ce8a0ed744b5566dc551d831",
     "generated/top-registration.json": "7130e191a623ec6a9e8808b09b20c631dd1bc01edd11c974fb93423130cc4783",
     "generated/bottom-registration.json": "fe7e23ac9c7e96b0a75d08c5fedbf95ca1534dea364f82c47f221de3018a4c64",
-    "tools/connection_review.py": "a802fa0ab6ac65f3939dcf356e76f86020b87eab5c7dc2e4e42593b9cecafe28"
+    "photo-landmarks.json": "f76f424013b762666e16ba3c28ddb322c8b65d6d88dd47584add2e1c427270b6",
+    "bottom-landmarks.json": "fabe454100b42d29164a3e18f576f8b3f0e5ca360d2a7b3a8321184e4ab61d04",
+    "tools/connection_review.py": "b6da136c30d9487ca166110903fb71fa0f287cb4d9afeb4b55f0c1ca52de45ee",
+    "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068",
+    "tools/bottom_registration.py": "cc7cad09ee54bc63359ff8c4331c598b984a877cd942435d0ba5521a03edfad8"
   },
   "cases": [
     {
       "id": "host-clock",
+      "crossSideStop": {
+        "ref": "R10.1",
+        "bottomPixel": [
+          1245,
+          1205
+        ],
+        "occludingBody": "R9.5",
+        "searchPaddingPixels": 8,
+        "observation": "The projected location falls beneath the resistor body in the primary top photo. The top counterpart and outgoing copper cannot be identified directly there."
+      },
       "title": "Serial clock: driver to filter to host cable",
       "sameNetSets": [
         [
@@ -49,12 +63,12 @@
         "comparison-photo-080406304",
         "comparison-photo-080511382"
       ],
-      "finding": "The local top branch stops at the A1 package boundary. The underside branch stops at a solder eye. Neither stop proves a layer transition or an A1/filter attachment.",
+      "finding": "The local top branch stops at the A1 package boundary. The underside branch stops at a solder eye. Neither stop proves a layer transition or an A1/filter attachment. Cross-side search fits localize the underside stop beneath R9.5; this is an occluded search region, not an identified top-side joint.",
       "alternatives": [
         "Reference path reaches A1:2 and L1.1:1 through hidden copper.",
         "The apparent top/bottom stop correspondence is wrong; the visible branch requires a different continuation. This is a geometric alternative, not a replacement net assignment."
       ],
-      "nextDeskWork": "Match the underside stop to a top-side joint using independent surrounding holes, then follow the same copper lane in overlapping cable-end views. Keep the A1 inner-row fit inside its qualified hull.",
+      "nextDeskWork": "Register comparison close-ups around R9.5 using surrounding joints and held-out checks. Follow the exposed lane on both sides of the body and match any downstream eye independently before continuing toward L1/XT1.",
       "decisiveObservation": "An uninterrupted path, including any confirmed layer transition, from R10.1:2 to A1:2 and the identified L1.1 input. Separately identify both winding ends and the cable-side connection to XT1:B2.",
       "doNotInfer": "The former A1:13 conflict came from a rejected projection. It is not a measured short, and the surviving local segment does not identify the hidden A1 pin.",
       "referenceNets": [
@@ -83,6 +97,345 @@
           },
           "type": "CHOKE"
         }
+      },
+      "crossSideSearch": {
+        "scope": "Search localization only. Fits share R4.2 anchors; agreement is a sensitivity check, not independent evidence. Top DIP landmarks are lead observations, not verified hole centres. No copper or via assignment is qualified.",
+        "fits": [
+          {
+            "anchors": [
+              {
+                "terminal": "R4.2:1",
+                "bottomPixel": [
+                  1090,
+                  969
+                ],
+                "topPixel": [
+                  1687,
+                  1101
+                ]
+              },
+              {
+                "terminal": "R4.2:2",
+                "bottomPixel": [
+                  1243,
+                  972
+                ],
+                "topPixel": [
+                  1527,
+                  1109
+                ]
+              },
+              {
+                "terminal": "R10.2:2",
+                "bottomPixel": [
+                  1297,
+                  1325
+                ],
+                "topPixel": [
+                  1498,
+                  1490
+                ]
+              },
+              {
+                "terminal": "R10.1:2",
+                "bottomPixel": [
+                  1342,
+                  1325
+                ],
+                "topPixel": [
+                  1448,
+                  1492
+                ]
+              }
+            ],
+            "checks": [
+              {
+                "terminal": "R7:1",
+                "bottomPixel": [
+                  1093,
+                  1013
+                ],
+                "topPixel": [
+                  1687,
+                  1151
+                ],
+                "residualPixels": 5.259668553097439
+              },
+              {
+                "terminal": "R7:2",
+                "bottomPixel": [
+                  1245,
+                  1013
+                ],
+                "topPixel": [
+                  1529,
+                  1154
+                ],
+                "residualPixels": 3.002095315024153
+              },
+              {
+                "terminal": "R8:1",
+                "bottomPixel": [
+                  1095,
+                  1058
+                ],
+                "topPixel": [
+                  1687,
+                  1200
+                ],
+                "residualPixels": 8.59662944756314
+              },
+              {
+                "terminal": "R8:2",
+                "bottomPixel": [
+                  1245,
+                  1057
+                ],
+                "topPixel": [
+                  1531,
+                  1206
+                ],
+                "residualPixels": 9.335856674521967
+              },
+              {
+                "terminal": "A1:14",
+                "bottomPixel": [
+                  1396,
+                  1324
+                ],
+                "topPixel": [
+                  1389,
+                  1482
+                ],
+                "residualPixels": 11.337955361028714
+              },
+              {
+                "terminal": "A2.1:1",
+                "bottomPixel": [
+                  1190,
+                  1327
+                ],
+                "topPixel": [
+                  1630,
+                  1475
+                ],
+                "residualPixels": 18.328353270971633
+              },
+              {
+                "terminal": "A1:1",
+                "bottomPixel": [
+                  1492,
+                  1327
+                ],
+                "topPixel": [
+                  1285,
+                  1495
+                ],
+                "residualPixels": 7.4410409252587835
+              },
+              {
+                "terminal": "A2.1:14",
+                "bottomPixel": [
+                  1098,
+                  1325
+                ],
+                "topPixel": [
+                  1710,
+                  1468
+                ],
+                "residualPixels": 15.287509542640812
+              }
+            ],
+            "bottomToTop": [
+              -0.932227158914986,
+              -0.11472964446905022,
+              2576.0286718654093,
+              0.004010881834842524,
+              0.7362362839758987,
+              227.70988947709645,
+              -2.147091754526591e-05,
+              -0.00012160654842664004,
+              1
+            ],
+            "projectedTopPixel": [
+              1544.823927966628,
+              1354.570832066753
+            ],
+            "insideAnchorHull": true,
+            "maxCheckResidualPixels": 18.328353270971633
+          },
+          {
+            "anchors": [
+              {
+                "terminal": "R4.2:1",
+                "bottomPixel": [
+                  1090,
+                  969
+                ],
+                "topPixel": [
+                  1687,
+                  1101
+                ]
+              },
+              {
+                "terminal": "R4.2:2",
+                "bottomPixel": [
+                  1243,
+                  972
+                ],
+                "topPixel": [
+                  1527,
+                  1109
+                ]
+              },
+              {
+                "terminal": "A1:1",
+                "bottomPixel": [
+                  1492,
+                  1327
+                ],
+                "topPixel": [
+                  1285,
+                  1495
+                ]
+              },
+              {
+                "terminal": "A2.1:14",
+                "bottomPixel": [
+                  1098,
+                  1325
+                ],
+                "topPixel": [
+                  1710,
+                  1468
+                ]
+              }
+            ],
+            "checks": [
+              {
+                "terminal": "R7:1",
+                "bottomPixel": [
+                  1093,
+                  1013
+                ],
+                "topPixel": [
+                  1687,
+                  1151
+                ],
+                "residualPixels": 5.093889029498301
+              },
+              {
+                "terminal": "R7:2",
+                "bottomPixel": [
+                  1245,
+                  1013
+                ],
+                "topPixel": [
+                  1529,
+                  1154
+                ],
+                "residualPixels": 2.7117449260940725
+              },
+              {
+                "terminal": "R8:1",
+                "bottomPixel": [
+                  1095,
+                  1058
+                ],
+                "topPixel": [
+                  1687,
+                  1200
+                ],
+                "residualPixels": 8.361188951733922
+              },
+              {
+                "terminal": "R8:2",
+                "bottomPixel": [
+                  1245,
+                  1057
+                ],
+                "topPixel": [
+                  1531,
+                  1206
+                ],
+                "residualPixels": 9.127763706344902
+              },
+              {
+                "terminal": "A1:14",
+                "bottomPixel": [
+                  1396,
+                  1324
+                ],
+                "topPixel": [
+                  1389,
+                  1482
+                ],
+                "residualPixels": 4.0317106190785985
+              },
+              {
+                "terminal": "A2.1:1",
+                "bottomPixel": [
+                  1190,
+                  1327
+                ],
+                "topPixel": [
+                  1630,
+                  1475
+                ],
+                "residualPixels": 16.731162473286638
+              },
+              {
+                "terminal": "R10.1:2",
+                "bottomPixel": [
+                  1342,
+                  1325
+                ],
+                "topPixel": [
+                  1448,
+                  1492
+                ],
+                "residualPixels": 8.99915805978471
+              },
+              {
+                "terminal": "R10.2:2",
+                "bottomPixel": [
+                  1297,
+                  1325
+                ],
+                "topPixel": [
+                  1498,
+                  1490
+                ],
+                "residualPixels": 9.667221526842319
+              }
+            ],
+            "bottomToTop": [
+              -1.0456583038434846,
+              0.030367751821377346,
+              2622.3426485535642,
+              -0.04869985414190157,
+              0.881241885370399,
+              185.94878142677743,
+              -7.00355677609344e-05,
+              -2.827121994336586e-05,
+              1
+            ],
+            "projectedTopPixel": [
+              1544.3622720450771,
+              1351.0428836716767
+            ],
+            "insideAnchorHull": true,
+            "maxCheckResidualPixels": 16.731162473286638
+          }
+        ],
+        "centerTopPixel": [
+          1544.5931000058526,
+          1352.8068578692148
+        ],
+        "fitSpreadPixels": 3.5580255856617886,
+        "searchRadiusPixels": 30,
+        "radiusBasis": "Maximum held-out residual + fit spread + explicit search padding; heuristic search margin, not a confidence bound.",
+        "copperAssignmentQualified": false
       },
       "figures": [
         {
@@ -258,6 +611,15 @@
                 1510
               ],
               "label": "Recorded span end: r101-output-top-local"
+            },
+            {
+              "point": [
+                1544.5931000058526,
+                1352.8068578692148
+              ],
+              "radius": 30,
+              "kind": "search",
+              "label": "Projected search region beneath R9.5; not an observed joint"
             }
           ]
         }
@@ -324,6 +686,16 @@
     },
     {
       "id": "host-data",
+      "crossSideStop": {
+        "ref": "R10.2",
+        "bottomPixel": [
+          1163,
+          1013
+        ],
+        "occludingBody": "R7",
+        "searchPaddingPixels": 8,
+        "observation": "The projected location falls beneath the resistor body in the primary top photo. The top counterpart and outgoing copper cannot be identified directly there."
+      },
       "title": "Serial data: driver to filter to host cable",
       "sameNetSets": [
         [
@@ -350,12 +722,12 @@
         "comparison-photo-080406304",
         "comparison-photo-080511382"
       ],
-      "finding": "The native underside branch reaches a solder eye toward the cable end. Its unseen continuation to A1 and the filter remains unassigned.",
+      "finding": "The native underside branch reaches a solder eye toward the cable end. Its unseen continuation to A1 and the filter remains unassigned. Cross-side search fits localize the underside stop beneath R7; this is an occluded search region, not an identified top-side joint.",
       "alternatives": [
         "The solder eye continues to the reference A1:4/L1.4:1 network.",
         "A nearby top-side eye or winding lead is being mistaken for the counterpart; preserve the open span until independently matched."
       ],
-      "nextDeskWork": "Trace from the underside stop toward the filter using primary top/bottom views. Use comparison close-ups to expose winding construction, but register them independently before transferring any identity.",
+      "nextDeskWork": "Register comparison close-ups around R7 using surrounding joints and held-out checks. Follow the exposed lane on both sides of the body and match any downstream eye independently before continuing toward L1/XT1.",
       "decisiveObservation": "Identify the actual winding input and output joints, then establish the R10.2:2–A1:4–L1.4:1 and L1.4:2–XT1:A1 spans independently.",
       "doNotInfer": "Cable wire colour and spatial proximity do not establish a terminal number or which ferrite winding is L1.4.",
       "referenceNets": [
@@ -384,6 +756,345 @@
           },
           "type": "CHOKE"
         }
+      },
+      "crossSideSearch": {
+        "scope": "Search localization only. Fits share R4.2 anchors; agreement is a sensitivity check, not independent evidence. Top DIP landmarks are lead observations, not verified hole centres. No copper or via assignment is qualified.",
+        "fits": [
+          {
+            "anchors": [
+              {
+                "terminal": "R4.2:1",
+                "bottomPixel": [
+                  1090,
+                  969
+                ],
+                "topPixel": [
+                  1687,
+                  1101
+                ]
+              },
+              {
+                "terminal": "R4.2:2",
+                "bottomPixel": [
+                  1243,
+                  972
+                ],
+                "topPixel": [
+                  1527,
+                  1109
+                ]
+              },
+              {
+                "terminal": "R10.2:2",
+                "bottomPixel": [
+                  1297,
+                  1325
+                ],
+                "topPixel": [
+                  1498,
+                  1490
+                ]
+              },
+              {
+                "terminal": "R10.1:2",
+                "bottomPixel": [
+                  1342,
+                  1325
+                ],
+                "topPixel": [
+                  1448,
+                  1492
+                ]
+              }
+            ],
+            "checks": [
+              {
+                "terminal": "R7:1",
+                "bottomPixel": [
+                  1093,
+                  1013
+                ],
+                "topPixel": [
+                  1687,
+                  1151
+                ],
+                "residualPixels": 5.259668553097439
+              },
+              {
+                "terminal": "R7:2",
+                "bottomPixel": [
+                  1245,
+                  1013
+                ],
+                "topPixel": [
+                  1529,
+                  1154
+                ],
+                "residualPixels": 3.002095315024153
+              },
+              {
+                "terminal": "R8:1",
+                "bottomPixel": [
+                  1095,
+                  1058
+                ],
+                "topPixel": [
+                  1687,
+                  1200
+                ],
+                "residualPixels": 8.59662944756314
+              },
+              {
+                "terminal": "R8:2",
+                "bottomPixel": [
+                  1245,
+                  1057
+                ],
+                "topPixel": [
+                  1531,
+                  1206
+                ],
+                "residualPixels": 9.335856674521967
+              },
+              {
+                "terminal": "A1:14",
+                "bottomPixel": [
+                  1396,
+                  1324
+                ],
+                "topPixel": [
+                  1389,
+                  1482
+                ],
+                "residualPixels": 11.337955361028714
+              },
+              {
+                "terminal": "A2.1:1",
+                "bottomPixel": [
+                  1190,
+                  1327
+                ],
+                "topPixel": [
+                  1630,
+                  1475
+                ],
+                "residualPixels": 18.328353270971633
+              },
+              {
+                "terminal": "A1:1",
+                "bottomPixel": [
+                  1492,
+                  1327
+                ],
+                "topPixel": [
+                  1285,
+                  1495
+                ],
+                "residualPixels": 7.4410409252587835
+              },
+              {
+                "terminal": "A2.1:14",
+                "bottomPixel": [
+                  1098,
+                  1325
+                ],
+                "topPixel": [
+                  1710,
+                  1468
+                ],
+                "residualPixels": 15.287509542640812
+              }
+            ],
+            "bottomToTop": [
+              -0.932227158914986,
+              -0.11472964446905022,
+              2576.0286718654093,
+              0.004010881834842524,
+              0.7362362839758987,
+              227.70988947709645,
+              -2.147091754526591e-05,
+              -0.00012160654842664004,
+              1
+            ],
+            "projectedTopPixel": [
+              1614.8857826986016,
+              1148.3139218218287
+            ],
+            "insideAnchorHull": true,
+            "maxCheckResidualPixels": 18.328353270971633
+          },
+          {
+            "anchors": [
+              {
+                "terminal": "R4.2:1",
+                "bottomPixel": [
+                  1090,
+                  969
+                ],
+                "topPixel": [
+                  1687,
+                  1101
+                ]
+              },
+              {
+                "terminal": "R4.2:2",
+                "bottomPixel": [
+                  1243,
+                  972
+                ],
+                "topPixel": [
+                  1527,
+                  1109
+                ]
+              },
+              {
+                "terminal": "A1:1",
+                "bottomPixel": [
+                  1492,
+                  1327
+                ],
+                "topPixel": [
+                  1285,
+                  1495
+                ]
+              },
+              {
+                "terminal": "A2.1:14",
+                "bottomPixel": [
+                  1098,
+                  1325
+                ],
+                "topPixel": [
+                  1710,
+                  1468
+                ]
+              }
+            ],
+            "checks": [
+              {
+                "terminal": "R7:1",
+                "bottomPixel": [
+                  1093,
+                  1013
+                ],
+                "topPixel": [
+                  1687,
+                  1151
+                ],
+                "residualPixels": 5.093889029498301
+              },
+              {
+                "terminal": "R7:2",
+                "bottomPixel": [
+                  1245,
+                  1013
+                ],
+                "topPixel": [
+                  1529,
+                  1154
+                ],
+                "residualPixels": 2.7117449260940725
+              },
+              {
+                "terminal": "R8:1",
+                "bottomPixel": [
+                  1095,
+                  1058
+                ],
+                "topPixel": [
+                  1687,
+                  1200
+                ],
+                "residualPixels": 8.361188951733922
+              },
+              {
+                "terminal": "R8:2",
+                "bottomPixel": [
+                  1245,
+                  1057
+                ],
+                "topPixel": [
+                  1531,
+                  1206
+                ],
+                "residualPixels": 9.127763706344902
+              },
+              {
+                "terminal": "A1:14",
+                "bottomPixel": [
+                  1396,
+                  1324
+                ],
+                "topPixel": [
+                  1389,
+                  1482
+                ],
+                "residualPixels": 4.0317106190785985
+              },
+              {
+                "terminal": "A2.1:1",
+                "bottomPixel": [
+                  1190,
+                  1327
+                ],
+                "topPixel": [
+                  1630,
+                  1475
+                ],
+                "residualPixels": 16.731162473286638
+              },
+              {
+                "terminal": "R10.1:2",
+                "bottomPixel": [
+                  1342,
+                  1325
+                ],
+                "topPixel": [
+                  1448,
+                  1492
+                ],
+                "residualPixels": 8.99915805978471
+              },
+              {
+                "terminal": "R10.2:2",
+                "bottomPixel": [
+                  1297,
+                  1325
+                ],
+                "topPixel": [
+                  1498,
+                  1490
+                ],
+                "residualPixels": 9.667221526842319
+              }
+            ],
+            "bottomToTop": [
+              -1.0456583038434846,
+              0.030367751821377346,
+              2622.3426485535642,
+              -0.04869985414190157,
+              0.881241885370399,
+              185.94878142677743,
+              -7.00355677609344e-05,
+              -2.827121994336586e-05,
+              1
+            ],
+            "projectedTopPixel": [
+              1614.7753741322967,
+              1148.44086316775
+            ],
+            "insideAnchorHull": true,
+            "maxCheckResidualPixels": 16.731162473286638
+          }
+        ],
+        "centerTopPixel": [
+          1614.830578415449,
+          1148.3773924947893
+        ],
+        "fitSpreadPixels": 0.1682383928174555,
+        "searchRadiusPixels": 27,
+        "radiusBasis": "Maximum held-out residual + fit spread + explicit search padding; heuristic search margin, not a confidence bound.",
+        "copperAssignmentQualified": false
       },
       "figures": [
         {
@@ -511,6 +1222,28 @@
                 1013
               ],
               "label": "Recorded span end: r102-output-bottom-partial"
+            }
+          ]
+        },
+        {
+          "source": {
+            "id": "photo-top",
+            "path": "../reference/photos/PXL_20261012_123622947.jpg",
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+            "use": "Specimen placement and visible copper; approximate planar registration",
+            "href": "../../reference/photos/PXL_20261012_123622947.jpg",
+            "specimen": "primary museum specimen"
+          },
+          "segments": [],
+          "markers": [
+            {
+              "point": [
+                1614.830578415449,
+                1148.3773924947893
+              ],
+              "radius": 27,
+              "kind": "search",
+              "label": "Projected search region beneath R7; not an observed joint"
             }
           ]
         }
