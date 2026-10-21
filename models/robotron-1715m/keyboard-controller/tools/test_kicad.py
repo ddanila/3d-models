@@ -45,7 +45,7 @@ class KiCadExportTests(unittest.TestCase):
    for pins in pairs:
     self.assertTrue(any(set(pins)<=set(g['terminals']) for g in islands))
    self.assertFalse(any({pairs[0][0],pairs[1][0]}<=set(g['terminals']) for g in islands))
-  for net,pins in [('/D0',{'A4:19','A5:14','A8:9'}),('/D1',{'A5:15','A8:10'}),('/D2',{'A5:12','A8:11'}),('/D3',{'A4:16','A5:8','A8:13'}),('/D4',{'A5:7','A8:14'})]:
+  for net,pins in [('/D0',{'A4:19','A5:14','A8:9'}),('/D1',{'A5:15','A8:10'}),('/D2',{'A4:17','A5:12','A8:11'}),('/D3',{'A4:16','A5:8','A8:13'}),('/D4',{'A5:7','A8:14'})]:
    islands=next(n for n in actual['nets'] if n['net']==net)['islands']
    self.assertTrue(any(pins==set(g['terminals']) for g in islands))
   for candidate in json.loads((R/'bus-review.json').read_text())['paths']:

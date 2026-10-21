@@ -6,6 +6,30 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_eye_fit_checks_are_independent_and_domain_is_bounded(self):
+  import copy
+  from eye_registration import review
+  from bottom_registration import inside_hull
+  evidence=json.loads((R/'top-copper-landmarks.json').read_text())
+  bottom=json.loads((R/'generated/bottom-registration.json').read_text())
+  actual=review(evidence,bottom,R)
+  self.assertTrue(actual['copperAssignmentQualified'])
+  self.assertLess(actual['maxCheckResidualMm'],.5)
+  self.assertEqual(actual,next(r for r in json.loads((R/'generated/top-registration.json').read_text())['pcbRegions']if r['id']=='latch-eyes'))
+  underlying=next(r for r in bottom['pcbRegions']if r['id']==actual['bottomRegion'])
+  for p in actual['anchorHull']:
+   self.assertTrue(inside_hull(p,actual['eyeAnchorHull']))
+   self.assertTrue(inside_hull(project(actual['topToBottom'],p),underlying['anchorHull']))
+  self.assertFalse(inside_hull([1408,2923],actual['bottomHull']))
+  bad=copy.deepcopy(evidence);bad['eyeRegistration']['checks'][0]=bad['eyeRegistration']['anchors'][0]
+  with self.assertRaisesRegex(ValueError,'must be independent'):review(bad,bottom,R)
+  bad=copy.deepcopy(evidence);bad['eyeRegistration']['bottomLandmarksSha256']='0'*64
+  with self.assertRaisesRegex(ValueError,'Stale eye registration'):review(bad,bottom,R)
+  bad=copy.deepcopy(evidence);bad['eyeRegistration']['checks'][0]['bottomPixel']=[0,0]
+  with self.assertRaisesRegex(ValueError,'exceeds bounded'):review(bad,bottom,R)
+  bad=copy.deepcopy(evidence);bad['eyeRegistration']['checks'][1]['bottomPixel'][0]+=25
+  self.assertFalse(review(bad,bottom,R)['copperAssignmentQualified'])
+
  def test_cross_side_via_rejects_stale_or_displaced_evidence(self):
   import copy,hashlib
   from bottom_registration import review_registered_vias
@@ -36,11 +60,14 @@ class ControllerExportTests(unittest.TestCase):
   self.assertEqual(report,json.loads((R/'generated/bus-review.json').read_text()))
   candidates={p['referenceNet']:p for p in report['latchPaths']}
   self.assertTrue(candidates['/D1']['reverseReview']['positionCheck']['withinFitBudget'])
-  self.assertFalse(candidates['/D2']['reverseReview']['positionCheck']['withinFitBudget'])
-  alternatives=candidates['/D2']['reverseReview']['alternatives']
-  self.assertEqual(alternatives[0]['id'],'lower-eye')
-  self.assertTrue(all(not a['positionCheck']['withinFitBudget'] for a in alternatives))
+  self.assertNotIn('/D2',candidates)
+  alternatives=candidates['/D1']['reverseReview']['alternatives']
+  self.assertEqual(alternatives[0]['id'],'middle-eye')
   self.assertTrue(all(not a['positionCheck']['continuityEstablished'] for a in alternatives))
+  self.assertFalse(candidates['/D1']['reverseReview']['continuationProjection']['insideFitHull'])
+  d2=next(t for t in report['eyeReview']['targets']if t['referenceNet']=='/D2')
+  self.assertTrue(d2['insideFitHull']);self.assertTrue(d2['withinFitBudget'])
+  self.assertFalse(d2['continuityEstablished'])
   terminal=candidates['/D1']['terminalReview']
   self.assertEqual(terminal['terminal'],'A5:15')
   self.assertNotEqual(terminal['point'],candidates['/D1']['reverseReview']['unassignedEnd'])
@@ -71,12 +98,15 @@ class ControllerExportTests(unittest.TestCase):
    bad=copy.deepcopy(original);bad['latchPaths'][0]['terminalReview']['continuityEstablished']=True
    (r/'bus-review.json').write_text(json.dumps(bad))
    with self.assertRaisesRegex(ValueError,'cannot establish latch continuity'):build(r)
-   bad=copy.deepcopy(original);bad['latchPaths'][1]['reverseReview']['alternatives'][0]['point']=[0,0]
+   bad=copy.deepcopy(original);bad['latchPaths'][0]['reverseReview']['alternatives'][0]['point']=[0,0]
    (r/'bus-review.json').write_text(json.dumps(bad))
    with self.assertRaisesRegex(ValueError,'exceeds local fit hull'):build(r)
    bad=copy.deepcopy(original);bad['latchPaths'][0]['terminalReview']['topReview']['sourceSha256']='0'*64
    (r/'bus-review.json').write_text(json.dumps(bad))
    with self.assertRaisesRegex(ValueError,'source hash mismatch'):build(r)
+   bad=copy.deepcopy(original);bad['eyeReview']['targets'][0]['top']=[1501,2847]
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'own eye fit anchor'):build(r)
    bad=copy.deepcopy(original);bad['paths'][0]['observedEnds'][0]['point']=[1400,2700]
    (r/'bus-review.json').write_text(json.dumps(bad))
    self.assertFalse(build(r)['paths'][0]['crossSideSearch']['insideCpuBodyWithSearchMargin'])

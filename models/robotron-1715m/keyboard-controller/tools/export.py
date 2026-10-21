@@ -154,7 +154,7 @@ def main():
  outline=outline_polygon(edges)
  layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline,'components':placed,'unplaced':unplaced,'routes':routes,'vias':vias,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
  bottom=bottom_review(layout);validate_registered_routes(routes,bottom,digest(ROOT/'bottom-landmarks.json'))
- top=top_review(layout);validate_registered_routes(routes,top,digest(ROOT/'top-copper-landmarks.json'),side='top')
+ top=top_review(layout,bottom);validate_registered_routes(routes,top,digest(ROOT/'top-copper-landmarks.json'),side='top')
  layout['viaRegistration']=review_registered_vias(vias,{'top':top,'bottom':bottom},{side:digest(ROOT/('top-copper-landmarks.json'if side=='top'else'bottom-landmarks.json'))for side in ('top','bottom')})
  write('top-registration.json',top)
  bottom['padPlacements']=validate_pad_placements(layout,bottom,json.loads((ROOT/'component-evidence.json').read_text()))
@@ -250,6 +250,7 @@ def main():
  inputs=['bus-review.json','tools/routing_audit.py','filter-registration.json','supply-review.json','cable-copper.json','tools/cable_copper.py','output-assembly.json','tools/output_assembly.py','top-copper-landmarks.json','tools/top_registration.py','controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/connector_review.py','tools/connector_terminals.py','tools/route_evidence.py','route-evidence.json','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
  write('bus-review.json',bus_review())
  inputs.append('tools/bus_review.py')
+ inputs.append('tools/eye_registration.py')
  outputs=sorted(p for p in (ROOT/'generated').iterdir() if p.name!='manifest.json')
  for source in json.loads((ROOT/'evidence.json').read_text())['sources']:
   if not source.get('path'):continue

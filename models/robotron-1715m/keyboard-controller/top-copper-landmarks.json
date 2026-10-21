@@ -338,5 +338,113 @@
         }
       ]
     }
-  ]
+  ],
+  "eyeRegistration": {
+    "id": "latch-eyes",
+    "bottomRegion": "cpu-a4",
+    "bottomLandmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+    "bottomPhotoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+    "reviewedForCopper": true,
+    "scope": "Direct correspondence of board-plane solder eyes, independent of raised lead knees. Anonymous eye identity follows the local artwork constellation; no net identity or measured continuity follows from the fit. Native use is restricted to the intersection of the eye hull and the qualified underside region.",
+    "anchors": [
+      {
+        "id": "upper-solder-eye",
+        "photoPixel": [
+          1501,
+          2847
+        ],
+        "bottomPixel": [
+          1365,
+          2618
+        ],
+        "observation": "Solder-obscured upper eye; correspondence also retained by the existing D0 underside path. Centre remains photo-estimated."
+      },
+      {
+        "id": "cpu-outer-eye",
+        "photoPixel": [
+          1785,
+          2985
+        ],
+        "bottomPixel": [
+          1089,
+          2776
+        ],
+        "observation": "Single circular eye outside the CPU outer row beside the long edge track."
+      },
+      {
+        "id": "lower-inner-eye",
+        "photoPixel": [
+          1530,
+          3175
+        ],
+        "bottomPixel": [
+          1342,
+          2939
+        ],
+        "observation": "Lowest exposed circular eye in the latch/CPU corridor, below the pair of inner eyes."
+      },
+      {
+        "id": "outer-upper-eye",
+        "photoPixel": [
+          1237,
+          2966
+        ],
+        "bottomPixel": [
+          1610,
+          2718
+        ],
+        "observation": "Upper of the two exposed eyes outside the latch outer row."
+      }
+    ],
+    "checks": [
+      {
+        "id": "upper-inner-eye",
+        "photoPixel": [
+          1517,
+          2887
+        ],
+        "bottomPixel": [
+          1345,
+          2662
+        ],
+        "observation": "Small inner eye between the upper solder eye and the D2 target eye."
+      },
+      {
+        "id": "middle-inner-eye",
+        "photoPixel": [
+          1528,
+          3049
+        ],
+        "bottomPixel": [
+          1345,
+          2818
+        ],
+        "observation": "Exposed eye below the straight latch fan-out; separate from the adjacent D2 underside lane."
+      },
+      {
+        "id": "lower-pair-upper",
+        "photoPixel": [
+          1510,
+          3098
+        ],
+        "bottomPixel": [
+          1360,
+          2861
+        ],
+        "observation": "Upper of the two vertically separated corridor eyes."
+      },
+      {
+        "id": "lower-pair-lower",
+        "photoPixel": [
+          1512,
+          3144
+        ],
+        "bottomPixel": [
+          1358,
+          2908
+        ],
+        "observation": "Lower of the two vertically separated corridor eyes."
+      }
+    ]
+  }
 }

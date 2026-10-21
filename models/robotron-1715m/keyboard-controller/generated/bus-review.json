@@ -57,6 +57,80 @@
     "source": "photo-top",
     "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
   },
+  "eyeReview": {
+    "comparisons": [
+      {
+        "electricalIdentityTransferred": false,
+        "imageSize": [
+          4080,
+          3072
+        ],
+        "observation": "Different specimen: the exposed eye constellation and top trace departures corroborate artwork identification, not primary-specimen continuity.",
+        "pixelBox": [
+          1400,
+          500,
+          3500,
+          1400
+        ],
+        "source": "comparison-photo-080429077",
+        "sourceSha256": "e8ece4b1f9686881f5447617c32616400c81c37a5461e1756bd691313a1d29b3"
+      },
+      {
+        "electricalIdentityTransferred": false,
+        "imageSize": [
+          3072,
+          4080
+        ],
+        "observation": "Different specimen: the eye beside the CPU row has a lane toward the CPU, separate from the neighboring eye-to-eye lane. The primary underside path is traced independently; comparison geometry is not copied into native copper.",
+        "pixelBox": [
+          1250,
+          2730,
+          1470,
+          3230
+        ],
+        "source": "comparison-photo-080342577",
+        "sourceSha256": "aa18874b9fba8db44216f8531ad9caab9125839a07838616bf1237f02a6b15fa"
+      }
+    ],
+    "maxCheckResidualMm": 0.480905453,
+    "region": "latch-eyes",
+    "scope": "Held-out board-plane eye checks qualify local correspondence independently of raised-lead fits. Fit agreement does not establish plating, measured dimensions or specimen continuity.",
+    "targets": [
+      {
+        "bottom": [
+          1390,
+          2645
+        ],
+        "continuityEstablished": false,
+        "id": "d1-eye",
+        "insideFitHull": true,
+        "referenceNet": "/D1",
+        "residualMm": 0.462770022,
+        "top": [
+          1470,
+          2873
+        ],
+        "withinFitBudget": true
+      },
+      {
+        "bottom": [
+          1335,
+          2708
+        ],
+        "continuityEstablished": false,
+        "id": "d2-eye",
+        "insideFitHull": true,
+        "referenceNet": "/D2",
+        "residualMm": 0.135466641,
+        "top": [
+          1532,
+          2936
+        ],
+        "withinFitBudget": true
+      }
+    ],
+    "toleranceMm": 1.25
+  },
   "latchPaths": [
     {
       "continuityEstablished": false,
@@ -76,7 +150,7 @@
             ],
             "positionCheck": {
               "continuityEstablished": false,
-              "residualMm": 0.887915486,
+              "residualMm": 0.462770022,
               "toleranceMm": 1.25,
               "withinFitBudget": true
             }
@@ -90,7 +164,21 @@
             ],
             "positionCheck": {
               "continuityEstablished": false,
-              "residualMm": 3.120191125,
+              "residualMm": 3.146932844,
+              "toleranceMm": 1.25,
+              "withinFitBudget": false
+            }
+          },
+          {
+            "id": "upper-inner-eye",
+            "kind": "eye",
+            "point": [
+              1345,
+              2662
+            ],
+            "positionCheck": {
+              "continuityEstablished": false,
+              "residualMm": 4.358391357,
               "toleranceMm": 1.25,
               "withinFitBudget": false
             }
@@ -104,7 +192,7 @@
             ],
             "positionCheck": {
               "continuityEstablished": false,
-              "residualMm": 7.678518257,
+              "residualMm": 7.231900178,
               "toleranceMm": 1.25,
               "withinFitBudget": false
             }
@@ -118,13 +206,23 @@
             ],
             "positionCheck": {
               "continuityEstablished": false,
-              "residualMm": 9.233221862,
+              "residualMm": 8.811672689,
               "toleranceMm": 1.25,
               "withinFitBudget": false
             },
             "terminal": "A5:7"
           }
         ],
+        "continuationProjection": {
+          "continuityEstablished": false,
+          "insideFitHull": false,
+          "point": [
+            1458.683095562,
+            3164.784603178
+          ],
+          "reason": "The projected endpoint falls near the raised R6.4 right lead, outside this local fit hull. The lead bend hides the board entry; neither a resistor terminal nor a CPU continuation is identified.",
+          "region": "latch-eyes"
+        },
         "continuityEstablished": false,
         "point": [
           1390,
@@ -132,7 +230,7 @@
         ],
         "positionCheck": {
           "continuityEstablished": false,
-          "residualMm": 0.887915486,
+          "residualMm": 0.462770022,
           "toleranceMm": 1.25,
           "withinFitBudget": true
         },
@@ -140,7 +238,7 @@
         "reason": "Candidate reverse-side path stops at another unassigned joint. Neither through-board identity nor continuation to the CPU is established; no native via or route is assigned.",
         "registrationRegions": {
           "bottom": "cpu-a4",
-          "top": "cpu-latch-upper"
+          "top": "latch-eyes"
         },
         "segments": [
           {
@@ -286,193 +384,6 @@
       "terminals": [
         "A4:18",
         "A5:15"
-      ]
-    },
-    {
-      "continuityEstablished": false,
-      "id": "latch-review-d2",
-      "nativeCopper": false,
-      "reason": "The closest reviewed underside eye still disagrees with the top endpoint beyond the local fit budget. Neighboring eyes and CPU pin 7 do not provide a better match. Eye identity and its continuation to CPU pin 12 remain unresolved.",
-      "referenceNet": "/D2",
-      "reverseReview": {
-        "alternativeScope": "Nearby underside features checked against the same top endpoint with unchanged local fits. Ranking is positional only; a pad is not an interchangeable via and no candidate establishes continuity.",
-        "alternatives": [
-          {
-            "id": "lower-eye",
-            "kind": "eye",
-            "point": [
-              1335,
-              2708
-            ],
-            "positionCheck": {
-              "continuityEstablished": false,
-              "residualMm": 1.529928258,
-              "toleranceMm": 1.25,
-              "withinFitBudget": false
-            }
-          },
-          {
-            "id": "cpu-pin-7",
-            "kind": "pad",
-            "point": [
-              1307,
-              2706
-            ],
-            "positionCheck": {
-              "continuityEstablished": false,
-              "residualMm": 3.539786895,
-              "toleranceMm": 1.25,
-              "withinFitBudget": false
-            },
-            "terminal": "A5:7"
-          },
-          {
-            "id": "middle-eye",
-            "kind": "eye",
-            "point": [
-              1390,
-              2645
-            ],
-            "positionCheck": {
-              "continuityEstablished": false,
-              "residualMm": 5.290461969,
-              "toleranceMm": 1.25,
-              "withinFitBudget": false
-            }
-          },
-          {
-            "id": "upper-eye",
-            "kind": "eye",
-            "point": [
-              1365,
-              2618
-            ],
-            "positionCheck": {
-              "continuityEstablished": false,
-              "residualMm": 6.493495166,
-              "toleranceMm": 1.25,
-              "withinFitBudget": false
-            }
-          }
-        ],
-        "continuityEstablished": false,
-        "point": [
-          1335,
-          2708
-        ],
-        "positionCheck": {
-          "continuityEstablished": false,
-          "residualMm": 1.529928258,
-          "toleranceMm": 1.25,
-          "withinFitBudget": false
-        },
-        "radiusPixels": 18,
-        "reason": "Candidate reverse-side path stops at another unassigned joint. Neither through-board identity nor continuation to the CPU is established; no native via or route is assigned.",
-        "registrationRegions": {
-          "bottom": "cpu-a4",
-          "top": "cpu-latch-upper"
-        },
-        "segments": [
-          {
-            "id": "latch-review-d2-reverse-0",
-            "points": [
-              [
-                1335,
-                2708
-              ],
-              [
-                1348,
-                2721
-              ]
-            ],
-            "status": "inferred"
-          },
-          {
-            "id": "latch-review-d2-reverse-1",
-            "points": [
-              [
-                1348,
-                2721
-              ],
-              [
-                1349,
-                2803
-              ]
-            ],
-            "status": "observed"
-          },
-          {
-            "id": "latch-review-d2-reverse-2",
-            "points": [
-              [
-                1349,
-                2803
-              ],
-              [
-                1345,
-                2818
-              ]
-            ],
-            "status": "inferred"
-          }
-        ],
-        "source": "photo-bottom",
-        "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
-        "status": "candidate-correspondence-only",
-        "unassignedEnd": [
-          1345,
-          2818
-        ]
-      },
-      "segments": [
-        {
-          "id": "d2-latch-0",
-          "points": [
-            [
-              1444,
-              2908
-            ],
-            [
-              1464,
-              2918
-            ]
-          ],
-          "status": "inferred"
-        },
-        {
-          "id": "d2-latch-1",
-          "points": [
-            [
-              1464,
-              2918
-            ],
-            [
-              1508,
-              2915
-            ]
-          ],
-          "status": "observed"
-        },
-        {
-          "id": "d2-latch-2",
-          "points": [
-            [
-              1508,
-              2915
-            ],
-            [
-              1532,
-              2936
-            ]
-          ],
-          "status": "inferred"
-        }
-      ],
-      "source": "photo-top",
-      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
-      "terminals": [
-        "A4:17",
-        "A5:12"
       ]
     },
     {

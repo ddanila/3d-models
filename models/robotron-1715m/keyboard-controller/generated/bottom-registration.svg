@@ -121,7 +121,11 @@
 <polyline points="1270,3100 1280,3426" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1295,3465 1320,3493" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1295,2875 1285,2888" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1323,2719 1326,2833" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1326,2833 1314,2849" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1286,3200 1295,3465" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1335,2708 1323,2719" fill="none" stroke="magenta" stroke-width="2"/>
+<polyline points="1314,2849 1308,2865" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1308,2865 1295,2875" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1282,3000 1286,3200" fill="none" stroke="magenta" stroke-width="2"/>
 <polyline points="1285,2888 1282,3000" fill="none" stroke="magenta" stroke-width="2"/>

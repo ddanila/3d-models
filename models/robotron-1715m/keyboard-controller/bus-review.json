@@ -380,7 +380,7 @@
         "continuityEstablished": false,
         "reason": "Candidate reverse-side path stops at another unassigned joint. Neither through-board identity nor continuation to the CPU is established; no native via or route is assigned.",
         "registrationRegions": {
-          "top": "cpu-latch-upper",
+          "top": "latch-eyes",
           "bottom": "cpu-a4"
         },
         "segments": [
@@ -478,9 +478,21 @@
             ],
             "kind": "pad",
             "terminal": "A5:7"
+          },
+          {
+            "id": "upper-inner-eye",
+            "point": [
+              1345,
+              2662
+            ],
+            "kind": "eye"
           }
         ],
-        "alternativeScope": "Nearby underside features checked against the same top endpoint with unchanged local fits. Ranking is positional only; a pad is not an interchangeable via and no candidate establishes continuity."
+        "alternativeScope": "Nearby underside features checked against the same top endpoint with unchanged local fits. Ranking is positional only; a pad is not an interchangeable via and no candidate establishes continuity.",
+        "continuationProjection": {
+          "region": "latch-eyes",
+          "reason": "The projected endpoint falls near the raised R6.4 right lead, outside this local fit hull. The lead bend hides the board entry; neither a resistor terminal nor a CPU continuation is identified."
+        }
       },
       "terminalReview": {
         "source": "photo-bottom",
@@ -538,163 +550,6 @@
           ],
           "observation": "CPU pin 15 is the raised lead near [1596,3202]. Neighboring board tracks enter beneath the raised lead/body edge; the visible lead knee does not establish which entry belongs to pin 15. No top-side terminal attachment is assigned."
         }
-      }
-    },
-    {
-      "id": "latch-review-d2",
-      "referenceNet": "/D2",
-      "terminals": [
-        "A4:17",
-        "A5:12"
-      ],
-      "source": "photo-top",
-      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
-      "nativeCopper": false,
-      "continuityEstablished": false,
-      "reason": "The closest reviewed underside eye still disagrees with the top endpoint beyond the local fit budget. Neighboring eyes and CPU pin 7 do not provide a better match. Eye identity and its continuation to CPU pin 12 remain unresolved.",
-      "segments": [
-        {
-          "id": "d2-latch-0",
-          "status": "inferred",
-          "points": [
-            [
-              1444,
-              2908
-            ],
-            [
-              1464,
-              2918
-            ]
-          ]
-        },
-        {
-          "id": "d2-latch-1",
-          "status": "observed",
-          "points": [
-            [
-              1464,
-              2918
-            ],
-            [
-              1508,
-              2915
-            ]
-          ]
-        },
-        {
-          "id": "d2-latch-2",
-          "status": "inferred",
-          "points": [
-            [
-              1508,
-              2915
-            ],
-            [
-              1532,
-              2936
-            ]
-          ]
-        }
-      ],
-      "reverseReview": {
-        "source": "photo-bottom",
-        "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
-        "point": [
-          1335,
-          2708
-        ],
-        "radiusPixels": 18,
-        "status": "candidate-correspondence-only",
-        "continuityEstablished": false,
-        "reason": "Candidate reverse-side path stops at another unassigned joint. Neither through-board identity nor continuation to the CPU is established; no native via or route is assigned.",
-        "registrationRegions": {
-          "top": "cpu-latch-upper",
-          "bottom": "cpu-a4"
-        },
-        "segments": [
-          {
-            "id": "latch-review-d2-reverse-0",
-            "status": "inferred",
-            "points": [
-              [
-                1335,
-                2708
-              ],
-              [
-                1348,
-                2721
-              ]
-            ]
-          },
-          {
-            "id": "latch-review-d2-reverse-1",
-            "status": "observed",
-            "points": [
-              [
-                1348,
-                2721
-              ],
-              [
-                1349,
-                2803
-              ]
-            ]
-          },
-          {
-            "id": "latch-review-d2-reverse-2",
-            "status": "inferred",
-            "points": [
-              [
-                1349,
-                2803
-              ],
-              [
-                1345,
-                2818
-              ]
-            ]
-          }
-        ],
-        "unassignedEnd": [
-          1345,
-          2818
-        ],
-        "alternatives": [
-          {
-            "id": "upper-eye",
-            "point": [
-              1365,
-              2618
-            ],
-            "kind": "eye"
-          },
-          {
-            "id": "middle-eye",
-            "point": [
-              1390,
-              2645
-            ],
-            "kind": "eye"
-          },
-          {
-            "id": "lower-eye",
-            "point": [
-              1335,
-              2708
-            ],
-            "kind": "eye"
-          },
-          {
-            "id": "cpu-pin-7",
-            "point": [
-              1307,
-              2706
-            ],
-            "kind": "pad",
-            "terminal": "A5:7"
-          }
-        ],
-        "alternativeScope": "Nearby underside features checked against the same top endpoint with unchanged local fits. Ranking is positional only; a pad is not an interchangeable via and no candidate establishes continuity."
       }
     },
     {
@@ -768,5 +623,67 @@
         }
       ]
     }
-  ]
+  ],
+  "eyeReview": {
+    "region": "latch-eyes",
+    "scope": "Held-out board-plane eye checks qualify local correspondence independently of raised-lead fits. Fit agreement does not establish plating, measured dimensions or specimen continuity.",
+    "targets": [
+      {
+        "id": "d1-eye",
+        "referenceNet": "/D1",
+        "top": [
+          1470,
+          2873
+        ],
+        "bottom": [
+          1390,
+          2645
+        ]
+      },
+      {
+        "id": "d2-eye",
+        "referenceNet": "/D2",
+        "top": [
+          1532,
+          2936
+        ],
+        "bottom": [
+          1335,
+          2708
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "source": "comparison-photo-080429077",
+        "sourceSha256": "e8ece4b1f9686881f5447617c32616400c81c37a5461e1756bd691313a1d29b3",
+        "pixelBox": [
+          1400,
+          500,
+          3500,
+          1400
+        ],
+        "imageSize": [
+          4080,
+          3072
+        ],
+        "observation": "Different specimen: the exposed eye constellation and top trace departures corroborate artwork identification, not primary-specimen continuity."
+      },
+      {
+        "source": "comparison-photo-080342577",
+        "sourceSha256": "aa18874b9fba8db44216f8531ad9caab9125839a07838616bf1237f02a6b15fa",
+        "pixelBox": [
+          1250,
+          2730,
+          1470,
+          3230
+        ],
+        "imageSize": [
+          3072,
+          4080
+        ],
+        "observation": "Different specimen: the eye beside the CPU row has a lane toward the CPU, separate from the neighboring eye-to-eye lane. The primary underside path is traced independently; comparison geometry is not copied into native copper."
+      }
+    ]
+  }
 }

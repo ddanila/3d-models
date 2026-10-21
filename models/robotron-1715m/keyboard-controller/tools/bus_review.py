@@ -19,6 +19,7 @@ def build(root=ROOT):
             raise ValueError('Latch eye correspondence is not established')
     records = [cross, cross['comparison'], *result['paths'], *latch_paths,
                *[p['reverseReview'] for p in latch_paths if 'reverseReview' in p]]
+    records.extend(result.get('eyeReview', {}).get('comparisons', []))
     for path in latch_paths:
         terminal = path.get('terminalReview')
         if terminal:
@@ -62,6 +63,31 @@ def build(root=ROOT):
             alternative['positionCheck'] = {'residualMm': round(distance, 9), 'toleranceMm': min(limits),
                                            'withinFitBudget': distance <= min(limits), 'continuityEstablished': False}
         reverse['alternatives'] = sorted(alternatives, key=lambda a: (a['positionCheck']['residualMm'], a['id']))
+        continuation = reverse.get('continuationProjection')
+        if continuation:
+            region = next(r for r in read('generated/top-registration.json')['pcbRegions'] if r['id'] == continuation['region'])
+            point = project(region['bottomToTop'],reverse['unassignedEnd'])
+            continuation.update(point=[round(v,9) for v in point],
+                                insideFitHull=inside_hull(reverse['unassignedEnd'],region['bottomHull']),
+                                continuityEstablished=False)
+    eye_review = result.get('eyeReview')
+    if eye_review:
+        from bottom_registration import inside_hull
+        region = next(r for r in read('generated/top-registration.json')['pcbRegions'] if r['id'] == eye_review['region'])
+        bottom_region = next(r for r in read('generated/bottom-registration.json')['pcbRegions'] if r['id'] == region['bottomRegion'])
+        if not region['copperAssignmentQualified']:
+            raise ValueError('Bus eye review requires a qualified eye fit')
+        eye_review['maxCheckResidualMm'] = region['maxCheckResidualMm']
+        eye_review['toleranceMm'] = region['toleranceMm']
+        for target in eye_review['targets']:
+            if any(target['top']==a['photoPixel'] or target['bottom']==a['bottomPixel'] for a in region['anchors']):
+                raise ValueError('Bus target must not be its own eye fit anchor')
+            residual = math.dist(project(region['photoToModel'],target['top']),project(bottom_region['photoToModel'],target['bottom']))
+            target.update(residualMm=round(residual,9),
+                          insideFitHull=inside_hull(target['top'],region['anchorHull']) and inside_hull(target['bottom'],region['bottomHull']),
+                          withinFitBudget=residual<=region['toleranceMm'],continuityEstablished=False)
+        for comparison in eye_review['comparisons']:
+            comparison['electricalIdentityTransferred'] = False
     if sources[cross['source']]['path'] != top['photo']:
         raise ValueError('Bus review top landmarks use a different photograph')
     bottom_pins = {}
