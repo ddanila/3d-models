@@ -2735,7 +2735,7 @@
     },
     "4ae80736-6846-4761-b714-dc19f1d46ab0": {
       "status": "inferred",
-      "geometrySha256": "a48ed78c8c3fa0030e10e0d5265d97f61d5766f431dd6277dc0293f81ab930b6",
+      "geometrySha256": "2b5b54e8b8b5e2d8fb48ccf227c447bd508dd0fa02392345b4360af1ce628161",
       "group": "cpu-rom-d0",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible CPU-to-ROM D0 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -2771,7 +2771,7 @@
     },
     "8f67332b-9c70-46cd-a586-4cfd803fe5ee": {
       "status": "observed",
-      "geometrySha256": "7cd0fc2c2bd4722c48073ba373fff99189f97e37c790250e2d88b74975767e78",
+      "geometrySha256": "461055353a7036491cff56b5d3568e07480f546c0c2f4f4c8fc9299aa3696816",
       "group": "cpu-rom-d0",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D0 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -2807,7 +2807,7 @@
     },
     "95786381-f160-4c16-ae28-2cc5f7d5f9f5": {
       "status": "observed",
-      "geometrySha256": "d105757a0f3550e2dd5435ac75d4fe736d540b724eb855db6c3a372e56510af8",
+      "geometrySha256": "a20f18b1ae37cca2a600f9ad8dada999590910fec10a9a86aee2fac8e9edf42d",
       "group": "cpu-rom-d0",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D0 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -2843,7 +2843,7 @@
     },
     "d1a455de-a7e5-4a79-b9f0-d0697b38f814": {
       "status": "observed",
-      "geometrySha256": "8c469b2c5d88d5ea4dd4d702a34f2e0b8fca5916c4d2c5fef46357041c3dce10",
+      "geometrySha256": "b6af7a9894da15ef632f59ae26b8fec943ec60c841b7bc6432ff7891aad098e1",
       "group": "cpu-rom-d0",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D0 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -2879,7 +2879,7 @@
     },
     "1c142604-be30-4685-8471-90ca74755d05": {
       "status": "observed",
-      "geometrySha256": "f73fe5307a7b7c7957bf5f537bdbdf47e8ad7545163c2dcc8dd1e958f483c9e6",
+      "geometrySha256": "fb41a3a302f3b787e4700cf19e7d4977c6097959881bbdd3e82275b72cf7cd0c",
       "group": "cpu-rom-d0",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D0 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -2915,7 +2915,7 @@
     },
     "b1f2a105-8fd5-420f-931c-d8e1c081b732": {
       "status": "observed",
-      "geometrySha256": "94276d1027580cf4717e352ce2dd2cb4f8d27e6a1ce609dbb18a56507da2442f",
+      "geometrySha256": "e78a402ee1e32654e988260d54fec551fe25ac8a2d321db2ac9404a381b48409",
       "group": "cpu-rom-d0",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D0 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -2951,7 +2951,7 @@
     },
     "1d31a971-5abd-4371-9ff6-f85add9f8487": {
       "status": "inferred",
-      "geometrySha256": "04903954786603bc1d7a152321c42d2bc7997e13fd87b0ca31a0c702f08c11fa",
+      "geometrySha256": "d3a3ba49bfbe1fa42c92b76f2fbe061b764b453e064a06a818b3d42c27b20d82",
       "group": "cpu-rom-d0",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible CPU-to-ROM D0 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -2987,7 +2987,7 @@
     },
     "928cb60e-7434-4c11-b384-c57edb4f759c": {
       "status": "inferred",
-      "geometrySha256": "d361c0242c3770150f03268943c4896c3485c1298d0d12e28c326dde4ff9e377",
+      "geometrySha256": "a724247d60aeada4e6386260203bcc47c693753668f21e0c62d8367421992bd0",
       "group": "cpu-rom-d2",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible CPU-to-ROM D2 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3023,7 +3023,7 @@
     },
     "2585e4f9-bfbb-460b-b8fc-f81a816a4e84": {
       "status": "observed",
-      "geometrySha256": "5532ba09e79b911046ac53ea38f264cee43ee459628c2ed316d321a6d67e8eb4",
+      "geometrySha256": "fa14ceafb41c615651698f80c835cc213f85dbed98f664e60bd20a882dd70bd0",
       "group": "cpu-rom-d2",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D2 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3059,7 +3059,7 @@
     },
     "b22322c0-46ff-4479-b65c-c9424637dd34": {
       "status": "observed",
-      "geometrySha256": "22aec6ec991525f42b57fa4a5b90abf680f57ab4cd7c021040bac0afcdc39e30",
+      "geometrySha256": "107fb835a25d1a6d18c7e91b6d93f10f45b3088e7616c8f6d809337808f510e8",
       "group": "cpu-rom-d2",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D2 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3095,7 +3095,7 @@
     },
     "94f8f7fe-e5ee-4b3a-a468-39e48b8dc1e8": {
       "status": "observed",
-      "geometrySha256": "3f09a51993bbc647b2473c33a3b839679f7b66562be7541cce5df67046fa28e8",
+      "geometrySha256": "045c03bd4e83b7933f328cd7b536ae4c8385ee557f3859e9c0a8c4e13c3c4fba",
       "group": "cpu-rom-d2",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D2 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3131,7 +3131,7 @@
     },
     "3db1fa0e-75e2-45b8-9f06-8ca9f2bc6b21": {
       "status": "observed",
-      "geometrySha256": "389a2aad83dafddcd0044c76dcdb63f2a4e292a5d8ce9cbfdb0e248565b90950",
+      "geometrySha256": "c653037c81ee1a1c820f7e57def1dbdd7e0ceb674eb1835e13e69d806037db2a",
       "group": "cpu-rom-d2",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D2 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3167,7 +3167,7 @@
     },
     "07a2883c-888c-4379-b01b-58a50886712a": {
       "status": "observed",
-      "geometrySha256": "873b10ad25c25e2b3515e99b65638cc05ce557bba7dabf7176a3d46fb1e563e6",
+      "geometrySha256": "64f6a5144492d77fe4469b470450faa0860ec8468fe454ac5257823ba329e10e",
       "group": "cpu-rom-d2",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D2 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3203,7 +3203,7 @@
     },
     "dd734d4b-83aa-4daa-ad71-ab9ef9bdc771": {
       "status": "inferred",
-      "geometrySha256": "2a7231c9808337f4d73e3ea03f6584a507b827654188ce689eb6fedc087c30da",
+      "geometrySha256": "5db26a4cbb88028cba4c56622a6613753c8d7a337694645c6e323c97df10ed9b",
       "group": "cpu-rom-d2",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible CPU-to-ROM D2 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3239,7 +3239,7 @@
     },
     "37edbf3c-7c2c-467b-94d4-9434286acf76": {
       "status": "inferred",
-      "geometrySha256": "a9a7f8e9993d65cd806266e3c8bdd2eea26cdb9b9a5bc016fec26f114f5eabbe",
+      "geometrySha256": "44bfc9632d867bd21f419d7f07140d51417e87c97db38db84ff0ef3ed1027081",
       "group": "cpu-rom-d1",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible CPU-to-ROM D1 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3275,7 +3275,7 @@
     },
     "0f6a518a-ee2d-4b5d-a01c-e9cfc5667061": {
       "status": "observed",
-      "geometrySha256": "0b4eae1a3f3d799a45023d5365e31aeaec16cbf72969b2ea879219925737e2a2",
+      "geometrySha256": "3d203795a4abcf85d67d10fb8f0214938cffd99c228b26421712ae57328479eb",
       "group": "cpu-rom-d1",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D1 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3311,7 +3311,7 @@
     },
     "bf11d65d-3eaf-4025-b8fc-f62c24dced72": {
       "status": "observed",
-      "geometrySha256": "a00718f436695fb6d183af60dd4e3df756f6463e0546751e73d86d927e74a061",
+      "geometrySha256": "cd854626a71b85cc36b4fb115af34ccf62ab575935380402fe9d56c4ceeff64d",
       "group": "cpu-rom-d1",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D1 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3347,7 +3347,7 @@
     },
     "f09fa352-5223-420f-81d7-27715e25c2e9": {
       "status": "observed",
-      "geometrySha256": "41342870c5f7e74de51ee61b3082ca127c368144299f2ab532de5fd912ed6e4d",
+      "geometrySha256": "47e05b94c11edfaae74bf6bca811d92fd26a72d0582265aaf75c504cbcce367c",
       "group": "cpu-rom-d1",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D1 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3383,7 +3383,7 @@
     },
     "fb346f65-422f-4baf-9767-d09f1edb66dd": {
       "status": "observed",
-      "geometrySha256": "7dd7d62f7a7aa8304fcd04ab4b249db22fc71a5d97b2455e264e04fdda563b1d",
+      "geometrySha256": "c5b7b6aece8dc5476f630bcacf6a10df64f04d37f9e3d5eebf434d654c682524",
       "group": "cpu-rom-d1",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D1 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3419,7 +3419,7 @@
     },
     "d1c5afd7-1e25-46fa-9f29-6e713e11305b": {
       "status": "observed",
-      "geometrySha256": "9009ec45a1ababf444a0a99a77d8c6b92b3e67397761825e8e96e330da853ddc",
+      "geometrySha256": "c48ff907d83893d81bf0bc97c0343fddb65ee8a06888633a5a16cbc316de40f1",
       "group": "cpu-rom-d1",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D1 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3455,7 +3455,7 @@
     },
     "a66f1186-590b-42ef-890f-4011ccef5e54": {
       "status": "inferred",
-      "geometrySha256": "5595f4fdcdf27ddf05ca89e8e75c94797d95c5089a6c7ab2be40acdc5d5f7d11",
+      "geometrySha256": "f98ae94b1859b11ccec4f8bbe322881b700b8bcd6169592064c1c1ad26326766",
       "group": "cpu-rom-d1",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible CPU-to-ROM D1 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3491,7 +3491,7 @@
     },
     "793b59d1-cafd-40ad-bcd0-ae403dd78051": {
       "status": "inferred",
-      "geometrySha256": "eea8e1175aab4041b1e84412be0196b719a8cbd4ee676cae86e275770bb85d9f",
+      "geometrySha256": "21535d9ae8959039c346f6e7f6a4a267c86d63526983a206830aee7c64ba42e3",
       "group": "cpu-rom-d3",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible CPU-to-ROM D3 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3527,7 +3527,7 @@
     },
     "72749136-6b8d-4831-b656-0f1ce7832a38": {
       "status": "observed",
-      "geometrySha256": "afd07568422c7f798276a34f8c4e61c658d9f211d867d8ff06270ea116c46358",
+      "geometrySha256": "8c63e7cacf638e99e287ca7d4c2b58a61f0d89e2c30c8fa5b848c096b1fe1c1d",
       "group": "cpu-rom-d3",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D3 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3563,7 +3563,7 @@
     },
     "13e9635c-688b-43c8-81df-f1d4d9b08384": {
       "status": "observed",
-      "geometrySha256": "07bc73e7eadc2794fa1cfa0ff31dd23ccee964d448eaa914ce508fc8e29212d2",
+      "geometrySha256": "4b1fc1c314f90c2b035378d489bbafb10c7bfed444661fb8a1e46ad4e82a0e9f",
       "group": "cpu-rom-d3",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D3 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3599,7 +3599,7 @@
     },
     "800915d4-ae76-42d1-acf1-4f58558b9fe7": {
       "status": "observed",
-      "geometrySha256": "d973b0262bc38a58c947e508ed13c1480ef2dec76ac4079fc32b9352f0c0e5d9",
+      "geometrySha256": "0666b9ed1df0d31ca5cda5ae23ae8144be6883ce8c4f542d124a14c8bf3a552b",
       "group": "cpu-rom-d3",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D3 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3635,7 +3635,7 @@
     },
     "0c1e8733-d461-4eb9-8efc-11b91f3816cc": {
       "status": "observed",
-      "geometrySha256": "a60f22b458998a3824e21c026078faf4c2af8892a84f971cc3d13841c1e86a1e",
+      "geometrySha256": "0a384e6dee780b598f89633403a91f81963b08d18f8a5b54f7dcd22730ae30a4",
       "group": "cpu-rom-d3",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D3 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3671,7 +3671,7 @@
     },
     "5982c647-53a1-4fb0-abf6-bd639e59f111": {
       "status": "observed",
-      "geometrySha256": "9ccf746ff741fe4cdd1185dff7966babfc23038e0dd63dcbd2262035fd4b6eb5",
+      "geometrySha256": "0b50dd33031c7564ed741e271a8e5f53c7312379eac81f4fc557c124cb6d3215",
       "group": "cpu-rom-d3",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D3 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3707,7 +3707,7 @@
     },
     "280fe822-8392-4cb3-8690-35c78e15c391": {
       "status": "inferred",
-      "geometrySha256": "bbca6a859ce8b87ef111e2a72c0c85ba6f7305c3eac575f03766725939d8a5e4",
+      "geometrySha256": "0db1ea4f9f2acf08121477212bf7ea909c2a84f922457b36b9630ca57a281e0f",
       "group": "cpu-rom-d3",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible CPU-to-ROM D3 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3743,7 +3743,7 @@
     },
     "93813ddd-03f3-4f50-a867-14d73a0f7d33": {
       "status": "inferred",
-      "geometrySha256": "6257b36fa1d6c88ec93976ed1a9ffbfbc74b7ab529750ea415298a77d8fe860d",
+      "geometrySha256": "0f644c3f0915680f056c86164ad58272e04159b54f7868e30f23cd3534955703",
       "group": "cpu-rom-d4",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible CPU-to-ROM D4 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3779,7 +3779,7 @@
     },
     "79d16dc6-504e-4cad-9756-eb4645594988": {
       "status": "observed",
-      "geometrySha256": "48390b07cafeae1e1a7ca209b8f0089717a90e52f4e183f8e44dda3808963e09",
+      "geometrySha256": "4bb6f9c40c433663792c821eaae2c1d33945eaa1c96bcff2584b60546536e8f7",
       "group": "cpu-rom-d4",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D4 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3815,7 +3815,7 @@
     },
     "f20d57ce-cd2c-409d-89a1-31de65c54ed4": {
       "status": "observed",
-      "geometrySha256": "b56a0cd2c02457c4922b39c1bd1c65bcfd69ee338df6fd220771f6a10c6b2db1",
+      "geometrySha256": "5c6dee297a9e7009532dd0eaa19f8a5e4ef78b16fea5f4059ed5d6a4b9f989f4",
       "group": "cpu-rom-d4",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D4 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3851,7 +3851,7 @@
     },
     "029dce30-f2c9-423a-aae8-575d87969ff2": {
       "status": "observed",
-      "geometrySha256": "916ff1400819cea0a3c68cd179b8a71a189c0f8ce26cddda252c1e37ff35adeb",
+      "geometrySha256": "a2e320ed8cc439becab9561fa0d3536aa5014cea11a4cb2dfa5864ce8f943176",
       "group": "cpu-rom-d4",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D4 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3887,7 +3887,7 @@
     },
     "f611f39b-44bd-4444-9c6f-278e65ebbe01": {
       "status": "observed",
-      "geometrySha256": "34c202b512b8234f158325b4348c74ecb7998e209d8df8ee237d5a4105de1243",
+      "geometrySha256": "3b26591f749b3b2d0ef92041588c1d0b50b110365ba3cff5099d5be7fe643ce2",
       "group": "cpu-rom-d4",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D4 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3923,7 +3923,7 @@
     },
     "1c56a4a1-e786-440b-98d1-2f3fc80ab940": {
       "status": "observed",
-      "geometrySha256": "85146620d56f5398615657b47c5c4025100ec4d31668bf021e4b9adce67bb686",
+      "geometrySha256": "6f61dbb6bc82263aa0665bb7ce988d8b7d3c39481f69a6783c9992a7ab628437",
       "group": "cpu-rom-d4",
       "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D4 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3959,7 +3959,7 @@
     },
     "44082e5a-d241-4b97-b027-642306433791": {
       "status": "inferred",
-      "geometrySha256": "0dcc5025552f9e9682711a1605bc7c51f798802fd2949641fc3dac724f528d59",
+      "geometrySha256": "1f1f575406fe1cd524b82d8f5bb1f66aa5a444cf0d9e3bd7ef27cce275ab9934",
       "group": "cpu-rom-d4",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible CPU-to-ROM D4 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -3995,7 +3995,7 @@
     },
     "e4a3daa0-1608-43ca-8a06-622e27aed30b": {
       "status": "inferred",
-      "geometrySha256": "440db2ae729f9a4e0874e3408cdcf518941439eb09683f7992385a4de7a3003b",
+      "geometrySha256": "fa4a2e36d01ea23e403cbda6c04be59e2928f5e5852d2fc5c7550b78824b02ea",
       "group": "cpu-latch-d5",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D5 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4032,7 +4032,7 @@
     },
     "262240df-fc71-4050-a938-6fc2bdec2ec3": {
       "status": "observed",
-      "geometrySha256": "2c2b158a2a8eb2b15d76ef81c8d1e040e62f6de216034e05cfd03a9274a2db2f",
+      "geometrySha256": "8c2ce590760dcc827278bb5129e2ae4b4cc1792831ebf2c64d080e9716449bf0",
       "group": "cpu-latch-d5",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D5 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4069,7 +4069,7 @@
     },
     "d357c40a-8fcf-4860-8b9f-d4c6555c9cbd": {
       "status": "observed",
-      "geometrySha256": "69053e8eab0fab838ed2138525077e85d7c09950957a231c8abea3a17a857b0f",
+      "geometrySha256": "c59a004a47b971f753e568842119a8b141a2f31a476eca663ac4d61851e74442",
       "group": "cpu-latch-d5",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D5 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4106,7 +4106,7 @@
     },
     "b026ccf5-ac6f-4109-a875-01e927eb65b2": {
       "status": "inferred",
-      "geometrySha256": "797934b26ffea91e76bab9fa837b3c002ec20499cc9eecbefac7695dba3974c1",
+      "geometrySha256": "f79d3c7407ad41fb286e293e7181b57df83e3db6970fa410b407e2e5aeff84a4",
       "group": "cpu-latch-d5",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D5 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4143,7 +4143,7 @@
     },
     "ddfcc1ee-dd44-44db-81bd-7ca5d1466dab": {
       "status": "inferred",
-      "geometrySha256": "1225f7b80d4407b786a2db68edb5fb3d809cdba4ec93fd5edee8a5e2f91cf28e",
+      "geometrySha256": "a66bdc7f282a3341d7d2d21d0f6f752a6674f1197ddd9dbc5c7df70803eadd6d",
       "group": "cpu-latch-d6",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D6 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4180,7 +4180,7 @@
     },
     "d5594d72-7a01-4a47-80f0-920e6824378e": {
       "status": "observed",
-      "geometrySha256": "8f9923155450167ff74c07b7ea1d45de57992115e05cccb0b81d469a39caa3df",
+      "geometrySha256": "e6cc62da846672cedd2383f0c8f75122f8caccc92bbab43bb08063357075c5a5",
       "group": "cpu-latch-d6",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D6 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4217,7 +4217,7 @@
     },
     "fd3e3339-3b71-4d7a-a926-c3b5b3e7da11": {
       "status": "observed",
-      "geometrySha256": "ed5338b4787a2056a2c0814f9544d389eff015aee67d321e5a2c9c42ddd94478",
+      "geometrySha256": "3bd8edce09ea8a2159e2549aac64fc39f5fcddee174d986e58e43b78f783038d",
       "group": "cpu-latch-d6",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D6 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4254,7 +4254,7 @@
     },
     "f548df4e-38fd-427e-aadf-a52897f78163": {
       "status": "observed",
-      "geometrySha256": "72afd65a7c92482bdfcec14f1698335a8df9907d332b5a724e84983b13f26a0b",
+      "geometrySha256": "175958fa2dc4996c5d566d87b9a21a3ffcb229381b864762c6014fb520a724b4",
       "group": "cpu-latch-d6",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D6 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4291,7 +4291,7 @@
     },
     "d8ef09a7-24da-4cc4-b01d-61bb563aae5e": {
       "status": "inferred",
-      "geometrySha256": "8a64bc07dd47e99296de1953d5a2de8e98c855ded3d39f1adfbeffaf11a72c75",
+      "geometrySha256": "812de99a49fcf359d62e39032ab11eeccab7ab9f905644b69bcf61f4fe8ed5f1",
       "group": "cpu-latch-d6",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D6 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4328,7 +4328,7 @@
     },
     "405fa200-88ab-401b-a9ea-26c2b208456f": {
       "status": "inferred",
-      "geometrySha256": "652756835e445ce5013ef2ad94b58f711ee6861c140aecfc554a0397c22280c0",
+      "geometrySha256": "ead815e3dd97a294a5689d20f377098c2d7d9d6617a3c97f9b2559fb0c9efc5f",
       "group": "cpu-latch-d7",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4365,7 +4365,7 @@
     },
     "4ec8eeff-4eb9-466f-9ec6-cd50a4dbdf35": {
       "status": "observed",
-      "geometrySha256": "46c3b1fff6380b492d65de5c0e2396aa41b496886c564cbc8585904af91ce9f0",
+      "geometrySha256": "445c6523da593f96660cf7a895e078f02eb93129571f52d9d2aee254713363c2",
       "group": "cpu-latch-d7",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4402,7 +4402,7 @@
     },
     "273e2cea-27be-467b-bae4-1b2272147cf6": {
       "status": "observed",
-      "geometrySha256": "00e4507421cae46f4bcb97a6300ff231eada9f48eee3bebae0893a17a2899331",
+      "geometrySha256": "d13f99b68a461e938d948cf5454ca8872cf9e548cce54fb358c7cba677542ecf",
       "group": "cpu-latch-d7",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4439,7 +4439,7 @@
     },
     "72b9ba41-c33d-4ae8-86cd-cc2a68cd46ef": {
       "status": "observed",
-      "geometrySha256": "ea937bf0ac17c5b2e1823042bf100cadcbf8f1c33cc9cf6149701c23b17779f8",
+      "geometrySha256": "461da46e0e2308a236a8cb13f5c2346458268e6b8f5952aad4127e29cedd2b50",
       "group": "cpu-latch-d7",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4476,7 +4476,7 @@
     },
     "2fd6d587-153b-4929-aaae-377015141aa3": {
       "status": "observed",
-      "geometrySha256": "67d19d7d1bde4e1f10d110789d2a241ac0fced0518a7340a2bc2f20cc3b9b0d1",
+      "geometrySha256": "e808e7fb17f430ce48e2ff9a9a66011583e505c4871c7919336f186e60f3a81d",
       "group": "cpu-latch-d7",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4513,7 +4513,7 @@
     },
     "31fe8340-b3a5-4e3a-a9c9-ac7df926743d": {
       "status": "inferred",
-      "geometrySha256": "c5f76d249d3a33d01e53f6c02f140c0a55ca95436994e5a99eeee5d0bda2a006",
+      "geometrySha256": "906341d3ecea648443a9fd695f24a3f12bbdc343aa95858dff6b4eda50724825",
       "group": "cpu-latch-d7",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D7 lane. Pin order and topology cross-checked against the comparison specimen component side (comparison-photo-080429077); primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4550,7 +4550,7 @@
     },
     "bdf55836-8594-4e7f-bf3d-c67227287ed8": {
       "status": "inferred",
-      "geometrySha256": "7bbe2c8ba3044512c38f1d6071532e99383bd532fd57ae80d8696ff2812979f7",
+      "geometrySha256": "33803b6744e7a3c17fe20444ff4e780d150e7309274b6b4ba0e88222486c6e73",
       "group": "cpu-latch-d3",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D3 lane. Primary specimen supplies exposed copper and lead observations; numbered terminal identity follows the reference schematic, with pad attachments explicitly inferred. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4587,7 +4587,7 @@
     },
     "37494292-f74e-43d4-9a1d-0ff16e1f819e": {
       "status": "observed",
-      "geometrySha256": "ed2cd4c462b4428b2bd8e792050b3d03917ae6d4a71f86692e3dbcb84a46c22b",
+      "geometrySha256": "08646b4513519bcd7daba775271bde8d86b9a58a66fa3a3c7e4b7949e9a2d8ca",
       "group": "cpu-latch-d3",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D3 lane. Primary specimen supplies exposed copper and lead observations; numbered terminal identity follows the reference schematic, with pad attachments explicitly inferred. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4624,7 +4624,7 @@
     },
     "d4acd8c8-25ab-4471-b0b8-26c8fa1b828e": {
       "status": "observed",
-      "geometrySha256": "0b81e013ef966c6c3bfbdd179acf33575ab095cab11618f4b07f60f91fb727af",
+      "geometrySha256": "050779ded680cb5c6ff479082f3cc7abeeeefcf70d3e5e4a61c8568b66a8364e",
       "group": "cpu-latch-d3",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D3 lane. Primary specimen supplies exposed copper and lead observations; numbered terminal identity follows the reference schematic, with pad attachments explicitly inferred. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4661,7 +4661,7 @@
     },
     "25864981-5c7c-454b-a22c-373608a1d2a6": {
       "status": "observed",
-      "geometrySha256": "149b6743dc205b76fdde4648e35435f2c06ea99b12e9d2df65ed30cbfac9a260",
+      "geometrySha256": "318211edf13f8eea6497a36e2f261f5e95b18579d897d906d1345b8c4e34ed9e",
       "group": "cpu-latch-d3",
       "detail": "Observed exposed copper centreline. Visible latch-to-CPU D3 lane. Primary specimen supplies exposed copper and lead observations; numbered terminal identity follows the reference schematic, with pad attachments explicitly inferred. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4698,7 +4698,7 @@
     },
     "6c84eb95-17f9-49bd-b2bb-1d014ef4ba3d": {
       "status": "inferred",
-      "geometrySha256": "d981e3bcd84232579d2efce3d416a24be30785b1ed70bb95ec99126f13d7732c",
+      "geometrySha256": "906019d95143b1b1909606654feec367c49670410fff72405940f8b9fe510353",
       "group": "cpu-latch-d3",
       "detail": "Estimated native pad-to-visible-copper attachment. Visible latch-to-CPU D3 lane. Primary specimen supplies exposed copper and lead observations; numbered terminal identity follows the reference schematic, with pad attachments explicitly inferred. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
       "terminals": [
@@ -4735,7 +4735,7 @@
     },
     "eba0e239-a6f2-40b9-b7aa-904c0eaad6cd": {
       "status": "inferred",
-      "geometrySha256": "f297cedae75d12ecd91564c85aeb064e3204a9b85b48f868112a39608e7a7d42",
+      "geometrySha256": "0de419975269e20bd46467d859c8567ed634b6af2f3bc9b16ea8c9aa6e42415d",
       "group": "cpu-latch-d0",
       "detail": "Nominal through connection at the matched D0 solder eye. The top eye/attachment is solder-obscured; the underside trace runs to A5:14. Placement follows the underside fit, checked independently against the top fit. Diameter 1.2 mm and drill 0.6 mm are illustrative, not measured; plating and continuity remain unmeasured.",
       "sources": [
@@ -4782,7 +4782,7 @@
     },
     "4ce3b0fc-7334-4ddd-9479-cef18e1b4331": {
       "status": "inferred",
-      "geometrySha256": "98a8fe2640d7661286e2b6fceae755e3884e6142f6a3db94b07dbb95b685ef93",
+      "geometrySha256": "b0469587997fe54c7cdef6a46a331981fd4b660558c2e913736d2c39613a8225",
       "group": "cpu-latch-d0",
       "terminals": [
         "A4:19",
@@ -4819,7 +4819,7 @@
     },
     "25b4e867-e20e-47a0-88dc-82daf2ca78b9": {
       "status": "inferred",
-      "geometrySha256": "66f9f3dc97ebf0498cc3f2862f89838097024a6454e082d1127a67dcb353866f",
+      "geometrySha256": "9816b3b9bb04b72e1e8feed57c9e1db437801a6ec70b69c3fb3301aa990235e7",
       "group": "cpu-latch-d0",
       "terminals": [
         "A4:19",
@@ -4856,7 +4856,7 @@
     },
     "9cb32b24-f3b3-4567-ad5a-faa50758528e": {
       "status": "inferred",
-      "geometrySha256": "a9cedbeccd8fbc7166897e84fab1084713c825cc7912fe9eee899cf07141ca0d",
+      "geometrySha256": "0ca62bdc2e3d64a7f78caae9f60bec8091a5f56db959626d535cfb3a247c5e29",
       "group": "cpu-latch-d0",
       "terminals": [
         "A4:19",
@@ -4893,7 +4893,7 @@
     },
     "04365097-3e0b-4131-ac9e-d9e6977d2551": {
       "status": "observed",
-      "geometrySha256": "e2ac932c6ded59294b31b05ed7c38999a9e0861fe248baae2f48bed6e4c91f4f",
+      "geometrySha256": "4adfbd1d2f89f7da882f2b3788dbc21d594739e2d08282272fbea38427ce82cd",
       "group": "cpu-latch-d0",
       "terminals": [
         "A4:19",
@@ -4930,7 +4930,7 @@
     },
     "80aa406b-12a8-4e9c-ae94-8c7dcef9f4de": {
       "status": "observed",
-      "geometrySha256": "ce25d4a07277e16fe1e1d808b6b2a3b92d2bcba441b61fc9d0945c5c34d16c12",
+      "geometrySha256": "e3cbdfae2240d2578896fbf6708fde0a6ed23fcd69f7449165b39c210e9ba34c",
       "group": "cpu-latch-d0",
       "terminals": [
         "A4:19",
@@ -4967,7 +4967,7 @@
     },
     "1ea0e19d-13d1-4466-88dd-d1158dc2e01b": {
       "status": "observed",
-      "geometrySha256": "1c0c9c8b6ce6a7af2ae0b3773ca36c4b0d4f0831c341e28cf778faf6a5bf83ec",
+      "geometrySha256": "915b73bf153b72c2cfe23b2fd746c1128901e9c4f6ced4555481bcabb845ea33",
       "group": "cpu-latch-d0",
       "terminals": [
         "A4:19",
@@ -5004,7 +5004,7 @@
     },
     "6696e0ed-2709-4853-9835-6ab587b51e9e": {
       "status": "observed",
-      "geometrySha256": "aa6ef63b456a4b1364d377b3b3a8f4f40c3f9304274c196d412dd26947d84be3",
+      "geometrySha256": "1f3887b16c66c764be2bb0bfc47fb78c2a85fb4067ae07244dccf62a9d5b6910",
       "group": "cpu-latch-d0",
       "terminals": [
         "A4:19",
@@ -5041,7 +5041,7 @@
     },
     "e15b0681-a59a-4036-859e-8aaa20a86564": {
       "status": "inferred",
-      "geometrySha256": "713f902d48272bd26da9afb78bc6d141b92f26ca50157abfa4a3f3025fc9681c",
+      "geometrySha256": "97fe26724851ec895d930c2378a3c9e65df597b52d8154ef92a6e8eeca218030",
       "group": "cpu-latch-d0",
       "terminals": [
         "A4:19",
@@ -5078,7 +5078,7 @@
     },
     "e0f7a72d-1b1e-427b-b797-e92afaed519f": {
       "status": "inferred",
-      "geometrySha256": "d5510a8145d3632c8338f4458bb5a9c13ded4f7e3857c8712a41d7e72ac7c726",
+      "geometrySha256": "ec48e8e0b707bb93b8cf083346547b18e63a5db8a481673b769c667fe7b8443c",
       "group": "cpu-latch-d2",
       "detail": "Nominal through connection at the matched D2 solder eye. The lead attachment is inferred; the underside trace runs to A5:12. Placement follows the underside fit, checked against the held-out eye fit on the top. Diameter 1.2 mm and drill 0.6 mm are illustrative, not measured; plating and continuity remain unmeasured.",
       "sources": [
@@ -5125,7 +5125,7 @@
     },
     "1190ebbd-e075-4420-98f8-b85807b7a186": {
       "status": "inferred",
-      "geometrySha256": "ea6fffd26ab47f347e494dd1c1abfefd5d00d0eec8792ca46151fb6e1943e16e",
+      "geometrySha256": "699b70b796e2fb22f61a81e004be1f6605ca873b5b19475d06bc1943dac3b522",
       "group": "cpu-latch-d2",
       "terminals": [
         "A4:17",
@@ -5162,7 +5162,7 @@
     },
     "c599a6d2-0f47-42cd-98bb-1b89e8b87906": {
       "status": "observed",
-      "geometrySha256": "7c783f7abd78f94f5e89565c7ec5a2057b3590667ec01afcc7780a7288fcd4e7",
+      "geometrySha256": "ce1776b130d57c869a7bb8c9b173f00f1ecf696765c13715ed48be2e42c22d10",
       "group": "cpu-latch-d2",
       "terminals": [
         "A4:17",
@@ -5199,7 +5199,7 @@
     },
     "0c7a9401-b937-4055-85d5-dbe68cf47bd7": {
       "status": "inferred",
-      "geometrySha256": "08603b3f8db5564d38e8c0b242fe76dc0ae833c3fc5eba5bd6d2e63d29f5dce0",
+      "geometrySha256": "f84c071982f4b04835f93d014584746335f2adccbbade705311fa07db9db4dea",
       "group": "cpu-latch-d2",
       "terminals": [
         "A4:17",
@@ -5236,7 +5236,7 @@
     },
     "6be9f4dd-961a-4b8f-8a5e-6a6cfe2f6725": {
       "status": "inferred",
-      "geometrySha256": "bc97c8f9611a745fc025ccda3ddbafe2638d58e430a4c7591e125a1cbb22a9cf",
+      "geometrySha256": "38ea2b67e5f9aab849e39161968645f15e3c4d556aeb76cd17114b2e7505a178",
       "group": "cpu-latch-d2",
       "terminals": [
         "A4:17",
@@ -5273,7 +5273,7 @@
     },
     "26e6ac4a-ecaf-4799-96b2-8b131e994a28": {
       "status": "observed",
-      "geometrySha256": "51d9857f45e78e8ac78aa3d05164c6d7b745c0afd18c290d0c00b247cc167a66",
+      "geometrySha256": "1ff47c6f2c3b0e35a352becc6ea8a0877415fa986a47524fb1b83c51a6cc4219",
       "group": "cpu-latch-d2",
       "terminals": [
         "A4:17",
@@ -5310,7 +5310,7 @@
     },
     "2a47b464-de54-4195-801f-9b4319c05b6a": {
       "status": "observed",
-      "geometrySha256": "81a1fc26f3be37d63fa13648dc7d74ccda453b69b2738208811c08202e6b9a79",
+      "geometrySha256": "ecf9d529f036e5ea25f83f9561df83c2448b9ff8ebb0a3a449db879181ecb3f7",
       "group": "cpu-latch-d2",
       "terminals": [
         "A4:17",
@@ -5347,7 +5347,7 @@
     },
     "841fdcf3-fad2-49ab-9d76-b4257ac06e1e": {
       "status": "inferred",
-      "geometrySha256": "bb2ef000b02a691bd87b483783ed9d3ed3e2450c9087d1f99089954ced7d9928",
+      "geometrySha256": "d730aefe66620aad85efd1bff82fcf849e69b40e39ade1f181f95eb19aded4a7",
       "group": "cpu-latch-d2",
       "terminals": [
         "A4:17",

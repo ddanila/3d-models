@@ -40,7 +40,7 @@ def metric_review(root, source, envelope):
             delta = [v+(cpu_scale-1)*along*u for v,u in zip(delta,cpu_axis)]
         return math.hypot(*delta)
     variants = []
-    for name,cpu_scale in [('native-footprints',1),('u880-domestic-longitudinal',source['cpuReference']['longitudinalEndSpanMm']/cpu_span)]:
+    for name,cpu_scale in [('native-footprints',1),('legacy-2.54-cpu',19*2.54/cpu_span)]:
         equations = []
         for a,b in fit_pairs:
             dx,dy = [x-y for x,y in zip(normalized[a],normalized[b])]

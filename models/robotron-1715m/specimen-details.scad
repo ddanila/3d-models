@@ -1,6 +1,6 @@
 // Owner photographs, 2026-10-12. Original MIT geometry, clean condition.
 // Feature dimensions/positions are estimates, not an electrical reconstruction.
-// Component pitch is nominal 2.54 mm; board envelope inferred from DIP-40.
+// Lead pitch follows native pads; board envelope remains photo-estimated.
 module keyboard_controller_pose() {
     translate([keyboard_controller_x,keyboard_y+keyboard_controller_y,keyboard_controller_z]) children();
 }
@@ -19,7 +19,7 @@ module owner_dip_body(p) {
  translate([p[0],p[1],controller_seat(p)])rotate([0,0,p[5]-90])import(controller_package(p)[1]);
 }
 module owner_dip_pins(p) {
- translate([p[0],p[1],controller_seat(p)])rotate([0,0,p[5]-90])import(controller_package(p)[2]);
+ translate([p[0],p[1],controller_seat(p)])rotate([0,0,p[5]-90])scale([1,p[6]/2.54,1])import(controller_package(p)[2]);
 }
 // Owner 123622947: staggered transistor population, not a rectangular grid.
 // L3/12 reference bodies at legacy photo-estimated positions; no native pin mapping.

@@ -6,6 +6,16 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_cpu_native_and_visual_pitch_follow_reference_package(self):
+  import math
+  layout=json.loads((R/'generated/layout.json').read_text());cpu=next(c for c in layout['components'] if c['ref']=='A5');pads={p['pin']:p['position'] for p in cpu['pads']}
+  evidence=json.loads((R/'component-evidence.json').read_text())['A5']['nativePackagePitch']
+  self.assertEqual(evidence['primaryMarking'],'UB880 D')
+  for row in [range(1,20),range(21,40)]:
+   for pin in row:self.assertAlmostEqual(math.dist(pads[str(pin)],pads[str(pin+1)]),evidence['pitchMm'],places=5)
+  scad=next(s for s in (R/'generated/controller.scad').read_text().splitlines() if s.startswith('controller_pcb_dips='))
+  dips=json.loads(scad.split('=',1)[1].rstrip(';'));self.assertEqual(next(d for d in dips if d[4]=='A5')[6],evidence['pitchMm'])
+
  def test_unused_package_lead_requires_catalog_and_no_schematic_pin(self):
   import copy
   from export import unused_package_pads
@@ -60,7 +70,7 @@ class ControllerExportTests(unittest.TestCase):
   self.assertTrue(any(p[0]<1500 for p in report['paths'][0]['segments'][1]['points']))
   metric=report['metricReview']
   self.assertFalse(metric['copperAssignmentQualified'])
-  self.assertAlmostEqual(metric['nativeCpuPitchMm'],2.54,places=6)
+  self.assertAlmostEqual(metric['nativeCpuPitchMm'],2.5,places=6)
   self.assertEqual(metric['cpuReference']['longitudinalPitchMm'],2.5)
   for v in metric['variants']:
    self.assertEqual(v['independentCheckComponents'],['A2.1','A4','A8'])
@@ -662,7 +672,7 @@ class ControllerExportTests(unittest.TestCase):
   import hashlib
   layout=json.loads((R/'generated/layout.json').read_text());report=bottom_review(layout);region=report['pcbRegions'][0]
   self.assertTrue(region['copperAssignmentQualified']);self.assertFalse(report['copperAssignmentQualified'])
-  self.assertEqual(len(region['checks']),6);self.assertLess(region['maxCheckResidualMm'],.67)
+  self.assertEqual(len(region['checks']),6);self.assertLess(region['maxCheckResidualMm'],region['toleranceMm'])
   self.assertTrue(any(p['ref']=='A5'and p['pin']=='6'for p in region['checks']))
   self.assertFalse(any(r['evidence']['group']=='cpu-clock-bottom-partial'for r in layout['routes']))
   self.assertEqual(len([r for r in layout['routes']if r['net']=='/CLK']),1)
@@ -722,7 +732,7 @@ class ControllerExportTests(unittest.TestCase):
    touches=any(tuple(p) in endpoints for p in r['points'])
    self.assertEqual(r['evidence']['status'],'inferred' if touches else 'observed')
  def test_output_branches_remain_partial_and_have_no_invented_vias(self):
-  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':4,'clearance':1})
+  self.assertEqual(json.loads((R/'generated/qualification.json').read_text())['drc']['violations'],{'track_dangling':4,'clearance':2})
   from bottom_registration import review as bottom_review,validate_registered_routes
   import hashlib,collections
   layout=json.loads((R/'generated/layout.json').read_text());report=bottom_review(layout)

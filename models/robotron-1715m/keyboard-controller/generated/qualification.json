@@ -3,7 +3,7 @@
   "drc": {
     "unconnectedItems": 205,
     "violations": {
-      "clearance": 1,
+      "clearance": 2,
       "track_dangling": 4
     }
   },

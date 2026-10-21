@@ -955,7 +955,15 @@
       "locator": "PDF page 62 / printed page 61, section 11.4, figure 28; VEB Funkwerk Erfurt U880 D technical description",
       "longitudinalPitchMm": 2.5,
       "longitudinalEndSpanMm": 47.5,
-      "scope": "Manufacturer U880 D reference package. The drawing does not identify the installed variant or measure PCB holes. Cross-row lead bends must not be treated as a specified hole spacing."
+      "scope": "Manufacturer U880 D reference package; primary photo marking is UB880 D. Cross-row lead bends must not be treated as a specified hole spacing; PCB dimensions remain unmeasured.",
+      "primaryMarking": "UB880 D",
+      "primaryPhotoSource": "photo-top",
+      "primaryPixelBox": [
+        1550,
+        2700,
+        1790,
+        3400
+      ]
     },
     "copperAssignmentQualified": false
   }

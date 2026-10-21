@@ -25,6 +25,6 @@ rotate(side=="bottom"?[180,0,0]:[0,0,0]){
  for(p=controller_pcb_dips)for(pkg=controller_packages)if(pkg[0]==p[2])
   translate([p[0],p[1],1.6])rotate([0,0,p[5]-90]){
    color("#22252b")import(str("../",pkg[1]));
-   color("#b8b8b2")import(str("../",pkg[2]));
+   color("#b8b8b2")scale([1,p[6]/2.54,1])import(str("../",pkg[2]));
   }
 }

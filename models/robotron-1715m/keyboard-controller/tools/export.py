@@ -200,7 +200,7 @@ def main():
  native_connector={p['pin']:p['position'] for c in placed if c['ref']=='X1' for p in c['pads']}
  scad+=['controller_visual_connector_contacts='+json.dumps([[*native_connector.get(pin,point),row]for row,name in enumerate(['housingFar','housingNear'])for pin,point in zip(terminals['resolvedRows'][name],layout['visualConnectors'][0]['rows'][name])])+';']
  scad+=['controller_pcb_dip_pads='+json.dumps([[*p['position'],p['drill'][0],p['ref'],p['pin']]for p in pads if p['ref'].startswith('A')])+';']
- scad+=['controller_pcb_dips='+json.dumps([[*c['position'],len(c['pads']),15.24 if len(c['pads']) in (24,40) else 7.62,c['ref'],c['rotation']] for c in placed if c['ref'].startswith('A')])+';']
+ scad+=['controller_pcb_dips='+json.dumps([[*c['position'],len(c['pads']),15.24 if len(c['pads']) in (24,40) else 7.62,c['ref'],c['rotation'],round(math.dist(next(p['position'] for p in c['pads'] if p['pin']=='1'),next(p['position'] for p in c['pads'] if p['pin']=='2')),6)] for c in placed if c['ref'].startswith('A')])+';']
  # Package dimensions are reference evidence, separate from native placements.
  packages=json.loads((ROOT/'evidence.json').read_text())['packageReferences']
  family=[next(p for p in packages if p['id']==name)for name in ['sc308-l3-12','sc236-l3-12']]

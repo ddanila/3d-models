@@ -4,7 +4,22 @@
     "placementEvidence": "photo-landmarks.json: A5",
     "pinEvidence": "schematic-numbered",
     "note": "Photo-estimated lead landmarks; see generated/photo-registration.json for residuals. Not dimensional metrology or electrical continuity.",
-    "placementAuthority": "controller.kicad_pcb"
+    "placementAuthority": "controller.kicad_pcb",
+    "nativePackageScope": "Primary marking UB880 D supports the manufacturer U880 D longitudinal lead pitch. The transverse hole spacing, lead bends and absolute placement remain nominal photo estimates.",
+    "nativePackagePitch": {
+      "axis": "footprint-local-x",
+      "pitchMm": 2.5,
+      "sourceUrl": "https://www.tiffe.de/Robotron/Bausteinuebersicht/U880D-CPU.pdf",
+      "locator": "PDF page 62, printed page 61, figure 28",
+      "primaryPhotoSource": "photo-top",
+      "primaryMarking": "UB880 D",
+      "pixelBox": [
+        1550,
+        2700,
+        1790,
+        3400
+      ]
+    }
   },
   "A8": {
     "referenceType": "U556_2716",
