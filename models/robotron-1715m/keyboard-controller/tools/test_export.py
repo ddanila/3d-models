@@ -30,6 +30,20 @@ class ControllerExportTests(unittest.TestCase):
   bad=copy.deepcopy(evidence);bad['eyeRegistration']['checks'][1]['bottomPixel'][0]+=25
   self.assertFalse(review(bad,bottom,R)['copperAssignmentQualified'])
 
+ def test_latch_attachment_audit_preserves_numbering_and_inference(self):
+  from bus_review import build
+  report=build()['latchAttachmentReview']
+  self.assertEqual({r['terminal'] for r in report['rows']},{'A4:'+str(i) for i in range(1,21)})
+  self.assertEqual(sum(r['comparisonLead'] is not None for r in report['rows']),10)
+  self.assertFalse(report['continuityEstablished'])
+  joins=[g for r in report['rows'] for g in r['nativeJoins']]
+  self.assertEqual({g['group'] for g in joins},{'cpu-latch-d'+str(i) for i in [0,2,3,5,6,7]})
+  self.assertTrue(all(a['status']=='inferred' for g in joins for a in g['attachmentRoutes']))
+  for r in report['rows']:
+   self.assertFalse(r['boardEntrySearch']['continuityEstablished'])
+   if r['referenceNet'] in ['/D1','/D4']:
+    self.assertFalse(r['nativeJoins']);self.assertTrue(r['unresolvedCandidates'])
+
  def test_cross_side_via_rejects_stale_or_displaced_evidence(self):
   import copy,hashlib
   from bottom_registration import review_registered_vias
@@ -117,6 +131,15 @@ class ControllerExportTests(unittest.TestCase):
    (r/'bus-review.json').write_text(json.dumps(bad))
    with self.assertRaisesRegex(ValueError,'must be independent'):build(r)
    bad=copy.deepcopy(original);bad['latchPaths'][2]['comparisons'][0]['sourceSha256']='0'*64
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'source hash mismatch'):build(r)
+   bad=copy.deepcopy(original);bad['latchAttachmentReview']['rows'][1]=bad['latchAttachmentReview']['rows'][0]
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'every package pin once'):build(r)
+   bad=copy.deepcopy(original);bad['latchAttachmentReview']['rows'][0]['attachmentStatus']='observed'
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'cannot upgrade hidden'):build(r)
+   bad=copy.deepcopy(original);bad['latchAttachmentReview']['photos'][2]['sourceSha256']='0'*64
    (r/'bus-review.json').write_text(json.dumps(bad))
    with self.assertRaisesRegex(ValueError,'source hash mismatch'):build(r)
    bad=copy.deepcopy(original);bad['crossSide']['checkTerminals']=['A5:1']

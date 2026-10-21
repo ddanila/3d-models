@@ -26,6 +26,46 @@ def build(root=ROOT):
     records = [cross, cross['comparison'], *result['paths'], *latch_paths,
                *[p['reverseReview'] for p in latch_paths if 'reverseReview' in p]]
     records.extend(result.get('eyeReview', {}).get('comparisons', []))
+    attachment = result.get('latchAttachmentReview')
+    if attachment:
+        from bottom_registration import inside_hull
+        records.extend(attachment['photos'])
+        ref = attachment['ref']
+        expected = {ref+':'+pin for pin in connectivity[ref]['pins']}
+        rows = attachment['rows']
+        if len(rows)!=len(expected) or {r['terminal'] for r in rows}!=expected:
+            raise ValueError('Attachment review must cover every package pin once')
+        if attachment['continuityEstablished'] is not False:
+            raise ValueError('Attachment review cannot establish continuity')
+        region = next(r for r in read('generated/top-registration.json')['pcbRegions'] if r['id']==attachment['projectionRegion'])
+        if not region['copperAssignmentQualified']:
+            raise ValueError('Attachment search needs a qualified local fit')
+        layout = read('generated/layout.json')
+        pads = {c['ref']+':'+p['pin']:p['position'] for c in layout['components'] for p in c['pads']}
+        for row in rows:
+            if row['attachmentStatus']!='inferred':
+                raise ValueError('Attachment review cannot upgrade hidden pad entries')
+            pin = row['terminal'].split(':')[1]
+            row['referenceNet'] = connectivity[ref]['pins'][pin]
+            point = project(region['bottomToTop'],row['bottomJoint'])
+            row['boardEntrySearch'] = dict(point=[round(v,9) for v in point],
+                insideFitHull=inside_hull(row['bottomJoint'],region['bottomHull']),continuityEstablished=False)
+            groups = {}
+            for route in layout['routes']:
+                evidence = route['evidence']; group = evidence.get('group','')
+                if not group.startswith('cpu-latch-') or row['terminal'] not in evidence.get('terminals',[]):continue
+                if route['net']!=row['referenceNet']:
+                    raise ValueError('Latch audit route disagrees with reference net')
+                entry = groups.setdefault(group,dict(group=group,terminals=evidence['terminals'],attachmentRoutes=[]))
+                for terminal in entry['terminals']:
+                    if any(math.dist(p,pads[terminal])<=.000002 for p in route['points']):
+                        entry['attachmentRoutes'].append(dict(terminal=terminal,id=route['id'],status=evidence['status']))
+            for entry in groups.values():
+                if ({a['terminal'] for a in entry['attachmentRoutes']}!=set(entry['terminals'])
+                        or any(a['status']!='inferred' for a in entry['attachmentRoutes'])):
+                    raise ValueError('Latch audit requires explicit inferred native attachments')
+            row['nativeJoins'] = sorted(groups.values(),key=lambda g:g['group'])
+            row['unresolvedCandidates'] = [p['id'] for p in latch_paths if row['terminal'] in p['terminals']]
     for trial in result.get('registrationTrials', []):
         if trial['copperAssignmentQualified'] is not False:
             raise ValueError('Registration trials cannot qualify copper')

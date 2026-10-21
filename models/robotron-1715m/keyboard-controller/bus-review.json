@@ -548,7 +548,7 @@
             1620,
             3240
           ],
-          "observation": "CPU pin 15 is the raised lead near [1596,3202]. Its board-plane search projection lies below the validated eye hull. A nearby exposed track turns toward the resistor area; the covered entry and upstream continuation are unresolved. The recorded top spans are anonymous exposed copper only; neither end is attached to a numbered pad.",
+          "observation": "Reverse tracing from CPU pin 15 reaches the exposed zigzag beside R6.4, then loses the continuation under the resistor/lead area. The pin-to-track entry itself remains covered; the board-plane projection lies outside the qualified eye hull. The adjacent round eye is not an established branch.",
           "segments": [
             {
               "id": "d1-cpu-top-lane-0",
@@ -621,7 +621,20 @@
           "A5:24"
         ],
         "reason": "If the unassigned endpoint belongs to R6.4, it cannot be a direct D1 copper join in the reference circuit. Physical terminal identity is still unresolved; this is a conditional constraint, not a net assignment."
-      }
+      },
+      "comparisons": [
+        {
+          "source": "comparison-photo-080429077",
+          "sourceSha256": "e8ece4b1f9686881f5447617c32616400c81c37a5461e1756bd691313a1d29b3",
+          "pixelBox": [
+            850,
+            520,
+            1870,
+            1170
+          ],
+          "observation": "CPU-side lanes remain separated around the resistor leads and round eyes. The resistor/lead area obscures the continuation needed to identify a complete D1 path; proximity to an eye is insufficient."
+        }
+      ]
     },
     {
       "id": "latch-review-d1-inner-eye",
@@ -961,7 +974,7 @@
             1625,
             3010
           ],
-          "observation": "The D4 fan-out disappears beneath the CPU lead/body edge. The board-plane target for pin 7 is above that exit. The intervening covered continuation remains unresolved."
+          "observation": "Reverse search from the underside CPU pin-7 joint projects above the latch-side lane endpoint. Nearby exposed eye-directed copper belongs to a separate review path; no visible branch establishes that it joins pin 7. The covered interval remains unassigned."
         }
       },
       "comparisons": [
@@ -1174,5 +1187,359 @@
       "copperAssignmentQualified": false,
       "reason": "Candidate wider eye correspondence around CPU15 and R6.4. Lower held-out eyes disagree and the proposed domain extends beyond the qualified underside region. Keep the existing latch-eyes fit; this trial supplies no native geometry or bounded CPU15 attachment."
     }
-  ]
+  ],
+  "latchAttachmentReview": {
+    "ref": "A4",
+    "projectionRegion": "latch-eyes",
+    "pixelUncertainty": 6,
+    "continuityEstablished": false,
+    "scope": "Lead and solder-joint centres are photo estimates with reference-derived numbering. Top markers identify raised leads, not hole centres. The comparison frame covers only pins 11\u201320; the opposite row is outside its crop. Board-entry projections are searches and are bounded separately. This audit does not upgrade inferred native attachments or transfer continuity between specimens.",
+    "photos": [
+      {
+        "source": "photo-top",
+        "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+        "pixelBox": [
+          1305,
+          2780,
+          1605,
+          3140
+        ],
+        "observation": "Primary raised leads and exposed fan-out; numbered board entries can be hidden by the leads."
+      },
+      {
+        "source": "photo-bottom",
+        "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+        "pixelBox": [
+          1390,
+          2550,
+          1550,
+          2890
+        ],
+        "observation": "Primary solder-joint rows, viewed from the opposite face. Pin numbers follow the package orientation."
+      },
+      {
+        "source": "comparison-photo-080429077",
+        "sourceSha256": "e8ece4b1f9686881f5447617c32616400c81c37a5461e1756bd691313a1d29b3",
+        "pixelBox": [
+          1750,
+          430,
+          3250,
+          1170
+        ],
+        "observation": "Different specimen: ten inner-row leads in reverse horizontal order. Distinct bends and eyes corroborate lane separation, not electrical identity."
+      }
+    ],
+    "rows": [
+      {
+        "terminal": "A4:1",
+        "primaryLead": [
+          1341,
+          2817
+        ],
+        "bottomJoint": [
+          1514,
+          2578
+        ],
+        "comparisonLead": null,
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      },
+      {
+        "terminal": "A4:2",
+        "primaryLead": [
+          1343,
+          2849
+        ],
+        "bottomJoint": [
+          1514,
+          2610
+        ],
+        "comparisonLead": null,
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      },
+      {
+        "terminal": "A4:3",
+        "primaryLead": [
+          1345,
+          2881
+        ],
+        "bottomJoint": [
+          1515,
+          2641
+        ],
+        "comparisonLead": null,
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      },
+      {
+        "terminal": "A4:4",
+        "primaryLead": [
+          1347,
+          2912
+        ],
+        "bottomJoint": [
+          1515,
+          2672
+        ],
+        "comparisonLead": null,
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      },
+      {
+        "terminal": "A4:5",
+        "primaryLead": [
+          1349,
+          2944
+        ],
+        "bottomJoint": [
+          1516,
+          2703
+        ],
+        "comparisonLead": null,
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      },
+      {
+        "terminal": "A4:6",
+        "primaryLead": [
+          1350,
+          2976
+        ],
+        "bottomJoint": [
+          1517,
+          2734
+        ],
+        "comparisonLead": null,
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      },
+      {
+        "terminal": "A4:7",
+        "primaryLead": [
+          1351,
+          3008
+        ],
+        "bottomJoint": [
+          1517,
+          2765
+        ],
+        "comparisonLead": null,
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      },
+      {
+        "terminal": "A4:8",
+        "primaryLead": [
+          1353,
+          3040
+        ],
+        "bottomJoint": [
+          1518,
+          2796
+        ],
+        "comparisonLead": null,
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      },
+      {
+        "terminal": "A4:9",
+        "primaryLead": [
+          1354,
+          3072
+        ],
+        "bottomJoint": [
+          1518,
+          2827
+        ],
+        "comparisonLead": null,
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      },
+      {
+        "terminal": "A4:10",
+        "primaryLead": [
+          1354,
+          3104
+        ],
+        "bottomJoint": [
+          1519,
+          2857
+        ],
+        "comparisonLead": null,
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      },
+      {
+        "terminal": "A4:11",
+        "primaryLead": [
+          1450,
+          3102
+        ],
+        "bottomJoint": [
+          1426,
+          2860
+        ],
+        "comparisonLead": [
+          1840,
+          500
+        ],
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      },
+      {
+        "terminal": "A4:12",
+        "primaryLead": [
+          1450,
+          3071
+        ],
+        "bottomJoint": [
+          1425,
+          2829
+        ],
+        "comparisonLead": [
+          1980,
+          500
+        ],
+        "attachmentStatus": "inferred",
+        "observation": "The lower diagonal lane approaches the CPU edge beside separate round eyes. No attachment to those neighboring eyes is established."
+      },
+      {
+        "terminal": "A4:13",
+        "primaryLead": [
+          1449,
+          3038
+        ],
+        "bottomJoint": [
+          1424,
+          2800
+        ],
+        "comparisonLead": [
+          2125,
+          500
+        ],
+        "attachmentStatus": "inferred",
+        "observation": "The short rise from the latch and subsequent CPU-directed bend remain distinguishable; hidden lead entries remain inferred."
+      },
+      {
+        "terminal": "A4:14",
+        "primaryLead": [
+          1448,
+          3006
+        ],
+        "bottomJoint": [
+          1424,
+          2768
+        ],
+        "comparisonLead": [
+          2270,
+          500
+        ],
+        "attachmentStatus": "inferred",
+        "observation": "The nearly straight CPU-directed lane is distinct from the bent lane above it. Preserve the inferred end attachments."
+      },
+      {
+        "terminal": "A4:15",
+        "primaryLead": [
+          1447,
+          2972
+        ],
+        "bottomJoint": [
+          1423,
+          2739
+        ],
+        "comparisonLead": [
+          2415,
+          500
+        ],
+        "attachmentStatus": "inferred",
+        "observation": "The exposed lane reaches the CPU edge below the projected pin-7 entry. No covered return toward pin 7 is visible."
+      },
+      {
+        "terminal": "A4:16",
+        "primaryLead": [
+          1446,
+          2940
+        ],
+        "bottomJoint": [
+          1422,
+          2707
+        ],
+        "comparisonLead": [
+          2560,
+          505
+        ],
+        "attachmentStatus": "inferred",
+        "observation": "The exposed diagonal CPU-directed lane is distinguishable from the eye-directed lane above it. Its numbered pad attachments remain inferred."
+      },
+      {
+        "terminal": "A4:17",
+        "primaryLead": [
+          1444,
+          2908
+        ],
+        "bottomJoint": [
+          1422,
+          2677
+        ],
+        "comparisonLead": [
+          2705,
+          505
+        ],
+        "attachmentStatus": "inferred",
+        "observation": "The lane bends to the lower inner eye. Keep the eye-to-CPU underside path distinct from the adjacent upward lane; pad and via attachments remain inferred."
+      },
+      {
+        "terminal": "A4:18",
+        "primaryLead": [
+          1442,
+          2876
+        ],
+        "bottomJoint": [
+          1421,
+          2645
+        ],
+        "comparisonLead": [
+          2850,
+          505
+        ],
+        "attachmentStatus": "inferred",
+        "observation": "Both nearby-eye hypotheses are disfavored by their traced continuations. Neither establishes the hidden A4 attachment; do not choose an eye by distance."
+      },
+      {
+        "terminal": "A4:19",
+        "primaryLead": [
+          1441,
+          2844
+        ],
+        "bottomJoint": [
+          1420,
+          2615
+        ],
+        "comparisonLead": [
+          2995,
+          510
+        ],
+        "attachmentStatus": "inferred",
+        "observation": "The solder-obscured upper eye remains an inferred attachment. The comparison exposes a separate eye-directed lane, but cannot prove continuity on the primary specimen."
+      },
+      {
+        "terminal": "A4:20",
+        "primaryLead": [
+          1439,
+          2812
+        ],
+        "bottomJoint": [
+          1420,
+          2580
+        ],
+        "comparisonLead": [
+          3140,
+          510
+        ],
+        "attachmentStatus": "inferred",
+        "observation": "Package-end or outer-row joint used to check numbering. No new copper attachment is assigned."
+      }
+    ]
+  }
 }
