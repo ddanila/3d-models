@@ -24,7 +24,8 @@ def intersection(subject, clip):
 
 
 def compose(a,b):
-    result = [sum(a[3*r+k]*b[3*k+c] for k in range(3)) for r in range(3) for c in range(3)]
+    # Python 3.12 changed float sum(); pin accumulation across supported runtimes.
+    result = [math.fsum(a[3*r+k]*b[3*k+c] for k in range(3)) for r in range(3) for c in range(3)]
     return [v/result[8] for v in result]
 
 

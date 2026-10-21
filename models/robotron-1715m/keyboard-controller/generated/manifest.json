@@ -14,7 +14,7 @@
     "generated/qualification.json": "f04bd84205619845ed4529d639ebae43df2e894c4ec5668120234df3262af19f",
     "generated/review.svg": "2a4dbe290986983a4c6393bd42158ddd75e51ecc9e893a86ae34745094b54926",
     "generated/routing-audit.json": "e41a48ffd82f9676f925ff0ec38e3e53c0c8aa17e7ab28ce2fd61d3714ce01b9",
-    "generated/top-registration.json": "4dd0fb29177f384b1b19a3bc9a7f29f41bf6729a1530f994b5ed3abee264a778"
+    "generated/top-registration.json": "4e4292fba36e4bca4f056c89c415b01b455cc6f217280f0ee42bd3422c4ce1e0"
   },
   "schema": 1,
   "sources": {
@@ -68,7 +68,7 @@
     "tools/connector_review.py": "8e11645bb1a0b079a1ec1946eb11836780e125a50425902f3b632b54ccf378a8",
     "tools/connector_terminals.py": "1411f1a4bb50b0eb78f4cabd4146575d75c767888af6cd5b3965aab75bef469b",
     "tools/export.py": "d85096c814d81b23dc5fd331a9ab54ffb57ffb7a0cb08a061589a015aaf474a8",
-    "tools/eye_registration.py": "5ad52288e166703cd390eba134840d7b95399b5edbcd7f3999f39952971a0625",
+    "tools/eye_registration.py": "58b7c8054fca2651b7b792dd3bbfca95a74774006e5f68947185943c74d4269c",
     "tools/geometry.py": "be71777d095f87f7f53643239e274989006de4ead1ad7181478d502e05351780",
     "tools/output_assembly.py": "e324cd224122ea7371449f943d786863fa8bc66c6eea0c9cacac300ded8e0c02",
     "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068",
