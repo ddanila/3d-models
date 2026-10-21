@@ -30,6 +30,18 @@ class ControllerExportTests(unittest.TestCase):
   bad=copy.deepcopy(evidence);bad['eyeRegistration']['checks'][1]['bottomPixel'][0]+=25
   self.assertFalse(review(bad,bottom,R)['copperAssignmentQualified'])
 
+ def test_sense_review_keeps_physical_candidates_separate_from_reference(self):
+  from sense_review import build
+  report=build(R)
+  self.assertEqual(report['commonReferenceNet'],'/GND')
+  for i,p in enumerate(report['paths']):
+   self.assertEqual(p['referenceNet'],'/SENSE'+str(i))
+   self.assertEqual(p['terminals'],['A4:'+str(i+1),'R1:'+str(9-i)])
+   self.assertFalse(p['nativeCopper']);self.assertFalse(p['continuityEstablished'])
+   self.assertFalse(p['qualifiedWholePathRegions']);self.assertFalse(p['collectorAttachmentEstablished'])
+   self.assertEqual(p['bankPinCandidate']['status'],'inferred')
+   self.assertIn('/ROW'+str(i),p['matrixInput']['nets'])
+
  def test_latch_attachment_audit_preserves_numbering_and_inference(self):
   from bus_review import build
   report=build()['latchAttachmentReview']
@@ -120,6 +132,14 @@ class ControllerExportTests(unittest.TestCase):
     if source.get('path'):
      p=r/source['path'];p.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(R/source['path'],p)
    original=json.loads((r/'bus-review.json').read_text())
+   sense_original=json.loads((r/'sense-review.json').read_text())
+   import copy
+   from sense_review import build as sense_build
+   for mutate,message in [(lambda d:d['paths'][0].update(nativeCopper=True),'cannot assign'),(lambda d:d['paths'][1].update(bankObservationIndex=d['paths'][0]['bankObservationIndex']),'must not share'),(lambda d:d.update(sourceSha256='0'*64),'source hash mismatch'),(lambda d:d['paths'][0]['segments'][0].update(status='observed'),'must remain inferred')]:
+    bad=copy.deepcopy(sense_original);mutate(bad);(r/'sense-review.json').write_text(json.dumps(bad))
+    with self.assertRaisesRegex(ValueError,message):sense_build(r)
+   (r/'sense-review.json').write_text(json.dumps(sense_original))
+
    import copy
    bad=copy.deepcopy(original);bad['crossSide']['sourceSha256']='0'*64
    (r/'bus-review.json').write_text(json.dumps(bad))

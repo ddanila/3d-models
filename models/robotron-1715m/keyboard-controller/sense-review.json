@@ -1,0 +1,809 @@
+{
+  "schema": 1,
+  "source": "photo-bottom",
+  "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+  "scope": "Ordered underside corridor candidates from A4 toward the R1 bank. Copper centreline samples are photo estimates; solder attachments and bank correspondence remain inferred. No collector branch, measured continuity or native routing is established.",
+  "bankJointCandidates": [
+    [
+      1505,
+      885
+    ],
+    [
+      1506,
+      916
+    ],
+    [
+      1507,
+      947
+    ],
+    [
+      1508,
+      977
+    ],
+    [
+      1509,
+      1006
+    ],
+    [
+      1509,
+      1036
+    ],
+    [
+      1510,
+      1066
+    ],
+    [
+      1511,
+      1096
+    ],
+    [
+      1511,
+      1126
+    ],
+    [
+      1512,
+      1156
+    ]
+  ],
+  "bankOrder": "Cable end toward CPU end; zero-based observation indices are not package pin numbers.",
+  "orientationFinding": "The eight lane candidates associate A4 pins 1\u20138 with bank observations 8\u20131. This is consistent with reference R1 branches 9\u20132 if observation zero is physical pin 1. Common and unused end identities remain unverified on the primary specimen.",
+  "paths": [
+    {
+      "id": "sense-0",
+      "latchTerminal": "A4:1",
+      "bankObservationIndex": 8,
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "segments": [
+        {
+          "id": "sense-0-0",
+          "status": "inferred",
+          "points": [
+            [
+              1511,
+              1126
+            ],
+            [
+              1518,
+              1172
+            ]
+          ]
+        },
+        {
+          "id": "sense-0-1",
+          "status": "observed",
+          "points": [
+            [
+              1518,
+              1172
+            ],
+            [
+              1518,
+              1400
+            ]
+          ]
+        },
+        {
+          "id": "sense-0-2",
+          "status": "observed",
+          "points": [
+            [
+              1518,
+              1400
+            ],
+            [
+              1531,
+              2000
+            ]
+          ]
+        },
+        {
+          "id": "sense-0-3",
+          "status": "observed",
+          "points": [
+            [
+              1531,
+              2000
+            ],
+            [
+              1543,
+              2500
+            ]
+          ]
+        },
+        {
+          "id": "sense-0-4",
+          "status": "observed",
+          "points": [
+            [
+              1543,
+              2500
+            ],
+            [
+              1545,
+              2544
+            ]
+          ]
+        },
+        {
+          "id": "sense-0-5",
+          "status": "inferred",
+          "points": [
+            [
+              1545,
+              2544
+            ],
+            [
+              1514,
+              2578
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sense-1",
+      "latchTerminal": "A4:2",
+      "bankObservationIndex": 7,
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "segments": [
+        {
+          "id": "sense-1-0",
+          "status": "inferred",
+          "points": [
+            [
+              1511,
+              1096
+            ],
+            [
+              1528,
+              1111
+            ]
+          ]
+        },
+        {
+          "id": "sense-1-1",
+          "status": "observed",
+          "points": [
+            [
+              1528,
+              1111
+            ],
+            [
+              1532,
+              1400
+            ]
+          ]
+        },
+        {
+          "id": "sense-1-2",
+          "status": "observed",
+          "points": [
+            [
+              1532,
+              1400
+            ],
+            [
+              1545,
+              2000
+            ]
+          ]
+        },
+        {
+          "id": "sense-1-3",
+          "status": "observed",
+          "points": [
+            [
+              1545,
+              2000
+            ],
+            [
+              1556,
+              2500
+            ]
+          ]
+        },
+        {
+          "id": "sense-1-4",
+          "status": "observed",
+          "points": [
+            [
+              1556,
+              2500
+            ],
+            [
+              1558,
+              2561
+            ]
+          ]
+        },
+        {
+          "id": "sense-1-5",
+          "status": "inferred",
+          "points": [
+            [
+              1558,
+              2561
+            ],
+            [
+              1514,
+              2610
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sense-2",
+      "latchTerminal": "A4:3",
+      "bankObservationIndex": 6,
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "segments": [
+        {
+          "id": "sense-2-0",
+          "status": "inferred",
+          "points": [
+            [
+              1510,
+              1066
+            ],
+            [
+              1541,
+              1094
+            ]
+          ]
+        },
+        {
+          "id": "sense-2-1",
+          "status": "observed",
+          "points": [
+            [
+              1541,
+              1094
+            ],
+            [
+              1545,
+              1400
+            ]
+          ]
+        },
+        {
+          "id": "sense-2-2",
+          "status": "observed",
+          "points": [
+            [
+              1545,
+              1400
+            ],
+            [
+              1560,
+              2000
+            ]
+          ]
+        },
+        {
+          "id": "sense-2-3",
+          "status": "observed",
+          "points": [
+            [
+              1560,
+              2000
+            ],
+            [
+              1570,
+              2500
+            ]
+          ]
+        },
+        {
+          "id": "sense-2-4",
+          "status": "observed",
+          "points": [
+            [
+              1570,
+              2500
+            ],
+            [
+              1572,
+              2578
+            ]
+          ]
+        },
+        {
+          "id": "sense-2-5",
+          "status": "inferred",
+          "points": [
+            [
+              1572,
+              2578
+            ],
+            [
+              1515,
+              2641
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sense-3",
+      "latchTerminal": "A4:4",
+      "bankObservationIndex": 5,
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "segments": [
+        {
+          "id": "sense-3-0",
+          "status": "inferred",
+          "points": [
+            [
+              1509,
+              1036
+            ],
+            [
+              1554,
+              1075
+            ]
+          ]
+        },
+        {
+          "id": "sense-3-1",
+          "status": "observed",
+          "points": [
+            [
+              1554,
+              1075
+            ],
+            [
+              1558,
+              1400
+            ]
+          ]
+        },
+        {
+          "id": "sense-3-2",
+          "status": "observed",
+          "points": [
+            [
+              1558,
+              1400
+            ],
+            [
+              1575,
+              2000
+            ]
+          ]
+        },
+        {
+          "id": "sense-3-3",
+          "status": "observed",
+          "points": [
+            [
+              1575,
+              2000
+            ],
+            [
+              1584,
+              2500
+            ]
+          ]
+        },
+        {
+          "id": "sense-3-4",
+          "status": "observed",
+          "points": [
+            [
+              1584,
+              2500
+            ],
+            [
+              1586,
+              2595
+            ]
+          ]
+        },
+        {
+          "id": "sense-3-5",
+          "status": "inferred",
+          "points": [
+            [
+              1586,
+              2595
+            ],
+            [
+              1515,
+              2672
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sense-4",
+      "latchTerminal": "A4:5",
+      "bankObservationIndex": 4,
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "segments": [
+        {
+          "id": "sense-4-0",
+          "status": "inferred",
+          "points": [
+            [
+              1509,
+              1006
+            ],
+            [
+              1567,
+              1061
+            ]
+          ]
+        },
+        {
+          "id": "sense-4-1",
+          "status": "observed",
+          "points": [
+            [
+              1567,
+              1061
+            ],
+            [
+              1571,
+              1400
+            ]
+          ]
+        },
+        {
+          "id": "sense-4-2",
+          "status": "observed",
+          "points": [
+            [
+              1571,
+              1400
+            ],
+            [
+              1590,
+              2000
+            ]
+          ]
+        },
+        {
+          "id": "sense-4-3",
+          "status": "observed",
+          "points": [
+            [
+              1590,
+              2000
+            ],
+            [
+              1598,
+              2500
+            ]
+          ]
+        },
+        {
+          "id": "sense-4-4",
+          "status": "observed",
+          "points": [
+            [
+              1598,
+              2500
+            ],
+            [
+              1600,
+              2612
+            ]
+          ]
+        },
+        {
+          "id": "sense-4-5",
+          "status": "inferred",
+          "points": [
+            [
+              1600,
+              2612
+            ],
+            [
+              1516,
+              2703
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sense-5",
+      "latchTerminal": "A4:6",
+      "bankObservationIndex": 3,
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "segments": [
+        {
+          "id": "sense-5-0",
+          "status": "inferred",
+          "points": [
+            [
+              1508,
+              977
+            ],
+            [
+              1580,
+              1048
+            ]
+          ]
+        },
+        {
+          "id": "sense-5-1",
+          "status": "observed",
+          "points": [
+            [
+              1580,
+              1048
+            ],
+            [
+              1585,
+              1400
+            ]
+          ]
+        },
+        {
+          "id": "sense-5-2",
+          "status": "observed",
+          "points": [
+            [
+              1585,
+              1400
+            ],
+            [
+              1604,
+              2000
+            ]
+          ]
+        },
+        {
+          "id": "sense-5-3",
+          "status": "observed",
+          "points": [
+            [
+              1604,
+              2000
+            ],
+            [
+              1612,
+              2500
+            ]
+          ]
+        },
+        {
+          "id": "sense-5-4",
+          "status": "observed",
+          "points": [
+            [
+              1612,
+              2500
+            ],
+            [
+              1614,
+              2629
+            ]
+          ]
+        },
+        {
+          "id": "sense-5-5",
+          "status": "inferred",
+          "points": [
+            [
+              1614,
+              2629
+            ],
+            [
+              1517,
+              2734
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sense-6",
+      "latchTerminal": "A4:7",
+      "bankObservationIndex": 2,
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "segments": [
+        {
+          "id": "sense-6-0",
+          "status": "inferred",
+          "points": [
+            [
+              1507,
+              947
+            ],
+            [
+              1593,
+              1031
+            ]
+          ]
+        },
+        {
+          "id": "sense-6-1",
+          "status": "observed",
+          "points": [
+            [
+              1593,
+              1031
+            ],
+            [
+              1598,
+              1400
+            ]
+          ]
+        },
+        {
+          "id": "sense-6-2",
+          "status": "observed",
+          "points": [
+            [
+              1598,
+              1400
+            ],
+            [
+              1618,
+              2000
+            ]
+          ]
+        },
+        {
+          "id": "sense-6-3",
+          "status": "observed",
+          "points": [
+            [
+              1618,
+              2000
+            ],
+            [
+              1627,
+              2500
+            ]
+          ]
+        },
+        {
+          "id": "sense-6-4",
+          "status": "observed",
+          "points": [
+            [
+              1627,
+              2500
+            ],
+            [
+              1629,
+              2646
+            ]
+          ]
+        },
+        {
+          "id": "sense-6-5",
+          "status": "inferred",
+          "points": [
+            [
+              1629,
+              2646
+            ],
+            [
+              1517,
+              2765
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sense-7",
+      "latchTerminal": "A4:8",
+      "bankObservationIndex": 1,
+      "nativeCopper": false,
+      "continuityEstablished": false,
+      "segments": [
+        {
+          "id": "sense-7-0",
+          "status": "inferred",
+          "points": [
+            [
+              1506,
+              916
+            ],
+            [
+              1607,
+              1018
+            ]
+          ]
+        },
+        {
+          "id": "sense-7-1",
+          "status": "observed",
+          "points": [
+            [
+              1607,
+              1018
+            ],
+            [
+              1612,
+              1400
+            ]
+          ]
+        },
+        {
+          "id": "sense-7-2",
+          "status": "observed",
+          "points": [
+            [
+              1612,
+              1400
+            ],
+            [
+              1632,
+              2000
+            ]
+          ]
+        },
+        {
+          "id": "sense-7-3",
+          "status": "observed",
+          "points": [
+            [
+              1632,
+              2000
+            ],
+            [
+              1641,
+              2500
+            ]
+          ]
+        },
+        {
+          "id": "sense-7-4",
+          "status": "observed",
+          "points": [
+            [
+              1641,
+              2500
+            ],
+            [
+              1643,
+              2663
+            ]
+          ]
+        },
+        {
+          "id": "sense-7-5",
+          "status": "inferred",
+          "points": [
+            [
+              1643,
+              2663
+            ],
+            [
+              1518,
+              2796
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "photos": [
+    {
+      "source": "photo-top",
+      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "pixelBox": [
+        1190,
+        910,
+        1420,
+        1340
+      ],
+      "observation": "Primary R1 and sensing-transistor area. Raised bodies and leads obscure the numbered collector attachments. Bank branch mapping does not establish B/E/C orientation."
+    }
+  ]
+}

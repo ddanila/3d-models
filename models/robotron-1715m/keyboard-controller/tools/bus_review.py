@@ -8,6 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def build(root=ROOT):
     read = lambda name: json.loads((root / name).read_text())
     result = copy.deepcopy(read('bus-review.json'))
+    from sense_review import build as sense_review
+    result['senseReview'] = sense_review(root)
     sources = {s['id']: s for s in read('evidence.json')['sources']}
     top, bottom = read('photo-landmarks.json'), read('bottom-landmarks.json')
     connectivity = read('generated/connectivity.json')['components']
