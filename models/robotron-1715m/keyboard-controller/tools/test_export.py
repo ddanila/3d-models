@@ -34,6 +34,15 @@ class ControllerExportTests(unittest.TestCase):
   from sense_review import build
   report=build(R)
   self.assertEqual(report['commonReferenceNet'],'/GND')
+  trial=report['envelopeTrial']
+  self.assertEqual(set(trial['boundedPaths']),{p['id'] for p in report['paths']})
+  self.assertFalse(trial['copperAssignmentQualified']);self.assertFalse(trial['withinPhotoTolerance'])
+  self.assertGreater(trial['maxCheckResidualMm'],trial['toleranceMm'])
+  self.assertTrue(all(c['insideAnchorHull'] for c in trial['checks']))
+  self.assertEqual(len(trial['checks']),len({(c['ref'],c['pin']) for c in trial['checks']}))
+  self.assertEqual(trial['maxCheckResidualMm'],max(c['residualMm'] for c in trial['checks']))
+  self.assertFalse(report['bankEndReview']['commonGroundAttachmentEstablished'])
+  self.assertTrue(any(p[0]<1500 for p in report['paths'][0]['segments'][1]['points']))
   for i,p in enumerate(report['paths']):
    self.assertEqual(p['referenceNet'],'/SENSE'+str(i))
    self.assertEqual(p['terminals'],['A4:'+str(i+1),'R1:'+str(9-i)])
@@ -136,6 +145,11 @@ class ControllerExportTests(unittest.TestCase):
    import copy
    from sense_review import build as sense_build
    for mutate,message in [(lambda d:d['paths'][0].update(nativeCopper=True),'cannot assign'),(lambda d:d['paths'][1].update(bankObservationIndex=d['paths'][0]['bankObservationIndex']),'must not share'),(lambda d:d.update(sourceSha256='0'*64),'source hash mismatch'),(lambda d:d['paths'][0]['segments'][0].update(status='observed'),'must remain inferred')]:
+    bad=copy.deepcopy(sense_original);mutate(bad);(r/'sense-review.json').write_text(json.dumps(bad))
+    with self.assertRaisesRegex(ValueError,message):sense_build(r)
+   (r/'sense-review.json').write_text(json.dumps(sense_original))
+
+   for mutate,message in [(lambda d:d['envelopeTrial'].update(copperAssignmentQualified=True),'cannot qualify copper'),(lambda d:d['envelopeTrial'].update(modelCornerIndices=[0,1,2,3]),'mirrored underside'),(lambda d:d['bankEndReview'].update(commonGroundAttachmentEstablished=True),'cannot establish primary'),(lambda d:d['bankEndReview'].update(comparisonMarkSource='missing'),'hashed comparison')]:
     bad=copy.deepcopy(sense_original);mutate(bad);(r/'sense-review.json').write_text(json.dumps(bad))
     with self.assertRaisesRegex(ValueError,message):sense_build(r)
    (r/'sense-review.json').write_text(json.dumps(sense_original))

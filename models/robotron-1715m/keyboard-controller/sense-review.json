@@ -46,7 +46,7 @@
     ]
   ],
   "bankOrder": "Cable end toward CPU end; zero-based observation indices are not package pin numbers.",
-  "orientationFinding": "The eight lane candidates associate A4 pins 1\u20138 with bank observations 8\u20131. This is consistent with reference R1 branches 9\u20132 if observation zero is physical pin 1. Common and unused end identities remain unverified on the primary specimen.",
+  "orientationFinding": "The comparison specimen has a visible 1 mark at the cable-facing end of its 3894 network. Its underside has eight fanout joints between two end joints without visible underside exits, matching the primary artwork. This supports, but does not prove, primary observation zero as pin 1 and observation nine as unused pin 10; the common-to-ground connection remains hidden.",
   "paths": [
     {
       "id": "sense-0",
@@ -64,8 +64,8 @@
               1126
             ],
             [
-              1518,
-              1172
+              1501,
+              1134
             ]
           ]
         },
@@ -74,8 +74,20 @@
           "status": "observed",
           "points": [
             [
-              1518,
-              1172
+              1501,
+              1134
+            ],
+            [
+              1483,
+              1152
+            ],
+            [
+              1484,
+              1192
+            ],
+            [
+              1515,
+              1222
             ],
             [
               1518,
@@ -139,7 +151,8 @@
             ]
           ]
         }
-      ]
+      ],
+      "bankFanoutFinding": "The innermost lane passes left of the CPU-end joint before returning to the corridor. The comparison underside corroborates this detour; the solder attachment remains inferred."
     },
     {
       "id": "sense-1",
@@ -804,6 +817,109 @@
         1340
       ],
       "observation": "Primary R1 and sensing-transistor area. Raised bodies and leads obscure the numbered collector attachments. Bank branch mapping does not establish B/E/C orientation."
+    },
+    {
+      "source": "comparison-photo-080450163",
+      "sourceSha256": "98d1133ba1c314ff7fbae3782d979e1ada17062db9e6c3f76672f7a2e3c00bdd",
+      "pixelBox": [
+        1400,
+        1200,
+        3200,
+        2050
+      ],
+      "observation": "Different specimen: 3894 marking and cable-end 1 orientation mark. This does not identify the primary specimen network."
+    },
+    {
+      "source": "comparison-photo-080351042",
+      "sourceSha256": "e41032fe1b669f0c5646e6d5f787cdadc43c840beddd171d29b3c6b050249730",
+      "pixelBox": [
+        650,
+        1150,
+        1200,
+        2200
+      ],
+      "observation": "Different specimen underside: ten bank joints, eight fanouts, and the innermost lane detouring around the CPU-end joint. No visible underside departure at either end joint."
     }
-  ]
+  ],
+  "bankEndReview": {
+    "status": "inferred",
+    "primaryCommonObservationIndex": 0,
+    "primaryUnusedObservationIndex": 9,
+    "commonGroundAttachmentEstablished": false,
+    "primaryMarkingIdentified": false,
+    "comparisonMarkSource": "comparison-photo-080450163",
+    "comparisonUndersideSource": "comparison-photo-080351042",
+    "comparisonJointOrder": "Cable end toward CPU end; observation indices correspond by visible fanout order, not measured continuity.",
+    "comparisonJoints": [
+      [
+        834,
+        2054
+      ],
+      [
+        835,
+        1965
+      ],
+      [
+        837,
+        1880
+      ],
+      [
+        839,
+        1793
+      ],
+      [
+        841,
+        1707
+      ],
+      [
+        843,
+        1619
+      ],
+      [
+        844,
+        1534
+      ],
+      [
+        846,
+        1448
+      ],
+      [
+        848,
+        1360
+      ],
+      [
+        849,
+        1276
+      ]
+    ],
+    "finding": "Both end joints lack a visible underside departure. Absence of an underside trace cannot distinguish a top-side common connection from an unused terminal. The cable-end 1 marking supports the orientation hypothesis on the comparison specimen only."
+  },
+  "envelopeTrial": {
+    "scope": "Nominal full-board underside fit from visible edge intersections. Independent native pad checks test compatibility with existing placements; no pad was used to tune the edge anchors. Board dimensions come from the existing nominal photo envelope, not specimen metrology. This diagnostic cannot assign copper.",
+    "photoCorners": [
+      [
+        1022,
+        355
+      ],
+      [
+        1613,
+        366
+      ],
+      [
+        1685,
+        3720
+      ],
+      [
+        1070,
+        3740
+      ]
+    ],
+    "modelCornerIndices": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "copperAssignmentQualified": false
+  }
 }
