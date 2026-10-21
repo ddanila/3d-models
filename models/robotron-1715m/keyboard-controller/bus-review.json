@@ -351,7 +351,7 @@
       "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
       "nativeCopper": false,
       "continuityEstablished": false,
-      "reason": "Top lead/eye attachment and the complete eye-to-CPU path remain unresolved. Reverse-side spans are recorded as candidate geometry only; positional agreement alone cannot establish continuity.",
+      "reason": "The latch-side candidate reaches an unassigned underside joint, not CPU pin 15. CPU-side tracing follows the existing ROM branch; the top lead entry is obscured. A complete latch-to-CPU continuation is unresolved.",
       "segments": [
         {
           "id": "d1-latch-0",
@@ -444,7 +444,100 @@
         "unassignedEnd": [
           1408,
           2923
-        ]
+        ],
+        "alternatives": [
+          {
+            "id": "upper-eye",
+            "point": [
+              1365,
+              2618
+            ],
+            "kind": "eye"
+          },
+          {
+            "id": "middle-eye",
+            "point": [
+              1390,
+              2645
+            ],
+            "kind": "eye"
+          },
+          {
+            "id": "lower-eye",
+            "point": [
+              1335,
+              2708
+            ],
+            "kind": "eye"
+          },
+          {
+            "id": "cpu-pin-7",
+            "point": [
+              1307,
+              2706
+            ],
+            "kind": "pad",
+            "terminal": "A5:7"
+          }
+        ],
+        "alternativeScope": "Nearby underside features checked against the same top endpoint with unchanged local fits. Ranking is positional only; a pad is not an interchangeable via and no candidate establishes continuity."
+      },
+      "terminalReview": {
+        "source": "photo-bottom",
+        "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+        "terminal": "A5:15",
+        "point": [
+          1309,
+          2958
+        ],
+        "continuityEstablished": false,
+        "nativeCopper": false,
+        "reason": "CPU pin 15 has a visible underside exit toward the already reconstructed ROM branch. The candidate latch path ends at [1408,2923], spatially separate from this pad and exit. No exposed underside bridge between them is identified; this does not exclude a top-side continuation.",
+        "segments": [
+          {
+            "id": "d1-cpu-exit-0",
+            "status": "inferred",
+            "points": [
+              [
+                1309,
+                2958
+              ],
+              [
+                1327,
+                2977
+              ]
+            ]
+          },
+          {
+            "id": "d1-cpu-exit-1",
+            "status": "observed",
+            "points": [
+              [
+                1327,
+                2977
+              ],
+              [
+                1330,
+                3138
+              ]
+            ]
+          }
+        ],
+        "topReview": {
+          "source": "photo-top",
+          "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "imageSize": [
+            3072,
+            4080
+          ],
+          "pixelBox": [
+            1430,
+            3130,
+            1620,
+            3240
+          ],
+          "observation": "CPU pin 15 is the raised lead near [1596,3202]. Neighboring board tracks enter beneath the raised lead/body edge; the visible lead knee does not establish which entry belongs to pin 15. No top-side terminal attachment is assigned."
+        }
       }
     },
     {
@@ -458,7 +551,7 @@
       "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
       "nativeCopper": false,
       "continuityEstablished": false,
-      "reason": "Top lead/eye attachment and the complete eye-to-CPU path remain unresolved. Reverse-side spans are recorded as candidate geometry only; positional agreement alone cannot establish continuity.",
+      "reason": "The closest reviewed underside eye still disagrees with the top endpoint beyond the local fit budget. Neighboring eyes and CPU pin 7 do not provide a better match. Eye identity and its continuation to CPU pin 12 remain unresolved.",
       "segments": [
         {
           "id": "d2-latch-0",
@@ -565,7 +658,43 @@
         "unassignedEnd": [
           1345,
           2818
-        ]
+        ],
+        "alternatives": [
+          {
+            "id": "upper-eye",
+            "point": [
+              1365,
+              2618
+            ],
+            "kind": "eye"
+          },
+          {
+            "id": "middle-eye",
+            "point": [
+              1390,
+              2645
+            ],
+            "kind": "eye"
+          },
+          {
+            "id": "lower-eye",
+            "point": [
+              1335,
+              2708
+            ],
+            "kind": "eye"
+          },
+          {
+            "id": "cpu-pin-7",
+            "point": [
+              1307,
+              2706
+            ],
+            "kind": "pad",
+            "terminal": "A5:7"
+          }
+        ],
+        "alternativeScope": "Nearby underside features checked against the same top endpoint with unchanged local fits. Ranking is positional only; a pad is not an interchangeable via and no candidate establishes continuity."
       }
     },
     {

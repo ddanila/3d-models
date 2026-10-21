@@ -37,6 +37,14 @@ class ControllerExportTests(unittest.TestCase):
   candidates={p['referenceNet']:p for p in report['latchPaths']}
   self.assertTrue(candidates['/D1']['reverseReview']['positionCheck']['withinFitBudget'])
   self.assertFalse(candidates['/D2']['reverseReview']['positionCheck']['withinFitBudget'])
+  alternatives=candidates['/D2']['reverseReview']['alternatives']
+  self.assertEqual(alternatives[0]['id'],'lower-eye')
+  self.assertTrue(all(not a['positionCheck']['withinFitBudget'] for a in alternatives))
+  self.assertTrue(all(not a['positionCheck']['continuityEstablished'] for a in alternatives))
+  terminal=candidates['/D1']['terminalReview']
+  self.assertEqual(terminal['terminal'],'A5:15')
+  self.assertNotEqual(terminal['point'],candidates['/D1']['reverseReview']['unassignedEnd'])
+  self.assertFalse(terminal['nativeCopper'])
   self.assertFalse(candidates['/D1']['continuityEstablished'])
   self.assertFalse(report['crossSide']['copperAssignmentQualified'])
   self.assertFalse(report['crossSide']['comparison']['electricalIdentityTransferred'])
@@ -60,6 +68,15 @@ class ControllerExportTests(unittest.TestCase):
    bad=copy.deepcopy(original);bad['latchPaths'][0]['reverseReview']['continuityEstablished']=True
    (r/'bus-review.json').write_text(json.dumps(bad))
    with self.assertRaisesRegex(ValueError,'correspondence is not established'):build(r)
+   bad=copy.deepcopy(original);bad['latchPaths'][0]['terminalReview']['continuityEstablished']=True
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'cannot establish latch continuity'):build(r)
+   bad=copy.deepcopy(original);bad['latchPaths'][1]['reverseReview']['alternatives'][0]['point']=[0,0]
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'exceeds local fit hull'):build(r)
+   bad=copy.deepcopy(original);bad['latchPaths'][0]['terminalReview']['topReview']['sourceSha256']='0'*64
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'source hash mismatch'):build(r)
    bad=copy.deepcopy(original);bad['paths'][0]['observedEnds'][0]['point']=[1400,2700]
    (r/'bus-review.json').write_text(json.dumps(bad))
    self.assertFalse(build(r)['paths'][0]['crossSideSearch']['insideCpuBodyWithSearchMargin'])

@@ -19,6 +19,13 @@ def build(root=ROOT):
             raise ValueError('Latch eye correspondence is not established')
     records = [cross, cross['comparison'], *result['paths'], *latch_paths,
                *[p['reverseReview'] for p in latch_paths if 'reverseReview' in p]]
+    for path in latch_paths:
+        terminal = path.get('terminalReview')
+        if terminal:
+            if (terminal['nativeCopper'] is not False or terminal['continuityEstablished'] is not False
+                    or terminal['terminal'] not in path['terminals']):
+                raise ValueError('Terminal review cannot establish latch continuity')
+            records.extend([terminal, terminal['topReview']])
     for record in records:
         source = sources[record['source']]
         if (record['sourceSha256'] != source['sha256'] or
@@ -43,6 +50,18 @@ def build(root=ROOT):
         residual = math.dist(projections['top'], projections['bottom'])
         reverse['positionCheck'] = {'residualMm': round(residual, 9), 'toleranceMm': min(limits),
                                     'withinFitBudget': residual <= min(limits), 'continuityEstablished': False}
+        bottom_region = next(r for r in read('generated/bottom-registration.json')['pcbRegions']
+                             if r['id'] == reverse['registrationRegions']['bottom'])
+        alternatives = reverse.get('alternatives', [])
+        if len({a['id'] for a in alternatives}) != len(alternatives):
+            raise ValueError('Duplicate alternative eye identifier')
+        for alternative in alternatives:
+            if alternative['kind'] not in ('eye', 'pad') or not inside_hull(alternative['point'], bottom_region['anchorHull']):
+                raise ValueError('Alternative feature exceeds local fit hull or has invalid kind')
+            distance = math.dist(projections['top'], project(bottom_region['photoToModel'], alternative['point']))
+            alternative['positionCheck'] = {'residualMm': round(distance, 9), 'toleranceMm': min(limits),
+                                           'withinFitBudget': distance <= min(limits), 'continuityEstablished': False}
+        reverse['alternatives'] = sorted(alternatives, key=lambda a: (a['positionCheck']['residualMm'], a['id']))
     if sources[cross['source']]['path'] != top['photo']:
         raise ValueError('Bus review top landmarks use a different photograph')
     bottom_pins = {}
