@@ -81,6 +81,10 @@ class KiCadExportTests(unittest.TestCase):
    l=json.loads((r/'generated/layout.json').read_text());self.assertEqual(len(l['vias']),len(json.loads((R/'generated/layout.json').read_text())['vias'])+1);synthetic=next(v for v in l['vias']if v['id']==via.m_Uuid.AsString());self.assertEqual(synthetic['position'],[250,-350]);self.assertEqual(synthetic['drill'],.4)
    points=next(a for a in l['routes']if a['id']==arc.m_Uuid.AsString())['points'];self.assertEqual(points[0],[250,-350]);self.assertEqual(points[-1],[260,-350]);self.assertGreater(max(y for x,y in points),-345.1)
    # A net-name edit must fail even when the resulting native PCB is parseable.
+   f=next(f for f in b.GetFootprints() if f.GetReference()=='R1');unused=next(p for p in f.Pads() if p.GetNumber()=='10');unused.SetNet(net);pcb.SaveBoard(str(r/'controller.kicad_pcb'),b)
+   result=subprocess.run([sys.executable,r/'tools/export.py'],capture_output=True,text=True)
+   self.assertNotEqual(result.returncode,0);self.assertIn('physical unused lead must have no net',result.stderr)
+   unused.SetNetCode(0)
    f=next(f for f in b.GetFootprints() if f.GetReference()=='A1');pad=next(p for p in f.Pads() if p.GetNumber()=='1');pad.SetNet(net);pcb.SaveBoard(str(r/'controller.kicad_pcb'),b)
    result=subprocess.run([sys.executable,r/'tools/export.py'],capture_output=True,text=True)
    self.assertNotEqual(result.returncode,0);self.assertIn('pad-net mismatch',result.stderr)

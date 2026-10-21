@@ -3065,6 +3065,2629 @@
       "toleranceMm": 1.25,
       "withinPhotoTolerance": false
     },
+    "metricReview": {
+      "calibrationPairs": [
+        [
+          "A5:1",
+          "A5:20"
+        ],
+        [
+          "A5:40",
+          "A5:21"
+        ],
+        [
+          "A1:1",
+          "A1:14"
+        ],
+        [
+          "A1:7",
+          "A1:8"
+        ]
+      ],
+      "checkComponents": [
+        "A1",
+        "A2.1",
+        "A4",
+        "A5",
+        "A8"
+      ],
+      "copperAssignmentQualified": false,
+      "cpuReference": {
+        "locator": "PDF page 62 / printed page 61, section 11.4, figure 28; VEB Funkwerk Erfurt U880 D technical description",
+        "longitudinalEndSpanMm": 47.5,
+        "longitudinalPitchMm": 2.5,
+        "scope": "Manufacturer U880 D reference package. The drawing does not identify the installed variant or measure PCB holes. Cross-row lead bends must not be treated as a specified hole spacing.",
+        "sourceSha256": "a3266f1cea4d24c0c91ca2941f6b40762f24a2934e6cf41dccd5fb52f80e75be",
+        "sourceUrl": "https://www.tiffe.de/Robotron/Bausteinuebersicht/U880D-CPU.pdf"
+      },
+      "finding": "Both conditional distance fits challenge the nominal envelope. Absolute placement, installed package variants and cross-row hole spacing remain separate; do not migrate copper from these scale estimates alone.",
+      "nativeCpuPitchMm": 2.539999982,
+      "nominalEnvelopeMm": [
+        270,
+        46
+      ],
+      "scope": "Intrinsic distance checks distinguish envelope scale from native placement. Translation and rotation cancel in within-package distances. All row-separation assumptions remain native-footprint nominal values; this does not measure the board or establish copper placement.",
+      "variants": [
+        {
+          "estimatedEnvelopeMm": [
+            281.251263,
+            47.595691
+          ],
+          "id": "native-footprints",
+          "independentCheckComponents": [
+            "A2.1",
+            "A4",
+            "A8"
+          ],
+          "maxHeldOutResidualMm": 1.21730828,
+          "maxIndependentPackageResidualMm": 1.21730828,
+          "maxNominalHeldOutResidualMm": 2.253733774,
+          "pairs": [
+            {
+              "fittedDistanceMm": 7.666865355,
+              "fittedResidualMm": 0.046865633,
+              "heldOut": false,
+              "nominalDistanceMm": 7.409784708,
+              "nominalResidualMm": 0.210215014,
+              "referenceDistanceMm": 7.619999722,
+              "terminals": [
+                "A1:1",
+                "A1:14"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.552866214,
+              "fittedResidualMm": 0.012866318,
+              "heldOut": true,
+              "nominalDistanceMm": 2.450746269,
+              "nominalResidualMm": 0.089253627,
+              "referenceDistanceMm": 2.539999896,
+              "terminals": [
+                "A1:1",
+                "A1:2"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.573015263,
+              "fittedResidualMm": 0.126984285,
+              "heldOut": true,
+              "nominalDistanceMm": 12.070040465,
+              "nominalResidualMm": 0.629959083,
+              "referenceDistanceMm": 12.699999548,
+              "terminals": [
+                "A1:1",
+                "A1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.116204478,
+              "fittedResidualMm": 0.123794966,
+              "heldOut": true,
+              "nominalDistanceMm": 14.511491849,
+              "nominalResidualMm": 0.728507595,
+              "referenceDistanceMm": 15.239999444,
+              "terminals": [
+                "A1:1",
+                "A1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.933948791,
+              "fittedResidualMm": 0.104888576,
+              "heldOut": true,
+              "nominalDistanceMm": 16.278749041,
+              "nominalResidualMm": 0.760088326,
+              "referenceDistanceMm": 17.038837367,
+              "terminals": [
+                "A1:1",
+                "A1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 8.10608359,
+              "fittedResidualMm": 0.073898313,
+              "heldOut": true,
+              "nominalDistanceMm": 7.82818314,
+              "nominalResidualMm": 0.204002137,
+              "referenceDistanceMm": 8.032185277,
+              "terminals": [
+                "A1:14",
+                "A1:2"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.918298187,
+              "fittedResidualMm": 0.107681076,
+              "heldOut": true,
+              "nominalDistanceMm": 14.347111338,
+              "nominalResidualMm": 0.463505773,
+              "referenceDistanceMm": 14.810617111,
+              "terminals": [
+                "A1:14",
+                "A1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 17.128406792,
+              "fittedResidualMm": 0.089569425,
+              "heldOut": true,
+              "nominalDistanceMm": 16.465232473,
+              "nominalResidualMm": 0.573604894,
+              "referenceDistanceMm": 17.038837367,
+              "terminals": [
+                "A1:14",
+                "A1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.348971081,
+              "fittedResidualMm": 0.108971637,
+              "heldOut": true,
+              "nominalDistanceMm": 14.734947156,
+              "nominalResidualMm": 0.505052288,
+              "referenceDistanceMm": 15.239999444,
+              "terminals": [
+                "A1:14",
+                "A1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 10.020730179,
+              "fittedResidualMm": 0.139269472,
+              "heldOut": true,
+              "nominalDistanceMm": 9.619859633,
+              "nominalResidualMm": 0.540140018,
+              "referenceDistanceMm": 10.159999651,
+              "terminals": [
+                "A1:2",
+                "A1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.563723483,
+              "fittedResidualMm": 0.136276065,
+              "heldOut": true,
+              "nominalDistanceMm": 12.061120397,
+              "nominalResidualMm": 0.638879151,
+              "referenceDistanceMm": 12.699999548,
+              "terminals": [
+                "A1:2",
+                "A1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.674378237,
+              "fittedResidualMm": 0.136239217,
+              "heldOut": true,
+              "nominalDistanceMm": 14.112670602,
+              "nominalResidualMm": 0.697946852,
+              "referenceDistanceMm": 14.810617454,
+              "terminals": [
+                "A1:2",
+                "A1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.543574455,
+              "fittedResidualMm": 0.003574559,
+              "heldOut": true,
+              "nominalDistanceMm": 2.441826221,
+              "nominalResidualMm": 0.098173675,
+              "referenceDistanceMm": 2.539999896,
+              "terminals": [
+                "A1:6",
+                "A1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 8.035499382,
+              "fittedResidualMm": 0.003314738,
+              "heldOut": true,
+              "nominalDistanceMm": 7.760861723,
+              "nominalResidualMm": 0.271322921,
+              "referenceDistanceMm": 8.032184644,
+              "terminals": [
+                "A1:6",
+                "A1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.571800761,
+              "fittedResidualMm": 0.048198961,
+              "heldOut": false,
+              "nominalDistanceMm": 7.317948896,
+              "nominalResidualMm": 0.302050826,
+              "referenceDistanceMm": 7.619999722,
+              "terminals": [
+                "A1:7",
+                "A1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.60558641,
+              "fittedResidualMm": 0.426598631,
+              "heldOut": true,
+              "nominalDistanceMm": 7.345004617,
+              "nominalResidualMm": 0.687180424,
+              "referenceDistanceMm": 8.032185041,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:13"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.280769203,
+              "fittedResidualMm": 0.339230896,
+              "heldOut": true,
+              "nominalDistanceMm": 7.036657525,
+              "nominalResidualMm": 0.583342574,
+              "referenceDistanceMm": 7.620000099,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:14"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.684579629,
+              "fittedResidualMm": 0.015420552,
+              "heldOut": true,
+              "nominalDistanceMm": 12.177149875,
+              "nominalResidualMm": 0.522850306,
+              "referenceDistanceMm": 12.700000181,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.215601373,
+              "fittedResidualMm": 0.024398826,
+              "heldOut": true,
+              "nominalDistanceMm": 14.606915005,
+              "nominalResidualMm": 0.633085194,
+              "referenceDistanceMm": 15.240000199,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.76539834,
+              "fittedResidualMm": 0.273439871,
+              "heldOut": true,
+              "nominalDistanceMm": 16.11380926,
+              "nominalResidualMm": 0.925028951,
+              "referenceDistanceMm": 17.038838211,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.455468983,
+              "fittedResidualMm": 0.355149208,
+              "heldOut": true,
+              "nominalDistanceMm": 13.899601715,
+              "nominalResidualMm": 0.911016476,
+              "referenceDistanceMm": 14.810618191,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.708423253,
+              "fittedResidualMm": 0.168423235,
+              "heldOut": true,
+              "nominalDistanceMm": 2.600109352,
+              "nominalResidualMm": 0.060109334,
+              "referenceDistanceMm": 2.540000018,
+              "terminals": [
+                "A2.1:13",
+                "A2.1:14"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.466749593,
+              "fittedResidualMm": 0.233250198,
+              "heldOut": true,
+              "nominalDistanceMm": 11.995666126,
+              "nominalResidualMm": 0.704333665,
+              "referenceDistanceMm": 12.699999791,
+              "terminals": [
+                "A2.1:13",
+                "A2.1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.577107061,
+              "fittedResidualMm": 0.233510787,
+              "heldOut": true,
+              "nominalDistanceMm": 14.017359167,
+              "nominalResidualMm": 0.793258681,
+              "referenceDistanceMm": 14.810617848,
+              "terminals": [
+                "A2.1:13",
+                "A2.1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.658109261,
+              "fittedResidualMm": 0.04189092,
+              "heldOut": true,
+              "nominalDistanceMm": 12.151740171,
+              "nominalResidualMm": 0.54826001,
+              "referenceDistanceMm": 12.700000181,
+              "terminals": [
+                "A2.1:13",
+                "A2.1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 10.045716605,
+              "fittedResidualMm": 0.114283559,
+              "heldOut": true,
+              "nominalDistanceMm": 9.643850625,
+              "nominalResidualMm": 0.516149539,
+              "referenceDistanceMm": 10.160000164,
+              "terminals": [
+                "A2.1:13",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.807229882,
+              "fittedResidualMm": 0.003387966,
+              "heldOut": true,
+              "nominalDistanceMm": 14.238930231,
+              "nominalResidualMm": 0.571687617,
+              "referenceDistanceMm": 14.810617848,
+              "terminals": [
+                "A2.1:14",
+                "A2.1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 17.029848304,
+              "fittedResidualMm": 0.008989907,
+              "heldOut": true,
+              "nominalDistanceMm": 16.369284516,
+              "nominalResidualMm": 0.669553695,
+              "referenceDistanceMm": 17.038838211,
+              "terminals": [
+                "A2.1:14",
+                "A2.1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.365282899,
+              "fittedResidualMm": 0.1252827,
+              "heldOut": true,
+              "nominalDistanceMm": 14.750633668,
+              "nominalResidualMm": 0.489366531,
+              "referenceDistanceMm": 15.240000199,
+              "terminals": [
+                "A2.1:14",
+                "A2.1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.75284583,
+              "fittedResidualMm": 0.052845649,
+              "heldOut": true,
+              "nominalDistanceMm": 12.242700909,
+              "nominalResidualMm": 0.457299272,
+              "referenceDistanceMm": 12.700000181,
+              "terminals": [
+                "A2.1:14",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.531680929,
+              "fittedResidualMm": 0.008319089,
+              "heldOut": true,
+              "nominalDistanceMm": 2.430406513,
+              "nominalResidualMm": 0.109593505,
+              "referenceDistanceMm": 2.540000018,
+              "terminals": [
+                "A2.1:6",
+                "A2.1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.58472542,
+              "fittedResidualMm": 0.447459621,
+              "heldOut": true,
+              "nominalDistanceMm": 7.324943371,
+              "nominalResidualMm": 0.70724167,
+              "referenceDistanceMm": 8.032185041,
+              "terminals": [
+                "A2.1:6",
+                "A2.1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.189166482,
+              "fittedResidualMm": 0.430833617,
+              "heldOut": true,
+              "nominalDistanceMm": 6.948138296,
+              "nominalResidualMm": 0.671861803,
+              "referenceDistanceMm": 7.620000099,
+              "terminals": [
+                "A2.1:6",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.10840087,
+              "fittedResidualMm": 0.511599229,
+              "heldOut": true,
+              "nominalDistanceMm": 6.870084934,
+              "nominalResidualMm": 0.749915165,
+              "referenceDistanceMm": 7.620000099,
+              "terminals": [
+                "A2.1:7",
+                "A2.1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.609643724,
+              "fittedResidualMm": 0.422541949,
+              "heldOut": true,
+              "nominalDistanceMm": 7.348772728,
+              "nominalResidualMm": 0.683412945,
+              "referenceDistanceMm": 8.032185673,
+              "terminals": [
+                "A2.1:7",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.612437762,
+              "fittedResidualMm": 0.072437744,
+              "heldOut": true,
+              "nominalDistanceMm": 2.507933433,
+              "nominalResidualMm": 0.032066585,
+              "referenceDistanceMm": 2.540000018,
+              "terminals": [
+                "A2.1:8",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 22.958156546,
+              "fittedResidualMm": 0.098156853,
+              "heldOut": true,
+              "nominalDistanceMm": 22.039731736,
+              "nominalResidualMm": 0.820267957,
+              "referenceDistanceMm": 22.859999693,
+              "terminals": [
+                "A4:1",
+                "A4:10"
+              ]
+            },
+            {
+              "fittedDistanceMm": 24.11713089,
+              "fittedResidualMm": 0.02057481,
+              "heldOut": true,
+              "nominalDistanceMm": 23.166835721,
+              "nominalResidualMm": 0.929720359,
+              "referenceDistanceMm": 24.09655608,
+              "terminals": [
+                "A4:1",
+                "A4:11"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.086762708,
+              "fittedResidualMm": 0.533237191,
+              "heldOut": true,
+              "nominalDistanceMm": 6.849155554,
+              "nominalResidualMm": 0.770844345,
+              "referenceDistanceMm": 7.619999899,
+              "terminals": [
+                "A4:1",
+                "A4:20"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.669190387,
+              "fittedResidualMm": 0.04919049,
+              "heldOut": true,
+              "nominalDistanceMm": 7.362393347,
+              "nominalResidualMm": 0.25760655,
+              "referenceDistanceMm": 7.619999897,
+              "terminals": [
+                "A4:1",
+                "A4:4"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.295212433,
+              "fittedResidualMm": 0.324787466,
+              "heldOut": true,
+              "nominalDistanceMm": 7.050633293,
+              "nominalResidualMm": 0.569366606,
+              "referenceDistanceMm": 7.619999899,
+              "terminals": [
+                "A4:10",
+                "A4:11"
+              ]
+            },
+            {
+              "fittedDistanceMm": 23.885587882,
+              "fittedResidualMm": 0.210966933,
+              "heldOut": true,
+              "nominalDistanceMm": 22.943569308,
+              "nominalResidualMm": 1.152985507,
+              "referenceDistanceMm": 24.096554815,
+              "terminals": [
+                "A4:10",
+                "A4:20"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.28923564,
+              "fittedResidualMm": 0.049235844,
+              "heldOut": true,
+              "nominalDistanceMm": 14.677600592,
+              "nominalResidualMm": 0.562399204,
+              "referenceDistanceMm": 15.239999796,
+              "terminals": [
+                "A4:10",
+                "A4:4"
+              ]
+            },
+            {
+              "fittedDistanceMm": 22.840668335,
+              "fittedResidualMm": 0.019331358,
+              "heldOut": true,
+              "nominalDistanceMm": 21.926960754,
+              "nominalResidualMm": 0.933038939,
+              "referenceDistanceMm": 22.859999693,
+              "terminals": [
+                "A4:11",
+                "A4:20"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.944232968,
+              "fittedResidualMm": 0.09460524,
+              "heldOut": true,
+              "nominalDistanceMm": 16.286646975,
+              "nominalResidualMm": 0.752191233,
+              "referenceDistanceMm": 17.038838208,
+              "terminals": [
+                "A4:11",
+                "A4:4"
+              ]
+            },
+            {
+              "fittedDistanceMm": 10.297142072,
+              "fittedResidualMm": 0.479164422,
+              "heldOut": true,
+              "nominalDistanceMm": 9.916271504,
+              "nominalResidualMm": 0.86003499,
+              "referenceDistanceMm": 10.776306494,
+              "terminals": [
+                "A4:20",
+                "A4:4"
+              ]
+            },
+            {
+              "fittedDistanceMm": 33.462828269,
+              "fittedResidualMm": 0.442828457,
+              "heldOut": true,
+              "nominalDistanceMm": 32.124172076,
+              "nominalResidualMm": 0.895827736,
+              "referenceDistanceMm": 33.019999812,
+              "terminals": [
+                "A5:1",
+                "A5:14"
+              ]
+            },
+            {
+              "fittedDistanceMm": 48.122570786,
+              "fittedResidualMm": 0.137428865,
+              "heldOut": false,
+              "nominalDistanceMm": 46.197461477,
+              "nominalResidualMm": 2.062538174,
+              "referenceDistanceMm": 48.259999651,
+              "terminals": [
+                "A5:1",
+                "A5:20"
+              ]
+            },
+            {
+              "fittedDistanceMm": 50.341784475,
+              "fittedResidualMm": 0.267356809,
+              "heldOut": true,
+              "nominalDistanceMm": 48.35540751,
+              "nominalResidualMm": 2.253733774,
+              "referenceDistanceMm": 50.609141284,
+              "terminals": [
+                "A5:1",
+                "A5:21"
+              ]
+            },
+            {
+              "fittedDistanceMm": 29.406647951,
+              "fittedResidualMm": 0.214587414,
+              "heldOut": true,
+              "nominalDistanceMm": 28.276751421,
+              "nominalResidualMm": 1.344483944,
+              "referenceDistanceMm": 29.621235365,
+              "terminals": [
+                "A5:1",
+                "A5:30"
+              ]
+            },
+            {
+              "fittedDistanceMm": 19.405452932,
+              "fittedResidualMm": 0.432581181,
+              "heldOut": true,
+              "nominalDistanceMm": 18.70003863,
+              "nominalResidualMm": 1.137995483,
+              "referenceDistanceMm": 19.838034113,
+              "terminals": [
+                "A5:1",
+                "A5:35"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.61129982,
+              "fittedResidualMm": 0.628701017,
+              "heldOut": true,
+              "nominalDistanceMm": 14.121421377,
+              "nominalResidualMm": 1.11857946,
+              "referenceDistanceMm": 15.240000837,
+              "terminals": [
+                "A5:1",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 13.080595329,
+              "fittedResidualMm": 0.380595632,
+              "heldOut": true,
+              "nominalDistanceMm": 12.557315337,
+              "nominalResidualMm": 0.14268436,
+              "referenceDistanceMm": 12.699999697,
+              "terminals": [
+                "A5:1",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.379703083,
+              "fittedResidualMm": 0.139703246,
+              "heldOut": true,
+              "nominalDistanceMm": 14.764450247,
+              "nominalResidualMm": 0.47554959,
+              "referenceDistanceMm": 15.239999837,
+              "terminals": [
+                "A5:1",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 17.921575143,
+              "fittedResidualMm": 0.141575168,
+              "heldOut": true,
+              "nominalDistanceMm": 17.204635011,
+              "nominalResidualMm": 0.575364964,
+              "referenceDistanceMm": 17.779999975,
+              "terminals": [
+                "A5:1",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.659760398,
+              "fittedResidualMm": 0.580239441,
+              "heldOut": true,
+              "nominalDistanceMm": 14.0733068,
+              "nominalResidualMm": 1.166693039,
+              "referenceDistanceMm": 15.239999839,
+              "terminals": [
+                "A5:14",
+                "A5:20"
+              ]
+            },
+            {
+              "fittedDistanceMm": 20.67322047,
+              "fittedResidualMm": 0.87939399,
+              "heldOut": true,
+              "nominalDistanceMm": 19.91238227,
+              "nominalResidualMm": 1.64023219,
+              "referenceDistanceMm": 21.55261446,
+              "terminals": [
+                "A5:14",
+                "A5:21"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.443987526,
+              "fittedResidualMm": 0.594850503,
+              "heldOut": true,
+              "nominalDistanceMm": 15.868257854,
+              "nominalResidualMm": 1.170580175,
+              "referenceDistanceMm": 17.038838029,
+              "terminals": [
+                "A5:14",
+                "A5:30"
+              ]
+            },
+            {
+              "fittedDistanceMm": 25.210052012,
+              "fittedResidualMm": 0.189947782,
+              "heldOut": true,
+              "nominalDistanceMm": 24.255559349,
+              "nominalResidualMm": 1.144440445,
+              "referenceDistanceMm": 25.399999794,
+              "terminals": [
+                "A5:14",
+                "A5:35"
+              ]
+            },
+            {
+              "fittedDistanceMm": 36.680602141,
+              "fittedResidualMm": 0.313336738,
+              "heldOut": true,
+              "nominalDistanceMm": 35.250616993,
+              "nominalResidualMm": 1.11664841,
+              "referenceDistanceMm": 36.367265403,
+              "terminals": [
+                "A5:14",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 20.382401,
+              "fittedResidualMm": 0.062400885,
+              "heldOut": true,
+              "nominalDistanceMm": 19.567020261,
+              "nominalResidualMm": 0.752979854,
+              "referenceDistanceMm": 20.320000115,
+              "terminals": [
+                "A5:14",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 18.08369963,
+              "fittedResidualMm": 0.303699655,
+              "heldOut": true,
+              "nominalDistanceMm": 17.360280761,
+              "nominalResidualMm": 0.419719214,
+              "referenceDistanceMm": 17.779999975,
+              "terminals": [
+                "A5:14",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.541484454,
+              "fittedResidualMm": 0.301484617,
+              "heldOut": true,
+              "nominalDistanceMm": 14.919762145,
+              "nominalResidualMm": 0.320237692,
+              "referenceDistanceMm": 15.239999837,
+              "terminals": [
+                "A5:14",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.51290419,
+              "fittedResidualMm": 0.727096647,
+              "heldOut": true,
+              "nominalDistanceMm": 14.026343963,
+              "nominalResidualMm": 1.213656874,
+              "referenceDistanceMm": 15.240000837,
+              "terminals": [
+                "A5:20",
+                "A5:21"
+              ]
+            },
+            {
+              "fittedDistanceMm": 26.763515234,
+              "fittedResidualMm": 0.710786163,
+              "heldOut": true,
+              "nominalDistanceMm": 25.743335086,
+              "nominalResidualMm": 1.730966311,
+              "referenceDistanceMm": 27.474301397,
+              "terminals": [
+                "A5:20",
+                "A5:30"
+              ]
+            },
+            {
+              "fittedDistanceMm": 38.147921258,
+              "fittedResidualMm": 0.540206276,
+              "heldOut": true,
+              "nominalDistanceMm": 36.65752511,
+              "nominalResidualMm": 2.030602424,
+              "referenceDistanceMm": 38.688127534,
+              "terminals": [
+                "A5:20",
+                "A5:35"
+              ]
+            },
+            {
+              "fittedDistanceMm": 50.474165524,
+              "fittedResidualMm": 0.134975965,
+              "heldOut": true,
+              "nominalDistanceMm": 48.482138679,
+              "nominalResidualMm": 2.12700281,
+              "referenceDistanceMm": 50.609141489,
+              "terminals": [
+                "A5:20",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 35.042078409,
+              "fittedResidualMm": 0.517921546,
+              "heldOut": true,
+              "nominalDistanceMm": 33.640246312,
+              "nominalResidualMm": 1.919753643,
+              "referenceDistanceMm": 35.559999955,
+              "terminals": [
+                "A5:20",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 32.743245679,
+              "fittedResidualMm": 0.276754135,
+              "heldOut": true,
+              "nominalDistanceMm": 31.433379,
+              "nominalResidualMm": 1.586620814,
+              "referenceDistanceMm": 33.019999814,
+              "terminals": [
+                "A5:20",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 30.201115063,
+              "fittedResidualMm": 0.278884613,
+              "heldOut": true,
+              "nominalDistanceMm": 28.992942661,
+              "nominalResidualMm": 1.487057015,
+              "referenceDistanceMm": 30.479999676,
+              "terminals": [
+                "A5:20",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 22.600733806,
+              "fittedResidualMm": 0.25926645,
+              "heldOut": true,
+              "nominalDistanceMm": 21.696609319,
+              "nominalResidualMm": 1.163390937,
+              "referenceDistanceMm": 22.860000256,
+              "terminals": [
+                "A5:21",
+                "A5:30"
+              ]
+            },
+            {
+              "fittedDistanceMm": 35.351021346,
+              "fittedResidualMm": 0.208978606,
+              "heldOut": true,
+              "nominalDistanceMm": 33.93682834,
+              "nominalResidualMm": 1.623171612,
+              "referenceDistanceMm": 35.559999952,
+              "terminals": [
+                "A5:21",
+                "A5:35"
+              ]
+            },
+            {
+              "fittedDistanceMm": 48.395498541,
+              "fittedResidualMm": 0.13549889,
+              "heldOut": false,
+              "nominalDistanceMm": 46.459469961,
+              "nominalResidualMm": 1.80052969,
+              "referenceDistanceMm": 48.259999651,
+              "terminals": [
+                "A5:21",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 38.021069695,
+              "fittedResidualMm": 0.667057707,
+              "heldOut": true,
+              "nominalDistanceMm": 36.53658599,
+              "nominalResidualMm": 2.151541412,
+              "referenceDistanceMm": 38.688127402,
+              "terminals": [
+                "A5:21",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 35.926228423,
+              "fittedResidualMm": 0.441037119,
+              "heldOut": true,
+              "nominalDistanceMm": 34.527889274,
+              "nominalResidualMm": 1.839376268,
+              "referenceDistanceMm": 36.367265542,
+              "terminals": [
+                "A5:21",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 33.603380477,
+              "fittedResidualMm": 0.474295136,
+              "heldOut": true,
+              "nominalDistanceMm": 32.300412833,
+              "nominalResidualMm": 1.77726278,
+              "referenceDistanceMm": 34.077675613,
+              "terminals": [
+                "A5:21",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.750550346,
+              "fittedResidualMm": 0.050550649,
+              "heldOut": true,
+              "nominalDistanceMm": 12.24047473,
+              "nominalResidualMm": 0.459524967,
+              "referenceDistanceMm": 12.699999697,
+              "terminals": [
+                "A5:30",
+                "A5:35"
+              ]
+            },
+            {
+              "fittedDistanceMm": 25.795136431,
+              "fittedResidualMm": 0.395137035,
+              "heldOut": true,
+              "nominalDistanceMm": 24.7632223,
+              "nominalResidualMm": 0.636777096,
+              "referenceDistanceMm": 25.399999396,
+              "terminals": [
+                "A5:30",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 19.165343348,
+              "fittedResidualMm": 0.672690765,
+              "heldOut": true,
+              "nominalDistanceMm": 18.470114862,
+              "nominalResidualMm": 1.367919251,
+              "referenceDistanceMm": 19.838034113,
+              "terminals": [
+                "A5:30",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 17.78518221,
+              "fittedResidualMm": 0.531018442,
+              "heldOut": true,
+              "nominalDistanceMm": 17.151117433,
+              "nominalResidualMm": 1.165083219,
+              "referenceDistanceMm": 18.316200652,
+              "terminals": [
+                "A5:30",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.422970451,
+              "fittedResidualMm": 0.615867131,
+              "heldOut": true,
+              "nominalDistanceMm": 15.849311652,
+              "nominalResidualMm": 1.18952593,
+              "referenceDistanceMm": 17.038837582,
+              "terminals": [
+                "A5:30",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 13.044586468,
+              "fittedResidualMm": 0.344586769,
+              "heldOut": true,
+              "nominalDistanceMm": 12.522747943,
+              "nominalResidualMm": 0.177251756,
+              "referenceDistanceMm": 12.699999699,
+              "terminals": [
+                "A5:35",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.584224595,
+              "fittedResidualMm": 0.655775242,
+              "heldOut": true,
+              "nominalDistanceMm": 14.095246327,
+              "nominalResidualMm": 1.14475351,
+              "referenceDistanceMm": 15.239999837,
+              "terminals": [
+                "A5:35",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.843608791,
+              "fittedResidualMm": 0.606608227,
+              "heldOut": true,
+              "nominalDistanceMm": 14.343129449,
+              "nominalResidualMm": 1.107087569,
+              "referenceDistanceMm": 15.450217018,
+              "terminals": [
+                "A5:35",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.445145011,
+              "fittedResidualMm": 0.619225119,
+              "heldOut": true,
+              "nominalDistanceMm": 14.916480149,
+              "nominalResidualMm": 1.147889981,
+              "referenceDistanceMm": 16.06437013,
+              "terminals": [
+                "A5:35",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 19.770665878,
+              "fittedResidualMm": 0.067368493,
+              "heldOut": true,
+              "nominalDistanceMm": 19.050000944,
+              "nominalResidualMm": 0.788033427,
+              "referenceDistanceMm": 19.838034371,
+              "terminals": [
+                "A5:40",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 21.41249447,
+              "fittedResidualMm": 0.140120699,
+              "heldOut": true,
+              "nominalDistanceMm": 20.621140203,
+              "nominalResidualMm": 0.931474966,
+              "referenceDistanceMm": 21.552615169,
+              "terminals": [
+                "A5:40",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 23.30297092,
+              "fittedResidualMm": 0.114672095,
+              "heldOut": true,
+              "nominalDistanceMm": 22.43037216,
+              "nominalResidualMm": 0.987270855,
+              "referenceDistanceMm": 23.417643015,
+              "terminals": [
+                "A5:40",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.299359212,
+              "fittedResidualMm": 0.240640928,
+              "heldOut": true,
+              "nominalDistanceMm": 2.207379577,
+              "nominalResidualMm": 0.332620563,
+              "referenceDistanceMm": 2.54000014,
+              "terminals": [
+                "A5:6",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 4.840985713,
+              "fittedResidualMm": 0.239014565,
+              "heldOut": true,
+              "nominalDistanceMm": 4.647325414,
+              "nominalResidualMm": 0.432674864,
+              "referenceDistanceMm": 5.080000278,
+              "terminals": [
+                "A5:6",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.54232518,
+              "fittedResidualMm": 0.002325042,
+              "heldOut": true,
+              "nominalDistanceMm": 2.440625649,
+              "nominalResidualMm": 0.099374489,
+              "referenceDistanceMm": 2.540000138,
+              "terminals": [
+                "A5:7",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 28.445421627,
+              "fittedResidualMm": 0.505421325,
+              "heldOut": true,
+              "nominalDistanceMm": 27.307514446,
+              "nominalResidualMm": 0.632485856,
+              "referenceDistanceMm": 27.940000302,
+              "terminals": [
+                "A8:1",
+                "A8:12"
+              ]
+            },
+            {
+              "fittedDistanceMm": 31.056730132,
+              "fittedResidualMm": 0.769379102,
+              "heldOut": true,
+              "nominalDistanceMm": 29.853903323,
+              "nominalResidualMm": 1.972205911,
+              "referenceDistanceMm": 31.826109234,
+              "terminals": [
+                "A8:1",
+                "A8:13"
+              ]
+            },
+            {
+              "fittedDistanceMm": 19.025570942,
+              "fittedResidualMm": 0.812463903,
+              "heldOut": true,
+              "nominalDistanceMm": 18.329852298,
+              "nominalResidualMm": 1.508182547,
+              "referenceDistanceMm": 19.838034845,
+              "terminals": [
+                "A8:1",
+                "A8:19"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.432605982,
+              "fittedResidualMm": 0.807394731,
+              "heldOut": true,
+              "nominalDistanceMm": 13.948721828,
+              "nominalResidualMm": 1.291278885,
+              "referenceDistanceMm": 15.240000713,
+              "terminals": [
+                "A8:1",
+                "A8:24"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.797269683,
+              "fittedResidualMm": 0.097270077,
+              "heldOut": true,
+              "nominalDistanceMm": 12.285339109,
+              "nominalResidualMm": 0.414660497,
+              "referenceDistanceMm": 12.699999606,
+              "terminals": [
+                "A8:1",
+                "A8:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.144241158,
+              "fittedResidualMm": 1.095759555,
+              "heldOut": true,
+              "nominalDistanceMm": 13.66987854,
+              "nominalResidualMm": 1.570122173,
+              "referenceDistanceMm": 15.240000713,
+              "terminals": [
+                "A8:12",
+                "A8:13"
+              ]
+            },
+            {
+              "fittedDistanceMm": 20.959079524,
+              "fittedResidualMm": 0.593535456,
+              "heldOut": true,
+              "nominalDistanceMm": 20.183263034,
+              "nominalResidualMm": 1.369351946,
+              "referenceDistanceMm": 21.55261498,
+              "terminals": [
+                "A8:12",
+                "A8:19"
+              ]
+            },
+            {
+              "fittedDistanceMm": 31.891688699,
+              "fittedResidualMm": 0.065579162,
+              "heldOut": true,
+              "nominalDistanceMm": 30.660540665,
+              "nominalResidualMm": 1.165568872,
+              "referenceDistanceMm": 31.826109537,
+              "terminals": [
+                "A8:12",
+                "A8:24"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.648153614,
+              "fittedResidualMm": 0.408152918,
+              "heldOut": true,
+              "nominalDistanceMm": 15.022176962,
+              "nominalResidualMm": 0.217823734,
+              "referenceDistanceMm": 15.240000696,
+              "terminals": [
+                "A8:12",
+                "A8:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.796628653,
+              "fittedResidualMm": 0.44337106,
+              "heldOut": true,
+              "nominalDistanceMm": 14.204703343,
+              "nominalResidualMm": 1.03529637,
+              "referenceDistanceMm": 15.239999713,
+              "terminals": [
+                "A8:13",
+                "A8:19"
+              ]
+            },
+            {
+              "fittedDistanceMm": 27.655409863,
+              "fittedResidualMm": 0.284590439,
+              "heldOut": true,
+              "nominalDistanceMm": 26.549181577,
+              "nominalResidualMm": 1.390818725,
+              "referenceDistanceMm": 27.940000302,
+              "terminals": [
+                "A8:13",
+                "A8:24"
+              ]
+            },
+            {
+              "fittedDistanceMm": 20.505649147,
+              "fittedResidualMm": 1.046965833,
+              "heldOut": true,
+              "nominalDistanceMm": 19.746746345,
+              "nominalResidualMm": 1.805868635,
+              "referenceDistanceMm": 21.55261498,
+              "terminals": [
+                "A8:13",
+                "A8:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.864105466,
+              "fittedResidualMm": 0.164104877,
+              "heldOut": true,
+              "nominalDistanceMm": 12.34965864,
+              "nominalResidualMm": 0.350341949,
+              "referenceDistanceMm": 12.700000589,
+              "terminals": [
+                "A8:19",
+                "A8:24"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.022691416,
+              "fittedResidualMm": 1.21730828,
+              "heldOut": true,
+              "nominalDistanceMm": 13.552538212,
+              "nominalResidualMm": 1.687461484,
+              "referenceDistanceMm": 15.239999696,
+              "terminals": [
+                "A8:19",
+                "A8:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 19.288524715,
+              "fittedResidualMm": 0.549509232,
+              "heldOut": true,
+              "nominalDistanceMm": 18.588648678,
+              "nominalResidualMm": 1.249385269,
+              "referenceDistanceMm": 19.838033947,
+              "terminals": [
+                "A8:24",
+                "A8:6"
+              ]
+            }
+          ]
+        },
+        {
+          "estimatedEnvelopeMm": [
+            276.822104,
+            47.596002
+          ],
+          "id": "u880-domestic-longitudinal",
+          "independentCheckComponents": [
+            "A2.1",
+            "A4",
+            "A8"
+          ],
+          "maxHeldOutResidualMm": 1.220176647,
+          "maxIndependentPackageResidualMm": 1.220176647,
+          "maxNominalHeldOutResidualMm": 1.972205911,
+          "pairs": [
+            {
+              "fittedDistanceMm": 7.66681446,
+              "fittedResidualMm": 0.046814738,
+              "heldOut": false,
+              "nominalDistanceMm": 7.409784708,
+              "nominalResidualMm": 0.210215014,
+              "referenceDistanceMm": 7.619999722,
+              "terminals": [
+                "A1:1",
+                "A1:14"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.5126775,
+              "fittedResidualMm": 0.027322396,
+              "heldOut": true,
+              "nominalDistanceMm": 2.450746269,
+              "nominalResidualMm": 0.089253627,
+              "referenceDistanceMm": 2.539999896,
+              "terminals": [
+                "A1:1",
+                "A1:2"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.37501484,
+              "fittedResidualMm": 0.324984708,
+              "heldOut": true,
+              "nominalDistanceMm": 12.070040465,
+              "nominalResidualMm": 0.629959083,
+              "referenceDistanceMm": 12.699999548,
+              "terminals": [
+                "A1:1",
+                "A1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.878155502,
+              "fittedResidualMm": 0.361843942,
+              "heldOut": true,
+              "nominalDistanceMm": 14.511491849,
+              "nominalResidualMm": 0.728507595,
+              "referenceDistanceMm": 15.239999444,
+              "terminals": [
+                "A1:1",
+                "A1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.721533931,
+              "fittedResidualMm": 0.317303436,
+              "heldOut": true,
+              "nominalDistanceMm": 16.278749041,
+              "nominalResidualMm": 0.760088326,
+              "referenceDistanceMm": 17.038837367,
+              "terminals": [
+                "A1:1",
+                "A1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 8.091273753,
+              "fittedResidualMm": 0.059088476,
+              "heldOut": true,
+              "nominalDistanceMm": 7.82818314,
+              "nominalResidualMm": 0.204002137,
+              "referenceDistanceMm": 8.032185277,
+              "terminals": [
+                "A1:14",
+                "A1:2"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.745853292,
+              "fittedResidualMm": 0.064763819,
+              "heldOut": true,
+              "nominalDistanceMm": 14.347111338,
+              "nominalResidualMm": 0.463505773,
+              "referenceDistanceMm": 14.810617111,
+              "terminals": [
+                "A1:14",
+                "A1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.912453658,
+              "fittedResidualMm": 0.126383709,
+              "heldOut": true,
+              "nominalDistanceMm": 16.465232473,
+              "nominalResidualMm": 0.573604894,
+              "referenceDistanceMm": 17.038837367,
+              "terminals": [
+                "A1:14",
+                "A1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.107257391,
+              "fittedResidualMm": 0.132742053,
+              "heldOut": true,
+              "nominalDistanceMm": 14.734947156,
+              "nominalResidualMm": 0.505052288,
+              "referenceDistanceMm": 15.239999444,
+              "terminals": [
+                "A1:14",
+                "A1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 9.862927775,
+              "fittedResidualMm": 0.297071876,
+              "heldOut": true,
+              "nominalDistanceMm": 9.619859633,
+              "nominalResidualMm": 0.540140018,
+              "referenceDistanceMm": 10.159999651,
+              "terminals": [
+                "A1:2",
+                "A1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.365869389,
+              "fittedResidualMm": 0.334130159,
+              "heldOut": true,
+              "nominalDistanceMm": 12.061120397,
+              "nominalResidualMm": 0.638879151,
+              "referenceDistanceMm": 12.699999548,
+              "terminals": [
+                "A1:2",
+                "A1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.505094288,
+              "fittedResidualMm": 0.305523166,
+              "heldOut": true,
+              "nominalDistanceMm": 14.112670602,
+              "nominalResidualMm": 0.697946852,
+              "referenceDistanceMm": 14.810617454,
+              "terminals": [
+                "A1:2",
+                "A1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.50353207,
+              "fittedResidualMm": 0.036467826,
+              "heldOut": true,
+              "nominalDistanceMm": 2.441826221,
+              "nominalResidualMm": 0.098173675,
+              "referenceDistanceMm": 2.539999896,
+              "terminals": [
+                "A1:6",
+                "A1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 8.022861157,
+              "fittedResidualMm": 0.009323487,
+              "heldOut": true,
+              "nominalDistanceMm": 7.760861723,
+              "nominalResidualMm": 0.271322921,
+              "referenceDistanceMm": 8.032184644,
+              "terminals": [
+                "A1:6",
+                "A1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.571850076,
+              "fittedResidualMm": 0.048149646,
+              "heldOut": false,
+              "nominalDistanceMm": 7.317948896,
+              "nominalResidualMm": 0.302050826,
+              "referenceDistanceMm": 7.619999722,
+              "terminals": [
+                "A1:7",
+                "A1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.59207905,
+              "fittedResidualMm": 0.440105991,
+              "heldOut": true,
+              "nominalDistanceMm": 7.345004617,
+              "nominalResidualMm": 0.687180424,
+              "referenceDistanceMm": 8.032185041,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:13"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.28077565,
+              "fittedResidualMm": 0.339224449,
+              "heldOut": true,
+              "nominalDistanceMm": 7.036657525,
+              "nominalResidualMm": 0.583342574,
+              "referenceDistanceMm": 7.620000099,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:14"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.484842074,
+              "fittedResidualMm": 0.215158107,
+              "heldOut": true,
+              "nominalDistanceMm": 12.177149875,
+              "nominalResidualMm": 0.522850306,
+              "referenceDistanceMm": 12.700000181,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.975993355,
+              "fittedResidualMm": 0.264006844,
+              "heldOut": true,
+              "nominalDistanceMm": 14.606915005,
+              "nominalResidualMm": 0.633085194,
+              "referenceDistanceMm": 15.240000199,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.547998873,
+              "fittedResidualMm": 0.490839338,
+              "heldOut": true,
+              "nominalDistanceMm": 16.11380926,
+              "nominalResidualMm": 0.925028951,
+              "referenceDistanceMm": 17.038838211,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.282521738,
+              "fittedResidualMm": 0.528096453,
+              "heldOut": true,
+              "nominalDistanceMm": 13.899601715,
+              "nominalResidualMm": 0.911016476,
+              "referenceDistanceMm": 14.810618191,
+              "terminals": [
+                "A2.1:1",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.665855659,
+              "fittedResidualMm": 0.125855641,
+              "heldOut": true,
+              "nominalDistanceMm": 2.600109352,
+              "nominalResidualMm": 0.060109334,
+              "referenceDistanceMm": 2.540000018,
+              "terminals": [
+                "A2.1:13",
+                "A2.1:14"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.3378432,
+              "fittedResidualMm": 0.362156591,
+              "heldOut": true,
+              "nominalDistanceMm": 11.995666126,
+              "nominalResidualMm": 0.704333665,
+              "referenceDistanceMm": 12.699999791,
+              "terminals": [
+                "A2.1:13",
+                "A2.1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.404646823,
+              "fittedResidualMm": 0.405971025,
+              "heldOut": true,
+              "nominalDistanceMm": 14.017359167,
+              "nominalResidualMm": 0.793258681,
+              "referenceDistanceMm": 14.810617848,
+              "terminals": [
+                "A2.1:13",
+                "A2.1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.458792801,
+              "fittedResidualMm": 0.24120738,
+              "heldOut": true,
+              "nominalDistanceMm": 12.151740171,
+              "nominalResidualMm": 0.54826001,
+              "referenceDistanceMm": 12.700000181,
+              "terminals": [
+                "A2.1:13",
+                "A2.1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 9.887530808,
+              "fittedResidualMm": 0.272469356,
+              "heldOut": true,
+              "nominalDistanceMm": 9.643850625,
+              "nominalResidualMm": 0.516149539,
+              "referenceDistanceMm": 10.160000164,
+              "terminals": [
+                "A2.1:13",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.632741157,
+              "fittedResidualMm": 0.177876691,
+              "heldOut": true,
+              "nominalDistanceMm": 14.238930231,
+              "nominalResidualMm": 0.571687617,
+              "referenceDistanceMm": 14.810617848,
+              "terminals": [
+                "A2.1:14",
+                "A2.1:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.812198067,
+              "fittedResidualMm": 0.226640144,
+              "heldOut": true,
+              "nominalDistanceMm": 16.369284516,
+              "nominalResidualMm": 0.669553695,
+              "referenceDistanceMm": 17.038838211,
+              "terminals": [
+                "A2.1:14",
+                "A2.1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.123378872,
+              "fittedResidualMm": 0.116621327,
+              "heldOut": true,
+              "nominalDistanceMm": 14.750633668,
+              "nominalResidualMm": 0.489366531,
+              "referenceDistanceMm": 15.240000199,
+              "terminals": [
+                "A2.1:14",
+                "A2.1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.552071756,
+              "fittedResidualMm": 0.147928425,
+              "heldOut": true,
+              "nominalDistanceMm": 12.242700909,
+              "nominalResidualMm": 0.457299272,
+              "referenceDistanceMm": 12.700000181,
+              "terminals": [
+                "A2.1:14",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.491821021,
+              "fittedResidualMm": 0.048178997,
+              "heldOut": true,
+              "nominalDistanceMm": 2.430406513,
+              "nominalResidualMm": 0.109593505,
+              "referenceDistanceMm": 2.540000018,
+              "terminals": [
+                "A2.1:6",
+                "A2.1:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.571461107,
+              "fittedResidualMm": 0.460723934,
+              "heldOut": true,
+              "nominalDistanceMm": 7.324943371,
+              "nominalResidualMm": 0.70724167,
+              "referenceDistanceMm": 8.032185041,
+              "terminals": [
+                "A2.1:6",
+                "A2.1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.189202409,
+              "fittedResidualMm": 0.43079769,
+              "heldOut": true,
+              "nominalDistanceMm": 6.948138296,
+              "nominalResidualMm": 0.671861803,
+              "referenceDistanceMm": 7.620000099,
+              "terminals": [
+                "A2.1:6",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.108447177,
+              "fittedResidualMm": 0.511552922,
+              "heldOut": true,
+              "nominalDistanceMm": 6.870084934,
+              "nominalResidualMm": 0.749915165,
+              "referenceDistanceMm": 7.620000099,
+              "terminals": [
+                "A2.1:7",
+                "A2.1:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.595765194,
+              "fittedResidualMm": 0.436420479,
+              "heldOut": true,
+              "nominalDistanceMm": 7.348772728,
+              "nominalResidualMm": 0.683412945,
+              "referenceDistanceMm": 8.032185673,
+              "terminals": [
+                "A2.1:7",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.571307821,
+              "fittedResidualMm": 0.031307803,
+              "heldOut": true,
+              "nominalDistanceMm": 2.507933433,
+              "nominalResidualMm": 0.032066585,
+              "referenceDistanceMm": 2.540000018,
+              "terminals": [
+                "A2.1:8",
+                "A2.1:9"
+              ]
+            },
+            {
+              "fittedDistanceMm": 22.596611411,
+              "fittedResidualMm": 0.263388282,
+              "heldOut": true,
+              "nominalDistanceMm": 22.039731736,
+              "nominalResidualMm": 0.820267957,
+              "referenceDistanceMm": 22.859999693,
+              "terminals": [
+                "A4:1",
+                "A4:10"
+              ]
+            },
+            {
+              "fittedDistanceMm": 23.772728161,
+              "fittedResidualMm": 0.323827919,
+              "heldOut": true,
+              "nominalDistanceMm": 23.166835721,
+              "nominalResidualMm": 0.929720359,
+              "referenceDistanceMm": 24.09655608,
+              "terminals": [
+                "A4:1",
+                "A4:11"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.086768548,
+              "fittedResidualMm": 0.533231351,
+              "heldOut": true,
+              "nominalDistanceMm": 6.849155554,
+              "nominalResidualMm": 0.770844345,
+              "referenceDistanceMm": 7.619999899,
+              "terminals": [
+                "A4:1",
+                "A4:20"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.548424489,
+              "fittedResidualMm": 0.071575408,
+              "heldOut": true,
+              "nominalDistanceMm": 7.362393347,
+              "nominalResidualMm": 0.25760655,
+              "referenceDistanceMm": 7.619999897,
+              "terminals": [
+                "A4:1",
+                "A4:4"
+              ]
+            },
+            {
+              "fittedDistanceMm": 7.295259552,
+              "fittedResidualMm": 0.324740347,
+              "heldOut": true,
+              "nominalDistanceMm": 7.050633293,
+              "nominalResidualMm": 0.569366606,
+              "referenceDistanceMm": 7.619999899,
+              "terminals": [
+                "A4:10",
+                "A4:11"
+              ]
+            },
+            {
+              "fittedDistanceMm": 23.542424191,
+              "fittedResidualMm": 0.554130624,
+              "heldOut": true,
+              "nominalDistanceMm": 22.943569308,
+              "nominalResidualMm": 1.152985507,
+              "referenceDistanceMm": 24.096554815,
+              "terminals": [
+                "A4:10",
+                "A4:20"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.048460717,
+              "fittedResidualMm": 0.191539079,
+              "heldOut": true,
+              "nominalDistanceMm": 14.677600592,
+              "nominalResidualMm": 0.562399204,
+              "referenceDistanceMm": 15.239999796,
+              "terminals": [
+                "A4:10",
+                "A4:4"
+              ]
+            },
+            {
+              "fittedDistanceMm": 22.481015416,
+              "fittedResidualMm": 0.378984277,
+              "heldOut": true,
+              "nominalDistanceMm": 21.926960754,
+              "nominalResidualMm": 0.933038939,
+              "referenceDistanceMm": 22.859999693,
+              "terminals": [
+                "A4:11",
+                "A4:20"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.726840153,
+              "fittedResidualMm": 0.311998055,
+              "heldOut": true,
+              "nominalDistanceMm": 16.286646975,
+              "nominalResidualMm": 0.752191233,
+              "referenceDistanceMm": 17.038838208,
+              "terminals": [
+                "A4:11",
+                "A4:4"
+              ]
+            },
+            {
+              "fittedDistanceMm": 10.210699926,
+              "fittedResidualMm": 0.565606568,
+              "heldOut": true,
+              "nominalDistanceMm": 9.916271504,
+              "nominalResidualMm": 0.86003499,
+              "referenceDistanceMm": 10.776306494,
+              "terminals": [
+                "A4:20",
+                "A4:4"
+              ]
+            },
+            {
+              "fittedDistanceMm": 32.935856935,
+              "fittedResidualMm": 0.435856885,
+              "heldOut": true,
+              "nominalDistanceMm": 32.124172076,
+              "nominalResidualMm": 0.375827974,
+              "referenceDistanceMm": 32.50000005,
+              "terminals": [
+                "A5:1",
+                "A5:14"
+              ]
+            },
+            {
+              "fittedDistanceMm": 47.364736581,
+              "fittedResidualMm": 0.135263419,
+              "heldOut": false,
+              "nominalDistanceMm": 46.197461477,
+              "nominalResidualMm": 1.302538523,
+              "referenceDistanceMm": 47.5,
+              "terminals": [
+                "A5:1",
+                "A5:20"
+              ]
+            },
+            {
+              "fittedDistanceMm": 49.61618628,
+              "fittedResidualMm": 0.268757496,
+              "heldOut": true,
+              "nominalDistanceMm": 48.35540751,
+              "nominalResidualMm": 1.529536266,
+              "referenceDistanceMm": 49.884943776,
+              "terminals": [
+                "A5:1",
+                "A5:21"
+              ]
+            },
+            {
+              "fittedDistanceMm": 29.057016386,
+              "fittedResidualMm": 0.221945254,
+              "heldOut": true,
+              "nominalDistanceMm": 28.276751421,
+              "nominalResidualMm": 1.002210219,
+              "referenceDistanceMm": 29.27896164,
+              "terminals": [
+                "A5:1",
+                "A5:30"
+              ]
+            },
+            {
+              "fittedDistanceMm": 19.2725883,
+              "fittedResidualMm": 0.438007837,
+              "heldOut": true,
+              "nominalDistanceMm": 18.70003863,
+              "nominalResidualMm": 1.010557507,
+              "referenceDistanceMm": 19.710596137,
+              "terminals": [
+                "A5:1",
+                "A5:35"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.611345024,
+              "fittedResidualMm": 0.628655813,
+              "heldOut": true,
+              "nominalDistanceMm": 14.121421377,
+              "nominalResidualMm": 1.11857946,
+              "referenceDistanceMm": 15.240000837,
+              "terminals": [
+                "A5:1",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.874601991,
+              "fittedResidualMm": 0.374602199,
+              "heldOut": true,
+              "nominalDistanceMm": 12.557315337,
+              "nominalResidualMm": 0.057315545,
+              "referenceDistanceMm": 12.499999792,
+              "terminals": [
+                "A5:1",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.137506649,
+              "fittedResidualMm": 0.137506701,
+              "heldOut": true,
+              "nominalDistanceMm": 14.764450247,
+              "nominalResidualMm": 0.235549701,
+              "referenceDistanceMm": 14.999999948,
+              "terminals": [
+                "A5:1",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 17.639345629,
+              "fittedResidualMm": 0.139345527,
+              "heldOut": true,
+              "nominalDistanceMm": 17.204635011,
+              "nominalResidualMm": 0.295365091,
+              "referenceDistanceMm": 17.500000102,
+              "terminals": [
+                "A5:1",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.428897814,
+              "fittedResidualMm": 0.571102136,
+              "heldOut": true,
+              "nominalDistanceMm": 14.0733068,
+              "nominalResidualMm": 0.92669315,
+              "referenceDistanceMm": 14.99999995,
+              "terminals": [
+                "A5:14",
+                "A5:20"
+              ]
+            },
+            {
+              "fittedDistanceMm": 20.508971243,
+              "fittedResidualMm": 0.874611094,
+              "heldOut": true,
+              "nominalDistanceMm": 19.91238227,
+              "nominalResidualMm": 1.471200067,
+              "referenceDistanceMm": 21.383582337,
+              "terminals": [
+                "A5:14",
+                "A5:21"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.384894331,
+              "fittedResidualMm": 0.600617199,
+              "heldOut": true,
+              "nominalDistanceMm": 15.868257854,
+              "nominalResidualMm": 1.117253676,
+              "referenceDistanceMm": 16.98551153,
+              "terminals": [
+                "A5:14",
+                "A5:30"
+              ]
+            },
+            {
+              "fittedDistanceMm": 24.944811731,
+              "fittedResidualMm": 0.199921217,
+              "heldOut": true,
+              "nominalDistanceMm": 24.255559349,
+              "nominalResidualMm": 0.889173599,
+              "referenceDistanceMm": 25.144732948,
+              "terminals": [
+                "A5:14",
+                "A5:35"
+              ]
+            },
+            {
+              "fittedDistanceMm": 36.194251964,
+              "fittedResidualMm": 0.298463794,
+              "heldOut": true,
+              "nominalDistanceMm": 35.250616993,
+              "nominalResidualMm": 0.645171177,
+              "referenceDistanceMm": 35.89578817,
+              "terminals": [
+                "A5:14",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 20.061425696,
+              "fittedResidualMm": 0.061425438,
+              "heldOut": true,
+              "nominalDistanceMm": 19.567020261,
+              "nominalResidualMm": 0.432979997,
+              "referenceDistanceMm": 20.000000258,
+              "terminals": [
+                "A5:14",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 17.798933929,
+              "fittedResidualMm": 0.298933827,
+              "heldOut": true,
+              "nominalDistanceMm": 17.360280761,
+              "nominalResidualMm": 0.139719341,
+              "referenceDistanceMm": 17.500000102,
+              "terminals": [
+                "A5:14",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.296746338,
+              "fittedResidualMm": 0.29674639,
+              "heldOut": true,
+              "nominalDistanceMm": 14.919762145,
+              "nominalResidualMm": 0.080237803,
+              "referenceDistanceMm": 14.999999948,
+              "terminals": [
+                "A5:14",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.512995739,
+              "fittedResidualMm": 0.727005098,
+              "heldOut": true,
+              "nominalDistanceMm": 14.026343963,
+              "nominalResidualMm": 1.213656874,
+              "referenceDistanceMm": 15.240000837,
+              "terminals": [
+                "A5:20",
+                "A5:21"
+              ]
+            },
+            {
+              "fittedDistanceMm": 26.465192718,
+              "fittedResidualMm": 0.710304408,
+              "heldOut": true,
+              "nominalDistanceMm": 25.743335086,
+              "nominalResidualMm": 1.43216204,
+              "referenceDistanceMm": 27.175497126,
+              "terminals": [
+                "A5:20",
+                "A5:30"
+              ]
+            },
+            {
+              "fittedDistanceMm": 37.634289624,
+              "fittedResidualMm": 0.539754302,
+              "heldOut": true,
+              "nominalDistanceMm": 36.65752511,
+              "nominalResidualMm": 1.516518816,
+              "referenceDistanceMm": 38.174043926,
+              "terminals": [
+                "A5:20",
+                "A5:35"
+              ]
+            },
+            {
+              "fittedDistanceMm": 49.745618307,
+              "fittedResidualMm": 0.139325669,
+              "heldOut": true,
+              "nominalDistanceMm": 48.482138679,
+              "nominalResidualMm": 1.402805297,
+              "referenceDistanceMm": 49.884943976,
+              "terminals": [
+                "A5:20",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 34.490239191,
+              "fittedResidualMm": 0.509761017,
+              "heldOut": true,
+              "nominalDistanceMm": 33.640246312,
+              "nominalResidualMm": 1.359753896,
+              "referenceDistanceMm": 35.000000208,
+              "terminals": [
+                "A5:20",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 32.227613962,
+              "fittedResidualMm": 0.27238609,
+              "heldOut": true,
+              "nominalDistanceMm": 31.433379,
+              "nominalResidualMm": 1.066621052,
+              "referenceDistanceMm": 32.500000052,
+              "terminals": [
+                "A5:20",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 29.725512285,
+              "fittedResidualMm": 0.274487613,
+              "heldOut": true,
+              "nominalDistanceMm": 28.992942661,
+              "nominalResidualMm": 1.007057237,
+              "referenceDistanceMm": 29.999999898,
+              "terminals": [
+                "A5:20",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 22.244821958,
+              "fittedResidualMm": 0.255178456,
+              "heldOut": true,
+              "nominalDistanceMm": 21.696609319,
+              "nominalResidualMm": 0.803391095,
+              "referenceDistanceMm": 22.500000414,
+              "terminals": [
+                "A5:21",
+                "A5:30"
+              ]
+            },
+            {
+              "fittedDistanceMm": 34.794312335,
+              "fittedResidualMm": 0.205687871,
+              "heldOut": true,
+              "nominalDistanceMm": 33.93682834,
+              "nominalResidualMm": 1.063171866,
+              "referenceDistanceMm": 35.000000206,
+              "terminals": [
+                "A5:21",
+                "A5:35"
+              ]
+            },
+            {
+              "fittedDistanceMm": 47.633363852,
+              "fittedResidualMm": 0.133363852,
+              "heldOut": false,
+              "nominalDistanceMm": 46.459469961,
+              "nominalResidualMm": 1.040530039,
+              "referenceDistanceMm": 47.5,
+              "terminals": [
+                "A5:21",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 37.511479649,
+              "fittedResidualMm": 0.662564149,
+              "heldOut": true,
+              "nominalDistanceMm": 36.53658599,
+              "nominalResidualMm": 1.637457808,
+              "referenceDistanceMm": 38.174043798,
+              "terminals": [
+                "A5:21",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 35.455337269,
+              "fittedResidualMm": 0.440451047,
+              "heldOut": true,
+              "nominalDistanceMm": 34.527889274,
+              "nominalResidualMm": 1.367899042,
+              "referenceDistanceMm": 35.895788316,
+              "terminals": [
+                "A5:21",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 33.175033989,
+              "fittedResidualMm": 0.474001495,
+              "heldOut": true,
+              "nominalDistanceMm": 32.300412833,
+              "nominalResidualMm": 1.348622651,
+              "referenceDistanceMm": 33.649035484,
+              "terminals": [
+                "A5:21",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.549757391,
+              "fittedResidualMm": 0.049757599,
+              "heldOut": true,
+              "nominalDistanceMm": 12.24047473,
+              "nominalResidualMm": 0.259525062,
+              "referenceDistanceMm": 12.499999792,
+              "terminals": [
+                "A5:30",
+                "A5:35"
+              ]
+            },
+            {
+              "fittedDistanceMm": 25.388919541,
+              "fittedResidualMm": 0.388919955,
+              "heldOut": true,
+              "nominalDistanceMm": 24.7632223,
+              "nominalResidualMm": 0.236777286,
+              "referenceDistanceMm": 24.999999586,
+              "terminals": [
+                "A5:30",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 19.037664851,
+              "fittedResidualMm": 0.672931286,
+              "heldOut": true,
+              "nominalDistanceMm": 18.470114862,
+              "nominalResidualMm": 1.240481275,
+              "referenceDistanceMm": 19.710596137,
+              "terminals": [
+                "A5:30",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 17.693656168,
+              "fittedResidualMm": 0.534278661,
+              "heldOut": true,
+              "nominalDistanceMm": 17.151117433,
+              "nominalResidualMm": 1.076817396,
+              "referenceDistanceMm": 18.227934829,
+              "terminals": [
+                "A5:30",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 16.367191185,
+              "fittedResidualMm": 0.618319914,
+              "heldOut": true,
+              "nominalDistanceMm": 15.849311652,
+              "nominalResidualMm": 1.136199447,
+              "referenceDistanceMm": 16.985511099,
+              "terminals": [
+                "A5:30",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.839162539,
+              "fittedResidualMm": 0.339162745,
+              "heldOut": true,
+              "nominalDistanceMm": 12.522747943,
+              "nominalResidualMm": 0.022748149,
+              "referenceDistanceMm": 12.499999794,
+              "terminals": [
+                "A5:35",
+                "A5:40"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.58425135,
+              "fittedResidualMm": 0.655748487,
+              "heldOut": true,
+              "nominalDistanceMm": 14.095246327,
+              "nominalResidualMm": 1.14475351,
+              "referenceDistanceMm": 15.239999837,
+              "terminals": [
+                "A5:35",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.836845959,
+              "fittedResidualMm": 0.606845502,
+              "heldOut": true,
+              "nominalDistanceMm": 14.343129449,
+              "nominalResidualMm": 1.100562012,
+              "referenceDistanceMm": 15.443691461,
+              "terminals": [
+                "A5:35",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.418962872,
+              "fittedResidualMm": 0.620288604,
+              "heldOut": true,
+              "nominalDistanceMm": 14.916480149,
+              "nominalResidualMm": 1.122771327,
+              "referenceDistanceMm": 16.039251476,
+              "terminals": [
+                "A5:35",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 19.630501161,
+              "fittedResidualMm": 0.080095231,
+              "heldOut": true,
+              "nominalDistanceMm": 19.050000944,
+              "nominalResidualMm": 0.660595448,
+              "referenceDistanceMm": 19.710596392,
+              "terminals": [
+                "A5:40",
+                "A5:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 21.234324649,
+              "fittedResidualMm": 0.149258398,
+              "heldOut": true,
+              "nominalDistanceMm": 20.621140203,
+              "nominalResidualMm": 0.762442844,
+              "referenceDistanceMm": 21.383583047,
+              "terminals": [
+                "A5:40",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 23.081386615,
+              "fittedResidualMm": 0.124380097,
+              "heldOut": true,
+              "nominalDistanceMm": 22.43037216,
+              "nominalResidualMm": 0.775394552,
+              "referenceDistanceMm": 23.205766712,
+              "terminals": [
+                "A5:40",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.263160142,
+              "fittedResidualMm": 0.236840014,
+              "heldOut": true,
+              "nominalDistanceMm": 2.207379577,
+              "nominalResidualMm": 0.292620579,
+              "referenceDistanceMm": 2.500000156,
+              "terminals": [
+                "A5:6",
+                "A5:7"
+              ]
+            },
+            {
+              "fittedDistanceMm": 4.764749632,
+              "fittedResidualMm": 0.235250678,
+              "heldOut": true,
+              "nominalDistanceMm": 4.647325414,
+              "nominalResidualMm": 0.352674896,
+              "referenceDistanceMm": 5.00000031,
+              "terminals": [
+                "A5:6",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 2.502299356,
+              "fittedResidualMm": 0.002299202,
+              "heldOut": true,
+              "nominalDistanceMm": 2.440625649,
+              "nominalResidualMm": 0.059374505,
+              "referenceDistanceMm": 2.500000154,
+              "terminals": [
+                "A5:7",
+                "A5:8"
+              ]
+            },
+            {
+              "fittedDistanceMm": 27.997540678,
+              "fittedResidualMm": 0.057540376,
+              "heldOut": true,
+              "nominalDistanceMm": 27.307514446,
+              "nominalResidualMm": 0.632485856,
+              "referenceDistanceMm": 27.940000302,
+              "terminals": [
+                "A8:1",
+                "A8:12"
+              ]
+            },
+            {
+              "fittedDistanceMm": 30.664247454,
+              "fittedResidualMm": 1.16186178,
+              "heldOut": true,
+              "nominalDistanceMm": 29.853903323,
+              "nominalResidualMm": 1.972205911,
+              "referenceDistanceMm": 31.826109234,
+              "terminals": [
+                "A8:1",
+                "A8:13"
+              ]
+            },
+            {
+              "fittedDistanceMm": 18.885308089,
+              "fittedResidualMm": 0.952726756,
+              "heldOut": true,
+              "nominalDistanceMm": 18.329852298,
+              "nominalResidualMm": 1.508182547,
+              "referenceDistanceMm": 19.838034845,
+              "terminals": [
+                "A8:1",
+                "A8:19"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.432658271,
+              "fittedResidualMm": 0.807342442,
+              "heldOut": true,
+              "nominalDistanceMm": 13.948721828,
+              "nominalResidualMm": 1.291278885,
+              "referenceDistanceMm": 15.240000713,
+              "terminals": [
+                "A8:1",
+                "A8:24"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.595775235,
+              "fittedResidualMm": 0.104224371,
+              "heldOut": true,
+              "nominalDistanceMm": 12.285339109,
+              "nominalResidualMm": 0.414660497,
+              "referenceDistanceMm": 12.699999606,
+              "terminals": [
+                "A8:1",
+                "A8:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.14393771,
+              "fittedResidualMm": 1.096063003,
+              "heldOut": true,
+              "nominalDistanceMm": 13.66987854,
+              "nominalResidualMm": 1.570122173,
+              "referenceDistanceMm": 15.240000713,
+              "terminals": [
+                "A8:12",
+                "A8:13"
+              ]
+            },
+            {
+              "fittedDistanceMm": 20.781716312,
+              "fittedResidualMm": 0.770898668,
+              "heldOut": true,
+              "nominalDistanceMm": 20.183263034,
+              "nominalResidualMm": 1.369351946,
+              "referenceDistanceMm": 21.55261498,
+              "terminals": [
+                "A8:12",
+                "A8:19"
+              ]
+            },
+            {
+              "fittedDistanceMm": 31.498448546,
+              "fittedResidualMm": 0.327660991,
+              "heldOut": true,
+              "nominalDistanceMm": 30.660540665,
+              "nominalResidualMm": 1.165568872,
+              "referenceDistanceMm": 31.826109537,
+              "terminals": [
+                "A8:12",
+                "A8:24"
+              ]
+            },
+            {
+              "fittedDistanceMm": 15.40176714,
+              "fittedResidualMm": 0.161766444,
+              "heldOut": true,
+              "nominalDistanceMm": 15.022176962,
+              "nominalResidualMm": 0.217823734,
+              "referenceDistanceMm": 15.240000696,
+              "terminals": [
+                "A8:12",
+                "A8:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.563619476,
+              "fittedResidualMm": 0.676380237,
+              "heldOut": true,
+              "nominalDistanceMm": 14.204703343,
+              "nominalResidualMm": 1.03529637,
+              "referenceDistanceMm": 15.239999713,
+              "terminals": [
+                "A8:13",
+                "A8:19"
+              ]
+            },
+            {
+              "fittedDistanceMm": 27.220153336,
+              "fittedResidualMm": 0.719846966,
+              "heldOut": true,
+              "nominalDistanceMm": 26.549181577,
+              "nominalResidualMm": 1.390818725,
+              "referenceDistanceMm": 27.940000302,
+              "terminals": [
+                "A8:13",
+                "A8:24"
+              ]
+            },
+            {
+              "fittedDistanceMm": 20.332438333,
+              "fittedResidualMm": 1.220176647,
+              "heldOut": true,
+              "nominalDistanceMm": 19.746746345,
+              "nominalResidualMm": 1.805868635,
+              "referenceDistanceMm": 21.55261498,
+              "terminals": [
+                "A8:13",
+                "A8:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 12.66194319,
+              "fittedResidualMm": 0.038057399,
+              "heldOut": true,
+              "nominalDistanceMm": 12.34965864,
+              "nominalResidualMm": 0.350341949,
+              "referenceDistanceMm": 12.700000589,
+              "terminals": [
+                "A8:19",
+                "A8:24"
+              ]
+            },
+            {
+              "fittedDistanceMm": 14.022712402,
+              "fittedResidualMm": 1.217287294,
+              "heldOut": true,
+              "nominalDistanceMm": 13.552538212,
+              "nominalResidualMm": 1.687461484,
+              "referenceDistanceMm": 15.239999696,
+              "terminals": [
+                "A8:19",
+                "A8:6"
+              ]
+            },
+            {
+              "fittedDistanceMm": 19.159590322,
+              "fittedResidualMm": 0.678443625,
+              "heldOut": true,
+              "nominalDistanceMm": 18.588648678,
+              "nominalResidualMm": 1.249385269,
+              "referenceDistanceMm": 19.838033947,
+              "terminals": [
+                "A8:24",
+                "A8:6"
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "orientationFinding": "The comparison specimen has a visible 1 mark at the cable-facing end of its 3894 network. Its underside has eight fanout joints between two end joints without visible underside exits, matching the primary artwork. This supports, but does not prove, primary observation zero as pin 1 and observation nine as unused pin 10; the common-to-ground connection remains hidden.",
     "paths": [
       {

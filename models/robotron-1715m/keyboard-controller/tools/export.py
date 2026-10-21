@@ -26,6 +26,16 @@ def check():
    p=ROOT/name
    if not p.is_file() or digest(p)!=sha:raise SystemExit('Stale or missing '+name+'; regenerate with tools/export.py')
  print('Controller sources and generated outputs match pinned hashes')
+def unused_package_pads(component_evidence,evidence,components):
+ """Permit only catalogued, electrically unconnected physical package leads."""
+ packages={p['id']:p for p in evidence.get('packageReferences',[])};result={}
+ for ref,record in component_evidence.items():
+  if 'physicalUnusedPads' not in record:continue
+  pins=set(record['physicalUnusedPads']);package=packages.get(record.get('nativePackageReference'),{})
+  if not pins or pins!=set(package.get('unusedTerminals',[])) or pins&set(components[ref]['pins']):
+   raise ValueError('Physical unused pads need catalog support and must not replace schematic pins')
+  result[ref]=pins
+ return result
 def visual_bridges(evidence,landmarks,unplaced):
  """Project observed wire endpoints without inventing numbered electrical pads."""
  from photo_registration import homography,project
@@ -112,6 +122,7 @@ def main():
  for n in r.findall('./nets/net'):
   name=n.get('name');name=None if name.startswith('unconnected-') else name
   for node in n.findall('node'):components[node.get('ref')]['pins'][node.get('pin')]=name
+ unused=unused_package_pads(json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),components)
  board=pcb.LoadBoard(str(ROOT/'controller.kicad_pcb'));placed=[];unplaced=[];pads=[];holes=[];mismatches=[]
  def xy(p):return [round(p.x/1e6-150,6),round(50-p.y/1e6,6)]
  def coord(p):return [round(p.x/1e6,6),round(p.y/1e6,6)]
@@ -123,7 +134,10 @@ def main():
    pin=p.GetNumber();a={'ref':ref,'pin':pin,'net':net,'position':xy(p.GetPosition()),'size':coord(p.GetSize()),'drill':coord(p.GetDrillSize())};row['pads'].append(a)
    if ref in components:
     seen.add((ref,pin))
-    if pin not in components[ref]['pins'] or net!=components[ref]['pins'][pin]:mismatches.append([ref,pin,net,components[ref]['pins'].get(pin)])
+    if pin in unused.get(ref,set()):
+     a['classification']='no-internal-connection'
+     if net is not None:mismatches.append([ref,pin,net,'physical unused lead must have no net'])
+    elif pin not in components[ref]['pins'] or net!=components[ref]['pins'][pin]:mismatches.append([ref,pin,net,components[ref]['pins'].get(pin)])
    if in_board:
     pads.append(a)
     if a['drill'][0]:holes.append([*a['position'],a['drill'][0]])
@@ -131,6 +145,9 @@ def main():
  for ref,c in components.items():
   for pin in c['pins']:
    if (ref,pin) not in seen:mismatches.append([ref,pin,'missing pad'])
+ for ref,pins in unused.items():
+  for pin in pins:
+   if (ref,pin) not in seen:mismatches.append([ref,pin,'missing physical unused pad'])
  if mismatches:raise SystemExit('Schematic/PCB pad-net mismatch: '+repr(mismatches[:10]))
  routes=[];art=[];edges=[];vias=[]
  if board.Zones():raise SystemExit('Zone export not yet supported: refuse to omit geometry')

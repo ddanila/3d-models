@@ -1259,7 +1259,12 @@
       "bodyBaseHeightMm": 2.3,
       "leadRadiusMm": 0.22,
       "scope": "Body axis projected from primary photograph; height, thickness and lead curves are visual estimates, not catalog identity or hole locations. Visible leads stop above the board without pads, holes, numbers or nets."
-    }
+    },
+    "physicalUnusedPads": [
+      "10"
+    ],
+    "nativePackageScope": "KWH 3894 reference footprint, including its electrically unused tenth lead. Footprint remains unplaced; primary marking, hole mapping and installed orientation are not established.",
+    "nativePackageReference": "kwh-3894"
   },
   "V4.3": {
     "referenceType": "SC308C",

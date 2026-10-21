@@ -6,6 +6,21 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_unused_package_lead_requires_catalog_and_no_schematic_pin(self):
+  import copy
+  from export import unused_package_pads
+  records=json.loads((R/'component-evidence.json').read_text());evidence=json.loads((R/'evidence.json').read_text());components=json.loads((R/'generated/connectivity.json').read_text())['components']
+  self.assertEqual(unused_package_pads(records,evidence,components),{'R1':{'10'}})
+  bad=copy.deepcopy(records);bad['R1']['physicalUnusedPads']=['1']
+  with self.assertRaisesRegex(ValueError,'catalog support'):unused_package_pads(bad,evidence,components)
+  bad=copy.deepcopy(evidence);next(p for p in bad['packageReferences'] if p['id']=='kwh-3894')['unusedTerminals']=[]
+  with self.assertRaisesRegex(ValueError,'catalog support'):unused_package_pads(records,bad,components)
+  layout=json.loads((R/'generated/layout.json').read_text());r1=next(c for c in layout['unplaced'] if c['ref']=='R1');pads={p['pin']:p for p in r1['pads']}
+  self.assertEqual(set(pads),{str(i) for i in range(1,11)})
+  self.assertIsNone(pads['10']['net']);self.assertEqual(pads['10']['classification'],'no-internal-connection')
+  for i in range(1,10):self.assertAlmostEqual(__import__('math').dist(pads[str(i)]['position'],pads[str(i+1)]['position']),2.5)
+  self.assertNotIn('10',components['R1']['pins'])
+
  def test_eye_fit_checks_are_independent_and_domain_is_bounded(self):
   import copy
   from eye_registration import review
@@ -43,6 +58,14 @@ class ControllerExportTests(unittest.TestCase):
   self.assertEqual(trial['maxCheckResidualMm'],max(c['residualMm'] for c in trial['checks']))
   self.assertFalse(report['bankEndReview']['commonGroundAttachmentEstablished'])
   self.assertTrue(any(p[0]<1500 for p in report['paths'][0]['segments'][1]['points']))
+  metric=report['metricReview']
+  self.assertFalse(metric['copperAssignmentQualified'])
+  self.assertAlmostEqual(metric['nativeCpuPitchMm'],2.54,places=6)
+  self.assertEqual(metric['cpuReference']['longitudinalPitchMm'],2.5)
+  for v in metric['variants']:
+   self.assertEqual(v['independentCheckComponents'],['A2.1','A4','A8'])
+   self.assertLess(v['maxHeldOutResidualMm'],v['maxNominalHeldOutResidualMm'])
+   self.assertTrue(all(p['heldOut'] for p in v['pairs'] if p['terminals'][0].startswith(('A2.1:','A4:','A8:'))))
   for i,p in enumerate(report['paths']):
    self.assertEqual(p['referenceNet'],'/SENSE'+str(i))
    self.assertEqual(p['terminals'],['A4:'+str(i+1),'R1:'+str(9-i)])
@@ -145,6 +168,11 @@ class ControllerExportTests(unittest.TestCase):
    import copy
    from sense_review import build as sense_build
    for mutate,message in [(lambda d:d['paths'][0].update(nativeCopper=True),'cannot assign'),(lambda d:d['paths'][1].update(bankObservationIndex=d['paths'][0]['bankObservationIndex']),'must not share'),(lambda d:d.update(sourceSha256='0'*64),'source hash mismatch'),(lambda d:d['paths'][0]['segments'][0].update(status='observed'),'must remain inferred')]:
+    bad=copy.deepcopy(sense_original);mutate(bad);(r/'sense-review.json').write_text(json.dumps(bad))
+    with self.assertRaisesRegex(ValueError,message):sense_build(r)
+   (r/'sense-review.json').write_text(json.dumps(sense_original))
+
+   for mutate,message in [(lambda d:d['metricReview'].update(copperAssignmentQualified=True),'cannot qualify copper'),(lambda d:d['metricReview']['calibrationPairs'].__setitem__(1,d['metricReview']['calibrationPairs'][0]),'distinct distance'),(lambda d:d['metricReview']['calibrationPairs'].__setitem__(0,['A5:1','A1:1']),'within-package'),(lambda d:d['metricReview']['cpuReference'].update(longitudinalPitchMm=2.54),'pitch and end span')]:
     bad=copy.deepcopy(sense_original);mutate(bad);(r/'sense-review.json').write_text(json.dumps(bad))
     with self.assertRaisesRegex(ValueError,message):sense_build(r)
    (r/'sense-review.json').write_text(json.dumps(sense_original))

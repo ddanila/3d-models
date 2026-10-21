@@ -921,5 +921,42 @@
       2
     ],
     "copperAssignmentQualified": false
+  },
+  "metricReview": {
+    "scope": "Intrinsic distance checks distinguish envelope scale from native placement. Translation and rotation cancel in within-package distances. All row-separation assumptions remain native-footprint nominal values; this does not measure the board or establish copper placement.",
+    "calibrationPairs": [
+      [
+        "A5:1",
+        "A5:20"
+      ],
+      [
+        "A5:40",
+        "A5:21"
+      ],
+      [
+        "A1:1",
+        "A1:14"
+      ],
+      [
+        "A1:7",
+        "A1:8"
+      ]
+    ],
+    "checkComponents": [
+      "A1",
+      "A2.1",
+      "A4",
+      "A5",
+      "A8"
+    ],
+    "cpuReference": {
+      "sourceUrl": "https://www.tiffe.de/Robotron/Bausteinuebersicht/U880D-CPU.pdf",
+      "sourceSha256": "a3266f1cea4d24c0c91ca2941f6b40762f24a2934e6cf41dccd5fb52f80e75be",
+      "locator": "PDF page 62 / printed page 61, section 11.4, figure 28; VEB Funkwerk Erfurt U880 D technical description",
+      "longitudinalPitchMm": 2.5,
+      "longitudinalEndSpanMm": 47.5,
+      "scope": "Manufacturer U880 D reference package. The drawing does not identify the installed variant or measure PCB holes. Cross-row lead bends must not be treated as a specified hole spacing."
+    },
+    "copperAssignmentQualified": false
   }
 }

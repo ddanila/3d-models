@@ -3,8 +3,78 @@ import copy
 import hashlib
 import json
 import math
+import itertools
 from bottom_registration import inside_hull
 from photo_registration import homography, project
+
+
+def metric_review(root, source, envelope):
+    """Fit envelope scale from distances, without fitting component positions."""
+    if source['copperAssignmentQualified'] is not False:
+        raise ValueError('Metric review cannot qualify copper')
+    read = lambda name: json.loads((root/name).read_text())
+    pads = {c['ref']+':'+p['pin']:p['position'] for c in read('generated/layout.json')['components'] for p in c['pads']}
+    pixels = {}
+    for region in read('bottom-landmarks.json')['pcbRegions']:
+        for p in region['anchors']+region['checks']:
+            pixels.setdefault(p['ref']+':'+p['pin'],p['photoPixel'])
+    h = homography(envelope['photoCorners'],[[-.5,.5],[-.5,-.5],[.5,-.5],[.5,.5]])
+    normalized = {k:project(h,p) for k,p in pixels.items()}
+    corners = read('photo-landmarks.json')['modelCorners']
+    nominal = [max(p[i] for p in corners)-min(p[i] for p in corners) for i in (0,1)]
+    fit_pairs = [tuple(p) for p in source['calibrationPairs']]
+    if len(fit_pairs)<4 or len({tuple(sorted(p)) for p in fit_pairs})!=len(fit_pairs):
+        raise ValueError('Metric calibration requires distinct distance constraints')
+    if any(a.split(':')[0]!=b.split(':')[0] or a==b for a,b in fit_pairs):
+        raise ValueError('Metric calibration must use within-package distances')
+    all_pairs = [p for ref in source['checkComponents'] for p in itertools.combinations(sorted(k for k in pixels if k.split(':')[0]==ref),2)]
+    cpu_axis = [b-a for a,b in zip(pads['A5:1'],pads['A5:20'])]
+    cpu_span = math.hypot(*cpu_axis)
+    cpu_axis = [v/cpu_span for v in cpu_axis]
+    if not math.isclose(source['cpuReference']['longitudinalEndSpanMm'],19*source['cpuReference']['longitudinalPitchMm']):
+        raise ValueError('CPU reference pitch and end span disagree')
+    def expected(a,b,cpu_scale):
+        delta = [y-x for x,y in zip(pads[a],pads[b])]
+        if a.startswith('A5:'):
+            along = math.fsum(x*y for x,y in zip(delta,cpu_axis))
+            delta = [v+(cpu_scale-1)*along*u for v,u in zip(delta,cpu_axis)]
+        return math.hypot(*delta)
+    variants = []
+    for name,cpu_scale in [('native-footprints',1),('u880-domestic-longitudinal',source['cpuReference']['longitudinalEndSpanMm']/cpu_span)]:
+        equations = []
+        for a,b in fit_pairs:
+            dx,dy = [x-y for x,y in zip(normalized[a],normalized[b])]
+            equations.append((dx*dx,dy*dy,expected(a,b,cpu_scale)**2))
+        aa = math.fsum(x*x for x,y,t in equations);ab = math.fsum(x*y for x,y,t in equations)
+        bb = math.fsum(y*y for x,y,t in equations);at = math.fsum(x*t for x,y,t in equations);bt = math.fsum(y*t for x,y,t in equations)
+        determinant = aa*bb-ab*ab
+        if determinant<=1e-20:raise ValueError('Metric calibration lacks independent axes')
+        squared = [(at*bb-bt*ab)/determinant,(bt*aa-at*ab)/determinant]
+        if min(squared)<=0:raise ValueError('Metric calibration has invalid dimensions')
+        size = [math.sqrt(v) for v in squared]
+        rows = []
+        fit_keys = {tuple(sorted(p)) for p in fit_pairs}
+        for a,b in all_pairs:
+            delta = [x-y for x,y in zip(normalized[a],normalized[b])]
+            distance = expected(a,b,cpu_scale)
+            rows.append(dict(terminals=[a,b],referenceDistanceMm=round(distance,9),
+                fittedDistanceMm=round(math.hypot(*(d*s for d,s in zip(delta,size))),9),
+                nominalDistanceMm=round(math.hypot(*(d*s for d,s in zip(delta,nominal))),9),
+                heldOut=tuple(sorted((a,b))) not in fit_keys))
+        for row in rows:
+            row['fittedResidualMm']=round(abs(row['fittedDistanceMm']-row['referenceDistanceMm']),9)
+            row['nominalResidualMm']=round(abs(row['nominalDistanceMm']-row['referenceDistanceMm']),9)
+        held = [p for p in rows if p['heldOut']]
+        fit_refs = {p[0].split(':')[0] for p in fit_pairs}
+        independent = [p for p in held if p['terminals'][0].split(':')[0] not in fit_refs]
+        if not independent:raise ValueError('Metric review needs independent check packages')
+        variants.append(dict(id=name,estimatedEnvelopeMm=[round(v,6) for v in size],pairs=rows,
+            maxHeldOutResidualMm=max(p['fittedResidualMm'] for p in held),
+            independentCheckComponents=sorted({p['terminals'][0].split(':')[0] for p in independent}),
+            maxIndependentPackageResidualMm=max(p['fittedResidualMm'] for p in independent),
+            maxNominalHeldOutResidualMm=max(p['nominalResidualMm'] for p in held)))
+    return dict(source,nominalEnvelopeMm=nominal,nativeCpuPitchMm=round(cpu_span/19,9),variants=variants,
+        finding='Both conditional distance fits challenge the nominal envelope. Absolute placement, installed package variants and cross-row hole spacing remain separate; do not migrate copper from these scale estimates alone.')
 
 
 def envelope_trial(root, trial, paths):
@@ -60,6 +130,7 @@ def build(root):
     if not {ends['comparisonMarkSource'],ends['comparisonUndersideSource']}<=photo_ids:
         raise ValueError('Bank end review requires hashed comparison photos')
     result['envelopeTrial'] = envelope_trial(root,result['envelopeTrial'],rows)
+    result['metricReview'] = metric_review(root,result['metricReview'],result['envelopeTrial'])
     regions = [r for r in read('generated/bottom-registration.json')['pcbRegions'] if r['copperAssignmentQualified']]
     latch = {r['terminal']:r for r in read('bus-review.json')['latchAttachmentReview']['rows']}
     if not {'A4:'+str(i) for i in range(1,21)}<=set(latch):
