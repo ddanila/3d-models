@@ -105,7 +105,9 @@ Its reference nets and terminal pairs are review targets, not assigned copper
 or complete connections. `generated/bus-review.json` adds a local cross-side
 search overlay for ROM-side eyes beneath the installed CPU body. Latch reviews
 retain separate candidate eyes and covered exits. Neither identifies a via
-or establishes continuity.
+or establishes continuity. Assigned cross-side joints carry separate top and
+bottom registration checks; solder-obscured attachments and unmeasured via
+dimensions remain inferred.
 Before promotion, verify the photographed centreline,
 pad positions and local registration independently; a model short alone does
 not identify which of those is wrong.

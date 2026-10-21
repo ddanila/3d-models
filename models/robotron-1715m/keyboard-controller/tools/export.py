@@ -14,7 +14,7 @@ from top_registration import review as top_review
 from connector_terminals import review as connector_terminals
 from route_evidence import annotate as annotate_routes
 from photo_registration import review as photo_review, svg as photo_svg
-from bottom_registration import review as bottom_review, svg as bottom_svg, validate_registered_routes, validate_pad_placements
+from bottom_registration import review as bottom_review, svg as bottom_svg, validate_registered_routes, validate_pad_placements, review_registered_vias
 ROOT=Path(__file__).resolve().parents[1]
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(name,value):
@@ -155,6 +155,7 @@ def main():
  layout={'schema':1,'coordinates':{'units':'mm','pcbOrigin':[150,50],'modelTransform':'x = pcb.x - 150; y = 50 - pcb.y; z = top height','thickness':1.6},'outline':edges,'outlinePolygon':outline,'components':placed,'unplaced':unplaced,'routes':routes,'vias':vias,'unresolvedArtwork':sorted(art,key=lambda a:a['id'])}
  bottom=bottom_review(layout);validate_registered_routes(routes,bottom,digest(ROOT/'bottom-landmarks.json'))
  top=top_review(layout);validate_registered_routes(routes,top,digest(ROOT/'top-copper-landmarks.json'),side='top')
+ layout['viaRegistration']=review_registered_vias(vias,{'top':top,'bottom':bottom},{side:digest(ROOT/('top-copper-landmarks.json'if side=='top'else'bottom-landmarks.json'))for side in ('top','bottom')})
  write('top-registration.json',top)
  bottom['padPlacements']=validate_pad_placements(layout,bottom,json.loads((ROOT/'component-evidence.json').read_text()))
  write('connectivity.json',{'schema':1,'authority':'controller.kicad_sch','components':components})

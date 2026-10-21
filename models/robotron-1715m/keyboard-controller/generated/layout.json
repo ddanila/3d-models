@@ -10988,6 +10988,165 @@
     },
     {
       "evidence": {
+        "detail": "Solder-obscured top attachment or nominal endpoint attachment. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+        "geometrySha256": "66f9f3dc97ebf0498cc3f2862f89838097024a6454e082d1127a67dcb353866f",
+        "group": "cpu-latch-d0",
+        "registration": {
+          "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d",
+          "region": "cpu-latch-upper",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1470,
+                  2845
+                ],
+                [
+                  1501,
+                  2847
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "A4:19",
+          "A5:14"
+        ]
+      },
+      "id": "25b4e867-e20e-47a0-88dc-82daf2ca78b9",
+      "net": "/D0",
+      "points": [
+        [
+          45.849601,
+          -3.147363
+        ],
+        [
+          46.396102,
+          -0.584963
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Solder-obscured top attachment or nominal endpoint attachment. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+        "geometrySha256": "98a8fe2640d7661286e2b6fceae755e3884e6142f6a3db94b07dbb95b685ef93",
+        "group": "cpu-latch-d0",
+        "registration": {
+          "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d",
+          "region": "cpu-latch-upper",
+          "side": "top"
+        },
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1441,
+                  2844
+                ],
+                [
+                  1470,
+                  2845
+                ]
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "A4:19",
+          "A5:14"
+        ]
+      },
+      "id": "4ce3b0fc-7334-4ddd-9479-cef18e1b4331",
+      "net": "/D0",
+      "points": [
+        [
+          45.923587,
+          -5.143279
+        ],
+        [
+          45.849601,
+          -3.147363
+        ]
+      ],
+      "side": "top",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Exposed underside copper centreline. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+        "geometrySha256": "e2ac932c6ded59294b31b05ed7c38999a9e0861fe248baae2f48bed6e4c91f4f",
+        "group": "cpu-latch-d0",
+        "registration": {
+          "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+          "region": "cpu-a4",
+          "side": "bottom"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1372,
+                  2631
+                ],
+                [
+                  1375,
+                  2818
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:19",
+          "A5:14"
+        ]
+      },
+      "id": "04365097-3e0b-4131-ac9e-d9e6977d2551",
+      "net": "/D0",
+      "points": [
+        [
+          47.472187,
+          -1.137522
+        ],
+        [
+          62.762609,
+          -1.153779
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.25
+    },
+    {
+      "evidence": {
         "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D0 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
         "geometrySha256": "f73fe5307a7b7c7957bf5f537bdbdf47e8ad7545163c2dcc8dd1e958f483c9e6",
         "group": "cpu-rom-d0",
@@ -11092,6 +11251,59 @@
     },
     {
       "evidence": {
+        "detail": "Exposed underside copper centreline. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+        "geometrySha256": "1c0c9c8b6ce6a7af2ae0b3773ca36c4b0d4f0831c341e28cf778faf6a5bf83ec",
+        "group": "cpu-latch-d0",
+        "registration": {
+          "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+          "region": "cpu-a4",
+          "side": "bottom"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1334,
+                  2861
+                ],
+                [
+                  1334,
+                  2890
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:19",
+          "A5:14"
+        ]
+      },
+      "id": "1ea0e19d-13d1-4466-88dd-d1158dc2e01b",
+      "net": "/D0",
+      "points": [
+        [
+          66.190631,
+          2.219994
+        ],
+        [
+          68.554497,
+          2.254441
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.25
+    },
+    {
+      "evidence": {
         "detail": "Estimated native pad-to-visible-copper attachment. Visible CPU-to-ROM D0 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
         "geometrySha256": "a48ed78c8c3fa0030e10e0d5265d97f61d5766f431dd6277dc0293f81ab930b6",
         "group": "cpu-rom-d0",
@@ -11137,6 +11349,112 @@
         [
           72.255734,
           3.215508
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Exposed underside copper centreline. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+        "geometrySha256": "aa6ef63b456a4b1364d377b3b3a8f4f40c3f9304274c196d412dd26947d84be3",
+        "group": "cpu-latch-d0",
+        "registration": {
+          "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+          "region": "cpu-a4",
+          "side": "bottom"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1334,
+                  2890
+                ],
+                [
+                  1312,
+                  2916
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:19",
+          "A5:14"
+        ]
+      },
+      "id": "6696e0ed-2709-4853-9835-6ab587b51e9e",
+      "net": "/D0",
+      "points": [
+        [
+          68.554497,
+          2.254441
+        ],
+        [
+          70.628333,
+          4.065369
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Exposed underside copper centreline. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+        "geometrySha256": "ce25d4a07277e16fe1e1d808b6b2a3b92d2bcba441b61fc9d0945c5c34d16c12",
+        "group": "cpu-latch-d0",
+        "registration": {
+          "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+          "region": "cpu-a4",
+          "side": "bottom"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1375,
+                  2818
+                ],
+                [
+                  1334,
+                  2861
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "observed",
+        "terminals": [
+          "A4:19",
+          "A5:14"
+        ]
+      },
+      "id": "80aa406b-12a8-4e9c-ae94-8c7dcef9f4de",
+      "net": "/D0",
+      "points": [
+        [
+          62.762609,
+          -1.153779
+        ],
+        [
+          66.190631,
+          2.219994
         ]
       ],
       "side": "bottom",
@@ -11248,6 +11566,59 @@
     },
     {
       "evidence": {
+        "detail": "Solder-obscured top attachment or nominal endpoint attachment. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+        "geometrySha256": "a9cedbeccd8fbc7166897e84fab1084713c825cc7912fe9eee899cf07141ca0d",
+        "group": "cpu-latch-d0",
+        "registration": {
+          "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+          "region": "cpu-a4",
+          "side": "bottom"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1365,
+                  2618
+                ],
+                [
+                  1372,
+                  2631
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "A4:19",
+          "A5:14"
+        ]
+      },
+      "id": "9cb32b24-f3b3-4567-ad5a-faa50758528e",
+      "net": "/D0",
+      "points": [
+        [
+          46.396102,
+          -0.584963
+        ],
+        [
+          47.472187,
+          -1.137522
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.25
+    },
+    {
+      "evidence": {
         "detail": "Observed exposed copper centreline. Visible CPU-to-ROM D0 lane. Pin order and topology cross-checked against the comparison specimen underside; primary specimen supplies all geometry. Other branches of this bus net remain incomplete. Nominal photo projection and track width; not measured dimensions or specimen continuity. No hidden branch or additional bus connection is implied.",
         "geometrySha256": "94276d1027580cf4717e352ce2dd2cb4f8d27e6a1ce609dbb18a56507da2442f",
         "group": "cpu-rom-d0",
@@ -11345,6 +11716,59 @@
         [
           92.464293,
           3.976386
+        ]
+      ],
+      "side": "bottom",
+      "width": 0.25
+    },
+    {
+      "evidence": {
+        "detail": "Solder-obscured top attachment or nominal endpoint attachment. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+        "geometrySha256": "713f902d48272bd26da9afb78bc6d141b92f26ca50157abfa4a3f3025fc9681c",
+        "group": "cpu-latch-d0",
+        "registration": {
+          "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+          "region": "cpu-a4",
+          "side": "bottom"
+        },
+        "sources": [
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelSegment": [
+                [
+                  1312,
+                  2916
+                ],
+                [
+                  1309,
+                  2927
+                ]
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "inferred",
+        "terminals": [
+          "A4:19",
+          "A5:14"
+        ]
+      },
+      "id": "e15b0681-a59a-4036-859e-8aaa20a86564",
+      "net": "/D0",
+      "points": [
+        [
+          70.628333,
+          4.065369
+        ],
+        [
+          70.879105,
+          4.151392
         ]
       ],
       "side": "bottom",
@@ -18905,7 +19329,82 @@
       "width": 0.35
     }
   ],
-  "vias": [],
+  "viaRegistration": [
+    {
+      "checks": {
+        "bottom": {
+          "region": "cpu-a4",
+          "residualMm": 5.201002674930988e-07
+        },
+        "top": {
+          "region": "cpu-latch-upper",
+          "residualMm": 0.6984202247562481
+        }
+      },
+      "positionFrom": "bottom",
+      "scope": "Bounded nominal photo correspondence; plating, drill and diameter are not measured.",
+      "viaId": "eba0e239-a6f2-40b9-b7aa-904c0eaad6cd"
+    }
+  ],
+  "vias": [
+    {
+      "diameter": 1.2,
+      "drill": 0.6,
+      "evidence": {
+        "crossSideRegistration": {
+          "bottom": {
+            "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+            "region": "cpu-a4"
+          },
+          "positionFrom": "bottom",
+          "top": {
+            "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d",
+            "region": "cpu-latch-upper"
+          }
+        },
+        "detail": "Nominal through connection at the matched D0 solder eye. The top eye/attachment is solder-obscured; the underside trace runs to A5:14. Placement follows the underside fit, checked independently against the top fit. Diameter 1.2 mm and drill 0.6 mm are illustrative, not measured; plating and continuity remain unmeasured.",
+        "geometrySha256": "f297cedae75d12ecd91564c85aeb064e3204a9b85b48f868112a39608e7a7d42",
+        "group": "cpu-latch-d0",
+        "sources": [
+          {
+            "id": "photo-top",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelPoint": [
+                1501,
+                2847
+              ]
+            },
+            "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240"
+          },
+          {
+            "id": "photo-bottom",
+            "locator": {
+              "imageSize": [
+                3072,
+                4080
+              ],
+              "pixelPoint": [
+                1365,
+                2618
+              ]
+            },
+            "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+          }
+        ],
+        "status": "inferred"
+      },
+      "id": "eba0e239-a6f2-40b9-b7aa-904c0eaad6cd",
+      "net": "/D0",
+      "position": [
+        46.396102,
+        -0.584963
+      ]
+    }
+  ],
   "visualAxials": [
     {
       "axis": [

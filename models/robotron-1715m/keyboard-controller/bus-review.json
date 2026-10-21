@@ -341,61 +341,6 @@
   },
   "latchPaths": [
     {
-      "id": "latch-review-d0",
-      "referenceNet": "/D0",
-      "terminals": [
-        "A4:19",
-        "A5:14"
-      ],
-      "source": "photo-top",
-      "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
-      "nativeCopper": false,
-      "continuityEstablished": false,
-      "reason": "The top lead/eye area is partly obscured by solder and glare. The reverse-side eye is a correspondence candidate only; the complete latch-to-CPU path is not established.",
-      "segments": [
-        {
-          "id": "d0-latch-0",
-          "status": "inferred",
-          "points": [
-            [
-              1440,
-              2844
-            ],
-            [
-              1470,
-              2845
-            ]
-          ]
-        },
-        {
-          "id": "d0-latch-1",
-          "status": "inferred",
-          "points": [
-            [
-              1470,
-              2845
-            ],
-            [
-              1501,
-              2847
-            ]
-          ]
-        }
-      ],
-      "reverseReview": {
-        "source": "photo-bottom",
-        "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
-        "point": [
-          1365,
-          2618
-        ],
-        "radiusPixels": 18,
-        "status": "candidate-correspondence-only",
-        "continuityEstablished": false,
-        "reason": "Possible reverse-side eye, not a verified through-board match. No native via or route is assigned."
-      }
-    },
-    {
       "id": "latch-review-d1",
       "referenceNet": "/D1",
       "terminals": [
@@ -406,7 +351,7 @@
       "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
       "nativeCopper": false,
       "continuityEstablished": false,
-      "reason": "The adjacent eye and lead attachment need disambiguation. A nearby reverse-side eye does not establish identity or the continuation to CPU pin 15.",
+      "reason": "Top lead/eye attachment and the complete eye-to-CPU path remain unresolved. Reverse-side spans are recorded as candidate geometry only; positional agreement alone cannot establish continuity.",
       "segments": [
         {
           "id": "d1-latch-0",
@@ -433,7 +378,73 @@
         "radiusPixels": 18,
         "status": "candidate-correspondence-only",
         "continuityEstablished": false,
-        "reason": "Possible reverse-side eye, not a verified through-board match. No native via or route is assigned."
+        "reason": "Candidate reverse-side path stops at another unassigned joint. Neither through-board identity nor continuation to the CPU is established; no native via or route is assigned.",
+        "registrationRegions": {
+          "top": "cpu-latch-upper",
+          "bottom": "cpu-a4"
+        },
+        "segments": [
+          {
+            "id": "latch-review-d1-reverse-0",
+            "status": "inferred",
+            "points": [
+              [
+                1390,
+                2645
+              ],
+              [
+                1391,
+                2800
+              ]
+            ]
+          },
+          {
+            "id": "latch-review-d1-reverse-1",
+            "status": "observed",
+            "points": [
+              [
+                1391,
+                2800
+              ],
+              [
+                1392,
+                2888
+              ]
+            ]
+          },
+          {
+            "id": "latch-review-d1-reverse-2",
+            "status": "observed",
+            "points": [
+              [
+                1392,
+                2888
+              ],
+              [
+                1408,
+                2906
+              ]
+            ]
+          },
+          {
+            "id": "latch-review-d1-reverse-3",
+            "status": "inferred",
+            "points": [
+              [
+                1408,
+                2906
+              ],
+              [
+                1408,
+                2923
+              ]
+            ]
+          }
+        ],
+        "unassignedEnd": [
+          1408,
+          2923
+        ]
       }
     },
     {
@@ -447,7 +458,7 @@
       "sourceSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
       "nativeCopper": false,
       "continuityEstablished": false,
-      "reason": "Exposed top copper reaches a solder eye. Its reverse-side correspondence and eye-to-CPU continuation remain unresolved.",
+      "reason": "Top lead/eye attachment and the complete eye-to-CPU path remain unresolved. Reverse-side spans are recorded as candidate geometry only; positional agreement alone cannot establish continuity.",
       "segments": [
         {
           "id": "d2-latch-0",
@@ -502,7 +513,59 @@
         "radiusPixels": 18,
         "status": "candidate-correspondence-only",
         "continuityEstablished": false,
-        "reason": "Possible reverse-side eye, not a verified through-board match. No native via or route is assigned."
+        "reason": "Candidate reverse-side path stops at another unassigned joint. Neither through-board identity nor continuation to the CPU is established; no native via or route is assigned.",
+        "registrationRegions": {
+          "top": "cpu-latch-upper",
+          "bottom": "cpu-a4"
+        },
+        "segments": [
+          {
+            "id": "latch-review-d2-reverse-0",
+            "status": "inferred",
+            "points": [
+              [
+                1335,
+                2708
+              ],
+              [
+                1348,
+                2721
+              ]
+            ]
+          },
+          {
+            "id": "latch-review-d2-reverse-1",
+            "status": "observed",
+            "points": [
+              [
+                1348,
+                2721
+              ],
+              [
+                1349,
+                2803
+              ]
+            ]
+          },
+          {
+            "id": "latch-review-d2-reverse-2",
+            "status": "inferred",
+            "points": [
+              [
+                1349,
+                2803
+              ],
+              [
+                1345,
+                2818
+              ]
+            ]
+          }
+        ],
+        "unassignedEnd": [
+          1345,
+          2818
+        ]
       }
     },
     {

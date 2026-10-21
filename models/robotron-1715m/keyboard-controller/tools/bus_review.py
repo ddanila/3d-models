@@ -24,6 +24,25 @@ def build(root=ROOT):
         if (record['sourceSha256'] != source['sha256'] or
                 hashlib.sha256((root / source['path']).read_bytes()).hexdigest() != source['sha256']):
             raise ValueError('Bus review source hash mismatch: ' + source['id'])
+    for path in latch_paths:
+        reverse = path.get('reverseReview')
+        if not reverse or 'registrationRegions' not in reverse:
+            continue
+        projections = {}
+        limits = []
+        for side, region_id in reverse['registrationRegions'].items():
+            region = next(r for r in read('generated/' + side + '-registration.json')['pcbRegions'] if r['id'] == region_id)
+            if not region['copperAssignmentQualified']:
+                raise ValueError('Latch search requires reviewed local fits')
+            point = path['segments'][-1]['points'][-1] if side == 'top' else reverse['point']
+            from bottom_registration import inside_hull
+            if not inside_hull(point, region['anchorHull']):
+                raise ValueError('Latch search exceeds local fit hull')
+            projections[side] = project(region['photoToModel'], point)
+            limits.append(region['toleranceMm'])
+        residual = math.dist(projections['top'], projections['bottom'])
+        reverse['positionCheck'] = {'residualMm': residual, 'toleranceMm': min(limits),
+                                    'withinFitBudget': residual <= min(limits), 'continuityEstablished': False}
     if sources[cross['source']]['path'] != top['photo']:
         raise ValueError('Bus review top landmarks use a different photograph')
     bottom_pins = {}

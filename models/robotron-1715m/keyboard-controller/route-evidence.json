@@ -4732,6 +4732,349 @@
         "region": "cpu-latch-upper",
         "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
       }
+    },
+    "eba0e239-a6f2-40b9-b7aa-904c0eaad6cd": {
+      "status": "inferred",
+      "geometrySha256": "f297cedae75d12ecd91564c85aeb064e3204a9b85b48f868112a39608e7a7d42",
+      "group": "cpu-latch-d0",
+      "detail": "Nominal through connection at the matched D0 solder eye. The top eye/attachment is solder-obscured; the underside trace runs to A5:14. Placement follows the underside fit, checked independently against the top fit. Diameter 1.2 mm and drill 0.6 mm are illustrative, not measured; plating and continuity remain unmeasured.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelPoint": [
+              1501,
+              2847
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        },
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelPoint": [
+              1365,
+              2618
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "crossSideRegistration": {
+        "positionFrom": "bottom",
+        "top": {
+          "region": "cpu-latch-upper",
+          "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
+        },
+        "bottom": {
+          "region": "cpu-a4",
+          "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5"
+        }
+      }
+    },
+    "4ce3b0fc-7334-4ddd-9479-cef18e1b4331": {
+      "status": "inferred",
+      "geometrySha256": "98a8fe2640d7661286e2b6fceae755e3884e6142f6a3db94b07dbb95b685ef93",
+      "group": "cpu-latch-d0",
+      "terminals": [
+        "A4:19",
+        "A5:14"
+      ],
+      "detail": "Solder-obscured top attachment or nominal endpoint attachment. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1441,
+                2844
+              ],
+              [
+                1470,
+                2845
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "top",
+        "region": "cpu-latch-upper",
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
+      }
+    },
+    "25b4e867-e20e-47a0-88dc-82daf2ca78b9": {
+      "status": "inferred",
+      "geometrySha256": "66f9f3dc97ebf0498cc3f2862f89838097024a6454e082d1127a67dcb353866f",
+      "group": "cpu-latch-d0",
+      "terminals": [
+        "A4:19",
+        "A5:14"
+      ],
+      "detail": "Solder-obscured top attachment or nominal endpoint attachment. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+      "sources": [
+        {
+          "id": "photo-top",
+          "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+          "locator": {
+            "pixelSegment": [
+              [
+                1470,
+                2845
+              ],
+              [
+                1501,
+                2847
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "top",
+        "region": "cpu-latch-upper",
+        "landmarksSha256": "6794646e18601deb52ca06af271427f481fb8939c636b45965cd0d9c8381f96d"
+      }
+    },
+    "9cb32b24-f3b3-4567-ad5a-faa50758528e": {
+      "status": "inferred",
+      "geometrySha256": "a9cedbeccd8fbc7166897e84fab1084713c825cc7912fe9eee899cf07141ca0d",
+      "group": "cpu-latch-d0",
+      "terminals": [
+        "A4:19",
+        "A5:14"
+      ],
+      "detail": "Solder-obscured top attachment or nominal endpoint attachment. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1365,
+                2618
+              ],
+              [
+                1372,
+                2631
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "bottom",
+        "region": "cpu-a4",
+        "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5"
+      }
+    },
+    "04365097-3e0b-4131-ac9e-d9e6977d2551": {
+      "status": "observed",
+      "geometrySha256": "e2ac932c6ded59294b31b05ed7c38999a9e0861fe248baae2f48bed6e4c91f4f",
+      "group": "cpu-latch-d0",
+      "terminals": [
+        "A4:19",
+        "A5:14"
+      ],
+      "detail": "Exposed underside copper centreline. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1372,
+                2631
+              ],
+              [
+                1375,
+                2818
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "bottom",
+        "region": "cpu-a4",
+        "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5"
+      }
+    },
+    "80aa406b-12a8-4e9c-ae94-8c7dcef9f4de": {
+      "status": "observed",
+      "geometrySha256": "ce25d4a07277e16fe1e1d808b6b2a3b92d2bcba441b61fc9d0945c5c34d16c12",
+      "group": "cpu-latch-d0",
+      "terminals": [
+        "A4:19",
+        "A5:14"
+      ],
+      "detail": "Exposed underside copper centreline. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1375,
+                2818
+              ],
+              [
+                1334,
+                2861
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "bottom",
+        "region": "cpu-a4",
+        "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5"
+      }
+    },
+    "1ea0e19d-13d1-4466-88dd-d1158dc2e01b": {
+      "status": "observed",
+      "geometrySha256": "1c0c9c8b6ce6a7af2ae0b3773ca36c4b0d4f0831c341e28cf778faf6a5bf83ec",
+      "group": "cpu-latch-d0",
+      "terminals": [
+        "A4:19",
+        "A5:14"
+      ],
+      "detail": "Exposed underside copper centreline. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1334,
+                2861
+              ],
+              [
+                1334,
+                2890
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "bottom",
+        "region": "cpu-a4",
+        "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5"
+      }
+    },
+    "6696e0ed-2709-4853-9835-6ab587b51e9e": {
+      "status": "observed",
+      "geometrySha256": "aa6ef63b456a4b1364d377b3b3a8f4f40c3f9304274c196d412dd26947d84be3",
+      "group": "cpu-latch-d0",
+      "terminals": [
+        "A4:19",
+        "A5:14"
+      ],
+      "detail": "Exposed underside copper centreline. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1334,
+                2890
+              ],
+              [
+                1312,
+                2916
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "bottom",
+        "region": "cpu-a4",
+        "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5"
+      }
+    },
+    "e15b0681-a59a-4036-859e-8aaa20a86564": {
+      "status": "inferred",
+      "geometrySha256": "713f902d48272bd26da9afb78bc6d141b92f26ca50157abfa4a3f3025fc9681c",
+      "group": "cpu-latch-d0",
+      "terminals": [
+        "A4:19",
+        "A5:14"
+      ],
+      "detail": "Solder-obscured top attachment or nominal endpoint attachment. D0 latch branch through a locally matched solder eye; reference-derived pin identity. Nominal dimensions; specimen continuity remains unmeasured. A1 remains a separate D0 branch.",
+      "sources": [
+        {
+          "id": "photo-bottom",
+          "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+          "locator": {
+            "pixelSegment": [
+              [
+                1312,
+                2916
+              ],
+              [
+                1309,
+                2927
+              ]
+            ],
+            "imageSize": [
+              3072,
+              4080
+            ]
+          }
+        }
+      ],
+      "registration": {
+        "side": "bottom",
+        "region": "cpu-a4",
+        "landmarksSha256": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5"
+      }
     }
   }
 }

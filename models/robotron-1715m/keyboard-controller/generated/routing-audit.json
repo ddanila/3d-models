@@ -2367,7 +2367,7 @@
       ]
     },
     {
-      "drcUnconnectedItems": 2,
+      "drcUnconnectedItems": 1,
       "floatingCopperGroups": 0,
       "islands": [
         {
@@ -2380,25 +2380,26 @@
           "unplacedTerminals": []
         },
         {
-          "copperIds": [],
-          "evidenceGroups": [],
-          "evidenceStatuses": [],
-          "terminals": [
-            "A4:19"
-          ],
-          "unplacedTerminals": []
-        },
-        {
           "copperIds": [
+            "04365097-3e0b-4131-ac9e-d9e6977d2551",
             "1c142604-be30-4685-8471-90ca74755d05",
             "1d31a971-5abd-4371-9ff6-f85add9f8487",
+            "1ea0e19d-13d1-4466-88dd-d1158dc2e01b",
+            "25b4e867-e20e-47a0-88dc-82daf2ca78b9",
             "4ae80736-6846-4761-b714-dc19f1d46ab0",
+            "4ce3b0fc-7334-4ddd-9479-cef18e1b4331",
+            "6696e0ed-2709-4853-9835-6ab587b51e9e",
+            "80aa406b-12a8-4e9c-ae94-8c7dcef9f4de",
             "8f67332b-9c70-46cd-a586-4cfd803fe5ee",
             "95786381-f160-4c16-ae28-2cc5f7d5f9f5",
+            "9cb32b24-f3b3-4567-ad5a-faa50758528e",
             "b1f2a105-8fd5-420f-931c-d8e1c081b732",
-            "d1a455de-a7e5-4a79-b9f0-d0697b38f814"
+            "d1a455de-a7e5-4a79-b9f0-d0697b38f814",
+            "e15b0681-a59a-4036-859e-8aaa20a86564",
+            "eba0e239-a6f2-40b9-b7aa-904c0eaad6cd"
           ],
           "evidenceGroups": [
+            "cpu-latch-d0",
             "cpu-rom-d0"
           ],
           "evidenceStatuses": [
@@ -2406,6 +2407,7 @@
             "observed"
           ],
           "terminals": [
+            "A4:19",
             "A5:14",
             "A8:9"
           ],
@@ -2416,8 +2418,8 @@
       "multiTerminal": true,
       "nativePadsConnected": false,
       "net": "/D0",
-      "padGroups": 3,
-      "remainingPadGroupLinks": 2,
+      "padGroups": 2,
+      "remainingPadGroupLinks": 1,
       "terminals": [
         "A1:3",
         "A4:19",
@@ -4890,12 +4892,12 @@
   "scope": "Native KiCad same-net connectivity, including off-board placeholder pads. Connected does not mean historically verified or fabrication-ready. DRC gaps may include floating copper; pad-group links count only disconnected terminal groups. Cross-net clearance/short findings remain in qualification.json.",
   "summary": {
     "assignedPins": 330,
-    "drcUnconnectedItems": 207,
+    "drcUnconnectedItems": 206,
     "floatingCopperGroups": 0,
     "fullyConnectedMultiTerminalNets": 2,
     "minimumLinks": 234,
     "multiTerminalNets": 94,
     "nets": 96,
-    "remainingPadGroupLinks": 207
+    "remainingPadGroupLinks": 206
   }
 }

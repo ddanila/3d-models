@@ -45,7 +45,7 @@ class KiCadExportTests(unittest.TestCase):
    for pins in pairs:
     self.assertTrue(any(set(pins)<=set(g['terminals']) for g in islands))
    self.assertFalse(any({pairs[0][0],pairs[1][0]}<=set(g['terminals']) for g in islands))
-  for net,pins in [('/D0',{'A5:14','A8:9'}),('/D1',{'A5:15','A8:10'}),('/D2',{'A5:12','A8:11'}),('/D3',{'A4:16','A5:8','A8:13'}),('/D4',{'A5:7','A8:14'})]:
+  for net,pins in [('/D0',{'A4:19','A5:14','A8:9'}),('/D1',{'A5:15','A8:10'}),('/D2',{'A5:12','A8:11'}),('/D3',{'A4:16','A5:8','A8:13'}),('/D4',{'A5:7','A8:14'})]:
    islands=next(n for n in actual['nets'] if n['net']==net)['islands']
    self.assertTrue(any(pins==set(g['terminals']) for g in islands))
   for candidate in json.loads((R/'bus-review.json').read_text())['paths']:
@@ -78,7 +78,7 @@ class KiCadExportTests(unittest.TestCase):
    ledger['items'].update(json.loads((r/'route-evidence.json').read_text())['items'])
    (r/'route-evidence.json').write_text(json.dumps(ledger))
    subprocess.run([sys.executable,r/'tools/export.py'],check=True,stdout=subprocess.DEVNULL)
-   l=json.loads((r/'generated/layout.json').read_text());self.assertEqual(len(l['vias']),1);self.assertEqual(l['vias'][0]['position'],[250,-350]);self.assertEqual(l['vias'][0]['drill'],.4)
+   l=json.loads((r/'generated/layout.json').read_text());self.assertEqual(len(l['vias']),len(json.loads((R/'generated/layout.json').read_text())['vias'])+1);synthetic=next(v for v in l['vias']if v['id']==via.m_Uuid.AsString());self.assertEqual(synthetic['position'],[250,-350]);self.assertEqual(synthetic['drill'],.4)
    points=next(a for a in l['routes']if a['id']==arc.m_Uuid.AsString())['points'];self.assertEqual(points[0],[250,-350]);self.assertEqual(points[-1],[260,-350]);self.assertGreater(max(y for x,y in points),-345.1)
    # A net-name edit must fail even when the resulting native PCB is parseable.
    f=next(f for f in b.GetFootprints() if f.GetReference()=='A1');pad=next(p for p in f.Pads() if p.GetNumber()=='1');pad.SetNet(net);pcb.SaveBoard(str(r/'controller.kicad_pcb'),b)

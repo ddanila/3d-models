@@ -74,6 +74,32 @@ def validate_registered_routes(routes,report,landmark_sha,side='bottom'):
   if record['status']=='observed' and any(math.dist(project(region['photoToModel'],p),q)>0.000002 for p,q in zip(points,route['points'])):
    raise ValueError('Observed route geometry differs from local photo projection')
 
+def review_registered_vias(vias,reports,landmark_hashes):
+ rows=[]
+ for via in vias:
+  registration=via['evidence'].get('crossSideRegistration')
+  if not registration:continue
+  basis=registration['positionFrom']
+  if basis not in ('top','bottom'):raise ValueError('Invalid via placement side')
+  checks={}
+  for side in ('top','bottom'):
+   record=registration[side]
+   region=next((r for r in reports[side]['pcbRegions']if r['id']==record['region']),None)
+   if record['landmarksSha256']!=landmark_hashes[side]:raise ValueError('Stale via registration evidence')
+   if not region or not region['copperAssignmentQualified']:raise ValueError('Via registration is not locally qualified')
+   photo=next((s for s in via['evidence']['sources']if s['id']=='photo-'+side),None)
+   point=photo['locator'].get('pixelPoint')if photo else None
+   if not point or not inside_hull(point,region['anchorHull']):raise ValueError('Via needs bounded photo points on both sides')
+   projected=project(region['photoToModel'],point)
+   residual=math.dist(projected,via['position'])
+   limit=0.000002 if side==basis else region['toleranceMm']
+   if residual>limit:raise ValueError('Via position differs from cross-side photo evidence')
+   hull=[project(region['photoToModel'],p)for p in region['anchorHull']]
+   if not inside_hull(via['position'],hull,0.000002):raise ValueError('Via exceeds local registration hull')
+   checks[side]={'region':region['id'],'residualMm':residual}
+  rows.append({'viaId':via['id'],'positionFrom':basis,'checks':checks,'scope':'Bounded nominal photo correspondence; plating, drill and diameter are not measured.'})
+ return rows
+
 def validate_pad_placements(layout,report,evidence):
  regions={r['id']:r for r in report['pcbRegions']}
  pads={(c['ref'],p['pin']):p['position']for c in layout['components']for p in c['pads']}

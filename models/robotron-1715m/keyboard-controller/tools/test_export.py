@@ -6,6 +6,22 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_cross_side_via_rejects_stale_or_displaced_evidence(self):
+  import copy,hashlib
+  from bottom_registration import review_registered_vias
+  layout=json.loads((R/'generated/layout.json').read_text())
+  reports={s:json.loads((R/('generated/'+s+'-registration.json')).read_text())for s in ('top','bottom')}
+  hashes={s:hashlib.sha256((R/f).read_bytes()).hexdigest()for s,f in [('top','top-copper-landmarks.json'),('bottom','bottom-landmarks.json')]}
+  self.assertEqual(review_registered_vias(layout['vias'],reports,hashes),layout['viaRegistration'])
+  via=next(v for v in layout['vias']if v['evidence'].get('group')=='cpu-latch-d0')
+  self.assertEqual(via['evidence']['status'],'inferred')
+  bad=copy.deepcopy(via);bad['position'][0]+=.01
+  with self.assertRaisesRegex(ValueError,'differs from cross-side'):review_registered_vias([bad],reports,hashes)
+  bad=copy.deepcopy(via);bad['evidence']['crossSideRegistration']['top']['landmarksSha256']='0'*64
+  with self.assertRaisesRegex(ValueError,'Stale via registration'):review_registered_vias([bad],reports,hashes)
+  bad=copy.deepcopy(via);bad['evidence']['sources']=[s for s in bad['evidence']['sources']if s['id']!='photo-top']
+  with self.assertRaisesRegex(ValueError,'both sides'):review_registered_vias([bad],reports,hashes)
+
  def test_native_hull_rounding_does_not_allow_photo_extrapolation(self):
   from bottom_registration import inside_hull
   for size in [1,100]:
@@ -18,6 +34,10 @@ class ControllerExportTests(unittest.TestCase):
   from bus_review import build
   report=build()
   self.assertEqual(report,json.loads((R/'generated/bus-review.json').read_text()))
+  candidates={p['referenceNet']:p for p in report['latchPaths']}
+  self.assertTrue(candidates['/D1']['reverseReview']['positionCheck']['withinFitBudget'])
+  self.assertFalse(candidates['/D2']['reverseReview']['positionCheck']['withinFitBudget'])
+  self.assertFalse(candidates['/D1']['continuityEstablished'])
   self.assertFalse(report['crossSide']['copperAssignmentQualified'])
   self.assertFalse(report['crossSide']['comparison']['electricalIdentityTransferred'])
   for path in report['paths']:
@@ -653,13 +673,13 @@ class ControllerExportTests(unittest.TestCase):
  def test_partial_a1_route_keeps_endpoint_unresolved(self):
   from route_evidence import annotate
   layout=json.loads((R/'generated/layout.json').read_text())
-  routes=layout['routes'];self.assertEqual({r['id'] for r in routes},set(json.loads((R/'route-evidence.json').read_text())['items']))
+  routes=layout['routes'];self.assertEqual({r['id'] for r in routes+layout['vias']},set(json.loads((R/'route-evidence.json').read_text())['items']))
   annotate(routes,layout['vias'],json.loads((R/'route-evidence.json').read_text()),json.loads((R/'evidence.json').read_text()))
   routes=[r for r in routes if r['net']=='/WR_N'];self.assertEqual(len(routes),8)
   self.assertEqual({r['net']for r in routes},{'/WR_N'})
   self.assertEqual(sum(r['evidence']['status']=='observed'for r in routes),7)
   self.assertEqual(sum(r['evidence']['status']=='inferred'for r in routes),1)
-  self.assertFalse(layout['vias'])
+  self.assertFalse(any(v['net']=='/WR_N'for v in layout['vias']))
   self.assertIn('magenta',(R/'generated/photo-registration.svg').read_text())
  def test_reset_pair_supply_route_connects_only_reviewed_pads(self):
   layout=json.loads((R/'generated/layout.json').read_text())
