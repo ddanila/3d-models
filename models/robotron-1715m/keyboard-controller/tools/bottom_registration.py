@@ -96,7 +96,9 @@ def review_registered_vias(vias,reports,landmark_hashes):
    if residual>limit:raise ValueError('Via position differs from cross-side photo evidence')
    hull=[project(region['photoToModel'],p)for p in region['anchorHull']]
    if not inside_hull(via['position'],hull,0.000002):raise ValueError('Via exceeds local registration hull')
-   checks[side]={'region':region['id'],'residualMm':residual}
+   # Canonical report precision avoids platform-specific last-bit math.dist
+   # differences. Acceptance above always uses the unrounded residual.
+   checks[side]={'region':region['id'],'residualMm':round(residual,9)}
   rows.append({'viaId':via['id'],'positionFrom':basis,'checks':checks,'scope':'Bounded nominal photo correspondence; plating, drill and diameter are not measured.'})
  return rows
 

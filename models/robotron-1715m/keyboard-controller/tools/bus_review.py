@@ -41,7 +41,7 @@ def build(root=ROOT):
             projections[side] = project(region['photoToModel'], point)
             limits.append(region['toleranceMm'])
         residual = math.dist(projections['top'], projections['bottom'])
-        reverse['positionCheck'] = {'residualMm': residual, 'toleranceMm': min(limits),
+        reverse['positionCheck'] = {'residualMm': round(residual, 9), 'toleranceMm': min(limits),
                                     'withinFitBudget': residual <= min(limits), 'continuityEstablished': False}
     if sources[cross['source']]['path'] != top['photo']:
         raise ValueError('Bus review top landmarks use a different photograph')

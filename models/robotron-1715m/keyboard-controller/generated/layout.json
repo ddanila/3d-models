@@ -19334,11 +19334,11 @@
       "checks": {
         "bottom": {
           "region": "cpu-a4",
-          "residualMm": 5.201002674930988e-07
+          "residualMm": 5.2e-07
         },
         "top": {
           "region": "cpu-latch-upper",
-          "residualMm": 0.6984202247562481
+          "residualMm": 0.698420225
         }
       },
       "positionFrom": "bottom",

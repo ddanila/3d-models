@@ -72,7 +72,7 @@
         ],
         "positionCheck": {
           "continuityEstablished": false,
-          "residualMm": 0.8879154861359979,
+          "residualMm": 0.887915486,
           "toleranceMm": 1.25,
           "withinFitBudget": true
         },
@@ -185,7 +185,7 @@
         ],
         "positionCheck": {
           "continuityEstablished": false,
-          "residualMm": 1.5299282581293565,
+          "residualMm": 1.529928258,
           "toleranceMm": 1.25,
           "withinFitBudget": false
         },
