@@ -58,7 +58,8 @@ class ControllerExportTests(unittest.TestCase):
   from bus_review import build
   report=build()
   self.assertEqual(report,json.loads((R/'generated/bus-review.json').read_text()))
-  candidates={p['referenceNet']:p for p in report['latchPaths']}
+  candidates={}
+  for p in report['latchPaths']:candidates.setdefault(p['referenceNet'],p)
   self.assertTrue(candidates['/D1']['reverseReview']['positionCheck']['withinFitBudget'])
   self.assertNotIn('/D2',candidates)
   alternatives=candidates['/D1']['reverseReview']['alternatives']
@@ -72,6 +73,19 @@ class ControllerExportTests(unittest.TestCase):
   self.assertEqual(terminal['terminal'],'A5:15')
   self.assertNotEqual(terminal['point'],candidates['/D1']['reverseReview']['unassignedEnd'])
   self.assertFalse(terminal['nativeCopper'])
+  self.assertFalse(terminal['topProjection']['insideFitHull'])
+  self.assertIsNone(terminal['topProjection']['endpointSeparationMm'])
+  constraint=candidates['/D1']['referenceConstraints']
+  self.assertFalse(constraint['compatibleWithTarget'])
+  self.assertFalse(constraint['physicalIdentityEstablished'])
+  self.assertEqual(next(t['net']for t in constraint['terminals']if t['terminal']=='R6.4:2'),'/CPU_PULLUP')
+  alternate=next(p for p in report['latchPaths']if p['id']=='latch-review-d1-inner-eye')
+  self.assertTrue(alternate['reverseReview']['positionCheck']['withinFitBudget'])
+  self.assertEqual(alternate['reverseReview']['endKind'],'trace-exit')
+  self.assertFalse(alternate['continuityEstablished'])
+  d4=candidates['/D4']['terminalReview']['topProjection']
+  self.assertTrue(d4['insideFitHull']);self.assertGreater(d4['endpointSeparationMm'],4)
+  self.assertFalse(d4['continuityEstablished'])
   self.assertFalse(candidates['/D1']['continuityEstablished'])
   self.assertFalse(report['crossSide']['copperAssignmentQualified'])
   self.assertFalse(report['crossSide']['comparison']['electricalIdentityTransferred'])
@@ -98,6 +112,9 @@ class ControllerExportTests(unittest.TestCase):
    bad=copy.deepcopy(original);bad['latchPaths'][0]['terminalReview']['continuityEstablished']=True
    (r/'bus-review.json').write_text(json.dumps(bad))
    with self.assertRaisesRegex(ValueError,'cannot establish latch continuity'):build(r)
+   bad=copy.deepcopy(original);bad['latchPaths'][0]['terminalReview']['point']=[1307,2706]
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'recorded underside pin landmark'):build(r)
    bad=copy.deepcopy(original);bad['latchPaths'][0]['reverseReview']['alternatives'][0]['point']=[0,0]
    (r/'bus-review.json').write_text(json.dumps(bad))
    with self.assertRaisesRegex(ValueError,'exceeds local fit hull'):build(r)

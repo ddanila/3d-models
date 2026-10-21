@@ -10,6 +10,7 @@ def build(root=ROOT):
     result = copy.deepcopy(read('bus-review.json'))
     sources = {s['id']: s for s in read('evidence.json')['sources']}
     top, bottom = read('photo-landmarks.json'), read('bottom-landmarks.json')
+    connectivity = read('generated/connectivity.json')['components']
     cross = result['crossSide']
     latch_paths = result.get('latchPaths', [])
     for path in latch_paths:
@@ -17,6 +18,11 @@ def build(root=ROOT):
             raise ValueError('Latch candidates cannot assign copper or continuity')
         if path.get('reverseReview', {}).get('continuityEstablished', False) is not False:
             raise ValueError('Latch eye correspondence is not established')
+        constraint = path.get('referenceConstraints')
+        if constraint:
+            constraint['terminals'] = [dict(terminal=t,net=connectivity[t.split(':')[0]]['pins'][t.split(':')[1]]) for t in constraint['terminals']]
+            constraint['compatibleWithTarget'] = any(t['net']==path['referenceNet'] for t in constraint['terminals'])
+            constraint['physicalIdentityEstablished'] = False
     records = [cross, cross['comparison'], *result['paths'], *latch_paths,
                *[p['reverseReview'] for p in latch_paths if 'reverseReview' in p]]
     records.extend(result.get('eyeReview', {}).get('comparisons', []))
@@ -99,6 +105,34 @@ def build(root=ROOT):
             bottom_pins[key] = pin['photoPixel']
     top_pins = {ref + ':' + pin: point for ref, c in top['components'].items()
                 for pin, point in {**c['pins'], **c.get('checkPins', {})}.items()}
+    for path in latch_paths:
+        terminal = path.get('terminalReview')
+        if not terminal or 'projectionRegion' not in terminal:
+            continue
+        recorded = terminal['point']==bottom_pins.get(terminal['terminal'])
+        if not recorded and terminal.get('landmarkRouteGroup'):
+            layout = read('generated/layout.json')
+            ref,pin = terminal['terminal'].split(':')
+            pad = next(p['position'] for c in layout['components'] if c['ref']==ref for p in c['pads'] if p['pin']==pin)
+            for route in layout['routes']:
+                if route['side']!='bottom' or route['evidence'].get('group')!=terminal['landmarkRouteGroup']:
+                    continue
+                for photo in route['evidence']['sources']:
+                    if photo['id']!='photo-bottom':continue
+                    recorded |= any(pixel==terminal['point'] and math.dist(model,pad)<=.000002
+                                    for pixel,model in zip(photo['locator']['pixelSegment'],route['points']))
+        if terminal['source']!='photo-bottom' or not recorded:
+            raise ValueError('Terminal search must use the recorded underside pin landmark')
+        region = next(r for r in read('generated/top-registration.json')['pcbRegions'] if r['id']==terminal['projectionRegion'])
+        if not region['copperAssignmentQualified']:
+            raise ValueError('Terminal search needs a qualified local fit')
+        point = project(region['bottomToTop'],terminal['point'])
+        endpoint = path['segments'][-1]['points'][-1]
+        bounded = inside_hull(terminal['point'],region['bottomHull']) and inside_hull(endpoint,region['anchorHull'])
+        separation = math.dist(project(region['photoToModel'],point),project(region['photoToModel'],endpoint)) if bounded else None
+        terminal['topProjection'] = dict(point=[round(v,9) for v in point],insideFitHull=bounded,
+                                         endpointSeparationMm=round(separation,9) if separation is not None else None,
+                                         continuityEstablished=False)
     anchors, checks = cross['anchorTerminals'], cross['checkTerminals']
     if len(set(anchors)) != 4 or not checks or set(anchors) & set(checks):
         raise ValueError('Bus search needs four unique anchors and independent checks')
