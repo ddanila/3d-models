@@ -27,13 +27,13 @@ jobs:
       - name: Install KiCad 10 native tools
         # Official stable-series packages: https://www.kicad.org/download/ubuntu/
         run: |
-          sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
-          sudo apt-get update
-          sudo apt-get install --yes --no-install-recommends kicad kicad-footprints xvfb xauth
+          sudo add-apt-repository --yes --no-update ppa:kicad/kicad-10.0-releases
+          sudo apt-get -o Acquire::Retries=3 -o APT::Update::Error-Mode=any update
+          sudo apt-get -o Acquire::Retries=3 install --yes --no-install-recommends 'kicad=10.*' 'kicad-footprints=10.*' xvfb xauth
       - name: Record native tool versions
         run: |
           kicad-cli version
-          /usr/bin/python3 -c 'import pcbnew; print(pcbnew.GetBuildVersion())'
+          /usr/bin/python3 -c 'import pcbnew; v=pcbnew.GetBuildVersion(); print(v); assert v.startswith("10."), "KiCad 10 is required"'
       - name: Check native regeneration and mismatch rejection
         run: xvfb-run -a /usr/bin/python3 models/robotron-1715m/keyboard-controller/tools/test_kicad.py
       - name: Verify source checkout was not modified
