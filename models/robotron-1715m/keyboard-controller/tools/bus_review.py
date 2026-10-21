@@ -26,7 +26,30 @@ def build(root=ROOT):
     records = [cross, cross['comparison'], *result['paths'], *latch_paths,
                *[p['reverseReview'] for p in latch_paths if 'reverseReview' in p]]
     records.extend(result.get('eyeReview', {}).get('comparisons', []))
+    for trial in result.get('registrationTrials', []):
+        if trial['copperAssignmentQualified'] is not False:
+            raise ValueError('Registration trials cannot qualify copper')
+        records.extend([trial, dict(source=trial['bottomSource'], sourceSha256=trial['bottomSourceSha256'])])
+        anchors, checks = trial['anchors'], trial['checks']
+        for key in ('id', 'photoPixel', 'bottomPixel'):
+            if len({str(p[key]) for p in anchors+checks}) != len(anchors+checks):
+                raise ValueError('Registration trial checks must be independent')
+        if len(anchors)!=4 or len(checks)<4:
+            raise ValueError('Registration trial needs four anchors and independent checks')
+        fit = homography([p['photoPixel'] for p in anchors], [p['bottomPixel'] for p in anchors])
+        from bottom_registration import inside_hull
+        region = next(r for r in read('generated/bottom-registration.json')['pcbRegions'] if r['id']==trial['bottomRegion'])
+        for check in checks:
+            predicted = project(fit, check['photoPixel'])
+            check.update(projectedBottomPixel=[round(v,9) for v in predicted],
+                         residualPixels=round(math.dist(predicted,check['bottomPixel']),9),
+                         insideBottomFitHull=inside_hull(check['bottomPixel'],region['anchorHull']))
+        trial['maxCheckResidualPixels'] = max(c['residualPixels'] for c in checks)
+        trial['anchorsInsideBottomFitHull'] = all(inside_hull(a['bottomPixel'],region['anchorHull']) for a in anchors)
     for path in latch_paths:
+        for comparison in path.get('comparisons', []):
+            records.append(comparison)
+            comparison['electricalIdentityTransferred'] = False
         terminal = path.get('terminalReview')
         if terminal:
             if (terminal['nativeCopper'] is not False or terminal['continuityEstablished'] is not False

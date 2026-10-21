@@ -81,7 +81,14 @@ class ControllerExportTests(unittest.TestCase):
   self.assertEqual(next(t['net']for t in constraint['terminals']if t['terminal']=='R6.4:2'),'/CPU_PULLUP')
   alternate=next(p for p in report['latchPaths']if p['id']=='latch-review-d1-inner-eye')
   self.assertTrue(alternate['reverseReview']['positionCheck']['withinFitBudget'])
-  self.assertEqual(alternate['reverseReview']['endKind'],'trace-exit')
+  self.assertEqual(alternate['reverseReview']['endKind'],'candidate-pad')
+  self.assertEqual(alternate['referenceConstraints']['terminals'],[{'terminal':'A2.2:2','net':'/A7'}])
+  self.assertFalse(alternate['referenceConstraints']['compatibleWithTarget'])
+  trial=report['registrationTrials'][0]
+  self.assertFalse(trial['copperAssignmentQualified'])
+  self.assertFalse(trial['anchorsInsideBottomFitHull'])
+  self.assertGreater(trial['maxCheckResidualPixels'],10)
+  self.assertFalse(candidates['/D4']['comparisons'][0]['electricalIdentityTransferred'])
   self.assertFalse(alternate['continuityEstablished'])
   d4=candidates['/D4']['terminalReview']['topProjection']
   self.assertTrue(d4['insideFitHull']);self.assertGreater(d4['endpointSeparationMm'],4)
@@ -101,6 +108,15 @@ class ControllerExportTests(unittest.TestCase):
    original=json.loads((r/'bus-review.json').read_text())
    import copy
    bad=copy.deepcopy(original);bad['crossSide']['sourceSha256']='0'*64
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'source hash mismatch'):build(r)
+   bad=copy.deepcopy(original);bad['registrationTrials'][0]['copperAssignmentQualified']=True
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'cannot qualify copper'):build(r)
+   bad=copy.deepcopy(original);bad['registrationTrials'][0]['checks'][0]=bad['registrationTrials'][0]['anchors'][0]
+   (r/'bus-review.json').write_text(json.dumps(bad))
+   with self.assertRaisesRegex(ValueError,'must be independent'):build(r)
+   bad=copy.deepcopy(original);bad['latchPaths'][2]['comparisons'][0]['sourceSha256']='0'*64
    (r/'bus-review.json').write_text(json.dumps(bad))
    with self.assertRaisesRegex(ValueError,'source hash mismatch'):build(r)
    bad=copy.deepcopy(original);bad['crossSide']['checkTerminals']=['A5:1']
