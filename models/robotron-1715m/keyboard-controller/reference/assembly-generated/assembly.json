@@ -5592,7 +5592,7 @@
             [
               109.77,
               -20.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -5614,7 +5614,7 @@
             [
               112.77,
               -20.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -5690,7 +5690,7 @@
             [
               116.77,
               -20.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -5712,7 +5712,7 @@
             [
               119.77,
               -20.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -5788,7 +5788,7 @@
             [
               -129.23,
               5.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -5810,7 +5810,7 @@
             [
               -126.23,
               5.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -5886,7 +5886,7 @@
             [
               -122.23,
               5.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -5908,7 +5908,7 @@
             [
               -119.23,
               5.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -5984,7 +5984,7 @@
             [
               -117.23,
               -20.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -6006,7 +6006,7 @@
             [
               -114.23,
               -20.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -6082,7 +6082,7 @@
             [
               -46.528599,
               6.782642,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -6104,7 +6104,7 @@
             [
               -43.528669,
               6.803045,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -6180,7 +6180,7 @@
             [
               26.838113,
               6.546223,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -6202,7 +6202,7 @@
             [
               29.82739,
               6.799638,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -6278,7 +6278,7 @@
             [
               38.732503,
               -5.959667,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -6300,7 +6300,7 @@
             [
               38.758966,
               -8.95955,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -6376,7 +6376,7 @@
             [
               96.800377,
               -10.989002,
-              5.5
+              6.5
             ]
           ],
           "diameterMm": 0.3
@@ -6398,7 +6398,7 @@
             [
               96.832432,
               -13.988831,
-              5.5
+              6.5
             ]
           ],
           "diameterMm": 0.3
@@ -6474,7 +6474,7 @@
             [
               89.77,
               20.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -6496,7 +6496,7 @@
             [
               92.77,
               20.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -6572,7 +6572,7 @@
             [
               120.77,
               20.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -6594,7 +6594,7 @@
             [
               123.77,
               20.0,
-              2.6
+              3.6
             ]
           ],
           "diameterMm": 0.3
@@ -10627,7 +10627,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "B",
@@ -10649,7 +10649,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "C",
@@ -10671,7 +10671,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         }
       ],
       "footprint": {
@@ -10843,7 +10843,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "B",
@@ -10865,7 +10865,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "C",
@@ -10887,7 +10887,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         }
       ],
       "footprint": {
@@ -11059,7 +11059,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "E",
@@ -11081,7 +11081,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "C",
@@ -11103,7 +11103,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         }
       ],
       "footprint": {
@@ -11275,7 +11275,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "E",
@@ -11297,7 +11297,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "C",
@@ -11319,7 +11319,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         }
       ],
       "footprint": {
@@ -11491,7 +11491,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "E",
@@ -11513,7 +11513,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "C",
@@ -11535,7 +11535,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         }
       ],
       "footprint": {
@@ -11707,7 +11707,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "E",
@@ -11729,7 +11729,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "C",
@@ -11751,7 +11751,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         }
       ],
       "footprint": {
@@ -11923,7 +11923,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "E",
@@ -11945,7 +11945,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "C",
@@ -11967,7 +11967,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         }
       ],
       "footprint": {
@@ -12139,7 +12139,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "E",
@@ -12161,7 +12161,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "C",
@@ -12183,7 +12183,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         }
       ],
       "footprint": {
@@ -12355,7 +12355,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "E",
@@ -12377,7 +12377,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "C",
@@ -12399,7 +12399,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         }
       ],
       "footprint": {
@@ -12571,7 +12571,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "E",
@@ -12593,7 +12593,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "C",
@@ -12615,7 +12615,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         }
       ],
       "footprint": {
@@ -12787,7 +12787,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "E",
@@ -12809,7 +12809,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         },
         {
           "pin": "C",
@@ -12831,7 +12831,7 @@
               4.1
             ]
           ],
-          "diameterMm": 0.3
+          "diameterMm": 0.5
         }
       ],
       "footprint": {
@@ -13814,7 +13814,7 @@
   ],
   "review": {
     "leadBodyEnvelopeIntersections": [],
-    "method": "Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes. Lead-to-lead clearance, installed case and bend radii remain unqualified.",
+    "method": "Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes; transistor wires use the circumscribed diameter of the manufacturer lead section. Lead-to-lead clearance, installed case and bend radii remain unqualified.",
     "bodyEnvelopeIntersections": [],
     "bodyOverhangs": [],
     "insufficientDrillAllowance": [],
@@ -13833,6 +13833,6 @@
     "reference/assembly.json": "1ee84e2f285f605e5fffafd43ace6f659c5ea430764b3857ca4e94257cbd4b5f",
     "reference/generated/layout.json": "51217655811477294a8c69ceb442be17ff987562fe98cf1df5b26a303a18d74d",
     "reference/signal-paths.json": "bcc196b9fe151e87a292a0b8572d20b1b763d526907005e595428f03f958392b",
-    "tools/reference_assembly.py": "5de7057305ac1cfdac2a703d66e8bd255e7aad284fd46540b9c430b5df3224cc"
+    "tools/reference_assembly.py": "9cb63158cc1ca11c571ca55793fa846474c7899ba97308930ee8a777f53eb87b"
   }
 }

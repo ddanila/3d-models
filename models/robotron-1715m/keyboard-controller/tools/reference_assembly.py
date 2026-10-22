@@ -73,14 +73,14 @@ def build():
             elif kind in ('axial','filter'):
                 terminals={p['pin']:[(-1 if i==0 else 1)*size[0]/2,0,z+size[2]/2] for i,p in enumerate(pads)}
             elif kind=='bridge':terminals={p['pin']:[0,0,z] for p in pads}
-            elif kind=='capacitor':terminals={p['pin']:[(-1 if i==0 else 1)*1.5,0,z] for i,p in enumerate(pads)}
+            elif kind=='capacitor':terminals={p['pin']:[(-1 if i==0 else 1)*1.5,0,z+1] for i,p in enumerate(pads)}
             else:terminals={p['pin']:[*rotate([p['position'][i]-origin[i] for i in range(2)],-angle),z] for p in pads}
             points=[[x*size[0]/2,y*size[1]/2+(.25 if kind=='transistor' else 0),h] for x in (-1,1) for y in (-1,1) for h in (0,size[2])]
         if set(terminals)!=set(pinmap):raise ValueError('Package terminal mismatch '+ref)
         leads=[]
         for pin,port in terminals.items():
             p=pinmap[pin];tip=[*p['position'],-.5];entry=[*p['position'],2.1];end=world(port[:2],origin,angle,port[2])
-            leads.append({'pin':pin,'net':p['net'],'points':[tip,entry,end],'diameterMm':.3})
+            leads.append({'pin':pin,'net':p['net'],'points':[tip,entry,end],'diameterMm':math.hypot(*package['leadSectionMm']) if kind=='transistor' else .3})
         bodybounds=bounds([world(p[:2],origin,angle,z+p[2]) for p in points])
         result.append({'ref':ref,'type':c['type'],'package':kind,'basis':s['basis'],'position':[ *origin,z],'rotation':angle,'sizeMm':size,'mesh':mesh,'profile':profile,'boundsMm':bodybounds,'leads':leads,'footprint':{'id':'RobotronReference_'+ref,'terminals':{p['pin']:{'offsetMm':rotate([p['position'][i]-origin[i] for i in range(2)],-angle),'net':p['net']} for p in pads}}})
     collisions=[{'a':a['ref'],'b':b['ref']} for i,a in enumerate(result) for b in result[i+1:] if overlaps(a['boundsMm'],b['boundsMm'],.05)]
@@ -100,7 +100,7 @@ def build():
                 if c['ref']==other['ref'] or other['package']=='bridge':continue
                 if any(segment_box(a,b,other['boundsMm'],lead['diameterMm']/2) for a,b in zip(lead['points'],lead['points'][1:])):
                     lead_body.append({'terminal':c['ref']+':'+lead['pin'],'body':other['ref']})
-    report={'leadBodyEnvelopeIntersections':lead_body,'method':'Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes. Lead-to-lead clearance, installed case and bend radii remain unqualified.','bodyEnvelopeIntersections':collisions,'bodyOverhangs':outside,'insufficientDrillAllowance':drill,'leadPadAlignmentPassed':True,'mechanicallyQualified':False,'historicallyVerified':False,'fabricationReady':False}
+    report={'leadBodyEnvelopeIntersections':lead_body,'method':'Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes; transistor wires use the circumscribed diameter of the manufacturer lead section. Lead-to-lead clearance, installed case and bend radii remain unqualified.','bodyEnvelopeIntersections':collisions,'bodyOverhangs':outside,'insufficientDrillAllowance':drill,'leadPadAlignmentPassed':True,'mechanicallyQualified':False,'historicallyVerified':False,'fabricationReady':False}
     paths=read(REF/'signal-paths.json');connectivity=read(ROOT/'generated/connectivity.json')['components']
     for stage in paths['stages']:
         if stage['ref'] not in expected:raise ValueError('Unknown walkthrough component')
@@ -120,7 +120,7 @@ def build():
             else:shape=f'translate({[-size[0]/2,-size[1]/2,0]}) cube({size});'
             scad.append(f'// {c["ref"]}: {c["basis"]}\ncolor({color}) translate({p}) rotate([0,0,{a}]) {shape}')
         for lead in c['leads']:
-            for x,y in zip(lead['points'],lead['points'][1:]):scad.append(f'color([.75,.75,.78]) hull() {{translate({x}) sphere(d=.3,$fn=8); translate({y}) sphere(d=.3,$fn=8);}}')
+            for x,y in zip(lead['points'],lead['points'][1:]):scad.append(f'color([.75,.75,.78]) hull() {{translate({x}) sphere(d={lead["diameterMm"]},$fn=8); translate({y}) sphere(d={lead["diameterMm"]},$fn=8);}}')
     scad.append('}')
     return data,'\n'.join(scad)+'\n'
 
