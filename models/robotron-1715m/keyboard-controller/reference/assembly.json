@@ -1,0 +1,618 @@
+{
+  "schema": 1,
+  "variant": "proposed-reference",
+  "scope": "Proposed package adapters; heights, lead bends and unspecified body dimensions are review assumptions. Filter units are separate electrical surrogates, not a reconstruction of the shared core.",
+  "components": {
+    "A1": {
+      "package": "dip",
+      "basis": "Existing pinned KiCad DIP body; pad-driven formed leads. Body is a visual surrogate for the named device.",
+      "seatMm": 1.6
+    },
+    "A2.1": {
+      "package": "dip",
+      "basis": "Existing pinned KiCad DIP body; pad-driven formed leads. Body is a visual surrogate for the named device.",
+      "seatMm": 1.6
+    },
+    "A2.2": {
+      "package": "dip",
+      "basis": "Existing pinned KiCad DIP body; pad-driven formed leads. Body is a visual surrogate for the named device.",
+      "seatMm": 1.6
+    },
+    "A2.3": {
+      "package": "dip",
+      "basis": "Existing pinned KiCad DIP body; pad-driven formed leads. Body is a visual surrogate for the named device.",
+      "seatMm": 1.6
+    },
+    "A4": {
+      "package": "dip",
+      "basis": "Existing pinned KiCad DIP body; pad-driven formed leads. Body is a visual surrogate for the named device.",
+      "seatMm": 1.6
+    },
+    "A5": {
+      "package": "dip",
+      "basis": "Existing pinned KiCad DIP body; pad-driven formed leads. Body is a visual surrogate for the named device.",
+      "seatMm": 2.8
+    },
+    "A6": {
+      "package": "dip",
+      "basis": "Existing pinned KiCad DIP body; pad-driven formed leads. Body is a visual surrogate for the named device.",
+      "seatMm": 1.6
+    },
+    "A7": {
+      "package": "dip",
+      "basis": "Existing pinned KiCad DIP body; pad-driven formed leads. Body is a visual surrogate for the named device.",
+      "seatMm": 1.6
+    },
+    "A8": {
+      "package": "dip",
+      "basis": "Existing pinned KiCad DIP body; pad-driven formed leads. Body is a visual surrogate for the named device.",
+      "seatMm": 2.8
+    },
+    "BR1": {
+      "package": "bridge",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        0,
+        0,
+        0
+      ],
+      "seatMm": 2.4
+    },
+    "BR2": {
+      "package": "bridge",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        0,
+        0,
+        0
+      ],
+      "seatMm": 2.4
+    },
+    "C1": {
+      "package": "capacitor",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        1.2,
+        5.2
+      ],
+      "seatMm": 2.6
+    },
+    "C2": {
+      "package": "capacitor",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        1.2,
+        5.2
+      ],
+      "seatMm": 2.6
+    },
+    "C3.1": {
+      "package": "capacitor",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        1.2,
+        5.2
+      ],
+      "seatMm": 2.6
+    },
+    "C3.2": {
+      "package": "capacitor",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        1.2,
+        5.2
+      ],
+      "seatMm": 2.6
+    },
+    "C4": {
+      "package": "capacitor",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        1.2,
+        5.2
+      ],
+      "seatMm": 2.6
+    },
+    "C5.1": {
+      "package": "capacitor",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        1.2,
+        5.2
+      ],
+      "seatMm": 2.6
+    },
+    "C5.2": {
+      "package": "capacitor",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        1.2,
+        5.2
+      ],
+      "seatMm": 2.6
+    },
+    "C5.3": {
+      "package": "capacitor",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        1.2,
+        5.2
+      ],
+      "seatMm": 2.6
+    },
+    "C5.4": {
+      "package": "capacitor",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        1.2,
+        5.2
+      ],
+      "seatMm": 5.5
+    },
+    "C5.5": {
+      "package": "capacitor",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        1.2,
+        5.2
+      ],
+      "seatMm": 2.6
+    },
+    "C6": {
+      "package": "capacitor",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        1.2,
+        5.2
+      ],
+      "seatMm": 2.6
+    },
+    "L1.1": {
+      "package": "filter",
+      "basis": "Separate winding surrogate with explicit terminal mapping. Shared core, coupling and winding geometry unresolved.",
+      "sizeMm": [
+        4,
+        3,
+        3
+      ],
+      "seatMm": 3
+    },
+    "L1.2": {
+      "package": "filter",
+      "basis": "Separate winding surrogate with explicit terminal mapping. Shared core, coupling and winding geometry unresolved.",
+      "sizeMm": [
+        4,
+        3,
+        3
+      ],
+      "seatMm": 3
+    },
+    "L1.3": {
+      "package": "filter",
+      "basis": "Separate winding surrogate with explicit terminal mapping. Shared core, coupling and winding geometry unresolved.",
+      "sizeMm": [
+        4,
+        3,
+        3
+      ],
+      "seatMm": 3
+    },
+    "L1.4": {
+      "package": "filter",
+      "basis": "Separate winding surrogate with explicit terminal mapping. Shared core, coupling and winding geometry unresolved.",
+      "sizeMm": [
+        4,
+        3,
+        3
+      ],
+      "seatMm": 3
+    },
+    "R1": {
+      "package": "network",
+      "basis": "R1 catalog B1 envelope; R2 proposed nine-terminal surrogate, specimen tenth lead unresolved.",
+      "sizeMm": [
+        25,
+        3,
+        11
+      ],
+      "seatMm": 2.6
+    },
+    "R10.1": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R10.2": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R10.3": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R11.1": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R11.2": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R2": {
+      "package": "network",
+      "basis": "R1 catalog B1 envelope; R2 proposed nine-terminal surrogate, specimen tenth lead unresolved.",
+      "sizeMm": [
+        23,
+        3,
+        11
+      ],
+      "seatMm": 2.6
+    },
+    "R3": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R4.1": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R4.2": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R4.3": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R5": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R6.1": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R6.3": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R6.4": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R6.5": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R6.6": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R7": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R8": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R9.1": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R9.2": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R9.3": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R9.4": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R9.5": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R9.6": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R9.7": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R9.8": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "R9.9": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        5.2,
+        2.3,
+        2.3
+      ],
+      "seatMm": 2.1
+    },
+    "V1.1": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        2,
+        1.5,
+        1.5
+      ],
+      "seatMm": 2.1
+    },
+    "V1.2": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        2,
+        1.5,
+        1.5
+      ],
+      "seatMm": 2.1
+    },
+    "V2": {
+      "package": "axial",
+      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "sizeMm": [
+        2,
+        1.5,
+        1.5
+      ],
+      "seatMm": 2.1
+    },
+    "V3.1": {
+      "package": "transistor",
+      "basis": "L3/12 manufacturer body and terminal order; proposed orientation and fan-out to nominal PCB adapter.",
+      "packageReference": "sc236-l3-12",
+      "seatMm": 4.1
+    },
+    "V3.2": {
+      "package": "transistor",
+      "basis": "L3/12 manufacturer body and terminal order; proposed orientation and fan-out to nominal PCB adapter.",
+      "packageReference": "sc236-l3-12",
+      "seatMm": 4.1
+    },
+    "V4.1": {
+      "package": "transistor",
+      "basis": "L3/12 manufacturer body and terminal order; proposed orientation and fan-out to nominal PCB adapter.",
+      "packageReference": "sc308-l3-12",
+      "seatMm": 4.1
+    },
+    "V4.2": {
+      "package": "transistor",
+      "basis": "L3/12 manufacturer body and terminal order; proposed orientation and fan-out to nominal PCB adapter.",
+      "packageReference": "sc308-l3-12",
+      "seatMm": 4.1
+    },
+    "V4.3": {
+      "package": "transistor",
+      "basis": "L3/12 manufacturer body and terminal order; proposed orientation and fan-out to nominal PCB adapter.",
+      "packageReference": "sc308-l3-12",
+      "seatMm": 4.1
+    },
+    "V4.4": {
+      "package": "transistor",
+      "basis": "L3/12 manufacturer body and terminal order; proposed orientation and fan-out to nominal PCB adapter.",
+      "packageReference": "sc308-l3-12",
+      "seatMm": 4.1
+    },
+    "V4.5": {
+      "package": "transistor",
+      "basis": "L3/12 manufacturer body and terminal order; proposed orientation and fan-out to nominal PCB adapter.",
+      "packageReference": "sc308-l3-12",
+      "seatMm": 4.1
+    },
+    "V4.6": {
+      "package": "transistor",
+      "basis": "L3/12 manufacturer body and terminal order; proposed orientation and fan-out to nominal PCB adapter.",
+      "packageReference": "sc308-l3-12",
+      "seatMm": 4.1
+    },
+    "V4.7": {
+      "package": "transistor",
+      "basis": "L3/12 manufacturer body and terminal order; proposed orientation and fan-out to nominal PCB adapter.",
+      "packageReference": "sc308-l3-12",
+      "seatMm": 4.1
+    },
+    "V4.8": {
+      "package": "transistor",
+      "basis": "L3/12 manufacturer body and terminal order; proposed orientation and fan-out to nominal PCB adapter.",
+      "packageReference": "sc308-l3-12",
+      "seatMm": 4.1
+    },
+    "V4.9": {
+      "package": "transistor",
+      "basis": "L3/12 manufacturer body and terminal order; proposed orientation and fan-out to nominal PCB adapter.",
+      "packageReference": "sc308-l3-12",
+      "seatMm": 4.1
+    },
+    "X1": {
+      "package": "connector",
+      "basis": "Proposed connector envelope; XT1 represents cable terminations, not an installed socket.",
+      "sizeMm": [
+        38,
+        10,
+        6
+      ],
+      "seatMm": 1.6
+    },
+    "XT1": {
+      "package": "connector",
+      "basis": "Proposed connector envelope; XT1 represents cable terminations, not an installed socket.",
+      "sizeMm": [
+        13,
+        2.5,
+        4
+      ],
+      "seatMm": 1.6
+    }
+  }
+}

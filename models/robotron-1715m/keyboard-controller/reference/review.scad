@@ -1,5 +1,7 @@
 // Proposed reference electrical geometry; not the historical specimen or a fabrication release.
 include <generated/controller.scad>
+include <assembly-generated/assembly.scad>
+show_components=true;
 side="top"; // [top,bottom]
 show_proposed=true;
 $fn=20;
@@ -28,4 +30,7 @@ module reference_board() {
             translate([0,0,-.01]) cylinder(h=.06,d=v[3]);
         }
 }
-rotate([side=="bottom"?180:0,0,0]) reference_board();
+rotate([side=="bottom"?180:0,0,0]) {
+    reference_board();
+    if(show_components) reference_populated_assembly();
+}

@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "variant": "proposed-reference",
+  "scope": "Functional walkthrough, not a claim that every stage is one continuous copper net or that analog behavior is qualified. Each terminal list is checked against the shared netlist.",
+  "stages": [
+    {
+      "title": "Column selection",
+      "description": "The CPU address bit drives a matrix column through A1. A pressed key couples a selected column to a row.",
+      "ref": "A1",
+      "net": "/COL4",
+      "terminals": [
+        "A1:12",
+        "X1:B1"
+      ]
+    },
+    {
+      "title": "Row input",
+      "description": "Example row 4 enters through X1 and its base resistor. The selected column/row intersection depends on the key.",
+      "ref": "R9.8",
+      "net": "/ROW4",
+      "terminals": [
+        "X1:A4",
+        "R9.8:1"
+      ]
+    },
+    {
+      "title": "Input transistor",
+      "description": "R9.8 and the R2 bias network drive the V4.1 input transistor.",
+      "ref": "V4.1",
+      "net": "/BASE4",
+      "terminals": [
+        "R9.8:2",
+        "R2:5",
+        "V4.1:B"
+      ]
+    },
+    {
+      "title": "Sense latch",
+      "description": "V4.1 collector, R1 load and A4 input share SENSE4. This is the input latch, not a serial output latch.",
+      "ref": "A4",
+      "net": "/SENSE4",
+      "terminals": [
+        "V4.1:C",
+        "R1:5",
+        "A4:5"
+      ]
+    },
+    {
+      "title": "CPU and firmware",
+      "description": "A4 places the sensed input on the data bus. The CPU executes firmware from A8; firmware scanning and encoding intervene before serial output.",
+      "ref": "A5",
+      "net": "/D0",
+      "terminals": [
+        "A4:19",
+        "A5:14",
+        "A8:9",
+        "A1:3"
+      ]
+    },
+    {
+      "title": "Data driver",
+      "description": "A1 drives TA_DATEN from the data-bit input. This stage represents device logic, not a direct copper connection through the gate.",
+      "ref": "A1",
+      "net": "/TA_DATEN",
+      "terminals": [
+        "A1:4",
+        "L1.4:1"
+      ]
+    },
+    {
+      "title": "Data cable",
+      "description": "The data winding connects the board-side signal to the cable. Coupling and installed winding geometry remain unqualified.",
+      "ref": "L1.4",
+      "net": "/CABLE_DATEN",
+      "terminals": [
+        "L1.4:2",
+        "XT1:A1"
+      ]
+    },
+    {
+      "title": "Strobe driver",
+      "description": "CPU WR_N drives the A1 strobe gate. Data and strobe are separate protocol lines.",
+      "ref": "A1",
+      "net": "/WR_N",
+      "terminals": [
+        "A5:22",
+        "A1:1"
+      ]
+    },
+    {
+      "title": "Strobe filter",
+      "description": "A1 strobe output passes through the clock winding.",
+      "ref": "L1.1",
+      "net": "/TA_TAKT",
+      "terminals": [
+        "A1:2",
+        "L1.1:1"
+      ]
+    },
+    {
+      "title": "Strobe cable",
+      "description": "The cable-side strobe reaches XT1 B2.",
+      "ref": "XT1",
+      "net": "/CABLE_TAKT",
+      "terminals": [
+        "L1.1:2",
+        "XT1:B2"
+      ]
+    }
+  ]
+}

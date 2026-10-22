@@ -188,3 +188,18 @@ Digital comparisons and specimen evidence collection are documented in the
 museum's [status guide](https://github.com/ddanila/dac/blob/main/docs/robotron/keyboard-controller-progress.md)
 and [verification guide](https://github.com/ddanila/dac/blob/main/docs/robotron/keyboard-controller-verification.md). Logical reference agreement does not
 qualify analog behavior, exact CPU cycle timing or specimen firmware.
+
+### Populated reference assembly
+
+Open `reference/review.scad` with `show_components=true`. `reference/assembly.json`
+defines proposed package choices; `tools/reference_assembly.py` derives numbered
+lead paths and body poses from the routed pads, reusing the pinned DIP bodies and
+manufacturer L3/12 dimensions. Regenerate with that tool; use `--check` to reject
+stale exports. `reference/signal-paths.json` supplies netlist-checked walkthroughs
+for the museum.
+
+The generated review checks body envelopes, board overhang and nominal drill
+allowance. It does not qualify lead collisions, bend radii or enclosure fit.
+R2 and the separate filter-winding bodies remain surrogates; shared-core geometry
+and coupling are unresolved. These reference adapters do not establish historical
+footprints or fabrication readiness.
