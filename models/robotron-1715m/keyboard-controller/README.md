@@ -1,8 +1,9 @@
 # Keyboard controller reconstruction
 
-The native KiCad files describe the reference circuit and a partial reconstruction
-of the museum board. Physical routing, dimensions, discrete pin mapping and
-specimen timing remain incomplete. The board is not fabrication-ready.
+The root KiCad files describe the reference circuit and partial historical PCB.
+`reference/` contains a separate proposed implementation of the same netlist.
+Its geometry is not specimen evidence; dimensions, package adapters, device dynamics
+and specimen timing remain unqualified. Neither variant is fabrication-ready.
 
 ## Review
 
@@ -39,6 +40,29 @@ local fit agreement does not identify a winding or connect the shield to ground.
 `filter-registration.json` matches the primary filter joint rows using held-out
 inner joints. The generated local fit is bounded by the outer joints; projected
 underside spans are not top copper or native electrical routes.
+
+## Proposed reference PCB
+
+Open `reference/controller.kicad_pcb` for the proposed layout and
+`reference/review.scad` for its electrical geometry. Orange copper is proposed;
+blue geometry retains an exact match to a historical source item. The historical
+board and its evidence ledger remain separate. Reference completion does not
+reduce unresolved historical joins.
+
+Edit `reference/implementation.json` for proposed placements and routing constraints.
+Use `tools/reference_board.py --prepare /tmp/robotron-reference/controller.kicad_pcb`
+with KiCad Python to generate a starting board and DSN. The routing boundary is
+inset to respect native edge clearance; disable the router's automatic neckdown.
+The retained `reference/routing-receipt.json` identifies the router and inputs.
+Import a session with `--import-session FILE --input-board FILE --output-board FILE`;
+this rejects changes to terminal identities or placements beyond interchange
+precision. Then run `tools/reference_board.py` to export and check the committed
+reference board, or `--check` for standard-Python freshness validation.
+
+The proposed discrete and filter footprints are electrical adapters. Their semantic
+pin order is explicit; they do not establish original hole entries, installed
+orientation, winding identity or mechanical fit. The existing HDL comparisons
+apply to the shared schematic connectivity, not the proposed copper's parasitics.
 
 ## Authorities
 
@@ -97,7 +121,7 @@ native footprints; review views show them in cyan. Virtual bridge isolation
 is tested digitally, but the reviewed sources do not prescribe physical bridge
 opening. Closed-link continuity alone cannot establish source-side terminal order.
 
-Every native copper UUID requires an observed, inferred or unresolved review,
+Every historical native copper UUID requires an observed, inferred or unresolved review,
 source hashes, a locator and `geometrySha256`. Geometry or net changes invalidate
 the review. Observed tracks require their side's photo; observed vias require both
 sides. This enforces provenance completeness, not the truth of an interpretation.

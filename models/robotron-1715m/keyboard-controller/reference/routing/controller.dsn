@@ -1,0 +1,1013 @@
+(pcb "/tmp/robotron-reference-v3/controller.dsn"
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "10.0.6")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary (path pcb 0 284650 -72650 15350 -72650 15350 -27350 284650 -27350 284650 -72650))
+    (via "Via[0-1]_600:300_um" "Via[0-1]_1200:600_um")
+    (rule
+      (width 250)
+      (clearance 200)
+      (clearance 50 (type smd_smd))
+    )
+  )
+  (placement
+    (component RobotronReference_R6.6
+      (place R6.6 244082.379 -53047.988 front 0 (PN 1k))
+    )
+    (component RobotronReference_R11.1
+      (place R11.1 126956.472 -31746.486 front 0 (PN 130))
+    )
+    (component RobotronReference_C2
+      (place C2 267000 -70000 front 0 (PN 10u))
+      (place L1.1 22000 -58000 front 0 (PN CHOKE))
+      (place C1 260000 -70000 front 0 (PN 220p))
+      (place C4 33000 -70000 front 0 (PN 10u))
+      (place C3.1 21000 -45000 front 0 (PN 47u))
+      (place C6 271000 -30000 front 0 (PN 470p))
+      (place L1.2 22000 -64000 front 0 (PN CHOKE))
+      (place L1.4 31000 -64000 front 0 (PN CHOKE))
+      (place C5.5 240000 -30000 front 0 (PN 47n))
+      (place L1.3 31000 -58000 front 0 (PN CHOKE))
+      (place C3.2 28000 -45000 front 0 (PN 47u))
+      (place BR2 81000 -59500 front 0 (PN BRIDGE))
+    )
+    (component RobotronReference_R9.7
+      (place R9.7 82432.716 -34873.987 front 0 (PN 3k9))
+    )
+    (component RobotronReference_V4.4
+      (place V4.4 70000 -69000 front 0 (PN SC308C))
+      (place V4.5 78000 -69000 front 0 (PN SC308C))
+      (place V4.8 118000 -69000 front 0 (PN SC308C))
+      (place V4.1 46000 -69000 front 0 (PN SC308C))
+      (place V4.3 62000 -69000 front 0 (PN SC308C))
+      (place V4.9 126000 -69000 front 0 (PN SC308C))
+      (place V4.7 110000 -69000 front 0 (PN SC308C))
+      (place V4.6 102000 -69000 front 0 (PN SC308C))
+      (place V4.2 54000 -69000 front 0 (PN SC308C))
+    )
+    (component RobotronReference_R1
+      (place R1 56000 -63500 front 0 (PN 8x910))
+    )
+    (component RobotronReference_R11.2
+      (place R11.2 141276.612 -31629.854 front 0 (PN 130))
+    )
+    (component RobotronReference_R10.1
+      (place R10.1 99098.155 -49961.222 front 0 (PN 560))
+    )
+    (component RobotronReference_R6.5
+      (place R6.5 224500 -65000 front 0 (PN 1k))
+      (place R6.4 221000 -65000 front 0 (PN 1k))
+    )
+    (component RobotronReference_X1
+      (place X1 140000 -47000 front 0 (PN MATRIX_CONNECTOR))
+    )
+    (component RobotronReference_V1.2
+      (place V1.2 37000 -59000 front 0 (PN DIODE))
+      (place V1.1 35000 -53000 front 0 (PN DIODE))
+      (place V2 89000 -69000 front 0 (PN DIODE))
+    )
+    (component RobotronReference_R9.4
+      (place R9.4 82687.875 -45075.382 front 0 (PN 3k9))
+    )
+    (component RobotronReference_R9.1
+      (place R9.1 82753.108 -55497.083 front 0 (PN 3k9))
+    )
+    (component RobotronReference_R9.8
+      (place R9.8 82210.81 -31420.632 front 0 (PN 3k9))
+    )
+    (component RobotronReference_A2.1
+      (place A2.1 99547.95 -33384.955 front 2.692479163 (PN DL003))
+      (place A6 235565.841 -61136.362 front 0.6792531916 (PN DL074))
+      (place A2.2 173836.695 -51747.464 front 1.73081465 (PN DL003))
+      (place A2.3 172863.462 -35397.266 front 0.8083022764 (PN DL003))
+      (place A1 100403.987 -58089.211 front 1.877727727 (PN 7406))
+      (place A7 259490.631 -61668.922 front 0.5195354991 (PN DL000))
+    )
+    (component RobotronReference_R9.2
+      (place R9.2 82793.185 -52086.134 front 0 (PN 3k9))
+    )
+    (component RobotronReference_R9.5
+      (place R9.5 82500.777 -41840.345 front 0 (PN 3k9))
+    )
+    (component RobotronReference_H1
+      (place H1 17000 -40000 front 0 (PN "Photo estimated mounting hole"))
+      (place H4 283000 -32500 front 0 (PN "Photo estimated mounting hole"))
+      (place H3 283000 -40000 front 0 (PN "Photo estimated mounting hole"))
+      (place H2 17000 -32500 front 0 (PN "Photo estimated mounting hole"))
+    )
+    (component RobotronReference_BR1
+      (place BR1 280514.796 -62534.335 front 0 (PN BRIDGE))
+    )
+    (component RobotronReference_R6.3
+      (place R6.3 175577.943 -58340.908 front 0 (PN 1k))
+    )
+    (component RobotronReference_V3.1
+      (place V3.1 35000 -46500 front 0 (PN SC236D))
+      (place V3.2 44000 -53000 front 0 (PN SC236D))
+    )
+    (component RobotronReference_R8
+      (place R8 71793.914 -37301.443 front 0 (PN 47k))
+    )
+    (component RobotronReference_R4.1
+      (place R4.1 41821.793 -36747.156 front 0 (PN 220))
+    )
+    (component RobotronReference_C5.1
+      (place C5.1 105339.098 -40541.586 front 0 (PN 47n))
+    )
+    (component RobotronReference_R10.3
+      (place R10.3 276670.429 -59070.741 front 0 (PN 560))
+    )
+    (component RobotronReference_R4.3
+      (place R4.3 263739.993 -54265.601 front 0 (PN 220))
+    )
+    (component RobotronReference_R2
+      (place R2 50000 -47200 front 0 (PN 8x4k7))
+    )
+    (component RobotronReference_R9.3
+      (place R9.3 82683.705 -48632.688 front 0 (PN 3k9))
+    )
+    (component RobotronReference_R4.2
+      (place R4.2 64462.705 -37124.79 front 0 (PN 220))
+    )
+    (component RobotronReference_R10.2
+      (place R10.2 99063.354 -46322.805 front 0 (PN 560))
+    )
+    (component RobotronReference_A5
+      (place A5 212004.452 -38210.74 front -0.1152611347 (PN U880))
+    )
+    (component RobotronReference_R9.9
+      (place R9.9 175589.924 -61563.358 front 0 (PN 3k9))
+    )
+    (component RobotronReference_A4
+      (place A4 204806.294 -58970.251 front -0.1094295907 (PN I8282))
+    )
+    (component RobotronReference_R6.1
+      (place R6.1 60912.059 -37114.409 front 0 (PN 1k))
+    )
+    (component RobotronReference_R9.6
+      (place R9.6 82503.759 -38394.927 front 0 (PN 3k9))
+    )
+    (component RobotronReference_C5.2
+      (place C5.2 178044.442 -41094.985 front 0 (PN 47n))
+    )
+    (component RobotronReference_R3
+      (place R3 38359.502 -36849.799 front 0 (PN 22k))
+    )
+    (component RobotronReference_XT1
+      (place XT1 25000 -50000 front 0 (PN KEYBOARD_CABLE))
+    )
+    (component RobotronReference_C5.4
+      (place C5.4 250810.583 -62111.94 front 0 (PN 47n))
+    )
+    (component RobotronReference_R7
+      (place R7 68014.788 -37208.054 front 0 (PN 3k3))
+    )
+    (component RobotronReference_C5.3
+      (place C5.3 184197.461 -56251.9 front 0 (PN 47n))
+    )
+    (component RobotronReference_R5
+      (place R5 45398.073 -36649.369 front 0 (PN 10k))
+    )
+    (component RobotronReference_A8
+      (place A8 257878.458 -40490.278 front 0.9741566612 (PN U556_2716))
+    )
+  )
+  (library
+    (image RobotronReference_R6.6
+      (pin Round[A]Pad_1700.000000_um 1 6385.5 -323.66)
+      (pin Round[A]Pad_1700.000000_um 2 -6385.51 323.661)
+    )
+    (image RobotronReference_R11.1
+      (pin Round[A]Pad_1700.000000_um 1 -5901.38 -1.965)
+      (pin Round[A]Pad_1700.000000_um 2 5901.38 1.964)
+    )
+    (image RobotronReference_C2
+      (pin Round[A]Pad_1700.000000_um 1 0 0)
+      (pin Round[A]Pad_1700.000000_um 2 2540 0)
+    )
+    (image RobotronReference_R9.7
+      (pin Round[A]Pad_1700.000000_um 1 6037.97 -154.485)
+      (pin Round[A]Pad_1700.000000_um 2 -6037.97 154.485)
+    )
+    (image RobotronReference_V4.4
+      (pin Round[A]Pad_1700.000000_um B 0 0)
+      (pin Round[A]Pad_1700.000000_um C 5080 0)
+      (pin Round[A]Pad_1700.000000_um E 2540 0)
+    )
+    (image RobotronReference_R1
+      (pin Round[A]Pad_1700.000000_um 1 0 0)
+      (pin Round[A]Pad_1700.000000_um 2 2500 0)
+      (pin Round[A]Pad_1700.000000_um 3 5000 0)
+      (pin Round[A]Pad_1700.000000_um 4 7500 0)
+      (pin Round[A]Pad_1700.000000_um 5 10000 0)
+      (pin Round[A]Pad_1700.000000_um 6 12500 0)
+      (pin Round[A]Pad_1700.000000_um 7 15000 0)
+      (pin Round[A]Pad_1700.000000_um 8 17500 0)
+      (pin Round[A]Pad_1700.000000_um 9 20000 0)
+      (pin Round[A]Pad_1700.000000_um 10 22500 0)
+    )
+    (image RobotronReference_R11.2
+      (pin Round[A]Pad_1700.000000_um 1 5993.28 -1.246)
+      (pin Round[A]Pad_1700.000000_um 2 -5993.28 1.245)
+    )
+    (image RobotronReference_R10.1
+      (pin Round[A]Pad_1700.000000_um 1 5762.76 107.023)
+      (pin Round[A]Pad_1700.000000_um 2 -5762.76 -107.022)
+    )
+    (image RobotronReference_R6.5
+      (pin Round[A]Pad_1700.000000_um 1 0 0)
+      (pin Round[A]Pad_1700.000000_um 2 0 12000)
+    )
+    (image RobotronReference_X1
+      (pin Round[A]Pad_1700.000000_um A1 -16035.4 11891.1)
+      (pin Round[A]Pad_1700.000000_um A2 -13643.2 11827.4)
+      (pin Round[A]Pad_1700.000000_um A3 -11262.1 11764)
+      (pin Round[A]Pad_1700.000000_um A4 -8888.27 11620.3)
+      (pin Round[A]Pad_1700.000000_um A5 -6524.15 11450.4)
+      (pin Round[A]Pad_1700.000000_um A6 -4173.35 11334.7)
+      (pin Round[A]Pad_1700.000000_um A7 -1833.33 11219.6)
+      (pin Round[A]Pad_1700.000000_um A9 2814.66 10991.1)
+      (pin Round[A]Pad_1700.000000_um A10 5124.1 10851)
+      (pin Round[A]Pad_1700.000000_um A11 7421.75 10738.1)
+      (pin Round[A]Pad_1700.000000_um A12 9710.32 10599.3)
+      (pin Round[A]Pad_1700.000000_um A13 11987.2 10487.5)
+      (pin Round[A]Pad_1700.000000_um B1 -15550.9 7006.38)
+      (pin Round[A]Pad_1700.000000_um B2 -13157.9 6954.04)
+      (pin Round[A]Pad_1700.000000_um B3 -11040.2 6907.73)
+      (pin Round[A]Pad_1700.000000_um B4 -8663.16 6748.1)
+      (pin Round[A]Pad_1700.000000_um B5 -6300.81 6669.78)
+      (pin Round[A]Pad_1700.000000_um B6 -3949.37 6591.9)
+      (pin Round[A]Pad_1700.000000_um B7 -1610.02 6541.11)
+      (pin Round[A]Pad_1700.000000_um B8 851.513 6407.66)
+      (pin Round[A]Pad_1700.000000_um B9 3174.04 6251.01)
+      (pin Round[A]Pad_1700.000000_um B10 5355.52 6150.92)
+      (pin Round[A]Pad_1700.000000_um B11 7657.63 5995.55)
+      (pin Round[A]Pad_1700.000000_um B12 9948.01 5867.31)
+      (pin Round[A]Pad_1700.000000_um B13 12352.9 5763.34)
+    )
+    (image RobotronReference_V1.2
+      (pin Round[A]Pad_1700.000000_um A 0 0)
+      (pin Round[A]Pad_1700.000000_um K 2540 0)
+    )
+    (image RobotronReference_R9.4
+      (pin Round[A]Pad_1700.000000_um 1 4765.56 659.76)
+      (pin Round[A]Pad_1700.000000_um 2 -5965.73 157.146)
+    )
+    (image RobotronReference_R9.1
+      (pin Round[A]Pad_1700.000000_um 1 6008.44 55.153)
+      (pin Round[A]Pad_1700.000000_um 2 -6008.44 -55.152)
+    )
+    (image RobotronReference_R9.8
+      (pin Round[A]Pad_1700.000000_um 1 6076.08 -7.636)
+      (pin Round[A]Pad_1700.000000_um 2 -6076.08 7.636)
+    )
+    (image RobotronReference_A2.1
+      (pin Round[A]Pad_1700.000000_um 1 -7620 -3810)
+      (pin Round[A]Pad_1700.000000_um 2 -5080 -3810)
+      (pin Round[A]Pad_1700.000000_um 3 -2540 -3810)
+      (pin Round[A]Pad_1700.000000_um 4 0 -3810)
+      (pin Round[A]Pad_1700.000000_um 5 2540 -3810)
+      (pin Round[A]Pad_1700.000000_um 6 5080 -3810)
+      (pin Round[A]Pad_1700.000000_um 7 7620 -3810)
+      (pin Round[A]Pad_1700.000000_um 8 7620 3810)
+      (pin Round[A]Pad_1700.000000_um 9 5080 3810)
+      (pin Round[A]Pad_1700.000000_um 10 2540 3810)
+      (pin Round[A]Pad_1700.000000_um 11 0 3810)
+      (pin Round[A]Pad_1700.000000_um 12 -2540 3810)
+      (pin Round[A]Pad_1700.000000_um 13 -5080 3810)
+      (pin Round[A]Pad_1700.000000_um 14 -7620 3810)
+    )
+    (image RobotronReference_R9.2
+      (pin Round[A]Pad_1700.000000_um 1 6007.22 20.423)
+      (pin Round[A]Pad_1700.000000_um 2 -6007.22 -20.422)
+    )
+    (image RobotronReference_R9.5
+      (pin Round[A]Pad_1700.000000_um 1 6042.34 61.253)
+      (pin Round[A]Pad_1700.000000_um 2 -6042.34 -61.253)
+    )
+    (image RobotronReference_H1
+      (keepout "" (circle F.Cu 3700))
+      (keepout "" (circle B.Cu 3700))
+    )
+    (image RobotronReference_BR1
+      (pin Round[A]Pad_1700.000000_um 1 -225.446 2142.21)
+      (pin Round[A]Pad_1700.000000_um 2 225.447 -2142.21)
+    )
+    (image RobotronReference_R6.3
+      (pin Round[A]Pad_1700.000000_um 1 -6154.12 -52.264)
+      (pin Round[A]Pad_1700.000000_um 2 6154.12 52.263)
+    )
+    (image RobotronReference_V3.1
+      (pin Round[A]Pad_1700.000000_um B 2540 0)
+      (pin Round[A]Pad_1700.000000_um C 5080 0)
+      (pin Round[A]Pad_1700.000000_um E 0 0)
+    )
+    (image RobotronReference_R8
+      (pin Round[A]Pad_1700.000000_um 1 -154.967 5718)
+      (pin Round[A]Pad_1700.000000_um 2 154.967 -5718)
+    )
+    (image RobotronReference_R4.1
+      (pin Round[A]Pad_1700.000000_um 1 -32.125 5951.8)
+      (pin Round[A]Pad_1700.000000_um 2 32.124 -5951.8)
+    )
+    (image RobotronReference_C5.1
+      (pin Round[A]Pad_1700.000000_um 1 -2516.17 -2680.17)
+      (pin Round[A]Pad_1700.000000_um 2 1780.7 -2650.95)
+    )
+    (image RobotronReference_R10.3
+      (pin Round[A]Pad_1700.000000_um 1 -403.359 6111.01)
+      (pin Round[A]Pad_1700.000000_um 2 403.358 -6111.01)
+    )
+    (image RobotronReference_R4.3
+      (pin Round[A]Pad_1700.000000_um 1 -6914.55 385.003)
+      (pin Round[A]Pad_1700.000000_um 2 6914.55 -385.003)
+    )
+    (image RobotronReference_R2
+      (pin Round[A]Pad_1700.000000_um 1 20320 0)
+      (pin Round[A]Pad_1700.000000_um 2 15240 0)
+      (pin Round[A]Pad_1700.000000_um 3 0 0)
+      (pin Round[A]Pad_1700.000000_um 4 2540 0)
+      (pin Round[A]Pad_1700.000000_um 5 10160 0)
+      (pin Round[A]Pad_1700.000000_um 6 17780 0)
+      (pin Round[A]Pad_1700.000000_um 7 12700 0)
+      (pin Round[A]Pad_1700.000000_um 8 5080 0)
+      (pin Round[A]Pad_1700.000000_um 9 7620 0)
+    )
+    (image RobotronReference_R9.3
+      (pin Round[A]Pad_1700.000000_um 1 4888.98 485.341)
+      (pin Round[A]Pad_1700.000000_um 2 -6080.43 54.312)
+    )
+    (image RobotronReference_R4.2
+      (pin Round[A]Pad_1700.000000_um 1 -225.963 5863.46)
+      (pin Round[A]Pad_1700.000000_um 2 225.964 -5863.46)
+    )
+    (image RobotronReference_R10.2
+      (pin Round[A]Pad_1700.000000_um 1 5836.73 68.903)
+      (pin Round[A]Pad_1700.000000_um 2 -5836.73 -68.903)
+    )
+    (image RobotronReference_A5
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 1 -23750 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 2 -21250 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 3 -18750 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 4 -16250 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 5 -13750 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 6 -11250 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 7 -8750 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 8 -6250 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 9 -3750 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 10 -1250 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 11 1250 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 12 3750 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 13 6250 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 14 8750 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 15 11250 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 16 13750 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 17 16250 -7619.98)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 18 18750 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 19 21250 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 20 23750 -7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 21 23750 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 22 21250 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 23 18750 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 24 16250 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 25 13750 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 26 11250 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 27 8750 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 28 6250 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 29 3750 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 30 1250 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 31 -1250 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 32 -3750 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 33 -6250 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 34 -8750 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 35 -11250 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 36 -13750 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 37 -16250 7619.98)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 38 -18750 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 39 -21250 7620)
+      (pin Round[A]Pad_1700.000000_um (rotate 3.47e-08) 40 -23750 7620)
+    )
+    (image RobotronReference_R9.9
+      (pin Round[A]Pad_1700.000000_um 1 -6041.19 -166.745)
+      (pin Round[A]Pad_1700.000000_um 2 6041.19 166.745)
+    )
+    (image RobotronReference_A4
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 1 -11430 -3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 2 -8890 -3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 3 -6350 -3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 4 -3810 -3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 5 -1270 -3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 6 1270 -3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 7 3810 -3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 8 6350 -3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 9 8890 -3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 10 11430 -3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 11 11430 3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 12 8890 3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 13 6350 3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 14 3810 3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 15 1270 3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 16 -1270 3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 17 -3810 3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 18 -6350 3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 19 -8890 3810)
+      (pin Round[A]Pad_1700.000000_um (rotate 360) 20 -11430 3810)
+    )
+    (image RobotronReference_R6.1
+      (pin Round[A]Pad_1700.000000_um 1 -114.782 5710.31)
+      (pin Round[A]Pad_1700.000000_um 2 114.781 -5710.31)
+    )
+    (image RobotronReference_R9.6
+      (pin Round[A]Pad_1700.000000_um 1 6003.13 -8.382)
+      (pin Round[A]Pad_1700.000000_um 2 -6003.13 8.383)
+    )
+    (image RobotronReference_C5.2
+      (pin Round[A]Pad_1700.000000_um 1 -2006.3 -2426.6)
+      (pin Round[A]Pad_1700.000000_um 2 2583 -2037.54)
+    )
+    (image RobotronReference_R3
+      (pin Round[A]Pad_1700.000000_um 1 -67.953 5987.99)
+      (pin Round[A]Pad_1700.000000_um 2 67.953 -5987.99)
+    )
+    (image RobotronReference_XT1
+      (pin Round[A]Pad_1700.000000_um A1 0 0)
+      (pin Round[A]Pad_1700.000000_um A3 2540 0)
+      (pin Round[A]Pad_1700.000000_um A5 10160 0)
+      (pin Round[A]Pad_1700.000000_um B2 5080 0)
+      (pin Round[A]Pad_1700.000000_um B4 7620 0)
+    )
+    (image RobotronReference_C5.4
+      (pin Round[A]Pad_1700.000000_um 1 -4020.11 2047.78)
+      (pin Round[A]Pad_1700.000000_um 2 -3968.28 -2801.81)
+    )
+    (image RobotronReference_R7
+      (pin Round[A]Pad_1700.000000_um 1 -40.894 5784.1)
+      (pin Round[A]Pad_1700.000000_um 2 40.894 -5784.1)
+    )
+    (image RobotronReference_C5.3
+      (pin Round[A]Pad_1700.000000_um 1 4527.62 1128.76)
+      (pin Round[A]Pad_1700.000000_um 2 4568.85 -3544.17)
+    )
+    (image RobotronReference_R5
+      (pin Round[A]Pad_1700.000000_um 1 -109.885 5774.6)
+      (pin Round[A]Pad_1700.000000_um 2 109.886 -5774.6)
+    )
+    (image RobotronReference_A8
+      (pin Round[A]Pad_1700.000000_um 1 -13970 -7620)
+      (pin Round[A]Pad_1700.000000_um 2 -11430 -7620)
+      (pin Round[A]Pad_1700.000000_um 3 -8890 -7620)
+      (pin Round[A]Pad_1700.000000_um 4 -6350 -7620)
+      (pin Round[A]Pad_1700.000000_um 5 -3810 -7620)
+      (pin Round[A]Pad_1700.000000_um 6 -1270 -7620)
+      (pin Round[A]Pad_1700.000000_um 7 1270 -7620)
+      (pin Round[A]Pad_1700.000000_um 8 3810 -7620)
+      (pin Round[A]Pad_1700.000000_um 9 6350 -7620)
+      (pin Round[A]Pad_1700.000000_um 10 8890 -7620)
+      (pin Round[A]Pad_1700.000000_um 11 11430 -7620)
+      (pin Round[A]Pad_1700.000000_um 12 13970 -7620)
+      (pin Round[A]Pad_1700.000000_um 13 13970 7620)
+      (pin Round[A]Pad_1700.000000_um 14 11430 7620)
+      (pin Round[A]Pad_1700.000000_um 15 8890 7620)
+      (pin Round[A]Pad_1700.000000_um 16 6350 7620)
+      (pin Round[A]Pad_1700.000000_um 17 3810 7620)
+      (pin Round[A]Pad_1700.000000_um 18 1270 7620)
+      (pin Round[A]Pad_1700.000000_um 19 -1270 7620)
+      (pin Round[A]Pad_1700.000000_um 20 -3810 7620)
+      (pin Round[A]Pad_1700.000000_um 21 -6350 7620)
+      (pin Round[A]Pad_1700.000000_um 22 -8890 7620)
+      (pin Round[A]Pad_1700.000000_um 23 -11430 7620)
+      (pin Round[A]Pad_1700.000000_um 24 -13970 7620)
+    )
+    (padstack Round[A]Pad_1700.000000_um
+      (shape (circle F.Cu 1700))
+      (shape (circle B.Cu 1700))
+      (attach off)
+    )
+    (padstack "Via[0-1]_600:300_um"
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+    (padstack "Via[0-1]_1200:600_um"
+      (shape (circle F.Cu 1200))
+      (shape (circle B.Cu 1200))
+      (attach off)
+    )
+  )
+  (network
+    (net /+5V
+      (pins R6.6-1 V4.4-E R10.1-1 R6.5-1 X1-A7 R6.4-1 A2.1-14 C3.1-1 R6.3-1 A6-14
+        V4.5-E V3.1-C V4.8-E R4.1-1 C5.1-1 R10.3-1 R2-1 A2.2-14 V4.1-E C5.5-1 R10.2-1
+        A2.3-14 A5-11 R9.9-1 A1-14 A4-20 V4.3-E V4.9-E V4.7-E R6.1-1 V4.6-E V4.2-E
+        C5.2-1 R3-1 L1.3-1 C5.4-1 C3.2-1 A7-14 C5.3-1 R5-1 A8-21 A8-24 V2-A)
+    )
+    (net /FF_PULLUP
+      (pins R6.6-2 A6-1 A6-4 A6-10 A6-13)
+    )
+    (net /LED_SISO_N
+      (pins R11.1-1 A6-8)
+    )
+    (net /LED_SISO
+      (pins R11.1-2 X1-A5)
+    )
+    (net /RESET_BIAS_LOW
+      (pins C2-1 V1.2-A V1.1-K R3-2)
+    )
+    (net /RESET_OUT
+      (pins C2-2 C1-2 R4.2-1 V4.9-C BR2-1)
+    )
+    (net /ROW3
+      (pins R9.7-1 X1-A1)
+    )
+    (net /BASE3
+      (pins R9.7-2 R2-9 V4.7-B)
+    )
+    (net /BASE1
+      (pins V4.4-B R9.5-2 R2-4)
+    )
+    (net /SENSE1
+      (pins V4.4-C R1-8 A4-2)
+    )
+    (net /GND
+      (pins R1-1 A2.1-7 C4-2 C3.1-2 A6-7 R8-2 L1.2-1 C5.1-2 A2.2-7 C5.5-2 R4.2-2 A2.3-7
+        A5-29 A1-7 A4-10 C5.2-2 C5.4-2 R7-2 C3.2-2 A7-7 C5.3-2 A8-12 A8-18)
+    )
+    (net /SENSE7
+      (pins R1-2 V4.5-C A4-8)
+    )
+    (net /SENSE6
+      (pins R1-3 A4-7 V4.2-C)
+    )
+    (net /SENSE5
+      (pins R1-4 A4-6 V4.6-C)
+    )
+    (net /SENSE4
+      (pins R1-5 V4.1-C A4-5)
+    )
+    (net /SENSE3
+      (pins R1-6 A4-4 V4.7-C)
+    )
+    (net /SENSE2
+      (pins R1-7 V4.8-C A4-3)
+    )
+    (net /SENSE0
+      (pins R1-9 A4-1 V4.3-C)
+    )
+    (net /LED_CAPS_N
+      (pins R11.2-1 A6-6)
+    )
+    (net /LED_CAPS
+      (pins R11.2-2 X1-A6)
+    )
+    (net /TA_TAKT
+      (pins L1.1-1 R10.1-2 A1-2)
+    )
+    (net /CABLE_TAKT
+      (pins L1.1-2 XT1-B2)
+    )
+    (net /BUSRQ_N
+      (pins R6.5-2 X1-A9 A5-25)
+    )
+    (net /COL5
+      (pins X1-A2 A2.1-11)
+    )
+    (net /COL8
+      (pins X1-A3 A2.3-11)
+    )
+    (net /ROW4
+      (pins X1-A4 R9.8-1)
+    )
+    (net /COL9
+      (pins X1-A10 A2.3-6)
+    )
+    (net /COL0
+      (pins X1-A11 A2.3-8)
+    )
+    (net /COL10
+      (pins X1-A12 A2.3-3)
+    )
+    (net /COL1
+      (pins X1-A13 A1-8)
+    )
+    (net /COL4
+      (pins X1-B1 A1-12)
+    )
+    (net /ROW1
+      (pins X1-B2 R9.5-1)
+    )
+    (net /COL6
+      (pins X1-B3 A1-10)
+    )
+    (net /COL12
+      (pins X1-B4 A2.2-11)
+    )
+    (net /ROW5
+      (pins X1-B5 R9.4-1)
+    )
+    (net /ROW0
+      (pins X1-B6 R9.3-1)
+    )
+    (net /ROW2
+      (pins X1-B7 R9.6-1)
+    )
+    (net /COL11
+      (pins X1-B8 A2.1-6)
+    )
+    (net /COL3
+      (pins X1-B9 A2.1-3)
+    )
+    (net /COL2
+      (pins X1-B10 A2.1-8)
+    )
+    (net /ROW6
+      (pins X1-B11 R9.2-1)
+    )
+    (net /COL7
+      (pins X1-B12 A2.2-3)
+    )
+    (net /ROW7
+      (pins X1-B13 R9.1-1)
+    )
+    (net /RESET_DIODE_TOP
+      (pins V1.2-K R4.1-2)
+    )
+    (net /BASE5
+      (pins R9.4-2 R2-7 V4.6-B)
+    )
+    (net /BASE7
+      (pins R9.1-2 V4.5-B R2-6)
+    )
+    (net /BASE4
+      (pins R9.8-2 R2-5 V4.1-B)
+    )
+    (net /RESET_BASE
+      (pins C1-1 V4.9-B R6.1-2 V3.2-C)
+    )
+    (net /CPU_PULLUP
+      (pins R6.4-2 A5-16 A5-17 A5-24)
+    )
+    (net /A3
+      (pins A2.1-1 A2.1-2 A5-33 A8-5)
+    )
+    (net /A11
+      (pins A2.1-4 A2.1-5 A5-1)
+    )
+    (net /A2
+      (pins A2.1-9 A2.1-10 A5-32 A8-6)
+    )
+    (net /A5
+      (pins A2.1-12 A2.1-13 A5-35 A8-3)
+    )
+    (net /RESET_RC
+      (pins C4-1 V3.1-B R8-1 V2-K)
+    )
+    (net /BASE6
+      (pins R9.2-2 R2-2 V4.2-B)
+    )
+    (net /OSC_RC
+      (pins C6-1 R4.3-2 A7-12 A7-13)
+    )
+    (net /OSC2
+      (pins C6-2 A7-6 A7-9 A7-10)
+    )
+    (net /OSC_OUT
+      (pins BR1-1 A7-8)
+    )
+    (net /CLK
+      (pins BR1-2 R10.3-2 A5-6)
+    )
+    (net /LATCH_OE_N
+      (pins R6.3-2 A2.2-8 A4-9)
+    )
+    (net /RESET_BIAS
+      (pins V1.1-A V3.2-B R5-2)
+    )
+    (net /A14
+      (pins A6-2 A5-4)
+    )
+    (net /IO_ACTIVE
+      (pins A6-3 A6-11 A2.2-6 R9.9-2 A4-11)
+    )
+    (net "unconnected-(A6-NC-Pad5)"
+      (pins A6-5)
+    )
+    (net "unconnected-(A6-NC-Pad9)"
+      (pins A6-9)
+    )
+    (net /A13
+      (pins A6-12 A5-3)
+    )
+    (net /RESET_EMITTERS
+      (pins V3.1-E R7-1 V3.2-E)
+    )
+    (net /BASE2
+      (pins V4.8-B R2-8 R9.6-2)
+    )
+    (net /CABLE_GND
+      (pins L1.2-2 XT1-A3)
+    )
+    (net /TA_DATEN
+      (pins L1.4-1 R10.2-2 A1-4)
+    )
+    (net /CABLE_DATEN
+      (pins L1.4-2 XT1-A1)
+    )
+    (net /OSC1
+      (pins R4.3-1 A7-4 A7-5 A7-11)
+    )
+    (net /BASE0
+      (pins R2-3 R9.3-2 V4.3-B)
+    )
+    (net /A7
+      (pins A2.2-1 A2.2-2 A5-37 A8-1)
+    )
+    (net /IORQ_N
+      (pins A2.2-4 A2.2-5 A5-20)
+    )
+    (net /A15
+      (pins A2.2-9 A2.2-10 A5-5)
+    )
+    (net /A12
+      (pins A2.2-12 A2.2-13 A5-2)
+    )
+    (net /A10
+      (pins A2.3-1 A2.3-2 A5-40 A8-19)
+    )
+    (net /A9
+      (pins A2.3-4 A2.3-5 A5-39 A8-22)
+    )
+    (net /A0
+      (pins A2.3-9 A2.3-10 A5-30 A8-8)
+    )
+    (net /A8
+      (pins A2.3-12 A2.3-13 A5-38 A8-23)
+    )
+    (net /D4
+      (pins A5-7 A4-15 A8-14)
+    )
+    (net /D3
+      (pins A5-8 A4-16 A8-13)
+    )
+    (net /D5
+      (pins A5-9 A4-14 A8-15)
+    )
+    (net /D6
+      (pins A5-10 A4-13 A8-16)
+    )
+    (net /D2
+      (pins A5-12 A4-17 A8-11)
+    )
+    (net /D7
+      (pins A5-13 A4-12 A8-17)
+    )
+    (net /D0
+      (pins A5-14 A1-3 A4-19 A8-9)
+    )
+    (net /D1
+      (pins A5-15 A4-18 A8-10)
+    )
+    (net "unconnected-(A5-NC-Pad18)"
+      (pins A5-18)
+    )
+    (net /MREQ_N
+      (pins A5-19 A8-20)
+    )
+    (net /RD_N
+      (pins A5-21)
+    )
+    (net /WR_N
+      (pins A5-22 A1-1)
+    )
+    (net "unconnected-(A5-NC-Pad23)"
+      (pins A5-23)
+    )
+    (net /RESET_N
+      (pins A5-26 BR2-2)
+    )
+    (net "unconnected-(A5-NC-Pad27)"
+      (pins A5-27)
+    )
+    (net "unconnected-(A5-NC-Pad28)"
+      (pins A5-28)
+    )
+    (net /A1
+      (pins A5-31 A1-9 A8-7)
+    )
+    (net /A4
+      (pins A5-34 A1-13 A8-4)
+    )
+    (net /A6
+      (pins A5-36 A1-11 A8-2)
+    )
+    (net "unconnected-(A1-NC-Pad5)"
+      (pins A1-5)
+    )
+    (net "unconnected-(A1-NC-Pad6)"
+      (pins A1-6)
+    )
+    (net /SHIELD
+      (pins XT1-A5)
+    )
+    (net /CABLE_5V
+      (pins XT1-B4 L1.3-2)
+    )
+    (net "unconnected-(A7-NC-Pad1)"
+      (pins A7-1)
+    )
+    (net "unconnected-(A7-NC-Pad2)"
+      (pins A7-2)
+    )
+    (net "unconnected-(A7-NC-Pad3)"
+      (pins A7-3)
+    )
+    (class kicad_default /+5V /A0 /A1 /A10 /A11 /A12 /A13 /A14 /A15 /A2 /A3
+      /A4 /A5 /A6 /A7 /A8 /A9 /BASE0 /BASE1 /BASE2 /BASE3 /BASE4 /BASE5 /BASE6
+      /BASE7 /BUSRQ_N /CABLE_5V /CABLE_DATEN /CABLE_GND /CABLE_TAKT /CLK /COL0
+      /COL1 /COL10 /COL11 /COL12 /COL2 /COL3 /COL4 /COL5 /COL6 /COL7 /COL8
+      /COL9 /CPU_PULLUP /D0 /D1 /D2 /D3 /D4 /D5 /D6 /D7 /FF_PULLUP /GND /IORQ_N
+      /IO_ACTIVE /LATCH_OE_N /LED_CAPS /LED_CAPS_N /LED_SISO /LED_SISO_N /MREQ_N
+      /OSC1 /OSC2 /OSC_OUT /OSC_RC /RD_N /RESET_BASE /RESET_BIAS /RESET_BIAS_LOW
+      /RESET_DIODE_TOP /RESET_EMITTERS /RESET_N /RESET_OUT /RESET_RC /ROW0
+      /ROW1 /ROW2 /ROW3 /ROW4 /ROW5 /ROW6 /ROW7 /SENSE0 /SENSE1 /SENSE2 /SENSE3
+      /SENSE4 /SENSE5 /SENSE6 /SENSE7 /SHIELD /TA_DATEN /TA_TAKT /WR_N "unconnected-(A1-NC-Pad5)"
+      "unconnected-(A1-NC-Pad6)" "unconnected-(A5-NC-Pad18)" "unconnected-(A5-NC-Pad23)"
+      "unconnected-(A5-NC-Pad27)" "unconnected-(A5-NC-Pad28)" "unconnected-(A6-NC-Pad5)"
+      "unconnected-(A6-NC-Pad9)" "unconnected-(A7-NC-Pad1)" "unconnected-(A7-NC-Pad2)"
+      "unconnected-(A7-NC-Pad3)"
+      (circuit
+        (use_via "Via[0-1]_600:300_um")
+      )
+      (rule
+        (width 250)
+        (clearance 200)
+      )
+    )
+  )
+  (wiring
+    (wire (path F.Cu 1000  38169.5 -28887  41592.8 -28816.6)(net /+5V)(type normal))
+    (wire (path F.Cu 600  166105 -48169.4  164034 -46094.3)(net /+5V)(type normal))
+    (wire (path F.Cu 600  252560 -53540.1  252705 -55634.4)(net /+5V)(type normal))
+    (wire (path F.Cu 1000  45297.8 -30145.2  45288.2 -30874.8)(net /+5V)(type normal))
+    (wire (path F.Cu 350  169479 -60986.5  169418 -59133.1)(net /+5V)(type normal))
+    (wire (path F.Cu 600  104900 -46253.9  105133 -45676.3)(net /+5V)(type normal))
+    (wire (path F.Cu 600  163614 -32854  164764 -32017.7)(net /+5V)(type normal))
+    (wire (path F.Cu 1000  60807.4 -30600.4  60797.3 -31404.1)(net /+5V)(type normal))
+    (wire (path F.Cu 600  90970.5 -52972.2  90396.7 -30860.1)(net /+5V)(type normal))
+    (wire (path F.Cu 600  105319 -49360.2  105339 -47523.2)(net /+5V)(type normal))
+    (wire (path F.Cu 1000  38228 -30056.6  38169.5 -28887)(net /+5V)(type normal))
+    (wire (path F.Cu 600  164034 -46094.3  163614 -32854)(net /+5V)(type normal))
+    (wire (path F.Cu 600  90410.9 -29614.5  91757.4 -29937.1)(net /+5V)(type normal))
+    (wire (path F.Cu 600  251844 -57236.2  251836 -57928.2)(net /+5V)(type normal))
+    (wire (path F.Cu 600  90396.7 -30860.1  90410.9 -29614.5)(net /+5V)(type normal))
+    (wire (path F.Cu 1000  44944 -28743  45297.8 -30145.2)(net /+5V)(type normal))
+    (wire (path F.Cu 1000  50755.7 -28775.9  57845 -28644.6)(net /+5V)(type normal))
+    (wire (path F.Cu 350  169549 -61730.1  169479 -60986.5)(net /+5V)(type normal))
+    (wire (path F.Cu 1000  41592.8 -28816.6  44944 -28743)(net /+5V)(type normal))
+    (wire (path F.Cu 600  250468 -53371.6  252560 -53540.1)(net /+5V)(type normal))
+    (wire (path F.Cu 1000  41800.4 -29993.1  41789.7 -30795.4)(net /+5V)(type normal))
+    (wire (path F.Cu 600  252705 -55634.4  251844 -57236.2)(net /+5V)(type normal))
+    (wire (path F.Cu 1000  44944 -28743  50755.7 -28775.9)(net /+5V)(type normal))
+    (wire (path F.Cu 1000  57845 -28644.6  60682.1 -28694.4  60807.4 -30600.4)(net /+5V)(type normal))
+    (wire (path F.Cu 350  169418 -59133.1  169424 -58393.2)(net /+5V)(type normal))
+    (wire (path F.Cu 600  92663.2 -54530.9  90970.5 -52972.2)(net /+5V)(type normal))
+    (wire (path F.Cu 600  104328 -43435.7  102823 -43221.8)(net /+5V)(type normal))
+    (wire (path F.Cu 600  105149 -44133.7  104328 -43435.7)(net /+5V)(type normal))
+    (wire (path F.Cu 1000  38291.5 -30861.8  38228 -30056.6)(net /+5V)(type normal))
+    (wire (path F.Cu 600  105339 -47523.2  104900 -46253.9)(net /+5V)(type normal))
+    (wire (path F.Cu 600  104861 -49854.2  105319 -49360.2)(net /+5V)(type normal))
+    (wire (path F.Cu 600  105133 -45676.3  105149 -44133.7)(net /+5V)(type normal))
+    (wire (path F.Cu 1000  41592.8 -28816.6  41800.4 -29993.1)(net /+5V)(type normal))
+    (wire (path F.Cu 600  164764 -32017.7  165190 -31695.1)(net /+5V)(type normal))
+    (wire (path F.Cu 350  237829 -56676.9  238060 -57296.5)(net /FF_PULLUP)(type normal))
+    (wire (path F.Cu 350  237697 -52724.3  237690 -53989.8  237829 -56676.9)(net /FF_PULLUP)(type normal))
+    (wire (path F.Cu 600  108961 -61445  108145 -61647.5)(net /GND)(type normal))
+    (wire (path F.Cu 600  180627 -43132.5  181243 -42641.7)(net /GND)(type normal))
+    (wire (path F.Cu 600  181265 -39830.8  180536 -39099.4)(net /GND)(type normal))
+    (wire (path F.Cu 600  107120 -43192.5  107881 -42491.4)(net /GND)(type normal))
+    (wire (path F.Cu 600  184298 -53144.4  184044 -46467  181538 -43986.9)(net /GND)(type normal))
+    (wire (path F.Cu 600  107881 -42491.4  107929 -38084.3)(net /GND)(type normal))
+    (wire (path F.Cu 600  181243 -42641.7  181265 -39830.8)(net /GND)(type normal))
+    (wire (path F.Cu 600  181538 -43986.9  180627 -43132.5)(net /GND)(type normal))
+    (wire (path F.Cu 600  107929 -38084.3  107339 -36832.8)(net /GND)(type normal))
+    (wire (path F.Cu 600  108022 -43453.2  110861 -46079.7)(net /GND)(type normal))
+    (wire (path F.Cu 600  111027 -58816.4  108961 -61445)(net /GND)(type normal))
+    (wire (path F.Cu 600  110861 -46079.7  111027 -58816.4)(net /GND)(type normal))
+    (wire (path F.Cu 600  107120 -43192.5  108022 -43453.2)(net /GND)(type normal))
+    (wire (path F.Cu 600  181568 -55325.6  184298 -53144.4)(net /GND)(type normal))
+    (wire (path B.Cu 600  64688.7 -42988.2  65647.7 -43016.7)(net /GND)(type normal))
+    (wire (path B.Cu 600  66832.9 -43033.9  68055.7 -42992.2)(net /GND)(type normal))
+    (wire (path B.Cu 600  65647.7 -43016.7  66832.9 -43033.9)(net /GND)(type normal))
+    (wire (path B.Cu 600  68693.7 -42939.3  70042.2 -42870.8)(net /GND)(type normal))
+    (wire (path B.Cu 600  68055.7 -42992.2  68693.7 -42939.3)(net /GND)(type normal))
+    (wire (path B.Cu 600  70042.2 -42870.8  71948.9 -43019.4)(net /GND)(type normal))
+    (wire (path F.Cu 350  93623.3 -50355.8  94249.2 -51054.2)(net /TA_TAKT)(type normal))
+    (wire (path F.Cu 350  93335.4 -50068.2  93623.3 -50355.8)(net /TA_TAKT)(type normal))
+    (wire (path F.Cu 300  94249.2 -51054.2  93870.5 -54401.6)(net /TA_TAKT)(type normal))
+    (wire (path B.Cu 350  93335.4 -50068.2  92357.2 -49687.7)(net /TA_TAKT)(type normal))
+    (wire (path B.Cu 350  82670 -50193.7  82436.8 -42240.9)(net /TA_TAKT)(type normal))
+    (wire (path B.Cu 350  92357.2 -49687.7  82670 -50193.7)(net /TA_TAKT)(type normal))
+    (wire (path B.Cu 350  108897 -38374.8  106188 -38321.8)(net /COL11)(type normal))
+    (wire (path B.Cu 350  138067 -37827.5  110967 -37024.8)(net /COL11)(type normal))
+    (wire (path B.Cu 350  109791 -38228.5  108897 -38374.8)(net /COL11)(type normal))
+    (wire (path B.Cu 350  140761 -40673.8  138067 -37827.5)(net /COL11)(type normal))
+    (wire (path B.Cu 350  140852 -40592.3  140761 -40673.8)(net /COL11)(type normal))
+    (wire (path B.Cu 350  104813 -36814.7  104801 -36952.1)(net /COL11)(type normal))
+    (wire (path B.Cu 350  110967 -37024.8  109791 -38228.5)(net /COL11)(type normal))
+    (wire (path B.Cu 350  106188 -38321.8  104813 -36814.7)(net /COL11)(type normal))
+    (wire (path B.Cu 350  277074 -65181.7  280740 -64676.5)(net /CLK)(type normal))
+    (wire (path B.Cu 350  84579.8 -39641.1  80675.9 -35725)(net /TA_DATEN)(type normal))
+    (wire (path B.Cu 350  92230 -45997.2  85030.2 -46546.8  84579.8 -39641.1)(net /TA_DATEN)(type normal))
+    (wire (path B.Cu 350  80675.9 -35725  67588 -36637.2)(net /TA_DATEN)(type normal))
+    (wire (path B.Cu 350  93226.6 -46391.7  92230 -45997.2)(net /TA_DATEN)(type normal))
+    (wire (path B.Cu 250  234734 -41032.7  260019 -41229.6)(net /D4)(type normal))
+    (wire (path B.Cu 250  266944 -34417.7  268333 -32798.6  269177 -32677.1)(net /D4)(type normal))
+    (wire (path B.Cu 250  204359 -45037.3  207364 -41219.5)(net /D4)(type normal))
+    (wire (path B.Cu 250  203239 -45813.1  204359 -45037.3)(net /D4)(type normal))
+    (wire (path B.Cu 250  207364 -41219.5  234734 -41032.7)(net /D4)(type normal))
+    (wire (path B.Cu 250  260019 -41229.6  266944 -34417.7)(net /D4)(type normal))
+    (wire (path F.Cu 250  205297 -50102.7  205180 -47752.8)(net /D3)(type normal))
+    (wire (path F.Cu 250  203207 -53890.9  203112 -51775.7)(net /D3)(type normal))
+    (wire (path F.Cu 250  205180 -47752.8  205739 -45818.2)(net /D3)(type normal))
+    (wire (path F.Cu 250  203544 -55157.8  203207 -53890.9)(net /D3)(type normal))
+    (wire (path F.Cu 250  203112 -51775.7  205297 -50102.7)(net /D3)(type normal))
+    (wire (path B.Cu 250  261258 -42447.6  269664 -34353.7)(net /D3)(type normal))
+    (wire (path B.Cu 250  208740 -42415.3  234752 -42185.3)(net /D3)(type normal))
+    (wire (path B.Cu 250  270974 -32735.3  271717 -32633.9)(net /D3)(type normal))
+    (wire (path B.Cu 250  269664 -34353.7  270974 -32735.3)(net /D3)(type normal))
+    (wire (path B.Cu 250  206810 -44823.4  208740 -42415.3)(net /D3)(type normal))
+    (wire (path B.Cu 250  205739 -45818.2  206810 -44823.4)(net /D3)(type normal))
+    (wire (path B.Cu 250  234752 -42185.3  261258 -42447.6)(net /D3)(type normal))
+    (wire (path F.Cu 250  208589 -54136.8  208124 -50965)(net /D5)(type normal))
+    (wire (path F.Cu 250  207579 -47821.2  208239 -45823.2)(net /D5)(type normal))
+    (wire (path F.Cu 250  208124 -50965  207579 -47821.2)(net /D5)(type normal))
+    (wire (path F.Cu 250  208624 -55167.5  208589 -54136.8)(net /D5)(type normal))
+    (wire (path F.Cu 250  209847 -54102.2  209316 -49858.9)(net /D6)(type normal))
+    (wire (path F.Cu 250  210202 -47796.1  210739 -45828.2)(net /D6)(type normal))
+    (wire (path F.Cu 250  211164 -55172.4  209847 -54102.2)(net /D6)(type normal))
+    (wire (path F.Cu 250  210341 -48682  210202 -47796.1)(net /D6)(type normal))
+    (wire (path F.Cu 250  209316 -49858.9  210341 -48682)(net /D6)(type normal))
+    (wire (path F.Cu 250  202040 -49906.3  203765 -47916.2)(net /D2)(type normal))
+    (wire (path F.Cu 250  201004 -55153  202105 -53323.7  202040 -49906.3)(net /D2)(type normal))
+    (wire (path B.Cu 250  264492 -43647.1  266801 -45665.8)(net /D2)(type normal))
+    (wire (path B.Cu 250  217022 -44700.4  218025 -43862.3)(net /D2)(type normal))
+    (wire (path B.Cu 250  213877 -47037.7  215147 -46047.5)(net /D2)(type normal))
+    (wire (path B.Cu 250  242969 -43384.2  264492 -43647.1)(net /D2)(type normal))
+    (wire (path B.Cu 250  203765 -47916.2  204639 -46929.8)(net /D2)(type normal))
+    (wire (path B.Cu 250  215147 -46047.5  215739 -45838.3  217022 -44700.4)(net /D2)(type normal))
+    (wire (path B.Cu 250  226923 -43416.7  242969 -43384.2)(net /D2)(type normal))
+    (wire (path B.Cu 250  218025 -43862.3  226923 -43416.7)(net /D2)(type normal))
+    (wire (path B.Cu 250  266801 -45665.8  269436 -47914.8)(net /D2)(type normal))
+    (wire (path F.Cu 250  217545 -51481.4  217350 -49361)(net /D7)(type normal))
+    (wire (path F.Cu 250  217681 -48512.2  217641 -47779.5  218239 -45843.3)(net /D7)(type normal))
+    (wire (path F.Cu 250  213704 -55177.2  214517 -54353.6  217545 -51481.4)(net /D7)(type normal))
+    (wire (path F.Cu 250  217350 -49361  217681 -48512.2)(net /D7)(type normal))
+    (wire (path F.Cu 250  195905 -53122.4  196490 -50464.7)(net /D0)(type normal))
+    (wire (path F.Cu 250  195924 -55143.3  195905 -53122.4)(net /D0)(type normal))
+    (wire (path B.Cu 250  197556 -51019.5  212758 -51035.5)(net /D0)(type normal))
+    (wire (path B.Cu 250  242461 -46025.1  253536 -46362.8)(net /D0)(type normal))
+    (wire (path B.Cu 250  261828 -46433.2  264357 -48001.2)(net /D0)(type normal))
+    (wire (path B.Cu 250  216160 -47652.7  218506 -47618.1)(net /D0)(type normal))
+    (wire (path B.Cu 250  220739 -45848.3  222248 -46786.9)(net /D0)(type normal))
+    (wire (path B.Cu 250  218506 -47618.1  220557 -45807)(net /D0)(type normal))
+    (wire (path B.Cu 250  212758 -51035.5  216160 -47652.7)(net /D0)(type normal))
+    (wire (path B.Cu 250  222248 -46786.9  223889 -48462.2  240812 -47863.3)(net /D0)(type normal))
+    (wire (path B.Cu 250  196490 -50464.7  197556 -51019.5)(net /D0)(type normal))
+    (wire (path B.Cu 250  253536 -46362.8  261828 -46433.2)(net /D0)(type normal))
+    (wire (path B.Cu 250  240812 -47863.3  242461 -46025.1)(net /D0)(type normal))
+    (wire (path B.Cu 250  220557 -45807  220739 -45848.3)(net /D0)(type normal))
+    (wire (path B.Cu 250  225201 -47131.3  238065 -47102.7)(net /D1)(type normal))
+    (wire (path B.Cu 250  223239 -45853.4  225201 -47131.3)(net /D1)(type normal))
+    (wire (path B.Cu 250  264929 -46532.3  266897 -47958)(net /D1)(type normal))
+    (wire (path B.Cu 250  238065 -47102.7  240025 -45011.2)(net /D1)(type normal))
+    (wire (path B.Cu 250  263281 -44997.7  264929 -46532.3)(net /D1)(type normal))
+    (wire (path B.Cu 250  240025 -45011.2  251083 -45016  263281 -44997.7)(net /D1)(type normal))
+    (wire (path F.Cu 350  150370 -58335.3  152935 -60891.7)(net /WR_N)(type normal))
+    (wire (path F.Cu 350  96104 -64894.9  113002 -64946.5)(net /WR_N)(type normal))
+    (wire (path F.Cu 350  153157 -69997.4  205272 -70508)(net /WR_N)(type normal))
+    (wire (path F.Cu 350  119575 -58104.4  150370 -58335.3)(net /WR_N)(type normal))
+    (wire (path F.Cu 350  152935 -60891.7  153157 -69997.4)(net /WR_N)(type normal))
+    (wire (path F.Cu 350  94095.1 -62742.4  96104 -64894.9)(net /WR_N)(type normal))
+    (wire (path F.Cu 350  92912.9 -62146.8  94095.1 -62742.4)(net /WR_N)(type normal))
+    (wire (path F.Cu 350  113002 -64946.5  119575 -58104.4)(net /WR_N)(type normal))
+    (via "Via[0-1]_1200:600_um"  203765 -47916.2 (net /D2)(type normal))
+    (via "Via[0-1]_1200:600_um"  196490 -50464.7 (net /D0)(type normal))
+  )
+)

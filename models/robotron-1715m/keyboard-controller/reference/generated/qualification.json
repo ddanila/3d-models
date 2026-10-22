@@ -1,0 +1,14 @@
+{
+  "drc": {
+    "unconnectedItems": 0,
+    "violations": {}
+  },
+  "drcPassed": true,
+  "electricallyQualified": false,
+  "fabricationReady": false,
+  "historicallyVerified": false,
+  "padNetMismatches": [],
+  "routingComplete": true,
+  "scope": "Complete electrical routing candidate using the published reference circuit. Proposed placements, terminal mappings and copper are not historical evidence or a fabrication release. Generic discrete and filter footprints are electrical adapters; package fit and device dynamics remain unqualified.",
+  "variant": "proposed-reference"
+}

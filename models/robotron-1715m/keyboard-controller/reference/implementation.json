@@ -1,0 +1,454 @@
+{
+  "schema": 1,
+  "variant": "proposed-reference",
+  "historicalBoard": "../controller.kicad_pcb",
+  "connectivity": "../generated/connectivity.json",
+  "scope": "Complete electrical routing candidate using the published reference circuit. Proposed placements, terminal mappings and copper are not historical evidence or a fabrication release. Generic discrete and filter footprints are electrical adapters; package fit and device dynamics remain unqualified.",
+  "placements": {
+    "BR2": {
+      "position": [
+        -69,
+        -9.5
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "C1": {
+      "position": [
+        110,
+        -20
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "C2": {
+      "position": [
+        117,
+        -20
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "C3.1": {
+      "position": [
+        -129,
+        5
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "C3.2": {
+      "position": [
+        -122,
+        5
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "C4": {
+      "position": [
+        -117,
+        -20
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "C5.5": {
+      "position": [
+        90,
+        20
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "C6": {
+      "position": [
+        121,
+        20
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "L1.1": {
+      "position": [
+        -128,
+        -8
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "L1.2": {
+      "position": [
+        -128,
+        -14
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "L1.3": {
+      "position": [
+        -119,
+        -8
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "L1.4": {
+      "position": [
+        -119,
+        -14
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "R1": {
+      "position": [
+        -94,
+        -13.5
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "R2": {
+      "position": [
+        -100,
+        2.8
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "R6.4": {
+      "position": [
+        71,
+        -15
+      ],
+      "classification": "proposed",
+      "basis": "Proposed axial lead span near the observed body corridor; endpoint numbering remains a reference assumption.",
+      "padOffsets": {
+        "1": [
+          0,
+          0
+        ],
+        "2": [
+          0,
+          12
+        ]
+      }
+    },
+    "R6.5": {
+      "position": [
+        74.5,
+        -15
+      ],
+      "classification": "proposed",
+      "basis": "Proposed axial lead span near the observed body corridor; endpoint numbering remains a reference assumption.",
+      "padOffsets": {
+        "1": [
+          0,
+          0
+        ],
+        "2": [
+          0,
+          12
+        ]
+      }
+    },
+    "V1.1": {
+      "position": [
+        -115,
+        -3
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "V1.2": {
+      "position": [
+        -113,
+        -9
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "V2": {
+      "position": [
+        -61,
+        -19
+      ],
+      "classification": "proposed",
+      "basis": "Reference electrical layout; no historical hole or orientation claim."
+    },
+    "V3.1": {
+      "position": [
+        -115,
+        3.5
+      ],
+      "classification": "proposed",
+      "basis": "SC236 reference E-B-C order from component-evidence.json; nominal adapter spacing, not installed orientation.",
+      "padOffsets": {
+        "E": [
+          0,
+          0
+        ],
+        "B": [
+          2.54,
+          0
+        ],
+        "C": [
+          5.08,
+          0
+        ]
+      }
+    },
+    "V3.2": {
+      "position": [
+        -106,
+        -3
+      ],
+      "classification": "proposed",
+      "basis": "SC236 reference E-B-C order from component-evidence.json; nominal adapter spacing, not installed orientation.",
+      "padOffsets": {
+        "E": [
+          0,
+          0
+        ],
+        "B": [
+          2.54,
+          0
+        ],
+        "C": [
+          5.08,
+          0
+        ]
+      }
+    },
+    "V4.1": {
+      "position": [
+        -104,
+        -19
+      ],
+      "classification": "proposed",
+      "basis": "SC308 reference B-E-C order from component-evidence.json; nominal adapter spacing, not installed orientation.",
+      "padOffsets": {
+        "B": [
+          0,
+          0
+        ],
+        "E": [
+          2.54,
+          0
+        ],
+        "C": [
+          5.08,
+          0
+        ]
+      }
+    },
+    "V4.2": {
+      "position": [
+        -96,
+        -19
+      ],
+      "classification": "proposed",
+      "basis": "SC308 reference B-E-C order from component-evidence.json; nominal adapter spacing, not installed orientation.",
+      "padOffsets": {
+        "B": [
+          0,
+          0
+        ],
+        "E": [
+          2.54,
+          0
+        ],
+        "C": [
+          5.08,
+          0
+        ]
+      }
+    },
+    "V4.3": {
+      "position": [
+        -88,
+        -19
+      ],
+      "classification": "proposed",
+      "basis": "SC308 reference B-E-C order from component-evidence.json; nominal adapter spacing, not installed orientation.",
+      "padOffsets": {
+        "B": [
+          0,
+          0
+        ],
+        "E": [
+          2.54,
+          0
+        ],
+        "C": [
+          5.08,
+          0
+        ]
+      }
+    },
+    "V4.4": {
+      "position": [
+        -80,
+        -19
+      ],
+      "classification": "proposed",
+      "basis": "SC308 reference B-E-C order from component-evidence.json; nominal adapter spacing, not installed orientation.",
+      "padOffsets": {
+        "B": [
+          0,
+          0
+        ],
+        "E": [
+          2.54,
+          0
+        ],
+        "C": [
+          5.08,
+          0
+        ]
+      }
+    },
+    "V4.5": {
+      "position": [
+        -72,
+        -19
+      ],
+      "classification": "proposed",
+      "basis": "SC308 reference B-E-C order from component-evidence.json; nominal adapter spacing, not installed orientation.",
+      "padOffsets": {
+        "B": [
+          0,
+          0
+        ],
+        "E": [
+          2.54,
+          0
+        ],
+        "C": [
+          5.08,
+          0
+        ]
+      }
+    },
+    "V4.6": {
+      "position": [
+        -48,
+        -19
+      ],
+      "classification": "proposed",
+      "basis": "SC308 reference B-E-C order from component-evidence.json; nominal adapter spacing, not installed orientation.",
+      "padOffsets": {
+        "B": [
+          0,
+          0
+        ],
+        "E": [
+          2.54,
+          0
+        ],
+        "C": [
+          5.08,
+          0
+        ]
+      }
+    },
+    "V4.7": {
+      "position": [
+        -40,
+        -19
+      ],
+      "classification": "proposed",
+      "basis": "SC308 reference B-E-C order from component-evidence.json; nominal adapter spacing, not installed orientation.",
+      "padOffsets": {
+        "B": [
+          0,
+          0
+        ],
+        "E": [
+          2.54,
+          0
+        ],
+        "C": [
+          5.08,
+          0
+        ]
+      }
+    },
+    "V4.8": {
+      "position": [
+        -32,
+        -19
+      ],
+      "classification": "proposed",
+      "basis": "SC308 reference B-E-C order from component-evidence.json; nominal adapter spacing, not installed orientation.",
+      "padOffsets": {
+        "B": [
+          0,
+          0
+        ],
+        "E": [
+          2.54,
+          0
+        ],
+        "C": [
+          5.08,
+          0
+        ]
+      }
+    },
+    "V4.9": {
+      "position": [
+        -24,
+        -19
+      ],
+      "classification": "proposed",
+      "basis": "SC308 reference B-E-C order from component-evidence.json; nominal adapter spacing, not installed orientation.",
+      "padOffsets": {
+        "B": [
+          0,
+          0
+        ],
+        "E": [
+          2.54,
+          0
+        ],
+        "C": [
+          5.08,
+          0
+        ]
+      }
+    }
+  },
+  "referenceOnlyExistingPlacements": [
+    "XT1"
+  ],
+  "routing": {
+    "layers": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "trackWidthMm": 0.25,
+    "clearanceMm": 0.2,
+    "viaDiameterMm": 0.6,
+    "viaDrillMm": 0.3,
+    "routerEnvelopeInsetMm": 0.35,
+    "edgeClearanceMm": 0.5,
+    "automaticNeckdown": false
+  },
+  "historicalCopperAdjustments": [
+    {
+      "uuid": "9d0484b0-c3e2-4f88-94be-13af10d77ac2",
+      "action": "width",
+      "widthMm": 0.3,
+      "reason": "Reference-only clearance repair at A1.14; historical geometry retained in the historical board."
+    },
+    {
+      "uuid": "26e6ac4a-ecaf-4799-96b2-8b131e994a28",
+      "action": "reroute",
+      "reason": "Reference-only D2 clearance repair beside CPU pads; historical segment retained in the historical board."
+    }
+  ],
+  "preserveExistingRoutes": false,
+  "routingBasis": "Reuse existing copper as the starting candidate, but allow the router to change it in this variant. Only byte-equivalent geometry with original UUIDs retains historical provenance. Footprints receive stable reference-only identifiers for Specctra interoperability."
+}

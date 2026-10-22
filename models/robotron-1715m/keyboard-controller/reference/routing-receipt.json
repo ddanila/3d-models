@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "variant": "proposed-reference",
+  "scope": "Retained routing inputs and result. KiCad qualification is authoritative for imported connectivity and design rules. No historical, electrical-dynamics or fabrication qualification.",
+  "router": {
+    "name": "freerouting-2.5.0-RC12.jar",
+    "sha256": "2b5ad4ef5a4f8939c394a86485dee8e457cb4b25bc67df9d2b7e557ae7cddca9",
+    "java": "OpenJDK 26.0.2.1",
+    "arguments": [
+      "-XX:ActiveProcessorCount=3",
+      "-jar",
+      "freerouting-2.5.0-RC12.jar",
+      "-de",
+      "controller.dsn",
+      "-do",
+      "controller.ses",
+      "--gui.enabled=false",
+      "--usage_and_diagnostic_data.disable_analytics=true",
+      "--router.automatic_neckdown=false",
+      "--router.autorouter.max_passes=50",
+      "--router.optimizer.max_passes=1",
+      "--router.optimizer.max_threads=2"
+    ]
+  },
+  "sources": {
+    "controller.kicad_pcb": "70ff967a3bdd94a6ef91b01100bcc8b35cb8f01878b637fd183b581656578d38",
+    "controller.kicad_sch": "48333fb758f58072685591a6323867efc31e6a390c673e7dd1967048f0935b29",
+    "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
+    "reference/implementation.json": "3089b43e7bad4ebe071ab3698f5ca34b2001c4e9b46b82931b526fe912af7223"
+  },
+  "artifacts": {
+    "controller.dsn": "12e6def1b313a0db434646eeae272ad71814b97588574e3407d67e0b127ff665",
+    "controller.kicad_pcb": "7b418ec00fcbc1bc6dde0e200e6e44751458457f558b96c26e26aa604394de0c",
+    "controller.kicad_pro": "6583dcdffccee3fd6c5e10ab0e3e900b75a7054cc98669379d044c91cda33356",
+    "controller.ses": "9817a63ff314200250d9d959ee8e0dbeeab879b6ab0b94d1b5d153e73ed8e9e1",
+    "router.log": "f38e60d5c125ca5a1621e7d2b9d9c5ca8830424ae72d2a3084d6f5732afdea07"
+  },
+  "importedBoardSha256": "fef8ca684e6343feb2d019940571adb4f4cb85bc54ff027cbfcac1548f1d1889",
+  "interchangeBoundary": "Pads and net identities checked across session import; coordinates may round by at most 1 um. Editable routing is translated from Specctra type route to normal. Virtual routing envelope inset does not change the native board outline or DRC limits."
+}
