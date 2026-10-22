@@ -20,6 +20,7 @@ class AssemblyTests(unittest.TestCase):
         self.assertEqual(data['review']['bodyEnvelopeIntersections'],[])
         self.assertEqual(data['review']['bodyOverhangs'],[])
         self.assertEqual(data['review']['insufficientDrillAllowance'],[])
+        self.assertEqual(data['review']['leadBodyEnvelopeIntersections'],[])
 
     def test_oversized_body_is_reported_not_blessed(self):
         original=assembly.read
@@ -30,6 +31,7 @@ class AssemblyTests(unittest.TestCase):
             return data
         with patch.object(assembly,'read',side_effect=altered):data,_=assembly.build()
         self.assertIn('R1',data['review']['bodyOverhangs'])
+        self.assertTrue(data['review']['leadBodyEnvelopeIntersections'])
         self.assertTrue(any('R1' in (c['a'],c['b']) for c in data['review']['bodyEnvelopeIntersections']))
         self.assertFalse(data['review']['mechanicallyQualified'])
 

@@ -22,6 +22,19 @@ def vertices(path):
 def bounds(points): return [[min(p[i] for p in points),max(p[i] for p in points)] for i in range(3)]
 def overlaps(a,b,margin=0):return all(min(a[i][1],b[i][1])-max(a[i][0],b[i][0])>margin for i in range(3))
 
+def segment_box(a,b,box,radius):
+    """Conservative swept-wire intersection with a body envelope."""
+    low,high=0.,1.
+    for i in range(3):
+        delta=b[i]-a[i];minimum,maximum=box[i][0]-radius,box[i][1]+radius
+        if abs(delta)<1e-9:
+            if not minimum<a[i]<maximum:return False
+        else:
+            u,v=(minimum-a[i])/delta,(maximum-a[i])/delta
+            low=max(low,min(u,v));high=min(high,max(u,v))
+            if low>=high:return False
+    return True
+
 def build():
     layout=read(REF/'generated/layout.json');spec=read(REF/'assembly.json');evidence=read(ROOT/'evidence.json')
     packages={p['id']:p for p in evidence['packageReferences']}
@@ -80,7 +93,14 @@ def build():
             pad=next(p for p in pcb['pads'] if p['pin']==lead['pin'])
             if math.dist(lead['points'][0][:2],pad['position'])>1e-6:raise ValueError('Lead misses pad')
             if min(pad['drill'])<lead['diameterMm']+.2:drill.append(c['ref']+':'+lead['pin'])
-    report={'method':'Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. No lead-to-body/lead-to-lead collision, installed case or bend-radius qualification.','bodyEnvelopeIntersections':collisions,'bodyOverhangs':outside,'insufficientDrillAllowance':drill,'leadPadAlignmentPassed':True,'mechanicallyQualified':False,'historicallyVerified':False,'fabricationReady':False}
+    lead_body=[]
+    for c in result:
+        for lead in c['leads']:
+            for other in result:
+                if c['ref']==other['ref'] or other['package']=='bridge':continue
+                if any(segment_box(a,b,other['boundsMm'],lead['diameterMm']/2) for a,b in zip(lead['points'],lead['points'][1:])):
+                    lead_body.append({'terminal':c['ref']+':'+lead['pin'],'body':other['ref']})
+    report={'leadBodyEnvelopeIntersections':lead_body,'method':'Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes. Lead-to-lead clearance, installed case and bend radii remain unqualified.','bodyEnvelopeIntersections':collisions,'bodyOverhangs':outside,'insufficientDrillAllowance':drill,'leadPadAlignmentPassed':True,'mechanicallyQualified':False,'historicallyVerified':False,'fabricationReady':False}
     paths=read(REF/'signal-paths.json');connectivity=read(ROOT/'generated/connectivity.json')['components']
     for stage in paths['stages']:
         if stage['ref'] not in expected:raise ValueError('Unknown walkthrough component')

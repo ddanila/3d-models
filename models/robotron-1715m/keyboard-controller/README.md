@@ -198,8 +198,9 @@ manufacturer L3/12 dimensions. Regenerate with that tool; use `--check` to rejec
 stale exports. `reference/signal-paths.json` supplies netlist-checked walkthroughs
 for the museum.
 
-The generated review checks body envelopes, board overhang and nominal drill
-allowance. It does not qualify lead collisions, bend radii or enclosure fit.
+The generated review checks body envelopes, leads against foreign body envelopes, board
+overhang and nominal drill allowance. It does not qualify lead-to-lead clearance,
+bend radii or enclosure fit.
 R2 and the separate filter-winding bodies remain surrogates; shared-core geometry
 and coupling are unresolved. These reference adapters do not establish historical
 footprints or fabrication readiness.

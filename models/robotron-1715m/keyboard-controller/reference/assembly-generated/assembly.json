@@ -13813,7 +13813,8 @@
     }
   ],
   "review": {
-    "method": "Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. No lead-to-body/lead-to-lead collision, installed case or bend-radius qualification.",
+    "leadBodyEnvelopeIntersections": [],
+    "method": "Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes. Lead-to-lead clearance, installed case and bend radii remain unqualified.",
     "bodyEnvelopeIntersections": [],
     "bodyOverhangs": [],
     "insufficientDrillAllowance": [],
@@ -13832,6 +13833,6 @@
     "reference/assembly.json": "1ee84e2f285f605e5fffafd43ace6f659c5ea430764b3857ca4e94257cbd4b5f",
     "reference/generated/layout.json": "51217655811477294a8c69ceb442be17ff987562fe98cf1df5b26a303a18d74d",
     "reference/signal-paths.json": "bcc196b9fe151e87a292a0b8572d20b1b763d526907005e595428f03f958392b",
-    "tools/reference_assembly.py": "7223be4b0294a9e2a8077090bfd7c7fb12c51368f37c99ca1c0914a5b3b6afff"
+    "tools/reference_assembly.py": "5de7057305ac1cfdac2a703d66e8bd255e7aad284fd46540b9c430b5df3224cc"
   }
 }
