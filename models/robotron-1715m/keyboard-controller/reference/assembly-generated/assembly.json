@@ -13813,8 +13813,87 @@
     }
   ],
   "review": {
+    "leadClearance": {
+      "method": "Minimum 3D segment distance minus the two modeled wire radii. Includes bent segments, endpoints and zero-length segments; touching is reported. Same-net contacts and explicit bridge joins remain separate.",
+      "unintendedContacts": [],
+      "intendedContacts": [
+        {
+          "terminals": [
+            "BR1:1",
+            "BR1:2"
+          ],
+          "nets": [
+            "/OSC_OUT",
+            "/CLK"
+          ],
+          "surfaceClearanceMm": -0.3,
+          "closestCenterlinePointsMm": [
+            [
+              130.514801,
+              -12.534301,
+              2.4
+            ],
+            [
+              130.514801,
+              -12.534301,
+              2.4
+            ]
+          ],
+          "basis": "reference-bridge"
+        },
+        {
+          "terminals": [
+            "BR2:1",
+            "BR2:2"
+          ],
+          "nets": [
+            "/RESET_OUT",
+            "/RESET_N"
+          ],
+          "surfaceClearanceMm": -0.3,
+          "closestCenterlinePointsMm": [
+            [
+              -67.73,
+              -9.5,
+              2.4
+            ],
+            [
+              -67.73,
+              -9.5,
+              2.4
+            ]
+          ],
+          "basis": "reference-bridge"
+        }
+      ],
+      "minimumUnintendedClearance": {
+        "terminals": [
+          "V3.1:E",
+          "V3.1:B"
+        ],
+        "nets": [
+          "/RESET_EMITTERS",
+          "/RESET_RC"
+        ],
+        "surfaceClearanceMm": 0.75,
+        "closestCenterlinePointsMm": [
+          [
+            -113.71,
+            3.5,
+            4.1
+          ],
+          [
+            -112.46,
+            3.5,
+            4.1
+          ]
+        ]
+      },
+      "noUnintendedContact": true,
+      "scope": "Nominal capsule geometry only. No manufacturing allowance, insulation rating, lead-forming radius or specimen dimension qualification."
+    },
     "leadBodyEnvelopeIntersections": [],
-    "method": "Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes; transistor wires use the circumscribed diameter of the manufacturer lead section. Lead-to-lead clearance, installed case and bend radii remain unqualified.",
+    "method": "Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes; transistor wires use the circumscribed diameter of the manufacturer lead section. Nominal lead-to-lead capsule clearances are reported separately; installed case, forming tolerances and bend radii remain unqualified.",
     "bodyEnvelopeIntersections": [],
     "bodyOverhangs": [],
     "insufficientDrillAllowance": [],
@@ -13833,6 +13912,7 @@
     "reference/assembly.json": "1ee84e2f285f605e5fffafd43ace6f659c5ea430764b3857ca4e94257cbd4b5f",
     "reference/generated/layout.json": "51217655811477294a8c69ceb442be17ff987562fe98cf1df5b26a303a18d74d",
     "reference/signal-paths.json": "bcc196b9fe151e87a292a0b8572d20b1b763d526907005e595428f03f958392b",
-    "tools/reference_assembly.py": "9cb63158cc1ca11c571ca55793fa846474c7899ba97308930ee8a777f53eb87b"
+    "tools/lead_clearance.py": "a61e21067ce2e0831f05c289b98abc0d2ce99b833112b7cb77a238e87de81450",
+    "tools/reference_assembly.py": "b3e50ad9c84d3be85ce3c97ad94138685656bd89c24905d1519bfa3dc8091c1b"
   }
 }

@@ -6,6 +6,7 @@ import json
 import math
 from pathlib import Path
 import struct
+from lead_clearance import review as lead_clearance_review
 
 ROOT=Path(__file__).resolve().parents[1]
 REF=ROOT/'reference'
@@ -40,7 +41,7 @@ def build():
     packages={p['id']:p for p in evidence['packageReferences']}
     expected={c['ref'] for c in layout['components'] if not c['ref'].startswith('H')}
     if set(spec['components'])!=expected:raise ValueError('Assembly population differs from PCB')
-    sources=['reference/assembly.json','reference/generated/layout.json','generated/connectivity.json','evidence.json','tools/reference_assembly.py']
+    sources=['reference/assembly.json','reference/generated/layout.json','generated/connectivity.json','evidence.json','tools/reference_assembly.py','tools/lead_clearance.py']
     result=[]
     for c in layout['components']:
         ref=c['ref']
@@ -100,7 +101,7 @@ def build():
                 if c['ref']==other['ref'] or other['package']=='bridge':continue
                 if any(segment_box(a,b,other['boundsMm'],lead['diameterMm']/2) for a,b in zip(lead['points'],lead['points'][1:])):
                     lead_body.append({'terminal':c['ref']+':'+lead['pin'],'body':other['ref']})
-    report={'leadBodyEnvelopeIntersections':lead_body,'method':'Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes; transistor wires use the circumscribed diameter of the manufacturer lead section. Lead-to-lead clearance, installed case and bend radii remain unqualified.','bodyEnvelopeIntersections':collisions,'bodyOverhangs':outside,'insufficientDrillAllowance':drill,'leadPadAlignmentPassed':True,'mechanicallyQualified':False,'historicallyVerified':False,'fabricationReady':False}
+    report={'leadClearance':lead_clearance_review(result),'leadBodyEnvelopeIntersections':lead_body,'method':'Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes; transistor wires use the circumscribed diameter of the manufacturer lead section. Nominal lead-to-lead capsule clearances are reported separately; installed case, forming tolerances and bend radii remain unqualified.','bodyEnvelopeIntersections':collisions,'bodyOverhangs':outside,'insufficientDrillAllowance':drill,'leadPadAlignmentPassed':True,'mechanicallyQualified':False,'historicallyVerified':False,'fabricationReady':False}
     paths=read(REF/'signal-paths.json');connectivity=read(ROOT/'generated/connectivity.json')['components']
     for stage in paths['stages']:
         if stage['ref'] not in expected:raise ValueError('Unknown walkthrough component')

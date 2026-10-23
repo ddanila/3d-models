@@ -199,8 +199,9 @@ stale exports. `reference/signal-paths.json` supplies netlist-checked walkthroug
 for the museum.
 
 The generated review checks body envelopes, leads against foreign body envelopes, board
-overhang and nominal drill allowance. It does not qualify lead-to-lead clearance,
-bend radii or enclosure fit.
+overhang, nominal drill allowance and 3D lead-to-lead surface clearance.
+Intentional bridge/same-net contacts are separate from unintended contacts.
+These modeled clearances do not qualify manufacturing tolerances, bend radii or enclosure fit.
 R2 and the separate filter-winding bodies remain surrogates; shared-core geometry
 and coupling are unresolved. These reference adapters do not establish historical
 footprints or fabrication readiness.
