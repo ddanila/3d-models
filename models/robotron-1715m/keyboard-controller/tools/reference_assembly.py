@@ -83,7 +83,7 @@ def build():
             p=pinmap[pin];tip=[*p['position'],-.5];entry=[*p['position'],2.1];end=world(port[:2],origin,angle,port[2])
             leads.append({'pin':pin,'net':p['net'],'points':[tip,entry,end],'diameterMm':math.hypot(*package['leadSectionMm']) if kind=='transistor' else .3})
         bodybounds=bounds([world(p[:2],origin,angle,z+p[2]) for p in points])
-        result.append({'ref':ref,'type':c['type'],'package':kind,'basis':s['basis'],'position':[ *origin,z],'rotation':angle,'sizeMm':size,'mesh':mesh,'profile':profile,'boundsMm':bodybounds,'leads':leads,'footprint':{'id':'RobotronReference_'+ref,'terminals':{p['pin']:{'offsetMm':rotate([p['position'][i]-origin[i] for i in range(2)],-angle),'net':p['net']} for p in pads}}})
+        result.append({'ref':ref,'type':c['type'],'package':kind,'basis':s['basis'],'position':[ *origin,z],'rotation':round(angle,9),'sizeMm':size,'mesh':mesh,'profile':profile,'boundsMm':bodybounds,'leads':leads,'footprint':{'id':'RobotronReference_'+ref,'terminals':{p['pin']:{'offsetMm':[round(v,9)+0.0 for v in rotate([p['position'][i]-origin[i] for i in range(2)],-angle)],'net':p['net']} for p in pads}}})
     collisions=[{'a':a['ref'],'b':b['ref']} for i,a in enumerate(result) for b in result[i+1:] if overlaps(a['boundsMm'],b['boundsMm'],.05)]
     outline=layout['outlinePolygon'];xmin=min(p[0] for p in outline);xmax=max(p[0] for p in outline);ymin=min(p[1] for p in outline);ymax=max(p[1] for p in outline)
     outside=[c['ref'] for c in result if c['boundsMm'][0][0]<xmin or c['boundsMm'][0][1]>xmax or c['boundsMm'][1][0]<ymin or c['boundsMm'][1][1]>ymax]
