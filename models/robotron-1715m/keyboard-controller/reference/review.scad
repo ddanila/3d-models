@@ -1,6 +1,7 @@
 // Proposed reference electrical geometry; not the historical specimen or a fabrication release.
 include <generated/controller.scad>
 include <assembly-generated/assembly.scad>
+show_reference=true; // Disable top-level rendering when embedding the reusable modules.
 show_components=true;
 side="top"; // [top,bottom]
 show_proposed=true;
@@ -11,12 +12,15 @@ module stroke(points,width,z) {
         translate([points[i+1][0],points[i+1][1],z]) cylinder(h=.035,d=width);
     }
 }
-module reference_board() {
-    color([.12,.32,.22]) difference() {
+module reference_substrate() {
+    difference() {
         linear_extrude(1.6) polygon(reference_outline);
         for(p=reference_pads) if(p[4]>0) translate([p[0],p[1],-.1]) cylinder(h=1.8,d=p[4]);
         for(v=reference_vias) translate([v[0],v[1],-.1]) cylinder(h=1.8,d=v[3]);
     }
+}
+module reference_board() {
+    color([.12,.32,.22]) reference_substrate();
     for(p=reference_pads) for(z=[-.035,1.6]) color([.85,.7,.3])
         translate([p[0],p[1],z]) linear_extrude(.035) difference() {
             scale([p[2],p[3]]) circle(d=1);
@@ -30,7 +34,7 @@ module reference_board() {
             translate([0,0,-.01]) cylinder(h=.06,d=v[3]);
         }
 }
-rotate([side=="bottom"?180:0,0,0]) {
+if(show_reference) rotate([side=="bottom"?180:0,0,0]) {
     reference_board();
     if(show_components) reference_populated_assembly();
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Nominal solid intersections between reference components and keyboard surroundings."""
+"""Nominal solid intersections between reference PCB, components and keyboard surroundings."""
 import argparse
 import hashlib
 import json
@@ -42,21 +42,23 @@ def run():
     rows = []
     # A deliberately raised assembly must collide with the matrix board. This
     # guards against empty geometry or a disabled intersection masquerading as fit.
-    cases = [(name, module, 0) for name, module in INTERFACES.items()]
-    cases.append(('raised-assembly-control', 'keyboard_pcb', 1))
+    cases = [(name, module, 'reference_populated_assembly', [0, 0, 0]) for name, module in INTERFACES.items()]
+    cases += [('substrate-' + name, module, 'reference_substrate', [0, 0, 0]) for name, module in INTERFACES.items()]
+    cases.append(('raised-assembly-control', 'keyboard_pcb', 'reference_populated_assembly', [0, 0, 1]))
+    cases.append(('misaligned-mounting-control', 'keyboard_controller_mounts', 'reference_substrate', [.5, 0, 0]))
     with tempfile.TemporaryDirectory() as temp:
         temp = Path(temp)
-        for name, module, lift in cases:
+        for name, module, subject, offset in cases:
             scad, stl, deps = (temp / (name + ext) for ext in ('.scad', '.stl', '.deps'))
             scad.write_text(f'''include <{ROOT}/model.scad>
-include <{ROOT}/keyboard-controller/reference/assembly-generated/assembly.scad>
+include <{ROOT}/keyboard-controller/reference/review.scad>
 intersection() {{
-    keyboard_controller_pose() translate([0,0,{lift}]) reference_populated_assembly();
+    keyboard_controller_pose() translate({offset}) {subject}();
     {module}();
 }}
 ''')
             result = subprocess.run(['openscad', '--backend', 'Manifold', '--export-format', 'binstl',
-                                     '-D', 'part="audit"', '-d', str(deps), '-o', str(stl), str(scad)],
+                                     '-D', 'part="audit"', '-D', 'show_reference=false', '-d', str(deps), '-o', str(stl), str(scad)],
                                     capture_output=True, text=True, timeout=60)
             empty = 'Current top level object is empty' in result.stderr
             if 'WARNING:' in result.stderr or 'ERROR:' in result.stderr or (result.returncode and not empty):
@@ -70,21 +72,21 @@ intersection() {{
                 path.relative_to(ROOT)  # Reject dependencies outside the retained model.
                 sources.add(path)
             value = volume(stl) if stl.exists() else 0.
-            rows.append({'interface': name, 'assemblyLiftMm': lift,
+            rows.append({'interface': name, 'subject': subject, 'offsetMm': offset,
                          'intersectionMm3': round(value, 6), 'intersects': value >= .001})
     report = {
-        'schema': 1, 'variant': 'proposed-reference',
-        'scope': 'Populated reference bodies and leads at the existing keyboard controller transform. Static nominal solids only; excludes PCB copper, connector engagement, cable and shield braid, bend radii and manufacturing tolerances. Zero volume permits touching. Enclosure dimensions and installed seating remain unmeasured.',
+        'schema': 2, 'variant': 'proposed-reference',
+        'scope': 'Reference PCB substrate, drilled holes, populated bodies and leads at the existing keyboard controller transform. Static nominal solids only; excludes PCB copper, connector engagement, cable and shield braid, bend radii and manufacturing tolerances. Zero volume permits touching. Enclosure dimensions and installed seating remain unmeasured.',
         'engine': subprocess.check_output(['openscad', '--version'], stderr=subprocess.STDOUT, text=True).strip(),
-        'intersectionBudgetMm3': .001, 'results': rows[:-1], 'positiveControl': rows[-1],
-        'nominalInterfacesClear': not any(row['intersects'] for row in rows[:-1]),
+        'intersectionBudgetMm3': .001, 'results': rows[:-2], 'positiveControl': rows[-2], 'mountingControl': rows[-1],
+        'nominalInterfacesClear': not any(row['intersects'] for row in rows[:-2]),
         'mechanicallyQualified': False,
         'sources': {str(p.relative_to(ROOT)): digest(p) for p in sorted(sources)},
     }
-    if not rows[-1]['intersects']:
-        raise ValueError('Raised-assembly positive control did not intersect the matrix board')
+    if not all(row['intersects'] for row in rows[-2:]):
+        raise ValueError('Deliberately colliding assembly or mounting control did not intersect')
     TARGET.write_text(json.dumps(report, indent=2) + '\n')
-    print(json.dumps({k: report[k] for k in ('results', 'positiveControl', 'nominalInterfacesClear')}, indent=2))
+    print(json.dumps({k: report[k] for k in ('results', 'positiveControl', 'mountingControl', 'nominalInterfacesClear')}, indent=2))
 
 
 def main():
@@ -98,9 +100,9 @@ def main():
     for name, expected in report['sources'].items():
         if digest(ROOT / name) != expected:
             raise ValueError('Stale enclosure review: ' + name)
-    if {r['interface'] for r in report['results']} != set(INTERFACES):
+    if {r['interface'] for r in report['results']} != set(INTERFACES) | {'substrate-' + name for name in INTERFACES}:
         raise ValueError('Incomplete enclosure review')
-    if not report['positiveControl']['intersects'] or report['mechanicallyQualified']:
+    if not all(report[key]['intersects'] for key in ('positiveControl', 'mountingControl')) or report['mechanicallyQualified']:
         raise ValueError('Invalid enclosure review scope or positive control')
     if report['nominalInterfacesClear'] != (not any(r['intersects'] for r in report['results'])):
         raise ValueError('Inconsistent enclosure result')
