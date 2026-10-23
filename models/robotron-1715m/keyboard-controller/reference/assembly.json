@@ -220,13 +220,13 @@
     },
     "R1": {
       "package": "network",
-      "basis": "R1 catalog B1 envelope; R2 proposed nine-terminal surrogate, specimen tenth lead unresolved.",
+      "basis": "R1 catalog B1 envelope; proposed board-surface seating to clear the modeled matrix board. Installed seating and manufacturing allowance remain unqualified.",
       "sizeMm": [
         25,
         3,
         11
       ],
-      "seatMm": 2.6
+      "seatMm": 1.6
     },
     "R10.1": {
       "package": "axial",

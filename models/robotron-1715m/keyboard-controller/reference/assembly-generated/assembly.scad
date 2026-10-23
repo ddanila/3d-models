@@ -452,28 +452,28 @@ color([.75,.75,.78]) hull() {translate([-119.0, -14.0, -0.5]) sphere(d=0.3,$fn=8
 color([.75,.75,.78]) hull() {translate([-119.0, -14.0, 2.1]) sphere(d=0.3,$fn=8); translate([-119.73, -14.0, 4.5]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([-116.46, -14.0, -0.5]) sphere(d=0.3,$fn=8); translate([-116.46, -14.0, 2.1]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([-116.46, -14.0, 2.1]) sphere(d=0.3,$fn=8); translate([-115.73, -14.0, 4.5]) sphere(d=0.3,$fn=8);}
-// R1: R1 catalog B1 envelope; R2 proposed nine-terminal surrogate, specimen tenth lead unresolved.
-color([0.65, 0.5, 0.25]) translate([-82.75, -13.5, 2.6]) rotate([0,0,0]) translate([-12.5, -1.5, 0]) cube([25, 3, 11]);
+// R1: R1 catalog B1 envelope; proposed board-surface seating to clear the modeled matrix board. Installed seating and manufacturing allowance remain unqualified.
+color([0.65, 0.5, 0.25]) translate([-82.75, -13.5, 1.6]) rotate([0,0,0]) translate([-12.5, -1.5, 0]) cube([25, 3, 11]);
 color([.75,.75,.78]) hull() {translate([-94.0, -13.5, -0.5]) sphere(d=0.3,$fn=8); translate([-94.0, -13.5, 2.1]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-94.0, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-94.0, -13.5, 2.6]) sphere(d=0.3,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-94.0, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-94.0, -13.5, 1.6]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([-71.5, -13.5, -0.5]) sphere(d=0.3,$fn=8); translate([-71.5, -13.5, 2.1]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-71.5, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-71.5, -13.5, 2.6]) sphere(d=0.3,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-71.5, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-71.5, -13.5, 1.6]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([-91.5, -13.5, -0.5]) sphere(d=0.3,$fn=8); translate([-91.5, -13.5, 2.1]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-91.5, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-91.5, -13.5, 2.6]) sphere(d=0.3,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-91.5, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-91.5, -13.5, 1.6]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([-89.0, -13.5, -0.5]) sphere(d=0.3,$fn=8); translate([-89.0, -13.5, 2.1]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-89.0, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-89.0, -13.5, 2.6]) sphere(d=0.3,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-89.0, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-89.0, -13.5, 1.6]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([-86.5, -13.5, -0.5]) sphere(d=0.3,$fn=8); translate([-86.5, -13.5, 2.1]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-86.5, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-86.5, -13.5, 2.6]) sphere(d=0.3,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-86.5, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-86.5, -13.5, 1.6]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([-84.0, -13.5, -0.5]) sphere(d=0.3,$fn=8); translate([-84.0, -13.5, 2.1]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-84.0, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-84.0, -13.5, 2.6]) sphere(d=0.3,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-84.0, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-84.0, -13.5, 1.6]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([-81.5, -13.5, -0.5]) sphere(d=0.3,$fn=8); translate([-81.5, -13.5, 2.1]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-81.5, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-81.5, -13.5, 2.6]) sphere(d=0.3,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-81.5, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-81.5, -13.5, 1.6]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([-79.0, -13.5, -0.5]) sphere(d=0.3,$fn=8); translate([-79.0, -13.5, 2.1]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-79.0, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-79.0, -13.5, 2.6]) sphere(d=0.3,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-79.0, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-79.0, -13.5, 1.6]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([-76.5, -13.5, -0.5]) sphere(d=0.3,$fn=8); translate([-76.5, -13.5, 2.1]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-76.5, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-76.5, -13.5, 2.6]) sphere(d=0.3,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-76.5, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-76.5, -13.5, 1.6]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([-74.0, -13.5, -0.5]) sphere(d=0.3,$fn=8); translate([-74.0, -13.5, 2.1]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-74.0, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-74.0, -13.5, 2.6]) sphere(d=0.3,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-74.0, -13.5, 2.1]) sphere(d=0.3,$fn=8); translate([-74.0, -13.5, 1.6]) sphere(d=0.3,$fn=8);}
 // R10.1: Proposed reference adapter; package fit remains unqualified.
 color([0.65, 0.7, 0.73]) translate([-50.901799499999996, 0.0388005, 2.1]) rotate([0,0,-178.936059952]) translate([0,0,1.15]) rotate([0,90,0]) cylinder(d=2.3,h=5.2,center=true,$fn=24);
 color([.75,.75,.78]) hull() {translate([-45.139038, 0.145823, -0.5]) sphere(d=0.3,$fn=8); translate([-45.139038, 0.145823, 2.1]) sphere(d=0.3,$fn=8);}

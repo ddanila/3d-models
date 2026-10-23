@@ -201,7 +201,11 @@ for the museum.
 The generated review checks body envelopes, leads against foreign body envelopes, board
 overhang, nominal drill allowance and 3D lead-to-lead surface clearance.
 Intentional bridge/same-net contacts are separate from unintended contacts.
-These modeled clearances do not qualify manufacturing tolerances, bend radii or enclosure fit.
+`tools/reference_enclosure.py` renders the populated assembly against the modeled
+case, supports, mounts and matrix board, with a deliberately colliding positive
+control. It retains source-bound results in `reference/enclosure-review.json`;
+`--check` verifies freshness without rerendering. These nominal checks do not
+qualify manufacturing tolerances, bend radii or measured enclosure fit.
 R2 and the separate filter-winding bodies remain surrogates; shared-core geometry
 and coupling are unresolved. These reference adapters do not establish historical
 footprints or fabrication readiness.
