@@ -27,7 +27,7 @@
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
     "reference/implementation.json": "3089b43e7bad4ebe071ab3698f5ca34b2001c4e9b46b82931b526fe912af7223",
     "reference/routing/historical-input.kicad_pcb": "70ff967a3bdd94a6ef91b01100bcc8b35cb8f01878b637fd183b581656578d38",
-    "reference/package-adjustments.json": "ec4dee2d714ed86ac49da0bd91df301b6743b9493a9904ab36e2e12c76592afe"
+    "reference/package-adjustments.json": "c43d5b55cadb57feb0fcb3700cb682e45de3aa926b0a9222ae0bf30c93cc2483"
   },
   "artifacts": {
     "controller.dsn": "12e6def1b313a0db434646eeae272ad71814b97588574e3407d67e0b127ff665",
@@ -36,7 +36,7 @@
     "controller.ses": "9817a63ff314200250d9d959ee8e0dbeeab879b6ab0b94d1b5d153e73ed8e9e1",
     "router.log": "f38e60d5c125ca5a1621e7d2b9d9c5ca8830424ae72d2a3084d6f5732afdea07"
   },
-  "importedBoardSha256": "b38c5f3c69eb1ed06cae6d82c794e0590882c78971f8b424cff8a845eb153676",
+  "importedBoardSha256": "8716b773a718dbf3cd2326ec2b3cf11f22e73b315f255cde01a340ff2675df55",
   "interchangeBoundary": "Pads and net identities checked across session import; coordinates may round by at most 1 um. Editable routing is translated from Specctra type route to normal. Virtual routing envelope inset does not change the native board outline or DRC limits.",
-  "postImportAdjustments": "reference/package-adjustments.json: drill sizes only, applied by tools/reference_board.py after session import; retained router inputs and copper are unchanged."
+  "postImportAdjustments": "Declarative package drill changes and externally unused R2 spare-branch pad; existing routes and connected terminals preserved."
 }

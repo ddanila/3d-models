@@ -118,8 +118,19 @@ def router_deck(text,spec):
 
 def package_adjustments(board, apply=False):
     import pcbnew as pcb
-    changes=json.loads((REF/'package-adjustments.json').read_text())['drills']
+    adjustments=json.loads((REF/'package-adjustments.json').read_text());changes=adjustments['drills']
     byref={f.GetReference():f for f in board.GetFootprints()}
+    for change in adjustments.get('unusedPads',[]):
+        footprint=byref[change['ref']];pads={p.GetNumber():p for p in footprint.Pads()}
+        if change['pin'] not in pads:
+            if not apply:raise ValueError('Missing proposed spare pad')
+            pad=pcb.PAD(footprint);pad.SetNumber(change['pin']);pad.SetAttribute(pcb.PAD_ATTRIB_PTH);pad.SetShape(pcb.PAD_SHAPE_CIRCLE);pad.SetLayerSet(pads['1'].GetLayerSet())
+            pad.SetSize(pcb.VECTOR2I(*[round(change['diameterMm']*1e6)]*2));pad.SetDrillSize(pcb.VECTOR2I(*[round(change['drillMm']*1e6)]*2))
+            x,y=change['positionMm'];pad.SetPosition(pcb.VECTOR2I(round((150+x)*1e6),round((50-y)*1e6)));footprint.Add(pad)
+        else:pad=pads[change['pin']]
+        x,y=change['positionMm']
+        if pad.GetLayerSet().FmtHex()!=pads['1'].GetLayerSet().FmtHex() or pad.GetAttribute()!=pcb.PAD_ATTRIB_PTH or pad.GetShape()!=pcb.PAD_SHAPE_CIRCLE:raise ValueError('Changed proposed spare-pad construction')
+        if pad.GetNetCode()!=0 or pad.GetPosition().x!=round((150+x)*1e6) or pad.GetPosition().y!=round((50-y)*1e6) or pad.GetSize().x!=round(change['diameterMm']*1e6) or pad.GetSize().y!=round(change['diameterMm']*1e6):raise ValueError('Changed proposed spare pad')
     for change in changes:
         footprint=byref[change['ref']]
         pads={p.GetNumber():p for p in footprint.Pads()}
@@ -186,6 +197,7 @@ def export():
     expected = json.loads((ROOT/'generated/connectivity.json').read_text())['components']
     evidence = json.loads((ROOT/'component-evidence.json').read_text())
     unused = {ref:e['physicalUnusedPads'] for ref,e in evidence.items() if e.get('physicalUnusedPads')}
+    for item in json.loads((REF/'package-adjustments.json').read_text()).get('unusedPads',[]):unused.setdefault(item['ref'],[]).append(item['pin'])
     historical = json.loads((ROOT/'generated/layout.json').read_text())
     original = {r['id']:r for r in historical['routes']+historical['vias']}
     def xy(point): return [round(point.x/1e6-150,6),round(50-point.y/1e6,6)]

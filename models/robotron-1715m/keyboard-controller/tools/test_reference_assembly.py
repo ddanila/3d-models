@@ -60,6 +60,26 @@ class AssemblyTests(unittest.TestCase):
             self.assertTrue(lead['bends'])
         self.assertTrue(data['review']['assemblyAllowances']['envelopesClear'])
 
+    def test_r2_spare_branch_and_equal_resistor_mapping(self):
+        data,_=assembly.build();r2=next(c for c in data['components'] if c['ref']=='R2')
+        self.assertEqual(r2['sizeMm'],[27.5,3,9])
+        self.assertEqual(r2['externallyOpenPackagePins'],['10'])
+        leads={p['pin']:p for p in r2['leads']}
+        self.assertEqual(leads['1']['packagePin'],'1');self.assertEqual(leads['1']['net'],'/+5V')
+        self.assertEqual({p['packagePin'] for p in leads.values()},{str(i) for i in range(1,11)})
+        self.assertIsNone(leads['10']['net'])
+        self.assertEqual({p['net'] for k,p in leads.items() if k not in ('1','10')},{'/BASE'+str(i) for i in range(8)})
+        self.assertTrue(data['review']['assemblyAllowances']['envelopesClear'])
+        original=assembly.read
+        def altered(path):
+            result=original(path)
+            if path==assembly.REF/'assembly.json':
+                result['components']['R2']['terminalToPackagePin']['1']='2'
+                result['components']['R2']['terminalToPackagePin']['6']='1'
+            return result
+        with patch.object(assembly,'read',side_effect=altered),self.assertRaisesRegex(ValueError,'common terminal'):
+            assembly.build()
+
     def test_straight_body_entries_and_rounded_paths(self):
         data,_=assembly.build()
         for c in data['components']:

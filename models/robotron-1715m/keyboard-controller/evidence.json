@@ -36,7 +36,7 @@
       "id": "robotron-service-1985",
       "url": "https://www.tiffe.de/Robotron/PC1715/PC-1715-Servicemanual.pdf",
       "sha256": "e810e4722d889a7e357e192486da3a8004b1fd08aca1c0dcef4f3bbc5b66021d",
-      "use": "Manufacturer service handbook, 1985, printed pp. 89–92 (PDF pages 91–94): WR serial synchronization, matrix sensing, LED latches, reset and nominal clock. Oscillator designators, pin usage and capacitor differ from Zander; not specimen-identical. PDF not redistributed."
+      "use": "Manufacturer service handbook, 1985, printed pp. 89\u201392 (PDF pages 91\u201394): WR serial synchronization, matrix sensing, LED latches, reset and nominal clock. Oscillator designators, pin usage and capacitor differ from Zander; not specimen-identical. PDF not redistributed."
     },
     {
       "id": "robotron-factory-drawings",
@@ -394,7 +394,7 @@
       "sha256": "c5c52b6df912f167f14b70feb2963a08ce9fc933b3edad8bff8b4073eb43bb94",
       "title": "SC236 / SC237 / SC238 / SC239",
       "use": "PDF page 1 package drawing, L3/12 (TGL 11811). Reference terminal arrangement and nominal dimensions; not specimen placement or measured continuity. PDF not redistributed.",
-      "credit": "Scanned bilingual device data sheet, printed pages 13–14 on PDF page 1; issuing publication not identified in excerpt."
+      "credit": "Scanned bilingual device data sheet, printed pages 13\u201314 on PDF page 1; issuing publication not identified in excerpt."
     },
     {
       "id": "sc307-package-datasheet",
@@ -481,7 +481,7 @@
     {
       "id": "clock-source-disagreement",
       "status": "unresolved",
-      "detail": "Zander connects WR to the output inverter; kbdbabel connects RD and leaves WR unused. Resolve by following specimen copper/continuity. The current HDL explicitly models the Zander reference. Robotron service handbook pp. 89–90 explicitly supports WR. Specimen continuity remains unverified."
+      "detail": "Zander connects WR to the output inverter; kbdbabel connects RD and leaves WR unused. Resolve by following specimen copper/continuity. The current HDL explicitly models the Zander reference. Robotron service handbook pp. 89\u201390 explicitly supports WR. Specimen continuity remains unverified."
     }
   ],
   "serviceInterfaces": {
@@ -1515,6 +1515,36 @@
       "bodyHeightMaximumMm": 11,
       "bodyThicknessMaximumMm": 3,
       "scope": "Catalog topology identifies the comparison R1 marked 3894. Nominal package dimensions are not specimen measurements. Primary R1 marking and installed terminal orientation remain unconfirmed; no native pads assigned."
+    },
+    {
+      "id": "kwh-3845-reference",
+      "types": [
+        "3845"
+      ],
+      "source": "kwh-network-catalog",
+      "locator": "PDF page 7 / printed page 18, code 3845",
+      "case": "B1-9/3.0/10",
+      "resistanceOhms": 4700,
+      "resistorCount": 9,
+      "commonTerminal": "1",
+      "resistorTerminals": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "leadCount": 10,
+      "leadPitchMm": 2.5,
+      "packageSource": "kwh-network-technical",
+      "packageLocator": "PDF page 4 / printed page 9, Form B1",
+      "bodyHeightMaximumMm": 9,
+      "bodyThicknessMaximumMm": 3,
+      "scope": "Proposed R2 adapter only: eight equal branches used, physical branch 10 left externally open. This is not an electrically isolated pin. Primary identity, tenth-lead function and physical numbering remain unconfirmed."
     }
   ]
 }

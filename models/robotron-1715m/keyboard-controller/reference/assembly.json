@@ -307,13 +307,40 @@
     },
     "R2": {
       "package": "network",
-      "basis": "R1 catalog B1 envelope; R2 proposed nine-terminal surrogate, specimen tenth lead unresolved.",
+      "basis": "Proposed KWH 3845 adapter: eight equal 4k7 branches mapped to reference terminals, ninth branch externally open. Catalog maximum B1 envelope and formed leads; no specimen identity or pin-number claim.",
       "sizeMm": [
-        23,
+        27.5,
         3,
-        11
+        9
       ],
-      "seatMm": 2.6
+      "seatMm": 3.4,
+      "leadSectionMaximumMm": [
+        0.65,
+        0.5
+      ],
+      "packageReference": "kwh-3845-reference",
+      "terminalToPackagePin": {
+        "1": "1",
+        "6": "2",
+        "2": "3",
+        "7": "4",
+        "5": "5",
+        "9": "6",
+        "8": "7",
+        "4": "8",
+        "3": "9",
+        "10": "10"
+      },
+      "packagePinDirection": -1,
+      "bodyOffsetMm": [
+        -0.34,
+        -1
+      ],
+      "leadEntryHeightMm": 2.1,
+      "bendRadiusMm": 0.5,
+      "externallyOpenPackagePins": [
+        "10"
+      ]
     },
     "R3": {
       "package": "axial",

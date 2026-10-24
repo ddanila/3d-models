@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "scope": "Mechanical changes after retained router session import. Pad locations, pad copper sizes, nets and routes are unchanged; native DRC must pass.",
+  "scope": "Post-router proposed package adapters. Existing pad locations, copper sizes, nets and routes are unchanged. Added externally unused pads must pass native DRC.",
   "drills": [
     {
       "ref": "R1",
@@ -19,6 +19,37 @@
       "fromDiameterMm": 0.85,
       "diameterMm": 1.1,
       "basis": "KWH B1 maximum 0.65 x 0.5 mm lead section plus proposed hole-loss and forming envelopes."
+    },
+    {
+      "ref": "R2",
+      "pins": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "fromDiameterMm": 0.85,
+      "diameterMm": 1.1,
+      "basis": "KWH B1 maximum lead section and proposed hole/forming allowances."
+    }
+  ],
+  "unusedPads": [
+    {
+      "ref": "R2",
+      "pin": "10",
+      "positionMm": [
+        -101.5,
+        4.8
+      ],
+      "diameterMm": 1.7,
+      "drillMm": 1.1,
+      "basis": "Proposed KWH 3845 spare resistor branch, externally unconnected. Offset hole avoids RESET_BIAS copper; no specimen pin identification."
     }
   ]
 }

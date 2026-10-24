@@ -78,7 +78,13 @@ def build():
                 terminals={pin:[(i-1)*package['outerLeadSpanMm']/2,0,z] for i,pin in enumerate(package['terminalOrderInDrawing'])}
             elif kind=='network' and 'packageReference' in s:
                 package=packages[s['packageReference']]
-                terminals={pin:[(int(pin)-(package['leadCount']+1)/2)*package['leadPitchMm'],0,z] for pin in pinmap}
+                mapping=s.get('terminalToPackagePin',{pin:pin for pin in pinmap});direction=s.get('packagePinDirection',1)
+                if set(mapping)!=set(pinmap) or set(mapping.values())!={str(i) for i in range(1,package['leadCount']+1)} or direction not in (-1,1):raise ValueError('Incomplete network package mapping '+ref)
+                if mapping[package['commonTerminal']]!=package['commonTerminal']:raise ValueError('Network common terminal changed '+ref)
+                for pin in s.get('externallyOpenPackagePins',[]):
+                    logical=next(k for k,v in mapping.items() if v==pin)
+                    if pin not in package['resistorTerminals'] or pinmap[logical]['net'] is not None:raise ValueError('Connected spare resistor branch '+ref)
+                terminals={pin:[direction*(int(mapping[pin])-(package['leadCount']+1)/2)*package['leadPitchMm'],0,z] for pin in pinmap}
             elif kind in ('axial','filter'):
                 terminals={p['pin']:[(-1 if i==0 else 1)*size[0]/2,0,z+size[2]/2] for i,p in enumerate(pads)}
             elif kind=='bridge':terminals={p['pin']:[0,0,z] for p in pads}
@@ -91,8 +97,14 @@ def build():
             p=pinmap[pin];tip=[*p['position'],-.5];entry=[*p['position'],s.get('leadEntryHeightMm',2.1)];end=world(port[:2],origin,angle,port[2])
             path=[tip,end] if math.dist(tip[:2],end[:2])<1e-9 else [tip,entry,end]
             leads.append({'pin':pin,'net':p['net'],'points':path,'diameterMm':math.ceil(math.hypot(*s['leadSectionMaximumMm'])*1e9)/1e9 if 'leadSectionMaximumMm' in s else math.hypot(*package['leadSectionMm']) if kind=='transistor' else .3})
+        if kind=='network' and 'packageReference' in s:
+            for lead in leads:lead['packagePin']=mapping[lead['pin']]
         bodybounds=bounds([world(p[:2],origin,angle,z+p[2]) for p in points])
         result.append({'ref':ref,'type':c['type'],'package':kind,'basis':s['basis'],'position':[ *origin,z],'rotation':round(angle,9),'sizeMm':size,'mesh':mesh,'profile':profile,'boundsMm':bodybounds,'leads':leads,'footprint':{'id':'RobotronReference_'+ref,'terminals':{p['pin']:{'offsetMm':[round(v,9)+0.0 for v in rotate([p['position'][i]-origin[i] for i in range(2)],-angle)],'net':p['net']} for p in pads}}})
+    for c in result:
+        s=spec['components'][c['ref']]
+        if c['package']=='network' and 'packageReference' in s:
+            c['packageReference']=s['packageReference'];c['externallyOpenPackagePins']=s.get('externallyOpenPackagePins',[])
     shared_bodies=[shared_filter_build(spec['sharedFilter'],result)]
     sources.append('tools/shared_filter.py')
     forming=spec['leadForming']

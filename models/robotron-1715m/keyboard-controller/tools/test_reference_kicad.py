@@ -19,7 +19,10 @@ class NativeReferenceTests(unittest.TestCase):
             return {(f.GetReference(),p.GetNumber()):(p.GetPosition().x,p.GetPosition().y,p.GetNetname(),p.GetSize().x,p.GetSize().y) for f in board.GetFootprints() for p in f.Pads()}
         before=terminals();tracks=len(board.GetTracks())
         reference_board.package_adjustments(board,apply=True)
-        self.assertEqual(before,terminals());self.assertEqual(tracks,len(board.GetTracks()))
+        after=terminals()
+        self.assertEqual(before,{k:after[k] for k in before});self.assertEqual(set(after)-set(before),{('R2','10')});self.assertEqual(tracks,len(board.GetTracks()))
+        spare=next(p for f in board.GetFootprints() if f.GetReference()=='R2' for p in f.Pads() if p.GetNumber()=='10')
+        self.assertEqual(spare.GetNetCode(),0)
         r1=next(f for f in board.GetFootprints() if f.GetReference()=='R1')
         self.assertTrue(all(p.GetDrillSize().x==1100000 for p in r1.Pads()))
         reference_board.package_adjustments(board)

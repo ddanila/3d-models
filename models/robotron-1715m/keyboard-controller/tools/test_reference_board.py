@@ -14,6 +14,7 @@ class ReferenceTests(unittest.TestCase):
         self.expected=json.loads((ROOT/'generated/connectivity.json').read_text())['components']
         evidence=json.loads((ROOT/'component-evidence.json').read_text())
         self.unused={ref:e['physicalUnusedPads'] for ref,e in evidence.items() if e.get('physicalUnusedPads')}
+        for item in json.loads((ROOT/'reference/package-adjustments.json').read_text()).get('unusedPads',[]):self.unused.setdefault(item['ref'],[]).append(item['pin'])
 
     def test_source_contract_and_reference_exports(self):
         validate_pins(self.components,self.expected,self.unused)
