@@ -22,11 +22,21 @@ def not_any(rows):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', type=Path, required=True)
+    parser.add_argument('--candidate', type=Path, default=CANDIDATE)
+    parser.add_argument('--pitch-offset', type=float, default=0, help='Lead-pitch offset within the published tolerance, in mm')
     parser.add_argument('--check', action='store_true', help='Check retained scope and source identities without rendering')
     args=parser.parse_args()
+    candidate_path=args.candidate.resolve()
+    candidate=assembly.read(candidate_path)
+    if not math.isfinite(args.pitch_offset) or abs(args.pitch_offset)>candidate['leadPitchToleranceMm']:
+        parser.error('Pitch offset must be within published tolerance')
+    pitch=candidate['leadPitchNominalMm']+args.pitch_offset
+    if pitch<=0:parser.error('Nonpositive lead pitch')
+    diameter=candidate.get('leadDiameterMaximumMm',candidate['leadDiameterNominalMm'])
+    geometry={'leadPitchMm':pitch,'leadDiameterMm':diameter}
     if args.check:
         report=assembly.read(args.out/'assessment.json')
-        if report['candidate']!=assembly.read(CANDIDATE):raise ValueError('Candidate changed')
+        if report['candidate']!=candidate or report['geometry']!=geometry:raise ValueError('Candidate changed')
         if report['adopted'] or report['mechanicallyQualified']:raise ValueError('Invalid qualification claim')
         if not math.isfinite(report['candidateVolumeMm3']) or report['candidateVolumeMm3']<=0:raise ValueError('Missing nonempty control')
         rows=report['interfaces']
@@ -39,22 +49,23 @@ def main():
             if assembly.digest(ROOT.parent/name)!=expected:raise ValueError('Stale candidate review: '+name)
         print('Candidate receipt matches sources; not adopted or mechanically qualified')
         return
-    candidate=assembly.read(CANDIDATE)
     spec=assembly.read(assembly.REF/'assembly.json')
     original_read=assembly.read
     for ref in candidate['components']:
         record=spec['components'][ref]
-        record.update(sizeMm=candidate['bodyEnvelopeMm'],leadPitchMm=candidate['leadPitchNominalMm'],
+        if 'proposedBodyOffsetMm' in candidate['components'][ref]:
+            record['bodyOffsetMm']=candidate['components'][ref]['proposedBodyOffsetMm']
+        record.update(sizeMm=candidate['bodyEnvelopeMm'],leadPitchMm=pitch,
                       bendRadiusMm=candidate['proposedBendRadiusMm'])
         # Existing circumscribed lead-section interface: zero second axis models
-        # the stated round nominal diameter, not an asserted maximum tolerance.
-        record['leadSectionMaximumMm']=[candidate['leadDiameterNominalMm'],0]
+        # the stated round diameter; maximum when supplied, nominal otherwise.
+        record['leadSectionMaximumMm']=[diameter,0]
     with patch.object(assembly,'read',side_effect=lambda path:spec if path==assembly.REF/'assembly.json' else original_read(path)):
         data,scad=assembly.build()
-    report={'candidate':candidate,'adopted':False,'mechanicallyQualified':False,
+    report={'candidate':candidate,'geometry':geometry,'adopted':False,'mechanicallyQualified':False,
             'assemblyReview':data['review'],'sources':{'keyboard-controller/'+name:digest for name,digest in data['sources'].items()}, 'interfaces':[],
-            'scope':'Proposed replacement envelope at existing seats and pads. Nominal pitch and lead diameter only; no polarity mapping, tolerance-extreme fit, installed identity or electrical substitution qualification.'}
-    report['sources']['keyboard-controller/reference/capacitor-package-candidate.json']=assembly.digest(CANDIDATE)
+            'scope':'Proposed replacement envelope at existing seats and pads. One explicit lead-pitch case, stated diameter and maximum body envelope; no polarity mapping, continuous tolerance sweep, installed identity or electrical substitution qualification.'}
+    report['sources'][str(candidate_path.relative_to(ROOT.parent))]=assembly.digest(candidate_path)
     report['sources']['keyboard-controller/tools/capacitor_package_review.py']=assembly.digest(Path(__file__))
     report['sources']['keyboard-controller/tools/reference_enclosure.py']=assembly.digest(ROOT/'tools/reference_enclosure.py')
     args.out.mkdir(parents=True,exist_ok=True)

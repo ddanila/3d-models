@@ -1,0 +1,55 @@
+{
+  "id": "panasonic-ks-replacement-envelope",
+  "source": {
+    "url": "https://industrial.panasonic.com/content/data/CP/PDF/S_Alm_A_cap_catalog_e.pdf",
+    "sha256": "2f88995b7ab00304b4c346dd3df2c77dd7756097e20c93ef5bd4a42ff9ae0988",
+    "pdfPages": [
+      35,
+      36
+    ],
+    "revision": "2020-02-28"
+  },
+  "components": {
+    "C2": {
+      "microfarads": 10,
+      "volts": 50,
+      "partNumber": "ECEA1HKS100",
+      "proposedBodyOffsetMm": [
+        0,
+        0.6
+      ]
+    },
+    "C3.1": {
+      "microfarads": 47,
+      "volts": 10,
+      "partNumber": "ECEA1AKS470"
+    },
+    "C3.2": {
+      "microfarads": 47,
+      "volts": 10,
+      "partNumber": "ECEA1AKS470"
+    },
+    "C4": {
+      "microfarads": 10,
+      "volts": 50,
+      "partNumber": "ECEA1HKS100",
+      "proposedBodyOffsetMm": [
+        0,
+        0.6
+      ]
+    }
+  },
+  "bodyEnvelopeMm": [
+    6.8,
+    6.8,
+    6
+  ],
+  "bodyBasis": "D=6.3 +/-0.5 mm, L=5 +/-1 mm: maximum body envelope; no installed package claim.",
+  "leadPitchNominalMm": 2.5,
+  "leadPitchToleranceMm": 0.5,
+  "leadDiameterNominalMm": 0.45,
+  "leadDiameterMaximumMm": 0.5,
+  "proposedBendRadiusMm": 0.5,
+  "installedIdentityEstablished": false,
+  "scope": "Modern straight-lead replacement candidate. Higher voltage rating for C2/C4 does not establish electrical equivalence. No installed identity, polarity mapping or substitution approval. C2/C4 bodies shift 0.6 mm toward the board interior; pads and copper remain unchanged."
+}

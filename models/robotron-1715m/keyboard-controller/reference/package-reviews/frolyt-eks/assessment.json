@@ -38,6 +38,10 @@
     "installedIdentityEstablished": false,
     "scope": "Modern manufacturer replacement candidate only. No historical package claim, polarity assignment or electrical substitution approval. Wire diameter tolerance is not specified in the selected table."
   },
+  "geometry": {
+    "leadPitchMm": 2.5,
+    "leadDiameterMm": 0.6
+  },
   "adopted": false,
   "mechanicallyQualified": false,
   "assemblyReview": {
@@ -310,7 +314,7 @@
     "keyboard-controller/tools/reference_assembly.py": "4e91b9320808753064bf4ac1d9aa8b3d93399cc65ef385c6111ea689fcadb83d",
     "keyboard-controller/tools/shared_filter.py": "4f161698ca237d5e679f8c3790808573c4c90c991f37cf0a87b34d797eb680bf",
     "keyboard-controller/reference/capacitor-package-candidate.json": "5a356d51c9aa2fc62bc486b82b57ee14b0210e05451f85bf617ac7966ed60425",
-    "keyboard-controller/tools/capacitor_package_review.py": "71273a43e49283ed584360b01f49e895a4954f7964df84122896e86ac11f73b0",
+    "keyboard-controller/tools/capacitor_package_review.py": "e7310c2a9fbb5846304b20844b354b31bcdb2fcfc325fcb8f0563ddea32b02d6",
     "keyboard-controller/tools/reference_enclosure.py": "a9fcc1c67cac4c30ee876ff612e026bc8816e64b1fac0d02f8a10edc51a8412d",
     "components/kicad/meshes/DIP-40_W15.24mm-body.stl": "3188564537436169f9303e180ffb01baa899d54c8f743448998bad15db31f7b3",
     "components/kicad/meshes/DIP-20_W7.62mm-body.stl": "c71eb298a5948d48e8c2cd27929d85714d557be6a1e853f8c1c712a0319d345a",
@@ -327,15 +331,15 @@
     "components/teac-fd55fv.scad": "e62bc7c018f8f59d11f98016a9d7216c50c0c9534f143d818ee2be15e717f3cb",
     "components/kicad/meshes/DIP-24_W15.24mm-body.stl": "bc9672c67fb650b842d0caf7f115fbc1dd72d0566dff156f336f96a3aa006f2b",
     "pcb-components.scad": "352486104a830116f799c7c2535bcda6b055596404fb9af8696887ebc69d6125",
-    "interior.scad": "107afcf95fe9e446c1cc9047ce3b7c24dad6f4c524977d2954e034b118816b7e",
     "dimensions.scad": "5e01a4d423d3ecfb5b85f577c36a153d0d3079e724bdb928ef81ac69f553a254",
-    "specimen-details.scad": "9ad1199f222e06d84ffaaf7ed19a0ce4f0014f747db5a9df3a85bccf94c93240",
-    "keycap/geometry.scad": "e304f9e8e48ee16f4ee67a29906901f6f7cff93694c6ebf70bf6e38a891ad961",
-    "keyboard-layout.scad": "bf1700cba2e51c7ea9b400fab2c6dbd7072fd5d97cb15396cd0e17a260ef5fae",
-    "keyboard-controller/reference/assembly-generated/assembly.scad": "5813d04a9de14f88b4236c2182610c4d27d1d47bd98228f91b65c968104b6f19",
-    "monitor-cables.scad": "03334c5468c3158d78ac72a4747ee305b57ab46906be846b78e2a346cdc5275a",
+    "interior.scad": "107afcf95fe9e446c1cc9047ce3b7c24dad6f4c524977d2954e034b118816b7e",
+    "monitor-profile.scad": "4af9fd8e61640f9c2551fca49ba2b8ed004d4bc9bc2c2c87e4ffaf14ab5c62cb",
     "keyboard-controller/reference/review.scad": "b3019aab9355118b037c3e64f857fa2e0b262c5c28444e3c10617fcd4f5ebe99",
-    "monitor-profile.scad": "4af9fd8e61640f9c2551fca49ba2b8ed004d4bc9bc2c2c87e4ffaf14ab5c62cb"
+    "keyboard-layout.scad": "bf1700cba2e51c7ea9b400fab2c6dbd7072fd5d97cb15396cd0e17a260ef5fae",
+    "keycap/geometry.scad": "e304f9e8e48ee16f4ee67a29906901f6f7cff93694c6ebf70bf6e38a891ad961",
+    "specimen-details.scad": "9ad1199f222e06d84ffaaf7ed19a0ce4f0014f747db5a9df3a85bccf94c93240",
+    "keyboard-controller/reference/assembly-generated/assembly.scad": "5813d04a9de14f88b4236c2182610c4d27d1d47bd98228f91b65c968104b6f19",
+    "monitor-cables.scad": "03334c5468c3158d78ac72a4747ee305b57ab46906be846b78e2a346cdc5275a"
   },
   "interfaces": [
     {
@@ -364,7 +368,7 @@
       "intersects": true
     }
   ],
-  "scope": "Proposed replacement envelope at existing seats and pads. Nominal pitch and lead diameter only; no polarity mapping, tolerance-extreme fit, installed identity or electrical substitution qualification.",
+  "scope": "Proposed replacement envelope at existing seats and pads. One explicit lead-pitch case, stated diameter and maximum body envelope; no polarity mapping, continuous tolerance sweep, installed identity or electrical substitution qualification.",
   "candidateVolumeMm3": 12938.22988110559,
   "nominalEnclosureClear": false,
   "engine": "OpenSCAD version 2026.10.05"

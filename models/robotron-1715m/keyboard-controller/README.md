@@ -201,10 +201,13 @@ qualify analog behavior, exact CPU cycle timing or specimen firmware.
 
 ### Populated reference assembly
 
-Replacement-can hypotheses live in `reference/capacitor-package-candidate.json`;
-`tools/capacitor_package_review.py --out reference/package-reviews/frolyt-eks`
-(from this directory) checks their board and enclosure fit without adopting them.
-Use `--check` for retained source freshness; the receipt owns results and scope.
+Replacement-can hypotheses live in `reference/capacitor-package-candidate.json`
+and `reference/capacitor-package-low-profile.json`. Run
+`tools/capacitor_package_review.py --candidate <file> --out <directory>`
+(from this directory) to check board and enclosure fit without adopting them.
+`--pitch-offset` samples the published pitch tolerance; `--check` verifies retained
+source freshness. Receipts in `reference/package-reviews/` own results and scope.
+Package fit does not settle capacitor polarity or electrical substitution.
 
 Open `reference/review.scad` with `show_components=true`. `reference/assembly.json`
 defines proposed package choices; `tools/reference_assembly.py` derives numbered

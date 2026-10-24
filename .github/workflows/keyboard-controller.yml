@@ -18,6 +18,11 @@ jobs:
       - run: python3 models/robotron-1715m/keyboard-controller/tools/reference_assembly.py --check
       - run: python3 models/robotron-1715m/keyboard-controller/tools/reference_enclosure.py --check
       - run: python3 models/robotron-1715m/keyboard-controller/tools/capacitor_package_review.py --out models/robotron-1715m/keyboard-controller/reference/package-reviews/frolyt-eks --check
+      - name: Check low-profile capacitor candidate receipts
+        run: |
+          for pair in nominal:0 minimum-pitch:-.5 maximum-pitch:.5; do
+            python3 models/robotron-1715m/keyboard-controller/tools/capacitor_package_review.py --candidate models/robotron-1715m/keyboard-controller/reference/capacitor-package-low-profile.json --out "models/robotron-1715m/keyboard-controller/reference/package-reviews/panasonic-ks/${pair%%:*}" --pitch-offset="${pair#*:}" --check
+          done
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_lead_bends.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_reference_assembly.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/connection_review.py --check
