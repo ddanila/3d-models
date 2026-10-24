@@ -93,6 +93,19 @@ class AssemblyTests(unittest.TestCase):
         self.assertIn('cylinder(d=6.8,h=6',scad)
         self.assertTrue(data['review']['assemblyAllowances']['envelopesClear'])
 
+    def test_ceramics_preserve_maximum_coating_and_wire_envelopes(self):
+        data,_=assembly.build();parts=[c for c in data['components'] if c['package']=='radial-ceramic']
+        self.assertEqual({c['ref'] for c in parts},{'C1','C6',*(f'C5.{i}' for i in range(1,6))})
+        for c in parts:
+            self.assertEqual(c['sizeMm'],[3.81,2.54,4.66])
+            self.assertFalse(c['capacitorPackage']['polarized'])
+            self.assertEqual(c['capacitorPackage']['dielectric'],'C0G')
+            self.assertNotIn('positivePin',c['capacitorPackage'])
+            for lead in c['leads']:
+                self.assertEqual(lead['diameterMm'],.61)
+                self.assertEqual(lead['points'][-1][2],c['position'][2])
+        self.assertTrue(data['review']['assemblyAllowances']['envelopesClear'])
+
     def test_straight_body_entries_and_rounded_paths(self):
         data,_=assembly.build()
         for c in data['components']:

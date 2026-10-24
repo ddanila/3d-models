@@ -69,13 +69,9 @@
       "seatMm": 2.4
     },
     "C1": {
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
-      "sizeMm": [
-        5.2,
-        1.2,
-        5.2
-      ],
+      "package": "radial-ceramic",
+      "packageCandidate": "reference/capacitor-package-ceramic.json",
+      "basis": "Proposed KEMET C315 C0G replacement: maximum rectangular body/coating envelope and formed leads. Nonpolar; original disc identity and electrical substitution remain unqualified.",
       "seatMm": 2.6
     },
     "C2": {
@@ -103,63 +99,39 @@
       "seatMm": 2.6
     },
     "C5.1": {
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
-      "sizeMm": [
-        5.2,
-        1.2,
-        5.2
-      ],
+      "package": "radial-ceramic",
+      "packageCandidate": "reference/capacitor-package-ceramic.json",
+      "basis": "Proposed KEMET C315 C0G replacement: maximum rectangular body/coating envelope and formed leads. Nonpolar; original disc identity and electrical substitution remain unqualified.",
       "seatMm": 2.6
     },
     "C5.2": {
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
-      "sizeMm": [
-        5.2,
-        1.2,
-        5.2
-      ],
+      "package": "radial-ceramic",
+      "packageCandidate": "reference/capacitor-package-ceramic.json",
+      "basis": "Proposed KEMET C315 C0G replacement: maximum rectangular body/coating envelope and formed leads. Nonpolar; original disc identity and electrical substitution remain unqualified.",
       "seatMm": 2.6
     },
     "C5.3": {
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
-      "sizeMm": [
-        5.2,
-        1.2,
-        5.2
-      ],
+      "package": "radial-ceramic",
+      "packageCandidate": "reference/capacitor-package-ceramic.json",
+      "basis": "Proposed KEMET C315 C0G replacement: maximum rectangular body/coating envelope and formed leads. Nonpolar; original disc identity and electrical substitution remain unqualified.",
       "seatMm": 2.6
     },
     "C5.4": {
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
-      "sizeMm": [
-        5.2,
-        1.2,
-        5.2
-      ],
+      "package": "radial-ceramic",
+      "packageCandidate": "reference/capacitor-package-ceramic.json",
+      "basis": "Proposed KEMET C315 C0G replacement: maximum rectangular body/coating envelope and formed leads. Nonpolar; original disc identity and electrical substitution remain unqualified.",
       "seatMm": 5.5
     },
     "C5.5": {
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
-      "sizeMm": [
-        5.2,
-        1.2,
-        5.2
-      ],
+      "package": "radial-ceramic",
+      "packageCandidate": "reference/capacitor-package-ceramic.json",
+      "basis": "Proposed KEMET C315 C0G replacement: maximum rectangular body/coating envelope and formed leads. Nonpolar; original disc identity and electrical substitution remain unqualified.",
       "seatMm": 2.6
     },
     "C6": {
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
-      "sizeMm": [
-        5.2,
-        1.2,
-        5.2
-      ],
+      "package": "radial-ceramic",
+      "packageCandidate": "reference/capacitor-package-ceramic.json",
+      "basis": "Proposed KEMET C315 C0G replacement: maximum rectangular body/coating envelope and formed leads. Nonpolar; original disc identity and electrical substitution remain unqualified.",
       "seatMm": 2.6
     },
     "L1.1": {

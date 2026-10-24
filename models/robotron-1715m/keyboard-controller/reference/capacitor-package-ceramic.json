@@ -1,0 +1,79 @@
+{
+  "id": "kemet-c315-c0g-replacement-envelope",
+  "package": "radial-ceramic",
+  "source": {
+    "url": "https://content.kemet.com/datasheets/KEM_C1049_GOLDMAX_C0G.pdf",
+    "sha256": "35ed0e9f92338584d053b1f47c99d728ee5ab10e4b7aaa17ddb6f6e2ffcb0b5c",
+    "pdfPages": [
+      3,
+      6,
+      1,
+      2
+    ],
+    "revision": "2025-08-05"
+  },
+  "components": {
+    "C1": {
+      "referenceValue": "220p",
+      "volts": 50,
+      "partNumber": "C315C221J5G5TA",
+      "dielectric": "C0G",
+      "polarized": false
+    },
+    "C6": {
+      "referenceValue": "470p",
+      "volts": 50,
+      "partNumber": "C315C471J5G5TA",
+      "dielectric": "C0G",
+      "polarized": false
+    },
+    "C5.1": {
+      "referenceValue": "47n",
+      "volts": 25,
+      "partNumber": "C315C473J3G5TA",
+      "dielectric": "C0G",
+      "polarized": false
+    },
+    "C5.2": {
+      "referenceValue": "47n",
+      "volts": 25,
+      "partNumber": "C315C473J3G5TA",
+      "dielectric": "C0G",
+      "polarized": false
+    },
+    "C5.3": {
+      "referenceValue": "47n",
+      "volts": 25,
+      "partNumber": "C315C473J3G5TA",
+      "dielectric": "C0G",
+      "polarized": false
+    },
+    "C5.4": {
+      "referenceValue": "47n",
+      "volts": 25,
+      "partNumber": "C315C473J3G5TA",
+      "dielectric": "C0G",
+      "polarized": false
+    },
+    "C5.5": {
+      "referenceValue": "47n",
+      "volts": 25,
+      "partNumber": "C315C473J3G5TA",
+      "dielectric": "C0G",
+      "polarized": false
+    }
+  },
+  "bodyEnvelopeMm": [
+    3.81,
+    2.54,
+    4.66
+  ],
+  "bodyBasis": "Conservative rectangular envelope: published maximum length 3.81 mm, thickness 2.54 mm, body height 3.14 mm plus up to 1.52 mm coating extension below the seating plane. Entire extension uses the body width/thickness as a bound; not an exact coating shape.",
+  "leadPitchNominalMm": 2.54,
+  "leadPitchToleranceMm": 0.78,
+  "leadDiameterNominalMm": 0.51,
+  "leadDiameterMaximumMm": 0.61,
+  "proposedBendRadiusMm": 0.5,
+  "installedIdentityEstablished": false,
+  "scope": "Proposed modern C0G replacement package, nonpolar. No original disc-package identification or full electrical-substitution qualification. Reference capacitance values remain unchanged."
+}

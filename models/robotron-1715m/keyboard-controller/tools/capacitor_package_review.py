@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check a published replacement can envelope without changing historical geometry."""
+"""Check a published capacitor envelope without changing historical geometry."""
 import argparse
 import json
 import math
@@ -54,6 +54,7 @@ def main():
     for ref in candidate['components']:
         record=spec['components'][ref]
         record.pop('packageCandidate',None)
+        record['package']=candidate.get('package',record['package'])
         if 'proposedBodyOffsetMm' in candidate['components'][ref]:
             record['bodyOffsetMm']=candidate['components'][ref]['proposedBodyOffsetMm']
         record.update(sizeMm=candidate['bodyEnvelopeMm'],leadPitchMm=pitch,

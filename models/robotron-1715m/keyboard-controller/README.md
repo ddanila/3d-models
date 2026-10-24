@@ -201,8 +201,7 @@ qualify analog behavior, exact CPU cycle timing or specimen firmware.
 
 ### Populated reference assembly
 
-Replacement-can hypotheses live in `reference/capacitor-package-candidate.json`
-and `reference/capacitor-package-low-profile.json`. Run
+Capacitor package hypotheses live in `reference/capacitor-package-*.json`. Run
 `tools/capacitor_package_review.py --candidate <file> --out <directory>`
 (from this directory) to check board and enclosure fit without adopting them.
 `--pitch-offset` samples the published pitch tolerance; `--check` verifies retained

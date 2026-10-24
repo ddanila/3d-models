@@ -50,21 +50,29 @@ def build():
     for ref,component in spec['components'].items():
         if 'packageCandidate' not in component:continue
         name=component['packageCandidate']
-        if component['package']!='radial-capacitor' or name!='reference/capacitor-package-low-profile.json':raise ValueError('Unsupported capacitor package source')
+        allowed={'reference/capacitor-package-low-profile.json':'radial-capacitor','reference/capacitor-package-ceramic.json':'radial-ceramic'}
+        if allowed.get(name)!=component['package']:raise ValueError('Unsupported capacitor package source')
         candidate=read(ROOT/name);part=candidate['components'][ref]
-        polarity_name='reference/capacitor-polarity.json';polarity=read(ROOT/polarity_name)
-        terminal=polarity['components'][ref]
         connectivity=read(ROOT/'generated/connectivity.json')['components'][ref]
-        if terminal['pins']!=connectivity['pins'] or {terminal['positivePin'],terminal['negativePin']}!=set(connectivity['pins']):raise ValueError('Capacitor polarity pin mapping changed')
-        if connectivity['type']!=str(part['microfarads'])+'u':raise ValueError('Capacitor reference value changed')
-        if ref.startswith('C3.') and (terminal['pins'][terminal['positivePin']]!='/+5V' or terminal['pins'][terminal['negativePin']]!='/GND'):raise ValueError('Capacitor supply polarity changed')
+        value=part['referenceValue'] if 'referenceValue' in part else str(part['microfarads'])+'u'
+        if connectivity['type']!=value:raise ValueError('Capacitor reference value changed')
         component.update(sizeMm=candidate['bodyEnvelopeMm'],leadPitchMm=candidate['leadPitchNominalMm'],
             leadSectionMaximumMm=[candidate['leadDiameterMaximumMm'],0],bendRadiusMm=candidate['proposedBendRadiusMm'],bodyOffsetMm=part.get('proposedBodyOffsetMm',[0,0]))
-        capacitor_packages[ref]={'partNumber':part['partNumber'],'ratedVoltageVolts':part['volts'],
-            'source':candidate['source'],'bodyBasis':candidate['bodyBasis'],
-            'positivePin':terminal['positivePin'],'negativePin':terminal['negativePin'],'polarityBasis':terminal['basis'],
-            'polarityScope':polarity['scope'],'polaritySource':polarity['resetDiagnostic'] if terminal['basis']=='isolated-reset-diagnostic' else None}
-        sources.extend([name,polarity_name])
+        package={'partNumber':part['partNumber'],'ratedVoltageVolts':part['volts'],
+            'source':candidate['source'],'bodyBasis':candidate['bodyBasis'],'polarized':part.get('polarized',True)}
+        if package['polarized']:
+            polarity_name='reference/capacitor-polarity.json';polarity=read(ROOT/polarity_name)
+            terminal=polarity['components'][ref]
+            if terminal['pins']!=connectivity['pins'] or {terminal['positivePin'],terminal['negativePin']}!=set(connectivity['pins']):raise ValueError('Capacitor polarity pin mapping changed')
+            if ref.startswith('C3.') and (terminal['pins'][terminal['positivePin']]!='/+5V' or terminal['pins'][terminal['negativePin']]!='/GND'):raise ValueError('Capacitor supply polarity changed')
+            package.update(positivePin=terminal['positivePin'],negativePin=terminal['negativePin'],polarityBasis=terminal['basis'],
+                polarityScope=polarity['scope'],polaritySource=polarity['resetDiagnostic'] if terminal['basis']=='isolated-reset-diagnostic' else None)
+            sources.append(polarity_name)
+        else:
+            if part['dielectric']!='C0G' or set(connectivity['pins'])!={'1','2'}:raise ValueError('Unsupported ceramic dielectric or terminals')
+            package.update(dielectric=part['dielectric'],polarityScope='Nonpolar proposed replacement. Original package identity and electrical substitution remain unqualified.')
+        capacitor_packages[ref]=package
+        sources.append(name)
     result=[]
     for c in layout['components']:
         ref=c['ref']
@@ -107,9 +115,9 @@ def build():
             elif kind in ('axial','filter'):
                 terminals={p['pin']:[(-1 if i==0 else 1)*size[0]/2,0,z+size[2]/2] for i,p in enumerate(pads)}
             elif kind=='bridge':terminals={p['pin']:[0,0,z] for p in pads}
-            elif kind=='radial-capacitor':
+            elif kind in ('radial-capacitor','radial-ceramic'):
                 pitch=s['leadPitchMm']
-                if n!=2 or not 0<pitch<size[0] or size[0]!=size[1]:raise ValueError('Invalid radial capacitor adapter '+ref)
+                if n!=2 or not 0<pitch<size[0] or (kind=='radial-capacitor' and size[0]!=size[1]):raise ValueError('Invalid radial capacitor adapter '+ref)
                 terminals={p['pin']:[(-1 if i==0 else 1)*pitch/2,0,z] for i,p in enumerate(pads)}
             elif kind=='capacitor':terminals={p['pin']:[(-1 if i==0 else 1)*1.5,0,z+1] for i,p in enumerate(pads)}
             else:terminals={p['pin']:[*rotate([p['position'][i]-origin[i] for i in range(2)],-angle),z] for p in pads}
@@ -188,7 +196,7 @@ def build():
         w,d,h=core['outerSizeMm'];iw,ih=core['windowSizeMm']
         scad.append(f'color([.18,.19,.18]) translate({core["positionMm"]}) difference() {{translate({[-w/2,-d/2,0]}) cube({[w,d,h]});translate({[-iw/2,-ih/2,-.01]}) cube({[iw,ih,h+.02]});}}')
     for c in result:
-        p=c['position'];a=c['rotation'];size=c['sizeMm'];kind=c['package'];color=[.15,.15,.17] if kind in ('dip','transistor','radial-capacitor') else [.65,.5,.25] if kind in ('capacitor','network') else [.65,.7,.73]
+        p=c['position'];a=c['rotation'];size=c['sizeMm'];kind=c['package'];color=[.15,.15,.17] if kind in ('dip','transistor','radial-capacitor') else [.65,.5,.25] if kind in ('capacitor','radial-ceramic','network') else [.65,.7,.73]
         if kind not in ('bridge','filter'):
             if c['mesh']:shape=f'rotate([0,0,-90]) import("../../../{c["mesh"]}");'
             elif kind=='axial':shape=f'translate([0,0,{size[2]/2}]) rotate([0,90,0]) cylinder(d={size[1]},h={size[0]},center=true,$fn=24);'
