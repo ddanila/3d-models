@@ -166,7 +166,9 @@ def build(root=ROOT):
             row, index = next((row, pins.index(contact)) for row, pins in terminals['resolvedRows'].items() if contact in pins)
             for sid, point in [(x1['photoSource'], x1['leadEndRowsPixels'][row][index]),
                                (x1['underside']['photoSource'], x1['underside']['jointRowsPixels'][row][index])]:
-                figure(sid)['markers'].append({'point': point, 'label': 'X1:' + contact + ' — unclassified; top marker is a lead observation, not a hole centre'})
+                classification = 'owner-observed present, soldered and unrouted' if case.get('ownerObservation') else 'unclassified'
+                location = 'raised lead observation, not a hole centre' if sid == x1['photoSource'] else 'registered solder-joint observation; dimensions estimated'
+                figure(sid)['markers'].append({'point': point, 'label': 'X1:' + contact + ' — ' + classification + '; ' + location})
         if case.get('crossSideStop'):
             stop = case['crossSideStop']
             if not any(stop['bottomPixel'] == marker['point'] for marker in figure('photo-bottom')['markers']):

@@ -146,8 +146,9 @@ not identify which of those is wrong.
 locally registered underside joints. `generated/connector-terminals.json` retains
 row-order alternatives constrained by resistor and COL11 attachments; the two
 row directions are tested independently. Assembly leads consume native positions
-for mapped contacts. A8 remains unclassified visual geometry because it is absent
-from the reference schematic. Raised top-side bends are not hole centres; housing
+for mapped contacts. Owner inspection identifies A8 as present, soldered and
+unrouted; its isolated native pad has no net and remains absent from the reference
+schematic. Raised top-side bends are not hole centres; housing
 dimensions, lead heights and hole diameters remain estimates.
 
 ## Native routing audit
