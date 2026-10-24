@@ -1,0 +1,39 @@
+{
+  "id": "frolyt-eks-replacement-envelope",
+  "source": {
+    "url": "https://www.frolyt.de/wp-content/uploads/EKS.pdf",
+    "sha256": "581ded7f735095911993c55ddc5e63fba6b7578e9a8b9b0a7b9d6581239ef20f",
+    "pdfPage": 2,
+    "revision": "2018-05"
+  },
+  "components": {
+    "C2": {
+      "microfarads": 10,
+      "volts": 40
+    },
+    "C3.1": {
+      "microfarads": 47,
+      "volts": 10
+    },
+    "C3.2": {
+      "microfarads": 47,
+      "volts": 10
+    },
+    "C4": {
+      "microfarads": 10,
+      "volts": 40
+    }
+  },
+  "bodyEnvelopeMm": [
+    5.6,
+    5.6,
+    12
+  ],
+  "bodyBasis": "D=5.5 +0.1 mm; L=12 mm with -0.5 mm for this diameter. Maximum body envelope, not installed dimensions.",
+  "leadPitchNominalMm": 2.5,
+  "leadPitchToleranceMm": 0.5,
+  "leadDiameterNominalMm": 0.6,
+  "proposedBendRadiusMm": 0.5,
+  "installedIdentityEstablished": false,
+  "scope": "Modern manufacturer replacement candidate only. No historical package claim, polarity assignment or electrical substitution approval. Wire diameter tolerance is not specified in the selected table."
+}

@@ -201,6 +201,11 @@ qualify analog behavior, exact CPU cycle timing or specimen firmware.
 
 ### Populated reference assembly
 
+Replacement-can hypotheses live in `reference/capacitor-package-candidate.json`;
+`tools/capacitor_package_review.py --out reference/package-reviews/frolyt-eks`
+(from this directory) checks their board and enclosure fit without adopting them.
+Use `--check` for retained source freshness; the receipt owns results and scope.
+
 Open `reference/review.scad` with `show_components=true`. `reference/assembly.json`
 defines proposed package choices; `tools/reference_assembly.py` derives numbered
 lead paths and body poses from the routed pads, reusing the pinned DIP bodies and
