@@ -58,7 +58,7 @@
     "leadPitchMm": 2.0,
     "leadDiameterMm": 0.5
   },
-  "adopted": false,
+  "adoptionAuthorizedByThisReview": false,
   "mechanicallyQualified": false,
   "assemblyReview": {
     "sharedCoreIntersections": [],
@@ -321,16 +321,16 @@
     "keyboard-controller/../components/kicad/meshes/DIP-40_W15.24mm-body.stl": "3188564537436169f9303e180ffb01baa899d54c8f743448998bad15db31f7b3",
     "keyboard-controller/evidence.json": "45ca333c85133b8f6fd2a9be22d33ae018b856f85f10374ef5be1a6e1b1e9072",
     "keyboard-controller/generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
-    "keyboard-controller/reference/assembly.json": "00ba707e226022b7594afc8b1b7675be41e975576be54d4324464fc1f8ebcd90",
+    "keyboard-controller/reference/assembly.json": "b2a07405ea072030dd0714d213ed4a746688afa1344598a903d18dc6f8499363",
     "keyboard-controller/reference/generated/layout.json": "11cb571bd1ff32af1da4d9d3e1952a4d5ec2c5e62f99067981f52dd47113eaca",
     "keyboard-controller/reference/signal-paths.json": "bcc196b9fe151e87a292a0b8572d20b1b763d526907005e595428f03f958392b",
     "keyboard-controller/tools/assembly_allowances.py": "879c3fe4c25034b72a81c8b4708fb5246f3bd0bbde82c7bf4c4345d89733ac3b",
     "keyboard-controller/tools/lead_bends.py": "bf8ebb9f2d1450e0911b7cff8f4af0a6c35622d3320d42d439ede3c4ad30b9b1",
     "keyboard-controller/tools/lead_clearance.py": "bee24ac3694ca5a792ac71b3d5fa0aa782f2a0a50d1c612e8013c9dec5309705",
-    "keyboard-controller/tools/reference_assembly.py": "4e91b9320808753064bf4ac1d9aa8b3d93399cc65ef385c6111ea689fcadb83d",
+    "keyboard-controller/tools/reference_assembly.py": "b1051bf59b503e5894a7ac25c11460e1fe4b712f29f5ff681e3ee542c57b86a3",
     "keyboard-controller/tools/shared_filter.py": "4f161698ca237d5e679f8c3790808573c4c90c991f37cf0a87b34d797eb680bf",
     "keyboard-controller/reference/capacitor-package-low-profile.json": "1323b2a40db2bc0dd6fb771ae9a7b4b7f08879efa8b8ed1d47b4ae0e5f1719a4",
-    "keyboard-controller/tools/capacitor_package_review.py": "e7310c2a9fbb5846304b20844b354b31bcdb2fcfc325fcb8f0563ddea32b02d6",
+    "keyboard-controller/tools/capacitor_package_review.py": "52c710519a7bd6447ee1aa5c1fc1454081c81863a43e426040218358669bc553",
     "keyboard-controller/tools/reference_enclosure.py": "a9fcc1c67cac4c30ee876ff612e026bc8816e64b1fac0d02f8a10edc51a8412d",
     "components/kicad/meshes/DIP-40_W15.24mm-body.stl": "3188564537436169f9303e180ffb01baa899d54c8f743448998bad15db31f7b3",
     "components/kicad/meshes/DIP-20_W7.62mm-body.stl": "c71eb298a5948d48e8c2cd27929d85714d557be6a1e853f8c1c712a0319d345a",
@@ -349,13 +349,13 @@
     "pcb-components.scad": "352486104a830116f799c7c2535bcda6b055596404fb9af8696887ebc69d6125",
     "dimensions.scad": "5e01a4d423d3ecfb5b85f577c36a153d0d3079e724bdb928ef81ac69f553a254",
     "interior.scad": "107afcf95fe9e446c1cc9047ce3b7c24dad6f4c524977d2954e034b118816b7e",
-    "monitor-profile.scad": "4af9fd8e61640f9c2551fca49ba2b8ed004d4bc9bc2c2c87e4ffaf14ab5c62cb",
     "keyboard-controller/reference/review.scad": "b3019aab9355118b037c3e64f857fa2e0b262c5c28444e3c10617fcd4f5ebe99",
     "keyboard-layout.scad": "bf1700cba2e51c7ea9b400fab2c6dbd7072fd5d97cb15396cd0e17a260ef5fae",
     "keycap/geometry.scad": "e304f9e8e48ee16f4ee67a29906901f6f7cff93694c6ebf70bf6e38a891ad961",
     "specimen-details.scad": "9ad1199f222e06d84ffaaf7ed19a0ce4f0014f747db5a9df3a85bccf94c93240",
-    "keyboard-controller/reference/assembly-generated/assembly.scad": "5813d04a9de14f88b4236c2182610c4d27d1d47bd98228f91b65c968104b6f19",
-    "monitor-cables.scad": "03334c5468c3158d78ac72a4747ee305b57ab46906be846b78e2a346cdc5275a"
+    "keyboard-controller/reference/assembly-generated/assembly.scad": "bd89b68e9de43c817c395b9b48faa92cbc383f58307a885c0f8f09368b02b871",
+    "monitor-cables.scad": "03334c5468c3158d78ac72a4747ee305b57ab46906be846b78e2a346cdc5275a",
+    "monitor-profile.scad": "4af9fd8e61640f9c2551fca49ba2b8ed004d4bc9bc2c2c87e4ffaf14ab5c62cb"
   },
   "interfaces": [
     {

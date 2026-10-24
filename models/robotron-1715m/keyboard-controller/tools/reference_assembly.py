@@ -46,6 +46,25 @@ def build():
     expected={c['ref'] for c in layout['components'] if not c['ref'].startswith('H')}
     if set(spec['components'])!=expected:raise ValueError('Assembly population differs from PCB')
     sources=['reference/assembly.json','reference/generated/layout.json','generated/connectivity.json','evidence.json','tools/reference_assembly.py','tools/lead_clearance.py','tools/lead_bends.py','tools/assembly_allowances.py']
+    capacitor_packages={}
+    for ref,component in spec['components'].items():
+        if 'packageCandidate' not in component:continue
+        name=component['packageCandidate']
+        if component['package']!='radial-capacitor' or name!='reference/capacitor-package-low-profile.json':raise ValueError('Unsupported capacitor package source')
+        candidate=read(ROOT/name);part=candidate['components'][ref]
+        polarity_name='reference/capacitor-polarity.json';polarity=read(ROOT/polarity_name)
+        terminal=polarity['components'][ref]
+        connectivity=read(ROOT/'generated/connectivity.json')['components'][ref]
+        if terminal['pins']!=connectivity['pins'] or {terminal['positivePin'],terminal['negativePin']}!=set(connectivity['pins']):raise ValueError('Capacitor polarity pin mapping changed')
+        if connectivity['type']!=str(part['microfarads'])+'u':raise ValueError('Capacitor reference value changed')
+        if ref.startswith('C3.') and (terminal['pins'][terminal['positivePin']]!='/+5V' or terminal['pins'][terminal['negativePin']]!='/GND'):raise ValueError('Capacitor supply polarity changed')
+        component.update(sizeMm=candidate['bodyEnvelopeMm'],leadPitchMm=candidate['leadPitchNominalMm'],
+            leadSectionMaximumMm=[candidate['leadDiameterMaximumMm'],0],bendRadiusMm=candidate['proposedBendRadiusMm'],bodyOffsetMm=part.get('proposedBodyOffsetMm',[0,0]))
+        capacitor_packages[ref]={'partNumber':part['partNumber'],'ratedVoltageVolts':part['volts'],
+            'source':candidate['source'],'bodyBasis':candidate['bodyBasis'],
+            'positivePin':terminal['positivePin'],'negativePin':terminal['negativePin'],'polarityBasis':terminal['basis'],
+            'polarityScope':polarity['scope'],'polaritySource':polarity['resetDiagnostic'] if terminal['basis']=='isolated-reset-diagnostic' else None}
+        sources.extend([name,polarity_name])
     result=[]
     for c in layout['components']:
         ref=c['ref']
@@ -107,6 +126,7 @@ def build():
         result.append({'ref':ref,'type':c['type'],'package':kind,'basis':s['basis'],'position':[ *origin,z],'rotation':round(angle,9),'sizeMm':size,'mesh':mesh,'profile':profile,'boundsMm':bodybounds,'leads':leads,'footprint':{'id':'RobotronReference_'+ref,'terminals':{p['pin']:{'offsetMm':[round(v,9)+0.0 for v in rotate([p['position'][i]-origin[i] for i in range(2)],-angle)],'net':p['net']} for p in pads}}})
     for c in result:
         s=spec['components'][c['ref']]
+        if c['ref'] in capacitor_packages:c['capacitorPackage']=capacitor_packages[c['ref']]
         if c['package']=='network' and 'packageReference' in s:
             c['packageReference']=s['packageReference'];c['externallyOpenPackagePins']=s.get('externallyOpenPackagePins',[])
     shared_bodies=[shared_filter_build(spec['sharedFilter'],result)]

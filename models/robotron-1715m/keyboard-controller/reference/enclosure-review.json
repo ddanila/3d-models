@@ -204,7 +204,7 @@
       0,
       1
     ],
-    "intersectionMm3": 58.310413,
+    "intersectionMm3": 57.805158,
     "intersects": true
   },
   "mountingControl": {
@@ -226,7 +226,7 @@
       0,
       1
     ],
-    "intersectionMm3": 73.776466,
+    "intersectionMm3": 70.42749,
     "intersects": true
   },
   "nominalInterfacesClear": true,
@@ -245,7 +245,7 @@
     "key-switch/geometry.scad": "3c5548896f0d9ef90e45d89c51d15f91974dc473456da760aeb61104c75fddce",
     "keyboard-artwork.scad": "4b185f623c7b71674bfc823a3cb0b8ceb38ed8447e55e286977e01de02c18d6c",
     "keyboard-controller/generated/controller.scad": "ce0e0628de5dbebc9fa101526676728f1016523efdd84d1a0c8b19cde8675a25",
-    "keyboard-controller/reference/assembly-generated/assembly.scad": "5813d04a9de14f88b4236c2182610c4d27d1d47bd98228f91b65c968104b6f19",
+    "keyboard-controller/reference/assembly-generated/assembly.scad": "bd89b68e9de43c817c395b9b48faa92cbc383f58307a885c0f8f09368b02b871",
     "keyboard-controller/reference/generated/controller.scad": "70868fbfe22c5bb97cab384c4272fede2222396cb70c90b262d259e69bf092c7",
     "keyboard-controller/reference/review.scad": "b3019aab9355118b037c3e64f857fa2e0b262c5c28444e3c10617fcd4f5ebe99",
     "keyboard-controller/tools/reference_enclosure.py": "a9fcc1c67cac4c30ee876ff612e026bc8816e64b1fac0d02f8a10edc51a8412d",

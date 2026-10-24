@@ -1,0 +1,45 @@
+{
+  "scope": "Proposed reference polarity only; installed orientation and real capacitor behavior remain unqualified.",
+  "resetDiagnostic": {
+    "url": "https://github.com/ddanila/dac-emulation/blob/2aed561/verification/robotron-keyboard/analog/reports/reset-capacitor-polarity/proposed-polarity.json",
+    "sha256": "53b3572f7baecc7f1912b8809340f659d3402c0561bc17eb2d7860a8d1704caf"
+  },
+  "components": {
+    "C2": {
+      "positivePin": "1",
+      "negativePin": "2",
+      "pins": {
+        "1": "/RESET_BIAS_LOW",
+        "2": "/RESET_OUT"
+      },
+      "basis": "isolated-reset-diagnostic"
+    },
+    "C3.1": {
+      "positivePin": "1",
+      "negativePin": "2",
+      "pins": {
+        "1": "/+5V",
+        "2": "/GND"
+      },
+      "basis": "reference-5V-supply-and-ground"
+    },
+    "C3.2": {
+      "positivePin": "1",
+      "negativePin": "2",
+      "pins": {
+        "1": "/+5V",
+        "2": "/GND"
+      },
+      "basis": "reference-5V-supply-and-ground"
+    },
+    "C4": {
+      "positivePin": "1",
+      "negativePin": "2",
+      "pins": {
+        "1": "/RESET_RC",
+        "2": "/GND"
+      },
+      "basis": "isolated-reset-diagnostic"
+    }
+  }
+}

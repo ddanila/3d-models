@@ -80,47 +80,27 @@
     },
     "C2": {
       "package": "radial-capacitor",
-      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
-      "sizeMm": [
-        5,
-        5,
-        9
-      ],
-      "seatMm": 2.6,
-      "leadPitchMm": 3
+      "packageCandidate": "reference/capacitor-package-low-profile.json",
+      "basis": "Proposed Panasonic KS replacement envelope and formed leads; polarity follows reference supply nets or isolated reset diagnostics. No installed package/orientation or electrical substitution qualification.",
+      "seatMm": 2.6
     },
     "C3.1": {
       "package": "radial-capacitor",
-      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
-      "sizeMm": [
-        5,
-        5,
-        9
-      ],
-      "seatMm": 2.6,
-      "leadPitchMm": 3
+      "packageCandidate": "reference/capacitor-package-low-profile.json",
+      "basis": "Proposed Panasonic KS replacement envelope and formed leads; polarity follows reference supply nets or isolated reset diagnostics. No installed package/orientation or electrical substitution qualification.",
+      "seatMm": 2.6
     },
     "C3.2": {
       "package": "radial-capacitor",
-      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
-      "sizeMm": [
-        5,
-        5,
-        9
-      ],
-      "seatMm": 2.6,
-      "leadPitchMm": 3
+      "packageCandidate": "reference/capacitor-package-low-profile.json",
+      "basis": "Proposed Panasonic KS replacement envelope and formed leads; polarity follows reference supply nets or isolated reset diagnostics. No installed package/orientation or electrical substitution qualification.",
+      "seatMm": 2.6
     },
     "C4": {
       "package": "radial-capacitor",
-      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
-      "sizeMm": [
-        5,
-        5,
-        9
-      ],
-      "seatMm": 2.6,
-      "leadPitchMm": 3
+      "packageCandidate": "reference/capacitor-package-low-profile.json",
+      "basis": "Proposed Panasonic KS replacement envelope and formed leads; polarity follows reference supply nets or isolated reset diagnostics. No installed package/orientation or electrical substitution qualification.",
+      "seatMm": 2.6
     },
     "C5.1": {
       "package": "capacitor",

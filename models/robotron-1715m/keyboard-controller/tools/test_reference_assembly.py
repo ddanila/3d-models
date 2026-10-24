@@ -84,10 +84,13 @@ class AssemblyTests(unittest.TestCase):
         data,scad=assembly.build();cans=[c for c in data['components'] if c['package']=='radial-capacitor']
         self.assertEqual({c['ref'] for c in cans},{'C2','C3.1','C3.2','C4'})
         for c in cans:
-            self.assertEqual(c['sizeMm'],[5,5,9])
+            self.assertEqual(c['sizeMm'],[6.8,6.8,6])
+            self.assertEqual(c['capacitorPackage']['positivePin'],'1')
+            self.assertEqual(c['capacitorPackage']['negativePin'],'2')
+            self.assertTrue(all(l['diameterMm']==.5 for l in c['leads']))
             self.assertEqual(len(c['leads']),2)
             for lead in c['leads']:self.assertEqual(lead['points'][-1][2],c['position'][2])
-        self.assertIn('cylinder(d=5,h=9',scad)
+        self.assertIn('cylinder(d=6.8,h=6',scad)
         self.assertTrue(data['review']['assemblyAllowances']['envelopesClear'])
 
     def test_straight_body_entries_and_rounded_paths(self):
@@ -132,6 +135,25 @@ class AssemblyTests(unittest.TestCase):
                 data['packageReferences'][0]['terminalOrderInDrawing']=['B','E','X']
             return data
         with patch.object(assembly,'read',side_effect=altered), self.assertRaisesRegex(ValueError,'terminal mismatch'):
+            assembly.build()
+
+    def test_reversed_supply_capacitor_polarity_rejected(self):
+        original=assembly.read
+        def altered(path):
+            data=original(path)
+            if path.name=='capacitor-polarity.json':
+                c=data['components']['C3.1'];c['positivePin'],c['negativePin']='2','1'
+            return data
+        with patch.object(assembly,'read',side_effect=altered),self.assertRaisesRegex(ValueError,'supply polarity'):
+            assembly.build()
+
+    def test_package_value_must_match_reference(self):
+        original=assembly.read
+        def altered(path):
+            data=original(path)
+            if path.name=='capacitor-package-low-profile.json':data['components']['C4']['microfarads']=100
+            return data
+        with patch.object(assembly,'read',side_effect=altered),self.assertRaisesRegex(ValueError,'reference value'):
             assembly.build()
 
 class LeadClearanceTests(unittest.TestCase):

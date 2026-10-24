@@ -655,38 +655,46 @@ color([.75,.75,.78]) hull() {translate([109.996534326, -20.0, 2.122602219]) sphe
 color([.75,.75,.78]) hull() {translate([112.54, -20.0, -0.5]) sphere(d=0.3,$fn=8); translate([112.54, -20.0, 2.077133623]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([112.54, -20.0, 2.077133623]) sphere(d=0.3,$fn=8); translate([112.543465674, -20.0, 2.122602219]) sphere(d=0.3,$fn=8);}
 color([.75,.75,.78]) hull() {translate([112.543465674, -20.0, 2.122602219]) sphere(d=0.3,$fn=8); translate([112.77, -20.0, 3.6]) sphere(d=0.3,$fn=8);}
-// C2: Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.
-color([0.15, 0.15, 0.17]) translate([118.27000000000001, -20.0, 2.6]) rotate([0,0,0.0]) {cylinder(d=5,h=9,$fn=32); color([.7,.7,.72]) translate([0,0,8.85]) cylinder(d=4.5,h=.15,$fn=32);}
-color([.75,.75,.78]) hull() {translate([117.0, -20.0, -0.5]) sphere(d=0.3,$fn=8); translate([117.0, -20.0, 2.034308457]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([117.0, -20.0, 2.034308457]) sphere(d=0.3,$fn=8); translate([116.972547136, -20.0, 2.15968014]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([116.972547136, -20.0, 2.15968014]) sphere(d=0.3,$fn=8); translate([116.77, -20.0, 2.6]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([119.54, -20.0, -0.5]) sphere(d=0.3,$fn=8); translate([119.54, -20.0, 2.034308457]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([119.54, -20.0, 2.034308457]) sphere(d=0.3,$fn=8); translate([119.567452864, -20.0, 2.15968014]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([119.567452864, -20.0, 2.15968014]) sphere(d=0.3,$fn=8); translate([119.77, -20.0, 2.6]) sphere(d=0.3,$fn=8);}
-// C3.1: Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.
-color([0.15, 0.15, 0.17]) translate([-127.72999999999999, 5.0, 2.6]) rotate([0,0,0.0]) {cylinder(d=5,h=9,$fn=32); color([.7,.7,.72]) translate([0,0,8.85]) cylinder(d=4.5,h=.15,$fn=32);}
-color([.75,.75,.78]) hull() {translate([-129.0, 5.0, -0.5]) sphere(d=0.3,$fn=8); translate([-129.0, 5.0, 2.034308457]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-129.0, 5.0, 2.034308457]) sphere(d=0.3,$fn=8); translate([-129.027452864, 5.0, 2.15968014]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-129.027452864, 5.0, 2.15968014]) sphere(d=0.3,$fn=8); translate([-129.23, 5.0, 2.6]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-126.46, 5.0, -0.5]) sphere(d=0.3,$fn=8); translate([-126.46, 5.0, 2.034308457]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-126.46, 5.0, 2.034308457]) sphere(d=0.3,$fn=8); translate([-126.432547136, 5.0, 2.15968014]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-126.432547136, 5.0, 2.15968014]) sphere(d=0.3,$fn=8); translate([-126.23, 5.0, 2.6]) sphere(d=0.3,$fn=8);}
-// C3.2: Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.
-color([0.15, 0.15, 0.17]) translate([-120.72999999999999, 5.0, 2.6]) rotate([0,0,0.0]) {cylinder(d=5,h=9,$fn=32); color([.7,.7,.72]) translate([0,0,8.85]) cylinder(d=4.5,h=.15,$fn=32);}
-color([.75,.75,.78]) hull() {translate([-122.0, 5.0, -0.5]) sphere(d=0.3,$fn=8); translate([-122.0, 5.0, 2.034308457]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-122.0, 5.0, 2.034308457]) sphere(d=0.3,$fn=8); translate([-122.027452864, 5.0, 2.15968014]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-122.027452864, 5.0, 2.15968014]) sphere(d=0.3,$fn=8); translate([-122.23, 5.0, 2.6]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-119.46, 5.0, -0.5]) sphere(d=0.3,$fn=8); translate([-119.46, 5.0, 2.034308457]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-119.46, 5.0, 2.034308457]) sphere(d=0.3,$fn=8); translate([-119.432547136, 5.0, 2.15968014]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-119.432547136, 5.0, 2.15968014]) sphere(d=0.3,$fn=8); translate([-119.23, 5.0, 2.6]) sphere(d=0.3,$fn=8);}
-// C4: Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.
-color([0.15, 0.15, 0.17]) translate([-115.72999999999999, -20.0, 2.6]) rotate([0,0,0.0]) {cylinder(d=5,h=9,$fn=32); color([.7,.7,.72]) translate([0,0,8.85]) cylinder(d=4.5,h=.15,$fn=32);}
-color([.75,.75,.78]) hull() {translate([-117.0, -20.0, -0.5]) sphere(d=0.3,$fn=8); translate([-117.0, -20.0, 2.034308457]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-117.0, -20.0, 2.034308457]) sphere(d=0.3,$fn=8); translate([-117.027452864, -20.0, 2.15968014]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-117.027452864, -20.0, 2.15968014]) sphere(d=0.3,$fn=8); translate([-117.23, -20.0, 2.6]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-114.46, -20.0, -0.5]) sphere(d=0.3,$fn=8); translate([-114.46, -20.0, 2.034308457]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-114.46, -20.0, 2.034308457]) sphere(d=0.3,$fn=8); translate([-114.432547136, -20.0, 2.15968014]) sphere(d=0.3,$fn=8);}
-color([.75,.75,.78]) hull() {translate([-114.432547136, -20.0, 2.15968014]) sphere(d=0.3,$fn=8); translate([-114.23, -20.0, 2.6]) sphere(d=0.3,$fn=8);}
+// C2: Proposed Panasonic KS replacement envelope and formed leads; polarity follows reference supply nets or isolated reset diagnostics. No installed package/orientation or electrical substitution qualification.
+color([0.15, 0.15, 0.17]) translate([118.27000000000001, -19.4, 2.6]) rotate([0,0,0.0]) {cylinder(d=6.8,h=6,$fn=32); color([.7,.7,.72]) translate([0,0,5.85]) cylinder(d=6.12,h=.15,$fn=32);}
+color([.75,.75,.78]) hull() {translate([117.0, -20.0, -0.5]) sphere(d=0.5,$fn=8); translate([117.0, -20.0, 1.865729281]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([117.0, -20.0, 1.865729281]) sphere(d=0.5,$fn=8); translate([117.000705637, -19.978830896, 2.009716199]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([117.000705637, -19.978830896, 2.009716199]) sphere(d=0.5,$fn=8); translate([117.002762763, -19.917117103, 2.141504049]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([117.002762763, -19.917117103, 2.141504049]) sphere(d=0.5,$fn=8); translate([117.005997092, -19.820087227, 2.249927311]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([117.005997092, -19.820087227, 2.249927311]) sphere(d=0.5,$fn=8); translate([117.02, -19.4, 2.6]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([119.54, -20.0, -0.5]) sphere(d=0.5,$fn=8); translate([119.54, -20.0, 1.865729281]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([119.54, -20.0, 1.865729281]) sphere(d=0.5,$fn=8); translate([119.539294363, -19.978830896, 2.009716199]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([119.539294363, -19.978830896, 2.009716199]) sphere(d=0.5,$fn=8); translate([119.537237237, -19.917117103, 2.141504049]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([119.537237237, -19.917117103, 2.141504049]) sphere(d=0.5,$fn=8); translate([119.534002908, -19.820087227, 2.249927311]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([119.534002908, -19.820087227, 2.249927311]) sphere(d=0.5,$fn=8); translate([119.52, -19.4, 2.6]) sphere(d=0.5,$fn=8);}
+// C3.1: Proposed Panasonic KS replacement envelope and formed leads; polarity follows reference supply nets or isolated reset diagnostics. No installed package/orientation or electrical substitution qualification.
+color([0.15, 0.15, 0.17]) translate([-127.72999999999999, 5.0, 2.6]) rotate([0,0,0.0]) {cylinder(d=6.8,h=6,$fn=32); color([.7,.7,.72]) translate([0,0,5.85]) cylinder(d=6.12,h=.15,$fn=32);}
+color([.75,.75,.78]) hull() {translate([-129.0, 5.0, -0.5]) sphere(d=0.5,$fn=8); translate([-129.0, 5.0, 2.090003997]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-129.0, 5.0, 2.090003997]) sphere(d=0.5,$fn=8); translate([-128.999600479, 5.0, 2.109988016]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-128.999600479, 5.0, 2.109988016]) sphere(d=0.5,$fn=8); translate([-128.98, 5.0, 2.6]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-126.46, 5.0, -0.5]) sphere(d=0.5,$fn=8); translate([-126.46, 5.0, 2.090003997]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-126.46, 5.0, 2.090003997]) sphere(d=0.5,$fn=8); translate([-126.460399521, 5.0, 2.109988016]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-126.460399521, 5.0, 2.109988016]) sphere(d=0.5,$fn=8); translate([-126.48, 5.0, 2.6]) sphere(d=0.5,$fn=8);}
+// C3.2: Proposed Panasonic KS replacement envelope and formed leads; polarity follows reference supply nets or isolated reset diagnostics. No installed package/orientation or electrical substitution qualification.
+color([0.15, 0.15, 0.17]) translate([-120.72999999999999, 5.0, 2.6]) rotate([0,0,0.0]) {cylinder(d=6.8,h=6,$fn=32); color([.7,.7,.72]) translate([0,0,5.85]) cylinder(d=6.12,h=.15,$fn=32);}
+color([.75,.75,.78]) hull() {translate([-122.0, 5.0, -0.5]) sphere(d=0.5,$fn=8); translate([-122.0, 5.0, 2.090003997]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-122.0, 5.0, 2.090003997]) sphere(d=0.5,$fn=8); translate([-121.999600479, 5.0, 2.109988016]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-121.999600479, 5.0, 2.109988016]) sphere(d=0.5,$fn=8); translate([-121.98, 5.0, 2.6]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-119.46, 5.0, -0.5]) sphere(d=0.5,$fn=8); translate([-119.46, 5.0, 2.090003997]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-119.46, 5.0, 2.090003997]) sphere(d=0.5,$fn=8); translate([-119.460399521, 5.0, 2.109988016]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-119.460399521, 5.0, 2.109988016]) sphere(d=0.5,$fn=8); translate([-119.48, 5.0, 2.6]) sphere(d=0.5,$fn=8);}
+// C4: Proposed Panasonic KS replacement envelope and formed leads; polarity follows reference supply nets or isolated reset diagnostics. No installed package/orientation or electrical substitution qualification.
+color([0.15, 0.15, 0.17]) translate([-115.72999999999999, -19.4, 2.6]) rotate([0,0,0.0]) {cylinder(d=6.8,h=6,$fn=32); color([.7,.7,.72]) translate([0,0,5.85]) cylinder(d=6.12,h=.15,$fn=32);}
+color([.75,.75,.78]) hull() {translate([-117.0, -20.0, -0.5]) sphere(d=0.5,$fn=8); translate([-117.0, -20.0, 1.865729281]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-117.0, -20.0, 1.865729281]) sphere(d=0.5,$fn=8); translate([-116.999294363, -19.978830896, 2.009716199]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-116.999294363, -19.978830896, 2.009716199]) sphere(d=0.5,$fn=8); translate([-116.997237237, -19.917117103, 2.141504049]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-116.997237237, -19.917117103, 2.141504049]) sphere(d=0.5,$fn=8); translate([-116.994002908, -19.820087227, 2.249927311]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-116.994002908, -19.820087227, 2.249927311]) sphere(d=0.5,$fn=8); translate([-116.98, -19.4, 2.6]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-114.46, -20.0, -0.5]) sphere(d=0.5,$fn=8); translate([-114.46, -20.0, 1.865729281]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-114.46, -20.0, 1.865729281]) sphere(d=0.5,$fn=8); translate([-114.460705637, -19.978830896, 2.009716199]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-114.460705637, -19.978830896, 2.009716199]) sphere(d=0.5,$fn=8); translate([-114.462762763, -19.917117103, 2.141504049]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-114.462762763, -19.917117103, 2.141504049]) sphere(d=0.5,$fn=8); translate([-114.465997092, -19.820087227, 2.249927311]) sphere(d=0.5,$fn=8);}
+color([.75,.75,.78]) hull() {translate([-114.465997092, -19.820087227, 2.249927311]) sphere(d=0.5,$fn=8); translate([-114.48, -19.4, 2.6]) sphere(d=0.5,$fn=8);}
 // C5.1: Proposed reference adapter; package fit remains unqualified.
 color([0.65, 0.5, 0.25]) translate([-45.028634, 6.7928435, 2.6]) rotate([0,0,0.389662961]) {translate([0,0,2.6]) rotate([90,0,0]) cylinder(d=5.2,h=1.2,center=true,$fn=32);}
 color([.75,.75,.78]) hull() {translate([-47.177066, 6.778232, -0.5]) sphere(d=0.3,$fn=8); translate([-47.177066, 6.778232, 2.037927978]) sphere(d=0.3,$fn=8);}
@@ -2250,34 +2258,42 @@ hull() {translate([109.996534326, -20.0, 2.122602219]) sphere(r=0.225077324,$fn=
 hull() {translate([112.54, -20.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([112.54, -20.0, 2.077133623]) sphere(r=0.225077324,$fn=12);}
 hull() {translate([112.54, -20.0, 2.077133623]) sphere(r=0.225077324,$fn=12);translate([112.543465674, -20.0, 2.122602219]) sphere(r=0.225077324,$fn=12);}
 hull() {translate([112.543465674, -20.0, 2.122602219]) sphere(r=0.225077324,$fn=12);translate([112.77, -20.0, 3.6]) sphere(r=0.225077324,$fn=12);}
-translate([115.67, -22.6, 2.5]) cube([5.199999999999989, 5.200000000000003, 9.2]);
-hull() {translate([117.0, -20.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([117.0, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([117.0, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([116.972547136, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([116.972547136, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([116.77, -20.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([119.54, -20.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([119.54, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([119.54, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([119.567452864, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([119.567452864, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([119.77, -20.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-translate([-130.32999999999998, 2.4, 2.5]) cube([5.199999999999974, 5.199999999999999, 9.2]);
-hull() {translate([-129.0, 5.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-129.0, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-129.0, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-129.027452864, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-129.027452864, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-129.23, 5.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-126.46, 5.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-126.46, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-126.46, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-126.432547136, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-126.432547136, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-126.23, 5.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-translate([-123.33, 2.4, 2.5]) cube([5.199999999999989, 5.199999999999999, 9.2]);
-hull() {translate([-122.0, 5.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-122.0, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-122.0, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-122.027452864, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-122.027452864, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-122.23, 5.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-119.46, 5.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-119.46, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-119.46, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-119.432547136, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-119.432547136, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-119.23, 5.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-translate([-118.33, -22.6, 2.5]) cube([5.199999999999989, 5.200000000000003, 9.2]);
-hull() {translate([-117.0, -20.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-117.0, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-117.0, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-117.027452864, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-117.027452864, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-117.23, -20.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-114.46, -20.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-114.46, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-114.46, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-114.432547136, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-114.432547136, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-114.23, -20.0, 2.6]) sphere(r=0.225077324,$fn=12);}
+translate([114.77000000000001, -22.900000000000002, 2.5]) cube([6.999999999999986, 7.000000000000002, 6.199999999999999]);
+hull() {translate([117.0, -20.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([117.0, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([117.0, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);translate([117.000705637, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([117.000705637, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);translate([117.002762763, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([117.002762763, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);translate([117.005997092, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([117.005997092, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);translate([117.02, -19.4, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([119.54, -20.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([119.54, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([119.54, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);translate([119.539294363, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([119.539294363, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);translate([119.537237237, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([119.537237237, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);translate([119.534002908, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([119.534002908, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);translate([119.52, -19.4, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+translate([-131.23, 1.5, 2.5]) cube([6.999999999999986, 7.0, 6.199999999999999]);
+hull() {translate([-129.0, 5.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-129.0, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-129.0, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);translate([-128.999600479, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-128.999600479, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);translate([-128.98, 5.0, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-126.46, 5.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-126.46, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-126.46, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);translate([-126.460399521, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-126.460399521, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);translate([-126.48, 5.0, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+translate([-124.22999999999999, 1.5, 2.5]) cube([6.999999999999986, 7.0, 6.199999999999999]);
+hull() {translate([-122.0, 5.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-122.0, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-122.0, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);translate([-121.999600479, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-121.999600479, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);translate([-121.98, 5.0, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-119.46, 5.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-119.46, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-119.46, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);translate([-119.460399521, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-119.460399521, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);translate([-119.48, 5.0, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+translate([-119.22999999999999, -22.900000000000002, 2.5]) cube([6.999999999999986, 7.000000000000002, 6.199999999999999]);
+hull() {translate([-117.0, -20.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-117.0, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-117.0, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);translate([-116.999294363, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-116.999294363, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);translate([-116.997237237, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-116.997237237, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);translate([-116.994002908, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-116.994002908, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);translate([-116.98, -19.4, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-114.46, -20.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-114.46, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-114.46, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);translate([-114.460705637, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-114.460705637, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);translate([-114.462762763, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-114.462762763, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);translate([-114.465997092, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-114.465997092, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);translate([-114.48, -19.4, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
 translate([-47.732654000000004, 6.075175000000001, 2.5]) cube([5.408040000000007, 1.4353369999999988, 5.4]);
 hull() {translate([-47.177066, 6.778232, -0.5]) sphere(r=0.225077324,$fn=12);translate([-47.177066, 6.778232, 2.037927978]) sphere(r=0.225077324,$fn=12);}
 hull() {translate([-47.177066, 6.778232, 2.037927978]) sphere(r=0.225077324,$fn=12);translate([-47.152434825, 6.778399508, 2.156975548]) sphere(r=0.225077324,$fn=12);}
@@ -3785,30 +3801,38 @@ hull() {translate([109.996534326, -20.0, 2.122602219]) sphere(r=0.171487485,$fn=
 hull() {translate([112.54, -20.0, -0.5]) sphere(r=0.171487485,$fn=12);translate([112.54, -20.0, 2.077133623]) sphere(r=0.171487485,$fn=12);}
 hull() {translate([112.54, -20.0, 2.077133623]) sphere(r=0.171487485,$fn=12);translate([112.543465674, -20.0, 2.122602219]) sphere(r=0.171487485,$fn=12);}
 hull() {translate([112.543465674, -20.0, 2.122602219]) sphere(r=0.171487485,$fn=12);translate([112.77, -20.0, 3.6]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([117.0, -20.0, -0.5]) sphere(r=0.171487485,$fn=12);translate([117.0, -20.0, 2.034308457]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([117.0, -20.0, 2.034308457]) sphere(r=0.171487485,$fn=12);translate([116.972547136, -20.0, 2.15968014]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([116.972547136, -20.0, 2.15968014]) sphere(r=0.171487485,$fn=12);translate([116.77, -20.0, 2.6]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([119.54, -20.0, -0.5]) sphere(r=0.171487485,$fn=12);translate([119.54, -20.0, 2.034308457]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([119.54, -20.0, 2.034308457]) sphere(r=0.171487485,$fn=12);translate([119.567452864, -20.0, 2.15968014]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([119.567452864, -20.0, 2.15968014]) sphere(r=0.171487485,$fn=12);translate([119.77, -20.0, 2.6]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-129.0, 5.0, -0.5]) sphere(r=0.171487485,$fn=12);translate([-129.0, 5.0, 2.034308457]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-129.0, 5.0, 2.034308457]) sphere(r=0.171487485,$fn=12);translate([-129.027452864, 5.0, 2.15968014]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-129.027452864, 5.0, 2.15968014]) sphere(r=0.171487485,$fn=12);translate([-129.23, 5.0, 2.6]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-126.46, 5.0, -0.5]) sphere(r=0.171487485,$fn=12);translate([-126.46, 5.0, 2.034308457]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-126.46, 5.0, 2.034308457]) sphere(r=0.171487485,$fn=12);translate([-126.432547136, 5.0, 2.15968014]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-126.432547136, 5.0, 2.15968014]) sphere(r=0.171487485,$fn=12);translate([-126.23, 5.0, 2.6]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-122.0, 5.0, -0.5]) sphere(r=0.171487485,$fn=12);translate([-122.0, 5.0, 2.034308457]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-122.0, 5.0, 2.034308457]) sphere(r=0.171487485,$fn=12);translate([-122.027452864, 5.0, 2.15968014]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-122.027452864, 5.0, 2.15968014]) sphere(r=0.171487485,$fn=12);translate([-122.23, 5.0, 2.6]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-119.46, 5.0, -0.5]) sphere(r=0.171487485,$fn=12);translate([-119.46, 5.0, 2.034308457]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-119.46, 5.0, 2.034308457]) sphere(r=0.171487485,$fn=12);translate([-119.432547136, 5.0, 2.15968014]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-119.432547136, 5.0, 2.15968014]) sphere(r=0.171487485,$fn=12);translate([-119.23, 5.0, 2.6]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-117.0, -20.0, -0.5]) sphere(r=0.171487485,$fn=12);translate([-117.0, -20.0, 2.034308457]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-117.0, -20.0, 2.034308457]) sphere(r=0.171487485,$fn=12);translate([-117.027452864, -20.0, 2.15968014]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-117.027452864, -20.0, 2.15968014]) sphere(r=0.171487485,$fn=12);translate([-117.23, -20.0, 2.6]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-114.46, -20.0, -0.5]) sphere(r=0.171487485,$fn=12);translate([-114.46, -20.0, 2.034308457]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-114.46, -20.0, 2.034308457]) sphere(r=0.171487485,$fn=12);translate([-114.432547136, -20.0, 2.15968014]) sphere(r=0.171487485,$fn=12);}
-hull() {translate([-114.432547136, -20.0, 2.15968014]) sphere(r=0.171487485,$fn=12);translate([-114.23, -20.0, 2.6]) sphere(r=0.171487485,$fn=12);}
+hull() {translate([117.0, -20.0, -0.5]) sphere(r=0.278667162,$fn=12);translate([117.0, -20.0, 1.865729281]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([117.0, -20.0, 1.865729281]) sphere(r=0.278667162,$fn=12);translate([117.000705637, -19.978830896, 2.009716199]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([117.000705637, -19.978830896, 2.009716199]) sphere(r=0.278667162,$fn=12);translate([117.002762763, -19.917117103, 2.141504049]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([117.002762763, -19.917117103, 2.141504049]) sphere(r=0.278667162,$fn=12);translate([117.005997092, -19.820087227, 2.249927311]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([117.005997092, -19.820087227, 2.249927311]) sphere(r=0.278667162,$fn=12);translate([117.02, -19.4, 2.6]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([119.54, -20.0, -0.5]) sphere(r=0.278667162,$fn=12);translate([119.54, -20.0, 1.865729281]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([119.54, -20.0, 1.865729281]) sphere(r=0.278667162,$fn=12);translate([119.539294363, -19.978830896, 2.009716199]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([119.539294363, -19.978830896, 2.009716199]) sphere(r=0.278667162,$fn=12);translate([119.537237237, -19.917117103, 2.141504049]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([119.537237237, -19.917117103, 2.141504049]) sphere(r=0.278667162,$fn=12);translate([119.534002908, -19.820087227, 2.249927311]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([119.534002908, -19.820087227, 2.249927311]) sphere(r=0.278667162,$fn=12);translate([119.52, -19.4, 2.6]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-129.0, 5.0, -0.5]) sphere(r=0.278667162,$fn=12);translate([-129.0, 5.0, 2.090003997]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-129.0, 5.0, 2.090003997]) sphere(r=0.278667162,$fn=12);translate([-128.999600479, 5.0, 2.109988016]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-128.999600479, 5.0, 2.109988016]) sphere(r=0.278667162,$fn=12);translate([-128.98, 5.0, 2.6]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-126.46, 5.0, -0.5]) sphere(r=0.278667162,$fn=12);translate([-126.46, 5.0, 2.090003997]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-126.46, 5.0, 2.090003997]) sphere(r=0.278667162,$fn=12);translate([-126.460399521, 5.0, 2.109988016]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-126.460399521, 5.0, 2.109988016]) sphere(r=0.278667162,$fn=12);translate([-126.48, 5.0, 2.6]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-122.0, 5.0, -0.5]) sphere(r=0.278667162,$fn=12);translate([-122.0, 5.0, 2.090003997]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-122.0, 5.0, 2.090003997]) sphere(r=0.278667162,$fn=12);translate([-121.999600479, 5.0, 2.109988016]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-121.999600479, 5.0, 2.109988016]) sphere(r=0.278667162,$fn=12);translate([-121.98, 5.0, 2.6]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-119.46, 5.0, -0.5]) sphere(r=0.278667162,$fn=12);translate([-119.46, 5.0, 2.090003997]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-119.46, 5.0, 2.090003997]) sphere(r=0.278667162,$fn=12);translate([-119.460399521, 5.0, 2.109988016]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-119.460399521, 5.0, 2.109988016]) sphere(r=0.278667162,$fn=12);translate([-119.48, 5.0, 2.6]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-117.0, -20.0, -0.5]) sphere(r=0.278667162,$fn=12);translate([-117.0, -20.0, 1.865729281]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-117.0, -20.0, 1.865729281]) sphere(r=0.278667162,$fn=12);translate([-116.999294363, -19.978830896, 2.009716199]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-116.999294363, -19.978830896, 2.009716199]) sphere(r=0.278667162,$fn=12);translate([-116.997237237, -19.917117103, 2.141504049]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-116.997237237, -19.917117103, 2.141504049]) sphere(r=0.278667162,$fn=12);translate([-116.994002908, -19.820087227, 2.249927311]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-116.994002908, -19.820087227, 2.249927311]) sphere(r=0.278667162,$fn=12);translate([-116.98, -19.4, 2.6]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-114.46, -20.0, -0.5]) sphere(r=0.278667162,$fn=12);translate([-114.46, -20.0, 1.865729281]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-114.46, -20.0, 1.865729281]) sphere(r=0.278667162,$fn=12);translate([-114.460705637, -19.978830896, 2.009716199]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-114.460705637, -19.978830896, 2.009716199]) sphere(r=0.278667162,$fn=12);translate([-114.462762763, -19.917117103, 2.141504049]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-114.462762763, -19.917117103, 2.141504049]) sphere(r=0.278667162,$fn=12);translate([-114.465997092, -19.820087227, 2.249927311]) sphere(r=0.278667162,$fn=12);}
+hull() {translate([-114.465997092, -19.820087227, 2.249927311]) sphere(r=0.278667162,$fn=12);translate([-114.48, -19.4, 2.6]) sphere(r=0.278667162,$fn=12);}
 hull() {translate([-47.177066, 6.778232, -0.5]) sphere(r=0.171487485,$fn=12);translate([-47.177066, 6.778232, 2.037927978]) sphere(r=0.171487485,$fn=12);}
 hull() {translate([-47.177066, 6.778232, 2.037927978]) sphere(r=0.171487485,$fn=12);translate([-47.152434825, 6.778399508, 2.156975548]) sphere(r=0.171487485,$fn=12);}
 hull() {translate([-47.152434825, 6.778399508, 2.156975548]) sphere(r=0.171487485,$fn=12);translate([-46.528599, 6.782642, 3.6]) sphere(r=0.171487485,$fn=12);}
@@ -5262,30 +5286,38 @@ hull() {translate([109.996534326, -20.0, 2.122602219]) sphere(r=0.225077324,$fn=
 hull() {translate([112.54, -20.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([112.54, -20.0, 2.077133623]) sphere(r=0.225077324,$fn=12);}
 hull() {translate([112.54, -20.0, 2.077133623]) sphere(r=0.225077324,$fn=12);translate([112.543465674, -20.0, 2.122602219]) sphere(r=0.225077324,$fn=12);}
 hull() {translate([112.543465674, -20.0, 2.122602219]) sphere(r=0.225077324,$fn=12);translate([112.77, -20.0, 3.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([117.0, -20.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([117.0, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([117.0, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([116.972547136, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([116.972547136, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([116.77, -20.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([119.54, -20.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([119.54, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([119.54, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([119.567452864, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([119.567452864, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([119.77, -20.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-129.0, 5.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-129.0, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-129.0, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-129.027452864, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-129.027452864, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-129.23, 5.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-126.46, 5.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-126.46, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-126.46, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-126.432547136, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-126.432547136, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-126.23, 5.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-122.0, 5.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-122.0, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-122.0, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-122.027452864, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-122.027452864, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-122.23, 5.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-119.46, 5.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-119.46, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-119.46, 5.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-119.432547136, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-119.432547136, 5.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-119.23, 5.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-117.0, -20.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-117.0, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-117.0, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-117.027452864, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-117.027452864, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-117.23, -20.0, 2.6]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-114.46, -20.0, -0.5]) sphere(r=0.225077324,$fn=12);translate([-114.46, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-114.46, -20.0, 2.034308457]) sphere(r=0.225077324,$fn=12);translate([-114.432547136, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);}
-hull() {translate([-114.432547136, -20.0, 2.15968014]) sphere(r=0.225077324,$fn=12);translate([-114.23, -20.0, 2.6]) sphere(r=0.225077324,$fn=12);}
+hull() {translate([117.0, -20.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([117.0, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([117.0, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);translate([117.000705637, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([117.000705637, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);translate([117.002762763, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([117.002762763, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);translate([117.005997092, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([117.005997092, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);translate([117.02, -19.4, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([119.54, -20.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([119.54, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([119.54, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);translate([119.539294363, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([119.539294363, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);translate([119.537237237, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([119.537237237, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);translate([119.534002908, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([119.534002908, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);translate([119.52, -19.4, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-129.0, 5.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-129.0, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-129.0, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);translate([-128.999600479, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-128.999600479, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);translate([-128.98, 5.0, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-126.46, 5.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-126.46, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-126.46, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);translate([-126.460399521, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-126.460399521, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);translate([-126.48, 5.0, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-122.0, 5.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-122.0, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-122.0, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);translate([-121.999600479, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-121.999600479, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);translate([-121.98, 5.0, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-119.46, 5.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-119.46, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-119.46, 5.0, 2.090003997]) sphere(r=0.33225700100000005,$fn=12);translate([-119.460399521, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-119.460399521, 5.0, 2.109988016]) sphere(r=0.33225700100000005,$fn=12);translate([-119.48, 5.0, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-117.0, -20.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-117.0, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-117.0, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);translate([-116.999294363, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-116.999294363, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);translate([-116.997237237, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-116.997237237, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);translate([-116.994002908, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-116.994002908, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);translate([-116.98, -19.4, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-114.46, -20.0, -0.5]) sphere(r=0.33225700100000005,$fn=12);translate([-114.46, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-114.46, -20.0, 1.865729281]) sphere(r=0.33225700100000005,$fn=12);translate([-114.460705637, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-114.460705637, -19.978830896, 2.009716199]) sphere(r=0.33225700100000005,$fn=12);translate([-114.462762763, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-114.462762763, -19.917117103, 2.141504049]) sphere(r=0.33225700100000005,$fn=12);translate([-114.465997092, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);}
+hull() {translate([-114.465997092, -19.820087227, 2.249927311]) sphere(r=0.33225700100000005,$fn=12);translate([-114.48, -19.4, 2.6]) sphere(r=0.33225700100000005,$fn=12);}
 hull() {translate([-47.177066, 6.778232, -0.5]) sphere(r=0.225077324,$fn=12);translate([-47.177066, 6.778232, 2.037927978]) sphere(r=0.225077324,$fn=12);}
 hull() {translate([-47.177066, 6.778232, 2.037927978]) sphere(r=0.225077324,$fn=12);translate([-47.152434825, 6.778399508, 2.156975548]) sphere(r=0.225077324,$fn=12);}
 hull() {translate([-47.152434825, 6.778399508, 2.156975548]) sphere(r=0.225077324,$fn=12);translate([-46.528599, 6.782642, 3.6]) sphere(r=0.225077324,$fn=12);}

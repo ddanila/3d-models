@@ -212,7 +212,9 @@ Package fit does not settle capacitor polarity or electrical substitution.
 Open `reference/review.scad` with `show_components=true`. `reference/assembly.json`
 defines proposed package choices; `tools/reference_assembly.py` derives numbered
 lead paths and body poses from the routed pads, reusing the pinned DIP bodies and
-manufacturer L3/12 dimensions. Regenerate with that tool; use `--check` to reject
+manufacturer package dimensions. `reference/capacitor-polarity.json` binds proposed
+can polarity to reference nets and pinned reset diagnostics; it does not assign
+installed polarity. Regenerate with that tool; use `--check` to reject
 stale exports. `reference/signal-paths.json` supplies netlist-checked walkthroughs
 for the museum.
 

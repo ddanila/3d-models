@@ -37,7 +37,7 @@ def main():
     if args.check:
         report=assembly.read(args.out/'assessment.json')
         if report['candidate']!=candidate or report['geometry']!=geometry:raise ValueError('Candidate changed')
-        if report['adopted'] or report['mechanicallyQualified']:raise ValueError('Invalid qualification claim')
+        if report['adoptionAuthorizedByThisReview'] or report['mechanicallyQualified']:raise ValueError('Invalid qualification claim')
         if not math.isfinite(report['candidateVolumeMm3']) or report['candidateVolumeMm3']<=0:raise ValueError('Missing nonempty control')
         rows=report['interfaces']
         if len(rows)!=len(INTERFACES) or {row['interface'] for row in rows}!=set(INTERFACES):raise ValueError('Incomplete interfaces')
@@ -53,6 +53,7 @@ def main():
     original_read=assembly.read
     for ref in candidate['components']:
         record=spec['components'][ref]
+        record.pop('packageCandidate',None)
         if 'proposedBodyOffsetMm' in candidate['components'][ref]:
             record['bodyOffsetMm']=candidate['components'][ref]['proposedBodyOffsetMm']
         record.update(sizeMm=candidate['bodyEnvelopeMm'],leadPitchMm=pitch,
@@ -62,7 +63,7 @@ def main():
         record['leadSectionMaximumMm']=[diameter,0]
     with patch.object(assembly,'read',side_effect=lambda path:spec if path==assembly.REF/'assembly.json' else original_read(path)):
         data,scad=assembly.build()
-    report={'candidate':candidate,'geometry':geometry,'adopted':False,'mechanicallyQualified':False,
+    report={'candidate':candidate,'geometry':geometry,'adoptionAuthorizedByThisReview':False,'mechanicallyQualified':False,
             'assemblyReview':data['review'],'sources':{'keyboard-controller/'+name:digest for name,digest in data['sources'].items()}, 'interfaces':[],
             'scope':'Proposed replacement envelope at existing seats and pads. One explicit lead-pitch case, stated diameter and maximum body envelope; no polarity mapping, continuous tolerance sweep, installed identity or electrical substitution qualification.'}
     report['sources'][str(candidate_path.relative_to(ROOT.parent))]=assembly.digest(candidate_path)
