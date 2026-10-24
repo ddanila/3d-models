@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Compare a conditional published X1 pitch with retained photo projections."""
 import argparse
+import difflib
 import hashlib
 import json
 import math
@@ -86,9 +87,17 @@ def build():
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');args=parser.parse_args()
-    text=json.dumps(build(),indent=2)+'\n'
+    # Retain nanometre precision in mm; libm's last bits vary across hosts.
+    def stable(value):
+        if isinstance(value,float):return round(value,9)+0.0
+        if isinstance(value,list):return [stable(v) for v in value]
+        if isinstance(value,dict):return {k:stable(v) for k,v in value.items()}
+        return value
+    text=json.dumps(stable(build()),indent=2)+'\n'
     if args.check:
-        if TARGET.read_text()!=text:raise SystemExit('Stale X1 package comparison')
+        if TARGET.read_text()!=text:
+            diff=list(difflib.unified_diff(TARGET.read_text().splitlines(),text.splitlines(),fromfile='retained',tofile='computed'))
+            raise SystemExit('Stale X1 package comparison\n'+'\n'.join(diff[:40]))
         print('X1 conditional package comparison matches sources')
     else:
         TARGET.parent.mkdir(parents=True,exist_ok=True);TARGET.write_text(text)

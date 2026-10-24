@@ -7,92 +7,92 @@
     "generated/bus-review.json": "fe78338191763e2d60f50481b61d8ff86f8b1608cfb7a67dd0f2d79debfbcbbc",
     "component-evidence.json": "57752b9a8963098b2b357f8b7714108b1b1236b2471cb445f25feb64b15011e0",
     "sense-review.json": "c8f2bdb8959e09cce11f746aa1729894fb535b34f5c8ab8f78f464b9b4378153",
-    "tools/connector_package_review.py": "598cfe547950dbe9855985f77232a3ecb445be11c30c277c34945bf1195d48f4",
+    "tools/connector_package_review.py": "2d221aedd5abcc1ac3c49552e523f32d1126df21f9218c8c1809e3248286b2e2",
     "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068"
   },
   "comparisons": {
     "topLeadEnds": {
       "housingFar": {
-        "projectedEndpointSpanMm": 28.62823774443934,
-        "projectedPitchMm": 2.385686478703278,
-        "catalogueMinusProjectedSpanMm": 1.371762255560661,
-        "conditionalScaleMultiplier": 1.04791640574618,
+        "projectedEndpointSpanMm": 28.628237744,
+        "projectedPitchMm": 2.385686479,
+        "catalogueMinusProjectedSpanMm": 1.371762256,
+        "conditionalScaleMultiplier": 1.047916406,
         "interiorResidualToEndpointFitMm": [
-          0.18392969965179887,
-          0.05794638740487554,
-          0.11336888606089865,
-          0.19128780355575042,
-          0.15867840060840488,
-          0.21909610138765717,
-          0.13962306606780642,
-          0.06550606081077033,
-          0.07285439822158138,
-          0.029974842043312105,
-          0.015299300038203172
+          0.1839297,
+          0.057946387,
+          0.113368886,
+          0.191287804,
+          0.158678401,
+          0.219096101,
+          0.139623066,
+          0.065506061,
+          0.072854398,
+          0.029974842,
+          0.0152993
         ],
-        "maximumInteriorResidualMm": 0.21909610138765717
+        "maximumInteriorResidualMm": 0.219096101
       },
       "housingNear": {
-        "projectedEndpointSpanMm": 28.442358378638453,
-        "projectedPitchMm": 2.3701965315532045,
-        "catalogueMinusProjectedSpanMm": 1.5576416213615474,
-        "conditionalScaleMultiplier": 1.0547648546096449,
+        "projectedEndpointSpanMm": 28.442358379,
+        "projectedPitchMm": 2.370196532,
+        "catalogueMinusProjectedSpanMm": 1.557641621,
+        "conditionalScaleMultiplier": 1.054764855,
         "interiorResidualToEndpointFitMm": [
-          0.09223562941785778,
-          0.11087051529827044,
-          0.11122944419457167,
-          0.17367594667591202,
-          0.14815920453690168,
-          0.04164143740127562,
-          0.1156216545198855,
-          0.09682513445067964,
-          0.07426173127728647,
-          0.03843306041346313,
-          0.09175276595682857
+          0.092235629,
+          0.110870515,
+          0.111229444,
+          0.173675947,
+          0.148159205,
+          0.041641437,
+          0.115621655,
+          0.096825134,
+          0.074261731,
+          0.03843306,
+          0.091752766
         ],
-        "maximumInteriorResidualMm": 0.17367594667591202
+        "maximumInteriorResidualMm": 0.173675947
       }
     },
     "undersideJoints": {
       "housingFar": {
-        "projectedEndpointSpanMm": 28.05772180144341,
-        "projectedPitchMm": 2.3381434834536177,
-        "catalogueMinusProjectedSpanMm": 1.9422781985565898,
-        "conditionalScaleMultiplier": 1.0692243729659003,
+        "projectedEndpointSpanMm": 28.057721801,
+        "projectedPitchMm": 2.338143483,
+        "catalogueMinusProjectedSpanMm": 1.942278199,
+        "conditionalScaleMultiplier": 1.069224373,
         "interiorResidualToEndpointFitMm": [
-          0.07803817116993803,
-          0.1483584905510817,
-          0.1625573749369976,
-          0.1725183195770637,
-          0.1881153374066859,
-          0.19314694252044956,
-          0.18773396186863692,
-          0.17206428056973322,
-          0.14308917563571516,
-          0.1062829549051621,
-          0.05854126468987448
+          0.078038171,
+          0.148358491,
+          0.162557375,
+          0.17251832,
+          0.188115337,
+          0.193146943,
+          0.187733962,
+          0.172064281,
+          0.143089176,
+          0.106282955,
+          0.058541265
         ],
-        "maximumInteriorResidualMm": 0.19314694252044956
+        "maximumInteriorResidualMm": 0.193146943
       },
       "housingNear": {
-        "projectedEndpointSpanMm": 27.931430156451118,
-        "projectedPitchMm": 2.32761917970426,
-        "catalogueMinusProjectedSpanMm": 2.0685698435488824,
-        "conditionalScaleMultiplier": 1.0740588588540685,
+        "projectedEndpointSpanMm": 27.931430156,
+        "projectedPitchMm": 2.32761918,
+        "catalogueMinusProjectedSpanMm": 2.068569844,
+        "conditionalScaleMultiplier": 1.074058859,
         "interiorResidualToEndpointFitMm": [
-          0.08490367194691757,
-          0.17707521467319504,
-          0.10265339644616828,
-          0.0930886738797919,
-          0.10644574050198796,
-          0.1566406023053436,
-          0.17790043245057333,
-          0.14269556852797138,
-          0.07975272039594078,
-          0.05116846185641839,
-          0.07955926257805457
+          0.084903672,
+          0.177075215,
+          0.102653396,
+          0.093088674,
+          0.106445741,
+          0.156640602,
+          0.177900432,
+          0.142695569,
+          0.07975272,
+          0.051168462,
+          0.079559263
         ],
-        "maximumInteriorResidualMm": 0.17790043245057333
+        "maximumInteriorResidualMm": 0.177900432
       }
     }
   },
@@ -108,27 +108,27 @@
       "failedPackagePoseChecks": [],
       "rows": {
         "housingFar": {
-          "projectedEndpointSpanMm": 28.868587212604375,
-          "projectedPitchMm": 2.4057156010503644,
-          "catalogueMinusProjectedSpanMm": 1.1314127873956252,
-          "conditionalScaleMultiplier": 1.0391918308666535,
+          "projectedEndpointSpanMm": 28.868587213,
+          "projectedPitchMm": 2.405715601,
+          "catalogueMinusProjectedSpanMm": 1.131412787,
+          "conditionalScaleMultiplier": 1.039191831,
           "interiorResidualToEndpointFitMm": [
-            0.05364833222052037,
-            0.10697083370829849,
-            0.0854572367287369,
-            0.04349893867129087,
-            0.04671753712534227,
-            0.04883432873546888,
-            0.049966125063805364,
-            0.05015865797699451,
-            0.029881997905724725,
-            0.02704655386075858,
-            0.009775736364802098
+            0.053648332,
+            0.106970834,
+            0.085457237,
+            0.043498939,
+            0.046717537,
+            0.048834329,
+            0.049966125,
+            0.050158658,
+            0.029881998,
+            0.027046554,
+            0.009775736
           ],
-          "maximumInteriorResidualMm": 0.10697083370829849,
+          "maximumInteriorResidualMm": 0.106970834,
           "endpointPickingSpanIntervalMm": [
-            27.091355300780428,
-            30.64581912442832
+            27.091355301,
+            30.645819124
           ],
           "catalogueSpanIntervalMm": [
             29.7,
@@ -137,27 +137,27 @@
           "pickingIntervalOverlapsCatalogue": true
         },
         "housingNear": {
-          "projectedEndpointSpanMm": 28.758632587887746,
-          "projectedPitchMm": 2.3965527156573123,
-          "catalogueMinusProjectedSpanMm": 1.241367412112254,
-          "conditionalScaleMultiplier": 1.0431650360398248,
+          "projectedEndpointSpanMm": 28.758632588,
+          "projectedPitchMm": 2.396552716,
+          "catalogueMinusProjectedSpanMm": 1.241367412,
+          "conditionalScaleMultiplier": 1.043165036,
           "interiorResidualToEndpointFitMm": [
-            0.054962907286670686,
-            0.24903820874528465,
-            0.21672368698757513,
-            0.2090385666370632,
-            0.2070228451837127,
-            0.22639488622655027,
-            0.1285588709947212,
-            0.0772786130787352,
-            0.16172351658997378,
-            0.14048488642273488,
-            0.13497389251417125
+            0.054962907,
+            0.249038209,
+            0.216723687,
+            0.209038567,
+            0.207022845,
+            0.226394886,
+            0.128558871,
+            0.077278613,
+            0.161723517,
+            0.140484886,
+            0.134973893
           ],
-          "maximumInteriorResidualMm": 0.24903820874528465,
+          "maximumInteriorResidualMm": 0.249038209,
           "endpointPickingSpanIntervalMm": [
-            26.978531189064192,
-            30.5387339867113
+            26.978531189,
+            30.538733987
           ],
           "catalogueSpanIntervalMm": [
             29.7,
@@ -180,27 +180,27 @@
       ],
       "rows": {
         "housingFar": {
-          "projectedEndpointSpanMm": 29.598024827304023,
-          "projectedPitchMm": 2.466502068942002,
-          "catalogueMinusProjectedSpanMm": 0.4019751726959768,
-          "conditionalScaleMultiplier": 1.0135811485746562,
+          "projectedEndpointSpanMm": 29.598024827,
+          "projectedPitchMm": 2.466502069,
+          "catalogueMinusProjectedSpanMm": 0.401975173,
+          "conditionalScaleMultiplier": 1.013581149,
           "interiorResidualToEndpointFitMm": [
-            0.0554942160056613,
-            0.11065683470826289,
-            0.08836355316131184,
-            0.044843680480622386,
-            0.048155496889649214,
-            0.05034393539114349,
-            0.05152962395401639,
-            0.05175794828539963,
-            0.030748885685456348,
-            0.02788277827996725,
-            0.010027527485605021
+            0.055494216,
+            0.110656835,
+            0.088363553,
+            0.04484368,
+            0.048155497,
+            0.050343935,
+            0.051529624,
+            0.051757948,
+            0.030748886,
+            0.027882778,
+            0.010027527
           ],
-          "maximumInteriorResidualMm": 0.11065683470826289,
+          "maximumInteriorResidualMm": 0.110656835,
           "endpointPickingSpanIntervalMm": [
-            27.767766357213773,
-            31.428283297394273
+            27.767766357,
+            31.428283297
           ],
           "catalogueSpanIntervalMm": [
             29.7,
@@ -209,27 +209,27 @@
           "pickingIntervalOverlapsCatalogue": true
         },
         "housingNear": {
-          "projectedEndpointSpanMm": 29.485286931311602,
-          "projectedPitchMm": 2.4571072442759667,
-          "catalogueMinusProjectedSpanMm": 0.5147130686883976,
-          "conditionalScaleMultiplier": 1.0174566070829654,
+          "projectedEndpointSpanMm": 29.485286931,
+          "projectedPitchMm": 2.457107244,
+          "catalogueMinusProjectedSpanMm": 0.514713069,
+          "conditionalScaleMultiplier": 1.017456607,
           "interiorResidualToEndpointFitMm": [
-            0.056797829392879036,
-            0.255693854671789,
-            0.2222964212826242,
-            0.21455868925476962,
-            0.21269354314377364,
-            0.23304224544361773,
-            0.1329688224323915,
-            0.07992275272769565,
-            0.1661244655613363,
-            0.14406969681925938,
-            0.13838465377192305
+            0.056797829,
+            0.255693855,
+            0.222296421,
+            0.214558689,
+            0.212693543,
+            0.233042245,
+            0.132968822,
+            0.079922753,
+            0.166124466,
+            0.144069697,
+            0.138384654
           ],
-          "maximumInteriorResidualMm": 0.255693854671789,
+          "maximumInteriorResidualMm": 0.255693855,
           "endpointPickingSpanIntervalMm": [
-            27.6520591815368,
-            31.318514681086405
+            27.652059182,
+            31.318514681
           ],
           "catalogueSpanIntervalMm": [
             29.7,
@@ -250,27 +250,27 @@
       "failedPackagePoseChecks": [],
       "rows": {
         "housingFar": {
-          "projectedEndpointSpanMm": 30.071570409837317,
-          "projectedPitchMm": 2.5059642008197764,
-          "catalogueMinusProjectedSpanMm": -0.07157040983731733,
-          "conditionalScaleMultiplier": 0.9976199975970026,
+          "projectedEndpointSpanMm": 30.07157041,
+          "projectedPitchMm": 2.505964201,
+          "catalogueMinusProjectedSpanMm": -0.07157041,
+          "conditionalScaleMultiplier": 0.997619998,
           "interiorResidualToEndpointFitMm": [
-            0.055520889815985165,
-            0.11070051387490185,
-            0.08846543515135402,
-            0.045130259557415904,
-            0.048474223237922325,
-            0.050665796189131994,
-            0.05182601244857029,
-            0.05200360860493642,
-            0.03104478081940912,
-            0.028060796104677283,
-            0.010179586053147605
+            0.05552089,
+            0.110700514,
+            0.088465435,
+            0.04513026,
+            0.048474223,
+            0.050665796,
+            0.051826012,
+            0.052003609,
+            0.031044781,
+            0.028060796,
+            0.010179586
           ],
-          "maximumInteriorResidualMm": 0.11070051387490185,
+          "maximumInteriorResidualMm": 0.110700514,
           "endpointPickingSpanIntervalMm": [
-            28.22626837917434,
-            31.916872440500295
+            28.226268379,
+            31.916872441
           ],
           "catalogueSpanIntervalMm": [
             29.7,
@@ -279,27 +279,27 @@
           "pickingIntervalOverlapsCatalogue": true
         },
         "housingNear": {
-          "projectedEndpointSpanMm": 29.957037531348217,
-          "projectedPitchMm": 2.496419794279018,
-          "catalogueMinusProjectedSpanMm": 0.042962468651783325,
-          "conditionalScaleMultiplier": 1.0014341360892853,
+          "projectedEndpointSpanMm": 29.957037531,
+          "projectedPitchMm": 2.496419794,
+          "catalogueMinusProjectedSpanMm": 0.042962469,
+          "conditionalScaleMultiplier": 1.001434136,
           "interiorResidualToEndpointFitMm": [
-            0.05692323766891603,
-            0.2591488114537774,
-            0.22568373678393178,
-            0.21757421623091436,
-            0.21532604132847755,
-            0.23514563584280285,
-            0.1330561157743651,
-            0.07998700477748054,
-            0.16823118814771212,
-            0.14631323622759707,
-            0.1405981664056158
+            0.056923238,
+            0.259148811,
+            0.225683737,
+            0.217574216,
+            0.215326041,
+            0.235145636,
+            0.133056116,
+            0.079987005,
+            0.168231188,
+            0.146313236,
+            0.140598166
           ],
-          "maximumInteriorResidualMm": 0.2591488114537774,
+          "maximumInteriorResidualMm": 0.259148811,
           "endpointPickingSpanIntervalMm": [
-            28.108766605043844,
-            31.80530845765259
+            28.108766605,
+            31.805308458
           ],
           "catalogueSpanIntervalMm": [
             29.7,
