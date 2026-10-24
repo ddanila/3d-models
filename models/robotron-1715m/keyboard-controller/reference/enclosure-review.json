@@ -154,7 +154,7 @@
     "key-switch/geometry.scad": "3c5548896f0d9ef90e45d89c51d15f91974dc473456da760aeb61104c75fddce",
     "keyboard-artwork.scad": "4b185f623c7b71674bfc823a3cb0b8ceb38ed8447e55e286977e01de02c18d6c",
     "keyboard-controller/generated/controller.scad": "f6e306520f5b08cd630656324c60e4d8be5ce5f7ead8152a4776a9993017fd20",
-    "keyboard-controller/reference/assembly-generated/assembly.scad": "4d571a7fb633f5e82f9f1d2c8665fe55b9616b9648606b153e54c62be6aa9e0d",
+    "keyboard-controller/reference/assembly-generated/assembly.scad": "690cd19ead2ae608da41efd0d0c3a77f1b0a24987b37ef201299585dd197a0cb",
     "keyboard-controller/reference/generated/controller.scad": "c80c24dbc7ca2f5d2af42cc593c0e765918c587e6f0bd65c92ba9bcae12ebaca",
     "keyboard-controller/reference/review.scad": "b3019aab9355118b037c3e64f857fa2e0b262c5c28444e3c10617fcd4f5ebe99",
     "keyboard-controller/tools/reference_enclosure.py": "d35f6b228b1be5c291ce1dcb58da0637b22a5a49736e56829fa785ab5bd8fa83",

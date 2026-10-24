@@ -25,6 +25,27 @@ class AssemblyTests(unittest.TestCase):
         self.assertTrue(data['review']['leadClearance']['noUnintendedContact'])
         self.assertGreater(data['review']['leadClearance']['minimumUnintendedClearance']['surfaceClearanceMm'],0)
 
+    def test_shared_core_windings_keep_terminal_identity_and_clearance(self):
+        data,scad=assembly.build();core,=data['sharedBodies']
+        self.assertEqual(set(core['members']),{'L1.1','L1.2','L1.3','L1.4'})
+        self.assertEqual(data['review']['sharedCoreIntersections'],[])
+        self.assertIn('difference()',scad)
+        for c in data['components']:
+            if c['ref'] not in core['members']:continue
+            self.assertEqual(c['sharedBody'],core['id'])
+            self.assertEqual(c['leads'][0]['points'][-1],c['leads'][1]['points'][-1])
+            self.assertTrue(all(len(lead['points'])>3 for lead in c['leads']))
+        original=assembly.read
+        def altered(path):
+            data=original(path)
+            if path==assembly.REF/'assembly.json':
+                data['sharedFilter']['outerSizeMm'][0]=40
+                data['sharedFilter']['positionMm'][2]=1.6
+            return data
+        with patch.object(assembly,'read',side_effect=altered):bad,_=assembly.build()
+        self.assertTrue(bad['review']['sharedCoreIntersections'])
+        self.assertEqual(bad['review']['sharedCoreOverhangs'],['L1'])
+
     def test_oversized_body_is_reported_not_blessed(self):
         original=assembly.read
         def altered(path):
@@ -81,6 +102,14 @@ class LeadClearanceTests(unittest.TestCase):
         self.assertAlmostEqual(r['unintendedContacts'][0]['surfaceClearanceMm'],-.1)
         b['leads'][0]['points']=[[0,-1,.31],[0,1,.31]]
         self.assertTrue(review_leads([a,b])['noUnintendedContact'])
+
+    def test_winding_join_does_not_hide_turn_crossings(self):
+        a=self.component('L1.1','/A',[[0,0,0],[2,0,0],[2,2,0],[0,2,0],[0,0,0]],'filter')
+        self.assertFalse(review_leads([a])['noUnintendedContact'])
+        a['leads'].append({'pin':'2','net':'/B','diameterMm':.3,'points':[[1,-1,0],[1,1,0],[0,0,0]]})
+        result=review_leads([a])
+        self.assertTrue(any(c['basis']=='winding-midpoint' for c in result['intendedContacts']))
+        self.assertTrue(result['unintendedContacts'])
 
     def test_intended_join_does_not_hide_other_net_contact(self):
         a=self.component('BR1','/A',[[-1,0,0],[0,0,0]],'bridge')

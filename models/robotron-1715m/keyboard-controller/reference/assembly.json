@@ -180,7 +180,7 @@
     },
     "L1.1": {
       "package": "filter",
-      "basis": "Separate winding surrogate with explicit terminal mapping. Shared core, coupling and winding geometry unresolved.",
+      "basis": "Winding on the proposed shared L1 core; see sharedFilter for geometry assumptions.",
       "sizeMm": [
         4,
         3,
@@ -190,7 +190,7 @@
     },
     "L1.2": {
       "package": "filter",
-      "basis": "Separate winding surrogate with explicit terminal mapping. Shared core, coupling and winding geometry unresolved.",
+      "basis": "Winding on the proposed shared L1 core; see sharedFilter for geometry assumptions.",
       "sizeMm": [
         4,
         3,
@@ -200,7 +200,7 @@
     },
     "L1.3": {
       "package": "filter",
-      "basis": "Separate winding surrogate with explicit terminal mapping. Shared core, coupling and winding geometry unresolved.",
+      "basis": "Winding on the proposed shared L1 core; see sharedFilter for geometry assumptions.",
       "sizeMm": [
         4,
         3,
@@ -210,7 +210,7 @@
     },
     "L1.4": {
       "package": "filter",
-      "basis": "Separate winding surrogate with explicit terminal mapping. Shared core, coupling and winding geometry unresolved.",
+      "basis": "Winding on the proposed shared L1 core; see sharedFilter for geometry assumptions.",
       "sizeMm": [
         4,
         3,
@@ -614,5 +614,33 @@
       ],
       "seatMm": 1.6
     }
+  },
+  "sharedFilter": {
+    "id": "L1",
+    "members": [
+      "L1.1",
+      "L1.2",
+      "L1.3",
+      "L1.4"
+    ],
+    "positionMm": [
+      -122.23,
+      -11,
+      4.0
+    ],
+    "outerSizeMm": [
+      13.5,
+      8,
+      2
+    ],
+    "windowSizeMm": [
+      11.5,
+      4
+    ],
+    "wireToCoreCenterlineMm": 0.45,
+    "wireDiameterMm": 0.3,
+    "turns": 3,
+    "turnPitchMm": 0.5,
+    "scope": "Proposed shared rectangular core and four windings using existing reference pads. Dimensions, turns and forming geometry are design assumptions; no magnetic, insulation-rating or historical qualification."
   }
 }

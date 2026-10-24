@@ -37,9 +37,15 @@ def review(components):
     unintended=[];intended=[];closest=None
     for i,a in enumerate(leads):
         for b in leads[i+1:]:
-            distance,p,q=min((closest_segments(p0,p1,q0,q1)
-                for p0,p1 in zip(a['points'],a['points'][1:])
-                for q0,q1 in zip(b['points'],b['points'][1:])),key=lambda item:item[0])
+            pairs=[(i,j,closest_segments(p0,p1,q0,q1))
+                for i,(p0,p1) in enumerate(zip(a['points'],a['points'][1:]))
+                for j,(q0,q1) in enumerate(zip(b['points'],b['points'][1:]))]
+            winding_join=a['ref']==b['ref'] and a['package']=='filter' and math.dist(a['points'][-1],b['points'][-1])<1e-8
+            if winding_join:
+                intended.append({'terminals':[a['terminal'],b['terminal']],'basis':'winding-midpoint'})
+                pairs=[pair for pair in pairs if pair[:2]!=(len(a['points'])-2,len(b['points'])-2)]
+            if not pairs:continue
+            distance,p,q=min((pair[2] for pair in pairs),key=lambda item:item[0])
             gap=distance-a['radius']-b['radius']
             join=('reference-bridge' if a['ref']==b['ref'] and a['package']=='bridge' else
                   'same-net' if a['net'] and a['net']==b['net'] else None)
@@ -49,6 +55,16 @@ def review(components):
             if gap<=1e-9:
                 if join:intended.append(dict(record,basis=join))
                 else:unintended.append(record)
+    for lead in leads:
+        if lead['package']!='filter':continue
+        segments=list(zip(lead['points'],lead['points'][1:]))
+        for i,(a,b) in enumerate(segments):
+            for j in range(i+2,len(segments)):
+                distance,p,q=closest_segments(a,b,*segments[j]);gap=distance-2*lead['radius']
+                record={'terminals':[lead['terminal']]*2,'nets':[lead['net']]*2,'segments':[i,j],
+                        'surfaceClearanceMm':round(gap,9),'closestCenterlinePointsMm':[list(p),list(q)]}
+                if closest is None or gap<closest[0]:closest=(gap,record)
+                if gap<=1e-9:unintended.append(record)
     return {'method':'Minimum 3D segment distance minus the two modeled wire radii. Includes bent segments, endpoints and zero-length segments; touching is reported. Same-net contacts and explicit bridge joins remain separate.',
             'unintendedContacts':unintended,'intendedContacts':intended,
             'minimumUnintendedClearance':closest[1] if closest else None,

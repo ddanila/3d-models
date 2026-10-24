@@ -62,6 +62,10 @@ this rejects changes to terminal identities or placements beyond interchange
 precision. Then run `tools/reference_board.py` to export and check the committed
 reference board, or `--check` for standard-Python freshness validation.
 
+The reference filter assembly uses a proposed shared core with explicit winding
+paths. Core dimensions and turns are mechanical design assumptions; they do not
+set measured inductance, coupling or installed winding identity.
+
 The proposed discrete and filter footprints are electrical adapters. Their semantic
 pin order is explicit; they do not establish original hole entries, installed
 orientation, winding identity or mechanical fit. The existing HDL comparisons
