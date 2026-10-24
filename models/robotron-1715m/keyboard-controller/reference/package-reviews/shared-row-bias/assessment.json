@@ -1,0 +1,314 @@
+{
+  "schema": 1,
+  "sources": {
+    "generated/bus-review.json": "62f9de36cd8b3a7df319b3ba6e1db3ee3048753a0d4854bdf679a22f5d4e45a8",
+    "generated/layout.json": "3a2767183f35d6a4c049f97687d188294b25d942a113725c018023137974d408",
+    "tools/shared_row_bias_review.py": "88fae45234d123b9f13bc67371d9e14c3f6fbd729def1ee6e0fe9318b4491b88"
+  },
+  "variants": [
+    {
+      "calibrationVariant": "native-footprints",
+      "training": [
+        {
+          "ref": "A2.1",
+          "widthMm": 7.620000099,
+          "oppositeResidualsMm": [
+            -0.446075786,
+            -0.341423956,
+            -0.511627324,
+            -0.484423172
+          ]
+        },
+        {
+          "ref": "A4",
+          "widthMm": 7.619999899,
+          "oppositeResidualsMm": [
+            -0.32479837,
+            -0.534728694
+          ]
+        }
+      ],
+      "fractionalRowOffset": -0.057457420724,
+      "heldOutPackages": [
+        {
+          "ref": "A5",
+          "originalMaximumMm": 0.821702858,
+          "unchangedToleranceMm": 1.25,
+          "points": [
+            {
+              "terminal": "A5:14",
+              "oppositeRow": false,
+              "originalResidualMm": 0.503845282,
+              "predictedAcrossCorrectionMm": 0,
+              "remainingAcrossMm": 0.019092001,
+              "unchangedAlongMm": 0.50348343,
+              "remainingResidualMm": 0.503845283
+            },
+            {
+              "terminal": "A5:21",
+              "oppositeRow": true,
+              "originalResidualMm": 0.727366212,
+              "predictedAcrossCorrectionMm": -0.87565114,
+              "remainingAcrossMm": 0.148417192,
+              "unchangedAlongMm": 0.013870498,
+              "remainingResidualMm": 0.149063924
+            },
+            {
+              "terminal": "A5:30",
+              "oppositeRow": true,
+              "originalResidualMm": 0.821702858,
+              "predictedAcrossCorrectionMm": -0.87565114,
+              "remainingAcrossMm": 0.099262714,
+              "unchangedAlongMm": 0.269103323,
+              "remainingResidualMm": 0.286826925
+            },
+            {
+              "terminal": "A5:35",
+              "oppositeRow": true,
+              "originalResidualMm": 0.735282273,
+              "predictedAcrossCorrectionMm": -0.87565114,
+              "remainingAcrossMm": 0.173917397,
+              "unchangedAlongMm": 0.219567243,
+              "remainingResidualMm": 0.28010183
+            },
+            {
+              "terminal": "A5:40",
+              "oppositeRow": true,
+              "originalResidualMm": 0.641069008,
+              "predictedAcrossCorrectionMm": -0.87565114,
+              "remainingAcrossMm": 0.245798307,
+              "unchangedAlongMm": -0.119393812,
+              "remainingResidualMm": 0.273261212
+            },
+            {
+              "terminal": "A5:6",
+              "oppositeRow": false,
+              "originalResidualMm": 0.444369607,
+              "predictedAcrossCorrectionMm": 0,
+              "remainingAcrossMm": -0.044286528,
+              "unchangedAlongMm": 0.44215727,
+              "remainingResidualMm": 0.444369607
+            },
+            {
+              "terminal": "A5:7",
+              "oppositeRow": false,
+              "originalResidualMm": 0.223349782,
+              "predictedAcrossCorrectionMm": 0,
+              "remainingAcrossMm": -0.088941806,
+              "unchangedAlongMm": 0.204876744,
+              "remainingResidualMm": 0.223349782
+            },
+            {
+              "terminal": "A5:8",
+              "oppositeRow": false,
+              "originalResidualMm": 0.213294148,
+              "predictedAcrossCorrectionMm": 0,
+              "remainingAcrossMm": -0.051830898,
+              "unchangedAlongMm": 0.206900826,
+              "remainingResidualMm": 0.213294149
+            }
+          ],
+          "maximumHeldOutResidualMm": 0.503845283
+        },
+        {
+          "ref": "A8",
+          "originalMaximumMm": 1.345969885,
+          "unchangedToleranceMm": 1.25,
+          "points": [
+            {
+              "terminal": "A8:13",
+              "oppositeRow": true,
+              "originalResidualMm": 1.345969885,
+              "predictedAcrossCorrectionMm": -0.875651133,
+              "remainingAcrossMm": -0.241877561,
+              "unchangedAlongMm": -0.750176346,
+              "remainingResidualMm": 0.788206385
+            },
+            {
+              "terminal": "A8:19",
+              "oppositeRow": true,
+              "originalResidualMm": 1.224466628,
+              "predictedAcrossCorrectionMm": -0.875651133,
+              "remainingAcrossMm": -0.34661238,
+              "unchangedAlongMm": -0.073419536,
+              "remainingResidualMm": 0.354302936
+            },
+            {
+              "terminal": "A8:24",
+              "oppositeRow": true,
+              "originalResidualMm": 0.807847517,
+              "predictedAcrossCorrectionMm": -0.875651133,
+              "remainingAcrossMm": 0.068308689,
+              "unchangedAlongMm": -0.028562031,
+              "remainingResidualMm": 0.074039628
+            },
+            {
+              "terminal": "A8:6",
+              "oppositeRow": false,
+              "originalResidualMm": 0.133083888,
+              "predictedAcrossCorrectionMm": 0,
+              "remainingAcrossMm": -0.00484966,
+              "unchangedAlongMm": -0.132995496,
+              "remainingResidualMm": 0.133083888
+            }
+          ],
+          "maximumHeldOutResidualMm": 0.788206385
+        }
+      ]
+    },
+    {
+      "calibrationVariant": "legacy-2.54-cpu",
+      "training": [
+        {
+          "ref": "A2.1",
+          "widthMm": 7.620000099,
+          "oppositeResidualsMm": [
+            -0.446118862,
+            -0.341467661,
+            -0.511670006,
+            -0.484466017
+          ]
+        },
+        {
+          "ref": "A4",
+          "widthMm": 7.619999899,
+          "oppositeResidualsMm": [
+            -0.324845745,
+            -0.534774705
+          ]
+        }
+      ],
+      "fractionalRowOffset": -0.057463311143,
+      "heldOutPackages": [
+        {
+          "ref": "A5",
+          "originalMaximumMm": 0.822934679,
+          "unchangedToleranceMm": 1.25,
+          "points": [
+            {
+              "terminal": "A5:14",
+              "oppositeRow": false,
+              "originalResidualMm": 0.511893975,
+              "predictedAcrossCorrectionMm": 0,
+              "remainingAcrossMm": 0.019091877,
+              "unchangedAlongMm": 0.511537821,
+              "remainingResidualMm": 0.511893975
+            },
+            {
+              "terminal": "A5:21",
+              "oppositeRow": true,
+              "originalResidualMm": 0.727448885,
+              "predictedAcrossCorrectionMm": -0.87574091,
+              "remainingAcrossMm": 0.148412784,
+              "unchangedAlongMm": 0.01325433,
+              "remainingResidualMm": 0.149003462
+            },
+            {
+              "terminal": "A5:30",
+              "oppositeRow": true,
+              "originalResidualMm": 0.822934679,
+              "predictedAcrossCorrectionMm": -0.87574091,
+              "remainingAcrossMm": 0.099258625,
+              "unchangedAlongMm": 0.272574295,
+              "remainingResidualMm": 0.290084507
+            },
+            {
+              "terminal": "A5:35",
+              "oppositeRow": true,
+              "originalResidualMm": 0.736175262,
+              "predictedAcrossCorrectionMm": -0.87574091,
+              "remainingAcrossMm": 0.173912824,
+              "unchangedAlongMm": 0.222241657,
+              "remainingResidualMm": 0.282200327
+            },
+            {
+              "terminal": "A5:40",
+              "oppositeRow": true,
+              "originalResidualMm": 0.641680466,
+              "predictedAcrossCorrectionMm": -0.87574091,
+              "remainingAcrossMm": 0.245793268,
+              "unchangedAlongMm": -0.122146587,
+              "remainingResidualMm": 0.274470616
+            },
+            {
+              "terminal": "A5:6",
+              "oppositeRow": false,
+              "originalResidualMm": 0.451412247,
+              "predictedAcrossCorrectionMm": 0,
+              "remainingAcrossMm": -0.04428624,
+              "unchangedAlongMm": 0.449234622,
+              "remainingResidualMm": 0.451412247
+            },
+            {
+              "terminal": "A5:7",
+              "oppositeRow": false,
+              "originalResidualMm": 0.226365149,
+              "predictedAcrossCorrectionMm": 0,
+              "remainingAcrossMm": -0.088941229,
+              "unchangedAlongMm": 0.208160127,
+              "remainingResidualMm": 0.226365149
+            },
+            {
+              "terminal": "A5:8",
+              "oppositeRow": false,
+              "originalResidualMm": 0.216509805,
+              "predictedAcrossCorrectionMm": 0,
+              "remainingAcrossMm": -0.051830562,
+              "unchangedAlongMm": 0.210214387,
+              "remainingResidualMm": 0.216509805
+            }
+          ],
+          "maximumHeldOutResidualMm": 0.511893975
+        },
+        {
+          "ref": "A8",
+          "originalMaximumMm": 1.238033522,
+          "unchangedToleranceMm": 1.25,
+          "points": [
+            {
+              "terminal": "A8:13",
+              "oppositeRow": true,
+              "originalResidualMm": 1.238033522,
+              "predictedAcrossCorrectionMm": -0.875740903,
+              "remainingAcrossMm": -0.24184033,
+              "unchangedAlongMm": -0.532671746,
+              "remainingResidualMm": 0.585000799
+            },
+            {
+              "terminal": "A8:19",
+              "oppositeRow": true,
+              "originalResidualMm": 1.225546467,
+              "predictedAcrossCorrectionMm": -0.875740903,
+              "remainingAcrossMm": -0.346574759,
+              "unchangedAlongMm": -0.088930117,
+              "remainingResidualMm": 0.357802501
+            },
+            {
+              "terminal": "A8:24",
+              "oppositeRow": true,
+              "originalResidualMm": 0.844140311,
+              "predictedAcrossCorrectionMm": -0.875740903,
+              "remainingAcrossMm": 0.068344766,
+              "unchangedAlongMm": -0.246341922,
+              "remainingResidualMm": 0.255646924
+            },
+            {
+              "terminal": "A8:6",
+              "oppositeRow": false,
+              "originalResidualMm": 0.155517148,
+              "predictedAcrossCorrectionMm": 0,
+              "remainingAcrossMm": -0.004849641,
+              "unchangedAlongMm": -0.155441514,
+              "remainingResidualMm": 0.155517148
+            }
+          ],
+          "maximumHeldOutResidualMm": 0.585000799
+        }
+      ]
+    }
+  ],
+  "registrationQualified": false,
+  "padPlacementAuthorized": false,
+  "scope": "Diagnostic shared fractional opposite-row offset fitted only to A2.1 and A4, with equal package weights. A5 and A8 do not enter that fit; their existing same-row pose anchors remain unchanged and other joints remain held out. Both retained calibration variants are reported. This is not a global projective registration or a measured package dimension. Shared photo picking, nominal footprint spacing, local lead forming and calibration bias remain confounded; original rigid fits and acceptance budgets are unchanged.",
+  "nextAction": "Use independent board-plane hole observations to distinguish shared registration/picking bias from installed row spacing. Do not change A8 alone on the basis of its conditional row-offset trial."
+}

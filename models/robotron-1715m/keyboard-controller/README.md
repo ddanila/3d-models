@@ -108,7 +108,9 @@ observations; failed extrapolation checks remain visible. Raised leads and socke
 centres; a successful local fit cannot establish copper attachment or board scale.
 The [A8 row-spacing diagnostic](reference/package-reviews/a8-row-spacing/assessment.json)
 tests a spacing hypothesis while retaining the original rigid-fit failure; it
-does not authorize footprint changes.
+does not authorize footprint changes. A [shared row-bias check](reference/package-reviews/shared-row-bias/assessment.json)
+fits A2.1/A4 and predicts smaller held-out A5/A8 residuals; shared calibration,
+picking and installed row spacing remain confounded.
 The eye-based fit holds out independent solder eyes and composes with qualified
 underside placement only inside the intersection of their domains. Eye matches
 do not establish net identity; nearby lanes must still be traced independently.
