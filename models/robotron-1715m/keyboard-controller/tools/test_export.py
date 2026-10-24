@@ -6,6 +6,24 @@ from geometry import arc_points,outline_polygon
 from photo_registration import homography,project,rigid_fit,selected_fits,review
 R=Path(__file__).resolve().parents[1]
 class ControllerExportTests(unittest.TestCase):
+ def test_package_pose_preserves_dimensions_and_holds_out_other_joints(self):
+  from package_pose import fit
+  reference={'1':[0,0],'2':[10,0],'3':[10,5],'4':[0,5]}
+  observed={k:[3-p[1],4+p[0]] for k,p in reference.items()}
+  result=fit(reference,observed,['1','2'])
+  self.assertEqual(result['rotationDegrees'],90)
+  self.assertEqual(result['maxHeldOutResidualMm'],0)
+  self.assertEqual([r['terminal'] for r in result['checks'] if r['heldOut']],['3','4'])
+  self.assertFalse(result['copperAssignmentQualified'])
+  observed['3'][0]+=2
+  self.assertEqual(fit(reference,observed,['1','2'])['maxHeldOutResidualMm'],2)
+  stretched={k:[2*p[0],2*p[1]] for k,p in reference.items()}
+  self.assertEqual(fit(reference,stretched,['1','2'])['anchorSpanMismatchMm'],10)
+  self.assertGreater(fit(reference,stretched,['1','2'])['maxHeldOutResidualMm'],0)
+  reflected={k:[p[0],-p[1]] for k,p in reference.items()}
+  self.assertEqual(fit(reference,reflected,['1','2'])['maxHeldOutResidualMm'],10)
+  with self.assertRaisesRegex(ValueError,'distinct anchors'):fit(reference,observed,['1','1'])
+
  def test_cpu_native_and_visual_pitch_follow_reference_package(self):
   import math
   layout=json.loads((R/'generated/layout.json').read_text());cpu=next(c for c in layout['components'] if c['ref']=='A5');pads={p['pin']:p['position'] for p in cpu['pads']}
@@ -92,6 +110,11 @@ class ControllerExportTests(unittest.TestCase):
   for v in metric['variants']:
    self.assertEqual(v['independentCheckComponents'],['A2.1','A4','A8'])
    self.assertLess(v['maxHeldOutResidualMm'],v['maxNominalHeldOutResidualMm'])
+   self.assertEqual({p['ref'] for p in v['packagePoses']},set(metric['checkComponents']))
+   for pose in v['packagePoses']:
+    self.assertFalse(pose['copperAssignmentQualified'])
+    self.assertEqual(sum(not p['heldOut'] for p in pose['checks']),2)
+    self.assertEqual(pose['withinPhotoTolerance'],max(p['fittedResidualMm'] for p in pose['checks'])<=pose['toleranceMm'])
    self.assertTrue(all(p['heldOut'] for p in v['pairs'] if p['terminals'][0].startswith(('A2.1:','A4:','A8:'))))
   for i,p in enumerate(report['paths']):
    self.assertEqual(p['referenceNet'],'/SENSE'+str(i))

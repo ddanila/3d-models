@@ -4,6 +4,7 @@ import hashlib
 import json
 import math
 import itertools
+from package_pose import fit as fit_pose
 from bottom_registration import inside_hull
 from photo_registration import homography, project
 
@@ -68,12 +69,32 @@ def metric_review(root, source, envelope):
         fit_refs = {p[0].split(':')[0] for p in fit_pairs}
         independent = [p for p in held if p['terminals'][0].split(':')[0] not in fit_refs]
         if not independent:raise ValueError('Metric review needs independent check packages')
-        variants.append(dict(id=name,estimatedEnvelopeMm=[round(v,6) for v in size],pairs=rows,
+        poses=[]
+        if set(source['poseAnchors'])!=set(source['checkComponents']):
+            raise ValueError('Pose anchors must cover each metric check package')
+        for ref,anchors in source['poseAnchors'].items():
+            if any(a.split(':')[0]!=ref for a in anchors):raise ValueError('Pose anchors must belong to their package')
+            count=max(int(k.split(':')[1]) for k in pads if k.split(':')[0]==ref)
+            if len({int(k.split(':')[1])<=count/2 for k in anchors})!=1:raise ValueError('Pose anchors must use the same package row')
+            keys=[k for k in pixels if k.split(':')[0]==ref]
+            reference={k:list(pads[k]) for k in keys}
+            if ref=='A5':
+                origin=pads['A5:1']
+                for k,p in reference.items():
+                    along=sum((p[i]-origin[i])*cpu_axis[i] for i in range(2))
+                    reference[k]=[p[i]+(cpu_scale-1)*along*cpu_axis[i] for i in range(2)]
+            observed={k:[normalized[k][i]*size[i] for i in range(2)] for k in keys}
+            pose=fit_pose(reference,observed,anchors)
+            pose['toleranceMm']=envelope['toleranceMm']
+            pose['withinPhotoTolerance']=max(p['fittedResidualMm'] for p in pose['checks'])<=pose['toleranceMm']
+            poses.append(dict(pose,ref=ref,independentScaleCheck=ref not in fit_refs))
+        variants.append(dict(id=name,packagePoses=poses,estimatedEnvelopeMm=[round(v,6) for v in size],pairs=rows,
             maxHeldOutResidualMm=max(p['fittedResidualMm'] for p in held),
             independentCheckComponents=sorted({p['terminals'][0].split(':')[0] for p in independent}),
             maxIndependentPackageResidualMm=max(p['fittedResidualMm'] for p in independent),
             maxNominalHeldOutResidualMm=max(p['nominalResidualMm'] for p in held)))
     return dict(source,nominalEnvelopeMm=nominal,nativeCpuPitchMm=round(cpu_span/19,9),variants=variants,
+        poseScope='Two same-row anchors fit translation and rotation only. Other observed package joints are held out. The global scale still assumes native cross-row spacing; these diagnostic poses do not authorize moving native pads or copper.',
         finding='Both conditional distance fits challenge the nominal envelope. Absolute placement, installed package variants and cross-row hole spacing remain separate; do not migrate copper from these scale estimates alone.')
 
 

@@ -285,7 +285,7 @@ def main():
  inputs=['bus-review.json','tools/routing_audit.py','filter-registration.json','supply-review.json','cable-copper.json','tools/cable_copper.py','output-assembly.json','tools/output_assembly.py','top-copper-landmarks.json','tools/top_registration.py','controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/connector_review.py','tools/connector_terminals.py','tools/route_evidence.py','route-evidence.json','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
  write('bus-review.json',bus_review())
  inputs.extend(['tools/bus_review.py','connection-review.json'])
- inputs.extend(['sense-review.json','tools/sense_review.py'])
+ inputs.extend(['sense-review.json','tools/sense_review.py','tools/package_pose.py'])
  inputs.append('tools/eye_registration.py')
  outputs=sorted(p for p in (ROOT/'generated').iterdir() if p.name!='manifest.json')
  for source in json.loads((ROOT/'evidence.json').read_text())['sources']:
