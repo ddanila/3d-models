@@ -22,6 +22,8 @@ jobs:
       - run: python3 models/robotron-1715m/keyboard-controller/tools/row_spacing_review.py --check
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_shared_row_bias_review.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/shared_row_bias_review.py --check
+      - run: python3 models/robotron-1715m/keyboard-controller/tools/test_outline_metric_review.py
+      - run: python3 models/robotron-1715m/keyboard-controller/tools/outline_metric_review.py --check
       - run: python3 models/robotron-1715m/keyboard-controller/tools/capacitor_package_review.py --out models/robotron-1715m/keyboard-controller/reference/package-reviews/frolyt-eks --check
       - name: Check ceramic capacitor candidate receipts
         run: |

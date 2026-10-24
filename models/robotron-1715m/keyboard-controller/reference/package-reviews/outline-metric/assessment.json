@@ -1,0 +1,163 @@
+{
+  "schema": 1,
+  "sources": {
+    "photo-landmarks.json": "f76f424013b762666e16ba3c28ddb322c8b65d6d88dd47584add2e1c427270b6",
+    "bottom-landmarks.json": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+    "sense-review.json": "c8f2bdb8959e09cce11f746aa1729894fb535b34f5c8ab8f78f464b9b4378153",
+    "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068",
+    "tools/outline_metric_review.py": "f31a4f14d8cc64d4aa1b3ee56f189b960cacc3b4008a329da01d432b565189ea"
+  },
+  "cases": [
+    {
+      "photo": "primary-top",
+      "corners": [
+        [
+          1085.157,
+          447.368
+        ],
+        [
+          1716.114,
+          438.421
+        ],
+        [
+          1872.734,
+          3992.763
+        ],
+        [
+          1257.439,
+          3995.0
+        ]
+      ],
+      "imageSize": [
+        3072,
+        4080
+      ],
+      "centeredCameraEstimate": {
+        "focalPixels": 41275.963388,
+        "longToShortAspect": 5.914371
+      },
+      "sensitivity": [
+        {
+          "cornerCoordinatePerturbationPixels": 1,
+          "principalPointOffsetsFractionOfImage": [
+            -0.01,
+            0,
+            0.01
+          ],
+          "validSamples": 2304,
+          "incompatibleOrUnidentifiedSamples": 0,
+          "sampledRanges": {
+            "focalPixels": [
+              28687.195355,
+              76905.757221
+            ],
+            "longToShortAspect": [
+              5.734024,
+              6.468862
+            ]
+          }
+        },
+        {
+          "cornerCoordinatePerturbationPixels": 8,
+          "principalPointOffsetsFractionOfImage": [
+            -0.01,
+            0,
+            0.01
+          ],
+          "validSamples": 1494,
+          "incompatibleOrUnidentifiedSamples": 810,
+          "sampledRanges": {
+            "focalPixels": [
+              9225.366311,
+              191435.519015
+            ],
+            "longToShortAspect": [
+              3.492831,
+              6.737768
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "photo": "primary-bottom",
+      "corners": [
+        [
+          1022,
+          355
+        ],
+        [
+          1613,
+          366
+        ],
+        [
+          1685,
+          3720
+        ],
+        [
+          1070,
+          3740
+        ]
+      ],
+      "imageSize": [
+        3072,
+        4080
+      ],
+      "centeredCameraEstimate": {
+        "focalPixels": 8479.330736,
+        "longToShortAspect": 5.589723
+      },
+      "sensitivity": [
+        {
+          "cornerCoordinatePerturbationPixels": 1,
+          "principalPointOffsetsFractionOfImage": [
+            -0.01,
+            0,
+            0.01
+          ],
+          "validSamples": 2304,
+          "incompatibleOrUnidentifiedSamples": 0,
+          "sampledRanges": {
+            "focalPixels": [
+              6609.141405,
+              10497.688266
+            ],
+            "longToShortAspect": [
+              5.557269,
+              5.621606
+            ]
+          }
+        },
+        {
+          "cornerCoordinatePerturbationPixels": 8,
+          "principalPointOffsetsFractionOfImage": [
+            -0.01,
+            0,
+            0.01
+          ],
+          "validSamples": 1678,
+          "incompatibleOrUnidentifiedSamples": 626,
+          "sampledRanges": {
+            "focalPixels": [
+              62.904463,
+              73059.39027
+            ],
+            "longToShortAspect": [
+              5.16842,
+              5.905725
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "registrationQualified": false,
+  "dimensionsAdopted": false,
+  "assumptions": [
+    "Planar rectangular board outline.",
+    "Undistorted pinhole image with square pixels and zero skew.",
+    "Principal point at image center for the nominal calculation; no independent camera calibration is available."
+  ],
+  "scope": "Orthogonal vanishing-direction calculation from existing outline corners, independent of DIP row spacing. It estimates aspect ratio only, not absolute scale. Corner perturbations and principal-point offsets are illustrative sensitivity samples, not measured bounds, probabilities or confidence intervals. Lens correction, crop and corner-picking errors are not identified by this calculation. No failed sample is discarded from the reported count, and no geometry is promoted.",
+  "nextAction": "Use independent camera/outline constraints or board-plane metrology before treating outline perspective as a replacement for package calibration."
+}

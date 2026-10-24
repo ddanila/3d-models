@@ -110,7 +110,9 @@ The [A8 row-spacing diagnostic](reference/package-reviews/a8-row-spacing/assessm
 tests a spacing hypothesis while retaining the original rigid-fit failure; it
 does not authorize footprint changes. A [shared row-bias check](reference/package-reviews/shared-row-bias/assessment.json)
 fits A2.1/A4 and predicts smaller held-out A5/A8 residuals; shared calibration,
-picking and installed row spacing remain confounded.
+picking and installed row spacing remain confounded. The independent
+[outline-perspective trial](reference/package-reviews/outline-metric/assessment.json)
+is sensitive to corner picks and camera assumptions; it does not resolve board scale.
 The eye-based fit holds out independent solder eyes and composes with qualified
 underside placement only inside the intersection of their domains. Eye matches
 do not establish net identity; nearby lanes must still be traced independently.
