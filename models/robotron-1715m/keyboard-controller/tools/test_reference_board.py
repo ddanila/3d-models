@@ -9,8 +9,8 @@ from reference_board import validate_pins, check, router_deck
 ROOT=Path(__file__).resolve().parents[1]
 class ReferenceTests(unittest.TestCase):
     def setUp(self):
-        layout=json.loads((ROOT/'generated/layout.json').read_text())
-        self.components=layout['components']+layout['unplaced']
+        layout=json.loads((ROOT/'reference/generated/layout.json').read_text())
+        self.components=layout['components']
         self.expected=json.loads((ROOT/'generated/connectivity.json').read_text())['components']
         evidence=json.loads((ROOT/'component-evidence.json').read_text())
         self.unused={ref:e['physicalUnusedPads'] for ref,e in evidence.items() if e.get('physicalUnusedPads')}
@@ -18,6 +18,9 @@ class ReferenceTests(unittest.TestCase):
     def test_source_contract_and_reference_exports(self):
         validate_pins(self.components,self.expected,self.unused)
         check()
+        historical=json.loads((ROOT/'generated/layout.json').read_text())
+        with self.assertRaisesRegex(ValueError, 'X1:A8'):
+            validate_pins(historical['components']+historical['unplaced'],self.expected,self.unused)
         layout=json.loads((ROOT/'reference/generated/layout.json').read_text())
         validate_pins(layout['components'],self.expected,self.unused)
         self.assertEqual(layout['variant'],'proposed-reference')
