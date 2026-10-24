@@ -17,6 +17,7 @@ jobs:
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_reference_board.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/reference_assembly.py --check
       - run: python3 models/robotron-1715m/keyboard-controller/tools/reference_enclosure.py --check
+      - run: python3 models/robotron-1715m/keyboard-controller/tools/connector_package_review.py --check
       - run: python3 models/robotron-1715m/keyboard-controller/tools/capacitor_package_review.py --out models/robotron-1715m/keyboard-controller/reference/package-reviews/frolyt-eks --check
       - name: Check ceramic capacitor candidate receipts
         run: |

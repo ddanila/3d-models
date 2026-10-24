@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "candidate": "x1-efs-two-row-candidate",
+  "sources": {
+    "reference/connector-package-candidate.json": "c46b1fa3916f3a53fcd472ae89ff017744449dbad72351e63134b7e04a70a114",
+    "generated/connector-review.json": "b85b5c00e6a80970eadfb147653fc38c783eb12015dd98aab72c6e26064ce24f",
+    "tools/connector_package_review.py": "461a78562f679b09252c3734160e6f1b13b819393f28a3dc8ca89a71667cf0e0"
+  },
+  "comparisons": {
+    "topLeadEnds": {
+      "housingFar": {
+        "projectedEndpointSpanMm": 28.62823774443934,
+        "projectedPitchMm": 2.385686478703278,
+        "catalogueMinusProjectedSpanMm": 1.371762255560661,
+        "conditionalScaleMultiplier": 1.04791640574618,
+        "interiorResidualToEndpointFitMm": [
+          0.18392969965179887,
+          0.05794638740487554,
+          0.11336888606089865,
+          0.19128780355575042,
+          0.15867840060840488,
+          0.21909610138765717,
+          0.13962306606780642,
+          0.06550606081077033,
+          0.07285439822158138,
+          0.029974842043312105,
+          0.015299300038203172
+        ],
+        "maximumInteriorResidualMm": 0.21909610138765717
+      },
+      "housingNear": {
+        "projectedEndpointSpanMm": 28.442358378638453,
+        "projectedPitchMm": 2.3701965315532045,
+        "catalogueMinusProjectedSpanMm": 1.5576416213615474,
+        "conditionalScaleMultiplier": 1.0547648546096449,
+        "interiorResidualToEndpointFitMm": [
+          0.09223562941785778,
+          0.11087051529827044,
+          0.11122944419457167,
+          0.17367594667591202,
+          0.14815920453690168,
+          0.04164143740127562,
+          0.1156216545198855,
+          0.09682513445067964,
+          0.07426173127728647,
+          0.03843306041346313,
+          0.09175276595682857
+        ],
+        "maximumInteriorResidualMm": 0.17367594667591202
+      }
+    },
+    "undersideJoints": {
+      "housingFar": {
+        "projectedEndpointSpanMm": 28.05772180144341,
+        "projectedPitchMm": 2.3381434834536177,
+        "catalogueMinusProjectedSpanMm": 1.9422781985565898,
+        "conditionalScaleMultiplier": 1.0692243729659003,
+        "interiorResidualToEndpointFitMm": [
+          0.07803817116993803,
+          0.1483584905510817,
+          0.1625573749369976,
+          0.1725183195770637,
+          0.1881153374066859,
+          0.19314694252044956,
+          0.18773396186863692,
+          0.17206428056973322,
+          0.14308917563571516,
+          0.1062829549051621,
+          0.05854126468987448
+        ],
+        "maximumInteriorResidualMm": 0.19314694252044956
+      },
+      "housingNear": {
+        "projectedEndpointSpanMm": 27.931430156451118,
+        "projectedPitchMm": 2.32761917970426,
+        "catalogueMinusProjectedSpanMm": 2.0685698435488824,
+        "conditionalScaleMultiplier": 1.0740588588540685,
+        "interiorResidualToEndpointFitMm": [
+          0.08490367194691757,
+          0.17707521467319504,
+          0.10265339644616828,
+          0.0930886738797919,
+          0.10644574050198796,
+          0.1566406023053436,
+          0.17790043245057333,
+          0.14269556852797138,
+          0.07975272039594078,
+          0.05116846185641839,
+          0.07955926257805457
+        ],
+        "maximumInteriorResidualMm": 0.17790043245057333
+      }
+    }
+  },
+  "installedIdentityConfirmed": false,
+  "padPlacementAuthorized": false,
+  "scope": "Conditional catalogue contact pitch compared with projected visible lead ends and underside joints. Endpoint-based interior residuals test row regularity only. No registration qualification, physical continuity, automatic scaling, package adoption or mating-clearance claim.",
+  "nextAction": "Resolve detailed connector form and independently constrain board-plane scale before changing native pads or the reference connector adapter."
+}

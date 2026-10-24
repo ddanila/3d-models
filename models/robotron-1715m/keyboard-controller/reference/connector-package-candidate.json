@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "id": "x1-efs-two-row-candidate",
+  "component": "X1",
+  "installedIdentityConfirmed": false,
+  "source": {
+    "title": "Kontaktbauelemente \u2014 Kombinat VEB Elektronische Bauelemente",
+    "url": "https://datasheet.datasheetarchive.com/originals/scans/Scans-048/DSAGER000365.pdf",
+    "sha256": "6d246b53eef37f902604f3ab39e67369b41d2e54226f459611cd6f4cf90c4c3f",
+    "pdfPages": [
+      8,
+      9,
+      10
+    ],
+    "printedPages": [
+      7,
+      8,
+      9
+    ],
+    "revision": null
+  },
+  "candidate": {
+    "family": "Indirect EFS flat connector, TGL 29331/04, two-row 26-contact configuration",
+    "contactPitchNominalMm": 2.5,
+    "contactsPerRow": 13,
+    "contactSpanNominalMm": 30,
+    "drawingTableRow": 4,
+    "lengthL1Mm": {
+      "nominal": 48,
+      "lowerDeviation": -0.3,
+      "upperDeviation": 0
+    },
+    "mountingSpanL2Mm": {
+      "forms1_2_6_7": 45,
+      "form9": 42.5,
+      "tolerance": 0.3
+    },
+    "contactSpanL3Mm": {
+      "nominal": 30,
+      "tolerance": 0.3
+    },
+    "bodyWidthBMm": {
+      "nominal": 8.5,
+      "tolerance": 0.2
+    }
+  },
+  "photoCompatibility": [
+    "Two visible rows of thirteen lead exits, both leaving the same housing side.",
+    "Right-angle lead geometry is compatible with the catalogued family; appearance does not identify a specific plug/socket or attachment form."
+  ],
+  "limits": [
+    "Catalogue dimensions are conditional on family identification, not measured specimen dimensions.",
+    "L1 includes the end mounting structure; do not replace the existing central body box with a solid 48 mm box.",
+    "Catalogue row and contact pitch must not be transferred to board-hole centres without identifying the lead and mounting form.",
+    "Existing photo projection uses nominal board dimensions and can retain perspective or raised-lead bias; package-pitch comparison cannot independently validate that registration."
+  ],
+  "nextEvidence": [
+    "Identify plug/socket and mounting form from mating-face or marking evidence.",
+    "Obtain the detailed form drawing before modelling lead exits, mating travel and mounting ears.",
+    "Reconcile the conditional contact span with independent board-plane landmarks before moving historical pads."
+  ]
+}
