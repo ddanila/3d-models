@@ -4,7 +4,11 @@
   "sources": {
     "reference/connector-package-candidate.json": "c46b1fa3916f3a53fcd472ae89ff017744449dbad72351e63134b7e04a70a114",
     "generated/connector-review.json": "b85b5c00e6a80970eadfb147653fc38c783eb12015dd98aab72c6e26064ce24f",
-    "tools/connector_package_review.py": "461a78562f679b09252c3734160e6f1b13b819393f28a3dc8ca89a71667cf0e0"
+    "generated/bus-review.json": "fe78338191763e2d60f50481b61d8ff86f8b1608cfb7a67dd0f2d79debfbcbbc",
+    "component-evidence.json": "57752b9a8963098b2b357f8b7714108b1b1236b2471cb445f25feb64b15011e0",
+    "sense-review.json": "c8f2bdb8959e09cce11f746aa1729894fb535b34f5c8ab8f78f464b9b4378153",
+    "tools/connector_package_review.py": "598cfe547950dbe9855985f77232a3ecb445be11c30c277c34945bf1195d48f4",
+    "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068"
   },
   "comparisons": {
     "topLeadEnds": {
@@ -92,8 +96,224 @@
       }
     }
   },
+  "independentPackageScaleChecks": [
+    {
+      "id": "nominal-board-envelope",
+      "estimatedEnvelopeMm": [
+        270,
+        46
+      ],
+      "connectorExcludedFromCalibration": true,
+      "packagePoseChecksEvaluated": false,
+      "failedPackagePoseChecks": [],
+      "rows": {
+        "housingFar": {
+          "projectedEndpointSpanMm": 28.868587212604375,
+          "projectedPitchMm": 2.4057156010503644,
+          "catalogueMinusProjectedSpanMm": 1.1314127873956252,
+          "conditionalScaleMultiplier": 1.0391918308666535,
+          "interiorResidualToEndpointFitMm": [
+            0.05364833222052037,
+            0.10697083370829849,
+            0.0854572367287369,
+            0.04349893867129087,
+            0.04671753712534227,
+            0.04883432873546888,
+            0.049966125063805364,
+            0.05015865797699451,
+            0.029881997905724725,
+            0.02704655386075858,
+            0.009775736364802098
+          ],
+          "maximumInteriorResidualMm": 0.10697083370829849,
+          "endpointPickingSpanIntervalMm": [
+            27.091355300780428,
+            30.64581912442832
+          ],
+          "catalogueSpanIntervalMm": [
+            29.7,
+            30.3
+          ],
+          "pickingIntervalOverlapsCatalogue": true
+        },
+        "housingNear": {
+          "projectedEndpointSpanMm": 28.758632587887746,
+          "projectedPitchMm": 2.3965527156573123,
+          "catalogueMinusProjectedSpanMm": 1.241367412112254,
+          "conditionalScaleMultiplier": 1.0431650360398248,
+          "interiorResidualToEndpointFitMm": [
+            0.054962907286670686,
+            0.24903820874528465,
+            0.21672368698757513,
+            0.2090385666370632,
+            0.2070228451837127,
+            0.22639488622655027,
+            0.1285588709947212,
+            0.0772786130787352,
+            0.16172351658997378,
+            0.14048488642273488,
+            0.13497389251417125
+          ],
+          "maximumInteriorResidualMm": 0.24903820874528465,
+          "endpointPickingSpanIntervalMm": [
+            26.978531189064192,
+            30.5387339867113
+          ],
+          "catalogueSpanIntervalMm": [
+            29.7,
+            30.3
+          ],
+          "pickingIntervalOverlapsCatalogue": true
+        }
+      }
+    },
+    {
+      "id": "native-footprints",
+      "estimatedEnvelopeMm": [
+        276.822105,
+        47.596002
+      ],
+      "connectorExcludedFromCalibration": true,
+      "packagePoseChecksEvaluated": true,
+      "failedPackagePoseChecks": [
+        "A8"
+      ],
+      "rows": {
+        "housingFar": {
+          "projectedEndpointSpanMm": 29.598024827304023,
+          "projectedPitchMm": 2.466502068942002,
+          "catalogueMinusProjectedSpanMm": 0.4019751726959768,
+          "conditionalScaleMultiplier": 1.0135811485746562,
+          "interiorResidualToEndpointFitMm": [
+            0.0554942160056613,
+            0.11065683470826289,
+            0.08836355316131184,
+            0.044843680480622386,
+            0.048155496889649214,
+            0.05034393539114349,
+            0.05152962395401639,
+            0.05175794828539963,
+            0.030748885685456348,
+            0.02788277827996725,
+            0.010027527485605021
+          ],
+          "maximumInteriorResidualMm": 0.11065683470826289,
+          "endpointPickingSpanIntervalMm": [
+            27.767766357213773,
+            31.428283297394273
+          ],
+          "catalogueSpanIntervalMm": [
+            29.7,
+            30.3
+          ],
+          "pickingIntervalOverlapsCatalogue": true
+        },
+        "housingNear": {
+          "projectedEndpointSpanMm": 29.485286931311602,
+          "projectedPitchMm": 2.4571072442759667,
+          "catalogueMinusProjectedSpanMm": 0.5147130686883976,
+          "conditionalScaleMultiplier": 1.0174566070829654,
+          "interiorResidualToEndpointFitMm": [
+            0.056797829392879036,
+            0.255693854671789,
+            0.2222964212826242,
+            0.21455868925476962,
+            0.21269354314377364,
+            0.23304224544361773,
+            0.1329688224323915,
+            0.07992275272769565,
+            0.1661244655613363,
+            0.14406969681925938,
+            0.13838465377192305
+          ],
+          "maximumInteriorResidualMm": 0.255693854671789,
+          "endpointPickingSpanIntervalMm": [
+            27.6520591815368,
+            31.318514681086405
+          ],
+          "catalogueSpanIntervalMm": [
+            29.7,
+            30.3
+          ],
+          "pickingIntervalOverlapsCatalogue": true
+        }
+      }
+    },
+    {
+      "id": "legacy-2.54-cpu",
+      "estimatedEnvelopeMm": [
+        281.251265,
+        47.595691
+      ],
+      "connectorExcludedFromCalibration": true,
+      "packagePoseChecksEvaluated": true,
+      "failedPackagePoseChecks": [],
+      "rows": {
+        "housingFar": {
+          "projectedEndpointSpanMm": 30.071570409837317,
+          "projectedPitchMm": 2.5059642008197764,
+          "catalogueMinusProjectedSpanMm": -0.07157040983731733,
+          "conditionalScaleMultiplier": 0.9976199975970026,
+          "interiorResidualToEndpointFitMm": [
+            0.055520889815985165,
+            0.11070051387490185,
+            0.08846543515135402,
+            0.045130259557415904,
+            0.048474223237922325,
+            0.050665796189131994,
+            0.05182601244857029,
+            0.05200360860493642,
+            0.03104478081940912,
+            0.028060796104677283,
+            0.010179586053147605
+          ],
+          "maximumInteriorResidualMm": 0.11070051387490185,
+          "endpointPickingSpanIntervalMm": [
+            28.22626837917434,
+            31.916872440500295
+          ],
+          "catalogueSpanIntervalMm": [
+            29.7,
+            30.3
+          ],
+          "pickingIntervalOverlapsCatalogue": true
+        },
+        "housingNear": {
+          "projectedEndpointSpanMm": 29.957037531348217,
+          "projectedPitchMm": 2.496419794279018,
+          "catalogueMinusProjectedSpanMm": 0.042962468651783325,
+          "conditionalScaleMultiplier": 1.0014341360892853,
+          "interiorResidualToEndpointFitMm": [
+            0.05692323766891603,
+            0.2591488114537774,
+            0.22568373678393178,
+            0.21757421623091436,
+            0.21532604132847755,
+            0.23514563584280285,
+            0.1330561157743651,
+            0.07998700477748054,
+            0.16823118814771212,
+            0.14631323622759707,
+            0.1405981664056158
+          ],
+          "maximumInteriorResidualMm": 0.2591488114537774,
+          "endpointPickingSpanIntervalMm": [
+            28.108766605043844,
+            31.80530845765259
+          ],
+          "catalogueSpanIntervalMm": [
+            29.7,
+            30.3
+          ],
+          "pickingIntervalOverlapsCatalogue": true
+        }
+      }
+    }
+  ],
+  "uncertaintyScope": "Endpoint picking only: plus/minus the recorded pixel uncertainty on both image axes, propagated through each fixed homography. Excludes board-corner, package-pitch, cross-row-spacing and calibration uncertainty; overlap is not package identification or a registration pass.",
   "installedIdentityConfirmed": false,
   "padPlacementAuthorized": false,
+  "allPickingIntervalsOverlapCatalogue": true,
   "scope": "Conditional catalogue contact pitch compared with projected visible lead ends and underside joints. Endpoint-based interior residuals test row regularity only. No registration qualification, physical continuity, automatic scaling, package adoption or mating-clearance claim.",
-  "nextAction": "Resolve detailed connector form and independently constrain board-plane scale before changing native pads or the reference connector adapter."
+  "nextAction": "Use the manufacturer CPU-pitch calibration as a conditional cross-check, retaining its failed package-pose checks. Do not select the legacy CPU pitch because it fits X1 better. Resolve board-plane registration and detailed connector form before changing native pads or the reference adapter."
 }

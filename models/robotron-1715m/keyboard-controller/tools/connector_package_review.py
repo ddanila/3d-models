@@ -5,6 +5,7 @@ import hashlib
 import json
 import math
 from pathlib import Path
+from photo_registration import homography, project
 
 ROOT=Path(__file__).resolve().parents[1]
 TARGET=ROOT/'reference/package-reviews/efs-x1/assessment.json'
@@ -31,15 +32,57 @@ def row_review(points, candidate):
             'maximumInteriorResidualMm':max(residuals)}
 
 def build():
-    names=['reference/connector-package-candidate.json','generated/connector-review.json','tools/connector_package_review.py']
+    names=['reference/connector-package-candidate.json','generated/connector-review.json','generated/bus-review.json','component-evidence.json','sense-review.json','tools/connector_package_review.py','tools/photo_registration.py']
     candidate=json.loads((ROOT/names[0]).read_text())
     observation=json.loads((ROOT/names[1]).read_text())
     result={name:{row:row_review(points,candidate['candidate']) for row,points in rows.items()}
             for name,rows in [('topLeadEnds',observation['projectedLeadEndRowsMm']),('undersideJoints',observation['underside']['projectedJointRowsMm'])]}
+    sense=json.loads((ROOT/'sense-review.json').read_text())
+    metric=json.loads((ROOT/'generated/bus-review.json').read_text())['senseReview']['metricReview']
+    observed=json.loads((ROOT/'component-evidence.json').read_text())['X1']['physicalReview']['underside']
+    if observed['photoSha256']!=sense['sourceSha256']:
+        raise ValueError('Metric and connector observations must use the same photograph')
+    if any(pin.startswith('X1:') for pair in metric['calibrationPairs'] for pin in pair):
+        raise ValueError('X1 cannot calibrate its own independent check')
+    h=homography(sense['envelopeTrial']['photoCorners'],[[-.5,.5],[-.5,-.5],[.5,-.5],[.5,.5]])
+    calibrations=[{'id':'nominal-board-envelope','estimatedEnvelopeMm':metric['nominalEnvelopeMm']}]+metric['variants']
+    trials=[]
+    uncertainty=observed['pixelUncertainty']
+    if not math.isfinite(uncertainty) or uncertainty<0:raise ValueError('Invalid pixel uncertainty')
+    catalogue=candidate['candidate']['contactSpanL3Mm']
+    catalogue_interval=[catalogue['nominal']-catalogue['tolerance'],catalogue['nominal']+catalogue['tolerance']]
+    for trial in calibrations:
+        size=trial['estimatedEnvelopeMm']
+        def mapped(point):return [v*scale for v,scale in zip(project(h,point),size)]
+        rows={}
+        for row,pixels in observed['jointRowsPixels'].items():
+            points=[mapped(p) for p in pixels]
+            record=row_review(points,candidate['candidate'])
+            radii=[]
+            for pixel,point in [(pixels[0],points[0]),(pixels[-1],points[-1])]:
+                # A projective rectangle stays convex when its denominator keeps
+                # one sign. Its farthest mapped point is then a corner.
+                corners=[[pixel[0]+dx*uncertainty,pixel[1]+dy*uncertainty] for dx in (-1,1) for dy in (-1,1)]
+                denominators=[h[6]*p[0]+h[7]*p[1]+h[8] for p in corners]
+                if min(denominators)<=0<=max(denominators):raise ValueError('Uncertainty crosses projection pole')
+                radii.append(max(math.dist(mapped(p),point) for p in corners))
+            radius=sum(radii);span=record['projectedEndpointSpanMm']
+            interval=[max(0,span-radius),span+radius]
+            record.update(endpointPickingSpanIntervalMm=interval,
+                catalogueSpanIntervalMm=catalogue_interval,
+                pickingIntervalOverlapsCatalogue=max(interval[0],catalogue_interval[0])<=min(interval[1],catalogue_interval[1]))
+            rows[row]=record
+        trials.append({'id':trial['id'],'estimatedEnvelopeMm':size,'connectorExcludedFromCalibration':True,
+                      'packagePoseChecksEvaluated':'packagePoses' in trial,
+                      'failedPackagePoseChecks':[p['ref'] for p in trial.get('packagePoses',[]) if not p['withinPhotoTolerance']],
+                      'rows':rows})
     return {'schema':1,'candidate':candidate['id'],'sources':{name:digest(ROOT/name) for name in names},
-            'comparisons':result,'installedIdentityConfirmed':False,'padPlacementAuthorized':False,
+            'comparisons':result,'independentPackageScaleChecks':trials,
+            'uncertaintyScope':'Endpoint picking only: plus/minus the recorded pixel uncertainty on both image axes, propagated through each fixed homography. Excludes board-corner, package-pitch, cross-row-spacing and calibration uncertainty; overlap is not package identification or a registration pass.',
+            'installedIdentityConfirmed':False,'padPlacementAuthorized':False,
+            'allPickingIntervalsOverlapCatalogue':all(row['pickingIntervalOverlapsCatalogue'] for trial in trials for row in trial['rows'].values()),
             'scope':'Conditional catalogue contact pitch compared with projected visible lead ends and underside joints. Endpoint-based interior residuals test row regularity only. No registration qualification, physical continuity, automatic scaling, package adoption or mating-clearance claim.',
-            'nextAction':'Resolve detailed connector form and independently constrain board-plane scale before changing native pads or the reference connector adapter.'}
+            'nextAction':'Use the manufacturer CPU-pitch calibration as a conditional cross-check, retaining its failed package-pose checks. Do not select the legacy CPU pitch because it fits X1 better. Resolve board-plane registration and detailed connector form before changing native pads or the reference adapter.'}
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');args=parser.parse_args()
