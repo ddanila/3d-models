@@ -2,9 +2,9 @@
   "schema": 1,
   "scope": "Physical route review, not new connectivity evidence. X1 serves the matrix/LEDs; XT1 is the host cable. Reference endpoints are targets for tracing, not observed attachments.",
   "inputSha256": {
-    "connection-review.json": "255e7c4f7f793814bfb86194c22708292152a503b4e4b822642ec178f11a201e",
+    "connection-review.json": "11aff8d9d9aa4f7fe19543c286a135d5b0a877f87f9bf8b54874a5609a4a7e27",
     "evidence.json": "261fe27e0acb73f701ebf3e5577b0f390d2001602c86ab7f53c922206e83f888",
-    "component-evidence.json": "29ae3bedb8c6d777bc96daa2aa8328958222c595b5679ea1f566ef037d0dd588",
+    "component-evidence.json": "ab360451dbea1cfc3c28d5d5b582a42510f6e44df2ef9e4ba0aff5c98ff33bee",
     "route-evidence.json": "30c3b039aaa1cef03832c82d7d63a407e7f23abecea0455484dcf35989ff50ae",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
     "generated/layout.json": "0206cbbce0cf25b974257a029ef87fd476c24a96e176201a1bca18ca3228ffc0",
@@ -4378,7 +4378,7 @@
     },
     {
       "id": "x1-a8",
-      "title": "X1 A8: classify the schematic-omitted contact",
+      "title": "X1 A8: present, soldered and unrouted",
       "sameNetSets": [],
       "seriesComponents": [],
       "routeGroups": [],
@@ -4389,15 +4389,23 @@
         "comparison-photo-080415534",
         "comparison-photo-080347973"
       ],
-      "finding": "A physical contact position exists in the constrained row order, but no X1:A8 pin occurs in the reference netlist. It remains visual geometry only.",
-      "alternatives": [
-        "Unused contact with no electrical connection.",
-        "Specimen-specific connection omitted from the reference.",
-        "Apparent attachment is opposite-side copper or an obscured neighbouring lead."
-      ],
-      "nextDeskWork": "Inspect the marked far-row eighth lead and underside joint in the primary photos, then compare the mating-face and bent-lead views without equating their coordinates with the primary specimen.",
-      "decisiveObservation": "A visible complete attachment or a recorded contact-to-pad resistance map that distinguishes an unused contact from a connected one. An obscured trace is not evidence of disconnection.",
-      "doNotInfer": "Do not create a numbered native pad or assign a net simply to fill the missing schematic position.",
+      "finding": "Owner inspection of the primary museum board confirms X1:A8 is present and soldered into a PCB hole, with no tracks attached on either side. Classify it as a physically present, unrouted contact. The reference schematic omits it.",
+      "alternatives": [],
+      "nextDeskWork": "Preserve the present-but-unrouted classification when representing the isolated pad and hole; do not invent a signal net.",
+      "decisiveObservation": "Resolved by the owner's direct inspection reported on 2026-10-24. No further photo is required to classify the visible routing.",
+      "doNotInfer": "This is owner-reported visual inspection, not a resistance measurement. Pad dimensions and comparison-specimen wiring are not established by it.",
+      "ownerObservation": {
+        "date": "2026-10-24",
+        "source": "Museum owner, direct inspection reported in conversation",
+        "specimen": "primary museum keyboard controller",
+        "contact": "X1:A8",
+        "present": true,
+        "solderedIntoPcbHole": true,
+        "tracksAttachedTop": false,
+        "tracksAttachedBottom": false,
+        "continuityMeasured": false,
+        "statement": "X1.A8 exists and soldered into the hole in the PCB, but it does not have any routes connected to this point on any side of the board"
+      },
       "referenceNets": [],
       "candidateEndpoints": [],
       "series": {},

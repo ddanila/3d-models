@@ -65,18 +65,34 @@
     },
     {
       "id": "x1-a8",
-      "title": "X1 A8: classify the schematic-omitted contact",
+      "title": "X1 A8: present, soldered and unrouted",
       "sameNetSets": [],
       "seriesComponents": [],
       "routeGroups": [],
       "reviews": [],
       "connectorContact": "A8",
-      "supportingSources": ["comparison-photo-080411074", "comparison-photo-080415534", "comparison-photo-080347973"],
-      "finding": "A physical contact position exists in the constrained row order, but no X1:A8 pin occurs in the reference netlist. It remains visual geometry only.",
-      "alternatives": ["Unused contact with no electrical connection.", "Specimen-specific connection omitted from the reference.", "Apparent attachment is opposite-side copper or an obscured neighbouring lead."],
-      "nextDeskWork": "Inspect the marked far-row eighth lead and underside joint in the primary photos, then compare the mating-face and bent-lead views without equating their coordinates with the primary specimen.",
-      "decisiveObservation": "A visible complete attachment or a recorded contact-to-pad resistance map that distinguishes an unused contact from a connected one. An obscured trace is not evidence of disconnection.",
-      "doNotInfer": "Do not create a numbered native pad or assign a net simply to fill the missing schematic position."
+      "supportingSources": [
+        "comparison-photo-080411074",
+        "comparison-photo-080415534",
+        "comparison-photo-080347973"
+      ],
+      "finding": "Owner inspection of the primary museum board confirms X1:A8 is present and soldered into a PCB hole, with no tracks attached on either side. Classify it as a physically present, unrouted contact. The reference schematic omits it.",
+      "alternatives": [],
+      "nextDeskWork": "Preserve the present-but-unrouted classification when representing the isolated pad and hole; do not invent a signal net.",
+      "decisiveObservation": "Resolved by the owner's direct inspection reported on 2026-10-24. No further photo is required to classify the visible routing.",
+      "doNotInfer": "This is owner-reported visual inspection, not a resistance measurement. Pad dimensions and comparison-specimen wiring are not established by it.",
+      "ownerObservation": {
+        "date": "2026-10-24",
+        "source": "Museum owner, direct inspection reported in conversation",
+        "specimen": "primary museum keyboard controller",
+        "contact": "X1:A8",
+        "present": true,
+        "solderedIntoPcbHole": true,
+        "tracksAttachedTop": false,
+        "tracksAttachedBottom": false,
+        "continuityMeasured": false,
+        "statement": "X1.A8 exists and soldered into the hole in the PCB, but it does not have any routes connected to this point on any side of the board"
+      }
     }
   ]
 }

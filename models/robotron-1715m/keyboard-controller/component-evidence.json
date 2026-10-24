@@ -108,7 +108,7 @@
     "referenceType": "MATRIX_CONNECTOR",
     "placementEvidence": "photo-placed-reference-terminal-order",
     "pinEvidence": "connector-label-or-semantic-terminal",
-    "note": "Native reference pads follow locally registered underside joints with row numbering constrained by photographed attachments. This is not measured continuity or metrology. The schematic-omitted A8 contact remains unclassified visual geometry; no electrical pad or net is invented for it. Housing dimensions and lead profiles remain estimates. See generated/connector-review.json and generated/connector-terminals.json.",
+    "note": "Native reference pads follow locally registered underside joints with row numbering constrained by photographed attachments. This is not measured continuity or metrology. Owner inspection identifies the schematic-omitted A8 contact as present, soldered and unrouted on both sides; see connection-review.json, x1-a8. It remains outside the native reference netlist. Housing dimensions and lead profiles remain estimates. See generated/connector-review.json and generated/connector-terminals.json.",
     "placementAuthority": "controller.kicad_pcb",
     "physicalReview": {
       "status": "registered-joints-reference-terminal-order",
@@ -232,7 +232,7 @@
         "comparison-photo-080415534"
       ],
       "comparisonObservation": "Separate-specimen oblique views corroborate two stacked contact rows and bent tails exiting one housing side. Handwritten A/B and end markings are visible but do not independently establish primary-specimen terminal numbering.",
-      "limits": "Local underside registration constrains solder-joint geometry. Far-row identity follows the R11.1/R11.2 attachments; near-row direction follows the eighth contact to A2.1:6 underside trace. Numbering is conditional on reference component identity and visible attachments, not measured continuity. The schematic-omitted A8 contact remains electrically unclassified; dimensions are not metrology.",
+      "limits": "Local underside registration constrains solder-joint geometry. Far-row identity follows the R11.1/R11.2 attachments; near-row direction follows the eighth contact to A2.1:6 underside trace. Numbering is conditional on reference component identity and visible attachments, not measured continuity. The schematic-omitted A8 contact is owner-confirmed present and unrouted (connection-review.json, x1-a8); dimensions are not metrology.",
       "underside": {
         "photoSource": "photo-bottom",
         "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
