@@ -76,7 +76,7 @@ intersection() {{
                          'intersectionMm3': round(value, 6), 'intersects': value >= .001})
     report = {
         'schema': 2, 'variant': 'proposed-reference',
-        'scope': 'Reference PCB substrate, drilled holes, populated bodies and leads at the existing keyboard controller transform. Static nominal solids only; excludes PCB copper, connector engagement, cable and shield braid, bend radii and manufacturing tolerances. Zero volume permits touching. Enclosure dimensions and installed seating remain unmeasured.',
+        'scope': 'Reference PCB substrate, drilled holes, populated bodies and leads at the existing keyboard controller transform. Static nominal solids only; excludes PCB copper, connector engagement, cable and shield braid, curve tessellation error and manufacturing tolerances. Proposed circular lead bends are included. Zero volume permits touching. Enclosure dimensions and installed seating remain unmeasured.',
         'engine': subprocess.check_output(['openscad', '--version'], stderr=subprocess.STDOUT, text=True).strip(),
         'intersectionBudgetMm3': .001, 'results': rows[:-2], 'positiveControl': rows[-2], 'mountingControl': rows[-1],
         'nominalInterfacesClear': not any(row['intersects'] for row in rows[:-2]),

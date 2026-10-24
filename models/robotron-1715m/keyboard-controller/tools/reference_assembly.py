@@ -8,6 +8,7 @@ from pathlib import Path
 import struct
 from lead_clearance import review as lead_clearance_review
 from shared_filter import build as shared_filter_build
+from lead_bends import fillet
 
 ROOT=Path(__file__).resolve().parents[1]
 REF=ROOT/'reference'
@@ -42,7 +43,7 @@ def build():
     packages={p['id']:p for p in evidence['packageReferences']}
     expected={c['ref'] for c in layout['components'] if not c['ref'].startswith('H')}
     if set(spec['components'])!=expected:raise ValueError('Assembly population differs from PCB')
-    sources=['reference/assembly.json','reference/generated/layout.json','generated/connectivity.json','evidence.json','tools/reference_assembly.py','tools/lead_clearance.py']
+    sources=['reference/assembly.json','reference/generated/layout.json','generated/connectivity.json','evidence.json','tools/reference_assembly.py','tools/lead_clearance.py','tools/lead_bends.py']
     result=[]
     for c in layout['components']:
         ref=c['ref']
@@ -82,18 +83,34 @@ def build():
         leads=[]
         for pin,port in terminals.items():
             p=pinmap[pin];tip=[*p['position'],-.5];entry=[*p['position'],2.1];end=world(port[:2],origin,angle,port[2])
-            leads.append({'pin':pin,'net':p['net'],'points':[tip,entry,end],'diameterMm':math.hypot(*package['leadSectionMm']) if kind=='transistor' else .3})
+            path=[tip,end] if math.dist(tip[:2],end[:2])<1e-9 else [tip,entry,end]
+            leads.append({'pin':pin,'net':p['net'],'points':path,'diameterMm':math.hypot(*package['leadSectionMm']) if kind=='transistor' else .3})
         bodybounds=bounds([world(p[:2],origin,angle,z+p[2]) for p in points])
         result.append({'ref':ref,'type':c['type'],'package':kind,'basis':s['basis'],'position':[ *origin,z],'rotation':round(angle,9),'sizeMm':size,'mesh':mesh,'profile':profile,'boundsMm':bodybounds,'leads':leads,'footprint':{'id':'RobotronReference_'+ref,'terminals':{p['pin']:{'offsetMm':[round(v,9)+0.0 for v in rotate([p['position'][i]-origin[i] for i in range(2)],-angle)],'net':p['net']} for p in pads}}})
     shared_bodies=[shared_filter_build(spec['sharedFilter'],result)]
     sources.append('tools/shared_filter.py')
+    forming=spec['leadForming']
+    for c in result:
+        if c['package']=='filter':
+            a,b=c['leads']
+            points,bends=fillet(a['points']+list(reversed(b['points'][:-1])),forming['radiusMm'],forming['chordErrorMm'])
+            mid=len(points)//2
+            a['points']=points[:mid+1];b['points']=list(reversed(points[mid:]))
+            c['leadBends']=bends
+        else:
+            for lead in c['leads']:
+                lead['points'],lead['bends']=fillet(lead['points'],forming['radiusMm'],forming['chordErrorMm'])
+        for lead in c['leads']:
+            if forming['radiusMm']<=lead['diameterMm']/2:raise ValueError('Bend radius must exceed wire radius')
+            lead['centerlineApproximationMm']=forming['chordErrorMm']
+
     core_contacts=[]
     for core in shared_bodies:
         for c in result:
             if c['ref'] not in core['members'] and any(overlaps(c['boundsMm'],box) for box in core['solidBoxesMm']):
                 core_contacts.append({'component':c['ref'],'core':core['id'],'kind':'body'})
             for lead in c['leads']:
-                if any(segment_box(a,b,box,lead['diameterMm']/2) for a,b in zip(lead['points'],lead['points'][1:]) for box in core['solidBoxesMm']):
+                if any(segment_box(a,b,box,lead['diameterMm']/2+lead['centerlineApproximationMm']) for a,b in zip(lead['points'],lead['points'][1:]) for box in core['solidBoxesMm']):
                     core_contacts.append({'component':c['ref']+':'+lead['pin'],'core':core['id'],'kind':'wire'})
     collisions=[{'a':a['ref'],'b':b['ref']} for i,a in enumerate(result) for b in result[i+1:] if overlaps(a['boundsMm'],b['boundsMm'],.05)]
     outline=layout['outlinePolygon'];xmin=min(p[0] for p in outline);xmax=max(p[0] for p in outline);ymin=min(p[1] for p in outline);ymax=max(p[1] for p in outline)
@@ -111,9 +128,9 @@ def build():
         for lead in c['leads']:
             for other in result:
                 if c['ref']==other['ref'] or other['package']=='bridge':continue
-                if any(segment_box(a,b,other['boundsMm'],lead['diameterMm']/2) for a,b in zip(lead['points'],lead['points'][1:])):
+                if any(segment_box(a,b,other['boundsMm'],lead['diameterMm']/2+lead['centerlineApproximationMm']) for a,b in zip(lead['points'],lead['points'][1:])):
                     lead_body.append({'terminal':c['ref']+':'+lead['pin'],'body':other['ref']})
-    report={'sharedCoreIntersections':core_contacts,'sharedCoreOverhangs':core_overhangs,'leadClearance':lead_clearance_review(result),'leadBodyEnvelopeIntersections':lead_body,'method':'Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes; transistor wires use the circumscribed diameter of the manufacturer lead section. Nominal lead-to-lead capsule clearances are reported separately; installed case, forming tolerances and bend radii remain unqualified.','bodyEnvelopeIntersections':collisions,'bodyOverhangs':outside,'insufficientDrillAllowance':drill,'leadPadAlignmentPassed':True,'mechanicallyQualified':False,'historicallyVerified':False,'fabricationReady':False}
+    report={'sharedCoreIntersections':core_contacts,'sharedCoreOverhangs':core_overhangs,'leadClearance':lead_clearance_review(result),'leadBodyEnvelopeIntersections':lead_body,'method':'Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes; transistor wires use the circumscribed diameter of the manufacturer lead section. Nominal lead-to-lead capsule clearances include centerline approximation bounds. Proposed circular bend radii are explicit; installed forming tolerances remain unqualified.','bodyEnvelopeIntersections':collisions,'bodyOverhangs':outside,'insufficientDrillAllowance':drill,'leadPadAlignmentPassed':True,'mechanicallyQualified':False,'historicallyVerified':False,'fabricationReady':False}
     paths=read(REF/'signal-paths.json');connectivity=read(ROOT/'generated/connectivity.json')['components']
     for stage in paths['stages']:
         if stage['ref'] not in expected:raise ValueError('Unknown walkthrough component')
@@ -121,7 +138,7 @@ def build():
             ref,pin=terminal.split(':')
             if connectivity[ref]['pins'][pin]!=stage['net']:raise ValueError('Walkthrough net mismatch: '+terminal)
     sources.append('reference/signal-paths.json')
-    data={'signalPaths':paths,'schema':1,'variant':'proposed-reference','scope':spec['scope'],'components':result,'sharedBodies':shared_bodies,'review':report,'sources':{p:digest(ROOT/p) for p in sorted(set(sources))}}
+    data={'signalPaths':paths,'schema':1,'variant':'proposed-reference','scope':spec['scope'],'leadForming':forming,'components':result,'sharedBodies':shared_bodies,'review':report,'sources':{p:digest(ROOT/p) for p in sorted(set(sources))}}
     scad=['// Generated by tools/reference_assembly.py; all assembly placements are proposed.','module reference_populated_assembly() {']
     for core in shared_bodies:
         w,d,h=core['outerSizeMm'];iw,ih=core['windowSizeMm']

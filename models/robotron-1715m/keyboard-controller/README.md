@@ -213,7 +213,8 @@ Intentional bridge/same-net contacts are separate from unintended contacts.
 against the modeled case, supports, mounts and matrix board. Raised-component and
 misaligned-mounting controls must collide. It retains source-bound results in `reference/enclosure-review.json`;
 `--check` verifies freshness without rerendering. These nominal checks do not
-qualify manufacturing tolerances, bend radii or measured enclosure fit.
-R2 and the separate filter-winding bodies remain surrogates; shared-core geometry
-and coupling are unresolved. These reference adapters do not establish historical
+qualify manufacturing tolerances or measured enclosure fit. Circular lead bends
+use the explicit reference-design radius and chord-error budget in `reference/assembly.json`.
+Lead clearance checks conservatively include that approximation error.
+R2 remains a package surrogate; shared-core magnetic coupling is unmeasured. These reference adapters do not establish historical
 footprints or fabrication readiness.

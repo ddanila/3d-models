@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import copy
+from lead_bends import fillet
 import unittest
 from unittest.mock import patch
 import reference_assembly as assembly
@@ -45,6 +46,18 @@ class AssemblyTests(unittest.TestCase):
         with patch.object(assembly,'read',side_effect=altered):bad,_=assembly.build()
         self.assertTrue(bad['review']['sharedCoreIntersections'])
         self.assertEqual(bad['review']['sharedCoreOverhangs'],['L1'])
+
+    def test_straight_body_entries_and_rounded_paths(self):
+        data,_=assembly.build()
+        for c in data['components']:
+            for lead in c['leads']:
+                if c['ref'] in ('R1','X1','XT1'):
+                    self.assertEqual(len(lead['points']),2)
+                    self.assertGreater(lead['points'][-1][2],lead['points'][0][2])
+                for bend in lead.get('bends',[]):
+                    self.assertGreater(bend['radiusMm'],lead['diameterMm']/2)
+                    self.assertLessEqual(bend['maximumChordErrorMm'],data['leadForming']['chordErrorMm'])
+        self.assertTrue(any(lead.get('bends') for c in data['components'] for lead in c['leads']))
 
     def test_oversized_body_is_reported_not_blessed(self):
         original=assembly.read
@@ -110,6 +123,27 @@ class LeadClearanceTests(unittest.TestCase):
         result=review_leads([a])
         self.assertTrue(any(c['basis']=='winding-midpoint' for c in result['intendedContacts']))
         self.assertTrue(result['unintendedContacts'])
+
+    def test_rounded_winding_is_not_a_self_contact(self):
+        path,_=fillet([[0,0,0],[3,0,0],[3,3,0],[0,3,0]],.4,.005)
+        a=self.component('L1','/A',path,'filter')
+        self.assertTrue(review_leads([a])['noUnintendedContact'])
+        # Split inside a bend: joining the two halves must not change the result.
+        mid=len(path)//2
+        a['leads'][0]['points']=path[:mid+1]
+        a['leads'].append({'pin':'2','net':'/B','diameterMm':.3,'points':list(reversed(path[mid:]))})
+        self.assertTrue(review_leads([a])['noUnintendedContact'])
+        # A foreign conductor crossing that bend is still a short.
+        p=path[mid]
+        b=self.component('B','/C',[[p[0],p[1],-1],[p[0],p[1],1]])
+        self.assertFalse(review_leads([a,b])['noUnintendedContact'])
+
+    def test_chord_error_is_included_in_clearance(self):
+        a=self.component('A','/A',[[0,0,0],[2,0,0]])
+        b=self.component('B','/B',[[0,.31,0],[2,.31,0]])
+        self.assertTrue(review_leads([a,b])['noUnintendedContact'])
+        a['leads'][0]['centerlineApproximationMm']=.02
+        self.assertFalse(review_leads([a,b])['noUnintendedContact'])
 
     def test_intended_join_does_not_hide_other_net_contact(self):
         a=self.component('BR1','/A',[[-1,0,0],[0,0,0]],'bridge')

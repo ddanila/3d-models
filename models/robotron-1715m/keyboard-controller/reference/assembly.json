@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "variant": "proposed-reference",
-  "scope": "Proposed package adapters; heights, lead bends and unspecified body dimensions are review assumptions. Filter units are separate electrical surrogates, not a reconstruction of the shared core.",
+  "scope": "Proposed package adapters, shared core and formed leads. Dimensions and forming geometry are reference-design assumptions, not measured specimen fit or magnetic qualification.",
   "components": {
     "A1": {
       "package": "dip",
@@ -642,5 +642,10 @@
     "turns": 3,
     "turnPitchMm": 0.5,
     "scope": "Proposed shared rectangular core and four windings using existing reference pads. Dimensions, turns and forming geometry are design assumptions; no magnetic, insulation-rating or historical qualification."
+  },
+  "leadForming": {
+    "radiusMm": 0.3,
+    "chordErrorMm": 0.01,
+    "scope": "Proposed centerline radius and maximum chord deviation; neither is a measured forming tolerance."
   }
 }
