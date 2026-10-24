@@ -330,7 +330,7 @@
     "keyboard-controller/tools/reference_assembly.py": "b1051bf59b503e5894a7ac25c11460e1fe4b712f29f5ff681e3ee542c57b86a3",
     "keyboard-controller/tools/shared_filter.py": "4f161698ca237d5e679f8c3790808573c4c90c991f37cf0a87b34d797eb680bf",
     "keyboard-controller/reference/capacitor-package-low-profile.json": "1323b2a40db2bc0dd6fb771ae9a7b4b7f08879efa8b8ed1d47b4ae0e5f1719a4",
-    "keyboard-controller/tools/capacitor_package_review.py": "52c710519a7bd6447ee1aa5c1fc1454081c81863a43e426040218358669bc553",
+    "keyboard-controller/tools/capacitor_package_review.py": "99170dda300b43b27132b72fcc6f189f804bd989f4f91d9736e1950e9060747f",
     "keyboard-controller/tools/reference_enclosure.py": "a9fcc1c67cac4c30ee876ff612e026bc8816e64b1fac0d02f8a10edc51a8412d",
     "components/kicad/meshes/DIP-40_W15.24mm-body.stl": "3188564537436169f9303e180ffb01baa899d54c8f743448998bad15db31f7b3",
     "components/kicad/meshes/DIP-20_W7.62mm-body.stl": "c71eb298a5948d48e8c2cd27929d85714d557be6a1e853f8c1c712a0319d345a",
@@ -349,13 +349,13 @@
     "pcb-components.scad": "352486104a830116f799c7c2535bcda6b055596404fb9af8696887ebc69d6125",
     "dimensions.scad": "5e01a4d423d3ecfb5b85f577c36a153d0d3079e724bdb928ef81ac69f553a254",
     "interior.scad": "107afcf95fe9e446c1cc9047ce3b7c24dad6f4c524977d2954e034b118816b7e",
+    "monitor-profile.scad": "4af9fd8e61640f9c2551fca49ba2b8ed004d4bc9bc2c2c87e4ffaf14ab5c62cb",
     "keyboard-controller/reference/review.scad": "b3019aab9355118b037c3e64f857fa2e0b262c5c28444e3c10617fcd4f5ebe99",
     "keyboard-layout.scad": "bf1700cba2e51c7ea9b400fab2c6dbd7072fd5d97cb15396cd0e17a260ef5fae",
     "keycap/geometry.scad": "e304f9e8e48ee16f4ee67a29906901f6f7cff93694c6ebf70bf6e38a891ad961",
     "specimen-details.scad": "9ad1199f222e06d84ffaaf7ed19a0ce4f0014f747db5a9df3a85bccf94c93240",
     "keyboard-controller/reference/assembly-generated/assembly.scad": "bd89b68e9de43c817c395b9b48faa92cbc383f58307a885c0f8f09368b02b871",
-    "monitor-cables.scad": "03334c5468c3158d78ac72a4747ee305b57ab46906be846b78e2a346cdc5275a",
-    "monitor-profile.scad": "4af9fd8e61640f9c2551fca49ba2b8ed004d4bc9bc2c2c87e4ffaf14ab5c62cb"
+    "monitor-cables.scad": "03334c5468c3158d78ac72a4747ee305b57ab46906be846b78e2a346cdc5275a"
   },
   "interfaces": [
     {

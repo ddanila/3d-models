@@ -330,13 +330,11 @@
     "keyboard-controller/tools/reference_assembly.py": "b1051bf59b503e5894a7ac25c11460e1fe4b712f29f5ff681e3ee542c57b86a3",
     "keyboard-controller/tools/shared_filter.py": "4f161698ca237d5e679f8c3790808573c4c90c991f37cf0a87b34d797eb680bf",
     "keyboard-controller/reference/capacitor-package-low-profile.json": "1323b2a40db2bc0dd6fb771ae9a7b4b7f08879efa8b8ed1d47b4ae0e5f1719a4",
-    "keyboard-controller/tools/capacitor_package_review.py": "52c710519a7bd6447ee1aa5c1fc1454081c81863a43e426040218358669bc553",
+    "keyboard-controller/tools/capacitor_package_review.py": "99170dda300b43b27132b72fcc6f189f804bd989f4f91d9736e1950e9060747f",
     "keyboard-controller/tools/reference_enclosure.py": "a9fcc1c67cac4c30ee876ff612e026bc8816e64b1fac0d02f8a10edc51a8412d",
     "components/kicad/meshes/DIP-40_W15.24mm-body.stl": "3188564537436169f9303e180ffb01baa899d54c8f743448998bad15db31f7b3",
     "components/kicad/meshes/DIP-20_W7.62mm-body.stl": "c71eb298a5948d48e8c2cd27929d85714d557be6a1e853f8c1c712a0319d345a",
     "components/kicad/meshes/DIP-14_W7.62mm-body.stl": "d8b37907d924f3dee08dca7663807440e9ee90113b52ee9b128ccf9cb242e246",
-    "monitor-interior.scad": "5415fe31a30d7dccf97746096e5629b511b56e4da25fe20197662a51495a2ff2",
-    "controller-package-data.scad": "548028d516da02768bd75bdd831c2965af8fba8becdda01d73f3de97c7bd1037",
     "model.scad": "a3551efcb66486043b1521b49e42d2c8f7e2a846d8f82edf5838c7a5b30f4f8d",
     "keyboard-controller/generated/controller.scad": "ce0e0628de5dbebc9fa101526676728f1016523efdd84d1a0c8b19cde8675a25",
     "key-switch/geometry.scad": "3c5548896f0d9ef90e45d89c51d15f91974dc473456da760aeb61104c75fddce",
@@ -355,7 +353,9 @@
     "specimen-details.scad": "9ad1199f222e06d84ffaaf7ed19a0ce4f0014f747db5a9df3a85bccf94c93240",
     "keyboard-controller/reference/assembly-generated/assembly.scad": "bd89b68e9de43c817c395b9b48faa92cbc383f58307a885c0f8f09368b02b871",
     "monitor-cables.scad": "03334c5468c3158d78ac72a4747ee305b57ab46906be846b78e2a346cdc5275a",
-    "keyboard-artwork.scad": "4b185f623c7b71674bfc823a3cb0b8ceb38ed8447e55e286977e01de02c18d6c"
+    "keyboard-artwork.scad": "4b185f623c7b71674bfc823a3cb0b8ceb38ed8447e55e286977e01de02c18d6c",
+    "monitor-interior.scad": "5415fe31a30d7dccf97746096e5629b511b56e4da25fe20197662a51495a2ff2",
+    "controller-package-data.scad": "548028d516da02768bd75bdd831c2965af8fba8becdda01d73f3de97c7bd1037"
   },
   "interfaces": [
     {

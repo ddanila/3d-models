@@ -47,7 +47,7 @@ def main():
         if report['nominalEnclosureClear']!=not_any(rows):raise ValueError('Invalid enclosure conclusion')
         for name,expected in report['sources'].items():
             if assembly.digest(ROOT.parent/name)!=expected:raise ValueError('Stale candidate review: '+name)
-        print('Candidate receipt matches sources; not adopted or mechanically qualified')
+        print('Screening receipt matches sources; does not authorize adoption or physical qualification')
         return
     spec=assembly.read(assembly.REF/'assembly.json')
     original_read=assembly.read
