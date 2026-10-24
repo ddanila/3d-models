@@ -1196,7 +1196,7 @@
   },
   "inputSha256": {
     "cable-copper.json": "e0adfff02c8749ae4826eea433ee0236235af3898c9093a7ec01f624debd6fe3",
-    "component-evidence.json": "2aea0d2ec425af9507ae38f544f3c61eb6834efe35fc5cfc45d971b230fb909e",
+    "component-evidence.json": "57752b9a8963098b2b357f8b7714108b1b1236b2471cb445f25feb64b15011e0",
     "evidence.json": "45ca333c85133b8f6fd2a9be22d33ae018b856f85f10374ef5be1a6e1b1e9072",
     "filter-registration.json": "28791731941aaf96faecd845871a0e151cfde5a56e9ef76212d54c90a4cbbf4a",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",

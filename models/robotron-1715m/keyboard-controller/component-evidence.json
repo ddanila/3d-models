@@ -1900,6 +1900,27 @@
       "heightMm": 9,
       "baseHeightMm": 1.6,
       "scope": "Retained illustrative display placement and dimensions. Raised body/perspective bias remains; no pad centres, holes, terminals, nets or polarity are inferred."
+    },
+    "valueAlternatives": {
+      "installedValueKnown": false,
+      "referenceSource": "schematic",
+      "scope": "Published drawing alternatives; neither identifies the installed capacitor. Reference circuit remains unchanged.",
+      "variants": [
+        {
+          "source": "schematic",
+          "pdfPage": 1,
+          "locator": "C4, reset circuit",
+          "capacitanceMicrofarads": 10,
+          "ratedVoltageVolts": 40
+        },
+        {
+          "source": "robotron-factory-drawings",
+          "pdfPage": 11,
+          "locator": "56-330-4103-7, C4, reset circuit",
+          "capacitanceMicrofarads": 100,
+          "ratedVoltageVolts": 10
+        }
+      ]
     }
   },
   "C6": {
