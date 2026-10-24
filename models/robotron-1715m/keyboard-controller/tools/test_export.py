@@ -16,7 +16,15 @@ class ControllerExportTests(unittest.TestCase):
   self.assertEqual([r['terminal'] for r in result['checks'] if r['heldOut']],['3','4'])
   self.assertFalse(result['copperAssignmentQualified'])
   observed['3'][0]+=2
-  self.assertEqual(fit(reference,observed,['1','2'])['maxHeldOutResidualMm'],2)
+  displaced=fit(reference,observed,['1','2'])
+  self.assertEqual(displaced['maxHeldOutResidualMm'],2)
+  check=next(p for p in displaced['checks'] if p['terminal']=='3')
+  self.assertEqual(check['residualAlongRowMm'],0)
+  self.assertEqual(check['residualAcrossRowMm'],-2)
+  observed['3'][1]+=3
+  check=next(p for p in fit(reference,observed,['1','2'])['checks'] if p['terminal']=='3')
+  self.assertEqual(check['residualAlongRowMm'],3)
+  self.assertEqual(check['residualAcrossRowMm'],-2)
   stretched={k:[2*p[0],2*p[1]] for k,p in reference.items()}
   self.assertEqual(fit(reference,stretched,['1','2'])['anchorSpanMismatchMm'],10)
   self.assertGreater(fit(reference,stretched,['1','2'])['maxHeldOutResidualMm'],0)

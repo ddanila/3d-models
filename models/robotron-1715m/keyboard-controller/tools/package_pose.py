@@ -20,15 +20,21 @@ def fit(reference, observed, anchors):
     def transform(p):
         x,y=p[0]-rc[0],p[1]-rc[1]
         return [oc[0]+cosine*x-sine*y,oc[1]+sine*x+cosine*y]
+    axis=[x/math.hypot(*v) for x in v]
+    normal=[-axis[1],axis[0]]
     checks=[]
     for key in sorted(reference):
         q=transform(reference[key])
+        error=[observed[key][i]-q[i] for i in range(2)]
         checks.append({'terminal':key,'heldOut':key not in anchors,
                        'originalResidualMm':round(math.dist(reference[key],observed[key]),9),
-                       'fittedResidualMm':round(math.dist(q,observed[key]),9)})
+                       'fittedResidualMm':round(math.dist(q,observed[key]),9),
+                       'residualAlongRowMm':round(sum(error[i]*axis[i] for i in range(2)),9)+0.0,
+                       'residualAcrossRowMm':round(sum(error[i]*normal[i] for i in range(2)),9)+0.0})
     center_before=[sum(p[k] for p in reference.values())/len(reference) for k in range(2)]
     center_after=transform(center_before)
-    return {'anchors':anchors,'rotationDegrees':round(math.degrees(math.atan2(sine,cosine)),9),
+    return {'residualFrame':'Observed minus rigid-fit position; along points from first anchor to second, across is its left normal. Signed components diagnose the mismatch without changing the fit or acceptance budget.',
+            'anchors':anchors,'rotationDegrees':round(math.degrees(math.atan2(sine,cosine)),9),
             'centerShiftMm':[round(a-b,9) for a,b in zip(center_after,center_before)],
             'anchorSpanMismatchMm':round(abs(math.hypot(*v)-math.hypot(*u)),9),
             'maxHeldOutResidualMm':max(p['fittedResidualMm'] for p in checks if p['heldOut']),
