@@ -7,7 +7,7 @@
   },
   "schema": 1,
   "sources": {
-    "component-evidence.json": "ab360451dbea1cfc3c28d5d5b582a42510f6e44df2ef9e4ba0aff5c98ff33bee",
+    "component-evidence.json": "c21f882b2f1cd0952e20e140fb7be4316e8bfe84b9a5f1219e1c2d00bb3f007c",
     "controller.kicad_pcb": "70ff967a3bdd94a6ef91b01100bcc8b35cb8f01878b637fd183b581656578d38",
     "controller.kicad_sch": "48333fb758f58072685591a6323867efc31e6a390c673e7dd1967048f0935b29",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",

@@ -1,49 +1,154 @@
 {
   "schema": 1,
   "scope": "Physical route review, not new connectivity evidence. X1 serves the matrix/LEDs; XT1 is the host cable. Reference endpoints are targets for tracing, not observed attachments.",
-  "crossSideSearch": {"region": "output-pullups", "fits": [["R4.2:1", "R4.2:2", "R10.2:2", "R10.1:2"], ["R4.2:1", "R4.2:2", "A1:1", "A2.1:14"]], "scope": "Search localization only. Fits share R4.2 anchors; agreement is a sensitivity check, not independent evidence. Top DIP landmarks are lead observations, not verified hole centres. No copper or via assignment is qualified."},
+  "crossSideSearch": {
+    "region": "output-pullups",
+    "fits": [
+      [
+        "R4.2:1",
+        "R4.2:2",
+        "R10.2:2",
+        "R10.1:2"
+      ],
+      [
+        "R4.2:1",
+        "R4.2:2",
+        "A1:1",
+        "A2.1:14"
+      ]
+    ],
+    "scope": "Search localization only. Fits share R4.2 anchors; agreement is a sensitivity check, not independent evidence. Top DIP landmarks are lead observations, not verified hole centres. No copper or via assignment is qualified."
+  },
   "cases": [
     {
       "id": "host-clock",
-      "crossSideStop": {"ref": "R10.1", "bottomPixel": [1245, 1205], "occludingBody": "R9.5", "searchPaddingPixels": 8, "observation": "The projected location falls beneath the resistor body in the primary top photo. The top counterpart and outgoing copper cannot be identified directly there."},
+      "crossSideStop": {
+        "ref": "R10.1",
+        "bottomPixel": [
+          1245,
+          1205
+        ],
+        "occludingBody": "R9.5",
+        "searchPaddingPixels": 8,
+        "observation": "The projected location falls beneath the resistor body in the primary top photo. The top counterpart and outgoing copper cannot be identified directly there."
+      },
       "title": "Serial clock: driver to filter to host cable",
-      "sameNetSets": [["A1:2", "R10.1:2", "L1.1:1"], ["L1.1:2", "XT1:B2"]],
-      "seriesComponents": ["L1.1"],
-      "routeGroups": ["r101-output-top-local", "r101-output-bottom-partial"],
-      "reviews": ["r101-top-package-entry"],
-      "supportingSources": ["comparison-photo-080443226.MP", "comparison-photo-080347973", "comparison-photo-080406304", "comparison-photo-080511382"],
+      "sameNetSets": [
+        [
+          "A1:2",
+          "R10.1:2",
+          "L1.1:1"
+        ],
+        [
+          "L1.1:2",
+          "XT1:B2"
+        ]
+      ],
+      "seriesComponents": [
+        "L1.1"
+      ],
+      "routeGroups": [
+        "r101-output-top-local",
+        "r101-output-bottom-partial"
+      ],
+      "reviews": [
+        "r101-top-package-entry"
+      ],
+      "supportingSources": [
+        "comparison-photo-080443226.MP",
+        "comparison-photo-080347973",
+        "comparison-photo-080406304",
+        "comparison-photo-080511382",
+        "photo-20261024-060432008",
+        "photo-20261024-060441224"
+      ],
       "finding": "The R10.1 branch reaches a solder eye beneath R9.5. A local resistor-bank fit supports a downstream eye correspondence beside R9.7, and an observed outer underside lane continues from there toward an eye near R4.1. Resistor bodies hide the intervening top spans; the new observations remain electrically unassigned. A1, winding and host-cable attachments are not closed.",
-      "alternatives": ["Reference path reaches A1:2 and L1.1:1 through hidden copper.", "The apparent top/bottom stop correspondence is wrong; the visible branch requires a different continuation. This is a geometric alternative, not a replacement net assignment."],
+      "alternatives": [
+        "Reference path reaches A1:2 and L1.1:1 through hidden copper.",
+        "The apparent top/bottom stop correspondence is wrong; the visible branch requires a different continuation. This is a geometric alternative, not a replacement net assignment."
+      ],
       "nextDeskWork": "Resolve the hidden bank spans and the upper-eye continuation near R4.1 before assigning the outer lane to clock. The exposed bent corridor stops before the capacitor-side copper; resolve both its upper-eye join and its hidden capacitor-side continuation. The wider mixed fit fails held-out checks and must not assign an LF joint.",
       "decisiveObservation": "An uninterrupted path, including any confirmed layer transition, from R10.1:2 to A1:2 and the identified L1.1 input. Separately identify both winding ends and the cable-side connection to XT1:B2.",
       "doNotInfer": "The former A1:13 conflict came from a rejected projection. It is not a measured short, and the surviving local segment does not identify the hidden A1 pin."
     },
     {
       "id": "host-data",
-      "crossSideStop": {"ref": "R10.2", "bottomPixel": [1163, 1013], "occludingBody": "R7", "searchPaddingPixels": 8, "observation": "The projected location falls beneath the resistor body in the primary top photo. The top counterpart and outgoing copper cannot be identified directly there."},
+      "crossSideStop": {
+        "ref": "R10.2",
+        "bottomPixel": [
+          1163,
+          1013
+        ],
+        "occludingBody": "R7",
+        "searchPaddingPixels": 8,
+        "observation": "The projected location falls beneath the resistor body in the primary top photo. The top counterpart and outgoing copper cannot be identified directly there."
+      },
       "title": "Serial data: driver to filter to host cable",
-      "sameNetSets": [["A1:4", "R10.2:2", "L1.4:1"], ["L1.4:2", "XT1:A1"]],
-      "seriesComponents": ["L1.4"],
-      "routeGroups": ["r102-output-bottom-partial"],
+      "sameNetSets": [
+        [
+          "A1:4",
+          "R10.2:2",
+          "L1.4:1"
+        ],
+        [
+          "L1.4:2",
+          "XT1:A1"
+        ]
+      ],
+      "seriesComponents": [
+        "L1.4"
+      ],
+      "routeGroups": [
+        "r102-output-bottom-partial"
+      ],
       "reviews": [],
-      "supportingSources": ["photo-top", "comparison-photo-080443226.MP", "comparison-photo-080347973", "comparison-photo-080406304", "comparison-photo-080511382"],
+      "supportingSources": [
+        "photo-top",
+        "comparison-photo-080443226.MP",
+        "comparison-photo-080347973",
+        "comparison-photo-080406304",
+        "comparison-photo-080511382",
+        "photo-20261024-060432008",
+        "photo-20261024-060441224"
+      ],
       "finding": "The R10.2 underside branch stops beneath R7. A local R4.2/R8 fit checked against R7 narrows the search; exposed top spans lie between R7/R4.2 and R4.2/R6.1. Bodies still hide the joins, so the spans remain unassigned.",
-      "alternatives": ["The solder eye continues to the reference A1:4/L1.4:1 network.", "A nearby top-side eye or winding lead is being mistaken for the counterpart; preserve the open span until independently matched."],
+      "alternatives": [
+        "The solder eye continues to the reference A1:4/L1.4:1 network.",
+        "A nearby top-side eye or winding lead is being mistaken for the counterpart; preserve the open span until independently matched."
+      ],
       "nextDeskWork": "Resolve the R7 layer transition and hidden joins under R4.2 and R6.1 in path-tracing.json. The registered comparison corridor confirms visibility limits, not primary continuity; continue toward L1 only from a supported downstream eye.",
-      "decisiveObservation": "Identify the actual winding input and output joints, then establish the R10.2:2–A1:4–L1.4:1 and L1.4:2–XT1:A1 spans independently.",
+      "decisiveObservation": "Identify the actual winding input and output joints, then establish the R10.2:2\u2013A1:4\u2013L1.4:1 and L1.4:2\u2013XT1:A1 spans independently.",
       "doNotInfer": "Cable wire colour and spatial proximity do not establish a terminal number or which ferrite winding is L1.4."
     },
     {
       "id": "clock-strobe",
       "title": "Clock strobe input: distinguish CPU WR from RD",
-      "sameNetSets": [["A1:1", "A5:22"]],
-      "candidateEndpoints": ["A5:21"],
+      "sameNetSets": [
+        [
+          "A1:1",
+          "A5:22"
+        ]
+      ],
+      "candidateEndpoints": [
+        "A5:21"
+      ],
       "seriesComponents": [],
-      "routeGroups": ["a1-pin1-top-partial"],
+      "routeGroups": [
+        "a1-pin1-top-partial"
+      ],
       "reviews": [],
-      "supportingSources": ["photo-bottom", "comparison-photo-080401625", "comparison-photo-080429077"],
+      "supportingSources": [
+        "photo-bottom",
+        "comparison-photo-080401625",
+        "comparison-photo-080429077",
+        "photo-20261024-060453915"
+      ],
       "finding": "The reference supports WR, while a published comparison uses RD. An observed underside lane links terminal candidates near A4 and A6; the corresponding top track enters beneath A6. Local A6 registration supports a candidate outside the anchor hull. Neither CPU attachment is established.",
-      "alternatives": ["A1:1 connects to A5:22 (WR), as in the reference.", "A1:1 connects to A5:21 (RD), as in the published comparison.", "The terminal correspondence is still wrong or incomplete; neither candidate is established."],
+      "alternatives": [
+        "A1:1 connects to A5:22 (WR), as in the reference.",
+        "A1:1 connects to A5:21 (RD), as in the published comparison.",
+        "The terminal correspondence is still wrong or incomplete; neither candidate is established."
+      ],
       "nextDeskWork": "Reverse inspection of both CPU candidates stops at covered pin exits. Resolve the A4/A6 layer transitions and the hidden A5/A6 route; the separate land beyond the CPU row is not either CPU joint. Neither WR nor RD is excluded by the current photos.",
       "decisiveObservation": "A complete photographed route or distinguishable unpowered resistance readings from A1:1 to A5:21 and A5:22, with probe locations recorded.",
       "doNotInfer": "A successful S600 simulation of the WR reference does not determine the specimen's physical attachment."
@@ -51,14 +156,35 @@
     {
       "id": "x1-order",
       "title": "X1 matrix connector: retain the constrained row order",
-      "sameNetSets": [["X1:B8", "A2.1:6"], ["X1:A5", "R11.1:2"], ["X1:A6", "R11.2:2"]],
+      "sameNetSets": [
+        [
+          "X1:B8",
+          "A2.1:6"
+        ],
+        [
+          "X1:A5",
+          "R11.1:2"
+        ],
+        [
+          "X1:A6",
+          "R11.2:2"
+        ]
+      ],
       "seriesComponents": [],
-      "routeGroups": ["x1-b8-col11-bottom"],
+      "routeGroups": [
+        "x1-b8-col11-bottom"
+      ],
       "reviews": [],
       "connectorConstraints": true,
-      "supportingSources": ["comparison-photo-080415534", "comparison-photo-080347973"],
+      "supportingSources": [
+        "comparison-photo-080415534",
+        "comparison-photo-080347973"
+      ],
       "finding": "The LED attachments constrain the far row, and the COL11 attachment constrains the near row independently. Their combined result already resolves the reference row order conditionally; it is not an open whole-connector reversal problem.",
-      "alternatives": ["Retain the sole row mapping consistent with all recorded attachments.", "Reopen that mapping only if a specific attachment or component identity is disproved."],
+      "alternatives": [
+        "Retain the sole row mapping consistent with all recorded attachments.",
+        "Reopen that mapping only if a specific attachment or component identity is disproved."
+      ],
       "nextDeskWork": "Use these independently constrained contacts as registration checks while resolving the remaining contact and neighbouring output routes.",
       "decisiveObservation": "Independently confirm the three recorded endpoints; preserve the intermediate COL11 solder eye without inventing a top-side branch.",
       "doNotInfer": "X1 is not the serial host connector. Its row ordering does not identify XT1 cable terminals."

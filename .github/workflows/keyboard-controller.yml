@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          lfs: true
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_export.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_reference_board.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/reference_assembly.py --check
@@ -28,6 +30,8 @@ jobs:
       KICAD10_FOOTPRINT_DIR: /usr/share/kicad/footprints
     steps:
       - uses: actions/checkout@v7
+        with:
+          lfs: true
       - name: Install KiCad 10 native tools
         # Official stable-series packages: https://www.kicad.org/download/ubuntu/
         run: |

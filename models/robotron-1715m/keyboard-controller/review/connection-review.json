@@ -2,9 +2,9 @@
   "schema": 1,
   "scope": "Physical route review, not new connectivity evidence. X1 serves the matrix/LEDs; XT1 is the host cable. Reference endpoints are targets for tracing, not observed attachments.",
   "inputSha256": {
-    "connection-review.json": "11aff8d9d9aa4f7fe19543c286a135d5b0a877f87f9bf8b54874a5609a4a7e27",
-    "evidence.json": "261fe27e0acb73f701ebf3e5577b0f390d2001602c86ab7f53c922206e83f888",
-    "component-evidence.json": "ab360451dbea1cfc3c28d5d5b582a42510f6e44df2ef9e4ba0aff5c98ff33bee",
+    "connection-review.json": "ad12255aba3ec6204cb2ca7d53ea81c09352000f3f5c2c278ab9234a1b06e0a4",
+    "evidence.json": "2b3576e8f7025e3cd6071b31956a8e44224ae5b7f5a94818e6b50a7fb4d983bf",
+    "component-evidence.json": "c21f882b2f1cd0952e20e140fb7be4316e8bfe84b9a5f1219e1c2d00bb3f007c",
     "route-evidence.json": "30c3b039aaa1cef03832c82d7d63a407e7f23abecea0455484dcf35989ff50ae",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
     "generated/layout.json": "0206cbbce0cf25b974257a029ef87fd476c24a96e176201a1bca18ca3228ffc0",
@@ -68,7 +68,9 @@
         "comparison-photo-080443226.MP",
         "comparison-photo-080347973",
         "comparison-photo-080406304",
-        "comparison-photo-080511382"
+        "comparison-photo-080511382",
+        "photo-20261024-060432008",
+        "photo-20261024-060441224"
       ],
       "finding": "The R10.1 branch reaches a solder eye beneath R9.5. A local resistor-bank fit supports a downstream eye correspondence beside R9.7, and an observed outer underside lane continues from there toward an eye near R4.1. Resistor bodies hide the intervening top spans; the new observations remain electrically unassigned. A1, winding and host-cable attachments are not closed.",
       "alternatives": [
@@ -1556,6 +1558,24 @@
           "use": "Cable wires, mounting bracket and nearby component profiles. Separate specimen; comparison evidence only, not primary-specimen placement or continuity.",
           "href": "../../reference/photos/PXL_20261017_080511382.jpg",
           "specimen": "comparison-20261017"
+        },
+        {
+          "id": "photo-20261024-060432008",
+          "path": "../reference/photos/PXL_20261024_060432008.jpg",
+          "sha256": "817f772d0997cd1d0621259b1571b55f9bc3f2754c513605fd19bfc6c16d0618",
+          "use": "Specimen identity unconfirmed; cable end: clearer filter lead entries, cable solder joints and adjacent reset/sense components. Oblique view; no automatic terminal or winding assignment.",
+          "specimenId": "2026-10-24 photo batch; specimen identity unconfirmed",
+          "href": "../../reference/photos/PXL_20261024_060432008.jpg",
+          "specimen": "2026-10-24 photo batch; specimen identity unconfirmed"
+        },
+        {
+          "id": "photo-20261024-060441224",
+          "path": "../reference/photos/PXL_20261024_060441224.jpg",
+          "sha256": "45019f4d902d51289a601a5933ba8925a6b687e22dc4dda9e4c96f655a7a5b38",
+          "use": "Specimen identity unconfirmed; cable end from the opposite direction: filter terminal rows, exposed copper and cable/shield terminations. Oblique view; hidden winding pairings remain separate.",
+          "specimenId": "2026-10-24 photo batch; specimen identity unconfirmed",
+          "href": "../../reference/photos/PXL_20261024_060441224.jpg",
+          "specimen": "2026-10-24 photo batch; specimen identity unconfirmed"
         }
       ]
     },
@@ -1595,7 +1615,9 @@
         "comparison-photo-080443226.MP",
         "comparison-photo-080347973",
         "comparison-photo-080406304",
-        "comparison-photo-080511382"
+        "comparison-photo-080511382",
+        "photo-20261024-060432008",
+        "photo-20261024-060441224"
       ],
       "finding": "The R10.2 underside branch stops beneath R7. A local R4.2/R8 fit checked against R7 narrows the search; exposed top spans lie between R7/R4.2 and R4.2/R6.1. Bodies still hide the joins, so the spans remain unassigned.",
       "alternatives": [
@@ -2572,6 +2594,24 @@
           "use": "Cable wires, mounting bracket and nearby component profiles. Separate specimen; comparison evidence only, not primary-specimen placement or continuity.",
           "href": "../../reference/photos/PXL_20261017_080511382.jpg",
           "specimen": "comparison-20261017"
+        },
+        {
+          "id": "photo-20261024-060432008",
+          "path": "../reference/photos/PXL_20261024_060432008.jpg",
+          "sha256": "817f772d0997cd1d0621259b1571b55f9bc3f2754c513605fd19bfc6c16d0618",
+          "use": "Specimen identity unconfirmed; cable end: clearer filter lead entries, cable solder joints and adjacent reset/sense components. Oblique view; no automatic terminal or winding assignment.",
+          "specimenId": "2026-10-24 photo batch; specimen identity unconfirmed",
+          "href": "../../reference/photos/PXL_20261024_060432008.jpg",
+          "specimen": "2026-10-24 photo batch; specimen identity unconfirmed"
+        },
+        {
+          "id": "photo-20261024-060441224",
+          "path": "../reference/photos/PXL_20261024_060441224.jpg",
+          "sha256": "45019f4d902d51289a601a5933ba8925a6b687e22dc4dda9e4c96f655a7a5b38",
+          "use": "Specimen identity unconfirmed; cable end from the opposite direction: filter terminal rows, exposed copper and cable/shield terminations. Oblique view; hidden winding pairings remain separate.",
+          "specimenId": "2026-10-24 photo batch; specimen identity unconfirmed",
+          "href": "../../reference/photos/PXL_20261024_060441224.jpg",
+          "specimen": "2026-10-24 photo batch; specimen identity unconfirmed"
         }
       ]
     },
@@ -2598,7 +2638,8 @@
       "supportingSources": [
         "photo-bottom",
         "comparison-photo-080401625",
-        "comparison-photo-080429077"
+        "comparison-photo-080429077",
+        "photo-20261024-060453915"
       ],
       "finding": "The reference supports WR, while a published comparison uses RD. An observed underside lane links terminal candidates near A4 and A6; the corresponding top track enters beneath A6. Local A6 registration supports a candidate outside the anchor hull. Neither CPU attachment is established.",
       "alternatives": [
@@ -3523,6 +3564,15 @@
           "use": "CPU marking UB880D and nearby copper terminals. Separate specimen; comparison evidence only, not primary-specimen placement or continuity.",
           "href": "../../reference/photos/PXL_20261017_080429077.jpg",
           "specimen": "comparison-20261017"
+        },
+        {
+          "id": "photo-20261024-060453915",
+          "path": "../reference/photos/PXL_20261024_060453915.jpg",
+          "sha256": "d953d5b1d874dc521cfa0daa7f0bb5f66ce604f339b95b49577f449d2e36b8b3",
+          "use": "Specimen identity unconfirmed; CPU/latch close-up: UB880 D, DS8282D and K155TM2 markings, pin exits and adjacent top copper. Supports physical tracing; does not alone resolve the complete WR/RD or bridge paths.",
+          "specimenId": "2026-10-24 photo batch; specimen identity unconfirmed",
+          "href": "../../reference/photos/PXL_20261024_060453915.jpg",
+          "specimen": "2026-10-24 photo batch; specimen identity unconfirmed"
         }
       ]
     },

@@ -1335,6 +1335,30 @@
       "sha256": "83089746f85cc44ca278db65cbdafbd66a0534c4a8bfd8286dbec908f0d80a04",
       "specimenId": "comparison-20261017",
       "provenance": "User-supplied photographs of a different specimen; ownership not established by this import."
+    },
+    {
+      "file": "PXL_20261024_060432008.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (17).zip",
+      "original_sha256": "96fb73ebb23c96726b78f0a038753d53c95c542f956b05de246f7cc62929152a",
+      "sha256": "817f772d0997cd1d0621259b1571b55f9bc3f2754c513605fd19bfc6c16d0618"
+    },
+    {
+      "file": "PXL_20261024_060441224.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (17).zip",
+      "original_sha256": "57d9c789ec60c0470e73992fab1a2ecd99e3d066e3414886f17c4ddddca2181c",
+      "sha256": "45019f4d902d51289a601a5933ba8925a6b687e22dc4dda9e4c96f655a7a5b38"
+    },
+    {
+      "file": "PXL_20261024_060453915.jpg",
+      "width": 4080,
+      "height": 3072,
+      "source": "Photos-1-001 (17).zip",
+      "original_sha256": "5a868b90158b88022ff352a6f9bf9ffb4217a00067a16b7882c35e481a78d256",
+      "sha256": "d953d5b1d874dc521cfa0daa7f0bb5f66ce604f339b95b49577f449d2e36b8b3"
     }
   ]
 }

@@ -1999,7 +1999,7 @@
     "referenceType": "BRIDGE",
     "placementEvidence": "factory drawing 63-330-4103-2, PDF page 10; photo-top endpoints and local underside joint pattern",
     "pinEvidence": "Left original-top-photo terminal is pin 2, CPU CLK side, from its visible underside connection to R10.3. Right terminal is reference pin 1, OSC_OUT. Continuation to CPU/oscillator and closed-state continuity remain unmeasured.",
-    "note": "Photo-supported reference terminal orientation, not measured continuity or a factory opening procedure. Wire diameter, stand-off, bend shape, pads and holes are estimated; native bridge geometry is a nominal closed link. Global underside registration remains unqualified.",
+    "note": "Schematic role: oscillator output to A5 CLK, pin 6. Photo-supported reference terminal orientation, not measured continuity or a factory opening procedure. Wire diameter, stand-off, bend shape, pads and holes are estimated; native bridge geometry is a nominal closed link. Global underside registration remains unqualified.",
     "placementAuthority": "controller.kicad_pcb",
     "photoSource": "photo-top",
     "photoPins": {
@@ -2035,7 +2035,7 @@
     "referenceType": "BRIDGE",
     "placementEvidence": "unplaced",
     "pinEvidence": "schematic-terminal-order; physical numbering unresolved",
-    "note": "Factory placement and primary-photo endpoints support an unassigned visual wire in generated layout/SCAD. Native footprint stays unplaced until source/CPU terminal order and pad correspondence are resolved; no electrical continuity claim.",
+    "note": "Schematic role: reset circuit output to A5 RESET, pin 26. Factory placement and primary-photo endpoints support an unassigned visual wire in generated layout/SCAD. Native footprint stays unplaced until source/CPU terminal order and pad correspondence are resolved; no electrical continuity claim.",
     "placementAuthority": "controller.kicad_pcb"
   }
 }
