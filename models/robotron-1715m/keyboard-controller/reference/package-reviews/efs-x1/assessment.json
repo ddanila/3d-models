@@ -2,12 +2,12 @@
   "schema": 1,
   "candidate": "x1-efs-two-row-candidate",
   "sources": {
-    "reference/connector-package-candidate.json": "c46b1fa3916f3a53fcd472ae89ff017744449dbad72351e63134b7e04a70a114",
+    "reference/connector-package-candidate.json": "6054c36e165e0534085a5a19a1e857a8791b503630abd94fdd14edf018d64af4",
     "generated/connector-review.json": "b85b5c00e6a80970eadfb147653fc38c783eb12015dd98aab72c6e26064ce24f",
     "generated/bus-review.json": "62f9de36cd8b3a7df319b3ba6e1db3ee3048753a0d4854bdf679a22f5d4e45a8",
     "component-evidence.json": "57752b9a8963098b2b357f8b7714108b1b1236b2471cb445f25feb64b15011e0",
     "sense-review.json": "c8f2bdb8959e09cce11f746aa1729894fb535b34f5c8ab8f78f464b9b4378153",
-    "tools/connector_package_review.py": "2d221aedd5abcc1ac3c49552e523f32d1126df21f9218c8c1809e3248286b2e2",
+    "tools/connector_package_review.py": "dac868a3caad339362926fafc1f3d4f48719c0d5240c8f581b9c2c71829bf223",
     "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068"
   },
   "comparisons": {
@@ -310,6 +310,20 @@
       }
     }
   ],
+  "bodyWidthAlternativesBMm": [
+    {
+      "drawingTableRow": 4,
+      "nominal": 8.5,
+      "tolerance": 0.2
+    },
+    {
+      "drawingTableRow": 5,
+      "nominal": 13.5,
+      "tolerance": 0.2
+    }
+  ],
+  "bodyWidthSelection": null,
+  "bodyWidthScope": "Both catalogue rows include 26-contact configurations and share longitudinal dimensions. Contact-span agreement cannot select a width; mating-face and form evidence are still required.",
   "uncertaintyScope": "Endpoint picking only: plus/minus the recorded pixel uncertainty on both image axes, propagated through each fixed homography. Excludes board-corner, package-pitch, cross-row-spacing and calibration uncertainty; overlap is not package identification or a registration pass.",
   "installedIdentityConfirmed": false,
   "padPlacementAuthorized": false,

@@ -79,6 +79,9 @@ def build():
                       'rows':rows})
     return {'schema':1,'candidate':candidate['id'],'sources':{name:digest(ROOT/name) for name in names},
             'comparisons':result,'independentPackageScaleChecks':trials,
+            'bodyWidthAlternativesBMm':candidate['candidate']['bodyWidthAlternativesBMm'],
+            'bodyWidthSelection':candidate['candidate']['bodyWidthSelection'],
+            'bodyWidthScope':'Both catalogue rows include 26-contact configurations and share longitudinal dimensions. Contact-span agreement cannot select a width; mating-face and form evidence are still required.',
             'uncertaintyScope':'Endpoint picking only: plus/minus the recorded pixel uncertainty on both image axes, propagated through each fixed homography. Excludes board-corner, package-pitch, cross-row-spacing and calibration uncertainty; overlap is not package identification or a registration pass.',
             'installedIdentityConfirmed':False,'padPlacementAuthorized':False,
             'allPickingIntervalsOverlapCatalogue':all(row['pickingIntervalOverlapsCatalogue'] for trial in trials for row in trial['rows'].values()),

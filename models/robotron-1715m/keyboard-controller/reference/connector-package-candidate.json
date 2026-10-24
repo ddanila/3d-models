@@ -24,7 +24,6 @@
     "contactPitchNominalMm": 2.5,
     "contactsPerRow": 13,
     "contactSpanNominalMm": 30,
-    "drawingTableRow": 4,
     "lengthL1Mm": {
       "nominal": 48,
       "lowerDeviation": -0.3,
@@ -39,10 +38,19 @@
       "nominal": 30,
       "tolerance": 0.3
     },
-    "bodyWidthBMm": {
-      "nominal": 8.5,
-      "tolerance": 0.2
-    }
+    "bodyWidthAlternativesBMm": [
+      {
+        "drawingTableRow": 4,
+        "nominal": 8.5,
+        "tolerance": 0.2
+      },
+      {
+        "drawingTableRow": 5,
+        "nominal": 13.5,
+        "tolerance": 0.2
+      }
+    ],
+    "bodyWidthSelection": null
   },
   "photoCompatibility": [
     "Two visible rows of thirteen lead exits, both leaving the same housing side.",
@@ -52,7 +60,8 @@
     "Catalogue dimensions are conditional on family identification, not measured specimen dimensions.",
     "L1 includes the end mounting structure; do not replace the existing central body box with a solid 48 mm box.",
     "Catalogue row and contact pitch must not be transferred to board-hole centres without identifying the lead and mounting form.",
-    "Existing photo projection uses nominal board dimensions and can retain perspective or raised-lead bias; package-pitch comparison cannot independently validate that registration."
+    "Existing photo projection uses nominal board dimensions and can retain perspective or raised-lead bias; package-pitch comparison cannot independently validate that registration.",
+    "Printed page 9 lists 26 contacts in both rows 4 and 5, with widths 8.5 and 13.5 mm respectively. Their shared longitudinal dimensions cannot distinguish the body width or exact connector form."
   ],
   "nextEvidence": [
     "Identify plug/socket and mounting form from mating-face or marking evidence.",
