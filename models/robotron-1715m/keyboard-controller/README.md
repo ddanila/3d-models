@@ -106,6 +106,9 @@ underside registration remains unqualified. `top-copper-landmarks.json` and
 `generated/top-registration.json` bound top copper independently of raised lead
 observations; failed extrapolation checks remain visible. Raised leads and sockets can hide hole
 centres; a successful local fit cannot establish copper attachment or board scale.
+The [A8 row-spacing diagnostic](reference/package-reviews/a8-row-spacing/assessment.json)
+tests a spacing hypothesis while retaining the original rigid-fit failure; it
+does not authorize footprint changes.
 The eye-based fit holds out independent solder eyes and composes with qualified
 underside placement only inside the intersection of their domains. Eye matches
 do not establish net identity; nearby lanes must still be traced independently.

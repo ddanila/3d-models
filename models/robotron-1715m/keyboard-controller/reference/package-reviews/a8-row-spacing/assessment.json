@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "component": "A8",
+  "sources": {
+    "generated/bus-review.json": "62f9de36cd8b3a7df319b3ba6e1db3ee3048753a0d4854bdf679a22f5d4e45a8",
+    "generated/layout.json": "3a2767183f35d6a4c049f97687d188294b25d942a113725c018023137974d408",
+    "tools/row_spacing_review.py": "55edbbb1d2aecde8412c7f128faaf56819918a6fc2609410736f17a357d27cf3"
+  },
+  "nativeRowSpacingMm": 15.240000713,
+  "trials": [
+    {
+      "calibrationTerminal": "A8:24",
+      "signedOppositeRowOffsetMm": -0.807342444,
+      "checks": [
+        {
+          "terminal": "A8:1",
+          "heldOut": false,
+          "residualAlongRowMm": -0.028770222,
+          "residualAcrossRowMm": 0.0,
+          "residualMm": 0.028770222
+        },
+        {
+          "terminal": "A8:12",
+          "heldOut": false,
+          "residualAlongRowMm": 0.028770222,
+          "residualAcrossRowMm": 0.0,
+          "residualMm": 0.028770222
+        },
+        {
+          "terminal": "A8:13",
+          "heldOut": true,
+          "residualAlongRowMm": -0.750176346,
+          "residualAcrossRowMm": -0.31018625,
+          "residualMm": 0.811775868
+        },
+        {
+          "terminal": "A8:19",
+          "heldOut": true,
+          "residualAlongRowMm": -0.073419536,
+          "residualAcrossRowMm": -0.414921069,
+          "residualMm": 0.421366731
+        },
+        {
+          "terminal": "A8:24",
+          "heldOut": false,
+          "residualAlongRowMm": -0.028562031,
+          "residualAcrossRowMm": 0.0,
+          "residualMm": 0.028562031
+        },
+        {
+          "terminal": "A8:6",
+          "heldOut": true,
+          "residualAlongRowMm": -0.132995496,
+          "residualAcrossRowMm": -0.00484966,
+          "residualMm": 0.133083888
+        }
+      ],
+      "maximumHeldOutResidualMm": 0.811775868,
+      "calibrationVariant": "native-footprints",
+      "originalRigidFitMaximumMm": 1.345969885,
+      "originalRigidFitWithinTolerance": false,
+      "unchangedToleranceMm": 1.25,
+      "conditionalRowSpacingMm": 14.432658269
+    },
+    {
+      "calibrationTerminal": "A8:24",
+      "signedOppositeRowOffsetMm": -0.807396137,
+      "checks": [
+        {
+          "terminal": "A8:1",
+          "heldOut": false,
+          "residualAlongRowMm": -0.252710766,
+          "residualAcrossRowMm": 0.0,
+          "residualMm": 0.252710766
+        },
+        {
+          "terminal": "A8:12",
+          "heldOut": false,
+          "residualAlongRowMm": 0.252710766,
+          "residualAcrossRowMm": 0.0,
+          "residualMm": 0.252710766
+        },
+        {
+          "terminal": "A8:13",
+          "heldOut": true,
+          "residualAlongRowMm": -0.532671746,
+          "residualAcrossRowMm": -0.310185096,
+          "residualMm": 0.616404074
+        },
+        {
+          "terminal": "A8:19",
+          "heldOut": true,
+          "residualAlongRowMm": -0.088930117,
+          "residualAcrossRowMm": -0.414919525,
+          "residualMm": 0.42434276
+        },
+        {
+          "terminal": "A8:24",
+          "heldOut": false,
+          "residualAlongRowMm": -0.246341922,
+          "residualAcrossRowMm": 0.0,
+          "residualMm": 0.246341922
+        },
+        {
+          "terminal": "A8:6",
+          "heldOut": true,
+          "residualAlongRowMm": -0.155441514,
+          "residualAcrossRowMm": -0.004849641,
+          "residualMm": 0.155517148
+        }
+      ],
+      "maximumHeldOutResidualMm": 0.616404074,
+      "calibrationVariant": "legacy-2.54-cpu",
+      "originalRigidFitMaximumMm": 1.238033522,
+      "originalRigidFitWithinTolerance": true,
+      "unchangedToleranceMm": 1.25,
+      "conditionalRowSpacingMm": 14.432604576
+    }
+  ],
+  "padPlacementAuthorized": false,
+  "registrationQualified": false,
+  "scope": "Counterfactual package-row translation only. Preserve the two same-row pose anchors and fit one normal offset using the opposite terminal adjacent to the first anchor (A8:24); A8:13 and A8:19 remain held out. No scale, row rotation or along-row correction is fitted. Original rigid-fit failures remain authoritative. The inferred spacing is conditional on photo registration and native calibration packages, not a measured package specification or proof of hole centres.",
+  "nextAction": "Distinguish actual board-hole row spacing from solder-joint picking and projection bias using independent row observations before changing the A8 footprint or promoting copper."
+}
