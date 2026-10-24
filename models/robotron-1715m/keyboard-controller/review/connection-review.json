@@ -3,7 +3,7 @@
   "scope": "Physical route review, not new connectivity evidence. X1 serves the matrix/LEDs; XT1 is the host cable. Reference endpoints are targets for tracing, not observed attachments.",
   "inputSha256": {
     "connection-review.json": "ad12255aba3ec6204cb2ca7d53ea81c09352000f3f5c2c278ab9234a1b06e0a4",
-    "evidence.json": "2b3576e8f7025e3cd6071b31956a8e44224ae5b7f5a94818e6b50a7fb4d983bf",
+    "evidence.json": "45ca333c85133b8f6fd2a9be22d33ae018b856f85f10374ef5be1a6e1b1e9072",
     "component-evidence.json": "c21f882b2f1cd0952e20e140fb7be4316e8bfe84b9a5f1219e1c2d00bb3f007c",
     "route-evidence.json": "30c3b039aaa1cef03832c82d7d63a407e7f23abecea0455484dcf35989ff50ae",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
