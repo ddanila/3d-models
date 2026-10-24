@@ -79,44 +79,48 @@
       "seatMm": 2.6
     },
     "C2": {
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "package": "radial-capacitor",
+      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
       "sizeMm": [
-        5.2,
-        1.2,
-        5.2
+        5,
+        5,
+        9
       ],
-      "seatMm": 2.6
+      "seatMm": 2.6,
+      "leadPitchMm": 3
     },
     "C3.1": {
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "package": "radial-capacitor",
+      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
       "sizeMm": [
-        5.2,
-        1.2,
-        5.2
+        5,
+        5,
+        9
       ],
-      "seatMm": 2.6
+      "seatMm": 2.6,
+      "leadPitchMm": 3
     },
     "C3.2": {
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "package": "radial-capacitor",
+      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
       "sizeMm": [
-        5.2,
-        1.2,
-        5.2
+        5,
+        5,
+        9
       ],
-      "seatMm": 2.6
+      "seatMm": 2.6,
+      "leadPitchMm": 3
     },
     "C4": {
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "package": "radial-capacitor",
+      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
       "sizeMm": [
-        5.2,
-        1.2,
-        5.2
+        5,
+        5,
+        9
       ],
-      "seatMm": 2.6
+      "seatMm": 2.6,
+      "leadPitchMm": 3
     },
     "C5.1": {
       "package": "capacitor",

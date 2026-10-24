@@ -19981,6 +19981,88 @@
       "status": "unassigned-wire-photo-estimate"
     }
   ],
+  "visualCapacitors": [
+    {
+      "baseHeight": 1.6,
+      "centre": [
+        -114.695,
+        3.019
+      ],
+      "diameter": 5,
+      "height": 9,
+      "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "photoSource": "photo-top",
+      "pixelBox": [
+        1390,
+        650,
+        1525,
+        790
+      ],
+      "ref": "C2",
+      "scope": "Retained illustrative display placement and dimensions. Raised body/perspective bias remains; no pad centres, holes, terminals, nets or polarity are inferred.",
+      "status": "body-only"
+    },
+    {
+      "baseHeight": 1.6,
+      "centre": [
+        -106.445,
+        -2.752
+      ],
+      "diameter": 5,
+      "height": 9,
+      "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "photoSource": "photo-top",
+      "pixelBox": [
+        1315,
+        770,
+        1445,
+        880
+      ],
+      "ref": "C3.1",
+      "scope": "Retained illustrative display placement and dimensions. Raised body/perspective bias remains; no pad centres, holes, terminals, nets or polarity are inferred.",
+      "status": "body-only"
+    },
+    {
+      "baseHeight": 1.6,
+      "centre": [
+        132,
+        -4.5
+      ],
+      "diameter": 5,
+      "height": 9,
+      "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "photoSource": "photo-top",
+      "pixelBox": [
+        1470,
+        3820,
+        1610,
+        3985
+      ],
+      "ref": "C3.2",
+      "scope": "Retained illustrative display placement and dimensions. Raised body/perspective bias remains; no pad centres, holes, terminals, nets or polarity are inferred.",
+      "status": "body-only"
+    },
+    {
+      "baseHeight": 1.6,
+      "centre": [
+        -101.335,
+        18.111
+      ],
+      "diameter": 5,
+      "height": 9,
+      "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "photoSource": "photo-top",
+      "pixelBox": [
+        1600,
+        820,
+        1735,
+        965
+      ],
+      "ref": "C4",
+      "scope": "Retained illustrative display placement and dimensions. Raised body/perspective bias remains; no pad centres, holes, terminals, nets or polarity are inferred.",
+      "status": "body-only"
+    }
+  ],
   "visualConnectors": [
     {
       "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",

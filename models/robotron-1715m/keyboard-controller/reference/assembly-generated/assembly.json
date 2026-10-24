@@ -9688,8 +9688,8 @@
     {
       "ref": "C2",
       "type": "10u",
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "package": "radial-capacitor",
+      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
       "position": [
         118.27000000000001,
         -20.0,
@@ -9697,24 +9697,24 @@
       ],
       "rotation": 0.0,
       "sizeMm": [
-        5.2,
-        1.2,
-        5.2
+        5,
+        5,
+        9
       ],
       "mesh": null,
       "profile": null,
       "boundsMm": [
         [
-          115.67,
-          120.87
+          115.77,
+          120.77
         ],
         [
-          -20.6,
-          -19.4
+          -22.5,
+          -17.5
         ],
         [
           2.6,
-          7.800000000000001
+          11.6
         ]
       ],
       "leads": [
@@ -9730,17 +9730,17 @@
             [
               117.0,
               -20.0,
-              2.077133623
+              2.034308457
             ],
             [
-              116.996534326,
+              116.972547136,
               -20.0,
-              2.122602219
+              2.15968014
             ],
             [
               116.77,
               -20.0,
-              3.6
+              2.6
             ]
           ],
           "diameterMm": 0.3,
@@ -9751,11 +9751,11 @@
               "centerMm": [
                 116.7,
                 -20.0,
-                2.077133623
+                2.034308457
               ],
-              "angleRadians": 0.152148326,
-              "tangentOffsetMm": 0.022866377,
-              "maximumChordErrorMm": 0.000867673
+              "angleRadians": 0.431138741,
+              "tangentOffsetMm": 0.065691543,
+              "maximumChordErrorMm": 0.006943571
             }
           ],
           "centerlineApproximationMm": 0.010000001
@@ -9772,17 +9772,17 @@
             [
               119.54,
               -20.0,
-              2.077133623
+              2.034308457
             ],
             [
-              119.543465674,
+              119.567452864,
               -20.0,
-              2.122602219
+              2.15968014
             ],
             [
               119.77,
               -20.0,
-              3.6
+              2.6
             ]
           ],
           "diameterMm": 0.3,
@@ -9793,11 +9793,11 @@
               "centerMm": [
                 119.84,
                 -20.0,
-                2.077133623
+                2.034308457
               ],
-              "angleRadians": 0.152148326,
-              "tangentOffsetMm": 0.022866377,
-              "maximumChordErrorMm": 0.000867673
+              "angleRadians": 0.431138741,
+              "tangentOffsetMm": 0.065691543,
+              "maximumChordErrorMm": 0.006943571
             }
           ],
           "centerlineApproximationMm": 0.010000001
@@ -9826,8 +9826,8 @@
     {
       "ref": "C3.1",
       "type": "47u",
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "package": "radial-capacitor",
+      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
       "position": [
         -127.72999999999999,
         5.0,
@@ -9835,24 +9835,24 @@
       ],
       "rotation": 0.0,
       "sizeMm": [
-        5.2,
-        1.2,
-        5.2
+        5,
+        5,
+        9
       ],
       "mesh": null,
       "profile": null,
       "boundsMm": [
         [
-          -130.33,
-          -125.13
+          -130.23,
+          -125.23
         ],
         [
-          4.4,
-          5.6
+          2.5,
+          7.5
         ],
         [
           2.6,
-          7.800000000000001
+          11.6
         ]
       ],
       "leads": [
@@ -9868,17 +9868,17 @@
             [
               -129.0,
               5.0,
-              2.077133623
+              2.034308457
             ],
             [
-              -129.003465674,
+              -129.027452864,
               5.0,
-              2.122602219
+              2.15968014
             ],
             [
               -129.23,
               5.0,
-              3.6
+              2.6
             ]
           ],
           "diameterMm": 0.3,
@@ -9889,11 +9889,11 @@
               "centerMm": [
                 -129.3,
                 5.0,
-                2.077133623
+                2.034308457
               ],
-              "angleRadians": 0.152148326,
-              "tangentOffsetMm": 0.022866377,
-              "maximumChordErrorMm": 0.000867673
+              "angleRadians": 0.431138741,
+              "tangentOffsetMm": 0.065691543,
+              "maximumChordErrorMm": 0.006943571
             }
           ],
           "centerlineApproximationMm": 0.010000001
@@ -9910,17 +9910,17 @@
             [
               -126.46,
               5.0,
-              2.077133623
+              2.034308457
             ],
             [
-              -126.456534326,
+              -126.432547136,
               5.0,
-              2.122602219
+              2.15968014
             ],
             [
               -126.23,
               5.0,
-              3.6
+              2.6
             ]
           ],
           "diameterMm": 0.3,
@@ -9931,11 +9931,11 @@
               "centerMm": [
                 -126.16,
                 5.0,
-                2.077133623
+                2.034308457
               ],
-              "angleRadians": 0.152148326,
-              "tangentOffsetMm": 0.022866377,
-              "maximumChordErrorMm": 0.000867673
+              "angleRadians": 0.431138741,
+              "tangentOffsetMm": 0.065691543,
+              "maximumChordErrorMm": 0.006943571
             }
           ],
           "centerlineApproximationMm": 0.010000001
@@ -9964,8 +9964,8 @@
     {
       "ref": "C3.2",
       "type": "47u",
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "package": "radial-capacitor",
+      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
       "position": [
         -120.72999999999999,
         5.0,
@@ -9973,24 +9973,24 @@
       ],
       "rotation": 0.0,
       "sizeMm": [
-        5.2,
-        1.2,
-        5.2
+        5,
+        5,
+        9
       ],
       "mesh": null,
       "profile": null,
       "boundsMm": [
         [
-          -123.33,
-          -118.13
+          -123.23,
+          -118.23
         ],
         [
-          4.4,
-          5.6
+          2.5,
+          7.5
         ],
         [
           2.6,
-          7.800000000000001
+          11.6
         ]
       ],
       "leads": [
@@ -10006,17 +10006,17 @@
             [
               -122.0,
               5.0,
-              2.077133623
+              2.034308457
             ],
             [
-              -122.003465674,
+              -122.027452864,
               5.0,
-              2.122602219
+              2.15968014
             ],
             [
               -122.23,
               5.0,
-              3.6
+              2.6
             ]
           ],
           "diameterMm": 0.3,
@@ -10027,11 +10027,11 @@
               "centerMm": [
                 -122.3,
                 5.0,
-                2.077133623
+                2.034308457
               ],
-              "angleRadians": 0.152148326,
-              "tangentOffsetMm": 0.022866377,
-              "maximumChordErrorMm": 0.000867673
+              "angleRadians": 0.431138741,
+              "tangentOffsetMm": 0.065691543,
+              "maximumChordErrorMm": 0.006943571
             }
           ],
           "centerlineApproximationMm": 0.010000001
@@ -10048,17 +10048,17 @@
             [
               -119.46,
               5.0,
-              2.077133623
+              2.034308457
             ],
             [
-              -119.456534326,
+              -119.432547136,
               5.0,
-              2.122602219
+              2.15968014
             ],
             [
               -119.23,
               5.0,
-              3.6
+              2.6
             ]
           ],
           "diameterMm": 0.3,
@@ -10069,11 +10069,11 @@
               "centerMm": [
                 -119.16,
                 5.0,
-                2.077133623
+                2.034308457
               ],
-              "angleRadians": 0.152148326,
-              "tangentOffsetMm": 0.022866377,
-              "maximumChordErrorMm": 0.000867673
+              "angleRadians": 0.431138741,
+              "tangentOffsetMm": 0.065691543,
+              "maximumChordErrorMm": 0.006943571
             }
           ],
           "centerlineApproximationMm": 0.010000001
@@ -10102,8 +10102,8 @@
     {
       "ref": "C4",
       "type": "10u",
-      "package": "capacitor",
-      "basis": "Proposed reference adapter; package fit remains unqualified.",
+      "package": "radial-capacitor",
+      "basis": "Upright can form supported by primary photographs and factory placement. Diameter, height, lead pitch and stand-off remain proposed visual dimensions; installed type, polarity and mechanical fit are unqualified.",
       "position": [
         -115.72999999999999,
         -20.0,
@@ -10111,24 +10111,24 @@
       ],
       "rotation": 0.0,
       "sizeMm": [
-        5.2,
-        1.2,
-        5.2
+        5,
+        5,
+        9
       ],
       "mesh": null,
       "profile": null,
       "boundsMm": [
         [
-          -118.33,
-          -113.13
+          -118.23,
+          -113.23
         ],
         [
-          -20.6,
-          -19.4
+          -22.5,
+          -17.5
         ],
         [
           2.6,
-          7.800000000000001
+          11.6
         ]
       ],
       "leads": [
@@ -10144,17 +10144,17 @@
             [
               -117.0,
               -20.0,
-              2.077133623
+              2.034308457
             ],
             [
-              -117.003465674,
+              -117.027452864,
               -20.0,
-              2.122602219
+              2.15968014
             ],
             [
               -117.23,
               -20.0,
-              3.6
+              2.6
             ]
           ],
           "diameterMm": 0.3,
@@ -10165,11 +10165,11 @@
               "centerMm": [
                 -117.3,
                 -20.0,
-                2.077133623
+                2.034308457
               ],
-              "angleRadians": 0.152148326,
-              "tangentOffsetMm": 0.022866377,
-              "maximumChordErrorMm": 0.000867673
+              "angleRadians": 0.431138741,
+              "tangentOffsetMm": 0.065691543,
+              "maximumChordErrorMm": 0.006943571
             }
           ],
           "centerlineApproximationMm": 0.010000001
@@ -10186,17 +10186,17 @@
             [
               -114.46,
               -20.0,
-              2.077133623
+              2.034308457
             ],
             [
-              -114.456534326,
+              -114.432547136,
               -20.0,
-              2.122602219
+              2.15968014
             ],
             [
               -114.23,
               -20.0,
-              3.6
+              2.6
             ]
           ],
           "diameterMm": 0.3,
@@ -10207,11 +10207,11 @@
               "centerMm": [
                 -114.16,
                 -20.0,
-                2.077133623
+                2.034308457
               ],
-              "angleRadians": 0.152148326,
-              "tangentOffsetMm": 0.022866377,
-              "maximumChordErrorMm": 0.000867673
+              "angleRadians": 0.431138741,
+              "tangentOffsetMm": 0.065691543,
+              "maximumChordErrorMm": 0.006943571
             }
           ],
           "centerlineApproximationMm": 0.010000001
@@ -23396,13 +23396,13 @@
     "../components/kicad/meshes/DIP-40_W15.24mm-body.stl": "3188564537436169f9303e180ffb01baa899d54c8f743448998bad15db31f7b3",
     "evidence.json": "45ca333c85133b8f6fd2a9be22d33ae018b856f85f10374ef5be1a6e1b1e9072",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
-    "reference/assembly.json": "0166e4c488f22eb945aeea87820b0148c315b26dfdc6b5a056a4ed40eca3ca39",
+    "reference/assembly.json": "00ba707e226022b7594afc8b1b7675be41e975576be54d4324464fc1f8ebcd90",
     "reference/generated/layout.json": "11cb571bd1ff32af1da4d9d3e1952a4d5ec2c5e62f99067981f52dd47113eaca",
     "reference/signal-paths.json": "bcc196b9fe151e87a292a0b8572d20b1b763d526907005e595428f03f958392b",
     "tools/assembly_allowances.py": "879c3fe4c25034b72a81c8b4708fb5246f3bd0bbde82c7bf4c4345d89733ac3b",
     "tools/lead_bends.py": "bf8ebb9f2d1450e0911b7cff8f4af0a6c35622d3320d42d439ede3c4ad30b9b1",
     "tools/lead_clearance.py": "bee24ac3694ca5a792ac71b3d5fa0aa782f2a0a50d1c612e8013c9dec5309705",
-    "tools/reference_assembly.py": "88968f68ffc315b5422c6e14dde5ecc18f96388917a59eebe10dad3fb6083f79",
+    "tools/reference_assembly.py": "4e91b9320808753064bf4ac1d9aa8b3d93399cc65ef385c6111ea689fcadb83d",
     "tools/shared_filter.py": "4f161698ca237d5e679f8c3790808573c4c90c991f37cf0a87b34d797eb680bf"
   }
 }

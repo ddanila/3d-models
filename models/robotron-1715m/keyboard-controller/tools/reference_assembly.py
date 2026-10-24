@@ -88,6 +88,10 @@ def build():
             elif kind in ('axial','filter'):
                 terminals={p['pin']:[(-1 if i==0 else 1)*size[0]/2,0,z+size[2]/2] for i,p in enumerate(pads)}
             elif kind=='bridge':terminals={p['pin']:[0,0,z] for p in pads}
+            elif kind=='radial-capacitor':
+                pitch=s['leadPitchMm']
+                if n!=2 or not 0<pitch<size[0] or size[0]!=size[1]:raise ValueError('Invalid radial capacitor adapter '+ref)
+                terminals={p['pin']:[(-1 if i==0 else 1)*pitch/2,0,z] for i,p in enumerate(pads)}
             elif kind=='capacitor':terminals={p['pin']:[(-1 if i==0 else 1)*1.5,0,z+1] for i,p in enumerate(pads)}
             else:terminals={p['pin']:[*rotate([p['position'][i]-origin[i] for i in range(2)],-angle),z] for p in pads}
             points=[[x*size[0]/2,y*size[1]/2+(.25 if kind=='transistor' else 0),h] for x in (-1,1) for y in (-1,1) for h in (0,size[2])]
@@ -164,14 +168,15 @@ def build():
         w,d,h=core['outerSizeMm'];iw,ih=core['windowSizeMm']
         scad.append(f'color([.18,.19,.18]) translate({core["positionMm"]}) difference() {{translate({[-w/2,-d/2,0]}) cube({[w,d,h]});translate({[-iw/2,-ih/2,-.01]}) cube({[iw,ih,h+.02]});}}')
     for c in result:
-        p=c['position'];a=c['rotation'];size=c['sizeMm'];kind=c['package'];color=[.15,.15,.17] if kind in ('dip','transistor') else [.65,.5,.25] if kind in ('capacitor','network') else [.65,.7,.73]
+        p=c['position'];a=c['rotation'];size=c['sizeMm'];kind=c['package'];color=[.15,.15,.17] if kind in ('dip','transistor','radial-capacitor') else [.65,.5,.25] if kind in ('capacitor','network') else [.65,.7,.73]
         if kind not in ('bridge','filter'):
             if c['mesh']:shape=f'rotate([0,0,-90]) import("../../../{c["mesh"]}");'
             elif kind=='axial':shape=f'translate([0,0,{size[2]/2}]) rotate([0,90,0]) cylinder(d={size[1]},h={size[0]},center=true,$fn=24);'
+            elif kind=='radial-capacitor':shape=f'cylinder(d={size[0]},h={size[2]},$fn=32); color([.7,.7,.72]) translate([0,0,{size[2]-.15}]) cylinder(d={size[0]*.9},h=.15,$fn=32);'
             elif kind=='capacitor':shape=f'translate([0,0,{size[2]/2}]) rotate([90,0,0]) cylinder(d={size[0]},h={size[1]},center=true,$fn=32);'
             elif kind=='transistor':shape=f'linear_extrude({size[2]}) polygon({c["profile"]});'
             else:shape=f'translate({[-size[0]/2,-size[1]/2,0]}) cube({size});'
-            scad.append(f'// {c["ref"]}: {c["basis"]}\ncolor({color}) translate({p}) rotate([0,0,{a}]) {shape}')
+            scad.append(f'// {c["ref"]}: {c["basis"]}\ncolor({color}) translate({p}) rotate([0,0,{a}]) {{{shape}}}')
         for lead in c['leads']:
             for x,y in zip(lead['points'],lead['points'][1:]):scad.append(f'color([.75,.75,.78]) hull() {{translate({x}) sphere(d={lead["diameterMm"]},$fn=8); translate({y}) sphere(d={lead["diameterMm"]},$fn=8);}}')
     scad.append('}')

@@ -204,7 +204,7 @@
       0,
       1
     ],
-    "intersectionMm3": 57.805158,
+    "intersectionMm3": 58.310413,
     "intersects": true
   },
   "mountingControl": {
@@ -226,7 +226,7 @@
       0,
       1
     ],
-    "intersectionMm3": 70.42749,
+    "intersectionMm3": 73.776466,
     "intersects": true
   },
   "nominalInterfacesClear": true,
@@ -244,8 +244,8 @@
     "interior.scad": "107afcf95fe9e446c1cc9047ce3b7c24dad6f4c524977d2954e034b118816b7e",
     "key-switch/geometry.scad": "3c5548896f0d9ef90e45d89c51d15f91974dc473456da760aeb61104c75fddce",
     "keyboard-artwork.scad": "4b185f623c7b71674bfc823a3cb0b8ceb38ed8447e55e286977e01de02c18d6c",
-    "keyboard-controller/generated/controller.scad": "f6e306520f5b08cd630656324c60e4d8be5ce5f7ead8152a4776a9993017fd20",
-    "keyboard-controller/reference/assembly-generated/assembly.scad": "9afe88b6b28f83c95c4f24dcf22d8516a212ff2e0bf13c745fce1d2558d3383d",
+    "keyboard-controller/generated/controller.scad": "ce0e0628de5dbebc9fa101526676728f1016523efdd84d1a0c8b19cde8675a25",
+    "keyboard-controller/reference/assembly-generated/assembly.scad": "5813d04a9de14f88b4236c2182610c4d27d1d47bd98228f91b65c968104b6f19",
     "keyboard-controller/reference/generated/controller.scad": "70868fbfe22c5bb97cab384c4272fede2222396cb70c90b262d259e69bf092c7",
     "keyboard-controller/reference/review.scad": "b3019aab9355118b037c3e64f857fa2e0b262c5c28444e3c10617fcd4f5ebe99",
     "keyboard-controller/tools/reference_enclosure.py": "a9fcc1c67cac4c30ee876ff612e026bc8816e64b1fac0d02f8a10edc51a8412d",
@@ -256,6 +256,6 @@
     "monitor-interior.scad": "5415fe31a30d7dccf97746096e5629b511b56e4da25fe20197662a51495a2ff2",
     "monitor-profile.scad": "4af9fd8e61640f9c2551fca49ba2b8ed004d4bc9bc2c2c87e4ffaf14ab5c62cb",
     "pcb-components.scad": "352486104a830116f799c7c2535bcda6b055596404fb9af8696887ebc69d6125",
-    "specimen-details.scad": "b5a31f014ab6c3f5cb3008e79b92c0323a104cc095607257a9a70698aa6a8749"
+    "specimen-details.scad": "9ad1199f222e06d84ffaaf7ed19a0ce4f0014f747db5a9df3a85bccf94c93240"
   }
 }

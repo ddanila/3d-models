@@ -15,7 +15,7 @@ class ControllerMeshContractTests(unittest.TestCase):
         validate(manifest, self.new_sources)
 
     def test_partial_export_cannot_bless_stale_leads_or_resistor_meshes(self):
-        for omitted in ['leads', 'resistors', 'resistor-bands', 'solder']:
+        for omitted in ['leads', 'resistors', 'resistor-bands', 'solder', 'caps']:
             with self.subTest(omitted=omitted):
                 selected = PARTS - {'keyboard-controller-' + omitted}
                 manifest = {'parts': self.parts, 'keyboardControllerMeshes':

@@ -80,6 +80,16 @@ class AssemblyTests(unittest.TestCase):
         with patch.object(assembly,'read',side_effect=altered),self.assertRaisesRegex(ValueError,'common terminal'):
             assembly.build()
 
+    def test_radial_capacitor_bodies_use_bottom_lead_entries(self):
+        data,scad=assembly.build();cans=[c for c in data['components'] if c['package']=='radial-capacitor']
+        self.assertEqual({c['ref'] for c in cans},{'C2','C3.1','C3.2','C4'})
+        for c in cans:
+            self.assertEqual(c['sizeMm'],[5,5,9])
+            self.assertEqual(len(c['leads']),2)
+            for lead in c['leads']:self.assertEqual(lead['points'][-1][2],c['position'][2])
+        self.assertIn('cylinder(d=5,h=9',scad)
+        self.assertTrue(data['review']['assemblyAllowances']['envelopesClear'])
+
     def test_straight_body_entries_and_rounded_paths(self):
         data,_=assembly.build()
         for c in data['components']:

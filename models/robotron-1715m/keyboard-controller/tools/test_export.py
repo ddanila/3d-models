@@ -512,6 +512,22 @@ class ControllerExportTests(unittest.TestCase):
   wrong['R1']['visualNetworkCandidate']['photoBodyAxis']=[[1,1],[1,1]]
   with self.assertRaisesRegex(ValueError,'Degenerate'):visual_networks(wrong,evidence,landmarks,layout['unplaced'])
 
+ def test_capacitor_body_identity_does_not_place_pads(self):
+  import copy
+  from export import visual_capacitors
+  records=json.loads((R/'component-evidence.json').read_text());evidence=json.loads((R/'evidence.json').read_text());layout=json.loads((R/'generated/layout.json').read_text())
+  bodies=visual_capacitors(records,evidence,layout['unplaced'])
+  self.assert_report_equal(bodies,layout['visualCapacitors'])
+  self.assertEqual({c['ref'] for c in bodies},{'C2','C3.1','C3.2','C4'})
+  for c in bodies:
+   self.assertNotIn('pads',c);self.assertNotIn('net',c);self.assertNotIn('polarity',c)
+   self.assertFalse(any(p['ref']==c['ref'] for p in layout['components']))
+  self.assertEqual(visual_capacitors(records,evidence,[]),[])
+  changed=copy.deepcopy(records);changed['C2']['visualCapacitorCandidate']['photoSource']='comparison-photo-080450163'
+  with self.assertRaisesRegex(ValueError,'primary photo'):visual_capacitors(changed,evidence,layout['unplaced'])
+  changed=copy.deepcopy(records);changed['C2']['visualCapacitorCandidate']['heightMm']=-1
+  with self.assertRaisesRegex(ValueError,'Invalid capacitor'):visual_capacitors(changed,evidence,layout['unplaced'])
+
  def test_visual_axials_keep_photo_bodies_separate_from_holes(self):
   import copy
   from export import visual_axials

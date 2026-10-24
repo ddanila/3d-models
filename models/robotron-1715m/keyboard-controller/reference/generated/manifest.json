@@ -7,11 +7,11 @@
   },
   "schema": 1,
   "sources": {
-    "component-evidence.json": "c21f882b2f1cd0952e20e140fb7be4316e8bfe84b9a5f1219e1c2d00bb3f007c",
+    "component-evidence.json": "2aea0d2ec425af9507ae38f544f3c61eb6834efe35fc5cfc45d971b230fb909e",
     "controller.kicad_pcb": "b3dbd4ff6b4db13e9e86cf58c510308d69e8f86785a421d44e75d097e520442e",
     "controller.kicad_sch": "48333fb758f58072685591a6323867efc31e6a390c673e7dd1967048f0935b29",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
-    "generated/layout.json": "8ddc39f82b1e45e1f5764f1769047a1c0db844a2293d7ad9a6729036e9becdd2",
+    "generated/layout.json": "3a2767183f35d6a4c049f97687d188294b25d942a113725c018023137974d408",
     "reference/controller.kicad_pcb": "8716b773a718dbf3cd2326ec2b3cf11f22e73b315f255cde01a340ff2675df55",
     "reference/controller.kicad_pro": "6583dcdffccee3fd6c5e10ab0e3e900b75a7054cc98669379d044c91cda33356",
     "reference/implementation.json": "3089b43e7bad4ebe071ab3698f5ca34b2001c4e9b46b82931b526fe912af7223",

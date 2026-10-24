@@ -94,13 +94,13 @@ module keyboard_controller_connectors(){keyboard_controller_pose(){
  }
 }}
 module keyboard_controller_caps(){keyboard_controller_pose(){
- for(p=[[-114.695, 3.019], [-106.445, -2.752], [-101.335, 18.111], [132, -4.5]])translate([p[0],p[1],1.6])cylinder(d=5,h=9,$fn=24);
+ for(c=controller_visual_capacitors)translate([c[0][0],c[0][1],c[3]])cylinder(d=c[1],h=c[2],$fn=24);
 }}
 module keyboard_controller_metal(){keyboard_controller_pose(){
  for(p=controller_dips)owner_dip_pins(p);
  for(p=controller_transistors)controller_transistor_pose(p)controller_miniplast_leads();
  owner_dip_pins(controller_rom);
- for(p=[[-114.695, 3.019], [-106.445, -2.752], [-101.335, 18.111], [132, -4.5]])translate([p[0],p[1],10.65])cylinder(d=4.5,h=.2,$fn=24);
+ for(c=controller_visual_capacitors)translate([c[0][0],c[0][1],c[3]+c[2]+.05])cylinder(d=c[1]*.9,h=.2,$fn=24);
  // Cable shield clamp, folded over the incoming lead.
  // Thin saddle, open below, with separate mounting ears (owner photo).
  translate([-125,0,4.5])intersection(){
