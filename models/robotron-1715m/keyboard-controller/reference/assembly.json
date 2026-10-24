@@ -647,5 +647,12 @@
     "radiusMm": 0.3,
     "chordErrorMm": 0.01,
     "scope": "Proposed centerline radius and maximum chord deviation; neither is a measured forming tolerance."
+  },
+  "assemblyAllowances": {
+    "bodyEnvelopeMm": 0.1,
+    "leadRadialEnvelopeMm": 0.05,
+    "coreEnvelopeMm": 0.1,
+    "holeRadialLossMm": 0.05,
+    "basis": "Proposed independent design budgets, not measured process capability or specimen tolerances."
   }
 }

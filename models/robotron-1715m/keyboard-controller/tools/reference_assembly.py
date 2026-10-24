@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Pad-driven reference assembly; mechanical assumptions never qualify historical geometry."""
 import argparse
+import difflib
 import hashlib
 import json
 import math
@@ -9,6 +10,7 @@ import struct
 from lead_clearance import review as lead_clearance_review
 from shared_filter import build as shared_filter_build
 from lead_bends import fillet
+from assembly_allowances import review as allowance_review, scad_envelope
 
 ROOT=Path(__file__).resolve().parents[1]
 REF=ROOT/'reference'
@@ -43,7 +45,7 @@ def build():
     packages={p['id']:p for p in evidence['packageReferences']}
     expected={c['ref'] for c in layout['components'] if not c['ref'].startswith('H')}
     if set(spec['components'])!=expected:raise ValueError('Assembly population differs from PCB')
-    sources=['reference/assembly.json','reference/generated/layout.json','generated/connectivity.json','evidence.json','tools/reference_assembly.py','tools/lead_clearance.py','tools/lead_bends.py']
+    sources=['reference/assembly.json','reference/generated/layout.json','generated/connectivity.json','evidence.json','tools/reference_assembly.py','tools/lead_clearance.py','tools/lead_bends.py','tools/assembly_allowances.py']
     result=[]
     for c in layout['components']:
         ref=c['ref']
@@ -102,7 +104,7 @@ def build():
                 lead['points'],lead['bends']=fillet(lead['points'],forming['radiusMm'],forming['chordErrorMm'])
         for lead in c['leads']:
             if forming['radiusMm']<=lead['diameterMm']/2:raise ValueError('Bend radius must exceed wire radius')
-            lead['centerlineApproximationMm']=forming['chordErrorMm']
+            lead['centerlineApproximationMm']=forming['chordErrorMm']+1e-9
 
     core_contacts=[]
     for core in shared_bodies:
@@ -131,6 +133,7 @@ def build():
                 if any(segment_box(a,b,other['boundsMm'],lead['diameterMm']/2+lead['centerlineApproximationMm']) for a,b in zip(lead['points'],lead['points'][1:])):
                     lead_body.append({'terminal':c['ref']+':'+lead['pin'],'body':other['ref']})
     report={'sharedCoreIntersections':core_contacts,'sharedCoreOverhangs':core_overhangs,'leadClearance':lead_clearance_review(result),'leadBodyEnvelopeIntersections':lead_body,'method':'Conservative axis-aligned body envelopes; nominal lead-to-drill allowance. Swept leads checked against foreign body envelopes; transistor wires use the circumscribed diameter of the manufacturer lead section. Nominal lead-to-lead capsule clearances include centerline approximation bounds. Proposed circular bend radii are explicit; installed forming tolerances remain unqualified.','bodyEnvelopeIntersections':collisions,'bodyOverhangs':outside,'insufficientDrillAllowance':drill,'leadPadAlignmentPassed':True,'mechanicallyQualified':False,'historicallyVerified':False,'fabricationReady':False}
+    report['assemblyAllowances']=allowance_review(result,shared_bodies,layout,spec['assemblyAllowances'],segment_box,overlaps)
     paths=read(REF/'signal-paths.json');connectivity=read(ROOT/'generated/connectivity.json')['components']
     for stage in paths['stages']:
         if stage['ref'] not in expected:raise ValueError('Unknown walkthrough component')
@@ -155,6 +158,7 @@ def build():
         for lead in c['leads']:
             for x,y in zip(lead['points'],lead['points'][1:]):scad.append(f'color([.75,.75,.78]) hull() {{translate({x}) sphere(d={lead["diameterMm"]},$fn=8); translate({y}) sphere(d={lead["diameterMm"]},$fn=8);}}')
     scad.append('}')
+    scad.append(scad_envelope(result,shared_bodies,spec['assemblyAllowances']))
     return data,'\n'.join(scad)+'\n'
 
 def main():
@@ -162,7 +166,10 @@ def main():
     for name,content in [('assembly.json',json.dumps(data,indent=2)+'\n'),('assembly.scad',scad)]:
         path=REF/'assembly-generated'/name
         if a.check:
-            if not path.exists() or path.read_text()!=content:raise SystemExit('Stale reference assembly: '+name)
+            if not path.exists():raise SystemExit('Missing reference assembly: '+name)
+            if path.read_text()!=content:
+                diff=list(difflib.unified_diff(path.read_text().splitlines(),content.splitlines(),fromfile='retained/'+name,tofile='generated/'+name))
+                raise SystemExit('Stale reference assembly: '+name+'\n'+'\n'.join(diff[:40]))
         else:path.parent.mkdir(exist_ok=True);path.write_text(content)
     print(json.dumps(data['review'],indent=2))
 if __name__=='__main__':main()

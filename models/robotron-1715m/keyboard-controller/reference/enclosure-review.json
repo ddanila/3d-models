@@ -1,7 +1,7 @@
 {
-  "schema": 2,
+  "schema": 3,
   "variant": "proposed-reference",
-  "scope": "Reference PCB substrate, drilled holes, populated bodies and leads at the existing keyboard controller transform. Static nominal solids only; excludes PCB copper, connector engagement, cable and shield braid, curve tessellation error and manufacturing tolerances. Proposed circular lead bends are included. Zero volume permits touching. Enclosure dimensions and installed seating remain unmeasured.",
+  "scope": "Reference PCB substrate, drilled holes, populated bodies and leads at the existing keyboard controller transform. Nominal solids and conservative assembly allowance envelopes are reported separately. Allowance envelopes include curve approximation error; substrate mounting remains nominal. Excludes PCB copper, connector engagement, cable and shield braid. Proposed circular lead bends are included. Zero volume permits touching. Enclosure dimensions and installed seating remain unmeasured.",
   "engine": "OpenSCAD version 2026.10.05",
   "intersectionBudgetMm3": 0.001,
   "results": [
@@ -116,6 +116,64 @@
       "intersects": false
     }
   ],
+  "allowanceResults": [
+    {
+      "interface": "allowance-shell",
+      "subject": "reference_assembly_allowance_envelope",
+      "offsetMm": [
+        0,
+        0,
+        0
+      ],
+      "intersectionMm3": 0.0,
+      "intersects": false
+    },
+    {
+      "interface": "allowance-bottom",
+      "subject": "reference_assembly_allowance_envelope",
+      "offsetMm": [
+        0,
+        0,
+        0
+      ],
+      "intersectionMm3": 0.0,
+      "intersects": false
+    },
+    {
+      "interface": "allowance-supports",
+      "subject": "reference_assembly_allowance_envelope",
+      "offsetMm": [
+        0,
+        0,
+        0
+      ],
+      "intersectionMm3": 0.0,
+      "intersects": false
+    },
+    {
+      "interface": "allowance-mounts",
+      "subject": "reference_assembly_allowance_envelope",
+      "offsetMm": [
+        0,
+        0,
+        0
+      ],
+      "intersectionMm3": 0.0,
+      "intersects": false
+    },
+    {
+      "interface": "allowance-matrix-board",
+      "subject": "reference_assembly_allowance_envelope",
+      "offsetMm": [
+        0,
+        0,
+        0
+      ],
+      "intersectionMm3": 0.0,
+      "intersects": false
+    }
+  ],
+  "allowanceInterfacesClear": true,
   "positiveControl": {
     "interface": "raised-assembly-control",
     "subject": "reference_populated_assembly",
@@ -138,6 +196,17 @@
     "intersectionMm3": 2.155413,
     "intersects": true
   },
+  "allowanceControl": {
+    "interface": "raised-allowance-control",
+    "subject": "reference_assembly_allowance_envelope",
+    "offsetMm": [
+      0,
+      0,
+      1
+    ],
+    "intersectionMm3": 33.892802,
+    "intersects": true
+  },
   "nominalInterfacesClear": true,
   "mechanicallyQualified": false,
   "sources": {
@@ -154,10 +223,10 @@
     "key-switch/geometry.scad": "3c5548896f0d9ef90e45d89c51d15f91974dc473456da760aeb61104c75fddce",
     "keyboard-artwork.scad": "4b185f623c7b71674bfc823a3cb0b8ceb38ed8447e55e286977e01de02c18d6c",
     "keyboard-controller/generated/controller.scad": "f6e306520f5b08cd630656324c60e4d8be5ce5f7ead8152a4776a9993017fd20",
-    "keyboard-controller/reference/assembly-generated/assembly.scad": "d4c762c36ad8541d4278465cd2b6037925b7eb397c050b730ee561e3744adb62",
+    "keyboard-controller/reference/assembly-generated/assembly.scad": "557fc4ce2b8d72d7d8db83411989c9d11195d8877088e4fc7a75141a3b7cc731",
     "keyboard-controller/reference/generated/controller.scad": "c80c24dbc7ca2f5d2af42cc593c0e765918c587e6f0bd65c92ba9bcae12ebaca",
     "keyboard-controller/reference/review.scad": "b3019aab9355118b037c3e64f857fa2e0b262c5c28444e3c10617fcd4f5ebe99",
-    "keyboard-controller/tools/reference_enclosure.py": "4ebbf5792216c2d7c280d443a34bf0d0540be95092525000a146676822fcb3f9",
+    "keyboard-controller/tools/reference_enclosure.py": "655414ec2a20cc5e78869642f59c5a474353455b275884cb3643cc17db4e65f0",
     "keyboard-layout.scad": "bf1700cba2e51c7ea9b400fab2c6dbd7072fd5d97cb15396cd0e17a260ef5fae",
     "keycap/geometry.scad": "e304f9e8e48ee16f4ee67a29906901f6f7cff93694c6ebf70bf6e38a891ad961",
     "model.scad": "a3551efcb66486043b1521b49e42d2c8f7e2a846d8f82edf5838c7a5b30f4f8d",

@@ -216,5 +216,9 @@ misaligned-mounting controls must collide. It retains source-bound results in `r
 qualify manufacturing tolerances or measured enclosure fit. Circular lead bends
 use the explicit reference-design radius and chord-error budget in `reference/assembly.json`.
 Lead clearance checks conservatively include that approximation error.
+`assemblyAllowances` declares independent proposed body, core, lead and hole
+budgets. Expanded-envelope results are separate from nominal results, including
+enclosure checks with a deliberately colliding control; these are design assumptions,
+not measured process tolerances.
 R2 remains a package surrogate; shared-core magnetic coupling is unmeasured. These reference adapters do not establish historical
 footprints or fabrication readiness.

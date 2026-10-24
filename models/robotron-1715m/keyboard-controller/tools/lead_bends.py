@@ -59,4 +59,11 @@ def fillet(points, radius, chord_error):
                 output.append(p)
     if math.dist(output[-1], clean[-1]) > 1e-12:
         output.append(clean[-1])
-    return output, [{k: v for k, v in bend.items() if k != 'points'} for bend in bends.values()]
+    # Stable exports across libm/platform versions; sub-nanometre rounding
+    # is included separately in the assembly's centerline error envelope.
+    def stable(value):
+        if isinstance(value,float):return round(value,9)+0.0
+        if isinstance(value,list):return [stable(v) for v in value]
+        if isinstance(value,dict):return {k:stable(v) for k,v in value.items()}
+        return value
+    return stable(output), stable([{k: v for k, v in bend.items() if k != 'points'} for bend in bends.values()])

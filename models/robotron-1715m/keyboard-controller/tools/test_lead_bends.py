@@ -14,7 +14,7 @@ class LeadBendTests(unittest.TestCase):
             self.assertAlmostEqual(math.dist(p, center), .5)
         for a, b in zip(points[1:-2], points[2:-1]):
             midpoint = [(x+y)/2 for x, y in zip(a, b)]
-            self.assertLessEqual(.5-math.dist(midpoint, center), .005+1e-12)
+            self.assertLessEqual(.5-math.dist(midpoint, center), .005+1e-9)
         self.assertAlmostEqual(bends[0]['tangentOffsetMm'], .5)
 
     def test_rotation_preserves_geometry(self):
@@ -25,7 +25,7 @@ class LeadBendTests(unittest.TestCase):
         a, _ = fillet(source, .5, .005)
         b, _ = fillet([rotate(p) for p in source], .5, .005)
         for p, q in zip(a, b):
-            self.assertLess(math.dist(rotate(p), q), 1e-12)
+            self.assertLess(math.dist(rotate(p), q), 2e-9)
 
     def test_adjacent_bends_cannot_overlap(self):
         with self.assertRaisesRegex(ValueError, 'segment 1'):

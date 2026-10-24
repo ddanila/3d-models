@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import copy
+import random
 from lead_bends import fillet
+from assembly_allowances import review as allowance_review
 import unittest
 from unittest.mock import patch
 import reference_assembly as assembly
@@ -144,6 +146,44 @@ class LeadClearanceTests(unittest.TestCase):
         self.assertTrue(review_leads([a,b])['noUnintendedContact'])
         a['leads'][0]['centerlineApproximationMm']=.02
         self.assertFalse(review_leads([a,b])['noUnintendedContact'])
+
+    def test_broad_phase_matches_exhaustive_segment_distances(self):
+        rng=random.Random(1715)
+        components=[self.component(str(i),str(i),[[rng.uniform(-5,5) for _ in range(3)] for _ in range(3)]) for i in range(16)]
+        expected=[]
+        for i,a in enumerate(components):
+            for b in components[i+1:]:
+                p=a['leads'][0]['points'];q=b['leads'][0]['points']
+                gap=min(closest_segments(x,y,u,v)[0] for x,y in zip(p,p[1:]) for u,v in zip(q,q[1:]))-.3
+                expected.append((gap,[a['ref']+':1',b['ref']+':1']))
+        result=review_leads(components)
+        self.assertAlmostEqual(result['minimumUnintendedClearance']['surfaceClearanceMm'],min(expected)[0],places=8)
+        self.assertEqual({tuple(r['terminals']) for r in result['unintendedContacts']},{tuple(pair) for gap,pair in expected if gap<=1e-9})
+
+    def test_allowances_expose_contacts_and_validate_budget(self):
+        a=self.component('A','/A',[[0,0,0],[2,0,0]])
+        b=self.component('B','/B',[[0,.4,0],[2,.4,0]])
+        self.assertTrue(review_leads([a,b])['noUnintendedContact'])
+        self.assertFalse(review_leads([a,b],radial_allowance_mm=.06)['noUnintendedContact'])
+        with self.assertRaises(ValueError):review_leads([a,b],radial_allowance_mm=-.1)
+
+    def test_body_and_hole_allowances_report_nominally_clear_fixture(self):
+        a=self.component('A','/A',[[0,0,0],[0,0,2]])
+        b=self.component('B','/B',[[3,0,0],[3,0,2]])
+        a['boundsMm']=[[0,1],[0,1],[2,3]]
+        b['boundsMm']=[[1.1,2.1],[0,1],[2,3]]
+        layout={'outlinePolygon':[[-5,-5],[5,-5],[5,5],[-5,5]],'components':[
+            {'ref':ref,'pads':[{'pin':'1','drill':[.4,.4]}]} for ref in ('A','B')]}
+        spec=dict(bodyEnvelopeMm=0,leadRadialEnvelopeMm=0,coreEnvelopeMm=0,holeRadialLossMm=0)
+        nominal=allowance_review([a,b],[],layout,spec,assembly.segment_box,assembly.overlaps)
+        self.assertEqual(nominal['bodyEnvelopeIntersections'],[])
+        self.assertEqual(nominal['insufficientHoleClearance'],[])
+        spec.update(bodyEnvelopeMm=.1,holeRadialLossMm=.06)
+        expanded=allowance_review([a,b],[],layout,spec,assembly.segment_box,assembly.overlaps)
+        self.assertEqual(expanded['bodyEnvelopeIntersections'],[{'a':'A','b':'B'}])
+        self.assertEqual(len(expanded['insufficientHoleClearance']),2)
+        self.assertFalse(expanded['envelopesClear'])
+        self.assertFalse(expanded['mechanicallyQualified'])
 
     def test_intended_join_does_not_hide_other_net_contact(self):
         a=self.component('BR1','/A',[[-1,0,0],[0,0,0]],'bridge')

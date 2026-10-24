@@ -25,7 +25,9 @@ def closest_segments(a,b,c,d):
     return math.dist(p,q),p,q
 
 
-def review(components):
+def review(components, radial_allowance_mm=0):
+    if not math.isfinite(radial_allowance_mm) or radial_allowance_mm<0:
+        raise ValueError("Invalid lead radial allowance")
     leads=[]
     for c in components:
         for lead in c['leads']:
@@ -38,8 +40,9 @@ def review(components):
             for length in lengths:stations.append(stations[-1]+length)
             segments=list(zip(points,points[1:]))
             leads.append({'terminal':c['ref']+':'+lead['pin'],'ref':c['ref'],'package':c['package'],
-                          'net':lead['net'],'points':points,'radius':radius+error,
+                          'net':lead['net'],'points':points,'radius':radius+error+radial_allowance_mm,'localRadius':radius+error,
                           'stations':stations,'segments':segments,
+                          'bounds':[[min(p[k] for p in points),max(p[k] for p in points)] for k in range(3)],
                           'boxes':[[[min(a[k],b[k]),max(a[k],b[k])] for k in range(3)] for a,b in segments]})
     unintended=[];intended=[];closest=None
 
@@ -59,7 +62,7 @@ def review(components):
                     sp=a['stations'][i]+math.dist(p0,p)
                     sq=b['stations'][j]+math.dist(q0,q)
                     separation=(sq-sp if self_check else a['stations'][-1]-sp+b['stations'][-1]-sq)
-                    if separation<=math.pi*(a['radius']+b['radius'])/2+1e-9:continue
+                    if separation<=math.pi*(a['localRadius']+b['localRadius'])/2+1e-9:continue
                 if best is None or distance<best[0]:best=(distance,p,q,i,j)
         return best
 
@@ -77,6 +80,11 @@ def review(components):
 
     for i,a in enumerate(leads):
         for b in leads[i+1:]:
+            # AABB distance is a lower bound: skip only when this pair can
+            # neither touch nor improve the smallest reported clearance.
+            lower=sum(max(0,x[0]-y[1],y[0]-x[1])**2 for x,y in zip(a['bounds'],b['bounds']))
+            limit=a['radius']+b['radius']+max(0,closest[0] if closest else float('inf'))
+            if lower>limit**2:continue
             winding_join=a['ref']==b['ref'] and a['package']=='filter' and math.dist(a['points'][-1],b['points'][-1])<1e-8
             if winding_join:intended.append({'terminals':[a['terminal'],b['terminal']],'basis':'winding-midpoint'})
             join=('reference-bridge' if a['ref']==b['ref'] and a['package']=='bridge' else
@@ -88,4 +96,5 @@ def review(components):
             'unintendedContacts':unintended,'intendedContacts':intended,
             'minimumUnintendedClearance':closest[1] if closest else None,
             'noUnintendedContact':not unintended,
-            'scope':'Nominal capsule geometry including tessellation error. No manufacturing allowance, insulation rating or specimen dimension qualification.'}
+            'radialAllowanceMm':radial_allowance_mm,
+            'scope':'Capsule geometry includes tessellation error and the stated radial allowance. Local-neighbour exclusion uses nominal radii. No insulation rating or specimen dimension qualification.'}

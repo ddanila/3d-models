@@ -44,8 +44,11 @@ def run():
     # guards against empty geometry or a disabled intersection masquerading as fit.
     cases = [(name, module, 'reference_populated_assembly', [0, 0, 0]) for name, module in INTERFACES.items()]
     cases += [('substrate-' + name, module, 'reference_substrate', [0, 0, 0]) for name, module in INTERFACES.items()]
+    nominal_count=len(cases)
+    cases += [('allowance-' + name, module, 'reference_assembly_allowance_envelope', [0, 0, 0]) for name, module in INTERFACES.items()]
     cases.append(('raised-assembly-control', 'keyboard_pcb', 'reference_populated_assembly', [0, 0, 1]))
     cases.append(('misaligned-mounting-control', 'keyboard_controller_mounts', 'reference_substrate', [.5, 0, 0]))
+    cases.append(('raised-allowance-control', 'keyboard_pcb', 'reference_assembly_allowance_envelope', [0, 0, 1]))
     with tempfile.TemporaryDirectory() as temp:
         temp = Path(temp)
         for name, module, subject, offset in cases:
@@ -75,15 +78,16 @@ intersection() {{
             rows.append({'interface': name, 'subject': subject, 'offsetMm': offset,
                          'intersectionMm3': round(value, 6), 'intersects': value >= .001})
     report = {
-        'schema': 2, 'variant': 'proposed-reference',
-        'scope': 'Reference PCB substrate, drilled holes, populated bodies and leads at the existing keyboard controller transform. Static nominal solids only; excludes PCB copper, connector engagement, cable and shield braid, curve tessellation error and manufacturing tolerances. Proposed circular lead bends are included. Zero volume permits touching. Enclosure dimensions and installed seating remain unmeasured.',
+        'schema': 3, 'variant': 'proposed-reference',
+        'scope': 'Reference PCB substrate, drilled holes, populated bodies and leads at the existing keyboard controller transform. Nominal solids and conservative assembly allowance envelopes are reported separately. Allowance envelopes include curve approximation error; substrate mounting remains nominal. Excludes PCB copper, connector engagement, cable and shield braid. Proposed circular lead bends are included. Zero volume permits touching. Enclosure dimensions and installed seating remain unmeasured.',
         'engine': subprocess.check_output(['openscad', '--version'], stderr=subprocess.STDOUT, text=True).strip(),
-        'intersectionBudgetMm3': .001, 'results': rows[:-2], 'positiveControl': rows[-2], 'mountingControl': rows[-1],
-        'nominalInterfacesClear': not any(row['intersects'] for row in rows[:-2]),
+        'intersectionBudgetMm3': .001, 'results': rows[:nominal_count], 'allowanceResults': rows[nominal_count:-3],
+        'allowanceInterfacesClear': not any(row['intersects'] for row in rows[nominal_count:-3]), 'positiveControl': rows[-3], 'mountingControl': rows[-2], 'allowanceControl': rows[-1],
+        'nominalInterfacesClear': not any(row['intersects'] for row in rows[:nominal_count]),
         'mechanicallyQualified': False,
         'sources': {str(p.relative_to(ROOT)): digest(p) for p in sorted(sources)},
     }
-    if not all(row['intersects'] for row in rows[-2:]):
+    if not all(row['intersects'] for row in rows[-3:]):
         raise ValueError('Deliberately colliding assembly or mounting control did not intersect')
     TARGET.write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps({k: report[k] for k in ('results', 'positiveControl', 'mountingControl', 'nominalInterfacesClear')}, indent=2))
@@ -102,7 +106,11 @@ def main():
             raise ValueError('Stale enclosure review: ' + name)
     if {r['interface'] for r in report['results']} != set(INTERFACES) | {'substrate-' + name for name in INTERFACES}:
         raise ValueError('Incomplete enclosure review')
-    if not all(report[key]['intersects'] for key in ('positiveControl', 'mountingControl')) or report['mechanicallyQualified']:
+    if {r['interface'] for r in report['allowanceResults']} != {'allowance-' + name for name in INTERFACES}:
+        raise ValueError('Incomplete allowance enclosure review')
+    if report['allowanceInterfacesClear'] != (not any(r['intersects'] for r in report['allowanceResults'])):
+        raise ValueError('Inconsistent allowance enclosure result')
+    if not all(report[key]['intersects'] for key in ('positiveControl', 'mountingControl', 'allowanceControl')) or report['mechanicallyQualified']:
         raise ValueError('Invalid enclosure review scope or positive control')
     if report['nominalInterfacesClear'] != (not any(r['intersects'] for r in report['results'])):
         raise ValueError('Inconsistent enclosure result')
