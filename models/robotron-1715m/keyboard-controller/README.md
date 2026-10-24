@@ -51,9 +51,12 @@ reduce unresolved historical joins.
 
 Edit `reference/implementation.json` for proposed placements and routing constraints.
 Use `tools/reference_board.py --prepare /tmp/robotron-reference/controller.kicad_pcb`
-with KiCad Python to generate a starting board and DSN. The routing boundary is
+with KiCad Python to generate a starting board and DSN from the retained historical
+input snapshot. The routing boundary is
 inset to respect native edge clearance; disable the router's automatic neckdown.
-The retained `reference/routing-receipt.json` identifies the router and inputs.
+The retained `reference/routing-receipt.json` identifies the router and inputs,
+including the historical-board snapshot used for routing. Later historical
+evidence updates do not rewrite that input or reroute the reference board.
 Import a session with `--import-session FILE --input-board FILE --output-board FILE`;
 this rejects changes to terminal identities or placements beyond interchange
 precision. Then run `tools/reference_board.py` to export and check the committed

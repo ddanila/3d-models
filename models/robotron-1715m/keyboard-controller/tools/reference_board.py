@@ -49,7 +49,7 @@ def prepare(output):
     spec = json.loads((REF/'implementation.json').read_text())
     if output.resolve().parent == ROOT:
         raise ValueError('Reference preparation cannot overwrite historical authorities')
-    board = pcb.LoadBoard(str(ROOT/'controller.kicad_pcb'))
+    board = pcb.LoadBoard(str(REF/'routing/historical-input.kicad_pcb'))
     found = set()
     def vector(x,y): return pcb.VECTOR2I(round(x*1e6),round(y*1e6))
     for footprint in board.GetFootprints():
@@ -234,6 +234,7 @@ def export():
                'tools/reference_board.py','tools/geometry.py','tools/routing_audit.py','tools/route_evidence.py',
                'reference/implementation.json','reference/controller.kicad_pcb','reference/controller.kicad_pro',
                'reference/review.scad','reference/routing-receipt.json']
+    sources += [name for name in json.loads((REF/'routing-receipt.json').read_text())['sources'] if name not in sources]
     sources += [str(p.relative_to(ROOT)) for p in sorted((REF/'routing').iterdir()) if p.is_file()]
     outputs = [p for p in (REF/'generated').iterdir() if p.name!='manifest.json']
     write(REF/'generated/manifest.json',{'schema':1,'variant':'proposed-reference','tools':{'pcbnew':pcb.GetBuildVersion()},

@@ -4647,6 +4647,24 @@
           ]
         },
         {
+          "classification": "owner-observed-unrouted",
+          "drill": [
+            0.85,
+            0.85
+          ],
+          "net": null,
+          "pin": "A8",
+          "position": [
+            -9.504023,
+            14.105128
+          ],
+          "ref": "X1",
+          "size": [
+            1.7,
+            1.7
+          ]
+        },
+        {
           "drill": [
             0.85,
             0.85
@@ -20080,9 +20098,7 @@
       },
       "scope": "Observed joint rows are retained independently of native reference pads. Only contacts absent from the reference schematic remain unassigned. Housing dimensions, contact heights, lead section and hole diameters remain illustrative.",
       "status": "photo-placed-reference-terminal-order",
-      "unclassifiedContacts": [
-        "A8"
-      ]
+      "unclassifiedContacts": []
     }
   ],
   "visualNetworks": [

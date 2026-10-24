@@ -16,6 +16,23 @@ class ControllerExportTests(unittest.TestCase):
   scad=next(s for s in (R/'generated/controller.scad').read_text().splitlines() if s.startswith('controller_pcb_dips='))
   dips=json.loads(scad.split('=',1)[1].rstrip(';'));self.assertEqual(next(d for d in dips if d[4]=='A5')[6],evidence['pitchMm'])
 
+ def test_owner_observed_isolated_contact_requires_explicit_inspection(self):
+  import copy
+  from export import observed_isolated_pads
+  review=json.loads((R/'connection-review.json').read_text())
+  components=json.loads((R/'generated/connectivity.json').read_text())['components']
+  self.assertEqual(observed_isolated_pads(review,components),{'X1':{'A8'}})
+  for field,value in [('present',False),('solderedIntoPcbHole',False),('tracksAttachedTop',True),('tracksAttachedBottom',None)]:
+   bad=copy.deepcopy(review)
+   next(c for c in bad['cases'] if c['id']=='x1-a8')['ownerObservation'][field]=value
+   with self.assertRaisesRegex(ValueError,'explicit unrouted'):observed_isolated_pads(bad,components)
+  bad=copy.deepcopy(components);bad['X1']['pins']['A8']=None
+  with self.assertRaisesRegex(ValueError,'no schematic pin'):observed_isolated_pads(review,bad)
+  layout=json.loads((R/'generated/layout.json').read_text())
+  pad=next(p for c in layout['components'] if c['ref']=='X1' for p in c['pads'] if p['pin']=='A8')
+  self.assertIsNone(pad['net']);self.assertEqual(pad['classification'],'owner-observed-unrouted')
+  self.assertGreater(pad['drill'][0],0)
+
  def test_unused_package_lead_requires_catalog_and_no_schematic_pin(self):
   import copy
   from export import unused_package_pads
@@ -542,7 +559,8 @@ class ControllerExportTests(unittest.TestCase):
   terminals=json.loads((R/'generated/connector-terminals.json').read_text())
   result['nativePlacement']=placement_review(layout,result,terminals)
   self.assert_report_equal(result,json.loads((R/'generated/connector-review.json').read_text()))
-  self.assertEqual(result['nativePlacement']['unclassifiedContacts'],['A8'])
+  self.assertEqual(result['nativePlacement']['unclassifiedContacts'],[])
+  self.assertEqual(result['nativePlacement']['isolatedContacts'],['A8'])
   shifted=copy.deepcopy(layout)
   next(c for c in shifted['components'] if c['ref']=='X1')['pads'][0]['position'][0]+=.2
   with self.assertRaisesRegex(ValueError,'native pads differ'):placement_review(shifted,result,terminals)

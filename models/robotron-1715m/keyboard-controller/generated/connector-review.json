@@ -4,6 +4,9 @@
     "minimum": 4.683839704095133
   },
   "nativePlacement": {
+    "isolatedContacts": [
+      "A8"
+    ],
     "padResidualsMm": {
       "A1": 3.826035015744144e-07,
       "A10": 3.5669228406150886e-07,
@@ -16,6 +19,7 @@
       "A5": 1.1803304672232033e-08,
       "A6": 4.796027405670787e-07,
       "A7": 1.927622597196305e-07,
+      "A8": 3.72088704439629e-08,
       "A9": 4.640336447463647e-07,
       "B1": 4.903798080906481e-07,
       "B10": 2.8607803290356206e-07,
@@ -31,11 +35,9 @@
       "B8": 3.055513896186968e-07,
       "B9": 4.037799138189007e-07
     },
-    "scope": "Native reference pads match locally registered joints. Numbering is reference-derived; dimensions, hole diameters and continuity are not measured. Unclassified contacts remain visual geometry only.",
+    "scope": "Native reference pads match locally registered joints. Numbering is reference-derived; dimensions, hole diameters and continuity are not measured. Owner-observed unrouted contacts have isolated native pads; missing contacts remain visual geometry only.",
     "status": "photo-placed-reference-terminal-order",
-    "unclassifiedContacts": [
-      "A8"
-    ]
+    "unclassifiedContacts": []
   },
   "nextEvidence": "Reconcile native pad geometry against the independent underside observations and terminal constraints. Actual dimensions and continuity remain unmeasured.",
   "photoSha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",

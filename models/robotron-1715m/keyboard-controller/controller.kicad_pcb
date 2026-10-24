@@ -1354,6 +1354,14 @@
 			(net "/+5V")
 			(uuid "9dc6666c-91c7-419d-b65e-82cc6c69d1e0")
 		)
+		(pad "A8" thru_hole circle
+			(at 0.495977 -11.105128)
+			(size 1.7 1.7)
+			(drill 0.85)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "bbc53f39-8cd1-4094-a012-65b7725b3d8b")
+		)
 		(pad "A9" thru_hole circle
 			(at 2.814662 -10.991075)
 			(size 1.7 1.7)

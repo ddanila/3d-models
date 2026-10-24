@@ -36,6 +36,20 @@ def unused_package_pads(component_evidence,evidence,components):
    raise ValueError('Physical unused pads need catalog support and must not replace schematic pins')
   result[ref]=pins
  return result
+def observed_isolated_pads(review,components):
+ """Owner inspection supports a physical contact, never a new schematic net."""
+ result={}
+ for case in review['cases']:
+  observation=case.get('ownerObservation')
+  if not observation:continue
+  ref,pin=observation['contact'].split(':')
+  if (observation.get('specimen')!='primary museum keyboard controller'
+      or observation.get('present') is not True or observation.get('solderedIntoPcbHole') is not True
+      or observation.get('tracksAttachedTop') is not False or observation.get('tracksAttachedBottom') is not False
+      or pin in components[ref]['pins']):
+   raise ValueError('Isolated contact requires explicit unrouted primary-specimen inspection and no schematic pin')
+  result.setdefault(ref,set()).add(pin)
+ return result
 def visual_bridges(evidence,landmarks,unplaced):
  """Project observed wire endpoints without inventing numbered electrical pads."""
  from photo_registration import homography,project
@@ -123,6 +137,7 @@ def main():
   name=n.get('name');name=None if name.startswith('unconnected-') else name
   for node in n.findall('node'):components[node.get('ref')]['pins'][node.get('pin')]=name
  unused=unused_package_pads(json.loads((ROOT/'component-evidence.json').read_text()),json.loads((ROOT/'evidence.json').read_text()),components)
+ isolated=observed_isolated_pads(json.loads((ROOT/'connection-review.json').read_text()),components)
  board=pcb.LoadBoard(str(ROOT/'controller.kicad_pcb'));placed=[];unplaced=[];pads=[];holes=[];mismatches=[]
  def xy(p):return [round(p.x/1e6-150,6),round(50-p.y/1e6,6)]
  def coord(p):return [round(p.x/1e6,6),round(p.y/1e6,6)]
@@ -134,7 +149,10 @@ def main():
    pin=p.GetNumber();a={'ref':ref,'pin':pin,'net':net,'position':xy(p.GetPosition()),'size':coord(p.GetSize()),'drill':coord(p.GetDrillSize())};row['pads'].append(a)
    if ref in components:
     seen.add((ref,pin))
-    if pin in unused.get(ref,set()):
+    if pin in isolated.get(ref,set()):
+     a['classification']='owner-observed-unrouted'
+     if net is not None:mismatches.append([ref,pin,net,'isolated contact must have no net'])
+    elif pin in unused.get(ref,set()):
      a['classification']='no-internal-connection'
      if net is not None:mismatches.append([ref,pin,net,'physical unused lead must have no net'])
     elif pin not in components[ref]['pins'] or net!=components[ref]['pins'][pin]:mismatches.append([ref,pin,net,components[ref]['pins'].get(pin)])
@@ -145,7 +163,7 @@ def main():
  for ref,c in components.items():
   for pin in c['pins']:
    if (ref,pin) not in seen:mismatches.append([ref,pin,'missing pad'])
- for ref,pins in unused.items():
+ for ref,pins in list(unused.items())+list(isolated.items()):
   for pin in pins:
    if (ref,pin) not in seen:mismatches.append([ref,pin,'missing physical unused pad'])
  if mismatches:raise SystemExit('Schematic/PCB pad-net mismatch: '+repr(mismatches[:10]))
@@ -266,7 +284,7 @@ def main():
  write('review.svg',''.join(svg)+'</svg>\n')
  inputs=['bus-review.json','tools/routing_audit.py','filter-registration.json','supply-review.json','cable-copper.json','tools/cable_copper.py','output-assembly.json','tools/output_assembly.py','top-copper-landmarks.json','tools/top_registration.py','controller.kicad_sch','controller.kicad_pcb','controller.kicad_pro','kbd.kicad_sym','sym-lib-table','fp-lib-table','evidence.json','component-evidence.json','tools/export.py','tools/geometry.py','tools/connector_review.py','tools/connector_terminals.py','tools/route_evidence.py','route-evidence.json','tools/photo_registration.py','tools/bottom_registration.py','bottom-landmarks.json',json.loads((ROOT/'bottom-landmarks.json').read_text())['photo'],'photo-landmarks.json',json.loads((ROOT/'photo-landmarks.json').read_text())['photo']]
  write('bus-review.json',bus_review())
- inputs.append('tools/bus_review.py')
+ inputs.extend(['tools/bus_review.py','connection-review.json'])
  inputs.extend(['sense-review.json','tools/sense_review.py'])
  inputs.append('tools/eye_registration.py')
  outputs=sorted(p for p in (ROOT/'generated').iterdir() if p.name!='manifest.json')

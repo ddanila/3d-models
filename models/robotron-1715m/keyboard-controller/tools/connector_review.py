@@ -65,11 +65,12 @@ def placement_review(layout, observation, terminals):
     native = next(c for c in layout['components'] if c['ref'] == 'X1')
     errors = {p['pin']: math.dist(p['position'], expected[p['pin']]) for p in native['pads']}
     missing = sorted(set(expected) - set(errors))
-    if missing != terminals['referenceAbsentPins']:
+    isolated = sorted(p['pin'] for p in native['pads'] if p.get('classification') == 'owner-observed-unrouted' and p['net'] is None)
+    if sorted(missing + isolated) != terminals['referenceAbsentPins']:
         raise ValueError('Connector native pad inventory differs from supported terminals')
     # Native coordinates are integer nanometres; this checks transcription, not photo accuracy.
     if max(errors.values()) > .000002:
         raise ValueError('Connector native pads differ from registered joint positions')
     return {'status': 'photo-placed-reference-terminal-order', 'padResidualsMm': errors,
-            'unclassifiedContacts': missing,
-            'scope': 'Native reference pads match locally registered joints. Numbering is reference-derived; dimensions, hole diameters and continuity are not measured. Unclassified contacts remain visual geometry only.'}
+            'unclassifiedContacts': missing, 'isolatedContacts': isolated,
+            'scope': 'Native reference pads match locally registered joints. Numbering is reference-derived; dimensions, hole diameters and continuity are not measured. Owner-observed unrouted contacts have isolated native pads; missing contacts remain visual geometry only.'}

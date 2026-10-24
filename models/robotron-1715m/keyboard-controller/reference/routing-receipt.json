@@ -23,10 +23,10 @@
     ]
   },
   "sources": {
-    "controller.kicad_pcb": "70ff967a3bdd94a6ef91b01100bcc8b35cb8f01878b637fd183b581656578d38",
     "controller.kicad_sch": "48333fb758f58072685591a6323867efc31e6a390c673e7dd1967048f0935b29",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
-    "reference/implementation.json": "3089b43e7bad4ebe071ab3698f5ca34b2001c4e9b46b82931b526fe912af7223"
+    "reference/implementation.json": "3089b43e7bad4ebe071ab3698f5ca34b2001c4e9b46b82931b526fe912af7223",
+    "reference/routing/historical-input.kicad_pcb": "70ff967a3bdd94a6ef91b01100bcc8b35cb8f01878b637fd183b581656578d38"
   },
   "artifacts": {
     "controller.dsn": "12e6def1b313a0db434646eeae272ad71814b97588574e3407d67e0b127ff665",
