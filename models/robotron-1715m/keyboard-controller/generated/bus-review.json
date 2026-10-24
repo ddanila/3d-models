@@ -2067,6 +2067,25 @@
   "schema": 1,
   "scope": "Partial photo paths with unresolved cross-side continuations. Reference nets and terminal pairs are review targets, not complete paths or native copper assignments.",
   "senseReview": {
+    "attachmentReview": {
+      "bankFinding": "Each of the eight fanout copper necks visibly joins its solder land. The innermost lane detours around the CPU-end land. This establishes attachment to observation indices 1 through 8, not package pin numbers.",
+      "bankPixelBox": [
+        1410,
+        820,
+        1650,
+        1220
+      ],
+      "latchFinding": "The eight corridor lanes visibly join the successive A4 input solder lands. Pin identifiers use the retained latch attachment review; no comparison-specimen coordinate transfer is needed.",
+      "latchPixelBox": [
+        1450,
+        2480,
+        1690,
+        2850
+      ],
+      "scope": "Visual copper-to-land association in the primary underside photo. Solder integrity, hidden top-side branches and measured continuity are not established.",
+      "source": "photo-bottom",
+      "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
+    },
     "bankEndReview": {
       "commonGroundAttachmentEstablished": false,
       "comparisonJointOrder": "Cable end toward CPU end; observation indices correspond by visible fanout order, not measured continuity.",
@@ -5699,7 +5718,7 @@
     "orientationFinding": "The comparison specimen has a visible 1 mark at the cable-facing end of its 3894 network. Its underside has eight fanout joints between two end joints without visible underside exits, matching the primary artwork. This supports, but does not prove, primary observation zero as pin 1 and observation nine as unused pin 10; the common-to-ground connection remains hidden.",
     "paths": [
       {
-        "bankFanoutFinding": "The innermost lane passes left of the CPU-end joint before returning to the corridor. The comparison underside corroborates this detour; the solder attachment remains inferred.",
+        "bankFanoutFinding": "The innermost lane passes left of the CPU-end joint before returning to the corridor. The primary photo shows its copper neck meeting the bank land; the comparison underside corroborates the detour. Numbered bank-pin correspondence remains inferred.",
         "bankObservationIndex": 8,
         "bankPinCandidate": {
           "observationIndex": 8,
@@ -5719,8 +5738,9 @@
           "ref": "R9.3"
         },
         "nativeCopper": false,
+        "photoPathObserved": true,
         "qualifiedWholePathRegions": [],
-        "reason": "Underside lane-order candidate. R1 branch and solder attachments remain inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
+        "reason": "Visible underside copper joins the photographed lands at both ends. R1 numbered-pin correspondence remains inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
         "referenceNet": "/SENSE0",
         "segments": [
           {
@@ -5735,7 +5755,7 @@
                 1134
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           },
           {
             "id": "sense-0-1",
@@ -5817,7 +5837,7 @@
                 2578
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           }
         ],
         "source": "photo-bottom",
@@ -5847,8 +5867,9 @@
           "ref": "R9.5"
         },
         "nativeCopper": false,
+        "photoPathObserved": true,
         "qualifiedWholePathRegions": [],
-        "reason": "Underside lane-order candidate. R1 branch and solder attachments remain inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
+        "reason": "Visible underside copper joins the photographed lands at both ends. R1 numbered-pin correspondence remains inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
         "referenceNet": "/SENSE1",
         "segments": [
           {
@@ -5863,7 +5884,7 @@
                 1111
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           },
           {
             "id": "sense-1-1",
@@ -5933,7 +5954,7 @@
                 2610
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           }
         ],
         "source": "photo-bottom",
@@ -5963,8 +5984,9 @@
           "ref": "R9.6"
         },
         "nativeCopper": false,
+        "photoPathObserved": true,
         "qualifiedWholePathRegions": [],
-        "reason": "Underside lane-order candidate. R1 branch and solder attachments remain inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
+        "reason": "Visible underside copper joins the photographed lands at both ends. R1 numbered-pin correspondence remains inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
         "referenceNet": "/SENSE2",
         "segments": [
           {
@@ -5979,7 +6001,7 @@
                 1094
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           },
           {
             "id": "sense-2-1",
@@ -6049,7 +6071,7 @@
                 2641
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           }
         ],
         "source": "photo-bottom",
@@ -6079,8 +6101,9 @@
           "ref": "R9.7"
         },
         "nativeCopper": false,
+        "photoPathObserved": true,
         "qualifiedWholePathRegions": [],
-        "reason": "Underside lane-order candidate. R1 branch and solder attachments remain inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
+        "reason": "Visible underside copper joins the photographed lands at both ends. R1 numbered-pin correspondence remains inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
         "referenceNet": "/SENSE3",
         "segments": [
           {
@@ -6095,7 +6118,7 @@
                 1075
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           },
           {
             "id": "sense-3-1",
@@ -6165,7 +6188,7 @@
                 2672
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           }
         ],
         "source": "photo-bottom",
@@ -6195,8 +6218,9 @@
           "ref": "R9.8"
         },
         "nativeCopper": false,
+        "photoPathObserved": true,
         "qualifiedWholePathRegions": [],
-        "reason": "Underside lane-order candidate. R1 branch and solder attachments remain inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
+        "reason": "Visible underside copper joins the photographed lands at both ends. R1 numbered-pin correspondence remains inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
         "referenceNet": "/SENSE4",
         "segments": [
           {
@@ -6211,7 +6235,7 @@
                 1061
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           },
           {
             "id": "sense-4-1",
@@ -6281,7 +6305,7 @@
                 2703
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           }
         ],
         "source": "photo-bottom",
@@ -6311,8 +6335,9 @@
           "ref": "R9.4"
         },
         "nativeCopper": false,
+        "photoPathObserved": true,
         "qualifiedWholePathRegions": [],
-        "reason": "Underside lane-order candidate. R1 branch and solder attachments remain inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
+        "reason": "Visible underside copper joins the photographed lands at both ends. R1 numbered-pin correspondence remains inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
         "referenceNet": "/SENSE5",
         "segments": [
           {
@@ -6327,7 +6352,7 @@
                 1048
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           },
           {
             "id": "sense-5-1",
@@ -6397,7 +6422,7 @@
                 2734
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           }
         ],
         "source": "photo-bottom",
@@ -6427,8 +6452,9 @@
           "ref": "R9.2"
         },
         "nativeCopper": false,
+        "photoPathObserved": true,
         "qualifiedWholePathRegions": [],
-        "reason": "Underside lane-order candidate. R1 branch and solder attachments remain inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
+        "reason": "Visible underside copper joins the photographed lands at both ends. R1 numbered-pin correspondence remains inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
         "referenceNet": "/SENSE6",
         "segments": [
           {
@@ -6443,7 +6469,7 @@
                 1031
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           },
           {
             "id": "sense-6-1",
@@ -6513,7 +6539,7 @@
                 2765
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           }
         ],
         "source": "photo-bottom",
@@ -6543,8 +6569,9 @@
           "ref": "R9.1"
         },
         "nativeCopper": false,
+        "photoPathObserved": true,
         "qualifiedWholePathRegions": [],
-        "reason": "Underside lane-order candidate. R1 branch and solder attachments remain inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
+        "reason": "Visible underside copper joins the photographed lands at both ends. R1 numbered-pin correspondence remains inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.",
         "referenceNet": "/SENSE7",
         "segments": [
           {
@@ -6559,7 +6586,7 @@
                 1018
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           },
           {
             "id": "sense-7-1",
@@ -6629,7 +6656,7 @@
                 2796
               ]
             ],
-            "status": "inferred"
+            "status": "observed"
           }
         ],
         "source": "photo-bottom",
@@ -6676,7 +6703,7 @@
       }
     ],
     "schema": 1,
-    "scope": "Ordered underside corridor candidates from A4 toward the R1 bank. Copper centreline samples are photo estimates; solder attachments and bank correspondence remain inferred. No collector branch, measured continuity or native routing is established.",
+    "scope": "Photo-traced underside lanes from A4 solder lands to unnumbered R1 bank lands. Visible copper-to-land attachments are observed; primary package numbering, collector branches, measured continuity and native copper placement remain unresolved.",
     "source": "photo-bottom",
     "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b"
   }

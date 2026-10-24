@@ -109,10 +109,12 @@ def build(root):
     read = lambda name: json.loads((root/name).read_text())
     result = copy.deepcopy(read('sense-review.json'))
     sources = {s['id']:s for s in read('evidence.json')['sources']}
-    for record in [result,*result['photos']]:
+    for record in [result,result['attachmentReview'],*result['photos']]:
         source = sources[record['source']]
         if record['sourceSha256']!=source['sha256'] or hashlib.sha256((root/source['path']).read_bytes()).hexdigest()!=source['sha256']:
             raise ValueError('Sense review source hash mismatch')
+    attachments=result['attachmentReview']
+    if attachments['source']!=result['source']:raise ValueError('Sense attachments require the primary corridor photo')
     components = read('generated/connectivity.json')['components']
     rows = result['paths']
     if len(rows)!=8 or {p['latchTerminal'] for p in rows}!={'A4:'+str(i) for i in range(1,9)}:
@@ -152,16 +154,21 @@ def build(root):
         if (segments[0]['points'][0]!=result['bankJointCandidates'][path['bankObservationIndex']]
                 or segments[-1]['points'][-1]!=latch[path['latchTerminal']]['bottomJoint']):
             raise ValueError('Sense lane endpoints disagree with recorded observations')
-        if segments[0]['status']!='inferred' or segments[-1]['status']!='inferred':
-            raise ValueError('Sense solder attachments must remain inferred')
+        for segment,box_name in ((segments[0],'bankPixelBox'),(segments[-1],'latchPixelBox')):
+            if segment['status'] not in ('inferred','observed'):raise ValueError('Invalid sense attachment status')
+            if segment['status']=='observed':
+                x0,y0,x1,y1=attachments[box_name]
+                if not all(x0<=p[0]<=x1 and y0<=p[1]<=y1 for p in segment['points']):
+                    raise ValueError('Observed sense attachment outside reviewed photo region')
+        observed=all(s['status']=='observed' for s in segments)
         for a,b in zip(segments,segments[1:]):
             if a['points'][-1]!=b['points'][0]:raise ValueError('Discontinuous sense review polyline')
         qualified = [r['id'] for r in regions if all(inside_hull(p,r['anchorHull']) for s in segments for p in s['points'])]
         path.update(referenceNet=net,terminals=[path['latchTerminal'],banks[0]],collectorTarget=collectors[0],
                     matrixInput=row_inputs[0],source=result['source'],sourceSha256=result['sourceSha256'],
                     bankPinCandidate=dict(terminal=banks[0],observationIndex=path['bankObservationIndex'],status='inferred'),
-                    qualifiedWholePathRegions=qualified,collectorAttachmentEstablished=False,
-                    reason='Underside lane-order candidate. R1 branch and solder attachments remain inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.')
+                    qualifiedWholePathRegions=qualified,collectorAttachmentEstablished=False,photoPathObserved=observed,
+                    reason=('Visible underside copper joins the photographed lands at both ends. ' if observed else 'Some photo attachments remain inferred. ')+'R1 numbered-pin correspondence remains inferred; the collector branch is unresolved. No qualified local fit covers this whole corridor, and R1 has no native placement.')
     result['commonReferenceNet'] = components['R1']['pins']['1']
     result['electricalScope'] = 'Reference digital sensing drives the latch high for an active row; R1 loads collectors toward ground. HDL agreement does not identify specimen terminals or qualify SC308 devices.'
     return result

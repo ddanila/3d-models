@@ -2,7 +2,7 @@
   "schema": 1,
   "source": "photo-bottom",
   "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
-  "scope": "Ordered underside corridor candidates from A4 toward the R1 bank. Copper centreline samples are photo estimates; solder attachments and bank correspondence remain inferred. No collector branch, measured continuity or native routing is established.",
+  "scope": "Photo-traced underside lanes from A4 solder lands to unnumbered R1 bank lands. Visible copper-to-land attachments are observed; primary package numbering, collector branches, measured continuity and native copper placement remain unresolved.",
   "bankJointCandidates": [
     [
       1505,
@@ -57,7 +57,7 @@
       "segments": [
         {
           "id": "sense-0-0",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1511,
@@ -139,7 +139,7 @@
         },
         {
           "id": "sense-0-5",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1545,
@@ -152,7 +152,7 @@
           ]
         }
       ],
-      "bankFanoutFinding": "The innermost lane passes left of the CPU-end joint before returning to the corridor. The comparison underside corroborates this detour; the solder attachment remains inferred."
+      "bankFanoutFinding": "The innermost lane passes left of the CPU-end joint before returning to the corridor. The primary photo shows its copper neck meeting the bank land; the comparison underside corroborates the detour. Numbered bank-pin correspondence remains inferred."
     },
     {
       "id": "sense-1",
@@ -163,7 +163,7 @@
       "segments": [
         {
           "id": "sense-1-0",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1511,
@@ -233,7 +233,7 @@
         },
         {
           "id": "sense-1-5",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1558,
@@ -256,7 +256,7 @@
       "segments": [
         {
           "id": "sense-2-0",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1510,
@@ -326,7 +326,7 @@
         },
         {
           "id": "sense-2-5",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1572,
@@ -349,7 +349,7 @@
       "segments": [
         {
           "id": "sense-3-0",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1509,
@@ -419,7 +419,7 @@
         },
         {
           "id": "sense-3-5",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1586,
@@ -442,7 +442,7 @@
       "segments": [
         {
           "id": "sense-4-0",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1509,
@@ -512,7 +512,7 @@
         },
         {
           "id": "sense-4-5",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1600,
@@ -535,7 +535,7 @@
       "segments": [
         {
           "id": "sense-5-0",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1508,
@@ -605,7 +605,7 @@
         },
         {
           "id": "sense-5-5",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1614,
@@ -628,7 +628,7 @@
       "segments": [
         {
           "id": "sense-6-0",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1507,
@@ -698,7 +698,7 @@
         },
         {
           "id": "sense-6-5",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1629,
@@ -721,7 +721,7 @@
       "segments": [
         {
           "id": "sense-7-0",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1506,
@@ -791,7 +791,7 @@
         },
         {
           "id": "sense-7-5",
-          "status": "inferred",
+          "status": "observed",
           "points": [
             [
               1643,
@@ -966,5 +966,24 @@
       ]
     },
     "copperAssignmentQualified": false
+  },
+  "attachmentReview": {
+    "source": "photo-bottom",
+    "sourceSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+    "bankPixelBox": [
+      1410,
+      820,
+      1650,
+      1220
+    ],
+    "latchPixelBox": [
+      1450,
+      2480,
+      1690,
+      2850
+    ],
+    "bankFinding": "Each of the eight fanout copper necks visibly joins its solder land. The innermost lane detours around the CPU-end land. This establishes attachment to observation indices 1 through 8, not package pin numbers.",
+    "latchFinding": "The eight corridor lanes visibly join the successive A4 input solder lands. Pin identifiers use the retained latch attachment review; no comparison-specimen coordinate transfer is needed.",
+    "scope": "Visual copper-to-land association in the primary underside photo. Solder integrity, hidden top-side branches and measured continuity are not established."
   }
 }

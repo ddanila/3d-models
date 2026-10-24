@@ -99,6 +99,8 @@ class ControllerExportTests(unittest.TestCase):
    self.assertFalse(p['nativeCopper']);self.assertFalse(p['continuityEstablished'])
    self.assertFalse(p['qualifiedWholePathRegions']);self.assertFalse(p['collectorAttachmentEstablished'])
    self.assertEqual(p['bankPinCandidate']['status'],'inferred')
+   self.assertTrue(p['photoPathObserved'])
+   self.assertTrue(all(s['status']=='observed' for s in p['segments']))
    self.assertIn('/ROW'+str(i),p['matrixInput']['nets'])
 
  def test_latch_attachment_audit_preserves_numbering_and_inference(self):
@@ -194,7 +196,7 @@ class ControllerExportTests(unittest.TestCase):
    sense_original=json.loads((r/'sense-review.json').read_text())
    import copy
    from sense_review import build as sense_build
-   for mutate,message in [(lambda d:d['paths'][0].update(nativeCopper=True),'cannot assign'),(lambda d:d['paths'][1].update(bankObservationIndex=d['paths'][0]['bankObservationIndex']),'must not share'),(lambda d:d.update(sourceSha256='0'*64),'source hash mismatch'),(lambda d:d['paths'][0]['segments'][0].update(status='observed'),'must remain inferred')]:
+   for mutate,message in [(lambda d:d['paths'][0].update(nativeCopper=True),'cannot assign'),(lambda d:d['paths'][1].update(bankObservationIndex=d['paths'][0]['bankObservationIndex']),'must not share'),(lambda d:d.update(sourceSha256='0'*64),'source hash mismatch'),(lambda d:d['attachmentReview'].update(bankPixelBox=[0,0,10,10]),'outside reviewed'),(lambda d:d['attachmentReview'].update(sourceSha256='0'*64),'source hash mismatch')]:
     bad=copy.deepcopy(sense_original);mutate(bad);(r/'sense-review.json').write_text(json.dumps(bad))
     with self.assertRaisesRegex(ValueError,message):sense_build(r)
    (r/'sense-review.json').write_text(json.dumps(sense_original))
