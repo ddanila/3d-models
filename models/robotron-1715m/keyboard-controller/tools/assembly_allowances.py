@@ -61,3 +61,14 @@ def scad_envelope(components,cores,spec):
     for c in cores:
         for box in c['solidBoxesMm']:box_shape(expand(box,spec['coreEnvelopeMm']))
     return '\n'.join(lines+['}'])
+
+
+def scad_leads(components, allowance, name):
+    lines=['module '+name+'() {']
+    for c in components:
+        for lead in c['leads']:
+            radius=(lead['diameterMm']/2+allowance+lead.get('centerlineApproximationMm',0))/math.cos(math.pi/12)**2
+            radius=round(radius,9)+1e-9
+            for a,b in zip(lead['points'],lead['points'][1:]):
+                lines.append(f'hull() {{translate({a}) sphere(r={radius},$fn=12);translate({b}) sphere(r={radius},$fn=12);}}')
+    return '\n'.join(lines+['}'])

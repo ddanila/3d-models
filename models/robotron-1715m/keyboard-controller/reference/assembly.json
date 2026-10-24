@@ -220,13 +220,40 @@
     },
     "R1": {
       "package": "network",
-      "basis": "R1 catalog B1 envelope; proposed board-surface seating to clear the modeled matrix board. Installed seating and manufacturing allowance remain unqualified.",
+      "basis": "KWH B1 catalog maximum body and lead envelope. Proposed 0.6 mm body stand-off and 2.1 mm body offset toward higher matrix-board clearance, with formed leads to unchanged native pads. Installed dimensions and orientation remain unverified.",
       "sizeMm": [
-        25,
+        27.5,
         3,
         11
       ],
-      "seatMm": 1.6
+      "seatMm": 2.2,
+      "leadSectionMaximumMm": [
+        0.65,
+        0.5
+      ],
+      "packageReference": "kwh-3894",
+      "packageDrawing": {
+        "source": "kwh-network-technical",
+        "locator": "PDF page 4 / printed page 9, Form B and B1 lead detail",
+        "bodyLengthMaximumFormula": "leadPitchMm * (leadCount + 1)",
+        "bodyStandOffMinimumMm": 0.5,
+        "leadWidthNominalMm": 0.55,
+        "leadWidthToleranceMm": [
+          -0.15,
+          0.1
+        ],
+        "leadThicknessNominalMm": 0.3,
+        "leadThicknessToleranceMm": [
+          0,
+          0.2
+        ]
+      },
+      "bodyOffsetMm": [
+        0,
+        2.1
+      ],
+      "leadEntryHeightMm": 2.1,
+      "bendRadiusMm": 0.5
     },
     "R10.1": {
       "package": "axial",

@@ -49,11 +49,22 @@ class AssemblyTests(unittest.TestCase):
         self.assertTrue(bad['review']['sharedCoreIntersections'])
         self.assertEqual(bad['review']['sharedCoreOverhangs'],['L1'])
 
+    def test_r1_catalog_envelope_and_formed_adapter(self):
+        data,_=assembly.build()
+        r1=next(c for c in data['components'] if c['ref']=='R1')
+        self.assertEqual(r1['sizeMm'],[27.5,3,11])
+        self.assertEqual(r1['position'][2],2.2)
+        for lead in r1['leads']:
+            self.assertAlmostEqual(lead['diameterMm'],(.65**2+.5**2)**.5)
+            self.assertAlmostEqual(lead['points'][-1][1]-lead['points'][0][1],2.1)
+            self.assertTrue(lead['bends'])
+        self.assertTrue(data['review']['assemblyAllowances']['envelopesClear'])
+
     def test_straight_body_entries_and_rounded_paths(self):
         data,_=assembly.build()
         for c in data['components']:
             for lead in c['leads']:
-                if c['ref'] in ('R1','X1','XT1'):
+                if c['ref'] in ('X1','XT1'):
                     self.assertEqual(len(lead['points']),2)
                     self.assertGreater(lead['points'][-1][2],lead['points'][0][2])
                 for bend in lead.get('bends',[]):

@@ -116,6 +116,23 @@ def router_deck(text,spec):
     return text[:match.start()]+boundary+text[match.end():]
 
 
+def package_adjustments(board, apply=False):
+    import pcbnew as pcb
+    changes=json.loads((REF/'package-adjustments.json').read_text())['drills']
+    byref={f.GetReference():f for f in board.GetFootprints()}
+    for change in changes:
+        footprint=byref[change['ref']]
+        pads={p.GetNumber():p for p in footprint.Pads()}
+        if set(change['pins'])!=set(pads):raise ValueError('Incomplete package drill adjustment')
+        target=round(change['diameterMm']*1e6)
+        original=round(change['fromDiameterMm']*1e6)
+        for pin in change['pins']:
+            pad=pads[pin];size=pad.GetDrillSize()
+            permitted=(original,target) if apply else (target,)
+            if size.x!=size.y or size.x not in permitted:raise ValueError('Unexpected package drill: '+change['ref']+':'+pin)
+            if apply:pad.SetDrillSize(pcb.VECTOR2I(target,target))
+
+
 def import_session(board_path, session, output):
     import pcbnew as pcb
     board = pcb.LoadBoard(str(board_path))
@@ -130,6 +147,7 @@ def import_session(board_path, session, output):
         raise ValueError('Router changed reference terminals beyond 1 um interchange precision')
     if output.resolve().parent == ROOT:
         raise ValueError('Cannot overwrite historical authorities')
+    package_adjustments(board,apply=True)
     pcb.SaveBoard(str(output),board)
     shutil.copyfile(board_path.with_suffix('.kicad_pro'),output.with_suffix('.kicad_pro'))
 
@@ -163,6 +181,7 @@ def export():
     from routing_audit import build as routing_audit
     board_path = REF/'controller.kicad_pcb'
     board = pcb.LoadBoard(str(board_path))
+    package_adjustments(board)
     spec = json.loads((REF/'implementation.json').read_text())
     expected = json.loads((ROOT/'generated/connectivity.json').read_text())['components']
     evidence = json.loads((ROOT/'component-evidence.json').read_text())

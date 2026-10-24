@@ -1,7 +1,7 @@
 {
   "outputs": {
-    "reference/generated/controller.scad": "c80c24dbc7ca2f5d2af42cc593c0e765918c587e6f0bd65c92ba9bcae12ebaca",
-    "reference/generated/layout.json": "51217655811477294a8c69ceb442be17ff987562fe98cf1df5b26a303a18d74d",
+    "reference/generated/controller.scad": "6f2a43e5a6fcc00d1fea560ab51353d187f4984f34d9cc610c0b0f5d511c1809",
+    "reference/generated/layout.json": "7d186c0c2fb685455e8d6c13603cc0a273bb8aab998236f2200b24737fb56d6d",
     "reference/generated/qualification.json": "f360f38ef0d218558c574cfa5c1a323054366f1678763a4c01905f4fe3cb6a6c",
     "reference/generated/routing-audit.json": "7fef7889ee082facdd24aa7da0cfc2b5034e2fd389c07aedc3e0a1c9f0ec7c66"
   },
@@ -12,11 +12,12 @@
     "controller.kicad_sch": "48333fb758f58072685591a6323867efc31e6a390c673e7dd1967048f0935b29",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
     "generated/layout.json": "8ddc39f82b1e45e1f5764f1769047a1c0db844a2293d7ad9a6729036e9becdd2",
-    "reference/controller.kicad_pcb": "fef8ca684e6343feb2d019940571adb4f4cb85bc54ff027cbfcac1548f1d1889",
+    "reference/controller.kicad_pcb": "b38c5f3c69eb1ed06cae6d82c794e0590882c78971f8b424cff8a845eb153676",
     "reference/controller.kicad_pro": "6583dcdffccee3fd6c5e10ab0e3e900b75a7054cc98669379d044c91cda33356",
     "reference/implementation.json": "3089b43e7bad4ebe071ab3698f5ca34b2001c4e9b46b82931b526fe912af7223",
+    "reference/package-adjustments.json": "ec4dee2d714ed86ac49da0bd91df301b6743b9493a9904ab36e2e12c76592afe",
     "reference/review.scad": "b3019aab9355118b037c3e64f857fa2e0b262c5c28444e3c10617fcd4f5ebe99",
-    "reference/routing-receipt.json": "521db6e325953f0c299d8316a9da21e608ac9a7ab9444c77d025833461cc590b",
+    "reference/routing-receipt.json": "2394dc15ac4ebfcddc3e10179229a3126af163220a99c5fb3fb140f30eb59f30",
     "reference/routing/controller.dsn": "12e6def1b313a0db434646eeae272ad71814b97588574e3407d67e0b127ff665",
     "reference/routing/controller.kicad_pcb": "7b418ec00fcbc1bc6dde0e200e6e44751458457f558b96c26e26aa604394de0c",
     "reference/routing/controller.kicad_pro": "6583dcdffccee3fd6c5e10ab0e3e900b75a7054cc98669379d044c91cda33356",
@@ -25,7 +26,7 @@
     "reference/routing/router.log": "f38e60d5c125ca5a1621e7d2b9d9c5ca8830424ae72d2a3084d6f5732afdea07",
     "route-evidence.json": "30c3b039aaa1cef03832c82d7d63a407e7f23abecea0455484dcf35989ff50ae",
     "tools/geometry.py": "be71777d095f87f7f53643239e274989006de4ead1ad7181478d502e05351780",
-    "tools/reference_board.py": "eb11f8e0e012c86e03c94bffd63ac90dd60896317a2763cadfa4665b62927636",
+    "tools/reference_board.py": "d71c4f416aa29d1ae450532a1853f4fd9a153e379e5c97ccf9277b1392aabbcc",
     "tools/route_evidence.py": "3e8e9902a95bfa7af60f321d475b2cba713939322ee76f4e3dedbbcbb5ae16ba",
     "tools/routing_audit.py": "6bbe414e8f0f80bb4994ea04aaf132c5d61e305cb14619f0934f0d66ff7b0309"
   },

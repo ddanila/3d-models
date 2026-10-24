@@ -10,7 +10,7 @@ import struct
 from lead_clearance import review as lead_clearance_review
 from shared_filter import build as shared_filter_build
 from lead_bends import fillet
-from assembly_allowances import review as allowance_review, scad_envelope
+from assembly_allowances import review as allowance_review, scad_envelope, scad_leads
 
 ROOT=Path(__file__).resolve().parents[1]
 REF=ROOT/'reference'
@@ -69,12 +69,16 @@ def build():
             if n==2:
                 a,b=pads;angle=math.degrees(math.atan2(b['position'][1]-a['position'][1],b['position'][0]-a['position'][0]))
             else:angle=0
+            origin=[origin[i]+s.get('bodyOffsetMm',[0,0])[i] for i in range(2)]
             size=s.get('sizeMm')
             if kind=='transistor':
                 package=packages[s['packageReference']];d=package['bodyDimensionsMm'];size=[d['width'],d['depth'],d['height']]
                 w,d=size[:2];r=package['backCornerRadiusMm'];front=-package['flatFaceToLeadPlaneMm'];back=front+d
                 profile=[[-w/2,front],[w/2,front]]+[[w/2-r+r*math.cos(math.radians(a)),back-r+r*math.sin(math.radians(a))] for a in range(0,91,10)]+[[-w/2+r+r*math.cos(math.radians(a)),back-r+r*math.sin(math.radians(a))] for a in range(90,181,10)]
                 terminals={pin:[(i-1)*package['outerLeadSpanMm']/2,0,z] for i,pin in enumerate(package['terminalOrderInDrawing'])}
+            elif kind=='network' and 'packageReference' in s:
+                package=packages[s['packageReference']]
+                terminals={pin:[(int(pin)-(package['leadCount']+1)/2)*package['leadPitchMm'],0,z] for pin in pinmap}
             elif kind in ('axial','filter'):
                 terminals={p['pin']:[(-1 if i==0 else 1)*size[0]/2,0,z+size[2]/2] for i,p in enumerate(pads)}
             elif kind=='bridge':terminals={p['pin']:[0,0,z] for p in pads}
@@ -84,26 +88,27 @@ def build():
         if set(terminals)!=set(pinmap):raise ValueError('Package terminal mismatch '+ref)
         leads=[]
         for pin,port in terminals.items():
-            p=pinmap[pin];tip=[*p['position'],-.5];entry=[*p['position'],2.1];end=world(port[:2],origin,angle,port[2])
+            p=pinmap[pin];tip=[*p['position'],-.5];entry=[*p['position'],s.get('leadEntryHeightMm',2.1)];end=world(port[:2],origin,angle,port[2])
             path=[tip,end] if math.dist(tip[:2],end[:2])<1e-9 else [tip,entry,end]
-            leads.append({'pin':pin,'net':p['net'],'points':path,'diameterMm':math.hypot(*package['leadSectionMm']) if kind=='transistor' else .3})
+            leads.append({'pin':pin,'net':p['net'],'points':path,'diameterMm':math.ceil(math.hypot(*s['leadSectionMaximumMm'])*1e9)/1e9 if 'leadSectionMaximumMm' in s else math.hypot(*package['leadSectionMm']) if kind=='transistor' else .3})
         bodybounds=bounds([world(p[:2],origin,angle,z+p[2]) for p in points])
         result.append({'ref':ref,'type':c['type'],'package':kind,'basis':s['basis'],'position':[ *origin,z],'rotation':round(angle,9),'sizeMm':size,'mesh':mesh,'profile':profile,'boundsMm':bodybounds,'leads':leads,'footprint':{'id':'RobotronReference_'+ref,'terminals':{p['pin']:{'offsetMm':[round(v,9)+0.0 for v in rotate([p['position'][i]-origin[i] for i in range(2)],-angle)],'net':p['net']} for p in pads}}})
     shared_bodies=[shared_filter_build(spec['sharedFilter'],result)]
     sources.append('tools/shared_filter.py')
     forming=spec['leadForming']
     for c in result:
+        bend_radius=spec['components'][c['ref']].get('bendRadiusMm',forming['radiusMm'])
         if c['package']=='filter':
             a,b=c['leads']
-            points,bends=fillet(a['points']+list(reversed(b['points'][:-1])),forming['radiusMm'],forming['chordErrorMm'])
+            points,bends=fillet(a['points']+list(reversed(b['points'][:-1])),bend_radius,forming['chordErrorMm'])
             mid=len(points)//2
             a['points']=points[:mid+1];b['points']=list(reversed(points[mid:]))
             c['leadBends']=bends
         else:
             for lead in c['leads']:
-                lead['points'],lead['bends']=fillet(lead['points'],forming['radiusMm'],forming['chordErrorMm'])
+                lead['points'],lead['bends']=fillet(lead['points'],bend_radius,forming['chordErrorMm'])
         for lead in c['leads']:
-            if forming['radiusMm']<=lead['diameterMm']/2:raise ValueError('Bend radius must exceed wire radius')
+            if (lead.get('bends') or c.get('leadBends')) and bend_radius<=lead['diameterMm']/2:raise ValueError('Bend radius must exceed wire radius')
             lead['centerlineApproximationMm']=forming['chordErrorMm']+1e-9
 
     core_contacts=[]
@@ -159,6 +164,8 @@ def build():
             for x,y in zip(lead['points'],lead['points'][1:]):scad.append(f'color([.75,.75,.78]) hull() {{translate({x}) sphere(d={lead["diameterMm"]},$fn=8); translate({y}) sphere(d={lead["diameterMm"]},$fn=8);}}')
     scad.append('}')
     scad.append(scad_envelope(result,shared_bodies,spec['assemblyAllowances']))
+    scad.append(scad_leads(result,0,'reference_leads'))
+    scad.append(scad_leads(result,spec['assemblyAllowances']['leadRadialEnvelopeMm'],'reference_lead_allowance_envelope'))
     return data,'\n'.join(scad)+'\n'
 
 def main():

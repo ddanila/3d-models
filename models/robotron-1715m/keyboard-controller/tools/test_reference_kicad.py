@@ -9,9 +9,24 @@ import sys
 import tempfile
 import unittest
 import pcbnew as pcb
+import reference_board
 
 ROOT=Path(__file__).resolve().parents[1]
 class NativeReferenceTests(unittest.TestCase):
+    def test_package_drill_adjustments_preserve_routing_and_terminal_positions(self):
+        board=pcb.LoadBoard(str(ROOT/'reference/routing/controller.kicad_pcb'))
+        def terminals():
+            return {(f.GetReference(),p.GetNumber()):(p.GetPosition().x,p.GetPosition().y,p.GetNetname(),p.GetSize().x,p.GetSize().y) for f in board.GetFootprints() for p in f.Pads()}
+        before=terminals();tracks=len(board.GetTracks())
+        reference_board.package_adjustments(board,apply=True)
+        self.assertEqual(before,terminals());self.assertEqual(tracks,len(board.GetTracks()))
+        r1=next(f for f in board.GetFootprints() if f.GetReference()=='R1')
+        self.assertTrue(all(p.GetDrillSize().x==1100000 for p in r1.Pads()))
+        reference_board.package_adjustments(board)
+        next(iter(r1.Pads())).SetDrillSize(pcb.VECTOR2I(800000,800000))
+        with self.assertRaisesRegex(ValueError,'Unexpected package drill'):
+            reference_board.package_adjustments(board)
+
     def test_native_connectivity_drc_and_deterministic_exports(self):
         manifest=json.loads((ROOT/'reference/generated/manifest.json').read_text())
         with tempfile.TemporaryDirectory() as temporary:

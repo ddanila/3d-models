@@ -44,8 +44,10 @@ def run():
     # guards against empty geometry or a disabled intersection masquerading as fit.
     cases = [(name, module, 'reference_populated_assembly', [0, 0, 0]) for name, module in INTERFACES.items()]
     cases += [('substrate-' + name, module, 'reference_substrate', [0, 0, 0]) for name, module in INTERFACES.items()]
+    cases.append(('own-substrate', 'reference_substrate', 'reference_leads', [0, 0, 0]))
     nominal_count=len(cases)
     cases += [('allowance-' + name, module, 'reference_assembly_allowance_envelope', [0, 0, 0]) for name, module in INTERFACES.items()]
+    cases.append(('allowance-own-substrate', 'reference_substrate', 'reference_lead_allowance_envelope', [0, 0, 0]))
     cases.append(('raised-assembly-control', 'keyboard_pcb', 'reference_populated_assembly', [0, 0, 1]))
     cases.append(('misaligned-mounting-control', 'keyboard_controller_mounts', 'reference_substrate', [.5, 0, 0]))
     cases.append(('raised-allowance-control', 'keyboard_pcb', 'reference_assembly_allowance_envelope', [0, 0, 1]))
@@ -57,7 +59,7 @@ def run():
 include <{ROOT}/keyboard-controller/reference/review.scad>
 intersection() {{
     keyboard_controller_pose() translate({offset}) {subject}();
-    {module}();
+    {'keyboard_controller_pose() ' if module=='reference_substrate' else ''}{module}();
 }}
 ''')
             result = subprocess.run(['openscad', '--backend', 'Manifold', '--export-format', 'binstl',
@@ -79,7 +81,7 @@ intersection() {{
                          'intersectionMm3': round(value, 6), 'intersects': value >= .001})
     report = {
         'schema': 3, 'variant': 'proposed-reference',
-        'scope': 'Reference PCB substrate, drilled holes, populated bodies and leads at the existing keyboard controller transform. Nominal solids and conservative assembly allowance envelopes are reported separately. Allowance envelopes include curve approximation error; substrate mounting remains nominal. Excludes PCB copper, connector engagement, cable and shield braid. Proposed circular lead bends are included. Zero volume permits touching. Enclosure dimensions and installed seating remain unmeasured.',
+        'scope': 'Reference PCB substrate, drilled holes, populated bodies and leads at the existing keyboard controller transform. Nominal solids and conservative assembly allowance envelopes are reported separately. Allowance envelopes include curve approximation error; substrate mounting and hole solids remain nominal; analytical hole-loss checks are in the assembly report. Nominal and allowance lead envelopes are also intersected with their own drilled substrate; intentional body seating is excluded from that interface. Excludes PCB copper, connector engagement, cable and shield braid. Proposed circular lead bends are included. Zero volume permits touching. Enclosure dimensions and installed seating remain unmeasured.',
         'engine': subprocess.check_output(['openscad', '--version'], stderr=subprocess.STDOUT, text=True).strip(),
         'intersectionBudgetMm3': .001, 'results': rows[:nominal_count], 'allowanceResults': rows[nominal_count:-3],
         'allowanceInterfacesClear': not any(row['intersects'] for row in rows[nominal_count:-3]), 'positiveControl': rows[-3], 'mountingControl': rows[-2], 'allowanceControl': rows[-1],
@@ -104,9 +106,9 @@ def main():
     for name, expected in report['sources'].items():
         if digest(ROOT / name) != expected:
             raise ValueError('Stale enclosure review: ' + name)
-    if {r['interface'] for r in report['results']} != set(INTERFACES) | {'substrate-' + name for name in INTERFACES}:
+    if {r['interface'] for r in report['results']} != set(INTERFACES) | {'substrate-' + name for name in INTERFACES} | {'own-substrate'}:
         raise ValueError('Incomplete enclosure review')
-    if {r['interface'] for r in report['allowanceResults']} != {'allowance-' + name for name in INTERFACES}:
+    if {r['interface'] for r in report['allowanceResults']} != {'allowance-' + name for name in INTERFACES} | {'allowance-own-substrate'}:
         raise ValueError('Incomplete allowance enclosure review')
     if report['allowanceInterfacesClear'] != (not any(r['intersects'] for r in report['allowanceResults'])):
         raise ValueError('Inconsistent allowance enclosure result')

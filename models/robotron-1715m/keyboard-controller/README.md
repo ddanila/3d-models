@@ -59,7 +59,9 @@ including the historical-board snapshot used for routing. Later historical
 evidence updates do not rewrite that input or reroute the reference board.
 Import a session with `--import-session FILE --input-board FILE --output-board FILE`;
 this rejects changes to terminal identities or placements beyond interchange
-precision. Then run `tools/reference_board.py` to export and check the committed
+precision, then applies the explicit mechanical drill changes in
+`reference/package-adjustments.json`. Those changes preserve pad copper and routing
+and still require native DRC. Then run `tools/reference_board.py` to export and check the committed
 reference board, or `--check` for standard-Python freshness validation.
 
 The reference filter assembly uses a proposed shared core with explicit winding

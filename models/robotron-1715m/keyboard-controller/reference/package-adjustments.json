@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "scope": "Mechanical changes after retained router session import. Pad locations, pad copper sizes, nets and routes are unchanged; native DRC must pass.",
+  "drills": [
+    {
+      "ref": "R1",
+      "pins": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "fromDiameterMm": 0.85,
+      "diameterMm": 1.1,
+      "basis": "KWH B1 maximum 0.65 x 0.5 mm lead section plus proposed hole-loss and forming envelopes."
+    }
+  ]
+}
