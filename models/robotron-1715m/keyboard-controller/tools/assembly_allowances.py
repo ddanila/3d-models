@@ -12,7 +12,7 @@ def review(components, cores, layout, spec, segment_box, overlaps):
     if any(not math.isfinite(spec[k]) or spec[k]<0 for k in keys):
         raise ValueError('Assembly allowances must be finite and nonnegative')
     body,wire,core,hole=(spec[k] for k in keys)
-    bodies=[{'ref':c['ref'],'box':expand(c['boundsMm'],body)} for c in components if c['package'] not in ('bridge','filter')]
+    bodies=[{'ref':c['ref'],'box':expand(c['boundsMm'],body)} for c in components if c['package'] not in ('bridge','filter','cable-termination')]
     core_boxes=[{'ref':c['id'],'box':expand(box,core)} for c in cores for box in c['solidBoxesMm']]
     collisions=[{'a':a['ref'],'b':b['ref']} for i,a in enumerate(bodies) for b in bodies[i+1:] if overlaps(a['box'],b['box'])]
     core_contacts=[{'component':a['ref'],'core':b['ref'],'kind':'body'} for a in bodies for b in core_boxes if overlaps(a['box'],b['box'])]
@@ -50,7 +50,7 @@ def scad_envelope(components,cores,spec):
     def box_shape(box):
         lines.append(f'translate({[p[0] for p in box]}) cube({[p[1]-p[0] for p in box]});')
     for c in components:
-        if c['package'] not in ('bridge','filter'):box_shape(expand(c['boundsMm'],spec['bodyEnvelopeMm']))
+        if c['package'] not in ('bridge','filter','cable-termination'):box_shape(expand(c['boundsMm'],spec['bodyEnvelopeMm']))
         for lead in c['leads']:
             radius=lead['diameterMm']/2+spec['leadRadialEnvelopeMm']+lead.get('centerlineApproximationMm',0)
             # Circumscribe a polyhedron rather than inscribing one inside the

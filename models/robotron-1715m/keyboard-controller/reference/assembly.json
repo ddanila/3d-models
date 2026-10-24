@@ -606,7 +606,7 @@
     },
     "X1": {
       "package": "connector",
-      "basis": "Proposed connector envelope; XT1 represents cable terminations, not an installed socket.",
+      "basis": "Estimated proposed connector envelope; installed package identity and mating clearance remain unresolved.",
       "sizeMm": [
         38,
         10,
@@ -615,14 +615,13 @@
       "seatMm": 1.6
     },
     "XT1": {
-      "package": "connector",
-      "basis": "Proposed connector envelope; XT1 represents cable terminations, not an installed socket.",
-      "sizeMm": [
-        13,
-        2.5,
-        4
-      ],
-      "seatMm": 1.6
+      "package": "cable-termination",
+      "basis": "Proposed bare termination stubs at reference cable pads; no socket housing. Stub height and wire diameter are illustrative; cable, insulation, strain relief and installed termination geometry remain unqualified.",
+      "seatMm": 4.0,
+      "leadSectionMaximumMm": [
+        0.3,
+        0
+      ]
     }
   },
   "sharedFilter": {

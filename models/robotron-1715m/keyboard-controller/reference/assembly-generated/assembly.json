@@ -22360,7 +22360,7 @@
       "ref": "X1",
       "type": "MATRIX_CONNECTOR",
       "package": "connector",
-      "basis": "Proposed connector envelope; XT1 represents cable terminations, not an installed socket.",
+      "basis": "Estimated proposed connector envelope; installed package identity and mating clearance remain unresolved.",
       "position": [
         -11.841246,
         11.8271975,
@@ -23049,33 +23049,33 @@
     {
       "ref": "XT1",
       "type": "KEYBOARD_CABLE",
-      "package": "connector",
-      "basis": "Proposed connector envelope; XT1 represents cable terminations, not an installed socket.",
+      "package": "cable-termination",
+      "basis": "Proposed bare termination stubs at reference cable pads; no socket housing. Stub height and wire diameter are illustrative; cable, insulation, strain relief and installed termination geometry remain unqualified.",
       "position": [
         -119.92,
         0.0,
-        1.6
+        4.0
       ],
       "rotation": 0,
       "sizeMm": [
-        13,
-        2.5,
-        4
+        10.460000000000008,
+        0.3,
+        4.800000000000001
       ],
       "mesh": null,
       "profile": null,
       "boundsMm": [
         [
-          -126.42,
-          -113.42
+          -125.15,
+          -114.69
         ],
         [
-          -1.25,
-          1.25
+          -0.15,
+          0.15
         ],
         [
-          1.6,
-          5.6
+          -0.65,
+          4.15
         ]
       ],
       "leads": [
@@ -23091,7 +23091,7 @@
             [
               -125.0,
               0.0,
-              1.6
+              4.0
             ]
           ],
           "diameterMm": 0.3,
@@ -23110,7 +23110,7 @@
             [
               -122.46,
               0.0,
-              1.6
+              4.0
             ]
           ],
           "diameterMm": 0.3,
@@ -23129,7 +23129,7 @@
             [
               -114.84,
               0.0,
-              1.6
+              4.0
             ]
           ],
           "diameterMm": 0.3,
@@ -23148,7 +23148,7 @@
             [
               -119.92,
               0.0,
-              1.6
+              4.0
             ]
           ],
           "diameterMm": 0.3,
@@ -23167,7 +23167,7 @@
             [
               -117.38,
               0.0,
-              1.6
+              4.0
             ]
           ],
           "diameterMm": 0.3,
@@ -23577,16 +23577,16 @@
     "../components/kicad/meshes/DIP-40_W15.24mm-body.stl": "3188564537436169f9303e180ffb01baa899d54c8f743448998bad15db31f7b3",
     "evidence.json": "45ca333c85133b8f6fd2a9be22d33ae018b856f85f10374ef5be1a6e1b1e9072",
     "generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
-    "reference/assembly.json": "0f180aac23b6bae1cbec0a37d03f97933564a226a9a42372cb62960863b3fb4a",
+    "reference/assembly.json": "69fa75cbfc2a647d4273df144215a3916c4a4f45ac0cc4cbc2f0a726fd68e075",
     "reference/capacitor-package-ceramic.json": "db1ca3ec57ea0d9f33a837cda4b238642e7c5ae60338d16454877ad08da1af84",
     "reference/capacitor-package-low-profile.json": "1323b2a40db2bc0dd6fb771ae9a7b4b7f08879efa8b8ed1d47b4ae0e5f1719a4",
     "reference/capacitor-polarity.json": "040a882fb3d0005668689f366586a247e04b3d45f4940e9ead52286928d8d218",
     "reference/generated/layout.json": "11cb571bd1ff32af1da4d9d3e1952a4d5ec2c5e62f99067981f52dd47113eaca",
     "reference/signal-paths.json": "bcc196b9fe151e87a292a0b8572d20b1b763d526907005e595428f03f958392b",
-    "tools/assembly_allowances.py": "879c3fe4c25034b72a81c8b4708fb5246f3bd0bbde82c7bf4c4345d89733ac3b",
+    "tools/assembly_allowances.py": "e7a87fe76bbaaa74e757648b25269bdb97fc12eb06b9bd17f14ee396b9076d29",
     "tools/lead_bends.py": "bf8ebb9f2d1450e0911b7cff8f4af0a6c35622d3320d42d439ede3c4ad30b9b1",
     "tools/lead_clearance.py": "bee24ac3694ca5a792ac71b3d5fa0aa782f2a0a50d1c612e8013c9dec5309705",
-    "tools/reference_assembly.py": "a183e3f6f64bfc756a52014aabe506e6c1fdc921219a4dcd50e275d2c8b7ac46",
+    "tools/reference_assembly.py": "8ffbdd97997ce9c7b75ea2b885b7263fa6bb186b4553c8f6b0c2c6f65fbf4743",
     "tools/shared_filter.py": "4f161698ca237d5e679f8c3790808573c4c90c991f37cf0a87b34d797eb680bf"
   }
 }

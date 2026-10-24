@@ -321,23 +321,23 @@
     "keyboard-controller/../components/kicad/meshes/DIP-40_W15.24mm-body.stl": "3188564537436169f9303e180ffb01baa899d54c8f743448998bad15db31f7b3",
     "keyboard-controller/evidence.json": "45ca333c85133b8f6fd2a9be22d33ae018b856f85f10374ef5be1a6e1b1e9072",
     "keyboard-controller/generated/connectivity.json": "68ce8ebda5a03cb5d5339b78b2e964ed3c2b2fdfee379f77029d9f38e128aa25",
-    "keyboard-controller/reference/assembly.json": "0f180aac23b6bae1cbec0a37d03f97933564a226a9a42372cb62960863b3fb4a",
+    "keyboard-controller/reference/assembly.json": "69fa75cbfc2a647d4273df144215a3916c4a4f45ac0cc4cbc2f0a726fd68e075",
     "keyboard-controller/reference/capacitor-package-ceramic.json": "db1ca3ec57ea0d9f33a837cda4b238642e7c5ae60338d16454877ad08da1af84",
     "keyboard-controller/reference/generated/layout.json": "11cb571bd1ff32af1da4d9d3e1952a4d5ec2c5e62f99067981f52dd47113eaca",
     "keyboard-controller/reference/signal-paths.json": "bcc196b9fe151e87a292a0b8572d20b1b763d526907005e595428f03f958392b",
-    "keyboard-controller/tools/assembly_allowances.py": "879c3fe4c25034b72a81c8b4708fb5246f3bd0bbde82c7bf4c4345d89733ac3b",
+    "keyboard-controller/tools/assembly_allowances.py": "e7a87fe76bbaaa74e757648b25269bdb97fc12eb06b9bd17f14ee396b9076d29",
     "keyboard-controller/tools/lead_bends.py": "bf8ebb9f2d1450e0911b7cff8f4af0a6c35622d3320d42d439ede3c4ad30b9b1",
     "keyboard-controller/tools/lead_clearance.py": "bee24ac3694ca5a792ac71b3d5fa0aa782f2a0a50d1c612e8013c9dec5309705",
-    "keyboard-controller/tools/reference_assembly.py": "a183e3f6f64bfc756a52014aabe506e6c1fdc921219a4dcd50e275d2c8b7ac46",
+    "keyboard-controller/tools/reference_assembly.py": "8ffbdd97997ce9c7b75ea2b885b7263fa6bb186b4553c8f6b0c2c6f65fbf4743",
     "keyboard-controller/tools/shared_filter.py": "4f161698ca237d5e679f8c3790808573c4c90c991f37cf0a87b34d797eb680bf",
     "keyboard-controller/reference/capacitor-package-low-profile.json": "1323b2a40db2bc0dd6fb771ae9a7b4b7f08879efa8b8ed1d47b4ae0e5f1719a4",
     "keyboard-controller/tools/capacitor_package_review.py": "c4b7071423beb6e6722b24fa687b19ab108c685833d897cc688b4050819caabf",
     "keyboard-controller/tools/reference_enclosure.py": "a9fcc1c67cac4c30ee876ff612e026bc8816e64b1fac0d02f8a10edc51a8412d",
     "components/kicad/meshes/DIP-40_W15.24mm-body.stl": "3188564537436169f9303e180ffb01baa899d54c8f743448998bad15db31f7b3",
     "components/kicad/meshes/DIP-20_W7.62mm-body.stl": "c71eb298a5948d48e8c2cd27929d85714d557be6a1e853f8c1c712a0319d345a",
+    "components/kicad/meshes/DIP-14_W7.62mm-body.stl": "d8b37907d924f3dee08dca7663807440e9ee90113b52ee9b128ccf9cb242e246",
     "monitor-interior.scad": "5415fe31a30d7dccf97746096e5629b511b56e4da25fe20197662a51495a2ff2",
     "controller-package-data.scad": "548028d516da02768bd75bdd831c2965af8fba8becdda01d73f3de97c7bd1037",
-    "components/teac-fd55fv.scad": "e62bc7c018f8f59d11f98016a9d7216c50c0c9534f143d818ee2be15e717f3cb",
     "model.scad": "a3551efcb66486043b1521b49e42d2c8f7e2a846d8f82edf5838c7a5b30f4f8d",
     "keyboard-controller/generated/controller.scad": "ce0e0628de5dbebc9fa101526676728f1016523efdd84d1a0c8b19cde8675a25",
     "key-switch/geometry.scad": "3c5548896f0d9ef90e45d89c51d15f91974dc473456da760aeb61104c75fddce",
@@ -354,9 +354,9 @@
     "keyboard-layout.scad": "bf1700cba2e51c7ea9b400fab2c6dbd7072fd5d97cb15396cd0e17a260ef5fae",
     "keycap/geometry.scad": "e304f9e8e48ee16f4ee67a29906901f6f7cff93694c6ebf70bf6e38a891ad961",
     "specimen-details.scad": "9ad1199f222e06d84ffaaf7ed19a0ce4f0014f747db5a9df3a85bccf94c93240",
-    "keyboard-controller/reference/assembly-generated/assembly.scad": "b85c76f173d77f287ef5c02402318cf4aad7517a45a0d87de02b62fe4ff68a4b",
+    "keyboard-controller/reference/assembly-generated/assembly.scad": "59792bac20a428dfde69ab63f85f36547674a5846bb693dc0031cb55582a665b",
     "monitor-cables.scad": "03334c5468c3158d78ac72a4747ee305b57ab46906be846b78e2a346cdc5275a",
-    "components/kicad/meshes/DIP-14_W7.62mm-body.stl": "d8b37907d924f3dee08dca7663807440e9ee90113b52ee9b128ccf9cb242e246"
+    "components/teac-fd55fv.scad": "e62bc7c018f8f59d11f98016a9d7216c50c0c9534f143d818ee2be15e717f3cb"
   },
   "interfaces": [
     {
@@ -386,7 +386,7 @@
     }
   ],
   "scope": "Proposed replacement envelope at existing seats and pads. One explicit lead-pitch case, stated diameter and maximum body envelope; no polarity mapping, continuous tolerance sweep, installed identity or electrical substitution qualification.",
-  "candidateVolumeMm3": 12776.037935904855,
+  "candidateVolumeMm3": 12646.717023990233,
   "nominalEnclosureClear": true,
   "engine": "OpenSCAD version 2026.10.05"
 }

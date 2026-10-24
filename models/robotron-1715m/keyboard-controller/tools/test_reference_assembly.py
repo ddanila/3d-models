@@ -28,6 +28,27 @@ class AssemblyTests(unittest.TestCase):
         self.assertTrue(data['review']['leadClearance']['noUnintendedContact'])
         self.assertGreater(data['review']['leadClearance']['minimumUnintendedClearance']['surfaceClearanceMm'],0)
 
+    def test_cable_terminations_have_no_housing_but_keep_wire_clearance(self):
+        data,scad=assembly.build()
+        cable=next(c for c in data['components'] if c['ref']=='XT1')
+        self.assertEqual(cable['package'],'cable-termination')
+        self.assertNotIn('// XT1:',scad)
+        self.assertEqual({l['pin'] for l in cable['leads']},{'A1','A3','A5','B2','B4'})
+        # Bodyless terminals still contribute their full wire allowance envelope.
+        original=assembly.read
+        def altered(path):
+            result=original(path)
+            if path==assembly.REF/'assembly.json':
+                result['components']['XT1']['seatMm']=30
+            return result
+        with patch.object(assembly,'read',side_effect=altered):tall,_=assembly.build()
+        raised=next(c for c in tall['components'] if c['ref']=='XT1')
+        self.assertGreater(raised['boundsMm'][2][1],30)
+        from assembly_allowances import scad_envelope
+        envelope=scad_envelope([raised],[],data['review']['assemblyAllowances']['assumptions'])
+        self.assertNotIn('cube(',envelope)
+        self.assertIn('sphere(',envelope)
+
     def test_shared_core_windings_keep_terminal_identity_and_clearance(self):
         data,scad=assembly.build();core,=data['sharedBodies']
         self.assertEqual(set(core['members']),{'L1.1','L1.2','L1.3','L1.4'})
