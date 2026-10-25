@@ -20,6 +20,8 @@ jobs:
       - run: python3 models/robotron-1715m/keyboard-controller/tools/connector_package_review.py --check
       - run: python3 models/robotron-1715m/keyboard-controller/tools/efs_registration_review.py --check
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_efs_registration_review.py
+      - run: python3 models/robotron-1715m/keyboard-controller/tools/distributed_registration_review.py --check
+      - run: python3 models/robotron-1715m/keyboard-controller/tools/test_distributed_registration_review.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_row_spacing_review.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/row_spacing_review.py --check
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_shared_row_bias_review.py

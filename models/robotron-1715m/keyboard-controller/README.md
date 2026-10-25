@@ -117,7 +117,10 @@ The [detailed EFS standard](reference/efs-form-constraints.json) supplies a comm
 PCB hole pattern for the retained X1 forms. It enables conditional board-plane
 calibration without selecting body width. The [endpoint-fit review](reference/package-reviews/efs-registration/assessment.json)
 fails independent nominal CPU-span checks and exposes strong extrapolation sensitivity;
-connector regularity cannot qualify global registration.
+connector regularity cannot qualify global registration. The
+[distributed X1/CPU fit](reference/package-reviews/distributed-registration/assessment.json)
+satisfies held-out nominal longitudinal span checks, but correlated connector-row
+picking shifts leave transverse scale poorly constrained. Neither fit authorizes pad moves.
 The eye-based fit holds out independent solder eyes and composes with qualified
 underside placement only inside the intersection of their domains. Eye matches
 do not establish net identity; nearby lanes must still be traced independently.

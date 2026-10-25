@@ -1,0 +1,635 @@
+{
+  "schema": 1,
+  "sources": {
+    "reference/efs-form-constraints.json": "95dcf49a6d1366d9e9a3abb37f9ed253ff3b981cb153ef0bf165b63bed338da8",
+    "component-evidence.json": "57752b9a8963098b2b357f8b7714108b1b1236b2471cb445f25feb64b15011e0",
+    "bottom-landmarks.json": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+    "sense-review.json": "c8f2bdb8959e09cce11f746aa1729894fb535b34f5c8ab8f78f464b9b4378153",
+    "generated/layout.json": "3a2767183f35d6a4c049f97687d188294b25d942a113725c018023137974d408",
+    "tools/distributed_registration_review.py": "bac506dd6a58e2da4d0425a36ab55fc137552173e0111b2962b26073a5aad35f",
+    "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068"
+  },
+  "fitScope": "Equal total squared-residual weights for X1 and CPU. X1 nominal pattern and CPU manufacturer longitudinal span only; no DIP row-spacing constraint. Coordinate normalization: (pixel-[1200,1900])/1000.",
+  "nominal": {
+    "optimizer": {
+      "converged": true,
+      "iterations": 4,
+      "weightedSquaredResidual": 0.00589
+    },
+    "normalizedPhotoToMetric": [
+      83.953609,
+      -1.983304,
+      2.196173,
+      -1.957353,
+      83.821166,
+      15.544601,
+      -0.046003,
+      0.021175,
+      1
+    ],
+    "poleCrossesBoard": false,
+    "maximumConnectorResidualMm": 0.159109,
+    "cpuSpanResidualsMm": [
+      0.000311,
+      -0.000408
+    ],
+    "unconstrainedCpuCrossRowDistancesMm": [
+      15.519337,
+      15.342503
+    ],
+    "projectedBoardCornersMm": [
+      [
+        -9.926836,
+        -116.46722
+      ],
+      [
+        42.077617,
+        -120.024486
+      ],
+      [
+        38.676475,
+        164.480849
+      ],
+      [
+        -11.835178,
+        162.717166
+      ]
+    ],
+    "heldOutSameRowChecks": [
+      {
+        "terminals": [
+          "A1:1",
+          "A1:7"
+        ],
+        "nominalNativeSpanMm": 15.239999,
+        "projectedSpanMm": 15.376148,
+        "minimumEndpointResidualMm": 0.068074
+      },
+      {
+        "terminals": [
+          "A1:8",
+          "A1:14"
+        ],
+        "nominalNativeSpanMm": 15.239999,
+        "projectedSpanMm": 15.560893,
+        "minimumEndpointResidualMm": 0.160447
+      },
+      {
+        "terminals": [
+          "A2.1:1",
+          "A2.1:7"
+        ],
+        "nominalNativeSpanMm": 15.24,
+        "projectedSpanMm": 15.322447,
+        "minimumEndpointResidualMm": 0.041224
+      },
+      {
+        "terminals": [
+          "A2.1:8",
+          "A2.1:14"
+        ],
+        "nominalNativeSpanMm": 15.24,
+        "projectedSpanMm": 15.421771,
+        "minimumEndpointResidualMm": 0.090885
+      },
+      {
+        "terminals": [
+          "A4:1",
+          "A4:10"
+        ],
+        "nominalNativeSpanMm": 22.86,
+        "projectedSpanMm": 22.842975,
+        "minimumEndpointResidualMm": 0.008513
+      },
+      {
+        "terminals": [
+          "A4:11",
+          "A4:20"
+        ],
+        "nominalNativeSpanMm": 22.86,
+        "projectedSpanMm": 22.662592,
+        "minimumEndpointResidualMm": 0.098704
+      },
+      {
+        "terminals": [
+          "A8:1",
+          "A8:12"
+        ],
+        "nominalNativeSpanMm": 27.94,
+        "projectedSpanMm": 27.849514,
+        "minimumEndpointResidualMm": 0.045243
+      },
+      {
+        "terminals": [
+          "A8:13",
+          "A8:24"
+        ],
+        "nominalNativeSpanMm": 27.94,
+        "projectedSpanMm": 26.934808,
+        "minimumEndpointResidualMm": 0.502596
+      }
+    ]
+  },
+  "systematicPickingTrials": [
+    {
+      "rowXShiftSigns": [
+        -1,
+        -1
+      ],
+      "optimizer": {
+        "converged": true,
+        "iterations": 4,
+        "weightedSquaredResidual": 0.005888
+      },
+      "normalizedPhotoToMetric": [
+        83.984406,
+        -1.983525,
+        2.868858,
+        -1.957817,
+        83.854793,
+        15.534866,
+        -0.046007,
+        0.02138,
+        1
+      ],
+      "poleCrossesBoard": false,
+      "maximumConnectorResidualMm": 0.158949,
+      "cpuSpanResidualsMm": [
+        0.000317,
+        -0.000411
+      ],
+      "unconstrainedCpuCrossRowDistancesMm": [
+        15.528715,
+        15.349978
+      ],
+      "projectedBoardCornersMm": [
+        [
+          -9.24551,
+          -116.568259
+        ],
+        [
+          42.8149,
+          -120.129511
+        ],
+        [
+          39.338308,
+          164.471019
+        ],
+        [
+          -11.191588,
+          162.708109
+        ]
+      ],
+      "heldOutSameRowChecks": [
+        {
+          "terminals": [
+            "A1:1",
+            "A1:7"
+          ],
+          "nominalNativeSpanMm": 15.239999,
+          "projectedSpanMm": 15.38501,
+          "minimumEndpointResidualMm": 0.072505
+        },
+        {
+          "terminals": [
+            "A1:8",
+            "A1:14"
+          ],
+          "nominalNativeSpanMm": 15.239999,
+          "projectedSpanMm": 15.569817,
+          "minimumEndpointResidualMm": 0.164909
+        },
+        {
+          "terminals": [
+            "A2.1:1",
+            "A2.1:7"
+          ],
+          "nominalNativeSpanMm": 15.24,
+          "projectedSpanMm": 15.33115,
+          "minimumEndpointResidualMm": 0.045575
+        },
+        {
+          "terminals": [
+            "A2.1:8",
+            "A2.1:14"
+          ],
+          "nominalNativeSpanMm": 15.24,
+          "projectedSpanMm": 15.430484,
+          "minimumEndpointResidualMm": 0.095242
+        },
+        {
+          "terminals": [
+            "A4:1",
+            "A4:10"
+          ],
+          "nominalNativeSpanMm": 22.86,
+          "projectedSpanMm": 22.843817,
+          "minimumEndpointResidualMm": 0.008091
+        },
+        {
+          "terminals": [
+            "A4:11",
+            "A4:20"
+          ],
+          "nominalNativeSpanMm": 22.86,
+          "projectedSpanMm": 22.663464,
+          "minimumEndpointResidualMm": 0.098268
+        },
+        {
+          "terminals": [
+            "A8:1",
+            "A8:12"
+          ],
+          "nominalNativeSpanMm": 27.94,
+          "projectedSpanMm": 27.843197,
+          "minimumEndpointResidualMm": 0.048402
+        },
+        {
+          "terminals": [
+            "A8:13",
+            "A8:24"
+          ],
+          "nominalNativeSpanMm": 27.94,
+          "projectedSpanMm": 26.928724,
+          "minimumEndpointResidualMm": 0.505638
+        }
+      ]
+    },
+    {
+      "rowXShiftSigns": [
+        -1,
+        1
+      ],
+      "optimizer": {
+        "converged": true,
+        "iterations": 4,
+        "weightedSquaredResidual": 0.005192
+      },
+      "normalizedPhotoToMetric": [
+        66.130516,
+        -1.551603,
+        2.258937,
+        -1.688559,
+        83.814604,
+        15.543613,
+        -0.046095,
+        0.021153,
+        1
+      ],
+      "poleCrossesBoard": false,
+      "maximumConnectorResidualMm": 0.145362,
+      "cpuSpanResidualsMm": [
+        0.000114,
+        -0.000227
+      ],
+      "unconstrainedCpuCrossRowDistancesMm": [
+        12.230924,
+        12.091742
+      ],
+      "projectedBoardCornersMm": [
+        [
+          -7.293595,
+          -116.500995
+        ],
+        [
+          33.685338,
+          -119.898516
+        ],
+        [
+          31.007757,
+          164.609914
+        ],
+        [
+          -8.797828,
+          162.675497
+        ]
+      ],
+      "heldOutSameRowChecks": [
+        {
+          "terminals": [
+            "A1:1",
+            "A1:7"
+          ],
+          "nominalNativeSpanMm": 15.239999,
+          "projectedSpanMm": 15.375079,
+          "minimumEndpointResidualMm": 0.06754
+        },
+        {
+          "terminals": [
+            "A1:8",
+            "A1:14"
+          ],
+          "nominalNativeSpanMm": 15.239999,
+          "projectedSpanMm": 15.56046,
+          "minimumEndpointResidualMm": 0.16023
+        },
+        {
+          "terminals": [
+            "A2.1:1",
+            "A2.1:7"
+          ],
+          "nominalNativeSpanMm": 15.24,
+          "projectedSpanMm": 15.322049,
+          "minimumEndpointResidualMm": 0.041024
+        },
+        {
+          "terminals": [
+            "A2.1:8",
+            "A2.1:14"
+          ],
+          "nominalNativeSpanMm": 15.24,
+          "projectedSpanMm": 15.421542,
+          "minimumEndpointResidualMm": 0.090771
+        },
+        {
+          "terminals": [
+            "A4:1",
+            "A4:10"
+          ],
+          "nominalNativeSpanMm": 22.86,
+          "projectedSpanMm": 22.842933,
+          "minimumEndpointResidualMm": 0.008533
+        },
+        {
+          "terminals": [
+            "A4:11",
+            "A4:20"
+          ],
+          "nominalNativeSpanMm": 22.86,
+          "projectedSpanMm": 22.660327,
+          "minimumEndpointResidualMm": 0.099837
+        },
+        {
+          "terminals": [
+            "A8:1",
+            "A8:12"
+          ],
+          "nominalNativeSpanMm": 27.94,
+          "projectedSpanMm": 27.852126,
+          "minimumEndpointResidualMm": 0.043937
+        },
+        {
+          "terminals": [
+            "A8:13",
+            "A8:24"
+          ],
+          "nominalNativeSpanMm": 27.94,
+          "projectedSpanMm": 26.93644,
+          "minimumEndpointResidualMm": 0.50178
+        }
+      ]
+    },
+    {
+      "rowXShiftSigns": [
+        1,
+        -1
+      ],
+      "optimizer": {
+        "converged": true,
+        "iterations": 4,
+        "weightedSquaredResidual": 0.007474
+      },
+      "normalizedPhotoToMetric": [
+        114.890377,
+        -2.7326,
+        2.086552,
+        -2.42398,
+        83.832603,
+        15.546328,
+        -0.045743,
+        0.021215,
+        1
+      ],
+      "poleCrossesBoard": false,
+      "maximumConnectorResidualMm": 0.187446,
+      "cpuSpanResidualsMm": [
+        0.000391,
+        -0.000463
+      ],
+      "unconstrainedCpuCrossRowDistancesMm": [
+        21.228206,
+        20.98579
+      ],
+      "projectedBoardCornersMm": [
+        [
+          -14.499261,
+          -116.411397
+        ],
+        [
+          56.641484,
+          -120.238551
+        ],
+        [
+          51.981189,
+          164.248032
+        ],
+        [
+          -17.107638,
+          162.790714
+        ]
+      ],
+      "heldOutSameRowChecks": [
+        {
+          "terminals": [
+            "A1:1",
+            "A1:7"
+          ],
+          "nominalNativeSpanMm": 15.239999,
+          "projectedSpanMm": 15.377898,
+          "minimumEndpointResidualMm": 0.068949
+        },
+        {
+          "terminals": [
+            "A1:8",
+            "A1:14"
+          ],
+          "nominalNativeSpanMm": 15.239999,
+          "projectedSpanMm": 15.561452,
+          "minimumEndpointResidualMm": 0.160726
+        },
+        {
+          "terminals": [
+            "A2.1:1",
+            "A2.1:7"
+          ],
+          "nominalNativeSpanMm": 15.24,
+          "projectedSpanMm": 15.323216,
+          "minimumEndpointResidualMm": 0.041608
+        },
+        {
+          "terminals": [
+            "A2.1:8",
+            "A2.1:14"
+          ],
+          "nominalNativeSpanMm": 15.24,
+          "projectedSpanMm": 15.422571,
+          "minimumEndpointResidualMm": 0.091286
+        },
+        {
+          "terminals": [
+            "A4:1",
+            "A4:10"
+          ],
+          "nominalNativeSpanMm": 22.86,
+          "projectedSpanMm": 22.842558,
+          "minimumEndpointResidualMm": 0.008721
+        },
+        {
+          "terminals": [
+            "A4:11",
+            "A4:20"
+          ],
+          "nominalNativeSpanMm": 22.86,
+          "projectedSpanMm": 22.66703,
+          "minimumEndpointResidualMm": 0.096485
+        },
+        {
+          "terminals": [
+            "A8:1",
+            "A8:12"
+          ],
+          "nominalNativeSpanMm": 27.94,
+          "projectedSpanMm": 27.844273,
+          "minimumEndpointResidualMm": 0.047864
+        },
+        {
+          "terminals": [
+            "A8:13",
+            "A8:24"
+          ],
+          "nominalNativeSpanMm": 27.94,
+          "projectedSpanMm": 26.932659,
+          "minimumEndpointResidualMm": 0.503671
+        }
+      ]
+    },
+    {
+      "rowXShiftSigns": [
+        1,
+        1
+      ],
+      "optimizer": {
+        "converged": true,
+        "iterations": 4,
+        "weightedSquaredResidual": 0.005891
+      },
+      "normalizedPhotoToMetric": [
+        83.922818,
+        -1.983082,
+        1.52398,
+        -1.956887,
+        83.787545,
+        15.55433,
+        -0.045999,
+        0.020969,
+        1
+      ],
+      "poleCrossesBoard": false,
+      "maximumConnectorResidualMm": 0.159269,
+      "cpuSpanResidualsMm": [
+        0.000303,
+        -0.000405
+      ],
+      "unconstrainedCpuCrossRowDistancesMm": [
+        15.509961,
+        15.335028
+      ],
+      "projectedBoardCornersMm": [
+        [
+          -10.607216,
+          -116.366281
+        ],
+        [
+          41.341349,
+          -119.919546
+        ],
+        [
+          38.014636,
+          164.490657
+        ],
+        [
+          -12.478764,
+          162.726221
+        ]
+      ],
+      "heldOutSameRowChecks": [
+        {
+          "terminals": [
+            "A1:1",
+            "A1:7"
+          ],
+          "nominalNativeSpanMm": 15.239999,
+          "projectedSpanMm": 15.367292,
+          "minimumEndpointResidualMm": 0.063646
+        },
+        {
+          "terminals": [
+            "A1:8",
+            "A1:14"
+          ],
+          "nominalNativeSpanMm": 15.239999,
+          "projectedSpanMm": 15.551975,
+          "minimumEndpointResidualMm": 0.155988
+        },
+        {
+          "terminals": [
+            "A2.1:1",
+            "A2.1:7"
+          ],
+          "nominalNativeSpanMm": 15.24,
+          "projectedSpanMm": 15.313751,
+          "minimumEndpointResidualMm": 0.036876
+        },
+        {
+          "terminals": [
+            "A2.1:8",
+            "A2.1:14"
+          ],
+          "nominalNativeSpanMm": 15.24,
+          "projectedSpanMm": 15.413064,
+          "minimumEndpointResidualMm": 0.086532
+        },
+        {
+          "terminals": [
+            "A4:1",
+            "A4:10"
+          ],
+          "nominalNativeSpanMm": 22.86,
+          "projectedSpanMm": 22.842131,
+          "minimumEndpointResidualMm": 0.008934
+        },
+        {
+          "terminals": [
+            "A4:11",
+            "A4:20"
+          ],
+          "nominalNativeSpanMm": 22.86,
+          "projectedSpanMm": 22.661721,
+          "minimumEndpointResidualMm": 0.099139
+        },
+        {
+          "terminals": [
+            "A8:1",
+            "A8:12"
+          ],
+          "nominalNativeSpanMm": 27.94,
+          "projectedSpanMm": 27.855832,
+          "minimumEndpointResidualMm": 0.042084
+        },
+        {
+          "terminals": [
+            "A8:13",
+            "A8:24"
+          ],
+          "nominalNativeSpanMm": 27.94,
+          "projectedSpanMm": 26.940891,
+          "minimumEndpointResidualMm": 0.499554
+        }
+      ]
+    }
+  ],
+  "pointBudgetMm": 1.25,
+  "registrationQualified": false,
+  "padPlacementAuthorized": false,
+  "limits": "Held-out spans use nominal native longitudinal dimensions, not independently measured specimens. Span agreement is necessary but cannot validate absolute placement or cross-side registration. Correlated transverse shifts are sensitivity examples, not complete uncertainty bounds. Manufacturing tolerances, other picking modes and lens distortion remain unbounded."
+}
