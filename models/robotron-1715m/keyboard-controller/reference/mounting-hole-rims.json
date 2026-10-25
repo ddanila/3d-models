@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "photoSource": "photo-bottom",
+  "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+  "specimen": "primary",
+  "observation": "Manual picks around exposed large mounting-hole opening rims at the cable and ROM ends. Pick the opening boundary, not the displaced wood/background boundary or the outer solder/coating ring.",
+  "pixelUncertainty": 4,
+  "uncertaintyScope": "Conservative visual picking allowance per coordinate, not a measured confidence interval or manufacturing roundness bound.",
+  "holes": [
+    {
+      "id": "cable-end-large",
+      "cropPixels": [1020, 340, 1280, 510],
+      "reviewDisplayScale": 2.25,
+      "rimPointsInReviewCrop": [[140,114],[173,127],[189,165],[174,199],[137,216],[101,201],[86,166],[101,133]]
+    },
+    {
+      "id": "rom-end-large",
+      "cropPixels": [1060, 3570, 1290, 3770],
+      "reviewDisplayScale": 2.25,
+      "rimPointsInReviewCrop": [[164,192],[195,207],[207,246],[192,281],[160,295],[126,283],[111,247],[123,212]]
+    }
+  ],
+  "hypothesis": "The photographed opening rims are approximately circular in the board plane. No diameter or equality of hole sizes is assumed. Board thickness, bevels, damage, lens distortion and rim-selection bias can violate this hypothesis.",
+  "scope": "Independent shape screen for existing conditional registrations, not a fitted anchor, a manufacturing specification or authorization to move pads. Retain ambiguous candidates when the picking allowance cannot distinguish them."
+}

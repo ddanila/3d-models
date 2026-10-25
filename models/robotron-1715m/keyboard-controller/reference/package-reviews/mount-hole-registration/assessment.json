@@ -1,0 +1,185 @@
+{
+  "schema": 1,
+  "sources": {
+    "reference/mounting-hole-rims.json": "5ebad09d498dc25e2626cf8c6d7d4bc8fd1b3ce43c5f5b33c7dafa7b35a52e99",
+    "reference/package-reviews/distributed-registration/assessment.json": "68563a7458cbba12961ca883880baf100f2600451eb0c442ec27000a87f737c7",
+    "tools/mount_hole_registration_review.py": "27e1d4f3835c03be54e2da6d44bb571f76ba37771aacebd7623f9f97cbe6d8ba",
+    "tools/distributed_registration_review.py": "bac506dd6a58e2da4d0425a36ab55fc137552173e0111b2962b26073a5aad35f",
+    "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068",
+    "sense-review.json": "c8f2bdb8959e09cce11f746aa1729894fb535b34f5c8ab8f78f464b9b4378153"
+  },
+  "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+  "pickingAllowancePixels": 4,
+  "candidates": [
+    {
+      "fit": "nominal",
+      "holes": [
+        {
+          "id": "cable-end-large",
+          "fittedCentreMm": [
+            -4.951216,
+            -111.748133
+          ],
+          "fittedRadiusMm": 1.979563,
+          "maximumRadialResidualMm": 0.192114,
+          "maximumPickingDisplacementMm": 0.521275,
+          "maximumResidualToPickingRatio": 0.369559,
+          "circleIntersectsEveryPickingBox": true,
+          "candidateCircleWithinDisplacementAllowance": true,
+          "interpretation": "Circle/convex-quadrilateral intersection supplies a compatible rim-point witness for every picking box when true. False does not exclude another circle. The displacement ratio is diagnostic only."
+        },
+        {
+          "id": "rom-end-large",
+          "fittedCentreMm": [
+            -6.855024,
+            158.27963
+          ],
+          "fittedRadiusMm": 1.750579,
+          "maximumRadialResidualMm": 0.042458,
+          "maximumPickingDisplacementMm": 0.456143,
+          "maximumResidualToPickingRatio": 0.09308,
+          "circleIntersectsEveryPickingBox": true,
+          "candidateCircleWithinDisplacementAllowance": true,
+          "interpretation": "Circle/convex-quadrilateral intersection supplies a compatible rim-point witness for every picking box when true. False does not exclude another circle. The displacement ratio is diagnostic only."
+        }
+      ]
+    },
+    {
+      "fit": "[-1, -1]",
+      "holes": [
+        {
+          "id": "cable-end-large",
+          "fittedCentreMm": [
+            -4.265316,
+            -111.84436
+          ],
+          "fittedRadiusMm": 1.981601,
+          "maximumRadialResidualMm": 0.192464,
+          "maximumPickingDisplacementMm": 0.521848,
+          "maximumResidualToPickingRatio": 0.369827,
+          "circleIntersectsEveryPickingBox": true,
+          "candidateCircleWithinDisplacementAllowance": true,
+          "interpretation": "Circle/convex-quadrilateral intersection supplies a compatible rim-point witness for every picking box when true. False does not exclude another circle. The displacement ratio is diagnostic only."
+        },
+        {
+          "id": "rom-end-large",
+          "fittedCentreMm": [
+            -6.20902,
+            158.27224
+          ],
+          "fittedRadiusMm": 1.750611,
+          "maximumRadialResidualMm": 0.041833,
+          "maximumPickingDisplacementMm": 0.456111,
+          "maximumResidualToPickingRatio": 0.091717,
+          "circleIntersectsEveryPickingBox": true,
+          "candidateCircleWithinDisplacementAllowance": true,
+          "interpretation": "Circle/convex-quadrilateral intersection supplies a compatible rim-point witness for every picking box when true. False does not exclude another circle. The displacement ratio is diagnostic only."
+        }
+      ]
+    },
+    {
+      "fit": "[-1, 1]",
+      "holes": [
+        {
+          "id": "cable-end-large",
+          "fittedCentreMm": [
+            -3.362515,
+            -111.768689
+          ],
+          "fittedRadiusMm": 1.784397,
+          "maximumRadialResidualMm": 0.246504,
+          "maximumPickingDisplacementMm": 0.473058,
+          "maximumResidualToPickingRatio": 0.521377,
+          "circleIntersectsEveryPickingBox": true,
+          "candidateCircleWithinDisplacementAllowance": true,
+          "interpretation": "Circle/convex-quadrilateral intersection supplies a compatible rim-point witness for every picking box when true. False does not exclude another circle. The displacement ratio is diagnostic only."
+        },
+        {
+          "id": "rom-end-large",
+          "fittedCentreMm": [
+            -4.859956,
+            158.26212
+          ],
+          "fittedRadiusMm": 1.579287,
+          "maximumRadialResidualMm": 0.242081,
+          "maximumPickingDisplacementMm": 0.413779,
+          "maximumResidualToPickingRatio": 0.585048,
+          "circleIntersectsEveryPickingBox": true,
+          "candidateCircleWithinDisplacementAllowance": true,
+          "interpretation": "Circle/convex-quadrilateral intersection supplies a compatible rim-point witness for every picking box when true. False does not exclude another circle. The displacement ratio is diagnostic only."
+        }
+      ]
+    },
+    {
+      "fit": "[1, -1]",
+      "holes": [
+        {
+          "id": "cable-end-large",
+          "fittedCentreMm": [
+            -7.705645,
+            -111.713085
+          ],
+          "fittedRadiusMm": 2.367971,
+          "maximumRadialResidualMm": 0.358258,
+          "maximumPickingDisplacementMm": 0.617629,
+          "maximumResidualToPickingRatio": 0.581982,
+          "circleIntersectsEveryPickingBox": true,
+          "candidateCircleWithinDisplacementAllowance": true,
+          "interpretation": "Circle/convex-quadrilateral intersection supplies a compatible rim-point witness for every picking box when true. False does not exclude another circle. The displacement ratio is diagnostic only."
+        },
+        {
+          "id": "rom-end-large",
+          "fittedCentreMm": [
+            -10.312889,
+            158.306552
+          ],
+          "fittedRadiusMm": 2.092124,
+          "maximumRadialResidualMm": 0.31485,
+          "maximumPickingDisplacementMm": 0.541432,
+          "maximumResidualToPickingRatio": 0.582398,
+          "circleIntersectsEveryPickingBox": true,
+          "candidateCircleWithinDisplacementAllowance": true,
+          "interpretation": "Circle/convex-quadrilateral intersection supplies a compatible rim-point witness for every picking box when true. False does not exclude another circle. The displacement ratio is diagnostic only."
+        }
+      ]
+    },
+    {
+      "fit": "[1, 1]",
+      "holes": [
+        {
+          "id": "cable-end-large",
+          "fittedCentreMm": [
+            -5.636177,
+            -111.651812
+          ],
+          "fittedRadiusMm": 1.977523,
+          "maximumRadialResidualMm": 0.191767,
+          "maximumPickingDisplacementMm": 0.520701,
+          "maximumResidualToPickingRatio": 0.369296,
+          "circleIntersectsEveryPickingBox": true,
+          "candidateCircleWithinDisplacementAllowance": true,
+          "interpretation": "Circle/convex-quadrilateral intersection supplies a compatible rim-point witness for every picking box when true. False does not exclude another circle. The displacement ratio is diagnostic only."
+        },
+        {
+          "id": "rom-end-large",
+          "fittedCentreMm": [
+            -7.501019,
+            158.287301
+          ],
+          "fittedRadiusMm": 1.750551,
+          "maximumRadialResidualMm": 0.043085,
+          "maximumPickingDisplacementMm": 0.456174,
+          "maximumResidualToPickingRatio": 0.094449,
+          "circleIntersectsEveryPickingBox": true,
+          "candidateCircleWithinDisplacementAllowance": true,
+          "interpretation": "Circle/convex-quadrilateral intersection supplies a compatible rim-point witness for every picking box when true. False does not exclude another circle. The displacement ratio is diagnostic only."
+        }
+      ]
+    }
+  ],
+  "registrationQualified": false,
+  "padPlacementAuthorized": false,
+  "scope": "Held-out primary mounting-hole shape; no diameter assumption and no refitting of registration. Approximate rim circularity is a hypothesis, not an established manufacturing tolerance.",
+  "allCandidatesHaveCircularRimWitnesses": true,
+  "nextDecision": "When all competing fits have witnesses, these rims cannot select transverse scale even under exact circularity within the stated picking boxes. A sharper independently bounded observation or a known transverse board-plane distance is needed; do not tighten uncertainty to select a fit."
+}
