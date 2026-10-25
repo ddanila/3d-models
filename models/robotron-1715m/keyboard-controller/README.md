@@ -121,6 +121,9 @@ connector regularity cannot qualify global registration. The
 [distributed X1/CPU fit](reference/package-reviews/distributed-registration/assessment.json)
 satisfies held-out nominal longitudinal span checks, but correlated connector-row
 picking shifts leave transverse scale poorly constrained. Neither fit authorizes pad moves.
+The [chamber review](reference/package-reviews/efs-chambers/assessment.json) narrows
+the comparison specimen to the narrow EFS alternatives; the primary photo hides the
+discriminating chambers, so its retained alternatives and picking uncertainty remain.
 The eye-based fit holds out independent solder eyes and composes with qualified
 underside placement only inside the intersection of their domains. Eye matches
 do not establish net identity; nearby lanes must still be traced independently.

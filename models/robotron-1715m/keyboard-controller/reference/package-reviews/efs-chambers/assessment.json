@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "id": "x1-chamber-and-hole-review",
+  "sources": {
+    "reference/efs-form-constraints.json": "95dcf49a6d1366d9e9a3abb37f9ed253ff3b981cb153ef0bf165b63bed338da8"
+  },
+  "photos": [
+    {
+      "id": "photo-top",
+      "sha256": "dce38a857c38475372e19cd98aae75f5e7596be67f45e6afc7488f6cf7c99240",
+      "specimen": "primary"
+    },
+    {
+      "id": "photo-bottom",
+      "sha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+      "specimen": "primary"
+    },
+    {
+      "id": "comparison-photo-080411074",
+      "sha256": "364c56674f14a3361849dbe29b722a00145bb39c6afd45a048099906ceb960ae",
+      "specimen": "comparison-20261017"
+    },
+    {
+      "id": "comparison-photo-080415534",
+      "sha256": "602404556009fe24083bc919b7d495c4876b0e4d8a7546d70a6f9b71ea6f2f22",
+      "specimen": "comparison-20261017"
+    }
+  ],
+  "comparisonSpecimen": {
+    "id": "comparison-20261017",
+    "observations": [
+      {
+        "source": "comparison-photo-080411074",
+        "pixelBox": [
+          1200,
+          1850,
+          3000,
+          2180
+        ],
+        "feature": "Two adjacent populated longitudinal mating slots; no central unpopulated chamber row visible."
+      },
+      {
+        "source": "comparison-photo-080415534",
+        "pixelBox": [
+          1050,
+          1100,
+          3100,
+          1780
+        ],
+        "feature": "Two adjacent rows of rectangular termination chambers with bent leads; no intervening third chamber row."
+      }
+    ],
+    "conditionalEfsForms": [
+      102,
+      202
+    ],
+    "conditionalBodyWidthMm": 8.5,
+    "excludedEfsForms": [
+      304,
+      404
+    ],
+    "exclusionBasis": "TGL 29331/04 printed page 11 table 4: 304/404 have populated outer rows with an unpopulated central chamber row. The termination-side photograph directly shows adjacent populated chamber rows.",
+    "plugVersusSocketSelected": false,
+    "mountingElementSelected": false,
+    "installedFamilyIndependentlyConfirmed": false
+  },
+  "primarySpecimen": {
+    "topPixelBox": [
+      1300,
+      1750,
+      1800,
+      2400
+    ],
+    "bottomPixelBox": [
+      1100,
+      1620,
+      1310,
+      2150
+    ],
+    "observations": [
+      "Top view shows the housing exterior and bent leads, but not the complete termination-chamber face or mating face.",
+      "Underside joints have irregular solder fillets and specular highlights; their apparent bright centres are not independently identified drilled-hole centres.",
+      "Primary and comparison housings have compatible exterior form; this does not prove identical installed form."
+    ],
+    "formsRetained": [
+      102,
+      202,
+      304,
+      404
+    ],
+    "existingPixelUncertaintyReduced": false,
+    "comparisonDimensionsTransferred": false
+  },
+  "nextDiscriminatingEvidence": [
+    "Check whether another existing primary oblique view exposes termination chambers; use chamber population before dimensional fitting.",
+    "Constrain board-plane centres with independently visible lead entries or mounting features; do not use solder highlight centroids as metrology."
+  ],
+  "padPlacementAuthorized": false
+}
