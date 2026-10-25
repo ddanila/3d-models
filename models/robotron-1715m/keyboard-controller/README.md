@@ -115,7 +115,9 @@ picking and installed row spacing remain confounded. The independent
 is sensitive to corner picks and camera assumptions; it does not resolve board scale.
 The [detailed EFS standard](reference/efs-form-constraints.json) supplies a common
 PCB hole pattern for the retained X1 forms. It enables conditional board-plane
-calibration without selecting body width; independent held-out checks remain required.
+calibration without selecting body width. The [endpoint-fit review](reference/package-reviews/efs-registration/assessment.json)
+fails independent nominal CPU-span checks and exposes strong extrapolation sensitivity;
+connector regularity cannot qualify global registration.
 The eye-based fit holds out independent solder eyes and composes with qualified
 underside placement only inside the intersection of their domains. Eye matches
 do not establish net identity; nearby lanes must still be traced independently.

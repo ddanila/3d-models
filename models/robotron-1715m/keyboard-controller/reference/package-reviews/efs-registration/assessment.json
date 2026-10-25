@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "sources": {
+    "reference/efs-form-constraints.json": "95dcf49a6d1366d9e9a3abb37f9ed253ff3b981cb153ef0bf165b63bed338da8",
+    "component-evidence.json": "57752b9a8963098b2b357f8b7714108b1b1236b2471cb445f25feb64b15011e0",
+    "bottom-landmarks.json": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+    "sense-review.json": "c8f2bdb8959e09cce11f746aa1729894fb535b34f5c8ab8f78f464b9b4378153",
+    "tools/efs_registration_review.py": "567fdae57fe20f7b74a816b6cc94c9455e5a0480f7b1afa48cbef7a67c4d082a",
+    "tools/photo_registration.py": "a65a64b7263f5665ebb8733859afbb864e173e3a684bff9d420dba01c8141068"
+  },
+  "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+  "condition": "EFS family, length 48 mm, 26 populated contacts, right-angle PCB termination; family identification remains conditional.",
+  "fit": "Four outer X1 solder-joint centres to the shared nominal rectangular hole pattern; no CPU calibration.",
+  "anchorPixels": [
+    [
+      1170.0,
+      1713.333
+    ],
+    [
+      1178.333,
+      2073.333
+    ],
+    [
+      1230.0,
+      1716.667
+    ],
+    [
+      1238.0,
+      2075.0
+    ]
+  ],
+  "targetMm": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      30
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      30
+    ]
+  ],
+  "maximumInteriorConnectorResidualMm": 0.29019162,
+  "heldOutCpuChecks": [
+    {
+      "pins": [
+        "1",
+        "20"
+      ],
+      "expectedSpanMm": 47.5,
+      "projectedSpanMm": 50.69394885,
+      "minimumPossibleMaximumEndpointResidualMm": 1.59697443,
+      "exceedsExistingPointBudget": true,
+      "sampledAnchorPerturbationSpanRangeMm": [
+        19.31988788,
+        72.9484293
+      ]
+    },
+    {
+      "pins": [
+        "40",
+        "21"
+      ],
+      "expectedSpanMm": 47.5,
+      "projectedSpanMm": 50.39062784,
+      "minimumPossibleMaximumEndpointResidualMm": 1.44531392,
+      "exceedsExistingPointBudget": true,
+      "sampledAnchorPerturbationSpanRangeMm": [
+        19.27948051,
+        90.62954152
+      ]
+    }
+  ],
+  "registrationPointBudgetMm": 1.25,
+  "sensitivity": {
+    "anchorPixelUncertainty": 8,
+    "coordinateBoxVertices": 256,
+    "boardPoleCases": 158,
+    "poleWitness": [
+      {
+        "anchorCoordinateSigns": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "reason": "projection pole crosses board outline"
+      }
+    ],
+    "scope": "Deterministic corner witnesses only, not certified extrema, confidence intervals or a probability model. Excludes held-out picking error and manufacturing tolerance."
+  },
+  "registrationQualified": false,
+  "padPlacementAuthorized": false,
+  "nominalCpuSpanChecksPassed": false,
+  "finding": "Independent CPU spans test the exact nominal endpoint fit only. Anchor-picking witnesses describe extrapolation sensitivity; fitted X1 regularity cannot qualify the global board.",
+  "nextAction": "Test a distributed joint fit using common X1 geometry and independent longitudinal package pitches, retaining held-out board-plane checks and systematic picking uncertainty. Obtain PCB tolerance constraints before physical admission."
+}
