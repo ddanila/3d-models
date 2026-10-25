@@ -2,7 +2,7 @@
   "schema": 1,
   "candidate": "x1-efs-two-row-candidate",
   "sources": {
-    "reference/connector-package-candidate.json": "6054c36e165e0534085a5a19a1e857a8791b503630abd94fdd14edf018d64af4",
+    "reference/connector-package-candidate.json": "1b89dcb2e87a1fd5407e8a22efb4fc7913978b930a19a908067966cd98c5c38c",
     "generated/connector-review.json": "b85b5c00e6a80970eadfb147653fc38c783eb12015dd98aab72c6e26064ce24f",
     "generated/bus-review.json": "62f9de36cd8b3a7df319b3ba6e1db3ee3048753a0d4854bdf679a22f5d4e45a8",
     "component-evidence.json": "57752b9a8963098b2b357f8b7714108b1b1236b2471cb445f25feb64b15011e0",

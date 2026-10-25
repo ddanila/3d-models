@@ -113,6 +113,9 @@ fits A2.1/A4 and predicts smaller held-out A5/A8 residuals; shared calibration,
 picking and installed row spacing remain confounded. The independent
 [outline-perspective trial](reference/package-reviews/outline-metric/assessment.json)
 is sensitive to corner picks and camera assumptions; it does not resolve board scale.
+The [detailed EFS standard](reference/efs-form-constraints.json) supplies a common
+PCB hole pattern for the retained X1 forms. It enables conditional board-plane
+calibration without selecting body width; independent held-out checks remain required.
 The eye-based fit holds out independent solder eyes and composes with qualified
 underside placement only inside the intersection of their domains. Eye matches
 do not establish net identity; nearby lanes must still be traced independently.

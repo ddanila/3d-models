@@ -65,7 +65,8 @@
   ],
   "nextEvidence": [
     "Identify plug/socket and mounting form from mating-face or marking evidence.",
-    "Obtain the detailed form drawing before modelling lead exits, mating travel and mounting ears.",
+    "Use the detailed TGL form drawings to distinguish mating chambers and attachment form; the common PCB hole pattern cannot distinguish body width.",
     "Reconcile the conditional contact span with independent board-plane landmarks before moving historical pads."
-  ]
+  ],
+  "detailedFormConstraints": "reference/efs-form-constraints.json"
 }

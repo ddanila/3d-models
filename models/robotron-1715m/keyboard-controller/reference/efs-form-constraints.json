@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "id": "x1-efs-detailed-form-constraints",
+  "installedIdentityConfirmed": false,
+  "source": {
+    "title": "TGL 29331/04, December 1977, with first amendment",
+    "archive": "https://archiv.bib.uni-weimar.de/documents/7881/details",
+    "download": "https://archiv.bib.uni-weimar.de/api/documents/7881/download/",
+    "accessInstructions": "Public guest access published by the university library: gast / gast-uni. Authenticate through the archive login.",
+    "accessAuthority": "https://confluence.h2.de/spaces/BIBO/pages/28870772/Datenbanken%2BBW",
+    "sha256": "3de0a17a4c26ad882c5d411cf397507f951c2c36c31a9a23f9447fbd32f2d07e",
+    "bytes": 7538974,
+    "pdfPages": 29,
+    "pageNumbering": "The amendment is inserted at PDF page 15; printed pages 15 onward are shifted by one."
+  },
+  "condition": "EFS family, length 48 mm, 26 populated contacts, right-angle PCB termination; family identification remains conditional.",
+  "forms": [
+    {
+      "form": 102,
+      "kind": "plug",
+      "bodyWidthMm": 8.5,
+      "populationTable4Row": 1
+    },
+    {
+      "form": 202,
+      "kind": "socket",
+      "bodyWidthMm": 8.5,
+      "populationTable4Row": 1
+    },
+    {
+      "form": 304,
+      "kind": "plug",
+      "bodyWidthMm": 13.5,
+      "populationTable4Row": 5
+    },
+    {
+      "form": 404,
+      "kind": "socket",
+      "bodyWidthMm": 13.5,
+      "populationTable4Row": 5
+    }
+  ],
+  "formSource": {
+    "pdfPages": [
+      10,
+      11
+    ],
+    "printedPages": [
+      10,
+      11
+    ],
+    "tables": [
+      3,
+      4
+    ]
+  },
+  "commonPcbPattern": {
+    "pdfPage": 26,
+    "printedPage": 25,
+    "table": 8,
+    "figure": 42,
+    "applicableForms": [
+      102,
+      202,
+      304,
+      404
+    ],
+    "rows": 2,
+    "contactsPerRow": 13,
+    "longitudinalPitchMm": 2.5,
+    "rowSeparationMm": 5,
+    "contactSpanMm": 30,
+    "rowAlignment": "aligned",
+    "mountingHoleDiameterMm": {
+      "nominal": 2.7,
+      "lowerDeviation": 0,
+      "upperDeviation": 0.12
+    },
+    "mountingAxisToNearestContactRowMm": 7.5,
+    "pcbDimensionToleranceSource": "Footnote 13: TGL 25016/02 and TGL 25017/02; do not substitute the lead tolerance for PCB manufacturing tolerance."
+  },
+  "mountingAlternatives": {
+    "pdfPage": 27,
+    "printedPage": 26,
+    "table": 9,
+    "element7SpanMm": 45,
+    "element9SpanMm": 42.5,
+    "elementDetails": {
+      "pdfPage": 13,
+      "figures": [
+        29,
+        30
+      ]
+    }
+  },
+  "discriminatingEvidence": {
+    "matingContactRows": {
+      "forms102_202": "Two adjacent populated chamber rows.",
+      "forms304_404": "Outer rows populated; central chamber row unpopulated.",
+      "source": "Printed page 11, table 4, rows 1 and 5; drawings viewed from termination side."
+    },
+    "plugVersusSocket": "Printed pages 3\u20135, figures 1\u20134; inspect mating geometry independently of board-hole spacing."
+  },
+  "conclusions": [
+    "Detailed form and board-hole drawings are available; obtaining them is no longer a prerequisite.",
+    "The common PCB pattern permits a conditional board-plane calibration without selecting housing width. Use held-out landmarks and propagate picking uncertainty; do not use fitted X1 holes as independent validation.",
+    "The common hole pattern cannot distinguish the four forms or authorize body dimensions, numbered terminal identities, mating clearance or historical pad moves."
+  ],
+  "nextCheck": "Fit the common pattern to primary underside joint observations and test independent held-out board-plane landmarks, including extrapolation uncertainty. Keep existing registration acceptance limits."
+}
