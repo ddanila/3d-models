@@ -106,24 +106,15 @@ underside registration remains unqualified. `top-copper-landmarks.json` and
 `generated/top-registration.json` bound top copper independently of raised lead
 observations; failed extrapolation checks remain visible. Raised leads and sockets can hide hole
 centres; a successful local fit cannot establish copper attachment or board scale.
-The [A8 row-spacing diagnostic](reference/package-reviews/a8-row-spacing/assessment.json)
-tests a spacing hypothesis while retaining the original rigid-fit failure; it
-does not authorize footprint changes. A [shared row-bias check](reference/package-reviews/shared-row-bias/assessment.json)
-fits A2.1/A4 and predicts smaller held-out A5/A8 residuals; shared calibration,
-picking and installed row spacing remain confounded. The independent
-[outline-perspective trial](reference/package-reviews/outline-metric/assessment.json)
-is sensitive to corner picks and camera assumptions; it does not resolve board scale.
-The [detailed EFS standard](reference/efs-form-constraints.json) supplies a common
-PCB hole pattern for the retained X1 forms. It enables conditional board-plane
-calibration without selecting body width. The [endpoint-fit review](reference/package-reviews/efs-registration/assessment.json)
-fails independent nominal CPU-span checks and exposes strong extrapolation sensitivity;
-connector regularity cannot qualify global registration. The
-[distributed X1/CPU fit](reference/package-reviews/distributed-registration/assessment.json)
-satisfies held-out nominal longitudinal span checks, but correlated connector-row
-picking shifts leave transverse scale poorly constrained. Neither fit authorizes pad moves.
-The [chamber review](reference/package-reviews/efs-chambers/assessment.json) narrows
-the comparison specimen to the narrow EFS alternatives; the primary photo hides the
-discriminating chambers, so its retained alternatives and picking uncertainty remain.
+The [distributed registration review](reference/package-reviews/distributed-registration/assessment.json)
+records the remaining transverse-scale ambiguity. Use the
+[measurement targets](reference/package-reviews/registration-measurements/assessment.json)
+to obtain independent constraints before refitting and applying the existing gate.
+Package and perspective alternatives remain in `reference/package-reviews/`.
+The [EFS standard](reference/efs-form-constraints.json) supplies a shared hole
+pattern, but the [chamber review](reference/package-reviews/efs-chambers/assessment.json)
+does not identify the primary specimen's installed form. Neither a nominal package
+fit nor comparison-specimen dimensions authorize historical pad moves.
 The eye-based fit holds out independent solder eyes and composes with qualified
 underside placement only inside the intersection of their domains. Eye matches
 do not establish net identity; nearby lanes must still be traced independently.
