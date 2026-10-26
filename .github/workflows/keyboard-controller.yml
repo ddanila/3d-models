@@ -23,6 +23,7 @@ jobs:
       - run: python3 models/robotron-1715m/keyboard-controller/tools/distributed_registration_review.py --check
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_distributed_registration_review.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/mount_hole_registration_review.py --check
+      - run: python3 models/robotron-1715m/keyboard-controller/tools/registration_measurement_review.py --check
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_mount_hole_registration_review.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/test_row_spacing_review.py
       - run: python3 models/robotron-1715m/keyboard-controller/tools/row_spacing_review.py --check

@@ -1,0 +1,173 @@
+{
+  "schema": 1,
+  "sources": {
+    "reference/package-reviews/distributed-registration/assessment.json": "68563a7458cbba12961ca883880baf100f2600451eb0c442ec27000a87f737c7",
+    "bottom-landmarks.json": "39dce4bedefe03e0883ae47830ce46efd48f48248fcb97db4721d0de828e37d5",
+    "sense-review.json": "c8f2bdb8959e09cce11f746aa1729894fb535b34f5c8ab8f78f464b9b4378153",
+    "tools/registration_measurement_review.py": "ad229055bed2f8acf6e8430e9f9ac2ecc27cb65751505f0d977edccf7fd4291c"
+  },
+  "photoSha256": "ac24dce38859468b1c1e8d784aa883e7c0f61f9674a742a117002eb5344dca9b",
+  "specimen": "primary",
+  "preferredMeasurements": [
+    {
+      "holePair": [
+        "A5:1",
+        "A5:40"
+      ],
+      "photoPixels": [
+        [
+          1303,
+          2519
+        ],
+        [
+          1116,
+          2519
+        ]
+      ],
+      "measurement": "Centre-to-centre distance between opposing PCB holes, measured on the primary board underside; not body width or loose lead-tip spacing.",
+      "candidatePredictions": [
+        {
+          "fit": "nominal",
+          "distanceMm": 15.519337
+        },
+        {
+          "fit": "[-1, -1]",
+          "distanceMm": 15.528715
+        },
+        {
+          "fit": "[-1, 1]",
+          "distanceMm": 12.230924
+        },
+        {
+          "fit": "[1, -1]",
+          "distanceMm": 21.228206
+        },
+        {
+          "fit": "[1, 1]",
+          "distanceMm": 15.509961
+        }
+      ],
+      "predictionSpanMm": 8.997282
+    },
+    {
+      "holePair": [
+        "A5:20",
+        "A5:21"
+      ],
+      "photoPixels": [
+        [
+          1312,
+          3107
+        ],
+        [
+          1125,
+          3112
+        ]
+      ],
+      "measurement": "Centre-to-centre distance between opposing PCB holes, measured on the primary board underside; not body width or loose lead-tip spacing.",
+      "candidatePredictions": [
+        {
+          "fit": "nominal",
+          "distanceMm": 15.342503
+        },
+        {
+          "fit": "[-1, -1]",
+          "distanceMm": 15.349978
+        },
+        {
+          "fit": "[-1, 1]",
+          "distanceMm": 12.091742
+        },
+        {
+          "fit": "[1, -1]",
+          "distanceMm": 20.98579
+        },
+        {
+          "fit": "[1, 1]",
+          "distanceMm": 15.335028
+        }
+      ],
+      "predictionSpanMm": 8.894048
+    }
+  ],
+  "alternativeEndWidths": [
+    {
+      "photoPixels": [
+        [
+          1022,
+          355
+        ],
+        [
+          1613,
+          366
+        ]
+      ],
+      "candidatePredictions": [
+        {
+          "fit": "nominal",
+          "distanceMm": 52.125975
+        },
+        {
+          "fit": "[-1, -1]",
+          "distanceMm": 52.182074
+        },
+        {
+          "fit": "[-1, 1]",
+          "distanceMm": 41.119534
+        },
+        {
+          "fit": "[1, -1]",
+          "distanceMm": 71.243615
+        },
+        {
+          "fit": "[1, 1]",
+          "distanceMm": 52.069944
+        }
+      ]
+    },
+    {
+      "photoPixels": [
+        [
+          1070,
+          3740
+        ],
+        [
+          1685,
+          3720
+        ]
+      ],
+      "candidatePredictions": [
+        {
+          "fit": "nominal",
+          "distanceMm": 50.542434
+        },
+        {
+          "fit": "[-1, -1]",
+          "distanceMm": 50.560639
+        },
+        {
+          "fit": "[-1, 1]",
+          "distanceMm": 39.85256
+        },
+        {
+          "fit": "[1, -1]",
+          "distanceMm": 69.104195
+        },
+        {
+          "fit": "[1, 1]",
+          "distanceMm": 50.524219
+        }
+      ]
+    }
+  ],
+  "recordWithMeasurement": [
+    "Which hole pair or board edge was measured",
+    "Measured distance in mm",
+    "Instrument resolution and estimated total error, including locating hole centres"
+  ],
+  "interpretation": "Measure both CPU ends if accessible: one transverse distance constrains scale locally; the second can expose a perspective inconsistency. End widths are a coarser fallback whose photographed corner picks need separate uncertainty.",
+  "acceptance": "Use an independent measurement to constrain a new fit and keep other observations held out. Propagate measurement, picking and manufacturing uncertainties before the existing placement and cross-side gates. Do not select the closest tabulated candidate and move pads.",
+  "limits": "These predictions cover retained sensitivity examples, not a complete uncertainty envelope. Their separation is not a guaranteed measurement-accuracy requirement. Common row shifts remain almost indistinguishable by widths; absolute placement and terminal identity still need their own evidence.",
+  "registrationQualified": false,
+  "padPlacementAuthorized": false
+}
